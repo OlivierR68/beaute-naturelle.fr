@@ -1,16 +1,14 @@
 
 /* ======== SLIDER ========= */
 
-.bn-slider {
+.bn_slider {
 
     margin-top: -6rem;
     height: 32.25rem;
+    overflow: hidden;
 
-}
+    padding: 0;
 
-.bn_slide-img {
-    height: 32.25rem;
-    width: 100%;
+    background: grey;
 
-    background-image: url(../../img/slide-1.jpg);
 }

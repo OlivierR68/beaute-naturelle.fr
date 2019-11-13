@@ -579,15 +579,12 @@ a {
 }
 
 /* ======== SLIDER ========= */
-.bn-slider {
+.bn_slider {
   margin-top: -6rem;
   height: 32.25rem;
-}
-
-.bn_slide-img {
-  height: 32.25rem;
-  width: 100%;
-  background-image: url(../../img/slide-1.jpg);
+  overflow: hidden;
+  padding: 0;
+  background: grey;
 }
 
 /* ======== CONTENT ========= */
