@@ -1,0 +1,104 @@
+/* ======== HEADER ========= */
+
+.bn_top-bar {
+    height: 2.8125rem;
+    font-size: 0.75rem;
+
+    .bn_infos {
+
+        .bn_infos-items {
+
+            margin-right: 1rem;
+
+            i {
+                margin-right: 0.4rem;
+            }
+        }
+    }
+
+    .bn_social {
+        font-size: 1rem;
+    }
+}
+
+
+/* Logo Top */
+
+.bn_logo-top {
+ 
+    height: 4.375rem; // 70 px
+
+    display: flex;
+    align-self: center;
+
+    .bn_logo-svg {
+        width: 3.4375rem; // 55px
+        height: 4.375rem; 
+        margin-right: 0.75rem ;
+    }
+    
+    .bn_logg-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+        .bn_logo-text-1 {
+            color: $bn_black;
+            font-size: 1.5rem;
+            font-family: $bn_font-2;
+            font-weight: $bn_font-regular;
+            letter-spacing: $bn_letter-spacing;  
+            text-transform: capitalize;
+            margin-top: -0.5rem;
+        }
+        
+        .bn_logo-text-2 {
+            color: $bn_grey;
+            font-size: 0.75rem;
+            font-family: $bn_font-1;
+            font-weight: $bn_font-light;  
+            letter-spacing: $bn_letter-spacing; 
+            text-transform: uppercase;
+            margin-top: -0.25rem;
+        }
+        
+    }
+}
+
+/* navbar */
+
+.bn_navbar {
+    height: 6.25rem;
+
+}
+
+
+.bn_nav-item:hover {
+    color: $bn_color-2;
+}
+
+.bn_nav-item.bn_active {
+    border-bottom: solid 0.1875rem $bn_color-1 ;
+}
+
+.bn_nav-link {
+    font-size: 0.9rem;
+    font-weight: $bn_font-regular;
+    letter-spacing: $bn_letter-spacing;
+
+    color: $bn_black !important;
+}
+
+
+.bn_nav-link:hover {
+    color: $bn_color-1 !important;;
+}
+
+.bn_nav-link.disabled {
+    color: $bn_grey !important;
+    opacity: 0.5;
+}
+
+
+

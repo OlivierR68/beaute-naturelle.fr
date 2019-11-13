@@ -1,0 +1,226 @@
+/* ======== VARIABLES GLOBALES ========= */
+
+/* Toutes les classes et variables du site auront un préfixe "bn_" (comme beauté naturelle)
+ pour eviter de rentrer en conflit avec les classes et variables Bootstrap  */
+
+$bn_color-bg: #FFFAF5;
+$bn_color-1: #026634;
+$bn_color-2: #98C23A;
+$bn_color-3: #019839;
+$bn_grey: #59595B;
+$bn_black: #221E20;
+$bn_white: #FAFAFA;
+
+$bn_font-1: 'Lato', sans-serif;
+$bn_font-2: 'Lora', serif;
+
+$bn_font-light : 300;
+$bn_font-regular : 400;
+$bn_font-bold : 700;
+
+$bn_letter-spacing : 0.05em; // espacement entre les lettres pour les titres  0.05 = 50 d'approche sur photoshop 
+
+/*
+
+lato weight Equivalent :
+
+Thin 100
+Light 300
+Regular 400
+Bold 700
+Black 900
+
+Lora weight Equivalent :
+
+Regular 400
+Bold 700
+
+/* ======== STYLE GLOBAUX ========= */
+
+body {
+    font-family: $bn_font-1;
+    color: $bn_black;
+    font-weight: $bn_font-regular;
+    background-color: $bn_color-bg;
+}
+
+
+/* Taille des textes */
+
+
+// Très Petit écran (téléphone portrait)
+:root {font-size: 13px; }
+
+// Petit écran (téléphone paysage)
+@media (min-width: 576px) {:root {font-size: 14px;}}
+
+// Écran moyen (tablettes)
+@media (min-width: 768px) {:root {font-size: 15px;}}
+
+// Grand écran (PC)
+@media (min-width: 992px) {:root {font-size: 16px;}}
+
+// Très grand écran et +
+@media (min-width: 1200px) {:root {font-size: 17px;}}
+
+/* Style des Textes */
+
+.bn_h1 {
+    font-size: 2.5rem;
+    color: $bn_black;
+    font-family: $bn_font-2;
+    line-height: 3rem;
+    font-weight: $bn_font-regular;
+    letter-spacing: $bn_letter-spacing;
+}
+
+.bn_h1-pre {
+    font-size: 1.5rem;
+    color: $bn_grey;
+    font-family: $bn_font-1;
+    line-height: 1.8rem;
+    font-weight: $bn_font-light;
+    letter-spacing: $bn_letter-spacing;
+}
+
+.bn_h2 {
+    font-size: 1.8rem;
+    color: $bn_black;
+    font-family: $bn_font-2;
+    font-weight: $bn_font-regular;
+    line-height: 2.1rem;
+    letter-spacing: $bn_letter-spacing;
+}
+
+.bn_h2-pre {
+    font-size: 1rem;
+    color: $bn_grey;
+    font-family: $bn_font-1;
+    font-weight: $bn_font-light;
+    line-height: 1.2rem;
+    letter-spacing: $bn_letter-spacing;
+}
+
+.bn_h3 {
+    font-size: 1rem;
+    color: $bn_color-3;
+    font-family: $bn_font-1;
+    font-weight: $bn_font-bold;
+    line-height: 1.2rem;
+    letter-spacing: $bn_letter-spacing;
+}
+
+p {
+    size: 1rem;
+    color: $bn_black;
+    font-weight: $bn_font-regular;
+    line-height: 1rem;
+}
+
+a  {
+    text-decoration: none !important;
+}
+
+
+
+/* Couleur et background */
+
+.bn_bg-main {
+    background-color: $bn_color-bg;
+}
+
+.bn_bg-color-1 {
+    background-color: $bn_color-1;
+}
+
+.bn_bg-color-2 {
+    background-color: $bn_color-2;
+}
+
+.bn_bg-color-3 {
+    background-color: $bn_color-3;
+}
+
+.bn_color-1 {
+    color: $bn_color-1;
+}
+
+.bn_color-2 {
+    color: $bn_color-2;
+}
+
+.bn_color-3 {
+    color: $bn_color-3;
+}
+
+.bn_color-grey {
+    color: $bn_grey;
+}
+
+.bn_color-black {
+    color: $bn_black;
+}
+
+.bn_color-white {
+    color: $bn_white;
+}
+
+.bn_opacity-90 {
+    opacity: 0.9;
+}
+
+.bn_opacity-80 {
+    opacity: 0.8;
+}
+
+
+
+/* Boutons */
+
+.bn_btn-green {
+    color: $bn_white;
+    background-color : $bn_color-1;
+
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1.25rem;
+
+    font-family: $bn_font-1;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.bn_btn-green:hover {
+    color: $bn_black;
+    background-color : $bn_color-2;
+
+}
+
+
+.bn_infos a, .bn_social a {
+    color: $bn_white;
+}
+
+.bn_infos a:hover, .bn_social a:hover {
+    color: $bn_color-2;
+    text-decoration: none;
+}
+
+
+.bn_certif-btn {
+    width: 8rem;
+    filter: grayscale(1);
+    opacity: 0.7;
+
+    transition-property: filter, opacity, width; 
+    transition-duration: 0.5s; 
+}
+
+.bn_certif-btn:hover {
+    width: 9rem;
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+
+@import 'parts/loader', 'parts/header', 'parts/slider', 'parts/content', 'parts/footer';

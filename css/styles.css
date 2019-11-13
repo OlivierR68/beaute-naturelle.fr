@@ -1,0 +1,595 @@
+@charset "UTF-8";
+/* ======== VARIABLES GLOBALES ========= */
+/* Toutes les classes et variables du site auront un préfixe "bn_" (comme beauté naturelle)
+ pour eviter de rentrer en conflit avec les classes et variables Bootstrap  */
+/*
+
+lato weight Equivalent :
+
+Thin 100
+Light 300
+Regular 400
+Bold 700
+Black 900
+
+Lora weight Equivalent :
+
+Regular 400
+Bold 700
+
+/* ======== STYLE GLOBAUX ========= */
+body {
+  font-family: "Lato", sans-serif;
+  color: #221E20;
+  font-weight: 400;
+  background-color: #FFFAF5;
+}
+
+/* Taille des textes */
+:root {
+  font-size: 13px;
+}
+
+@media (min-width: 576px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 17px;
+  }
+}
+
+/* Style des Textes */
+.bn_h1 {
+  font-size: 2.5rem;
+  color: #221E20;
+  font-family: "Lora", serif;
+  line-height: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.bn_h1-pre {
+  font-size: 1.5rem;
+  color: #59595B;
+  font-family: "Lato", sans-serif;
+  line-height: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.bn_h2 {
+  font-size: 1.8rem;
+  color: #221E20;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  line-height: 2.1rem;
+  letter-spacing: 0.05em;
+}
+
+.bn_h2-pre {
+  font-size: 1rem;
+  color: #59595B;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.bn_h3 {
+  font-size: 1rem;
+  color: #019839;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+p {
+  size: 1rem;
+  color: #221E20;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* Couleur et background */
+.bn_bg-main {
+  background-color: #FFFAF5;
+}
+
+.bn_bg-color-1 {
+  background-color: #026634;
+}
+
+.bn_bg-color-2 {
+  background-color: #98C23A;
+}
+
+.bn_bg-color-3 {
+  background-color: #019839;
+}
+
+.bn_color-1 {
+  color: #026634;
+}
+
+.bn_color-2 {
+  color: #98C23A;
+}
+
+.bn_color-3 {
+  color: #019839;
+}
+
+.bn_color-grey {
+  color: #59595B;
+}
+
+.bn_color-black {
+  color: #221E20;
+}
+
+.bn_color-white {
+  color: #FAFAFA;
+}
+
+.bn_opacity-90 {
+  opacity: 0.9;
+}
+
+.bn_opacity-80 {
+  opacity: 0.8;
+}
+
+/* Boutons */
+.bn_btn-green {
+  color: #FAFAFA;
+  background-color: #026634;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.bn_btn-green:hover {
+  color: #221E20;
+  background-color: #98C23A;
+}
+
+.bn_infos a, .bn_social a {
+  color: #FAFAFA;
+}
+
+.bn_infos a:hover, .bn_social a:hover {
+  color: #98C23A;
+  text-decoration: none;
+}
+
+.bn_certif-btn {
+  width: 8rem;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.7;
+  -webkit-transition-property: opacity, width, -webkit-filter;
+  transition-property: opacity, width, -webkit-filter;
+  transition-property: filter, opacity, width;
+  transition-property: filter, opacity, width, -webkit-filter;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.bn_certif-btn:hover {
+  width: 9rem;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #019839;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 1001;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #98C23A;
+  -webkit-animation: spin 3s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+/*
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color:  $bn_white;
+
+        -webkit-animation: spin 1.5s linear infinite; 
+          animation: spin 1.5s linear infinite; 
+    }
+
+    */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #026634;
+  z-index: 1000;
+  -webkit-transform: translateX(0);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(0);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+  display: none;
+}
+
+#content {
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 80%;
+  max-width: 978px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ======== HEADER ========= */
+.bn_top-bar {
+  height: 2.8125rem;
+  font-size: 0.75rem;
+}
+
+.bn_top-bar .bn_infos .bn_infos-items {
+  margin-right: 1rem;
+}
+
+.bn_top-bar .bn_infos .bn_infos-items i {
+  margin-right: 0.4rem;
+}
+
+.bn_top-bar .bn_social {
+  font-size: 1rem;
+}
+
+/* Logo Top */
+.bn_logo-top {
+  height: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.bn_logo-top .bn_logo-svg {
+  width: 3.4375rem;
+  height: 4.375rem;
+  margin-right: 0.75rem;
+}
+
+.bn_logo-top .bn_logg-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.bn_logo-top .bn_logg-text .bn_logo-text-1 {
+  color: #221E20;
+  font-size: 1.5rem;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  margin-top: -0.5rem;
+}
+
+.bn_logo-top .bn_logg-text .bn_logo-text-2 {
+  color: #59595B;
+  font-size: 0.75rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: -0.25rem;
+}
+
+/* navbar */
+.bn_navbar {
+  height: 6.25rem;
+}
+
+.bn_nav-item:hover {
+  color: #98C23A;
+}
+
+.bn_nav-item.bn_active {
+  border-bottom: solid 0.1875rem #026634;
+}
+
+.bn_nav-link {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #221E20 !important;
+}
+
+.bn_nav-link:hover {
+  color: #026634 !important;
+}
+
+.bn_nav-link.disabled {
+  color: #59595B !important;
+  opacity: 0.5;
+}
+
+/* ======== SLIDER ========= */
+.bn-slider {
+  margin-top: -6rem;
+  height: 32.25rem;
+}
+
+.bn_slide-img {
+  height: 32.25rem;
+  width: 100%;
+  background-image: url(../../img/slide-1.jpg);
+}
+
+/* ======== CONTENT ========= */
+/* ======== FOOTER ========= */
+/*# sourceMappingURL=styles.css.map */
