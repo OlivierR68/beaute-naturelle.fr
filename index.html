@@ -18,6 +18,12 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="favicon-64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="favicon-96.png" type="image/png">
+
 </head>
 
 <body>
@@ -88,14 +94,14 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ml-auto">
-                            <li class="nav-item bn_nav-item bn_active">
+                            <li class="nav-item mx-1 bn_nav-item bn_active">
                                 <a class="nav-link bn_nav-link" href="index.html">Accueil <span
                                         class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item bn_nav-item">
+                            <li class="nav-item mx-1 bn_nav-item">
                                 <a class="nav-link bn_nav-link disabled" href="events.php">Évènements</a>
                             </li>
-                            <li class="nav-item bn_nav-item dropdown">
+                            <li class="nav-item mx-1 bn_nav-item dropdown">
                                 <a class="nav-link bn_nav-link dropdown-toggle" href="institut.html" id="navbarDropdown"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     L'Institut
@@ -112,13 +118,13 @@
 
                                 </div>
                             </li>
-                            <li class="nav-item bn_nav-item mx-1">
+                            <li class="nav-item mx-1 bn_nav-item mx-1">
                                 <a class="nav-link bn_nav-link" href="magasin.html">Le Magasin</a>
                             </li>
-                            <li class="nav-item bn_nav-item">
+                            <li class="nav-item mx-1 bn_nav-item">
                                 <a class="nav-link bn_nav-link" href="galerie.html">Galerie</a>
                             </li>
-                            <li class="nav-item bn_nav-item">
+                            <li class="nav-item mx-1 bn_nav-item">
                                 <a class="nav-link bn_nav-link" href="contact">Contact</a>
                             </li>
                         </ul>
@@ -136,16 +142,20 @@
 
     <div class="container-fluid bn_slider">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/slide-1.jpg" alt="First slide">
+                        <img class="d-block" src="img/slide-1.jpg" alt="First slide">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="img/slide-1.jpg" alt="Second slide">
+                        <img class="d-block" src="img/slide-1.jpg" alt="Second slide">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="img/slide-1.jpg" alt="Third slide">
+                        <img class="d-block" src="img/slide-1.jpg" alt="Third slide">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -157,11 +167,7 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
+
     </div>
 
     <main>

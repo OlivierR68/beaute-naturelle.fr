@@ -1,5 +1,6 @@
-# beaute-naturelle.fr
-## Site projet 1, DISII 2019-2020
+# Projet 1 : DISII 2019-2020
+## beaute-naturelle.fr
 
 Site Internet du Projet 1 DISII
-Olivier Ravinasaga
+
+par Olivier Ravinasaga
