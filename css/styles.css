@@ -586,31 +586,37 @@ a {
 /* ===============================================================================
 ---------------------------------- SLIDER ----------------------------------------
 ================================================================================== */
-.bn_slider {
+.bn_decal-slider {
   margin-top: -6rem;
-  overflow: hidden;
+  padding-top: 6rem;
 }
 
-.carousel-indicators li {
-  margin-bottom: -0.8rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-radius: 100%;
+.bn_slide-bg {
+  background: grey;
+  height: 31.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: 50% 50%;
 }
 
-.carousel-indicators li:hover {
-  color: #026634;
-}
-
-.bn_caption-bg {
-  display: block;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem;
+.bn_slide-banner {
+  height: 65%;
   width: 60%;
+  padding: 0.75rem;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.bn_caption-bg-2 {
+.bn_slider-border {
+  border: 1px white solid;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,9 +627,15 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: auto;
-  padding: 1rem 0 0.5rem 0;
-  border: 1px solid white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.bn_slider-border span {
+  color: white;
+  margin: 0.25rem 0;
 }
 
 /* ======== CONTENT ========= */
