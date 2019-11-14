@@ -578,12 +578,29 @@ a {
   opacity: 0.5;
 }
 
+/* ===============================================================================
+                                    SLIDER
+================================================================================== */
+.bn_slider {
+  margin-top: -6rem;
+  overflow: hidden;
+}
+
+.carousel-indicators li {
+  margin-bottom: -0.8rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 100%;
+}
+
+.carousel-indicators li:hover {
+  color: #026634;
+}
+
 /* ======== SLIDER ========= */
 .bn_slider {
   margin-top: -6rem;
   overflow: hidden;
-  padding: 0;
-  background: grey;
 }
 
 .carousel-indicators li {
