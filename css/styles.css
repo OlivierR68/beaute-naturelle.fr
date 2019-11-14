@@ -588,11 +588,9 @@ a {
 ================================================================================== */
 .bn_decal-slider {
   margin-top: -6rem;
-  padding-top: 6rem;
 }
 
 .bn_slide-bg {
-  background: grey;
   height: 31.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -604,13 +602,27 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background-position: 50% 50%;
+  background-size: cover;
+  padding-top: 6rem;
+}
+
+.bn_side-bg-1 {
+  background-image: url(../img/slide-1.jpg);
+}
+
+.bn_side-bg-2 {
+  background-image: url(../img/slide-2.jpg);
+}
+
+.bn_side-bg-3 {
+  background-image: url(../img/slide-3.jpg);
 }
 
 .bn_slide-banner {
   height: 65%;
   width: 60%;
-  padding: 0.75rem;
-  max-width: 600px;
+  padding: 0.5rem;
+  max-width: 500px;
   background: rgba(0, 0, 0, 0.6);
 }
 
