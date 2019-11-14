@@ -2,6 +2,7 @@
 /* ======== VARIABLES GLOBALES ========= */
 /* Toutes les classes et variables du site auront un préfixe "bn_" (comme beauté naturelle)
  pour eviter de rentrer en conflit avec les classes et variables Bootstrap  */
+/* responsive BreakPoints */
 /*
 
 lato weight Equivalent :
@@ -55,7 +56,7 @@ body {
 }
 
 /* Style des Textes */
-.bn_h1 {
+h1, .bn_h1 {
   font-size: 2.5rem;
   color: #221E20;
   font-family: "Lora", serif;
@@ -73,7 +74,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-.bn_h2 {
+h2, .bn_h2 {
   font-size: 1.8rem;
   color: #221E20;
   font-family: "Lora", serif;
@@ -91,7 +92,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-.bn_h3 {
+h3, .bn_h3 {
   font-size: 1rem;
   color: #019839;
   font-family: "Lato", sans-serif;
@@ -109,6 +110,10 @@ p {
 
 a {
   text-decoration: none !important;
+}
+
+.bn_block-titre {
+  padding: 3.125rem 0;
 }
 
 /* Couleur et background */
@@ -598,8 +603,27 @@ a {
 }
 
 .bn_caption-bg {
-  width: 10rem;
-  background-color: black;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  width: 60%;
+}
+
+.bn_caption-bg-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  padding: 1rem 0 0.5rem 0;
+  border: 1px solid white;
 }
 
 /* ======== CONTENT ========= */

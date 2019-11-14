@@ -127,6 +127,24 @@
 }
 
 .bn_caption-bg {
-    width: 10rem;
-    background-color: black;
+
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    padding: 0.5rem;
+    width: 60%;
+
 }
+
+.bn_caption-bg-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    margin: auto;
+
+    padding: 1rem 0 0.5rem 0;
+
+    border: 1px solid white ;
+}
+
