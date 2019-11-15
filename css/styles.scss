@@ -7,7 +7,7 @@ $bn_color-bg: #FFFAF5;
 $bn_color-1: #026634;
 $bn_color-2: #98C23A;
 $bn_color-3: #019839;
-$bn_grey: #59595B;
+$bn_grey: rgb(154, 154, 156);
 $bn_black: #221E20;
 $bn_white: #FAFAFA;
 
@@ -73,39 +73,44 @@ body {
 /* Style des Textes */
 
 h1, .bn_h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: $bn_black;
     font-family: $bn_font-2;
-    line-height: 3rem;
-    font-weight: $bn_font-regular;
+    line-height: 2rem;
+    font-weight: $bn_font-regular !important;
     letter-spacing: $bn_letter-spacing;
 }
 
 .bn_h1-pre {
-    font-size: 1.5rem;
-    color: $bn_grey;
+    font-size: 1.3rem;
+    color: $bn_black;
     font-family: $bn_font-1;
-    line-height: 1.8rem;
-    font-weight: $bn_font-light;
+    line-height: 1.5rem;
+    font-weight: $bn_font-light !important;
     letter-spacing: $bn_letter-spacing;
+
+    margin-bottom: 1rem;
 }
 
 h2, .bn_h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     color: $bn_black;
     font-family: $bn_font-2;
-    font-weight: $bn_font-regular;
+    font-weight: $bn_font-regular !important;
     line-height: 2.1rem;
-    letter-spacing: $bn_letter-spacing;
+
+    padding-bottom: 0.5rem;
+    // letter-spacing: $bn_letter-spacing;
 }
 
 .bn_h2-pre {
     font-size: 1rem;
-    color: $bn_grey;
+    color: $bn_black;
     font-family: $bn_font-1;
     font-weight: $bn_font-light;
     line-height: 1.2rem;
-    letter-spacing: $bn_letter-spacing;
+
+    // letter-spacing: $bn_letter-spacing;
 }
 
 h3, .bn_h3 {
@@ -124,9 +129,11 @@ p {
     line-height: 1rem;
 }
 
-a  {
+a {
     text-decoration: none !important;
 }
+
+
 
 .bn_block-titre {
     padding: 3.125rem 0;
@@ -232,6 +239,7 @@ a  {
     filter: grayscale(0);
     opacity: 1;
 }
+
 
 
 @import 'parts/loader', 'parts/header', 'parts/content', 'parts/footer';

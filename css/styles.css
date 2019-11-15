@@ -57,39 +57,39 @@ body {
 
 /* Style des Textes */
 h1, .bn_h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #221E20;
   font-family: "Lora", serif;
-  line-height: 3rem;
-  font-weight: 400;
+  line-height: 2rem;
+  font-weight: 400 !important;
   letter-spacing: 0.05em;
 }
 
 .bn_h1-pre {
-  font-size: 1.5rem;
-  color: #59595B;
+  font-size: 1.3rem;
+  color: #221E20;
   font-family: "Lato", sans-serif;
-  line-height: 1.8rem;
-  font-weight: 300;
+  line-height: 1.5rem;
+  font-weight: 300 !important;
   letter-spacing: 0.05em;
+  margin-bottom: 1rem;
 }
 
 h2, .bn_h2 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #221E20;
   font-family: "Lora", serif;
-  font-weight: 400;
+  font-weight: 400 !important;
   line-height: 2.1rem;
-  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
 }
 
 .bn_h2-pre {
   font-size: 1rem;
-  color: #59595B;
+  color: #221E20;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   line-height: 1.2rem;
-  letter-spacing: 0.05em;
 }
 
 h3, .bn_h3 {
@@ -146,7 +146,7 @@ a {
 }
 
 .bn_color-grey {
-  color: #59595B;
+  color: #9a9a9c;
 }
 
 .bn_color-black {
@@ -545,7 +545,7 @@ a {
 }
 
 .bn_logo-top .bn_logg-text .bn_logo-text-2 {
-  color: #59595B;
+  color: #9a9a9c;
   font-size: 0.75rem;
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -579,7 +579,7 @@ a {
 }
 
 .bn_nav-link.disabled {
-  color: #59595B !important;
+  color: #9a9a9c !important;
   opacity: 0.5;
 }
 
@@ -650,6 +650,52 @@ a {
   margin: 0.25rem 0;
 }
 
+.bn_decal-slide-indic {
+  margin-top: 6rem;
+}
+
 /* ======== CONTENT ========= */
+.bn_block-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.125rem 0 0 0;
+}
+
+.bn_block-title div {
+  width: 9rem;
+  margin-top: 1.5rem;
+  border-top: 2px solid #019839;
+  height: 3.125rem;
+}
+
+.bn_text-box {
+  min-height: 380px;
+  color: yellow;
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+  .bn_text-box {
+    min-height: 380px;
+    color: yellow;
+  }
+}
+
+/*
+$bn_xs: 576px;
+$bn_sm: 768px; 
+$bn_md: 992px;
+$bn_lg: 1200px; 
+*/
 /* ======== FOOTER ========= */
 /*# sourceMappingURL=styles.css.map */
