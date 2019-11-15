@@ -93,12 +93,14 @@ h1, .bn_h1 {
 }
 
 h2, .bn_h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     color: $bn_black;
     font-family: $bn_font-2;
     font-weight: $bn_font-regular !important;
     line-height: 2.1rem;
-    letter-spacing: $bn_letter-spacing;
+
+    padding-bottom: 0.5rem;
+    // letter-spacing: $bn_letter-spacing;
 }
 
 .bn_h2-pre {
@@ -107,7 +109,8 @@ h2, .bn_h2 {
     font-family: $bn_font-1;
     font-weight: $bn_font-light;
     line-height: 1.2rem;
-    letter-spacing: $bn_letter-spacing;
+
+    // letter-spacing: $bn_letter-spacing;
 }
 
 h3, .bn_h3 {

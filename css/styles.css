@@ -76,12 +76,12 @@ h1, .bn_h1 {
 }
 
 h2, .bn_h2 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #221E20;
   font-family: "Lora", serif;
   font-weight: 400 !important;
   line-height: 2.1rem;
-  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
 }
 
 .bn_h2-pre {
@@ -90,7 +90,6 @@ h2, .bn_h2 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   line-height: 1.2rem;
-  letter-spacing: 0.05em;
 }
 
 h3, .bn_h3 {
@@ -651,6 +650,10 @@ a {
   margin: 0.25rem 0;
 }
 
+.bn_decal-slide-indic {
+  margin-top: 6rem;
+}
+
 /* ======== CONTENT ========= */
 .bn_block-title {
   display: -webkit-box;
@@ -674,11 +677,6 @@ a {
   margin-top: 1.5rem;
   border-top: 2px solid #019839;
   height: 3.125rem;
-}
-
-.bn_content {
-  min-height: 600px;
-  background: grey;
 }
 
 /* ======== FOOTER ========= */
