@@ -14,9 +14,9 @@ $bn_white: #FAFAFA;
 $bn_font-1: 'Lato', sans-serif;
 $bn_font-2: 'Lora', serif;
 
-$bn_font-light : 100;
-$bn_font-regular : 300;
-$bn_font-bold : 500;
+$bn_font-light : 300;
+$bn_font-regular : 400;
+$bn_font-bold : 700;
 
 $bn_letter-spacing : 0.05em; // espacement entre les lettres pour les titres  0.05 = 50 d'approche sur photoshop 
 
@@ -77,16 +77,16 @@ h1, .bn_h1 {
     color: $bn_black;
     font-family: $bn_font-2;
     line-height: 2rem;
-    font-weight: $bn_font-regular;
+    font-weight: $bn_font-regular !important;
     letter-spacing: $bn_letter-spacing;
 }
 
 .bn_h1-pre {
     font-size: 1.3rem;
-    color: $bn_grey;
+    color: $bn_black;
     font-family: $bn_font-1;
     line-height: 1.5rem;
-    font-weight: $bn_font-light;
+    font-weight: $bn_font-light !important;
     letter-spacing: $bn_letter-spacing;
 
     margin-bottom: 1rem;
@@ -96,14 +96,14 @@ h2, .bn_h2 {
     font-size: 1.8rem;
     color: $bn_black;
     font-family: $bn_font-2;
-    font-weight: $bn_font-regular;
+    font-weight: $bn_font-regular !important;
     line-height: 2.1rem;
     letter-spacing: $bn_letter-spacing;
 }
 
 .bn_h2-pre {
     font-size: 1rem;
-    color: $bn_grey;
+    color: $bn_black;
     font-family: $bn_font-1;
     font-weight: $bn_font-light;
     line-height: 1.2rem;
