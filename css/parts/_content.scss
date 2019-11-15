@@ -1,2 +1,25 @@
 
 /* ======== CONTENT ========= */
+
+.bn_block-title {
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3.125rem 0 0 0;
+
+
+    div {
+        width: 3.125rem;
+        margin-top: 2.5rem;
+        border-top: 2px solid $bn_color-3;
+        height: 3.125rem;
+    }
+
+}
+
+main {
+    background: grey;
+    min-height: 600px;
+}
