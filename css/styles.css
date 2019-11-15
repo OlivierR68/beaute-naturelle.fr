@@ -679,5 +679,23 @@ a {
   height: 3.125rem;
 }
 
+.bn_text-box {
+  min-height: 380px;
+  color: yellow;
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+  .bn_text-box {
+    min-height: 380px;
+    color: yellow;
+  }
+}
+
+/*
+$bn_xs: 576px;
+$bn_sm: 768px; 
+$bn_md: 992px;
+$bn_lg: 1200px; 
+*/
 /* ======== FOOTER ========= */
 /*# sourceMappingURL=styles.css.map */
