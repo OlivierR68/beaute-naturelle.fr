@@ -14,3 +14,18 @@
         }
     }
 }
+
+.bn_footer-block {
+    color: $bn_white;
+    font-size: 0.8rem;
+
+    a, p {
+        color: $bn_white;
+    }
+
+    a:hover {
+        color: $bn_color-2;
+    }
+
+    
+}

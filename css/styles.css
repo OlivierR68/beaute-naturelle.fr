@@ -739,4 +739,17 @@ a {
 .bn_copyright a:hover {
   color: #019839;
 }
+
+.bn_footer-block {
+  color: #FAFAFA;
+  font-size: 0.8rem;
+}
+
+.bn_footer-block a, .bn_footer-block p {
+  color: #FAFAFA;
+}
+
+.bn_footer-block a:hover {
+  color: #98C23A;
+}
 /*# sourceMappingURL=styles.css.map */
