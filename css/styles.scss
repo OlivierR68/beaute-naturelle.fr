@@ -14,7 +14,7 @@ $bn_white: #FAFAFA;
 $bn_font-1: 'Lato', sans-serif;
 $bn_font-2: 'Lora', serif;
 
-$bn_font-light : 300;
+$bn_font-light : 100;
 $bn_font-regular : 400;
 $bn_font-bold : 700;
 
@@ -124,9 +124,11 @@ p {
     line-height: 1rem;
 }
 
-a  {
+a {
     text-decoration: none !important;
 }
+
+
 
 .bn_block-titre {
     padding: 3.125rem 0;
@@ -232,6 +234,7 @@ a  {
     filter: grayscale(0);
     opacity: 1;
 }
+
 
 
 @import 'parts/loader', 'parts/header', 'parts/content', 'parts/footer';

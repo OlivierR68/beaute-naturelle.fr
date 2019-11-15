@@ -70,7 +70,7 @@ h1, .bn_h1 {
   color: #59595B;
   font-family: "Lato", sans-serif;
   line-height: 1.8rem;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 0.05em;
 }
 
@@ -87,7 +87,7 @@ h2, .bn_h2 {
   font-size: 1rem;
   color: #59595B;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.2rem;
   letter-spacing: 0.05em;
 }
@@ -548,7 +548,7 @@ a {
   color: #59595B;
   font-size: 0.75rem;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: -0.25rem;
