@@ -56,7 +56,8 @@ body {
 }
 
 /* Style des Textes */
-h1, .bn_h1 {
+h1,
+.bn_h1 {
   font-size: 1.8rem;
   color: #221E20;
   font-family: "Lora", serif;
@@ -75,11 +76,12 @@ h1, .bn_h1 {
   margin-bottom: 1rem;
 }
 
-h2, .bn_h2 {
+h2,
+.bn_h2 {
   font-size: 1.2rem;
   color: #221E20;
   font-family: "Lora", serif;
-  font-weight: 400 !important;
+  font-weight: 300;
   line-height: 2.1rem;
   padding-bottom: 0.5rem;
 }
@@ -88,11 +90,11 @@ h2, .bn_h2 {
   font-size: 1rem;
   color: #221E20;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
   line-height: 1.2rem;
 }
 
-h3, .bn_h3 {
+h3,
+.bn_h3 {
   font-size: 1rem;
   color: #019839;
   font-family: "Lato", sans-serif;
@@ -112,8 +114,37 @@ a {
   text-decoration: none !important;
 }
 
+p > a, .bn_a {
+  text-decoration: none !important;
+  color: #019839 !important;
+}
+
+p > a:hover, .bn_a:hover {
+  color: #026634 !important;
+}
+
+.dropdown-item:hover {
+  color: #026634;
+}
+
 .bn_block-titre {
   padding: 3.125rem 0;
+}
+
+.bn_small-text {
+  font-size: 0.8em;
+}
+
+.bn_bold {
+  font-weight: 700;
+}
+
+.bn_active {
+  color: #019839 !important;
+}
+
+.bn_active-2 {
+  color: #98C23A !important;
 }
 
 /* Couleur et background */
@@ -165,15 +196,23 @@ a {
   opacity: 0.8;
 }
 
+.bn_opacity-60 {
+  opacity: 0.6;
+}
+
+.bn_opacity-40 {
+  opacity: 0.4;
+}
+
 /* Boutons */
 .bn_btn-green {
   color: #FAFAFA;
   background-color: #026634;
   height: 2.25rem;
   line-height: 2.25rem;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
   font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 300;
   border-radius: 0%;
   border: 1px solid #026634;
@@ -184,17 +223,31 @@ a {
   background-color: #019839;
 }
 
-.bn_infos a, .bn_social a {
+.bn_infos a,
+.bn_social a {
   color: #FAFAFA;
 }
 
-.bn_infos a:hover, .bn_social a:hover {
+.bn_infos a:hover,
+.bn_social a:hover {
   color: #98C23A;
   text-decoration: none;
 }
 
+.bn_gap-10 {
+  height: 0.6rem;
+}
+
+.bn_gap-15 {
+  height: 1rem;
+}
+
 .bn_gap-25 {
-  height: 1.5rem;
+  height: 1.6rem;
+}
+
+.bn_gap-30 {
+  height: 2rem;
 }
 
 .bn_gap-50 {
@@ -581,9 +634,6 @@ a {
   opacity: 0.5;
 }
 
-/* ===============================================================================
----------------------------------- SLIDER ----------------------------------------
-================================================================================== */
 .bn_decal-slider {
   margin-top: -6rem;
 }
@@ -652,6 +702,16 @@ a {
   margin-top: 6rem;
 }
 
+.bn_img-top {
+  height: 20rem;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.bn_img-contact {
+  background-image: url(../img/img-contact.jpg);
+}
+
 /* ======== CONTENT ========= */
 .bn_block-title {
   display: -webkit-box;
@@ -667,11 +727,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3.125rem 0 0 0;
+  padding: 3rem 0 0 0;
 }
 
 .bn_block-title div {
-  width: 9rem;
+  width: 8rem;
   margin-top: 1.5rem;
   border-top: 2px solid #019839;
   height: 3.125rem;
@@ -725,6 +785,37 @@ a {
   width: 20rem !important;
 }
 
+/* ======================= FORMULAIRE ======================== */
+
+.bn_form-input label {
+  color: #019839;
+  background: #FFFAF5;
+  margin-left: 1rem;
+  padding: 0 0.4rem 0 0.4rem;
+  font-size: 0.9rem;
+}
+
+
+.bn_form-input input[type="text"],
+.bn_form-input input[type="email"],
+.bn_form-input input[type="tel"],
+.bn_form-input textarea {
+  margin-top: -1.125rem;
+  background-color: #FFFAF5;
+  border-radius: 0%;
+  border-color: #019839;
+}
+
+
+.bn_form-input textarea {
+  min-height: 12rem;
+}
+
+
+.bn_form-input .bn_check-label {
+  margin: 0 0 0 0;
+}
+
 /* ======== FOOTER ========= */
 .bn_copyright {
   line-height: 2.5rem;
@@ -774,6 +865,11 @@ a {
 
 .bn_social-bottom:hover {
   font-size: 3rem;
+}
+
+.bn_payment img {
+  height: 2.5rem;
+  width: auto;
 }
 
 .bn_payment i {
