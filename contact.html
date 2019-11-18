@@ -31,7 +31,7 @@
 
     <!--- loader -->
 
-  <!-- <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
         <div id="loader"></div>
 
         <div class="loader-section section-left"></div>
@@ -144,7 +144,7 @@
     <div class="bn_img-top bn_img-contact bn_decal-slider">
 
     </div>
- 
+
 
 
     <!----Block titre -->
@@ -158,12 +158,54 @@
     <!----Block titre -->
 
     <main class="container bn_content">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-12 col-md-6 bn_form-input">
+                    <label for="name">Nom</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group col-12 col-md-6 bn_form-input">
+                    <label for="lastname">Prénom</label>
+                    <input type="text" class="form-control" id="lastname">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12 col-md-6 bn_form-input">
+                    <label for="inputAddress">Email</label>
+                    <input type="email" class="form-control" id="inputAddress">
+                </div>
+                <div class="form-group col-12 col-md-6 bn_form-input">
+                    <label for="inputAddress2">Téléphone</label>
+                    <input type="tel" class="form-control" id="inputAddress2">
+                </div>
 
 
+            </div>
 
 
-        
+            <div class="form-row">
+                <div class="form-group col-md-12 bn_form-input">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <div class="bn_gap-25"></div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                <p style="font-size: 0.8em;">En soumettant ce formulaire, vous acceptez que les
+                                    informations saisies soient exploitées dans un cadre commercial, si vous souhaitez
+                                    faire valoir votre droit à l'oubli contacter la société Beauté Naturelle par mail ou
+                                    téléphone. Plus d'information sur les <a class="bn_a"
+                                        href="mentions-legales.html">mentions légales</a></p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn bn_btn-green ml-2">ENVOYER</button>
+        </form>
     </main>
+
+    <div class="bn_gap-50"></div>
 
     <!------------------- BLOCK NEWSLETTER ------------------------>
     <div class="bn_bg-color-2">
@@ -186,41 +228,77 @@
 
     <footer class="bn_bg-color-1">
         <div class="container">
-                <div class="bn_gap-50"></div>
+            <div class="bn_gap-50"></div>
             <div class="row bn_footer-block">
 
                 <div class="col-12 col-sm-6 col-lg-4 bn_infos">
-                    <div class="bn_h2-pre bn_color-white text-center text-sm-left"><a href="magasin.html">Magasin</a> & <a href="institut.html">Institut</a></div>
-                    <div class="bn_h2 bn_color-white mt-n2 text-center text-sm-left"> <a href="index.html">Beauté Naturelle</a></div>
-                   <div class="d-flex justify-content-center justify-content-sm-start">
-                        <ul class="list-unstyled mt-n2">
-                                <li class="mb-n2"><p><a href="contact.html"><p><i class="fas fa-map-marker-alt mr-1"></i> 328 rue des clefs, 68 000 Colmar</a></p></li>
-                                <li class="mb-n2"><p><a href="contact.html"><p><i class="fas fa-phone-alt mr-1"></i> 03 89 54 56 46</a></p></li>
-                                <li class="mb-n2"><p><a href="mailto:contact@beaute-naturelle.fr"><p><i class="far fa-envelope mr-1"></i> contact@beaute-naturelle.fr</a></p></li>
-                                <li class="mb-n2"><p><a href="contact.html"><i class="far fa-clock mr-1"></i> Ouvert tous les jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à 18H00</span></a></p></li>
-        
-                            </ul>
-                   </div>
+                    <div class="bn_h2-pre bn_color-white text-center text-sm-left">
+                        <a href="magasin.html">Magasin</a> & <a href="institut.html">Institut</a>
+                    </div>
+                    <div class="bn_h2 bn_color-white mt-n2 text-center text-sm-left">
+                        <a href="index.html">Beauté Naturelle</a>
+                    </div>
+                    <div class="d-flex justify-content-center justify-content-sm-start">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="contact.html">
+                                    <span><i class="fas fa-map-marker-alt mr-1"></i> 328 rue des clefs, 68 000 Colmar
+                                </a></span>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    <span><i class="fas fa-phone-alt mr-1"></i> 03 89 54 56 46
+                                </a></span>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@beaute-naturelle.fr">
+                                    <span><i class="far fa-envelope mr-1"></i> contact@beaute-naturelle.fr
+                                </a></span>
+                            </li>
+                            <li>
+                                <span><a href="contact.html"><i class="far fa-clock mr-1"></i> Ouvert tous les
+                                        jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à
+                                            18H00</span></a></span>
+                            </li>
 
-               
+                        </ul>
+                    </div>
+
+
 
                     <div class="d-lg-none bn_gap-50"></div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4  text-center">
+                <div class="col-12 col-sm-6 col-lg-3  text-center">
                     <span>Suivez-Nous :</span>
                     <div class="d-flex justify-content-center mt-2">
-                        <a href="https://fr-fr.facebook.com/" class=" bn_social-bottom"><i class="fab fa-facebook-square mx-1"></i></a> 
-                        <a href="https://twitter.com/" class=" bn_social-bottom"><i class="fab fa-twitter-square mx-1"></i></a>
-                        <a href="https://www.instagram.com/" class=" bn_social-bottom"><i class="fab fa-instagram mx-1"></i></a>
+                        <a href="https://fr-fr.facebook.com/" class=" bn_social-bottom"><i
+                                class="fab fa-facebook-square mx-1"></i></a>
+                        <a href="https://twitter.com/" class=" bn_social-bottom"><i
+                                class="fab fa-twitter-square mx-1"></i></a>
+                        <a href="https://www.instagram.com/" class=" bn_social-bottom"><i
+                                class="fab fa-instagram mx-1"></i></a>
                     </div>
                     <div class="d-lg-none bn_gap-50"></div>
                 </div>
 
-                <div class="col-12 col-lg-4 text-center text-lg-right">
-                    <p class="bn_nav-bottom"><a href="mentions-legales.html">Mentions Légales</a> | <a href="plan-site.html">Plan du Site</a></p>
-                    <p class="bn_nav-bottom"><a href="index.html">Accueil</a> | <span class="bn_opacity-80" >Évènements</span> | <a href="institut.html">L'Institut</a> | <a href="magasin.html">Le Magasin</a> | <a href="contact.html">Contact</a></p>
-                    <div class="d-flex justify-content-center justify-content-lg-end bn_payment">
+                <div class="col-12 col-lg-5 text-center text-lg-right">
+                    <div>
+                        <div class="bn_nav-bottom" class="bn_nav-bottom">
+                            <a href="mentions-legales.html">Mentions Légales</a> |
+                            <a href="plan-site.html">Plan du Site</a>
+                        </div>
+
+                        <div class="bn_nav-bottom">
+                            <a href="index.html">Accueil</a> |
+                            <span class="bn_opacity-80">Évènements</span> |
+                            <a href="institut.html">L'Institut</a> |
+                            <a href="magasin.html">Le Magasin</a> |
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center justify-content-lg-end bn_payment mt-2">
                         <img src="img/pay-cash.svg" class="mx-2" alt="Logo paiement liquide">
                         <img src="img/pay-cb.svg" class="mx-2" alt="Logo paiement Carte bleu">
                         <i class="fab fa-cc-visa mx-2"></i>
@@ -231,6 +309,8 @@
                 </div>
                 <div class="d-lg-none bn_gap-50"></div>
             </div>
+
+        </div>
 
         </div>
 

@@ -11,8 +11,10 @@ $bn_grey: rgb(154, 154, 156);
 $bn_black: #221E20;
 $bn_white: #FAFAFA;
 
-$bn_font-1: 'Lato', sans-serif;
-$bn_font-2: 'Lora', serif;
+$bn_font-1: 'Lato',
+sans-serif;
+$bn_font-2: 'Lora',
+serif;
 
 $bn_font-light : 300;
 $bn_font-regular : 400;
@@ -23,7 +25,7 @@ $bn_letter-spacing : 0.05em; // espacement entre les lettres pour les titres  0.
 /* responsive BreakPoints */
 
 $bn_xs: 576px;
-$bn_sm: 768px; 
+$bn_sm: 768px;
 $bn_md: 992px;
 $bn_lg: 1200px;
 
@@ -56,23 +58,42 @@ body {
 
 
 // Très Petit écran (téléphone portrait)
-:root {font-size: 13px; }
+:root {
+    font-size: 13px;
+}
 
 // Petit écran (téléphone paysage)
-@media (min-width: $bn_xs) {:root {font-size: 14px;}}
+@media (min-width: $bn_xs) {
+    :root {
+        font-size: 14px;
+    }
+}
 
 // Écran moyen (tablettes)
-@media (min-width: $bn_sm) {:root {font-size: 15px;}}
+@media (min-width: $bn_sm) {
+    :root {
+        font-size: 15px;
+    }
+}
 
 // Grand écran (PC)
-@media (min-width: $bn_md) {:root {font-size: 16px;}}
+@media (min-width: $bn_md) {
+    :root {
+        font-size: 16px;
+    }
+}
 
 // Très grand écran et +
-@media (min-width: $bn_lg) {:root {font-size: 17px;}}
+@media (min-width: $bn_lg) {
+    :root {
+        font-size: 17px;
+    }
+}
 
 /* Style des Textes */
 
-h1, .bn_h1 {
+h1,
+.bn_h1 {
     font-size: 1.8rem;
     color: $bn_black;
     font-family: $bn_font-2;
@@ -92,7 +113,8 @@ h1, .bn_h1 {
     margin-bottom: 1rem;
 }
 
-h2, .bn_h2 {
+h2,
+.bn_h2 {
     font-size: 1.2rem;
     color: $bn_black;
     font-family: $bn_font-2;
@@ -113,7 +135,8 @@ h2, .bn_h2 {
     // letter-spacing: $bn_letter-spacing;
 }
 
-h3, .bn_h3 {
+h3,
+.bn_h3 {
     font-size: 1rem;
     color: $bn_color-3;
     font-family: $bn_font-1;
@@ -129,9 +152,16 @@ p {
     line-height: 1rem;
 }
 
-a {
+p > a {
     text-decoration: none !important;
+    color: $bn_color-3 !important;
+
+    &:hover {
+        color: $bn_color-2 !important;
+    }
 }
+
+
 
 
 
@@ -197,7 +227,7 @@ a {
 
 .bn_btn-green {
     color: $bn_white;
-    background-color : $bn_color-1;
+    background-color: $bn_color-1;
 
     height: 2.25rem;
     line-height: 2.25rem;
@@ -213,16 +243,18 @@ a {
 
 .bn_btn-green:hover {
     color: $bn_black;
-    background-color : $bn_color-3;
+    background-color: $bn_color-3;
 
 }
 
 
-.bn_infos a, .bn_social a {
+.bn_infos a,
+.bn_social a {
     color: $bn_white;
 }
 
-.bn_infos a:hover, .bn_social a:hover {
+.bn_infos a:hover,
+.bn_social a:hover {
     color: $bn_color-2;
     text-decoration: none;
 }

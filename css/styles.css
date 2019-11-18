@@ -56,7 +56,8 @@ body {
 }
 
 /* Style des Textes */
-h1, .bn_h1 {
+h1,
+.bn_h1 {
   font-size: 1.8rem;
   color: #221E20;
   font-family: "Lora", serif;
@@ -75,7 +76,8 @@ h1, .bn_h1 {
   margin-bottom: 1rem;
 }
 
-h2, .bn_h2 {
+h2,
+.bn_h2 {
   font-size: 1.2rem;
   color: #221E20;
   font-family: "Lora", serif;
@@ -92,7 +94,8 @@ h2, .bn_h2 {
   line-height: 1.2rem;
 }
 
-h3, .bn_h3 {
+h3,
+.bn_h3 {
   font-size: 1rem;
   color: #019839;
   font-family: "Lato", sans-serif;
@@ -108,8 +111,13 @@ p {
   line-height: 1rem;
 }
 
-a {
+p > a {
   text-decoration: none !important;
+  color: #019839 !important;
+}
+
+p > a:hover {
+  color: #98C23A !important;
 }
 
 .bn_block-titre {
@@ -184,11 +192,13 @@ a {
   background-color: #019839;
 }
 
-.bn_infos a, .bn_social a {
+.bn_infos a,
+.bn_social a {
   color: #FAFAFA;
 }
 
-.bn_infos a:hover, .bn_social a:hover {
+.bn_infos a:hover,
+.bn_social a:hover {
   color: #98C23A;
   text-decoration: none;
 }
