@@ -152,6 +152,10 @@ p {
     line-height: 1rem;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 p > a {
     text-decoration: none !important;
     color: $bn_color-3 !important;
@@ -164,8 +168,6 @@ p > a {
 .dropdown-item:hover {
     color: $bn_color-1;
 }
-
-
 
 .bn_block-titre {
     padding: 3.125rem 0;

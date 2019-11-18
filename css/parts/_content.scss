@@ -57,3 +57,35 @@
     width: 20rem !important;
 
 }
+
+/* ======================= FORMULAIRE ======================== */@at-root
+/* 
+.bn_form-row {
+    margin-top: -1rem;
+}
+*/
+
+.bn_form-input {
+    label {
+        color: $bn_color-3;
+        background: $bn_color-bg;
+        margin-left: 1rem;
+        padding: 0 0.4rem 0 0.4rem;
+        font-size: 0.9rem
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+        margin-top: -1.125rem;
+        background-color: $bn_color-bg;
+        border-radius: 0%;
+        border-color: $bn_color-3;
+    }
+
+    textarea {
+        min-height: 12rem;
+    }
+
+    .bn_check-label {
+        margin: -0.5rem 0 0 0;
+    }
+}

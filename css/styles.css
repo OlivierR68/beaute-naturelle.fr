@@ -111,6 +111,10 @@ p {
   line-height: 1rem;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 p > a {
   text-decoration: none !important;
   color: #019839 !important;
@@ -746,6 +750,37 @@ p > a:hover {
   width: 20rem !important;
 }
 
+/* ======================= FORMULAIRE ======================== */
+
+.bn_form-input label {
+  color: #019839;
+  background: #FFFAF5;
+  margin-left: 1rem;
+  padding: 0 0.4rem 0 0.4rem;
+  font-size: 0.9rem;
+}
+
+
+.bn_form-input input[type="text"],
+.bn_form-input input[type="email"],
+.bn_form-input input[type="tel"],
+.bn_form-input textarea {
+  margin-top: -1.125rem;
+  background-color: #FFFAF5;
+  border-radius: 0%;
+  border-color: #019839;
+}
+
+
+.bn_form-input textarea {
+  min-height: 12rem;
+}
+
+
+.bn_form-input .bn_check-label {
+  margin: -0.5rem 0 0 0;
+}
+
 /* ======== FOOTER ========= */
 .bn_copyright {
   line-height: 2.5rem;
@@ -795,6 +830,11 @@ p > a:hover {
 
 .bn_social-bottom:hover {
   font-size: 3rem;
+}
+
+.bn_payment img {
+  height: 2.5rem;
+  width: auto;
 }
 
 .bn_payment i {
