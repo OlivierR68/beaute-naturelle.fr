@@ -181,11 +181,11 @@ p > a, .bn_a {
 }
 
 .bn_active {
-    color: $bn_color-3;
+    color: $bn_color-3 !important;
 }
 
-.bn_active_2 {
-    color: $bn_color-2;
+.bn_active-2 {
+    color: $bn_color-2 !important;
 }
 
 

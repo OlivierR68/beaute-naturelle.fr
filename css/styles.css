@@ -140,11 +140,11 @@ p > a:hover, .bn_a:hover {
 }
 
 .bn_active {
-  color: #019839;
+  color: #019839 !important;
 }
 
-.bn_active_2 {
-  color: #98C23A;
+.bn_active-2 {
+  color: #98C23A !important;
 }
 
 /* Couleur et background */
