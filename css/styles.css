@@ -752,4 +752,8 @@ a {
 .bn_footer-block a:hover {
   color: #98C23A;
 }
+
+.bn_social-bottom {
+  font-size: 2.5rem;
+}
 /*# sourceMappingURL=styles.css.map */
