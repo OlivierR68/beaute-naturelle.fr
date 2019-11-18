@@ -120,6 +120,10 @@ p > a:hover {
   color: #98C23A !important;
 }
 
+.dropdown-item:hover {
+  color: #026634;
+}
+
 .bn_block-titre {
   padding: 3.125rem 0;
 }
