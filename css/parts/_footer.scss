@@ -32,4 +32,25 @@
 
 .bn_social-bottom {
     font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    transition-property: font-size; 
+    transition-duration: 0.5s; 
+}
+
+.bn_social-bottom:hover {
+    font-size: 3rem;
+}
+
+
+.bn_payment {
+
+
+
+    i {
+        font-size :2.5rem
+    }
 }
