@@ -581,9 +581,6 @@ a {
   opacity: 0.5;
 }
 
-/* ===============================================================================
----------------------------------- SLIDER ----------------------------------------
-================================================================================== */
 .bn_decal-slider {
   margin-top: -6rem;
 }
@@ -650,6 +647,16 @@ a {
 
 .bn_decal-slide-indic {
   margin-top: 6rem;
+}
+
+.bn_img-top {
+  height: 18rem;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.bn_img-contact {
+  background-image: url(../img/img-contact.jpg);
 }
 
 /* ======== CONTENT ========= */
