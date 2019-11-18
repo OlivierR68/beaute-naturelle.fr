@@ -115,13 +115,13 @@ a {
   text-decoration: none !important;
 }
 
-p > a {
+p > a, .bn_a {
   text-decoration: none !important;
   color: #019839 !important;
 }
 
-p > a:hover {
-  color: #98C23A !important;
+p > a:hover, .bn_a:hover {
+  color: #026634 !important;
 }
 
 .dropdown-item:hover {
@@ -130,6 +130,14 @@ p > a:hover {
 
 .bn_block-titre {
   padding: 3.125rem 0;
+}
+
+.bn_small-text {
+  font-size: 0.8em;
+}
+
+.bn_bold {
+  font-weight: 700;
 }
 
 /* Couleur et background */
@@ -181,15 +189,23 @@ p > a:hover {
   opacity: 0.8;
 }
 
+.bn_opacity-60 {
+  opacity: 0.6;
+}
+
+.bn_opacity-40 {
+  opacity: 0.4;
+}
+
 /* Boutons */
 .bn_btn-green {
   color: #FAFAFA;
   background-color: #026634;
   height: 2.25rem;
   line-height: 2.25rem;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
   font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 300;
   border-radius: 0%;
   border: 1px solid #026634;
@@ -211,8 +227,20 @@ p > a:hover {
   text-decoration: none;
 }
 
+.bn_gap-10 {
+  height: 0.6rem;
+}
+
+.bn_gap-15 {
+  height: 1rem;
+}
+
 .bn_gap-25 {
-  height: 1.5rem;
+  height: 1.6rem;
+}
+
+.bn_gap-30 {
+  height: 2rem;
 }
 
 .bn_gap-50 {
@@ -668,7 +696,7 @@ p > a:hover {
 }
 
 .bn_img-top {
-  height: 18rem;
+  height: 20rem;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -692,11 +720,11 @@ p > a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3.125rem 0 0 0;
+  padding: 3rem 0 0 0;
 }
 
 .bn_block-title div {
-  width: 9rem;
+  width: 8rem;
   margin-top: 1.5rem;
   border-top: 2px solid #019839;
   height: 3.125rem;
@@ -778,7 +806,7 @@ p > a:hover {
 
 
 .bn_form-input .bn_check-label {
-  margin: -0.5rem 0 0 0;
+  margin: 0 0 0 0;
 }
 
 /* ======== FOOTER ========= */
