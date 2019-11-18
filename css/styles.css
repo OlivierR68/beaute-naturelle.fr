@@ -81,7 +81,7 @@ h2,
   font-size: 1.2rem;
   color: #221E20;
   font-family: "Lora", serif;
-  font-weight: 400 !important;
+  font-weight: 300;
   line-height: 2.1rem;
   padding-bottom: 0.5rem;
 }
@@ -90,7 +90,6 @@ h2,
   font-size: 1rem;
   color: #221E20;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
   line-height: 1.2rem;
 }
 
@@ -138,6 +137,14 @@ p > a:hover, .bn_a:hover {
 
 .bn_bold {
   font-weight: 700;
+}
+
+.bn_active {
+  color: #019839;
+}
+
+.bn_active_2 {
+  color: #98C23A;
 }
 
 /* Couleur et background */

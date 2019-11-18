@@ -118,7 +118,7 @@ h2,
     font-size: 1.2rem;
     color: $bn_black;
     font-family: $bn_font-2;
-    font-weight: $bn_font-regular !important;
+    font-weight: $bn_font-light;
     line-height: 2.1rem;
 
     padding-bottom: 0.5rem;
@@ -129,7 +129,6 @@ h2,
     font-size: 1rem;
     color: $bn_black;
     font-family: $bn_font-1;
-    font-weight: $bn_font-light;
     line-height: 1.2rem;
 
     // letter-spacing: $bn_letter-spacing;
@@ -179,6 +178,14 @@ p > a, .bn_a {
 
 .bn_bold {
     font-weight: $bn_font-bold;
+}
+
+.bn_active {
+    color: $bn_color-3;
+}
+
+.bn_active_2 {
+    color: $bn_color-2;
 }
 
 
