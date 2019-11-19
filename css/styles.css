@@ -724,6 +724,10 @@ p > a:hover, .bn_a:hover {
   background-image: url(../img/img-gallerie.jpg);
 }
 
+.bn_img-mentions {
+  background-image: url(../img/img-mentions.jpg);
+}
+
 /* ======== CONTENT ========= */
 .bn_block-title {
   display: -webkit-box;
