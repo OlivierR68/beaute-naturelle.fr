@@ -716,6 +716,10 @@ p > a:hover, .bn_a:hover {
   background-image: url(../img/img-institut.jpg);
 }
 
+.bn_img-gallerie {
+  background-image: url(../img/img-gallerie.jpg);
+}
+
 /* ======== CONTENT ========= */
 .bn_block-title {
   display: -webkit-box;
@@ -883,6 +887,7 @@ $bn_lg: 1200px;
   background-image: url(../img/presta-bg-8.jpg);
 }
 
+/* ======================= GALLERIE ======================== */
 /* ======== FOOTER ========= */
 .bn_copyright {
   line-height: 2.5rem;
