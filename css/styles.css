@@ -744,6 +744,7 @@ p > a:hover, .bn_a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 3rem 0 0 0;
+  text-align: center;
 }
 
 .bn_block-title div {
@@ -897,9 +898,11 @@ $bn_lg: 1200px;
 
 /* ======== FOOTER ========= */
 .bn_copyright {
-  line-height: 2.5rem;
   font-size: 0.8rem;
   color: #FAFAFA;
+  display: block;
+  white-space: nowrap;
+  padding: 0.8rem 0 0.8rem 0;
 }
 
 .bn_copyright a {
@@ -915,7 +918,8 @@ $bn_lg: 1200px;
   font-size: 0.8rem;
 }
 
-.bn_footer-block a, .bn_footer-block p {
+.bn_footer-block a,
+.bn_footer-block p {
   color: #FAFAFA;
 }
 
