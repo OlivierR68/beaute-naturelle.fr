@@ -25,7 +25,7 @@
 /* Logo Top */
 
 .bn_logo-top {
- 
+
     height: 4.375rem; // 70 px
 
     display: flex;
@@ -33,36 +33,36 @@
 
     .bn_logo-svg {
         width: 3.4375rem; // 55px
-        height: 4.375rem; 
-        margin-right: 0.75rem ;
+        height: 4.375rem;
+        margin-right: 0.75rem;
     }
-    
+
     .bn_logg-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        
+
         .bn_logo-text-1 {
             color: $bn_black;
             font-size: 1.5rem;
             font-family: $bn_font-2;
             font-weight: $bn_font-regular;
-            letter-spacing: $bn_letter-spacing;  
+            letter-spacing: $bn_letter-spacing;
             text-transform: capitalize;
             margin-top: -0.5rem;
         }
-        
+
         .bn_logo-text-2 {
             color: $bn_grey;
             font-size: 0.75rem;
             font-family: $bn_font-1;
-            font-weight: $bn_font-light;  
-            letter-spacing: $bn_letter-spacing; 
+            font-weight: $bn_font-light;
+            letter-spacing: $bn_letter-spacing;
             text-transform: uppercase;
             margin-top: -0.25rem;
         }
-        
+
     }
 }
 
@@ -79,7 +79,7 @@
 }
 
 .bn_nav-item.bn_active {
-    border-bottom: solid 0.1875rem $bn_color-1 ;
+    border-bottom: solid 0.1875rem $bn_color-1;
 }
 
 .bn_nav-link {
@@ -92,7 +92,8 @@
 
 
 .bn_nav-link:hover {
-    color: $bn_color-1 !important;;
+    color: $bn_color-1 !important;
+    ;
 }
 
 .bn_nav-link.disabled {
@@ -100,9 +101,7 @@
     opacity: 0.5;
 }
 
-.bn_affix {
-    
-}
+.bn_affix {}
 
 
 
@@ -110,7 +109,7 @@
 // ---------------------------------- SLIDER ----------------------------------------
 // ================================================================================== 
 
-.bn_decal-slider { 
+.bn_decal-slider {
     margin-top: -6rem;
 
 }
@@ -147,6 +146,7 @@
     background: rgba(0, 0, 0, 0.6);
 
 }
+
 .bn_slider-border {
     border: 1px white solid;
     height: 100%;
@@ -157,12 +157,14 @@
     align-items: center;
     text-align: center;
 }
+
 .bn_slider-border span {
     color: white;
     margin: 0.25rem 0;
 }
+
 .bn_decal-slide-indic {
-    margin-top: 6rem ; //  centre les flèches  du slider
+    margin-top: 6rem; //  centre les flèches  du slider
 }
 
 // ==================================================================================
@@ -178,4 +180,8 @@
 
 .bn_img-contact {
     background-image: url(../img/img-contact.jpg);
+}
+
+.bn_img-institut {
+    background-image: url(../img/img-institut.jpg);
 }

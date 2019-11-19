@@ -712,6 +712,10 @@ p > a:hover, .bn_a:hover {
   background-image: url(../img/img-contact.jpg);
 }
 
+.bn_img-institut {
+  background-image: url(../img/img-institut.jpg);
+}
+
 /* ======== CONTENT ========= */
 .bn_block-title {
   display: -webkit-box;
