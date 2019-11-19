@@ -171,3 +171,18 @@ $bn_lg: 1200px;
 .bn_presta-bg-8 {
     background-image: url(../img/prestations/presta-bg-8.jpg);
 }
+
+
+
+.bn_site-map-ul {
+    list-style: square;
+
+    a {
+        color: $bn_color-1;
+
+        &:hover {
+            color: $bn_color-2;
+        }
+    }
+
+}

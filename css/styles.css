@@ -728,6 +728,10 @@ p > a:hover, .bn_a:hover {
   background-image: url(../img/img-mentions.jpg);
 }
 
+.bn_img-sitemap {
+  background-image: url(../img/img-sitemap.jpg);
+}
+
 /* ======== CONTENT ========= */
 .bn_block-title {
   display: -webkit-box;
@@ -894,6 +898,18 @@ $bn_lg: 1200px;
 
 .bn_presta-bg-8 {
   background-image: url(../img/prestations/presta-bg-8.jpg);
+}
+
+.bn_site-map-ul {
+  list-style: square;
+}
+
+.bn_site-map-ul a {
+  color: #026634;
+}
+
+.bn_site-map-ul a:hover {
+  color: #98C23A;
 }
 
 /* ======== FOOTER ========= */
