@@ -816,6 +816,69 @@ p > a:hover, .bn_a:hover {
   margin: 0 0 0 0;
 }
 
+/* ======================= PRESTATION ======================== */
+.bn_presta-block {
+  /* 1:1 Aspect Ratio */
+  height: 18rem;
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+
+.bn_presta-block:hover {
+  font-size: 1.3em;
+}
+
+.bn_presta-block:hover div {
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .bn_presta-block {
+    /* 1:1 Aspect Ratio */
+    height: 14rem;
+  }
+}
+
+/*
+$bn_xs: 576px;
+$bn_sm: 768px;
+$bn_md: 992px;
+$bn_lg: 1200px;
+
+*/
+.bn_presta-bg-1 {
+  background-image: url(../img/presta-bg-1.jpg);
+}
+
+.bn_presta-bg-2 {
+  background-image: url(../img/presta-bg-2.jpg);
+}
+
+.bn_presta-bg-3 {
+  background-image: url(../img/presta-bg-3.jpg);
+}
+
+.bn_presta-bg-4 {
+  background-image: url(../img/presta-bg-4.jpg);
+}
+
+.bn_presta-bg-5 {
+  background-image: url(../img/presta-bg-5.jpg);
+}
+
+.bn_presta-bg-6 {
+  background-image: url(../img/presta-bg-6.jpg);
+}
+
+.bn_presta-bg-7 {
+  background-image: url(../img/presta-bg-7.jpg);
+}
+
+.bn_presta-bg-8 {
+  background-image: url(../img/presta-bg-8.jpg);
+}
+
 /* ======== FOOTER ========= */
 .bn_copyright {
   line-height: 2.5rem;
