@@ -1,4 +1,3 @@
-
 /* ======== CONTENT ========= */
 
 .bn_block-title {
@@ -18,9 +17,11 @@
     }
 
 }
+
 .bn_certif-row {
     min-height: 10rem;
 }
+
 .bn_certif-col {
 
     margin: 0 0.25rem;
@@ -37,8 +38,8 @@
     filter: grayscale(1);
     opacity: 0.7;
 
-    transition-property: filter, opacity, width; 
-    transition-duration: 0.5s; 
+    transition-property: filter, opacity, width;
+    transition-duration: 0.5s;
 }
 
 .bn_certif-btn:hover {
@@ -58,7 +59,8 @@
 
 }
 
-/* ======================= FORMULAIRE ======================== */@at-root
+/* ======================= FORMULAIRE ======================== */
+@at-root
 /* 
 .bn_form-row {
     margin-top: -1rem;
@@ -74,7 +76,10 @@
         font-size: 0.9rem
     }
 
-    input[type="text"], input[type="email"], input[type="tel"], textarea {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
         margin-top: -1.125rem;
         background-color: $bn_color-bg;
         border-radius: 0%;
@@ -89,3 +94,84 @@
         margin: 0 0 0 0;
     }
 }
+
+
+
+/* ======================= PRESTATION ======================== */
+
+.bn_presta-block {
+    /* 1:1 Aspect Ratio */
+
+    height: 18rem;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    overflow: hidden;
+
+}
+
+
+.bn_presta-block:hover {
+
+    font-size: 1.3em;
+
+    div {
+
+        height: 100%;
+
+    }
+}
+
+
+
+@media (min-width: $bn_md) {
+    .bn_presta-block {
+        /* 1:1 Aspect Ratio */
+        height: 14rem;
+    }
+}
+
+/*
+$bn_xs: 576px;
+$bn_sm: 768px;
+$bn_md: 992px;
+$bn_lg: 1200px;
+
+*/
+
+.bn_presta-bg-1 {
+    background-image: url(../img/presta-bg-1.jpg);
+}
+
+.bn_presta-bg-2 {
+    background-image: url(../img/presta-bg-2.jpg);
+}
+
+.bn_presta-bg-3 {
+    background-image: url(../img/presta-bg-3.jpg);
+}
+
+.bn_presta-bg-4 {
+    background-image: url(../img/presta-bg-4.jpg);
+}
+
+.bn_presta-bg-5 {
+    background-image: url(../img/presta-bg-5.jpg);
+}
+
+.bn_presta-bg-6 {
+    background-image: url(../img/presta-bg-6.jpg);
+}
+
+.bn_presta-bg-7 {
+    background-image: url(../img/presta-bg-7.jpg);
+}
+
+.bn_presta-bg-8 {
+    background-image: url(../img/presta-bg-8.jpg);
+}
+
+
+/* ======================= GALLERIE ======================== */
+
+.bn_photos {}
