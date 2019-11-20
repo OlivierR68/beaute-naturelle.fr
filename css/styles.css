@@ -114,15 +114,27 @@ a {
   text-decoration: none !important;
 }
 
-p > a, .bn_a {
+p > a,
+.bn_a {
   text-decoration: none !important;
   color: #019839 !important;
 }
 
-p > a:hover, .bn_a:hover {
+p > a:hover,
+.bn_a:hover {
   color: #026634 !important;
 }
 
+.bn_a-white {
+  text-decoration: none !important;
+  color: #FAFAFA !important;
+}
+
+.bn_a-white:hover {
+  color: #98C23A !important;
+}
+
+/* ================================== */
 .dropdown-item:hover {
   color: #026634;
 }
@@ -730,6 +742,10 @@ p > a:hover, .bn_a:hover {
 
 .bn_img-sitemap {
   background-image: url(../img/img-sitemap.jpg);
+}
+
+.bn_img-epilations {
+  background-image: url(../img/prestations/presta-top-1.jpg);
 }
 
 /* ======== CONTENT ========= */
