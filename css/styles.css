@@ -159,6 +159,14 @@ p > a:hover,
   color: #98C23A !important;
 }
 
+td {
+  text-transform: lowercase;
+}
+
+td::first-letter {
+  text-transform: uppercase;
+}
+
 /* Couleur et background */
 .bn_bg-main {
   background-color: #FFFAF5;

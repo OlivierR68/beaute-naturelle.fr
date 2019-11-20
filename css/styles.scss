@@ -200,6 +200,13 @@ p>a,
     color: $bn_color-2 !important;
 }
 
+td {
+    text-transform: lowercase;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
 
 
 
