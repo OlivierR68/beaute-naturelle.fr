@@ -59,34 +59,34 @@ body {
 
 // Très Petit écran (téléphone portrait)
 :root {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 // Petit écran (téléphone paysage)
 @media (min-width: $bn_xs) {
     :root {
-        font-size: 14px;
+        font-size: 110%;
     }
 }
 
 // Écran moyen (tablettes)
 @media (min-width: $bn_sm) {
     :root {
-        font-size: 15px;
+        font-size: 110%;
     }
 }
 
 // Grand écran (PC)
 @media (min-width: $bn_md) {
     :root {
-        font-size: 16px;
+        font-size: 100%;
     }
 }
 
 // Très grand écran et +
 @media (min-width: $bn_lg) {
     :root {
-        font-size: 17px;
+        font-size: 100%;
     }
 }
 
@@ -155,7 +155,8 @@ a {
     text-decoration: none !important;
 }
 
-p > a, .bn_a {
+p>a,
+.bn_a {
     text-decoration: none !important;
     color: $bn_color-3 !important;
 
@@ -163,6 +164,17 @@ p > a, .bn_a {
         color: $bn_color-1 !important;
     }
 }
+
+.bn_a-white {
+    text-decoration: none !important;
+    color: $bn_white !important;
+
+    &:hover {
+        color: $bn_color-2 !important;
+    }
+}
+
+/* ================================== */
 
 .dropdown-item:hover {
     color: $bn_color-1;
@@ -186,6 +198,14 @@ p > a, .bn_a {
 
 .bn_active-2 {
     color: $bn_color-2 !important;
+}
+
+td {
+    text-transform: lowercase;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
 }
 
 
@@ -301,6 +321,7 @@ p > a, .bn_a {
 .bn_gap-30 {
     height: 2rem;
 }
+
 .bn_gap-50 {
     height: 3rem;
 }

@@ -1,12 +1,450 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <title>Visage - Beauté Naturelle - Cosmétiques & soins Bio</title>
+    <meta name="description"
+        content="Magasin de coméstiques et institut de soins bio et naturelle, situé au dans la vielle ville de colmar, vénez découvrir notre sélection de produits et soins bio" />
+    <meta name="author" content="Olivier Ravinasaga" />
+
+    <meta name=”robots” content=”index, follow”>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/styles.min.css">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../favicon-32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="../favicon-64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="../favicon-96.png" type="image/png">
+
 </head>
+
 <body>
-    
+
+    <!--- loader -->
+
+    <!-- <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div> -->
+
+
+    <header>
+
+        <!-------- top-bar ---------->
+
+        <div class="bn_bg-color-1">
+            <div
+                class="container bn_top-bar d-flex align-items-center justify-content-center justify-content-md-between">
+                <div class="bn_infos">
+                    <a class="bn_infos-items d-none d-lg-inline" href="../contact.html"><i
+                            class="fas fa-map-marker-alt"></i>328 rue des clefs, 68 000 Colmar</a>
+                    <a class="bn_infos-items d-none d-lg-inline" href="../contact.html"><i
+                            class="fas fa-phone-alt"></i>03
+                        89 54 56 46</a>
+                    <a class="bn_infos-items d-none d-lg-inline" href="mailto:contact@beaute-naturelle.fr"><i
+                            class="far fa-envelope"></i></i>contact@beaute-naturel.fr</a>
+                    <a class="bn_infos-items" href="../contact.html"><i class="far fa-clock"></i></i>Ouvert tous les
+                        jours,
+                        (sauf le Dimanche) de 9H00 à 18H00</a>
+                </div>
+                <div class="bn_social d-none d-md-block">
+                    <a href="https://www.facebook.com/" target="_blank" class="ml-1 bn_social-items"><i
+                            class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/home?lang=fr" target="_blank" class="ml-1 bn_social-items"><i
+                            class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="ml-1 bn_social-items"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-------- Navigation ---------->
+
+        <div class="bn_opacity-90 bn_bg-main">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+                    <a class="navbar-brand mx-auto mx-lg-0" href="../index.html">
+                        <div class="bn_logo-top">
+                            <img src="../img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">
+                            <div class="bn_logg-text">
+
+                                <span class="bn_logo-text-1">beauté naturelle</span>
+                                <span class="bn_logo-text-2">coesmétique & soins bio</span>
+
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse bn_bg-main" id="navbarSupportedContent">
+                        <ul class="navbar-nav  ml-auto">
+                            <li class="nav-item mx-1 bn_nav-item">
+                                <a class="nav-link bn_nav-link" href="../index.html">Accueil</a>
+                            </li>
+                            <li class="nav-item mx-1 bn_nav-item">
+                                <a class="nav-link bn_nav-link disabled" href="../events.php">Évènements</a>
+                            </li>
+                            <li class="nav-item mx-1 bn_nav-item dropdown bn_active">
+                                <a class="nav-link bn_nav-link dropdown-toggle" href="../institut.html"
+                                    id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    L'Institut
+                                </a>
+                                <div class="dropdown-menu bn_bg-main" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="../institut.html">L'Institut</a>
+                                    <a class="dropdown-item" href="epilation.html">Epilations</a>
+                                    <a class="dropdown-item" href="mains-pieds.html">Mains & Pieds</a>
+                                    <a class="dropdown-item bn_active" href="regard.html">Regard</a>
+                                    <a class="dropdown-item" href="visage.html">Visage</a>
+                                    <a class="dropdown-item" href="minceur.html">Minceur</a>
+                                    <a class="dropdown-item" href="carita.html">Carita</a>
+                                    <a class="dropdown-item" href="spa.html">SPA</a>
+                                    <a class="dropdown-item" href="hommes.html">Hommes</a>
+
+                                </div>
+                            </li>
+                            <li class="nav-item mx-1 bn_nav-item mx-1">
+                                <a class="nav-link bn_nav-link" href="../magasin.html">Le Magasin</a>
+                            </li>
+                            <li class="nav-item mx-1 bn_nav-item">
+                                <a class="nav-link bn_nav-link" href="../galerie.html">Galerie</a>
+                            </li>
+                            <li class="nav-item mx-1 bn_nav-item ">
+                                <a class="nav-link bn_nav-link" href="../contact.html">Contact <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                        </ul>
+                </nav>
+
+
+            </div>
+        </div>
+
+    </header>
+
+    <!------- Block Image ---------->
+
+    <div class="bn_img-top bn_img-presta-4 bn_decal-slider">
+
+    </div>
+
+
+    <!--------- Menu Rapide Prestations  -------->
+    <div class="bn_bg-color-1">
+        <div class="container bn_arianne bn_color-white bn_small-text text-center text-uppercase">
+            <nav class="row no-gutters">
+
+                <a href="./epilation.html" class="col-4 col-sm-3 col-lg  py-2 bn_a-white">Epilations</a>
+
+                <a href="./mains-pieds.html" class="col-4 col-sm-3 col-lg py-2 bn_a-white text-nowrap">Mains &
+                    Pieds</a>
+
+                <a href="./regard.html" class="col-4 col-sm-3 col-lg py-2 bn_a-white  bn_active-presta">Regard</a>
+
+                <a href="./visage.html" class="col-4 col-sm-3 col-lg py-2 bn_a-white">Visage</a>
+
+                <a href="./minceur.html" class="col-4 col-sm-3 col-lg py-2 bn_a-white">Minceur</a>
+
+                <a href="./carita.html" class="col-4 col-sm-3 col-lg py-2 bn_a-white">Carita</a>
+
+                <a href="./spa.html" class="col-4 col-sm-3 col-lg py-2 bn_a-white">SPA</a>
+
+                <a href="./hommes.html" class="col-4 col-sm-3 col-lg py-2 bn_a-white">Hommes</a>
+
+
+            </nav>
+
+
+        </div>
+    </div>
+
+
+
+    <!----Block titre -->
+
+    <div class="bn_block-title">
+        <span class="bn_h1-pre">Préstations & Tarifs</span>
+        <h1>Regard</h1>
+        <div></div>
+    </div>
+
+    <!----Block titre -->
+
+    <main class="container bn_content">
+
+        <table class="table">
+            <thead class="bn_bg-color-1 bn_color-white">
+                <td>Beauté des Yeux</td>
+                <td>Durée</td>
+                <td>Prix</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DEPOSE DE CILS
+                    </td>
+                    <td>15 min</td>
+                    <td>9 €</td>
+                </tr>
+                <tr>
+                    <td>COLORATION SOURCILS</td>
+                    <td>15 min</td>
+                    <td>9 €</td>
+                </tr>
+                <tr>
+                    <td>COLORATION DE CILS</td>
+                    <td>20 min</td>
+                    <td>13 €</td>
+                </tr>
+                <tr>
+                    <td>REHAUSSEMENT DE CILS</td>
+                    <td>45 min</td>
+                    <td>28 €</td>
+                </tr>
+                <tr>
+                    <td>MASCARA PERMANENT</td>
+                    <td>20 min</td>
+                    <td>29 €</td>
+                </tr>
+                <tr>
+                    <td>REMPLISSAGE CILS 15 jours</td>
+                    <td>30 min</td>
+                    <td>29 €</td>
+                </tr>
+                <tr>
+                    <td>REMPLISSAGE CILS 30 jours</td>
+                    <td>60 min</td>
+                    <td>49 €</td>
+                </tr>
+                <tr>
+                    <td>soin à la kératine <span class="bn_small-text"></span></td>
+                    <td>45 min</td>
+                    <td>49 €</td>
+                </tr>
+                <tr>
+                    <td>soin kératine, réhaussement et coloration des cils<span class="bn_small-text"></span>
+                    </td>
+                    <td>45 min</td>
+                    <td>59 €</td>
+                </tr>
+
+                <tr>
+                    <td>EXTENSION DE CILS - pose complète<span class="bn_small-text"></span>
+                    </td>
+                    <td>90 min</td>
+                    <td>99 €</td>
+                </tr>
+
+                <tr>
+                    <td>MICROBLADING SOURCILS<span class="bn_small-text"></span>
+                    </td>
+                    <td>90 min</td>
+                    <td>189 €</td>
+                </tr>
+                <thead class="bn_bg-color-1 bn_color-white">
+                    <td>MAKE UP</td>
+                    <td>Durée</td>
+                    <td>Prix</td>
+                </thead>
+            <tbody>
+                <tr>
+                    <td>Maquillage naturel et trendy, teint frais, bouche tendre et jolie regard.</td>
+                    <td>15 min</td>
+                    <td>13 €</td>
+                </tr>
+                <tr>
+                    <td>Maquillage glamour et sexy pour soirée avec son amoureux ou virée entres copines.</td>
+                    <td>20 min</td>
+                    <td>19 €</td>
+                </tr>
+                <tr>
+                    <td>Coaching de maquillage, toutes les techniques dont vous avez besoin pour vous plaire tous les
+                        matins !</td>
+                    <td>40 min</td>
+                    <td>28 €</td>
+                </tr>
+                <tr>
+                    <td>Maquillage le jour J + essai, toutes les techniques nécessaires pour être superbe et naturelle !
+                    </td>
+                    <td>30 min</td>
+                    <td>39 €</td>
+                </tr>
+                <tr>
+
+                </tr>
+            </tbody>
+
+            </tbody>
+        </table>
+        <div class="bn_gap-25"></div>
+
+        <a href="../institut.html" class="btn bn_btn-green">RETOUR</a>
+
+
+
+
+    </main>
+
+    <div class="bn_gap-100"></div>
+
+
+
+    <!------------------- BLOCK NEWSLETTER ------------------------>
+
+    <div class="bn_bg-color-2">
+        <div class="container bn_block-newsletter text-center">
+            <div class="bn_gap-25"></div>
+            <span class="bn_h1" style="font-size: 1.4rem;">Abonnez-vous à notre Newsletter</span>
+            <form class="form-inline justify-content-center align-items-center mt-2">
+                <div class="form-group mt-3 mt-sm-0">
+                    <input type="email" class="form-control bn_newsletter-input" id="inputNewsletter"
+                        placeholder="Entrez votre adresse mail">
+                </div>
+                <button type="submit" class="btn bn_btn-green ml-2">VALIDER</button>
+            </form>
+            <div class="bn_gap-30"></div>
+
+        </div>
+    </div>
+
+    <!------------------- FOOTER ------------------------>
+
+    <footer class="bn_bg-color-1">
+        <div class="container">
+            <div class="bn_gap-50"></div>
+            <div class="row bn_footer-block">
+
+                <div class="col-12 col-sm-6 col-lg-4 bn_infos">
+                    <div class="bn_h2-pre bn_color-white text-center text-sm-left">
+                        <a href="../magasin.html">Magasin</a> & <a href="../institut.html">Institut</a>
+                    </div>
+                    <div class="bn_h2 bn_color-white mt-n2 text-center text-sm-left">
+                        <a href="../index.html">Beauté Naturelle</a>
+                    </div>
+                    <div class="d-flex justify-content-center justify-content-sm-start">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="../contact.html">
+                                    <span><i class="fas fa-map-marker-alt mr-1"></i> 328 rue des clefs, 68 000 Colmar
+                                </a></span>
+                            </li>
+                            <li>
+                                <a href="../contact.html">
+                                    <span><i class="fas fa-phone-alt mr-1"></i> 03 89 54 56 46
+                                </a></span>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@beaute-naturelle.fr">
+                                    <span><i class="far fa-envelope mr-1"></i> contact@beaute-naturelle.fr
+                                </a></span>
+                            </li>
+                            <li>
+                                <span><a href="../contact.html"><i class="far fa-clock mr-1"></i> Ouvert tous les
+                                        jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à
+                                            18H00</span></a></span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+                    <div class="d-lg-none bn_gap-50"></div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3  text-center">
+                    <span>Suivez-Nous :</span>
+                    <div class="d-flex justify-content-center mt-2">
+                        <a href="https://fr-fr.facebook.com/" class=" bn_social-bottom"><i
+                                class="fab fa-facebook-square mx-1"></i></a>
+                        <a href="https://twitter.com/" class=" bn_social-bottom"><i
+                                class="fab fa-twitter-square mx-1"></i></a>
+                        <a href="https://www.instagram.com/" class=" bn_social-bottom"><i
+                                class="fab fa-instagram mx-1"></i></a>
+                    </div>
+                    <div class="d-lg-none bn_gap-50"></div>
+                </div>
+
+                <div class="col-12 col-lg-5 text-center text-lg-right">
+                    <div>
+                        <div class="bn_nav-bottom" class="bn_nav-bottom">
+                            <a href="../mentions-legales.html">Mentions Légales</a> |
+                            <a href="../plan-site.html">Plan du Site</a>
+                        </div>
+
+                        <div class="bn_nav-bottom">
+                            <a href="../index.html">Accueil</a> |
+                            <span class="bn_opacity-60">Évènements</span> |
+                            <a href="../institut.html" class="bn_active-2">L'Institut</a> |
+                            <a href="../magasin.html">Le Magasin</a> |
+                            <a href="../galerie.html">Galerie</a> |
+                            <a href="../contact.html">Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center justify-content-lg-end bn_payment mt-2">
+                        <img src="../img/pay-cash.svg" class="mx-2" alt="Logo paiement liquide">
+                        <img src="../img/pay-cb.svg" class="mx-2" alt="Logo paiement Carte bleu">
+                        <i class="fab fa-cc-visa mx-2"></i>
+                        <i class="fab fa-cc-mastercard mx-2"></i>
+                        <i class="fab fa-cc-apple-pay ml-2"></i>
+
+                    </div>
+                </div>
+                <div class="d-lg-none bn_gap-50"></div>
+            </div>
+
+        </div>
+
+        </div>
+
+        <!--- Copyright -->
+        <div class="bn_gap-25"></div>
+        <div class="container text-center">
+            <span class="bn_copyright ">Tous droits réservés 2010-2019 - Beauté Naturelle - Site réalisé par <a
+                    href="http://webolive.fr" target="_blank">webolive.fr</a></span>
+        </div>
+
+
+    </footer>
+
+
+    <!-------- Scripts ---------->
+
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/defbc714c8.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+
+
 </body>
+
 </html>
