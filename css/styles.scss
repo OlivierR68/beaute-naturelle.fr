@@ -59,34 +59,34 @@ body {
 
 // Très Petit écran (téléphone portrait)
 :root {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 // Petit écran (téléphone paysage)
 @media (min-width: $bn_xs) {
     :root {
-        font-size: 14px;
+        font-size: 110%;
     }
 }
 
 // Écran moyen (tablettes)
 @media (min-width: $bn_sm) {
     :root {
-        font-size: 15px;
+        font-size: 110%;
     }
 }
 
 // Grand écran (PC)
 @media (min-width: $bn_md) {
     :root {
-        font-size: 16px;
+        font-size: 100%;
     }
 }
 
 // Très grand écran et +
 @media (min-width: $bn_lg) {
     :root {
-        font-size: 17px;
+        font-size: 100%;
     }
 }
 
@@ -199,6 +199,7 @@ p>a,
 .bn_active-2 {
     color: $bn_color-2 !important;
 }
+
 
 
 

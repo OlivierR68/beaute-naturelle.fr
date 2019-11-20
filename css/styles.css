@@ -28,30 +28,30 @@ body {
 
 /* Taille des textes */
 :root {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 @media (min-width: 576px) {
   :root {
-    font-size: 14px;
+    font-size: 110%;
   }
 }
 
 @media (min-width: 768px) {
   :root {
-    font-size: 15px;
+    font-size: 110%;
   }
 }
 
 @media (min-width: 992px) {
   :root {
-    font-size: 16px;
+    font-size: 100%;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
-    font-size: 17px;
+    font-size: 100%;
   }
 }
 
@@ -744,8 +744,36 @@ p > a:hover,
   background-image: url(../img/img-sitemap.jpg);
 }
 
-.bn_img-epilations {
+.bn_img-presta-1 {
   background-image: url(../img/prestations/presta-top-1.jpg);
+}
+
+.bn_img-presta-2 {
+  background-image: url(../img/prestations/presta-top-2.jpg);
+}
+
+.bn_img-presta-3 {
+  background-image: url(../img/prestations/presta-top-3.jpg);
+}
+
+.bn_img-presta-4 {
+  background-image: url(../img/prestations/presta-top-4.jpg);
+}
+
+.bn_img-presta-5 {
+  background-image: url(../img/prestations/presta-top-5.jpg);
+}
+
+.bn_img-presta-6 {
+  background-image: url(../img/prestations/presta-top-6.jpg);
+}
+
+.bn_img-presta-7 {
+  background-image: url(../img/prestations/presta-top-7.jpg);
+}
+
+.bn_img-presta-8 {
+  background-image: url(../img/prestations/presta-top-8.jpg);
 }
 
 /* ======== CONTENT ========= */
@@ -926,6 +954,23 @@ $bn_lg: 1200px;
 
 .bn_site-map-ul a:hover {
   color: #98C23A;
+}
+
+.bn_arianne a {
+  padding: 0 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bn_arianne a:last-child {
+  border-right: none;
+}
+
+.bn_arianne a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.bn_arianne a.bn_active-presta {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* ======== FOOTER ========= */

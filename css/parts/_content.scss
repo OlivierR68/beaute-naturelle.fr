@@ -186,3 +186,22 @@ $bn_lg: 1200px;
     }
 
 }
+
+
+.bn_arianne a {
+    padding: 0 2rem;
+    border-right: 1px solid rgba($color: #FFFFFF, $alpha: 0.1);
+
+    &:last-child {
+        border-right: none;
+    }
+
+    &:hover {
+        background: rgba($color: #000000, $alpha: 0.2);
+        ;
+    }
+
+    &.bn_active-presta {
+        background: rgba($color: #000000, $alpha: 0.2);
+    }
+}
