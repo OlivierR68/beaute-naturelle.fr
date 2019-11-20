@@ -958,11 +958,6 @@ $bn_lg: 1200px;
 
 .bn_arianne a {
   padding: 0 2rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.bn_arianne a:last-child {
-  border-right: none;
 }
 
 .bn_arianne a:hover {
