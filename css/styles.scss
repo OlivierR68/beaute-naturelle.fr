@@ -86,7 +86,7 @@ body {
 // Très grand écran et +
 @media (min-width: $bn_lg) {
     :root {
-        font-size: 100%;
+        font-size: 95%;
     }
 }
 
@@ -148,7 +148,7 @@ p {
     size: 1rem;
     color: $bn_black;
     font-weight: $bn_font-regular;
-    line-height: 1rem;
+    line-height: 1.2rem;
 }
 
 a {

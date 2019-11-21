@@ -51,7 +51,7 @@ body {
 
 @media (min-width: 1200px) {
   :root {
-    font-size: 100%;
+    font-size: 95%;
   }
 }
 
@@ -107,7 +107,7 @@ p {
   size: 1rem;
   color: #221E20;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.2rem;
 }
 
 a {
