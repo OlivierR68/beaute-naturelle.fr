@@ -51,7 +51,7 @@ body {
 
 @media (min-width: 1200px) {
   :root {
-    font-size: 95%;
+    font-size: 96%;
   }
 }
 
@@ -861,7 +861,6 @@ td::first-letter {
 }
 
 /* ======================= FORMULAIRE ======================== */
-
 .bn_form-input label {
   color: #019839;
   background: #FFFAF5;
@@ -869,7 +868,6 @@ td::first-letter {
   padding: 0 0.4rem 0 0.4rem;
   font-size: 0.9rem;
 }
-
 
 .bn_form-input input[type="text"],
 .bn_form-input input[type="email"],
@@ -881,11 +879,9 @@ td::first-letter {
   border-color: #019839;
 }
 
-
 .bn_form-input textarea {
   min-height: 12rem;
 }
-
 
 .bn_form-input .bn_check-label {
   margin: 0 0 0 0;
