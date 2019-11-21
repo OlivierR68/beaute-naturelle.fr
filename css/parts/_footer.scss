@@ -61,3 +61,26 @@
         font-size: 2.5rem
     }
 }
+
+.bn_back-to-top {
+    display: flex;
+    border: 2px solid $bn_white;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0.8rem 0 0 auto;
+    opacity: 0.3;
+
+    border-radius: 10%;
+
+    cursor: pointer;
+
+    img {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin: auto;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}

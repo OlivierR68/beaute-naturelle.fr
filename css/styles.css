@@ -1038,4 +1038,27 @@ $bn_lg: 1200px;
 .bn_payment i {
   font-size: 2.5rem;
 }
+
+.bn_back-to-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #FAFAFA;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.8rem 0 0 auto;
+  opacity: 0.3;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.bn_back-to-top img {
+  height: 1.8rem;
+  width: 1.8rem;
+  margin: auto;
+}
+
+.bn_back-to-top:hover {
+  opacity: 1;
+}
 /*# sourceMappingURL=styles.css.map */
