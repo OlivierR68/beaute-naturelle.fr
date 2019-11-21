@@ -989,6 +989,17 @@ $bn_lg: 1200px;
   background: rgba(0, 0, 0, 0.2);
 }
 
+.bn_galerie img:hover {
+  opacity: 0.6;
+}
+
+.bn_galerie img {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 /* ======== FOOTER ========= */
 .bn_copyright {
   font-size: 0.8rem;
