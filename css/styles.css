@@ -51,7 +51,7 @@ body {
 
 @media (min-width: 1200px) {
   :root {
-    font-size: 100%;
+    font-size: 96%;
   }
 }
 
@@ -107,7 +107,8 @@ p {
   size: 1rem;
   color: #221E20;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.02em;
 }
 
 a {
@@ -144,7 +145,8 @@ p > a:hover,
 }
 
 .bn_small-text {
-  font-size: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1rem;
 }
 
 .bn_bold {
@@ -849,17 +851,31 @@ td::first-letter {
   opacity: 1;
 }
 
-.bn_block-newsletter {
-  padding: 0 3rem;
-}
-
 .bn_newsletter-input {
   border-radius: 0%;
-  width: 20rem !important;
+  width: 18rem !important;
 }
 
-/* ======================= FORMULAIRE ======================== */
+@media (min-width: 576px) {
+  .bn_newsletter-input {
+    margin-bottom: 0.5rem;
+  }
+}
 
+@media (min-width: 768px) {
+  .bn_newsletter-input {
+    margin-bottom: 0rem;
+    width: 24rem !important;
+  }
+}
+
+/* 
+$bn_xs: 576px;
+$bn_sm: 768px;
+$bn_md: 992px;
+$bn_lg: 1200px;
+*/
+/* ======================= FORMULAIRE ======================== */
 .bn_form-input label {
   color: #019839;
   background: #FFFAF5;
@@ -867,7 +883,6 @@ td::first-letter {
   padding: 0 0.4rem 0 0.4rem;
   font-size: 0.9rem;
 }
-
 
 .bn_form-input input[type="text"],
 .bn_form-input input[type="email"],
@@ -879,11 +894,9 @@ td::first-letter {
   border-color: #019839;
 }
 
-
 .bn_form-input textarea {
   min-height: 12rem;
 }
-
 
 .bn_form-input .bn_check-label {
   margin: 0 0 0 0;
@@ -981,7 +994,6 @@ $bn_lg: 1200px;
   font-size: 0.8rem;
   color: #FAFAFA;
   display: block;
-  white-space: nowrap;
   padding: 0.8rem 0 0.8rem 0;
 }
 
@@ -1038,4 +1050,40 @@ $bn_lg: 1200px;
 .bn_payment i {
   font-size: 2.5rem;
 }
+
+.bn_back-to-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #FAFAFA;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.8rem auto 0 auto;
+  opacity: 0.3;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.bn_back-to-top img {
+  height: 1.8rem;
+  width: 1.8rem;
+  margin: auto;
+}
+
+.bn_back-to-top:hover {
+  opacity: 1;
+}
+
+@media (min-width: 992px) {
+  .bn_back-to-top {
+    margin: 0.8rem 0 0 auto;
+  }
+}
+
+/* 
+$bn_xs: 576px;
+$bn_sm: 768px;
+$bn_md: 992px;
+$bn_lg: 1200px;
+*/
 /*# sourceMappingURL=styles.css.map */
