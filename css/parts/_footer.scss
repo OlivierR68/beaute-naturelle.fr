@@ -70,6 +70,8 @@
     margin: 0.8rem 0 0 auto;
     opacity: 0.3;
 
+    margin-top: -2.4rem;
+
     border-radius: 10%;
 
     cursor: pointer;
@@ -84,3 +86,10 @@
         opacity: 1;
     }
 }
+
+/* 
+$bn_xs: 576px;
+$bn_sm: 768px;
+$bn_md: 992px;
+$bn_lg: 1200px;
+*/

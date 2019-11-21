@@ -1046,6 +1046,7 @@ $bn_lg: 1200px;
   height: 2.2rem;
   margin: 0.8rem 0 0 auto;
   opacity: 0.3;
+  margin-top: -2.4rem;
   border-radius: 10%;
   cursor: pointer;
 }
@@ -1059,4 +1060,11 @@ $bn_lg: 1200px;
 .bn_back-to-top:hover {
   opacity: 1;
 }
+
+/* 
+$bn_xs: 576px;
+$bn_sm: 768px;
+$bn_md: 992px;
+$bn_lg: 1200px;
+*/
 /*# sourceMappingURL=styles.css.map */
