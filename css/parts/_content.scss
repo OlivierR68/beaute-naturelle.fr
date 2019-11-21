@@ -214,3 +214,17 @@ $bn_lg: 1200px;
         background: rgba($color: #000000, $alpha: 0.2);
     }
 }
+
+
+.bn_galerie img:hover {
+    opacity: 0.6;
+
+}
+
+
+
+.bn_galerie img {
+
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
