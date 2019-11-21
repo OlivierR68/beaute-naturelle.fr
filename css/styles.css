@@ -851,10 +851,6 @@ td::first-letter {
   opacity: 1;
 }
 
-.bn_block-newsletter {
-  padding: 3rem;
-}
-
 .bn_newsletter-input {
   border-radius: 0%;
   width: 18rem !important;
