@@ -6,7 +6,7 @@
     color: $bn_white;
 
     display: block;
-    white-space: nowrap;
+
     padding: 0.8rem 0 0.8rem 0;
 
     a {
@@ -67,10 +67,8 @@
     border: 2px solid $bn_white;
     width: 2.2rem;
     height: 2.2rem;
-    margin: 0.8rem 0 0 auto;
+    margin: 0.8rem auto 0 auto;
     opacity: 0.3;
-
-    margin-top: -2.4rem;
 
     border-radius: 10%;
 
@@ -84,6 +82,12 @@
 
     &:hover {
         opacity: 1;
+    }
+}
+
+@media (min-width: $bn_md) {
+    .bn_back-to-top {
+        margin: 0.8rem 0 0 auto;
     }
 }
 

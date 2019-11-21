@@ -51,14 +51,36 @@
 
 
 .bn_block-newsletter {
-    padding: 0 3rem;
+    padding: 3rem;
 }
 
 .bn_newsletter-input {
     border-radius: 0%;
-    width: 20rem !important;
+    width: 18rem !important;
 
 }
+
+@media (min-width: $bn_xs) {
+    .bn_newsletter-input {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: $bn_sm) {
+    .bn_newsletter-input {
+        margin-bottom: 0rem;
+        width: 24rem !important;
+    }
+}
+
+
+
+/* 
+$bn_xs: 576px;
+$bn_sm: 768px;
+$bn_md: 992px;
+$bn_lg: 1200px;
+*/
 
 /* ======================= FORMULAIRE ======================== */
 
