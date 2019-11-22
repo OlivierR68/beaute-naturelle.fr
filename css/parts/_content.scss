@@ -1,4 +1,4 @@
-/* ======== CONTENT ========= */
+/* ======================= FORMULAIRE ======================== */
 
 .bn_block-title {
 
@@ -39,12 +39,12 @@
     filter: grayscale(1);
     opacity: 0.7;
 
-    transition-property: filter, opacity, width;
+    transition-property: filter, opacity, transform;
     transition-duration: 0.5s;
 }
 
 .bn_certif-btn:hover {
-    width: 9rem;
+    transform: scale(1.125);
     filter: grayscale(0);
     opacity: 1;
 }
@@ -122,26 +122,59 @@ $bn_lg: 1200px;
     background-position: 50% 50%;
 
     overflow: hidden;
+    position: relative;
 
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    span {
+        z-index: 2;
+        text-transform: uppercase;
+        color: white;
+        transition-property: transform;
+        transition-duration: 0.5s;
+        letter-spacing: $bn_letter-spacing;
+    }
 
-.bn_presta-block:hover {
-
-    font-size: 1.3em;
 
     div {
+        background-color: $bn_color-1;
+        transition-property: transform;
+        transition-duration: 0.5s;
+        opacity: 0.8;
+        height: 20%;
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 0;
+    }
 
-        height: 100%;
+    div.bn_bg-color-2 {
+        background-color: $bn_color-2;
+    }
+
+
+    &:hover {
+
+        span {
+            transform: scale(1.5);
+        }
+
+        div {
+            transform: scaleY(5);
+        }
 
     }
+
 }
+
 
 
 
 @media (min-width: $bn_md) {
     .bn_presta-block {
-        /* 1:1 Aspect Ratio */
+
         height: 14rem;
     }
 }
@@ -216,15 +249,40 @@ $bn_lg: 1200px;
 }
 
 
-.bn_galerie img:hover {
-    opacity: 0.6;
-
-}
+/* ======================= GALERIE ======================== */
 
 
 
-.bn_galerie img {
 
-    transition-property: opacity;
-    transition-duration: 0.5s;
+.bn_galerie-img {
+
+
+    overflow: hidden;
+    position: relative;
+
+    padding-top: 56.25%;
+    width: 100%;
+
+    &:hover {
+        img {
+            transform: scale(1.25);
+            opacity: 0.6;
+        }
+
+    }
+
+    img {
+        transition-property: transform, opacity;
+        transition-duration: 0.5s;
+
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+    }
+
 }

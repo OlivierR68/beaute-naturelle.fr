@@ -786,7 +786,7 @@ td::first-letter {
   background-image: url(../img/prestations/presta-top-8.jpg);
 }
 
-/* ======== CONTENT ========= */
+/* ======================= FORMULAIRE ======================== */
 .bn_block-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,16 +836,17 @@ td::first-letter {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   opacity: 0.7;
-  -webkit-transition-property: opacity, width, -webkit-filter;
-  transition-property: opacity, width, -webkit-filter;
-  transition-property: filter, opacity, width;
-  transition-property: filter, opacity, width, -webkit-filter;
+  -webkit-transition-property: opacity, -webkit-filter, -webkit-transform;
+  transition-property: opacity, -webkit-filter, -webkit-transform;
+  transition-property: filter, opacity, transform;
+  transition-property: filter, opacity, transform, -webkit-filter, -webkit-transform;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
 .bn_certif-btn:hover {
-  width: 9rem;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
   opacity: 1;
@@ -909,19 +910,63 @@ $bn_lg: 1200px;
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.bn_presta-block:hover {
-  font-size: 1.3em;
+.bn_presta-block span {
+  z-index: 2;
+  text-transform: uppercase;
+  color: white;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  letter-spacing: 0.05em;
+}
+
+.bn_presta-block div {
+  background-color: #026634;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  opacity: 0.8;
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+
+.bn_presta-block div.bn_bg-color-2 {
+  background-color: #98C23A;
+}
+
+.bn_presta-block:hover span {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .bn_presta-block:hover div {
-  height: 100%;
+  -webkit-transform: scaleY(5);
+          transform: scaleY(5);
 }
 
 @media (min-width: 992px) {
   .bn_presta-block {
-    /* 1:1 Aspect Ratio */
     height: 14rem;
   }
 }
@@ -989,15 +1034,32 @@ $bn_lg: 1200px;
   background: rgba(0, 0, 0, 0.2);
 }
 
-.bn_galerie img:hover {
+/* ======================= GALERIE ======================== */
+.bn_galerie-img {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+}
+
+.bn_galerie-img:hover img {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
   opacity: 0.6;
 }
 
-.bn_galerie img {
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
+.bn_galerie-img img {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* ======== FOOTER ========= */
