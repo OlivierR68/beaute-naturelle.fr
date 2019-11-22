@@ -39,12 +39,12 @@
     filter: grayscale(1);
     opacity: 0.7;
 
-    transition-property: filter, opacity, width;
+    transition-property: filter, opacity, transform;
     transition-duration: 0.5s;
 }
 
 .bn_certif-btn:hover {
-    width: 9rem;
+    transform: scale(1.125);
     filter: grayscale(0);
     opacity: 1;
 }

@@ -836,16 +836,17 @@ td::first-letter {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   opacity: 0.7;
-  -webkit-transition-property: opacity, width, -webkit-filter;
-  transition-property: opacity, width, -webkit-filter;
-  transition-property: filter, opacity, width;
-  transition-property: filter, opacity, width, -webkit-filter;
+  -webkit-transition-property: opacity, -webkit-filter, -webkit-transform;
+  transition-property: opacity, -webkit-filter, -webkit-transform;
+  transition-property: filter, opacity, transform;
+  transition-property: filter, opacity, transform, -webkit-filter, -webkit-transform;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
 .bn_certif-btn:hover {
-  width: 9rem;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
   opacity: 1;
