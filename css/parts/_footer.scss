@@ -41,12 +41,12 @@
     align-items: center;
     width: 3rem;
     height: 3rem;
-    transition-property: font-size;
+    transition-property: transform;
     transition-duration: 0.5s;
 }
 
 .bn_social-bottom:hover {
-    font-size: 3rem;
+    transform: scale(1.2);
 }
 
 
