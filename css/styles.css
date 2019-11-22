@@ -1035,15 +1035,31 @@ $bn_lg: 1200px;
 }
 
 /* ======================= GALERIE ======================== */
-.bn_galerie img:hover {
+.bn_galerie-img {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+}
+
+.bn_galerie-img:hover img {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
   opacity: 0.6;
 }
 
-.bn_galerie img {
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
+.bn_galerie-img img {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* ======== FOOTER ========= */
