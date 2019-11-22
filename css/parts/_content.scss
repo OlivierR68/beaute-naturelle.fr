@@ -1,4 +1,4 @@
-/* ======== CONTENT ========= */
+/* ======================= FORMULAIRE ======================== */
 
 .bn_block-title {
 
@@ -122,26 +122,58 @@ $bn_lg: 1200px;
     background-position: 50% 50%;
 
     overflow: hidden;
+    position: relative;
 
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    span {
+        z-index: 2;
+        text-transform: uppercase;
+        color: white;
+        transition-property: transform;
+        transition-duration: 0.5s;
+    }
 
-.bn_presta-block:hover {
-
-    font-size: 1.3em;
 
     div {
+        background-color: $bn_color-1;
+        transition-property: transform;
+        transition-duration: 0.5s;
+        opacity: 0.8;
+        height: 20%;
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 0;
+    }
 
-        height: 100%;
+    div.bn_bg-color-2 {
+        background-color: $bn_color-2;
+    }
+
+
+    &:hover {
+
+        span {
+            transform: scale(1.5);
+        }
+
+        div {
+            transform: scaleY(5);
+        }
 
     }
+
 }
+
 
 
 
 @media (min-width: $bn_md) {
     .bn_presta-block {
-        /* 1:1 Aspect Ratio */
+
         height: 14rem;
     }
 }
@@ -215,6 +247,8 @@ $bn_lg: 1200px;
     }
 }
 
+
+/* ======================= GALERIE ======================== */
 
 .bn_galerie img:hover {
     opacity: 0.6;

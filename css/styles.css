@@ -786,7 +786,7 @@ td::first-letter {
   background-image: url(../img/prestations/presta-top-8.jpg);
 }
 
-/* ======== CONTENT ========= */
+/* ======================= FORMULAIRE ======================== */
 .bn_block-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -909,19 +909,62 @@ $bn_lg: 1200px;
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.bn_presta-block:hover {
-  font-size: 1.3em;
+.bn_presta-block span {
+  z-index: 2;
+  text-transform: uppercase;
+  color: white;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.bn_presta-block div {
+  background-color: #026634;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  opacity: 0.8;
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+
+.bn_presta-block div.bn_bg-color-2 {
+  background-color: #98C23A;
+}
+
+.bn_presta-block:hover span {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .bn_presta-block:hover div {
-  height: 100%;
+  -webkit-transform: scaleY(5);
+          transform: scaleY(5);
 }
 
 @media (min-width: 992px) {
   .bn_presta-block {
-    /* 1:1 Aspect Ratio */
     height: 14rem;
   }
 }
@@ -989,6 +1032,7 @@ $bn_lg: 1200px;
   background: rgba(0, 0, 0, 0.2);
 }
 
+/* ======================= GALERIE ======================== */
 .bn_galerie img:hover {
   opacity: 0.6;
 }
