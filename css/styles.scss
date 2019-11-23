@@ -65,28 +65,28 @@ body {
 // Petit écran (téléphone paysage)
 @media (min-width: $bn_xs) {
     :root {
-        font-size: 110%;
+        font-size: 14px;
     }
 }
 
 // Écran moyen (tablettes)
 @media (min-width: $bn_sm) {
     :root {
-        font-size: 110%;
+        font-size: 15px;
     }
 }
 
 // Grand écran (PC)
 @media (min-width: $bn_md) {
     :root {
-        font-size: 100%;
+        font-size: 16px;
     }
 }
 
 // Très grand écran et +
 @media (min-width: $bn_lg) {
     :root {
-        font-size: 96%;
+        font-size: 16px;
     }
 }
 
