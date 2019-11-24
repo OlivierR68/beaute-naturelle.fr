@@ -59,7 +59,8 @@ body {
 
 // Très Petit écran (téléphone portrait)
 :root {
-    font-size: 16px;
+    font-size: 14px;
+
 }
 
 // Petit écran (téléphone paysage)
@@ -119,7 +120,7 @@ h2,
     color: $bn_black;
     font-family: $bn_font-2;
     font-weight: $bn_font-light;
-    line-height: 2.1rem;
+    line-height: 1.5rem;
 
     padding-bottom: 0.5rem;
     // letter-spacing: $bn_letter-spacing;

@@ -28,30 +28,30 @@ body {
 
 /* Taille des textes */
 :root {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media (min-width: 576px) {
   :root {
-    font-size: 110%;
+    font-size: 14px;
   }
 }
 
 @media (min-width: 768px) {
   :root {
-    font-size: 110%;
+    font-size: 15px;
   }
 }
 
 @media (min-width: 992px) {
   :root {
-    font-size: 100%;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
-    font-size: 96%;
+    font-size: 16px;
   }
 }
 
@@ -82,7 +82,7 @@ h2,
   color: #221E20;
   font-family: "Lora", serif;
   font-weight: 300;
-  line-height: 2.1rem;
+  line-height: 1.5rem;
   padding-bottom: 0.5rem;
 }
 
@@ -906,7 +906,7 @@ $bn_lg: 1200px;
 /* ======================= PRESTATION ======================== */
 .bn_presta-block {
   /* 1:1 Aspect Ratio */
-  height: 18rem;
+  height: 14rem;
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
@@ -963,6 +963,12 @@ $bn_lg: 1200px;
 .bn_presta-block:hover div {
   -webkit-transform: scaleY(5);
           transform: scaleY(5);
+}
+
+@media (min-width: 768px) {
+  .bn_presta-block {
+    height: 20rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1105,14 +1111,17 @@ $bn_lg: 1200px;
           align-items: center;
   width: 3rem;
   height: 3rem;
-  -webkit-transition-property: font-size;
-  transition-property: font-size;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
 .bn_social-bottom:hover {
-  font-size: 3rem;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .bn_payment img {

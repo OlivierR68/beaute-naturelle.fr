@@ -117,7 +117,7 @@ $bn_lg: 1200px;
 .bn_presta-block {
     /* 1:1 Aspect Ratio */
 
-    height: 18rem;
+    height: 14rem;
     background-size: cover;
     background-position: 50% 50%;
 
@@ -169,8 +169,12 @@ $bn_lg: 1200px;
 
 }
 
+@media (min-width: $bn_sm) {
+    .bn_presta-block {
 
-
+        height: 20rem;
+    }
+}
 
 @media (min-width: $bn_md) {
     .bn_presta-block {
@@ -178,6 +182,8 @@ $bn_lg: 1200px;
         height: 14rem;
     }
 }
+
+
 
 /*
 $bn_xs: 576px;
