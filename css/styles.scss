@@ -59,34 +59,35 @@ body {
 
 // Très Petit écran (téléphone portrait)
 :root {
-    font-size: 16px;
+    font-size: 14px;
+
 }
 
 // Petit écran (téléphone paysage)
 @media (min-width: $bn_xs) {
     :root {
-        font-size: 110%;
+        font-size: 14px;
     }
 }
 
 // Écran moyen (tablettes)
 @media (min-width: $bn_sm) {
     :root {
-        font-size: 110%;
+        font-size: 15px;
     }
 }
 
 // Grand écran (PC)
 @media (min-width: $bn_md) {
     :root {
-        font-size: 100%;
+        font-size: 16px;
     }
 }
 
 // Très grand écran et +
 @media (min-width: $bn_lg) {
     :root {
-        font-size: 96%;
+        font-size: 16px;
     }
 }
 
@@ -119,7 +120,7 @@ h2,
     color: $bn_black;
     font-family: $bn_font-2;
     font-weight: $bn_font-light;
-    line-height: 2.1rem;
+    line-height: 1.5rem;
 
     padding-bottom: 0.5rem;
     // letter-spacing: $bn_letter-spacing;
