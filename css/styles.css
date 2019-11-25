@@ -656,6 +656,10 @@ td::first-letter {
   opacity: 0.5;
 }
 
+.dropdown-menu > a.dropdown-item:active {
+  background: none !important;
+}
+
 .bn_decal-slider {
   margin-top: -6rem;
 }

@@ -101,6 +101,9 @@
     opacity: 0.5;
 }
 
+.dropdown-menu>a.dropdown-item:active {
+    background: none !important;
+}
 
 
 
