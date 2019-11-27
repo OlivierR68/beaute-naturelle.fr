@@ -1,24 +1,9 @@
 @charset "UTF-8";
-/* ======== VARIABLES GLOBALES ========= */
-/* Toutes les classes et variables du site auront un préfixe "bn_" (comme beauté naturelle)
- pour eviter de rentrer en conflit avec les classes et variables Bootstrap  */
-/* responsive BreakPoints */
-/*
 
-lato weight Equivalent :
+/* ================================================
+  STYLE GLOBAUX 
+=================================================== */
 
-Thin 100
-Light 300
-Regular 400
-Bold 700
-Black 900
-
-Lora weight Equivalent :
-
-Regular 400
-Bold 700
-
-/* ======== STYLE GLOBAUX ========= */
 body {
   font-family: "Lato", sans-serif;
   color: #221E20;
@@ -26,7 +11,10 @@ body {
   background-color: #FFFAF5;
 }
 
-/* Taille des textes */
+
+/*------ Tailles des Textes -----*/
+
+
 :root {
   font-size: 14px;
 }
@@ -55,7 +43,8 @@ body {
   }
 }
 
-/* Style des Textes */
+/*------ Style des Textes -----*/
+
 h1,
 .bn_h1 {
   font-size: 1.8rem;
@@ -115,13 +104,13 @@ a {
   text-decoration: none !important;
 }
 
-p > a,
+p>a,
 .bn_a {
   text-decoration: none !important;
   color: #019839 !important;
 }
 
-p > a:hover,
+p>a:hover,
 .bn_a:hover {
   color: #026634 !important;
 }
@@ -135,7 +124,6 @@ p > a:hover,
   color: #98C23A !important;
 }
 
-/* ================================== */
 .dropdown-item:hover {
   color: #026634;
 }
@@ -169,7 +157,8 @@ td::first-letter {
   text-transform: uppercase;
 }
 
-/* Couleur et background */
+/*----- Couleur et background -----*/
+
 .bn_bg-main {
   background-color: #FFFAF5;
 }
@@ -210,6 +199,10 @@ td::first-letter {
   color: #FAFAFA;
 }
 
+
+/*----- Opacité ------*/
+
+
 .bn_opacity-90 {
   opacity: 0.9;
 }
@@ -226,7 +219,8 @@ td::first-letter {
   opacity: 0.4;
 }
 
-/* Boutons */
+/*----- Boutons ------*/
+
 .bn_btn-green {
   color: #FAFAFA;
   background-color: #026634;
@@ -256,6 +250,9 @@ td::first-letter {
   text-decoration: none;
 }
 
+/*----- Espacement ------*/
+
+
 .bn_gap-10 {
   height: 0.6rem;
 }
@@ -284,282 +281,13 @@ td::first-letter {
   height: 12rem;
 }
 
-#loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-}
 
-#loader {
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #019839;
-  -webkit-animation: spin 2s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin 2s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-  z-index: 1001;
-}
+/* ================================================
+  HEADER 
+=================================================== */
 
-#loader:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #98C23A;
-  -webkit-animation: spin 3s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin 3s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-}
+/*----- Top bar ------*/
 
-/*
-
-    #loader:after {
-        content: "";
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-        border-radius: 50%;
-        border: 3px solid transparent;
-        border-top-color:  $bn_white;
-
-        -webkit-animation: spin 1.5s linear infinite; 
-          animation: spin 1.5s linear infinite; 
-    }
-
-    */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-
-#loader-wrapper .loader-section {
-  position: fixed;
-  top: 0;
-  width: 51%;
-  height: 100%;
-  background: #026634;
-  z-index: 1000;
-  -webkit-transform: translateX(0);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  /* IE 9 */
-  transform: translateX(0);
-  /* Firefox 16+, IE 10+, Opera */
-}
-
-#loader-wrapper .loader-section.section-left {
-  left: 0;
-}
-
-#loader-wrapper .loader-section.section-right {
-  right: 0;
-}
-
-/* Loaded */
-.loaded #loader-wrapper .loader-section.section-left {
-  -webkit-transform: translateX(-100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  /* IE 9 */
-  transform: translateX(-100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.loaded #loader-wrapper .loader-section.section-right {
-  -webkit-transform: translateX(100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  /* IE 9 */
-  transform: translateX(100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.loaded #loader {
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.loaded #loader-wrapper {
-  visibility: hidden;
-  -webkit-transform: translateY(-100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  /* IE 9 */
-  transform: translateY(-100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 0.3s 1s ease-out;
-  transition: all 0.3s 1s ease-out;
-}
-
-/* JavaScript Turned Off */
-.no-js #loader-wrapper {
-  display: none;
-}
-
-#content {
-  margin: 0 auto;
-  padding-bottom: 50px;
-  width: 80%;
-  max-width: 978px;
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Image replacement
- */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px;
-}
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-  *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ======== HEADER ========= */
 .bn_top-bar {
   height: 2.8125rem;
   font-size: 0.75rem;
@@ -577,14 +305,15 @@ td::first-letter {
   font-size: 1rem;
 }
 
-/* Logo Top */
+/*----- Logo Top ------*/
+
 .bn_logo-top {
   height: 4.375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .bn_logo-top .bn_logo-svg {
@@ -599,11 +328,11 @@ td::first-letter {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -627,7 +356,8 @@ td::first-letter {
   margin-top: -0.25rem;
 }
 
-/* navbar */
+/*----- navbar -----*/
+
 .bn_navbar {
   height: 6.25rem;
 }
@@ -656,9 +386,13 @@ td::first-letter {
   opacity: 0.5;
 }
 
-.dropdown-menu > a.dropdown-item:active {
+.dropdown-menu>a.dropdown-item:active {
   background: none !important;
 }
+
+/* ================================================
+  SLIDER 
+=================================================== */
 
 .bn_decal-slider {
   margin-top: -6rem;
@@ -670,11 +404,11 @@ td::first-letter {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-position: 50% 50%;
   background-size: cover;
   padding-top: 6rem;
@@ -708,14 +442,14 @@ td::first-letter {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -727,6 +461,8 @@ td::first-letter {
 .bn_decal-slide-indic {
   margin-top: 6rem;
 }
+
+/*----- img top -----*/
 
 .bn_img-top {
   height: 20rem;
@@ -790,21 +526,26 @@ td::first-letter {
   background-image: url(../img/prestations/presta-top-8.jpg);
 }
 
-/* ======================= FORMULAIRE ======================== */
+/* ================================================
+  CONTENU 
+=================================================== */
+
+/*----- Block Titre -----*/
+
 .bn_block-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 3rem 0 0 0;
   text-align: center;
 }
@@ -816,6 +557,8 @@ td::first-letter {
   height: 3.125rem;
 }
 
+/*----- Certifications -----*/
+
 .bn_certif-row {
   min-height: 10rem;
 }
@@ -826,11 +569,11 @@ td::first-letter {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 9rem;
   width: 9rem;
 }
@@ -838,21 +581,21 @@ td::first-letter {
 .bn_certif-btn {
   width: 8rem;
   -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  filter: grayscale(1);
   opacity: 0.7;
   -webkit-transition-property: opacity, -webkit-filter, -webkit-transform;
   transition-property: opacity, -webkit-filter, -webkit-transform;
   transition-property: filter, opacity, transform;
   transition-property: filter, opacity, transform, -webkit-filter, -webkit-transform;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .bn_certif-btn:hover {
   -webkit-transform: scale(1.125);
-          transform: scale(1.125);
+  transform: scale(1.125);
   -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  filter: grayscale(0);
   opacity: 1;
 }
 
@@ -874,13 +617,10 @@ td::first-letter {
   }
 }
 
-/* 
-$bn_xs: 576px;
-$bn_sm: 768px;
-$bn_md: 992px;
-$bn_lg: 1200px;
-*/
-/* ======================= FORMULAIRE ======================== */
+/* ================================================
+  FORMULAIRE 
+=================================================== */
+
 .bn_form-input label {
   color: #019839;
   background: #FFFAF5;
@@ -907,9 +647,13 @@ $bn_lg: 1200px;
   margin: 0 0 0 0;
 }
 
-/* ======================= PRESTATION ======================== */
+/* ================================================
+   PRESTATIONS 
+=================================================== */
+
+/*----- Menu page institut -----*/
+
 .bn_presta-block {
-  /* 1:1 Aspect Ratio */
   height: 14rem;
   background-size: cover;
   background-position: 50% 50%;
@@ -919,11 +663,11 @@ $bn_lg: 1200px;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .bn_presta-block span {
@@ -935,7 +679,7 @@ $bn_lg: 1200px;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   letter-spacing: 0.05em;
 }
 
@@ -946,7 +690,7 @@ $bn_lg: 1200px;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   opacity: 0.8;
   height: 20%;
   width: 100%;
@@ -961,12 +705,12 @@ $bn_lg: 1200px;
 
 .bn_presta-block:hover span {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .bn_presta-block:hover div {
   -webkit-transform: scaleY(5);
-          transform: scaleY(5);
+  transform: scaleY(5);
 }
 
 @media (min-width: 768px) {
@@ -981,13 +725,7 @@ $bn_lg: 1200px;
   }
 }
 
-/*
-$bn_xs: 576px;
-$bn_sm: 768px;
-$bn_md: 992px;
-$bn_lg: 1200px;
 
-*/
 .bn_presta-bg-1 {
   background-image: url(../img/prestations/presta-bg-1.jpg);
 }
@@ -1044,7 +782,10 @@ $bn_lg: 1200px;
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* ======================= GALERIE ======================== */
+/* ================================================
+   GALERIE 
+=================================================== */
+
 .bn_galerie-img {
   overflow: hidden;
   position: relative;
@@ -1054,7 +795,7 @@ $bn_lg: 1200px;
 
 .bn_galerie-img:hover img {
   -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  transform: scale(1.25);
   opacity: 0.6;
 }
 
@@ -1064,7 +805,7 @@ $bn_lg: 1200px;
   transition-property: transform, opacity;
   transition-property: transform, opacity, -webkit-transform;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -1072,7 +813,12 @@ $bn_lg: 1200px;
   left: 0;
 }
 
-/* ======== FOOTER ========= */
+/* ================================================
+   FOOTER 
+=================================================== */
+
+/*----- Copyright -----*/
+
 .bn_copyright {
   font-size: 0.8rem;
   color: #FAFAFA;
@@ -1093,6 +839,8 @@ $bn_lg: 1200px;
   font-size: 0.8rem;
 }
 
+/*----- Block -----*/
+
 .bn_footer-block a,
 .bn_footer-block p {
   color: #FAFAFA;
@@ -1108,11 +856,11 @@ $bn_lg: 1200px;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 3rem;
   height: 3rem;
   -webkit-transition-property: -webkit-transform;
@@ -1120,12 +868,12 @@ $bn_lg: 1200px;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .bn_social-bottom:hover {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .bn_payment img {
@@ -1165,11 +913,3 @@ $bn_lg: 1200px;
     margin: 0.8rem 0 0 auto;
   }
 }
-
-/* 
-$bn_xs: 576px;
-$bn_sm: 768px;
-$bn_md: 992px;
-$bn_lg: 1200px;
-*/
-/*# sourceMappingURL=styles.css.map */
