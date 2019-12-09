@@ -1,20 +1,25 @@
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            $('#back-to-top').fadeIn();
-        } else {
-            $('#back-to-top').fadeOut();
-        }
-    });
-    // scroll body to 0px on click
-    $('#back-to-top').click(function () {
-        $('#back-to-top').tooltip('hide');
-        $('body,html').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
+var wbBtn = $('#b2top-button');
 
-    $('#back-to-top').tooltip('show');
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+        wbBtn.addClass('show');
+    } else {
+        wbBtn.removeClass('show');
+    }
+});
+
+wbBtn.on('click', function (e) {
+
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, '300');
+
+
+    /*
+    e.preventDefault();
+    $("html, body").scrollTop(0);
+    */
 
 });
