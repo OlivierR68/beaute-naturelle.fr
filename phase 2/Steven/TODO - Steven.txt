@@ -1,0 +1,16 @@
+https://webolive.fr/beaute-naturelle/index.html
+voir le bas de page
+
+= LVL 1 =
+
+- Faire une fonction php qui récupère les mails envoyés par le formulaire et 
+  et les insèrer dans une table d'une bdd
+
+= LVL 2 =
+- Dans une page php différentes, pouvoir gérer ces mails (suprimer et modifier);
+
+
+= LVL 3 =
+1.
+- Créer une 3 page qui permet de créer une un mail en html (avec un éditeur), pouvoir
+  puis permet de l'envoyer sur la mailing list.
