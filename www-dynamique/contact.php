@@ -1,6 +1,8 @@
 <?php
-
+$page = 'contact';
 include './parts/header.php';
+
+
 
 ?>
 

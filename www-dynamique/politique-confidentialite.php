@@ -1,4 +1,6 @@
 <?php
+$page = 'confidentialite';
+
 
 include './parts/header.php';
 

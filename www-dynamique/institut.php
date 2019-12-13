@@ -1,6 +1,7 @@
 <?php
-
+$page = 'insitut';
 include './parts/header.php';
+
 
 ?>
 

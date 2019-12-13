@@ -91,14 +91,14 @@
 
                     <div class="collapse navbar-collapse bn_bg-main" id="navbarSupportedContent">
                         <ul class="navbar-nav  ml-auto">
-                            <li class="nav-item mx-1 bn_nav-item bn_active">
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "home" ? "bn_active" : "")?>">
                                 <a class="nav-link bn_nav-link" href="index.php">Accueil <span
                                         class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item">
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "events" ? "bn_active" : "")?>">
                                 <a class="nav-link bn_nav-link disabled" href="events.php">Évènements</a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item dropdown">
+                            <li class="nav-item mx-1 bn_nav-item dropdown <?php echo ($page == "insitut" ? "bn_active" : "")?>">
                                 <a class="nav-link bn_nav-link dropdown-toggle" href="institut.php" id="navbarDropdown"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     L'Institut
@@ -116,13 +116,13 @@
 
                                 </div>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item mx-1">
+                            <li class="nav-item mx-1 bn_nav-item mx-1 <?php echo ($page == "magasin" ? "bn_active" : "")?>">
                                 <a class="nav-link bn_nav-link" href="magasin.php">Le Magasin</a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item">
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "galerie" ? "bn_active" : "")?>">
                                 <a class="nav-link bn_nav-link" href="galerie.php">Galerie</a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item">
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "contact" ? "bn_active" : "")?>">
                                 <a class="nav-link bn_nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>

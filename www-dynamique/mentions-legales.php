@@ -1,6 +1,9 @@
 <?php
-
+$page = 'mentions';
 include './parts/header.php';
+
+
+
 
 ?>
     <!------- Block Image ---------->
