@@ -1,9 +1,6 @@
 <?php
 $page = 'galerie';
 include './parts/header.php';
-
-
-
 ?>
 <!------- Block Image ---------->
 

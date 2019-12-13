@@ -1,9 +1,6 @@
 <?php
 $page = 'magasin';
 include './parts/header.php';
-
-
-
 ?>
     <!------- Block Image ---------->
 

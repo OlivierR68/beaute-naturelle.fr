@@ -1,9 +1,6 @@
 <?php
 $page = 'sitemap';
-
 include './parts/header.php';
-
-
 ?>
 
     <!------- Block Image ---------->

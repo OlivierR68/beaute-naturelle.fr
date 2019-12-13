@@ -1,9 +1,6 @@
 <?php
 $page = 'confidentialite';
-
-
 include './parts/header.php';
-
 ?>
 
     <!------- Block Image ---------->

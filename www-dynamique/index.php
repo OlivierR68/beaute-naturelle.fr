@@ -2,9 +2,6 @@
 $page = 'home';
 include './parts/header.php';
 include './parts/slider.php';
-
-
-
 ?>
 
 

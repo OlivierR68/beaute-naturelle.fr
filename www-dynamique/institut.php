@@ -1,8 +1,6 @@
 <?php
 $page = 'insitut';
 include './parts/header.php';
-
-
 ?>
 
 <!------- Block Image ---------->
