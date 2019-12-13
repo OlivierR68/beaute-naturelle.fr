@@ -25,20 +25,20 @@
 
                 <div class="col-12 col-sm-6 col-lg-4 bn_infos">
                     <div class="bn_h2-pre bn_color-white text-center text-sm-left">
-                        <a href="magasin.html">Magasin</a> & <a href="institut.html">Institut</a>
+                        <a href="magasin.php">Magasin</a> & <a href="institut.php">Institut</a>
                     </div>
                     <div class="bn_h2 bn_color-white text-center text-sm-left">
-                        <a href="index.html">Beauté Naturelle</a>
+                        <a href="index.php">Beauté Naturelle</a>
                     </div>
                     <div class="d-flex justify-content-center justify-content-sm-start">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="contact.html">
+                                <a href="contact.php">
                                     <span><i class="fas fa-map-marker-alt mr-1"></i> 328 rue des clefs, 68 000 Colmar
                                 </a></span>
                             </li>
                             <li>
-                                <a href="contact.html">
+                                <a href="contact.php">
                                     <span><i class="fas fa-phone-alt mr-1"></i> 03 89 54 56 46
                                 </a></span>
                             </li>
@@ -48,7 +48,7 @@
                                 </a></span>
                             </li>
                             <li>
-                                <span><a href="contact.html"><i class="far fa-clock mr-1"></i> Ouvert tous les
+                                <span><a href="contact.php"><i class="far fa-clock mr-1"></i> Ouvert tous les
                                         jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à
                                             18H00</span></a></span>
                             </li>
@@ -77,19 +77,19 @@
                 <div class="col-12 col-lg-5 text-center text-lg-right">
                     <div>
                         <div class="bn_nav-bottom" class="bn_nav-bottom">
-                            <a href="mentions-legales.html">Mentions Légales</a> |
-                            <a href="politique-confidentialite.html">Politique de
+                            <a href="mentions-legales.php">Mentions Légales</a> |
+                            <a href="politique-confidentialite.php">Politique de
                                 confidentialité</a> |
-                            <a href="plan-site.html">Plan du Site</a>
+                            <a href="plan-site.php">Plan du Site</a>
                         </div>
 
                         <div class="bn_nav-bottom">
-                            <a href="index.html" class="bn_active-2">Accueil</a> |
+                            <a href="index.php" class="bn_active-2">Accueil</a> |
                             <span class="bn_opacity-60">Évènements</span> |
-                            <a href="institut.html">L'Institut</a> |
-                            <a href="magasin.html">Le Magasin</a> |
-                            <a href="galerie.html">Galerie</a> |
-                            <a href="contact.html">Contact</a>
+                            <a href="institut.php">L'Institut</a> |
+                            <a href="magasin.php">Le Magasin</a> |
+                            <a href="galerie.php">Galerie</a> |
+                            <a href="contact.php">Contact</a>
                         </div>
                     </div>
 

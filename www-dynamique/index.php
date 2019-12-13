@@ -64,7 +64,7 @@ include './parts/slider.php';
                         Evernat, Pukka, Solgar, Thés de la Pagode... </p>
                     <p>Venez-nous voir en magasin.</p>
 
-                    <a href="./magasin.html" class="btn bn_btn-green text-uppercase">Où nous
+                    <a href="./magasin.php" class="btn bn_btn-green text-uppercase">Où nous
                         trouver</a>
                 </div>
                 <div class="bn_gap-25"></div>
@@ -93,7 +93,7 @@ include './parts/slider.php';
                         spécifique.
                     </p>
 
-                    <a href="./institut.html" class="btn bn_btn-green text-uppercase">nos
+                    <a href="./institut.php" class="btn bn_btn-green text-uppercase">nos
                         prestations</a>
 
 
