@@ -6,7 +6,7 @@ include './parts/slider.php';
 
 
 
-<!---------------- Bloc Titre ------------------>
+<!-- Bloc Titre -->
 
 <div class="bn_block-title">
     <span class="bn_h1-pre">Magasin & Institut</span>
@@ -14,7 +14,7 @@ include './parts/slider.php';
     <div></div>
 </div>
 
-<!---------------- Bloc Cotenu  ------------------>
+<!-- Bloc Cotenu  -->
 
 <main class="container bn_content">
     <section>
@@ -108,7 +108,7 @@ include './parts/slider.php';
 
 </main>
 
-<!---------------- Bloc Titre ------------------>
+<!-- Bloc Titre -->
 
 
 <div class="container">
@@ -118,7 +118,7 @@ include './parts/slider.php';
         <div></div>
     </div>
 
-    <!---------------- Bloc Certifications ------------------>
+    <!-- Bloc Certifications -->
 
 
     <div class="bn_certif-row d-flex align-items-center justify-content-center flex-wrap">

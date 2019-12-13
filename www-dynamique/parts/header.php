@@ -35,7 +35,7 @@
 
 
     <header>
-        <!---------------------------------------------- BAR DU HAUT ----------------------------------------------->
+        <!-- BAR DU HAUT -->
 
         <div class="bn_bg-color-1">
             <div
@@ -62,14 +62,14 @@
             </div>
         </div>
 
-        <!---------------------------------------------- NAVIGATION ----------------------------------------------->
+        <!-- NAVIGATION -->
 
         <div class="bn_opacity-90 bn_bg-main sticky-top">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
 
                     <a class="navbar-brand mx-auto mx-lg-0" href="index.php">
-                        <!---------------- Logo du Haut ------------------>
+                        <!-- Logo du Haut -->
                         <div class="bn_logo-top">
                             <img src="img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">
                             <div class="bn_logg-text">
@@ -81,7 +81,7 @@
                         </div>
                     </a>
 
-                    <!---------------- Menu Navigation ------------------>
+                    <!-- Menu Navigation -->
 
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
