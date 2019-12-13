@@ -1,8 +1,11 @@
 <?php
 
-include 'vars.php';
+include './parts/header.php';
+include './parts/slider.php';
 
 ?>
+
+
 
 <!---------------- Bloc Titre ------------------>
 
@@ -142,3 +145,9 @@ include 'vars.php';
     </div>
 </div>
 <div class="bn_gap-25"></div>
+
+<?php
+
+include './parts/footer.php';
+
+?>
