@@ -46,8 +46,8 @@
                     <a class="bn_infos-items" href="tel:+33389545646"><i class="fas fa-phone-alt"></i>03
                         89 54 56 46</a>
                     <a class="bn_infos-items d-none d-lg-inline" href="mailto:contact@beaute-naturelle.fr"><i
-                            class="far fa-envelope"></i></i>contact@beaute-naturelle.fr</a>
-                    <a class="bn_infos-items" href="contact.php"><i class="far fa-clock"></i></i><span
+                            class="far fa-envelope"></i>contact@beaute-naturelle.fr</a>
+                    <a class="bn_infos-items" href="contact.php"><i class="far fa-clock"></i><span
                             class="d-none d-sm-inline">Ouvert tous les
                             jours, (sauf le Dimanche) de</span> 9H00 à 18H00</a>
                 </div>
@@ -126,6 +126,8 @@
                                 <a class="nav-link bn_nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>
+                        </div>
+                        
                 </nav>
 
 

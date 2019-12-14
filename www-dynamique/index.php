@@ -49,7 +49,7 @@ include './parts/slider.php';
         <div class="row no-gutters">
             <div class="col-12 col-lg-6 d-flex align-items-center order-lg-2">
                 <img src="./img/flacon-de-fleur-orange-huile.jpg" alt="flacon d'huile essentiels bio"
-                    class="img-fluid w-100" alt="petite venise de colmar">
+                    class="img-fluid w-100">
             </div>
             <div class="col-12 col-lg-6 px-4 d-flex flex-column justify-content-center">
                 <div class="bn_gap-25"></div>
@@ -75,7 +75,7 @@ include './parts/slider.php';
         <div class="row no-gutters">
             <div class="col-12 col-lg-6 d-flex align-items-center">
                 <img src="./img/soin-pierre-femmme-fleur.jpg" alt="femme alongée avec soin pierre chaude et huile"
-                    class="img-fluid w-100" alt="petite venise de colmar">
+                    class="img-fluid w-100" alt="huiles essentielles">
             </div>
             <div class="col-12 col-lg-6 px-4 d-flex flex-column justify-content-center">
                 <div class="bn_gap-25"></div>
@@ -134,8 +134,8 @@ include './parts/slider.php';
         <a href="https://www.ecocert.com/" target="_blank" class="bn_certif-col">
             <img src="./img/certif/Ecocert.svg" class="bn_certif-btn" alt="Logo Ecocert">
         </a>
-        <a href="https://www.kontrollierte-naturkosmetik.de/f/index_f.htm" class="bn_certif-col">
-            <img src="./img/certif/BDIH.png" target="_blank" class="bn_certif-btn" alt="Logo BDIH">
+        <a href="https://www.kontrollierte-naturkosmetik.de/f/index_f.htm" target="_blank" class="bn_certif-col">
+            <img src="./img/certif/BDIH.png"  class="bn_certif-btn" alt="Logo BDIH">
         </a>
         <a href="https://www.natrue.org/" target="_blank" class="bn_certif-col">
             <img src="./img/certif/Natrue.gif" class="bn_certif-btn" alt="Logo Natrue.org">
