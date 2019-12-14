@@ -12,10 +12,10 @@
         content="Magasin de coméstiques et institut de soins bio et naturelle, situé au dans la vielle ville de colmar, vénez découvrir notre sélection de produits et soins bio" />
     <meta name="author" content="Olivier Ravinasaga" />
 
-    <meta name=”robots” content=”index, follow”>
+    <meta name="robots" content="none" />
     <meta name="format-detection" content="telephone=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700%7CLora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/styles.css">

@@ -75,7 +75,7 @@ include './parts/slider.php';
         <div class="row no-gutters">
             <div class="col-12 col-lg-6 d-flex align-items-center">
                 <img src="./img/soin-pierre-femmme-fleur.jpg" alt="femme alongée avec soin pierre chaude et huile"
-                    class="img-fluid w-100" alt="huiles essentielles">
+                    class="img-fluid w-100">
             </div>
             <div class="col-12 col-lg-6 px-4 d-flex flex-column justify-content-center">
                 <div class="bn_gap-25"></div>

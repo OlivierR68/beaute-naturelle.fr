@@ -48,9 +48,10 @@
                                 </span></a>>
                             </li>
                             <li>
-                            <a href="contact.php"><span><i class="far fa-clock mr-1"></i> Ouvert tous les
-                                        jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à
-                                            18H00</span></span></a>
+                                <a href="contact.php">
+                                    <span><i class="far fa-clock mr-1"></i> Ouvert tous les jours,</span><br>
+                                    <span class="ml-3">(sauf le dimanche) de 9H00 à 18H00</span>
+                                </a>
                             </li>
 
                         </ul>
