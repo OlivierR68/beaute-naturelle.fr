@@ -1,0 +1,73 @@
+
+Démarrage Projet 				<> 18-12-2019
+
+Analyse
+
+-> Création Gantt
+-> Rendu Gantt 					<> 20-12-2019
+
+-> Création Cahier des Charges
+--> Dictionnaire de données
+--> Mérise
+--> UML
+--> Correction et mise en forme
+-> Rendu Cahier des Charges 			<> 10-01-2020
+
+-> Création de la BDD SQL
+-> Verification / Correction
+-> Rendu Export BDD SQL				<> 10-01-2020
+
+Developpement
+
+-> Formulaire de contact
+-> Création du Backoffice
+
+-> Authentification
+
+-> Utilisateur
+--> Inscription
+--> Login
+--> Modifier données
+
+-> Gestion utilisateur
+--> Ajouter
+--> Modifier
+--> Ajouter/Suprimer des droits
+--> Supprimer
+
+-> Gestion events
+--> Ajouter
+--> Planifier
+--> Supprimer
+--> Inscription utilisateur
+--> Accepter/Refuser inscription
+--> Liker, Partarger par mail events
+
+-> Galerie utilisateur
+--> Poster des images
+--> Poster des commentaires
+--> Liker, Partager par mails le post
+
+-> Rendu Codage 				<> 04-02-2020
+
+Documentation
+
+-> Création Documentation Dev
+-> Rendu Documentation Dev 			<> 04-02-2020
+-> Rendu Fiches de suivi 			<> 04-02-2020
+
+
+Présentation
+
+-> Création présentation
+-> Rendu Support de présentation 		<> 04-02-2020
+
+-> Entrainement oral présentation
+-> Présentation de groupe			<> 05-02-2020
+
+Test et débogage
+
+
+
+
+
