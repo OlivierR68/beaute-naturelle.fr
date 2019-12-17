@@ -41,13 +41,13 @@
             <div
                 class="container bn_top-bar d-flex align-items-center justify-content-center justify-content-md-between">
                 <div class="bn_infos">
-                    <a class="bn_infos-items d-none d-lg-inline" href="contact.html"><i
+                    <a class="bn_infos-items d-none d-lg-inline" href="contact.php"><i
                             class="fas fa-map-marker-alt"></i>328 rue des clefs, 68 000 Colmar</a>
                     <a class="bn_infos-items" href="tel:+33389545646"><i class="fas fa-phone-alt"></i>03
                         89 54 56 46</a>
                     <a class="bn_infos-items d-none d-lg-inline" href="mailto:contact@beaute-naturelle.fr"><i
                             class="far fa-envelope"></i></i>contact@beaute-naturelle.fr</a>
-                    <a class="bn_infos-items" href="contact.html"><i class="far fa-clock"></i></i><span
+                    <a class="bn_infos-items" href="contact.php"><i class="far fa-clock"></i></i><span
                             class="d-none d-sm-inline">Ouvert tous les
                             jours, (sauf le Dimanche) de</span> 9H00 à 18H00</a>
                 </div>
@@ -68,7 +68,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
 
-                    <a class="navbar-brand mx-auto mx-lg-0" href="index.html">
+                    <a class="navbar-brand mx-auto mx-lg-0" href="index.php">
                         <!---------------- Logo du Haut ------------------>
                         <div class="bn_logo-top">
                             <img src="img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">
@@ -91,39 +91,39 @@
 
                     <div class="collapse navbar-collapse bn_bg-main" id="navbarSupportedContent">
                         <ul class="navbar-nav  ml-auto">
-                            <li class="nav-item mx-1 bn_nav-item bn_active">
-                                <a class="nav-link bn_nav-link" href="index.html">Accueil <span
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "home" ? "bn_active" : "")?>">
+                                <a class="nav-link bn_nav-link" href="index.php">Accueil <span
                                         class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item">
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "events" ? "bn_active" : "")?>">
                                 <a class="nav-link bn_nav-link disabled" href="events.php">Évènements</a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item dropdown">
-                                <a class="nav-link bn_nav-link dropdown-toggle" href="institut.html" id="navbarDropdown"
+                            <li class="nav-item mx-1 bn_nav-item dropdown <?php echo ($page == "insitut" ? "bn_active" : "")?>">
+                                <a class="nav-link bn_nav-link dropdown-toggle" href="institut.php" id="navbarDropdown"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     L'Institut
                                 </a>
                                 <div class="dropdown-menu bn_bg-main" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="institut.html">L'Institut</a>
-                                    <a class="dropdown-item" href="prestations/epilation.html">Epilations</a>
-                                    <a class="dropdown-item" href="prestations/mains-pieds.html">Mains & Pieds</a>
-                                    <a class="dropdown-item" href="prestations/regard.html">Regard</a>
-                                    <a class="dropdown-item" href="prestations/visage.html">Visage</a>
-                                    <a class="dropdown-item" href="prestations/minceur.html">Minceur</a>
-                                    <a class="dropdown-item" href="prestations/carita.html">Carita</a>
-                                    <a class="dropdown-item" href="prestations/spa.html">SPA</a>
-                                    <a class="dropdown-item" href="prestations/hommes.html">Hommes</a>
+                                    <a class="dropdown-item" href="institut.php">L'Institut</a>
+                                    <a class="dropdown-item" href="prestations/epilation.php">Epilations</a>
+                                    <a class="dropdown-item" href="prestations/mains-pieds.php">Mains & Pieds</a>
+                                    <a class="dropdown-item" href="prestations/regard.php">Regard</a>
+                                    <a class="dropdown-item" href="prestations/visage.php">Visage</a>
+                                    <a class="dropdown-item" href="prestations/minceur.php">Minceur</a>
+                                    <a class="dropdown-item" href="prestations/carita.php">Carita</a>
+                                    <a class="dropdown-item" href="prestations/spa.php">SPA</a>
+                                    <a class="dropdown-item" href="prestations/hommes.php">Hommes</a>
 
                                 </div>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item mx-1">
-                                <a class="nav-link bn_nav-link" href="magasin.html">Le Magasin</a>
+                            <li class="nav-item mx-1 bn_nav-item mx-1 <?php echo ($page == "magasin" ? "bn_active" : "")?>">
+                                <a class="nav-link bn_nav-link" href="magasin.php">Le Magasin</a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item">
-                                <a class="nav-link bn_nav-link" href="galerie.html">Galerie</a>
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "galerie" ? "bn_active" : "")?>">
+                                <a class="nav-link bn_nav-link" href="galerie.php">Galerie</a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item">
-                                <a class="nav-link bn_nav-link" href="contact.html">Contact</a>
+                            <li class="nav-item mx-1 bn_nav-item <?php echo ($page == "contact" ? "bn_active" : "")?>">
+                                <a class="nav-link bn_nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>
                 </nav>
