@@ -1,0 +1,6 @@
+17-12-19
+- Création du Diagramme de Gantt
+
+18-12-19
+- Finalisation du Diagramme de Gantt
+- Réunion gestion du projet
