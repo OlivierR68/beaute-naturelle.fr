@@ -1,0 +1,2 @@
+- Faire une maquette HTML CSS de la partie évenement / Articles 
+- Envoyer à Marc le 10-01

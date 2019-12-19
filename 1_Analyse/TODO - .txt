@@ -1,0 +1,17 @@
+GANTT <- Olivier
+
+Cahier des charges
+
+Dictionnaire des données
+
+Merise <- Morand
+Au plus tard 07-01 envoyer Merise + Dico des données -> Steven, Marc, SQL
+
+UML <- Steven
+Au plus tard 08-01 envoyer UML -> Marc mettre en copie Olivier
+
+Rédaction <- Marc
+Au plus tard 09-01 Envoyer sur le git le cahier des charges -> Ok c'est sur le git
+
+MySQL <- Olivier
+
