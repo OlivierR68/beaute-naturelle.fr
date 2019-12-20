@@ -1,4 +1,4 @@
-<!------------------------------------- SLIDER ----------------------------------------------->
+<!-- SLIDER -->
 
 
 <div class="container-fluid bn_bg-color-1 px-0 bn_decal-slider">

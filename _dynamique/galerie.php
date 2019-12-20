@@ -1,15 +1,12 @@
 <?php
 $page = 'galerie';
 include './parts/header.php';
-
-
-
 ?>
-<!------- Block Image ---------->
+<!-- Block Image -->
 
 <div class="bn_img-top bn_img-gallerie bn_decal-slider"></div>
 
-<!----Block titre -->
+<!--Block titre -->
 
 <div class="bn_block-title">
     <span class="bn_h1-pre">Consultez notre</span>
@@ -17,7 +14,7 @@ include './parts/header.php';
     <div></div>
 </div>
 
-<!----Block titre -->
+<!--Block titre -->
 
 <main class="container bn_content">
     <div class="row no-gutters bn_galerie">

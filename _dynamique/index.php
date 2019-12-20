@@ -2,14 +2,11 @@
 $page = 'home';
 include './parts/header.php';
 include './parts/slider.php';
-
-
-
 ?>
 
 
 
-<!---------------- Bloc Titre ------------------>
+<!-- Bloc Titre -->
 
 <div class="bn_block-title">
     <span class="bn_h1-pre">Magasin & Institut</span>
@@ -17,7 +14,7 @@ include './parts/slider.php';
     <div></div>
 </div>
 
-<!---------------- Bloc Cotenu  ------------------>
+<!-- Bloc Cotenu  -->
 
 <main class="container bn_content">
     <section>
@@ -52,7 +49,7 @@ include './parts/slider.php';
         <div class="row no-gutters">
             <div class="col-12 col-lg-6 d-flex align-items-center order-lg-2">
                 <img src="./img/flacon-de-fleur-orange-huile.jpg" alt="flacon d'huile essentiels bio"
-                    class="img-fluid w-100" alt="petite venise de colmar">
+                    class="img-fluid w-100">
             </div>
             <div class="col-12 col-lg-6 px-4 d-flex flex-column justify-content-center">
                 <div class="bn_gap-25"></div>
@@ -78,7 +75,7 @@ include './parts/slider.php';
         <div class="row no-gutters">
             <div class="col-12 col-lg-6 d-flex align-items-center">
                 <img src="./img/soin-pierre-femmme-fleur.jpg" alt="femme alongée avec soin pierre chaude et huile"
-                    class="img-fluid w-100" alt="petite venise de colmar">
+                    class="img-fluid w-100">
             </div>
             <div class="col-12 col-lg-6 px-4 d-flex flex-column justify-content-center">
                 <div class="bn_gap-25"></div>
@@ -111,7 +108,7 @@ include './parts/slider.php';
 
 </main>
 
-<!---------------- Bloc Titre ------------------>
+<!-- Bloc Titre -->
 
 
 <div class="container">
@@ -121,7 +118,7 @@ include './parts/slider.php';
         <div></div>
     </div>
 
-    <!---------------- Bloc Certifications ------------------>
+    <!-- Bloc Certifications -->
 
 
     <div class="bn_certif-row d-flex align-items-center justify-content-center flex-wrap">
@@ -137,8 +134,8 @@ include './parts/slider.php';
         <a href="https://www.ecocert.com/" target="_blank" class="bn_certif-col">
             <img src="./img/certif/Ecocert.svg" class="bn_certif-btn" alt="Logo Ecocert">
         </a>
-        <a href="https://www.kontrollierte-naturkosmetik.de/f/index_f.htm" class="bn_certif-col">
-            <img src="./img/certif/BDIH.png" target="_blank" class="bn_certif-btn" alt="Logo BDIH">
+        <a href="https://www.kontrollierte-naturkosmetik.de/f/index_f.htm" target="_blank" class="bn_certif-col">
+            <img src="./img/certif/BDIH.png"  class="bn_certif-btn" alt="Logo BDIH">
         </a>
         <a href="https://www.natrue.org/" target="_blank" class="bn_certif-col">
             <img src="./img/certif/Natrue.gif" class="bn_certif-btn" alt="Logo Natrue.org">
