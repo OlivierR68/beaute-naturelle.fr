@@ -7,3 +7,6 @@
 
 19-12-19
 - Finalisation du Diagramme de Gantt
+
+20-12-19
+- Envoi du Diagramme de Gantt
