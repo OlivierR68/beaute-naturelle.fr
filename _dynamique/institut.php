@@ -1,11 +1,9 @@
 <?php
 $page = 'insitut';
 include './parts/header.php';
-
-
 ?>
 
-<!------- Block Image ---------->
+<!-- Block Image -->
 
 <div class="bn_img-top bn_img-institut bn_decal-slider">
 
@@ -13,7 +11,7 @@ include './parts/header.php';
 
 
 
-<!----Block titre -->
+<!--Block titre -->
 
 <div class="bn_block-title">
     <span class="bn_h1-pre">Préstations & Tarifs</span>
@@ -21,7 +19,7 @@ include './parts/header.php';
     <div></div>
 </div>
 
-<!----Block titre -->
+<!--Block titre -->
 
 <main class="container bn_content">
     <section>

@@ -1,11 +1,8 @@
 <?php
 $page = 'magasin';
 include './parts/header.php';
-
-
-
 ?>
-    <!------- Block Image ---------->
+    <!-- Block Image -->
 
     <div class="bn_img-top bn_img-magasin bn_decal-slider">
 
@@ -13,7 +10,7 @@ include './parts/header.php';
 
 
 
-    <!----Block titre -->
+    <!--Block titre -->
 
     <div class="bn_block-title">
         <span class="bn_h1-pre">Découvrez</span>
@@ -21,7 +18,7 @@ include './parts/header.php';
         <div></div>
     </div>
 
-    <!----Block titre -->
+    <!--Block titre -->
 
     <main class="container bn_content">
         <section>
@@ -60,7 +57,7 @@ include './parts/header.php';
     </main>
     <div class="bn_gap-50"></div>
     <div class="container">
-        <p><strong><i class="far fa-clock mr-2"></i>Horraires :</strong></p>
+        <p><strong><i class="far fa-clock mr-2"></i>Horaires :</strong></p>
         <div class="table-responsive-lg">
             <table class="table bn_magasin-horraire text-center">
                 <thead>
@@ -97,7 +94,7 @@ include './parts/header.php';
     <div class="p-0" style="height: 32rem;">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.6265782139376!2d7.356867915646947!3d48.07885037921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479165e6cc9fd875%3A0x51445d1eb3892079!2sRue%20des%20Clefs%2C%2068000%20Colmar!5e0!3m2!1sfr!2sfr!4v1574167918201!5m2!1sfr!2sfr"
-            frameborder="0" style="border:0;" allowfullscreen="" class="w-100 h-100 border"></iframe>
+            style="border:0;" allowfullscreen="" class="w-100 h-100 border"></iframe>
     </div>
 
 

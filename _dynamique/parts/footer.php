@@ -1,4 +1,4 @@
-    <!------------------- BLOCK NEWSLETTER ------------------------>
+    <!-- BLOCK NEWSLETTER -->
 
     <div class="bn_bg-color-2">
         <div class="container bn_block-newsletter text-center">
@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <!------------------- FOOTER ------------------------>
+    <!-- FOOTER -->
 
     <footer class="bn_bg-color-1">
         <div class="container">
@@ -35,22 +35,23 @@
                             <li>
                                 <a href="contact.php">
                                     <span><i class="fas fa-map-marker-alt mr-1"></i> 328 rue des clefs, 68 000 Colmar
-                                </a></span>
+                                </span></a>>
                             </li>
                             <li>
                                 <a href="contact.php">
                                     <span><i class="fas fa-phone-alt mr-1"></i> 03 89 54 56 46
-                                </a></span>
+                                </span></a>>
                             </li>
                             <li>
                                 <a href="mailto:contact@beaute-naturelle.fr">
                                     <span><i class="far fa-envelope mr-1"></i> contact@beaute-naturelle.fr
-                                </a></span>
+                                </span></a>>
                             </li>
                             <li>
-                                <span><a href="contact.php"><i class="far fa-clock mr-1"></i> Ouvert tous les
-                                        jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à
-                                            18H00</span></a></span>
+                                <a href="contact.php">
+                                    <span><i class="far fa-clock mr-1"></i> Ouvert tous les jours,</span><br>
+                                    <span class="ml-3">(sauf le dimanche) de 9H00 à 18H00</span>
+                                </a>
                             </li>
 
                         </ul>
@@ -76,7 +77,7 @@
 
                 <div class="col-12 col-lg-5 text-center text-lg-right">
                     <div>
-                        <div class="bn_nav-bottom" class="bn_nav-bottom">
+                        <div class="bn_nav-bottom">
                             <a href="mentions-legales.php">Mentions Légales</a> |
                             <a href="politique-confidentialite.php">Politique de
                                 confidentialité</a> |
@@ -105,7 +106,7 @@
                 <div class="d-lg-none bn_gap-50"></div>
             </div>
 
-        </div>
+
 
         </div>
 
@@ -130,7 +131,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <!-------- Scripts ---------->
+    <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/defbc714c8.js" crossorigin="anonymous"></script>
 

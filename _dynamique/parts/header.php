@@ -12,10 +12,10 @@
         content="Magasin de coméstiques et institut de soins bio et naturelle, situé au dans la vielle ville de colmar, vénez découvrir notre sélection de produits et soins bio" />
     <meta name="author" content="Olivier Ravinasaga" />
 
-    <meta name=”robots” content=”index, follow”>
+    <meta name="robots" content="none" />
     <meta name="format-detection" content="telephone=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700%7CLora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -35,7 +35,7 @@
 
 
     <header>
-        <!---------------------------------------------- BAR DU HAUT ----------------------------------------------->
+        <!-- BAR DU HAUT -->
 
         <div class="bn_bg-color-1">
             <div
@@ -46,8 +46,8 @@
                     <a class="bn_infos-items" href="tel:+33389545646"><i class="fas fa-phone-alt"></i>03
                         89 54 56 46</a>
                     <a class="bn_infos-items d-none d-lg-inline" href="mailto:contact@beaute-naturelle.fr"><i
-                            class="far fa-envelope"></i></i>contact@beaute-naturelle.fr</a>
-                    <a class="bn_infos-items" href="contact.php"><i class="far fa-clock"></i></i><span
+                            class="far fa-envelope"></i>contact@beaute-naturelle.fr</a>
+                    <a class="bn_infos-items" href="contact.php"><i class="far fa-clock"></i><span
                             class="d-none d-sm-inline">Ouvert tous les
                             jours, (sauf le Dimanche) de</span> 9H00 à 18H00</a>
                 </div>
@@ -62,14 +62,14 @@
             </div>
         </div>
 
-        <!---------------------------------------------- NAVIGATION ----------------------------------------------->
+        <!-- NAVIGATION -->
 
         <div class="bn_opacity-90 bn_bg-main sticky-top">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
 
                     <a class="navbar-brand mx-auto mx-lg-0" href="index.php">
-                        <!---------------- Logo du Haut ------------------>
+                        <!-- Logo du Haut -->
                         <div class="bn_logo-top">
                             <img src="img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">
                             <div class="bn_logg-text">
@@ -81,7 +81,7 @@
                         </div>
                     </a>
 
-                    <!---------------- Menu Navigation ------------------>
+                    <!-- Menu Navigation -->
 
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -126,6 +126,8 @@
                                 <a class="nav-link bn_nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>
+                        </div>
+                        
                 </nav>
 
 

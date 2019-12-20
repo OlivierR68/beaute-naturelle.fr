@@ -1,13 +1,10 @@
 <?php
 $page = 'contact';
 include './parts/header.php';
-
-
-
 ?>
 
 
-<!------- Block Image ---------->
+<!--  Block Image -->
 
 <div class="bn_img-top bn_img-contact bn_decal-slider">
 
@@ -15,7 +12,7 @@ include './parts/header.php';
 
 
 
-<!----Block titre -->
+<!--Block titre -->
 
 <div class="bn_block-title">
     <span class="bn_h1-pre">Vous avez des questions ?</span>
@@ -23,7 +20,7 @@ include './parts/header.php';
     <div></div>
 </div>
 
-<!----Block titre -->
+<!--Block titre -->
 
 <main class="container bn_content">
 
