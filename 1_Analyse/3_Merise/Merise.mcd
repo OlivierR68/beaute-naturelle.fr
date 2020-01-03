@@ -1,0 +1,7 @@
+UTILISATEUR, 11 COMPTE: id, pseudo, mdp, date_inscription, nom, prenom, age, sexe, email, tel
+
+COMPTE: identifiant, pseudo, mot de passe, date inscription
+
+DROITS, 1N COMPTE: id, libele, administer, publier, moderer,
+EVENEMENT, 1N COMPTE: id, nom, slug, image, description, date_debut, date_fin, nbre_place_max, nbre_place_dispo
+
