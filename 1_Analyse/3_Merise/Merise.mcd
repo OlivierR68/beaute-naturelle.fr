@@ -1,7 +1,16 @@
-UTILISATEUR, 11 COMPTE: id, pseudo, mdp, date_inscription, nom, prenom, age, sexe, email, tel
+EVENEMENT, 1N PARTICIPE: id, nom, slug, image, description, date_debut, date_fin, nbre_place_max, nbre_place_dispo
+PARTICIPE: utilisateur
+UTILISATEUR, 1N PARTICIPE, 1N POSSEDE, 1N REGARDER, 1N INSCRIPTION, 1N DEVIS, 1N VOIR: id, pseudo, mdp, date_inscription, nom, prenom, age, sexe, email, tel_fixe, tel_mobile, adresse, cp, ville
+POSSEDE: droit
+DROIT, 1N POSSEDE: id, libelle, administer, publier, moderer
 
-COMPTE: identifiant, pseudo, mot de passe, date inscription
+REGARDER: galerie
+INSCRIPTION: newsletter
+DEVIS: prestation
+VOIR: slider
 
-DROITS, 1N COMPTE: id, libele, administer, publier, moderer,
-EVENEMENT, 1N COMPTE: id, nom, slug, image, description, date_debut, date_fin, nbre_place_max, nbre_place_dispo
 
+GALERIE, 1N REGARDER: id, libelle, slug, src, description, auteur, date_publi
+NEWSLETTER, 1N INSCRIPTION: id, mail
+PRESTATION, 1N DEVIS: id, nom, type, description, tarif
+SLIDER, 1N VOIR: id, bg_image, text
