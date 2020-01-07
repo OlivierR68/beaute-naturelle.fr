@@ -1,16 +1,40 @@
-EVENEMENT, 1N PARTICIPE: id, nom, slug, image, description, date_debut, date_fin, nbre_place_max, nbre_place_dispo
-PARTICIPE: utilisateur
-UTILISATEUR, 1N PARTICIPE, 1N POSSEDE, 1N REGARDER, 1N INSCRIPTION, 1N DEVIS, 1N VOIR: id, pseudo, mdp, date_inscription, nom, prenom, age, sexe, email, tel_fixe, tel_mobile, adresse, cp, ville
-POSSEDE: droit
-DROIT, 1N POSSEDE: id, libelle, administer, publier, moderer
+UTILISATEUR: id, pseudo, mdp, date_inscription, nom, prenom, age, sexe, email, tel_fixe, tel_mobile, adresse, cp, ville
+AJOUTER, 1N UTILISATEUR, 1N GALERIE: galerie
+GALERIE: id, libelle, slug, src, description, auteur, date_publi
+GERER, 1N GALERIE, 1N ADMINISTRATEUR: droit
 
-REGARDER: galerie
-INSCRIPTION: newsletter
-DEVIS: prestation
-VOIR: slider
+PEUT, 1N UTILISATEUR, 1N ADMINISTRATEUR: droit
+
+SOUSCRIRE, 1N UTILISATEUR, 1N EVENEMENT: événement
+EVENEMENT: id, nom, slug, image, description, date_debut, date_fin, nbre_place_max, nbre_place_dispo
+ADMINISTRER, 1N EVENEMENT, 1N ADMINISTRATEUR:événement
+ADMINISTRATEUR: id, libelle, administer, publier, moderer
+GERER-PRESTATION, 1N ADMINISTRATEUR, 1N PRESTATION: prestation
+PRESTATION: id, nom, type, description, tarif
+GERER-SLIDER, 1N ADMINISTRATEUR, 1N SLIDER: slider
+SLIDER: id, bg_image, text
+
+NEWSLETTER, 1N ADMINISTRATEUR: id, mail
 
 
-GALERIE, 1N REGARDER: id, libelle, slug, src, description, auteur, date_publi
-NEWSLETTER, 1N INSCRIPTION: id, mail
-PRESTATION, 1N DEVIS: id, nom, type, description, tarif
-SLIDER, 1N VOIR: id, bg_image, text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
