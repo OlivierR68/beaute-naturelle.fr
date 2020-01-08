@@ -1,2 +1,13 @@
 06-01-2020
-Création UML
+Création diagramme de cas d'utilisation
+
+07-01-2020
+Création diagramme de classe
+Modif diagramme de cas d'utilisation
+
+08-01-2020
+
+Modif diagramme de classe
+Modif diagramme de cas d'utilisation
+
+ 
