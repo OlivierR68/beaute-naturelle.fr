@@ -12,8 +12,26 @@ PROFIL:
 AJOUTER, 1N PROFIL, 0N GALERIE: galerie
 
 UTILISATEUR: id, pseudo, mdp, date_inscription, nom, prenom, age, sexe, email, tel_fixe, tel_mobile, adresse, cp, ville
-AVOIR, 0N PROFIL, 11 UTILISATEUR: droit
 
 GALERIE: id, libelle, slug, src, description, auteur, date_publi
 INSCRIRE, 0N PROFIL, 0N EVENEMENT: événement
 EVENEMENT: id, nom, slug, image, description, date_debut, date_fin, nbre_place_max, nbre_place_dispo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
