@@ -1,0 +1,42 @@
+Slider
+-Tous les sliders
+--Modifier
+--Supprimer
+-Ajouter Slider
+
+Newsletter
+
+Prestations
+-Toutes les prestations
+--Modifier 
+--Supprimer
+-Ajouter une prestation
+-Catégories
+--Modifier
+--Supprimer
+-Ajouter une catégorie
+
+Gestion utilisateurs
+-Tous les utilisateurs
+--Modifier
+--Supprimer
+-Ajouter un utilisateur
+
+Gestion des droits
+-Tous les profils
+--Modifier
+--Supprimer
+-Créer un profil
+
+Événements
+-Tous les événements
+--Modifier
+--Supprimer
+--Liste des inscrits
+--Demande d'inscripton
+
+Galerie
+-Toutes les images
+--Modifier
+--Supprimer
+-Demande d'ajout
