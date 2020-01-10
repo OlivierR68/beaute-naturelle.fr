@@ -95,7 +95,6 @@
 <text transform="matrix(1 0 0 1 267.9456 96.7617)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">age</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">sexe</tspan></text>
 <text transform="matrix(1 0 0 1 267.9456 116.6895)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">email</text>
 <text transform="matrix(1 0 0 1 267.9456 126.9453)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">tel</text>
-<text transform="matrix(1 0 0 1 267.9456 137.2002)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">niveau</text>
 <g>
 	
 		<text transform="matrix(1 0 0 1 504.3347 298.9268)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
