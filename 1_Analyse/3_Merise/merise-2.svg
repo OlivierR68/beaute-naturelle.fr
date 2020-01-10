@@ -2,142 +2,188 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="568.667px" height="491.332px" viewBox="138.112 20.807 568.667 491.332"
-	 enable-background="new 138.112 20.807 568.667 491.332" xml:space="preserve">
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="187.419" y1="324.763" x2="187.419" y2="199.512"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="649.526" y1="193.2" x2="649.514" y2="166.69"/>
-<rect x="606.316" y="24.946" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="56.088"/>
-<rect x="606.316" y="24.946" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="16.341"/>
-<text transform="matrix(1 0 0 1 627.7585 37.4204)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Catégorie</text>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M679.07,137.146
-	c0,16.318-13.227,29.556-29.556,29.556c-16.318,0-29.556-13.226-29.556-29.556c0-16.318,13.226-29.544,29.556-29.556
-	C665.844,107.59,679.07,120.828,679.07,137.146z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="619.97" y1="137.146" x2="679.07" y2="137.146"/>
-<text transform="matrix(1 0 0 1 625.8777 130.6899)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">appartenir</text>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="577.304" y1="353.404" x2="616.079" y2="353.404"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="547.76" y1="323.861" x2="547.76" y2="239.328"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="568.631" y1="332.535" x2="611.064" y2="253.643"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="460.403" y1="421.619" x2="546.428" y2="353.855"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="460.403" y1="353.855" x2="518.205" y2="353.404"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="374.006" y1="455.458" x2="303.313" y2="455.458"/>
-<rect x="374.006" y="413.453" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="94.922"/>
-<rect x="374.006" y="413.453" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="16.342"/>
-<text transform="matrix(1 0 0 1 383.1921 425.9175)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Galerie Images</text>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M332.869,455.458
-	c0,16.318-13.226,29.557-29.556,29.557c-16.318,0-29.556-13.227-29.556-29.557c0-16.318,13.226-29.543,29.556-29.543
-	C319.632,425.916,332.869,439.14,332.869,455.458z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="273.769" y1="455.458" x2="332.869" y2="455.458"/>
-<text transform="matrix(1 0 0 1 286.6423 449.1431)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">ajouter</text>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="546.428" y1="353.855" x2="460.403" y2="280.28"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="374.006" y1="254.199" x2="303.313" y2="254.199"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="304.657" y1="255.415" x2="233.953" y2="184.85"/>
-<rect x="374.006" y="190.258" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="106.062"/>
-<rect x="374.006" y="190.258" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="16.341"/>
-<text transform="matrix(1 0 0 1 389.322 202.7241)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Evénements</text>
-<text transform="matrix(1 0 0 1 379.2732 216.3325)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 379.2732 226.0601)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">nom</text>
-<text transform="matrix(1 0 0 1 379.2732 235.7886)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">slug</text>
-<text transform="matrix(1 0 0 1 379.2732 245.5171)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">img</text>
-<text transform="matrix(1 0 0 1 379.2732 255.2456)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">description</text>
-<text transform="matrix(1 0 0 1 379.2732 264.9741)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">date_debut</text>
-<text transform="matrix(1 0 0 1 379.2732 274.7017)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">date_fin</text>
-<text transform="matrix(1 0 0 1 379.2732 284.4302)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">nbre_place_max</text>
-<rect x="374.006" y="324.763" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="58.186"/>
-<rect x="374.006" y="324.763" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="16.342"/>
-<text transform="matrix(1 0 0 1 406.8875 337.2319)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Role</text>
-<rect x="149.131" y="325.4" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="57.42"/>
-<rect x="149.131" y="325.4" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="16.342"/>
-<text transform="matrix(1 0 0 1 180.9021 337.8608)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Profil</text>
-<rect x="490.479" y="188.359" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="65.527"/>
-<rect x="490.479" y="188.359" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="16.341"/>
-<text transform="matrix(1 0 0 1 520.8591 200.8257)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Slider</text>
-<rect x="606.316" y="188.359" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="65.527"/>
-<rect x="606.316" y="188.359" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="16.341"/>
-<text transform="matrix(1 0 0 1 626.9363 200.8247)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Prestation</text>
-<rect x="615.581" y="330.056" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="46.707"/>
-<rect x="615.581" y="330.056" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.396" height="16.342"/>
-<text transform="matrix(1 0 0 1 635.0925 342.5161)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Newsletter</text>
-<rect x="149.131" y="37.28" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="162.231"/>
-<rect x="149.131" y="37.28" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="86.397" height="16.341"/>
-<text transform="matrix(1 0 0 1 170.031 49.7495)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">Utilisateur</text>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M335.648,355.791
-	c0,16.318-13.226,29.555-29.556,29.555c-16.317,0-29.556-13.227-29.556-29.555c0-16.318,13.227-29.545,29.556-29.545
-	C322.423,326.246,335.648,339.472,335.648,355.791z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="276.549" y1="355.791" x2="335.648" y2="355.791"/>
-<text transform="matrix(1 0 0 1 285.9783 349.4712)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">posseder</text>
-<text transform="matrix(1 0 0 1 349.4939 349.4712)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,n</text>
-<text transform="matrix(1 0 0 1 197.5271 450.8247)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">0,n</text>
-<text transform="matrix(1 0 0 1 263.1306 207.7524)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">0,n</text>
-<text transform="matrix(1 0 0 1 345.6609 249.7983)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">0,n</text>
-<text transform="matrix(1 0 0 1 349.4929 450.8247)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<text transform="matrix(1 0 0 1 499.0212 402.9487)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<text transform="matrix(1 0 0 1 493.1238 306.4058)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<text transform="matrix(1 0 0 1 485.1648 349.5649)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,n</text>
-<text transform="matrix(1 0 0 1 586.615 349.5649)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<text transform="matrix(1 0 0 1 592.7419 299.8794)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<text transform="matrix(1 0 0 1 633.574 181.5288)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="649.526" y1="107.544" x2="649.514" y2="81.035"/>
-<text transform="matrix(1 0 0 1 633.574 95.8784)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">0,n</text>
-<text transform="matrix(1 0 0 1 552.5046 289.729)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<text transform="matrix(1 0 0 1 249.0662 347.8228)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">0,n</text>
-<text transform="matrix(1 0 0 1 188.4998 218.5581)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,1</text>
-<text transform="matrix(1.0036 0 0 1 188.4753 309.9751)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">1,n</text>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="235.528" y1="355.791" x2="276.549" y2="355.791"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="335.648" y1="355.791" x2="374.006" y2="355.791"/>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M577.304,353.404
-	c0,16.318-13.226,29.545-29.556,29.557c-16.317,0-29.544-13.238-29.544-29.557s13.227-29.543,29.544-29.555
-	C564.079,323.861,577.304,337.085,577.304,353.404z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="518.205" y1="353.404" x2="577.304" y2="353.404"/>
-<text transform="matrix(1 0 0 1 534.7126 346.9517)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">gérer</text>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M216.974,262.456
-	c0,16.318-13.226,29.556-29.544,29.556s-29.556-13.226-29.556-29.556c0-16.318,13.226-29.544,29.556-29.544
-	C203.749,232.9,216.974,246.138,216.974,262.456z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="157.875" y1="262.456" x2="216.974" y2="262.456"/>
-<text transform="matrix(1 0 0 1 175.2175 256.1284)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">avoir</text>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M333.32,254.199
-	c0,16.318-13.226,29.544-29.555,29.544c-16.318,0-29.556-13.226-29.556-29.544c0-16.318,13.226-29.556,29.556-29.556
-	C320.083,224.643,333.32,237.88,333.32,254.199z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="274.221" y1="254.199" x2="333.32" y2="254.199"/>
-<text transform="matrix(1 0 0 1 286.2761 247.8726)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.0313">inscrire</text>
-<text transform="matrix(1 0 0 1 155.0183 64.8765)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 155.0183 74.605)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">pseudo</text>
-<text transform="matrix(1 0 0 1 155.0183 84.3335)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">pwd</text>
-<text transform="matrix(1 0 0 1 155.0183 94.061)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">date_inscription</text>
-<text transform="matrix(1 0 0 1 155.0183 103.7896)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">nom</text>
-<text transform="matrix(1 0 0 1 155.0183 113.5181)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">prenom</text>
-<text transform="matrix(1 0 0 1 155.0183 123.2466)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">age</text>
-<text transform="matrix(1 0 0 1 155.0183 132.9751)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">sexe</text>
-<text transform="matrix(1 0 0 1 155.0183 142.7026)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">email</text>
-<text transform="matrix(1 0 0 1 155.0183 152.4312)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">tel_fixe</text>
-<text transform="matrix(1 0 0 1 155.0183 162.1597)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">tel_mobile</text>
-<text transform="matrix(1 0 0 1 155.0183 171.8882)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">adresse</text>
-<text transform="matrix(1 0 0 1 155.0183 181.6167)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">cp</text>
-<text transform="matrix(1 0 0 1 155.0183 191.3442)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">ville</text>
-<text transform="matrix(1 0 0 1 379.2732 352.3589)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 379.2732 362.0874)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">libelle</text>
-<text transform="matrix(1 0 0 1 379.2732 371.8159)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">description</text>
-<text transform="matrix(1 0 0 1 379.2732 441.0972)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 379.2732 450.8257)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">libelle</text>
-<text transform="matrix(1 0 0 1 379.2732 460.5542)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">slug</text>
-<text transform="matrix(1 0 0 1 379.2732 470.2817)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">src</text>
-<text transform="matrix(1 0 0 1 379.2732 480.0103)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">description</text>
-<text transform="matrix(1 0 0 1 379.2732 489.7388)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">auteur</text>
-<text transform="matrix(1 0 0 1 379.2732 499.4673)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">date_publication</text>
-<text transform="matrix(1 0 0 1 153.4373 352.9878)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 153.4373 362.7163)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">libelle</text>
-<text transform="matrix(1 0 0 1 153.4373 372.4448)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">description</text>
-<text transform="matrix(1 0 0 1 494.5076 216.647)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 494.5076 226.3755)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">bg_img</text>
-<text transform="matrix(1 0 0 1 494.5076 236.104)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">banner_text</text>
-<text transform="matrix(1 0 0 1 609.0007 50.6821)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 609.0007 60.4106)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">libelle</text>
-<text transform="matrix(1 0 0 1 609.0007 70.1392)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">description</text>
-<text transform="matrix(1 0 0 1 611.0671 216.647)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 611.0671 226.3755)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">nom</text>
-<text transform="matrix(1 0 0 1 611.0671 236.104)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">description</text>
-<text transform="matrix(1 0 0 1 611.0671 245.8315)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">tarif</text>
-<text transform="matrix(1 0 0 1 620.3328 357.3247)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">id</text>
-<text transform="matrix(1 0 0 1 620.3328 367.0532)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.1069">mail</text>
-<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="149.131,174.137 142.935,174.137 
-	142.935,455.458 273.896,455.458 "/>
+	 width="595.275px" height="442.445px" viewBox="-13.304 -175.279 595.275 442.445"
+	 enable-background="new -13.304 -175.279 595.275 442.445" xml:space="preserve">
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="291.516" y1="93.597" x2="291.51" y2="-52.402"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="40.381" y1="196.128" x2="40.369" y2="158.695"/>
+<rect x="-5.167" y="6.119" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="62.287"/>
+<rect x="-5.167" y="6.119" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.226"/>
+<text transform="matrix(1 0 0 1 17.4363 19.2681)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Catégories</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="251.151" y1="-138.984" x2="85.942" y2="-138.984"/>
+<rect x="-5.13" y="-168.852" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="120.667"/>
+<rect x="-5.13" y="-168.852" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="17.226"/>
+<text transform="matrix(1 0 0 1 4.554 -155.7134)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Galerie_Images</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="488.194" y1="19.216" x2="413.676" y2="19.216"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="415.092" y1="20.497" x2="340.563" y2="-53.886"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="384.722" y1="-79.088" x2="342.222" y2="-79.088"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="510.8" y1="10.424" x2="415.401" y2="-79.088"/>
+<rect x="488.194" y="-48.186" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="121.352"/>
+<rect x="488.194" y="-48.186" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.226"/>
+<text transform="matrix(1 0 0 1 504.3386 -35.0449)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Evénements</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 493.7468 -20.7007)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 493.7468 -10.4463)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">nom</text>
+<text transform="matrix(1 0 0 1 493.7468 -0.1914)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">slug</text>
+<text transform="matrix(1 0 0 1 493.7468 10.064)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">img</text>
+<text transform="matrix(1 0 0 1 493.7468 20.3188)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">description</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">date_publication</tspan></text>
+<text transform="matrix(1 0 0 1 493.7468 42.4941)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">date_debut</text>
+<text transform="matrix(1 0 0 1 493.7468 52.749)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">date_fin</text>
+<text transform="matrix(1 0 0 1 493.7468 63.0039)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">nbre_place_max</text>
+<rect x="488.194" y="93.597" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="68.875"/>
+<rect x="488.194" y="93.597" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.228"/>
+<text transform="matrix(1 0 0 1 504.9353 106.7402)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Permissions</text>
+<rect x="251.151" y="94.27" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="68.189"/>
+<rect x="251.151" y="94.27" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="17.226"/>
+<text transform="matrix(1 0 0 1 284.6418 107.4033)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Profils</text>
+<rect x="125.4" y="190.2" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="69.445"/>
+<rect x="125.4" y="190.2" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.225"/>
+<text transform="matrix(1 0 0 1 157.4246 203.3408)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Slides</text>
+<rect x="-5.167" y="191.025" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="69.073"/>
+<rect x="-5.167" y="191.025" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.226"/>
+<text transform="matrix(1 0 0 1 16.5696 204.1636)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Prestations</text>
+<rect x="124.827" y="5.667" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="62.285"/>
+<rect x="124.827" y="5.667" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.227"/>
+<text transform="matrix(1 0 0 1 130.637 18.8003)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.4329">Abonnes_Newsletter</text>
+<rect x="251.151" y="-170.096" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="130.523"/>
+<rect x="251.151" y="-170.096" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="17.225"/>
+<text transform="matrix(1 0 0 1 273.1824 -156.9517)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Utilisateurs</text>
+<text transform="matrix(1 0 0 1 459.1931 119.6416)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">1,n</text>
+<text transform="matrix(1 0 0 1 218.8914 -145.6406)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">0,n</text>
+<text transform="matrix(1 0 0 1 354.9812 -16.6943)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">0,n</text>
+<text transform="matrix(1 0 0 1 356.0349 -83.9995)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">0,n</text>
+<text transform="matrix(1 0 0 1 457.7751 -44.2939)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">1,1</text>
+<text transform="matrix(1 0 0 1 457.2615 14.5757)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">0,n</text>
+<text transform="matrix(1 0 0 1 99.1189 -145.6406)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">1,1</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="251.151" y1="-65.542" x2="85.942" y2="-65.542"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="134.467" y1="-65.542" x2="196.764" y2="-65.542"/>
+<text transform="matrix(1 0 0 1 218.8914 -72.1987)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">0,n</text>
+<text transform="matrix(1 0 0 1 100.6194 -72.1987)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">1,n</text>
+<text transform="matrix(1 0 0 1 23.5662 176.4458)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">1,1</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="40.381" y1="96.351" x2="40.369" y2="68.406"/>
+<text transform="matrix(1 0 0 1 23.5662 87.2148)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">0,n</text>
+<text transform="matrix(1 0 0 1 358.6033 117.9053)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">0,n</text>
+<text transform="matrix(1 0 0 1 273.196 -16.354)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">1,1</text>
+<text transform="matrix(1.0036 0 0 1 273.1697 82.2251)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">1,n</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="342.222" y1="126.305" x2="385.464" y2="126.305"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="447.761" y1="126.305" x2="488.194" y2="126.305"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="384.735" y1="-79.088" x2="447.032" y2="-79.088"/>
+<text transform="matrix(1 0 0 1 257.3572 -141.0063)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+<text transform="matrix(1 0 0 1 257.3572 -130.7515)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">pseudo</text>
+<text transform="matrix(1 0 0 1 257.3572 -120.4961)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">pwd</text>
+<text transform="matrix(1 0 0 1 257.3572 -110.2437)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">date_inscription</text>
+<text transform="matrix(1 0 0 1 257.3572 -99.9873)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">nom</text>
+<text transform="matrix(1 0 0 1 257.3572 -89.7324)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">prenom</text>
+<text transform="matrix(1 0 0 1 257.3572 -79.4785)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">age</text>
+<text transform="matrix(1 0 0 1 257.3572 -68.5508)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">email</text>
+<text transform="matrix(1 0 0 1 257.3572 -58.2949)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">tel</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">niveau</tspan></text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 493.7468 122.6865)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 493.7468 132.9419)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">libelle</text>
+<text transform="matrix(1 0 0 1 493.7468 143.1958)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">description</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 0.4226 -139.7124)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 0.4226 -129.4575)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">libelle</text>
+<text transform="matrix(1 0 0 1 0.4226 -119.2021)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">slug</text>
+<text transform="matrix(1 0 0 1 0.4226 -108.9497)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">src</text>
+<text transform="matrix(1 0 0 1 0.4226 -98.6934)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">description</text>
+<text transform="matrix(1 0 0 1 0.4226 -88.439)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">auteur</text>
+<text transform="matrix(1 0 0 1 0.4226 -78.1846)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">date_publication</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">validation</tspan></text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 255.6912 123.3496)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 255.6912 133.6045)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">libelle</text>
+<text transform="matrix(1 0 0 1 255.6912 143.8584)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">description</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 129.6472 220.0186)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 129.6472 230.2725)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">bg_img</text>
+<text transform="matrix(1 0 0 1 129.6472 240.5273)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">banner_text</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 -2.3367 33.2476)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 -2.3367 43.5024)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">libelle</text>
+<text transform="matrix(1 0 0 1 -2.3367 53.7583)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">description</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 -0.1584 220.8428)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 -0.1584 231.0967)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">nom</text>
+<text transform="matrix(1 0 0 1 -0.1584 241.3516)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">description</text>
+<text transform="matrix(1 0 0 1 -0.1584 251.6055)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">tarif</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 129.8367 34.4102)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 129.8367 44.665)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">mail</text>
+<rect x="124.827" y="93.894" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="68.578"/>
+<rect x="124.827" y="93.894" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.228"/>
+<text transform="matrix(1 0 0 1 130.637 107.0273)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.4329">Newsletters</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 129.8367 122.6372)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 129.8367 132.8921)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">name</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">slug</tspan><tspan x="0" y="20.509" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">content</tspan></text>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M196.751-120.485
+	c0,6.986-5.663,12.649-12.649,12.649h-36.999c-6.986,0-12.649-5.663-12.649-12.649v-36.999c0-6.986,5.663-12.649,12.649-12.649
+	h36.999c6.986,0,12.649,5.663,12.649,12.649V-120.485z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="134.467" y1="-154.326" x2="196.764" y2="-154.326"/>
+<text transform="matrix(1 0 0 1 149.4407 -158.1797)" fill="#1D1D1B" font-family="'ArialMT'" font-size="9.6911">Ajouter</text>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M447.026-59.534
+	c0,6.986-5.664,12.649-12.649,12.649h-36.999c-6.987,0-12.649-5.664-12.649-12.649v-36.999c0-6.986,5.662-12.649,12.649-12.649
+	h36.999c6.985,0,12.649,5.663,12.649,12.649V-59.534z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="384.741" y1="-93.376" x2="447.039" y2="-93.376"/>
+<g>
+	<text transform="matrix(1 0 0 1 400.7947 -96.9834)" fill="#1D1D1B" font-family="'ArialMT'" font-size="9.6911">Publier</text>
+</g>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M447.026,144.804
+	c0,6.986-5.664,12.649-12.649,12.649h-36.999c-6.987,0-12.649-5.663-12.649-12.649v-36.999c0-6.986,5.662-12.649,12.649-12.649
+	h36.999c6.985,0,12.649,5.664,12.649,12.649V144.804z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="384.741" y1="110.962" x2="447.039" y2="110.962"/>
+<g>
+	<text transform="matrix(1 0 0 1 395.407 107.355)" fill="#1D1D1B" font-family="'ArialMT'" font-size="9.6911">Posseder</text>
+</g>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M322.653,52.802
+	c0,6.986-5.663,12.649-12.648,12.649h-37c-6.986,0-12.649-5.663-12.649-12.649V15.803c0-6.986,5.663-12.649,12.649-12.649h37
+	c6.985,0,12.648,5.663,12.648,12.649V52.802z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="260.369" y1="18.96" x2="322.666" y2="18.96"/>
+<g>
+	<text transform="matrix(1 0 0 1 280.4651 15.3525)" fill="#1D1D1B" font-family="'ArialMT'" font-size="9.6911">Avoir</text>
+</g>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M71.511,146.864
+	c0,6.986-5.663,12.649-12.649,12.649H21.863c-6.987,0-12.649-5.664-12.649-12.649v-36.999c0-6.986,5.663-12.649,12.649-12.649
+	h36.999c6.987,0,12.649,5.663,12.649,12.649V146.864z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="9.227" y1="113.022" x2="71.524" y2="113.022"/>
+<g>
+	<text transform="matrix(1 0 0 1 18.0061 109.4146)" fill="#1D1D1B" font-family="'ArialMT'" font-size="9.6911">Appartenir</text>
+</g>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M447.026,39.097
+	c0,6.986-5.664,12.649-12.649,12.649h-36.999c-6.987,0-12.649-5.664-12.649-12.649V2.098c0-6.986,5.662-12.649,12.649-12.649h36.999
+	c6.985,0,12.649,5.663,12.649,12.649V39.097z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="384.741" y1="5.255" x2="447.039" y2="5.255"/>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M196.751-47.043
+	c0,6.986-5.663,12.649-12.649,12.649h-36.999c-6.986,0-12.649-5.663-12.649-12.649v-36.999c0-6.986,5.663-12.649,12.649-12.649
+	h36.999c6.986,0,12.649,5.663,12.649,12.649V-47.043z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="134.467" y1="-80.885" x2="196.764" y2="-80.885"/>
+<g>
+	<text transform="matrix(1 0 0 1 139.6038 -84.4922)" fill="#1D1D1B" font-family="'ArialMT'" font-size="9.6911">Commenter</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 140.658 -70.1787)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">time_stamp</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 140.658 -61.0898)" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">text</text>
+</g>
+<text transform="matrix(1 0 0 1 399.2791 0.8633)" fill="#1D1D1B" font-family="'ArialMT'" font-size="10.5741">Inscrire</text>
+<g>
+	<text transform="matrix(1 0 0 1 393.6091 16.7808)"><tspan x="0" y="0" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">validation</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'ArialMT'" font-size="8.5456">time_stamp</tspan></text>
+</g>
 </svg>
