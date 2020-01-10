@@ -15,3 +15,14 @@ Au plus tard 09-01 Envoyer sur le git le cahier des charges -> Ok c'est sur le g
 
 MySQL <- Olivier
 
+
+
+==============
+
+
+Rendu Dimanche 12/01/2020 18:00
+
+--> Cahier des Charges - Format  PDF
+--> bdd au format .sql (export bdd)
+
+contact@ce-formation.com
