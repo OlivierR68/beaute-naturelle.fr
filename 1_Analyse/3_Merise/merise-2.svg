@@ -1,226 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="595.275px" height="442.445px" viewBox="0 0 595.275 442.445" enable-background="new 0 0 595.275 442.445"
-	 xml:space="preserve">
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="302.104" y1="269.838" x2="302.098" y2="129.838"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="50.969" y1="372.368" x2="50.957" y2="334.936"/>
-<rect x="5.421" y="182.359" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="62.287"/>
-<rect x="5.421" y="182.359" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.226"/>
+	 viewBox="0 0 595.28 442.45" enable-background="new 0 0 595.28 442.45" xml:space="preserve">
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="302.1" y1="269.84" x2="302.1" y2="129.84"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="50.97" y1="372.37" x2="50.96" y2="334.94"/>
+<rect x="5.42" y="182.36" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="62.29"/>
+<rect x="5.42" y="182.36" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
 <g>
-	<text transform="matrix(1 0 0 1 27.7742 195.5088)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Catégories</text>
+	<text transform="matrix(1 0 0 1 27.7742 195.5088)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Catégories</text>
 </g>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="261.739" y1="37.256" x2="96.53" y2="37.256"/>
-<rect x="5.458" y="7.388" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="120.667"/>
-<rect x="5.458" y="7.388" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="17.226"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="261.74" y1="37.26" x2="96.53" y2="37.26"/>
+<rect x="5.46" y="7.39" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="120.67"/>
+<rect x="5.46" y="7.39" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
 <g>
-	<text transform="matrix(1 0 0 1 18.5388 20.5273)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Galerie_Images</text>
+	<text transform="matrix(1 0 0 1 18.5388 20.5273)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Galerie_Images</text>
 </g>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="498.782" y1="195.456" x2="424.263" y2="195.456"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="425.679" y1="196.737" x2="351.151" y2="122.354"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="395.31" y1="97.152" x2="352.81" y2="97.152"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="521.388" y1="186.664" x2="425.989" y2="97.152"/>
-<rect x="498.782" y="128.054" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="121.352"/>
-<rect x="498.782" y="128.054" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.226"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="498.78" y1="195.46" x2="424.26" y2="195.46"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="425.68" y1="196.74" x2="351.15" y2="122.35"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="395.31" y1="97.15" x2="352.81" y2="97.15"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="521.39" y1="186.66" x2="425.99" y2="97.15"/>
+<rect x="498.78" y="128.05" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="121.35"/>
+<rect x="498.78" y="128.05" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
 <g>
-	<text transform="matrix(1 0 0 1 521.1355 141.1953)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Evénements</text>
-</g>
-<g>
-	
-		<text transform="matrix(1 0 0 1 504.3347 155.5391)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 504.3347 165.7939)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">nom</text>
-<text transform="matrix(1 0 0 1 504.3347 176.0488)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">slug</text>
-<text transform="matrix(1 0 0 1 504.3347 186.3047)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">img</text>
-<text transform="matrix(1 0 0 1 504.3347 196.5586)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">description</text>
-<text transform="matrix(1 0 0 1 504.3347 206.8145)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">date_publication</text>
-<text transform="matrix(1 0 0 1 504.3347 218.7344)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">date_debut</text>
-<text transform="matrix(1 0 0 1 504.3347 228.9893)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">date_fin</text>
-<text transform="matrix(1 0 0 1 504.3347 239.2441)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">nbre_place_max</text>
-<rect x="498.782" y="269.838" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="68.875"/>
-<rect x="498.782" y="269.838" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.228"/>
-<g>
-	<text transform="matrix(1 0 0 1 518.8171 282.9805)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Permissions</text>
-</g>
-<rect x="261.739" y="270.51" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="68.189"/>
-<rect x="261.739" y="270.51" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="17.227"/>
-<g>
-	<text transform="matrix(1 0 0 1 291.0481 283.6436)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Profils</text>
-</g>
-<rect x="135.988" y="366.44" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="69.444"/>
-<rect x="135.988" y="366.44" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.225"/>
-<g>
-	<text transform="matrix(1 0 0 1 167.6135 379.5811)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Slides</text>
-</g>
-<rect x="5.421" y="367.266" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="69.072"/>
-<rect x="5.421" y="367.266" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.226"/>
-<g>
-	<text transform="matrix(1 0 0 1 25.4553 380.4043)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Prestations</text>
-</g>
-<rect x="135.415" y="181.907" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="62.285"/>
-<rect x="135.415" y="181.907" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.227"/>
-<text transform="matrix(1 0 0 1 140.2253 195.041)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Abonnes_Newsletter</text>
-<rect x="261.739" y="6.144" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="136.523"/>
-<rect x="261.739" y="6.144" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.072" height="17.225"/>
-<g>
-	<text transform="matrix(1 0 0 1 279.4558 19.2881)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Utilisateurs</text>
-</g>
-<text transform="matrix(1 0 0 1 469.781 295.8818)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">1,n</text>
-<text transform="matrix(1 0 0 1 229.4797 30.5996)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">0,n</text>
-<text transform="matrix(1 0 0 1 365.5691 159.5459)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">0,n</text>
-<text transform="matrix(1 0 0 1 366.6228 92.2402)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">0,n</text>
-<text transform="matrix(1 0 0 1 468.363 131.9463)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">1,1</text>
-<text transform="matrix(1 0 0 1 467.8503 190.8164)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">0,n</text>
-<text transform="matrix(1 0 0 1 109.7068 30.5996)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">1,1</text>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="261.739" y1="110.698" x2="96.53" y2="110.698"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="145.054" y1="110.698" x2="207.352" y2="110.698"/>
-<text transform="matrix(1 0 0 1 229.4797 104.041)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">0,n</text>
-<text transform="matrix(1 0 0 1 111.2078 104.041)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">1,n</text>
-<text transform="matrix(1 0 0 1 34.1545 352.6855)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">1,1</text>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="50.969" y1="272.592" x2="50.957" y2="244.646"/>
-<text transform="matrix(1 0 0 1 34.1545 263.4551)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">0,n</text>
-<text transform="matrix(1 0 0 1 369.1921 294.1455)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">0,n</text>
-<text transform="matrix(1 0 0 1 283.7839 159.8867)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">1,1</text>
-<text transform="matrix(1.0036 0 0 1 283.7581 258.4648)" fill="#1D1D1B" font-family="'Consolas'" font-size="9">1,n</text>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="352.81" y1="302.545" x2="396.052" y2="302.545"/>
-<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="458.349" y1="302.545" x2="498.782" y2="302.545"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.323" y1="97.152" x2="457.62" y2="97.152"/>
-<text transform="matrix(1 0 0 1 267.9456 35.2344)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-<text transform="matrix(1 0 0 1 267.9456 45.4883)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">pseudo</text>
-<text transform="matrix(1 0 0 1 267.9456 55.7441)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">pwd</text>
-<text transform="matrix(1 0 0 1 267.9456 65.9961)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">date_inscription</text>
-<text transform="matrix(1 0 0 1 267.9456 76.2529)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">nom</text>
-<text transform="matrix(1 0 0 1 267.9456 86.5078)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">prenom</text>
-<text transform="matrix(1 0 0 1 267.9456 96.7617)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">age</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">sexe</tspan></text>
-<text transform="matrix(1 0 0 1 267.9456 116.6895)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">email</text>
-<text transform="matrix(1 0 0 1 267.9456 126.9453)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">tel</text>
-<g>
-	
-		<text transform="matrix(1 0 0 1 504.3347 298.9268)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 504.3347 309.1816)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">libelle</text>
-<text transform="matrix(1 0 0 1 504.3347 319.4355)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">description</text>
-<g>
-	
-		<text transform="matrix(1 0 0 1 11.0105 36.5273)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 11.0105 46.7832)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">libelle</text>
-<text transform="matrix(1 0 0 1 11.0105 57.0381)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">slug</text>
-<text transform="matrix(1 0 0 1 11.0105 67.291)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">src</text>
-<text transform="matrix(1 0 0 1 11.0105 77.5469)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">description</text>
-<text transform="matrix(1 0 0 1 11.0105 87.8008)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">auteur</text>
-<text transform="matrix(1 0 0 1 11.0105 98.0557)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">date_publication</text>
-<text transform="matrix(1 0 0 1 11.0105 108.3105)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">validation</text>
-<g>
-	
-		<text transform="matrix(1 0 0 1 266.2795 299.5898)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 266.2795 309.8447)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">libelle</text>
-<text transform="matrix(1 0 0 1 266.2795 320.0986)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">description</text>
-<g>
-	
-		<text transform="matrix(1 0 0 1 140.2351 396.2588)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 140.2351 417.5918)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">bg_img</text>
-<text transform="matrix(1 0 0 1 140.2351 407.3369)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">libelle</text>
-<text transform="matrix(1 0 0 1 140.2351 427.8457)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">banner_text</text>
-<g>
-	
-		<text transform="matrix(1 0 0 1 8.2512 209.4883)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 8.2512 219.7422)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">libelle</text>
-<text transform="matrix(1 0 0 1 8.2512 229.998)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">description</tspan><tspan x="0" y="10.255" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">slug</tspan></text>
-<g>
-	
-		<text transform="matrix(1 0 0 1 10.4299 397.083)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 10.4299 407.3369)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">nom</text>
-<text transform="matrix(1 0 0 1 10.4299 417.5918)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">description</text>
-<text transform="matrix(1 0 0 1 10.4299 427.8457)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">tarif</text>
-<g>
-	
-		<text transform="matrix(1 0 0 1 140.425 210.6504)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
-</g>
-<text transform="matrix(1 0 0 1 140.425 220.9053)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">mail</text>
-<rect x="135.415" y="270.135" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="68.578"/>
-<rect x="135.415" y="270.135" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.071" height="17.228"/>
-<g>
-	<text transform="matrix(1 0 0 1 155.4504 283.2676)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Newsletters</text>
+	<text transform="matrix(1 0 0 1 521.1355 141.1953)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Evénements</text>
 </g>
 <g>
 	
-		<text transform="matrix(1 0 0 1 140.425 298.877)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456" text-decoration=" underline">id</text>
+		<text transform="matrix(1 0 0 1 504.3347 155.5391)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
 </g>
-<text transform="matrix(1 0 0 1 140.425 309.1328)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">name</text>
-<text transform="matrix(1 0 0 1 140.425 319.3877)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">content</text>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M207.339,55.755
-	c0,6.986-5.663,12.649-12.648,12.649h-36.999c-6.986,0-12.649-5.663-12.649-12.649V18.756c0-6.986,5.663-12.649,12.649-12.649
-	h36.999c6.985,0,12.648,5.663,12.648,12.649V55.755L207.339,55.755z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="145.054" y1="21.914" x2="207.352" y2="21.914"/>
+<text transform="matrix(1 0 0 1 504.3347 165.7939)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">nom</text>
+<text transform="matrix(1 0 0 1 504.3347 176.0488)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">slug</text>
+<text transform="matrix(1 0 0 1 504.3347 186.3047)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">img</text>
+<text transform="matrix(1 0 0 1 504.3347 196.5586)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">description</text>
+<text transform="matrix(1 0 0 1 504.3347 206.8145)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">date_publication</text>
+<text transform="matrix(1 0 0 1 504.3347 218.7344)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">date_debut</text>
+<text transform="matrix(1 0 0 1 504.3347 228.9893)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">date_fin</text>
+<text transform="matrix(1 0 0 1 504.3347 239.2441)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">nbre_place_max</text>
+<rect x="498.78" y="269.84" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="68.88"/>
+<rect x="498.78" y="269.84" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
 <g>
-	<text transform="matrix(1 0 0 1 159.9099 18.0605)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Ajouter</text>
+	<text transform="matrix(1 0 0 1 518.8171 282.9805)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Permissions</text>
 </g>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M457.614,116.706
-	c0,6.986-5.664,12.649-12.648,12.649h-37c-6.986,0-12.648-5.664-12.648-12.649V79.707c0-6.986,5.662-12.649,12.648-12.649h37
-	c6.984,0,12.648,5.663,12.648,12.649V116.706z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.329" y1="82.864" x2="457.627" y2="82.864"/>
+<rect x="261.74" y="270.51" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="68.19"/>
+<rect x="261.74" y="270.51" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
+<g>
+	<text transform="matrix(1 0 0 1 291.0481 283.6436)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Profils</text>
+</g>
+<rect x="135.99" y="366.44" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="69.44"/>
+<rect x="135.99" y="366.44" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
+<g>
+	<text transform="matrix(1 0 0 1 167.6135 379.5811)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Slides</text>
+</g>
+<rect x="5.42" y="367.27" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="69.07"/>
+<rect x="5.42" y="367.27" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
+<g>
+	<text transform="matrix(1 0 0 1 25.4553 380.4043)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Prestations</text>
+</g>
+<rect x="135.41" y="181.91" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="62.29"/>
+<rect x="135.41" y="181.91" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
+<text transform="matrix(1 0 0 1 140.2253 195.041)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Abonnes_Newsletter</text>
+<rect x="261.74" y="6.14" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="136.52"/>
+<rect x="261.74" y="6.14" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.22"/>
+<g>
+	<text transform="matrix(1 0 0 1 279.4558 19.2881)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Utilisateurs</text>
+</g>
+<text transform="matrix(1 0 0 1 469.781 295.8818)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">1,n</text>
+<text transform="matrix(1 0 0 1 229.4797 30.5996)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">0,n</text>
+<text transform="matrix(1 0 0 1 365.5691 159.5459)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">0,n</text>
+<text transform="matrix(1 0 0 1 366.6228 92.2402)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">0,n</text>
+<text transform="matrix(1 0 0 1 468.363 131.9463)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">1,1</text>
+<text transform="matrix(1 0 0 1 467.8503 190.8164)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">0,n</text>
+<text transform="matrix(1 0 0 1 109.7068 30.5996)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">1,1</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="261.74" y1="110.7" x2="96.53" y2="110.7"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="145.05" y1="110.7" x2="207.35" y2="110.7"/>
+<text transform="matrix(1 0 0 1 229.4797 104.041)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">0,n</text>
+<text transform="matrix(1 0 0 1 111.2078 104.041)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">1,n</text>
+<text transform="matrix(1 0 0 1 34.1545 352.6855)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">1,1</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="50.97" y1="272.59" x2="50.96" y2="244.65"/>
+<text transform="matrix(1 0 0 1 34.1545 263.4551)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">0,n</text>
+<text transform="matrix(1 0 0 1 369.1921 294.1455)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">0,n</text>
+<text transform="matrix(1 0 0 1 283.7839 159.8867)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">1,1</text>
+<text transform="matrix(1.0036 0 0 1 283.7578 258.465)" fill="#1D1D1B" font-family="'Consolas'" font-size="9px">1,n</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="352.81" y1="302.55" x2="396.05" y2="302.55"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="458.35" y1="302.55" x2="498.78" y2="302.55"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.32" y1="97.15" x2="457.62" y2="97.15"/>
+<text transform="matrix(1 0 0 1 267.9456 35.2344)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+<text transform="matrix(1 0 0 1 267.9456 45.4883)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">pseudo</text>
+<text transform="matrix(1 0 0 1 267.9456 55.7441)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">pwd</text>
+<text transform="matrix(1 0 0 1 267.9456 65.9961)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">date_inscription</text>
+<text transform="matrix(1 0 0 1 267.9456 76.2529)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">nom</text>
+<text transform="matrix(1 0 0 1 267.9456 86.5078)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">prenom</text>
+<text transform="matrix(1 0 0 1 267.9456 96.7617)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">age</text>
+<text transform="matrix(1 0 0 1 267.9456 107.0167)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">sexe</text>
+<text transform="matrix(1 0 0 1 267.9456 116.6895)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">email</text>
+<text transform="matrix(1 0 0 1 267.9456 126.9453)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">tel</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 504.3347 298.9268)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 504.3347 309.1816)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">libelle</text>
+<text transform="matrix(1 0 0 1 504.3347 319.4355)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">description</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 11.0105 36.5273)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 11.0105 46.7832)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">libelle</text>
+<text transform="matrix(1 0 0 1 11.0105 57.0381)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">slug</text>
+<text transform="matrix(1 0 0 1 11.0105 67.291)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">src</text>
+<text transform="matrix(1 0 0 1 11.0105 77.5469)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">description</text>
+<text transform="matrix(1 0 0 1 11.0105 87.8008)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">auteur</text>
+<text transform="matrix(1 0 0 1 11.0105 98.0557)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">date_publication</text>
+<text transform="matrix(1 0 0 1 11.0105 108.3105)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">validation</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 266.2795 299.5898)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 266.2795 309.8447)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">libelle</text>
+<text transform="matrix(1 0 0 1 266.2795 320.0986)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">description</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 140.2351 396.2588)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 140.2351 417.5918)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">bg_img</text>
+<text transform="matrix(1 0 0 1 140.2351 407.3369)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">libelle</text>
+<text transform="matrix(1 0 0 1 140.2351 427.8457)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">banner_text</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 8.2512 209.4883)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 8.2512 219.7422)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">libelle</text>
+<text transform="matrix(1 0 0 1 8.2512 229.998)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">description</text>
+<text transform="matrix(1 0 0 1 8.2512 240.253)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">slug</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 10.4299 397.083)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 10.4299 407.3369)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">nom</text>
+<text transform="matrix(1 0 0 1 10.4299 417.5918)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">description</text>
+<text transform="matrix(1 0 0 1 10.4299 427.8457)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">tarif</text>
+<g>
+	
+		<text transform="matrix(1 0 0 1 140.425 210.6504)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 140.425 220.9053)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">mail</text>
+<rect x="135.41" y="270.14" fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="68.58"/>
+<rect x="135.41" y="270.14" fill="#EAEAEA" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" width="91.07" height="17.23"/>
+<g>
+	<text transform="matrix(1 0 0 1 155.4504 283.2676)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Newsletters</text>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 140.425 298.877)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px" text-decoration=" underline">id</text>
+</g>
+<text transform="matrix(1 0 0 1 140.425 309.1328)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">name</text>
+<text transform="matrix(1 0 0 1 140.425 319.3877)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">content</text>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M207.34,55.76c0,6.99-5.66,12.65-12.65,12.65
+	h-37c-6.99,0-12.65-5.66-12.65-12.65v-37c0-6.99,5.66-12.65,12.65-12.65h37c6.99,0,12.65,5.66,12.65,12.65V55.76L207.34,55.76z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="145.05" y1="21.91" x2="207.35" y2="21.91"/>
+<g>
+	<text transform="matrix(1 0 0 1 159.9099 18.0605)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Ajouter</text>
+</g>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M457.61,116.71c0,6.99-5.66,12.65-12.65,12.65
+	h-37c-6.99,0-12.65-5.66-12.65-12.65v-37c0-6.99,5.66-12.65,12.65-12.65h37c6.98,0,12.65,5.66,12.65,12.65V116.71z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.33" y1="82.86" x2="457.63" y2="82.86"/>
 <g>
 	<g>
-		<text transform="matrix(1 0 0 1 410.1785 79.2568)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Publier</text>
+		<text transform="matrix(1 0 0 1 410.1785 79.2568)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Publier</text>
 	</g>
 </g>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M457.614,321.045
-	c0,6.985-5.664,12.648-12.648,12.648h-37c-6.986,0-12.648-5.663-12.648-12.648v-37c0-6.986,5.662-12.648,12.648-12.648h37
-	c6.984,0,12.648,5.664,12.648,12.648V321.045z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.329" y1="287.202" x2="457.627" y2="287.202"/>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M457.61,321.05c0,6.98-5.66,12.65-12.65,12.65
+	h-37c-6.99,0-12.65-5.66-12.65-12.65v-37c0-6.99,5.66-12.65,12.65-12.65h37c6.98,0,12.65,5.66,12.65,12.65V321.05z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.33" y1="287.2" x2="457.63" y2="287.2"/>
 <g>
 	<g>
-		<text transform="matrix(1 0 0 1 407.8601 283.5957)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Posseder</text>
+		<text transform="matrix(1 0 0 1 407.8601 283.5957)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Posseder</text>
 	</g>
 </g>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M333.241,229.042
-	c0,6.986-5.663,12.649-12.648,12.649h-37c-6.985,0-12.648-5.663-12.648-12.649v-36.999c0-6.986,5.663-12.649,12.648-12.649h37
-	c6.985,0,12.648,5.663,12.648,12.649V229.042z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="270.957" y1="195.2" x2="333.254" y2="195.2"/>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M333.24,229.04c0,6.99-5.66,12.65-12.65,12.65
+	h-37c-6.98,0-12.65-5.66-12.65-12.65v-37c0-6.99,5.66-12.65,12.65-12.65h37c6.98,0,12.65,5.66,12.65,12.65V229.04z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="270.96" y1="195.2" x2="333.25" y2="195.2"/>
 <g>
 	<g>
-		<text transform="matrix(1 0 0 1 290.4485 191.5928)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Avoir</text>
+		<text transform="matrix(1 0 0 1 290.4485 191.5928)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Avoir</text>
 	</g>
 </g>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M82.099,323.104
-	c0,6.985-5.663,12.649-12.649,12.649H32.451c-6.987,0-12.649-5.664-12.649-12.649v-36.999c0-6.986,5.663-12.649,12.649-12.649H69.45
-	c6.987,0,12.649,5.663,12.649,12.649V323.104z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="19.815" y1="289.262" x2="82.112" y2="289.262"/>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M82.1,323.1c0,6.98-5.66,12.65-12.65,12.65h-37
+	c-6.99,0-12.65-5.66-12.65-12.65v-37c0-6.99,5.66-12.65,12.65-12.65h37c6.99,0,12.65,5.66,12.65,12.65V323.1z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="19.82" y1="289.26" x2="82.11" y2="289.26"/>
 <g>
 	<g>
-		<text transform="matrix(1 0 0 1 27.7156 285.6553)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Appartenir</text>
+		<text transform="matrix(1 0 0 1 27.7156 285.6553)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Appartenir</text>
 	</g>
 </g>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M457.614,215.337
-	c0,6.986-5.664,12.649-12.648,12.649h-37c-6.986,0-12.648-5.664-12.648-12.649v-36.999c0-6.986,5.662-12.649,12.648-12.649h37
-	c6.984,0,12.648,5.663,12.648,12.649V215.337z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.329" y1="181.495" x2="457.627" y2="181.495"/>
-<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M207.339,129.197
-	c0,6.986-5.663,12.649-12.648,12.649h-36.999c-6.986,0-12.649-5.663-12.649-12.649V92.198c0-6.986,5.663-12.649,12.649-12.649
-	h36.999c6.985,0,12.648,5.663,12.648,12.649V129.197L207.339,129.197z"/>
-<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="145.054" y1="95.355" x2="207.352" y2="95.355"/>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M457.61,215.34c0,6.99-5.66,12.65-12.65,12.65
+	h-37c-6.99,0-12.65-5.66-12.65-12.65v-37c0-6.99,5.66-12.65,12.65-12.65h37c6.98,0,12.65,5.66,12.65,12.65V215.34z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="395.33" y1="181.49" x2="457.63" y2="181.49"/>
+<path fill="#FFFFFF" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M207.34,129.2c0,6.99-5.66,12.65-12.65,12.65
+	h-37c-6.99,0-12.65-5.66-12.65-12.65v-37c0-6.99,5.66-12.65,12.65-12.65h37c6.99,0,12.65,5.66,12.65,12.65V129.2L207.34,129.2z"/>
+<line fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" x1="145.05" y1="95.36" x2="207.35" y2="95.36"/>
 <g>
 	<g>
-		<text transform="matrix(1 0 0 1 155.2678 91.748)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Commenter</text>
+		<text transform="matrix(1 0 0 1 155.2678 91.748)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Commenter</text>
 	</g>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 151.2463 106.0615)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">time_stamp</text>
+	<text transform="matrix(1 0 0 1 151.2463 122.4011)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">modif_date</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 151.2463 115.1504)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">text</text>
+	<text transform="matrix(1 0 0 1 151.2463 131.49)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">text</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 407.9197 177.1035)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329">Inscrire</text>
+	<text transform="matrix(1 0 0 1 151.2463 103.7661)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">id</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 403.197 193.0215)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">validation</text>
-	<text transform="matrix(1 0 0 1 403.197 203.2764)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456">time_stamp</text>
+	<text transform="matrix(1 0 0 1 151.2463 112.855)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">date</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 407.9197 177.1035)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.4329px">Inscrire</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 403.197 193.0215)" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">validation</text>
+	<text transform="matrix(1 0 0 1 403.197 203.2764)" enable-background="new    "><tspan x="0" y="0" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">date</tspan><tspan x="0" y="10.25" fill="#1D1D1B" font-family="'Consolas'" font-size="8.5456px">valid_date</tspan></text>
 </g>
 </svg>
