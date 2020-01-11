@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1071 1054" enable-background="new 0 0 1071 1054" xml:space="preserve">
+<path fill="none" d="z"/>
+<g>
+	<path pointer-events="all" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M530.5,26.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M530.5,26.5v364h160v-364"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M530.5,26.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 580.6592 18)" font-family="'Arial-BoldMT'" font-size="12px">Utilisateur</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="534.5" y="31.5" width="152" height="204"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_2_)">
+			<text transform="matrix(1 0 0 1 536 44)" font-family="'ArialMT'" font-size="12px">- idUser : int</text>
+			<text transform="matrix(1 0 0 1 536 58)" font-family="'ArialMT'" font-size="12px">- pseudo : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 536 72)" font-family="'ArialMT'" font-size="12px"># mdp : varchar(225)</text>
+			<text transform="matrix(1 0 0 1 536 86)" font-family="'ArialMT'" font-size="12px">- date_inscription : date</text>
+			<text transform="matrix(1 0 0 1 536 100)" font-family="'ArialMT'" font-size="12px">- nom : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 536 114)" font-family="'ArialMT'" font-size="12px">- prenom : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 536 128)" font-family="'ArialMT'" font-size="12px">- age : int</text>
+			<text transform="matrix(1 0 0 1 536 142)" font-family="'ArialMT'" font-size="12px">- sexe : int</text>
+			<text transform="matrix(1 0 0 1 536 156)" font-family="'ArialMT'" font-size="12px">- email : varchar(80)</text>
+			<text transform="matrix(1 0 0 1 536 170)" font-family="'ArialMT'" font-size="12px">- tel_fixe : varchar(30)</text>
+			<text transform="matrix(1 0 0 1 536 184)" font-family="'ArialMT'" font-size="12px">- tel_mobile : varchar(30)</text>
+			<text transform="matrix(1 0 0 1 536 198)" font-family="'ArialMT'" font-size="12px">- adresse : varchar(120)</text>
+			<text transform="matrix(1 0 0 1 536 212)" font-family="'ArialMT'" font-size="12px">- cp : int</text>
+			<text transform="matrix(1 0 0 1 536 226)" font-family="'ArialMT'" font-size="12px">- ville : varchar(50)</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M530.5,234.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="534.5" y="243.5" width="152" height="152"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_4_)">
+			<text transform="matrix(1 0 0 1 536 256)" font-family="'ArialMT'" font-size="12px">+ creer_compte()</text>
+			<text transform="matrix(1 0 0 1 536 270)" font-family="'ArialMT'" font-size="12px">+ supprimer_compte()</text>
+			<text transform="matrix(1 0 0 1 536 284)" font-family="'ArialMT'" font-size="12px">+ supprimer_infos()</text>
+			<text transform="matrix(1 0 0 1 536 298)" font-family="'ArialMT'" font-size="12px">+ se_connecter()</text>
+			<text transform="matrix(1 0 0 1 536 312)" font-family="'ArialMT'" font-size="12px">+ se_deconnecter()</text>
+			<text transform="matrix(1 0 0 1 536 326)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 536 340)" font-family="'ArialMT'" font-size="12px">+ modifier_infos()</text>
+			<text transform="matrix(1 0 0 1 536 354)" font-family="'ArialMT'" font-size="12px">+ recevoir_newsletter()</text>
+			<text transform="matrix(1 0 0 1 536 368)" font-family="'ArialMT'" font-size="12px">+ validation_compte()</text>
+			<text transform="matrix(1 0 0 1 536 382)" font-family="'ArialMT'" font-size="12px">+ time_stamp_compte()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M880.5,26.5v-26h190v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M880.5,26.5v234h190v-234"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M880.5,26.5h190"/>
+	<g>
+		<text transform="matrix(1 0 0 1 942.9873 18)" font-family="'Arial-BoldMT'" font-size="12px">Evenement</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_5_" x="884.5" y="31.5" width="182" height="134"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_6_)">
+			<text transform="matrix(1 0 0 1 886 44)" font-family="'ArialMT'" font-size="12px">- idEvent : int</text>
+			<text transform="matrix(1 0 0 1 886 58)" font-family="'ArialMT'" font-size="12px">- nom : varchar(120)</text>
+			<text transform="matrix(1 0 0 1 886 72)" font-family="'ArialMT'" font-size="12px">- slug : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 886 86)" font-family="'ArialMT'" font-size="12px">- image : varchar(255)</text>
+			<text transform="matrix(1 0 0 1 886 100)" font-family="'ArialMT'" font-size="12px">- description : text</text>
+			<text transform="matrix(1 0 0 1 886 114)" font-family="'ArialMT'" font-size="12px">- date_debut : date</text>
+			<text transform="matrix(1 0 0 1 886 128)" font-family="'ArialMT'" font-size="12px">- date_fin : date</text>
+			<text transform="matrix(1 0 0 1 886 142)" font-family="'ArialMT'" font-size="12px">- nbre_place_max: int</text>
+			<text transform="matrix(1 0 0 1 886 156)" font-family="'ArialMT'" font-size="12px">- nbre_place_dispo : int</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M880.5,164.5h190"/>
+	<g>
+		<defs>
+			<rect id="SVGID_7_" x="884.5" y="173.5" width="182" height="92"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_8_)">
+			<text transform="matrix(1 0 0 1 886 186)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 886 200)" font-family="'ArialMT'" font-size="12px">+ modifier_infos()</text>
+			<text transform="matrix(1 0 0 1 886 214)" font-family="'ArialMT'" font-size="12px">+ publier_event()</text>
+			<text transform="matrix(1 0 0 1 886 228)" font-family="'ArialMT'" font-size="12px">+ time_stamp_event()</text>
+			<text transform="matrix(1 0 0 1 886 242)" font-family="'ArialMT'" font-size="12px">+ validation_event()</text>
+			<text transform="matrix(1 0 0 1 886 256)" font-family="'ArialMT'" font-size="12px">+ supprimer_event()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M130.5,26.64v-26h180v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M130.5,26.64v254h180v-254"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M130.5,26.64h180"/>
+	<g>
+		<text transform="matrix(1 0 0 1 199.6533 18.14)" font-family="'Arial-BoldMT'" font-size="12px">Galerie</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_9_" x="134.5" y="31.5" width="172" height="104"/>
+		</defs>
+		<clipPath id="SVGID_10_">
+			<use xlink:href="#SVGID_9_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_10_)">
+			<text transform="matrix(1 0 0 1 136 44.14)" font-family="'ArialMT'" font-size="12px">- idGalerie : int</text>
+			<text transform="matrix(1 0 0 1 136 58.14)" font-family="'ArialMT'" font-size="12px">- libelle : varchar(120)</text>
+			<text transform="matrix(1 0 0 1 136 72.14)" font-family="'ArialMT'" font-size="12px">- slug : varchar(80)</text>
+			<text transform="matrix(1 0 0 1 136 86.14)" font-family="'ArialMT'" font-size="12px">- src : varchar(225)</text>
+			<text transform="matrix(1 0 0 1 136 100.14)" font-family="'ArialMT'" font-size="12px">- description : text</text>
+			<text transform="matrix(1 0 0 1 136 114.14)" font-family="'ArialMT'" font-size="12px">- auteur : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 136 128.14)" font-family="'ArialMT'" font-size="12px">- date_publi : date</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M130.5,134.64h180"/>
+	<g>
+		<defs>
+			<rect id="SVGID_11_" x="134.5" y="143.5" width="172" height="142"/>
+		</defs>
+		<clipPath id="SVGID_12_">
+			<use xlink:href="#SVGID_11_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_12_)">
+			<text transform="matrix(1 0 0 1 136 156.14)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 136 170.14)" font-family="'ArialMT'" font-size="12px">+ modifier_infos()</text>
+			<text transform="matrix(1 0 0 1 136 184.14)" font-family="'ArialMT'" font-size="12px">+ publier_galerie()</text>
+			<text transform="matrix(1 0 0 1 136 198.14)" font-family="'ArialMT'" font-size="12px">+ time_stamp_commentaire()</text>
+			<text transform="matrix(1 0 0 1 136 212.14)" font-family="'ArialMT'" font-size="12px">+ text_commentaire()</text>
+			<text transform="matrix(1 0 0 1 136 226.14)" font-family="'ArialMT'" font-size="12px">+ supprimer_galerie()</text>
+			<text transform="matrix(1 0 0 1 136 240.14)" font-family="'ArialMT'" font-size="12px">+ ajouter_commentaire()</text>
+			<text transform="matrix(1 0 0 1 136 254.14)" font-family="'ArialMT'" font-size="12px">+ modifier_commentaire()</text>
+			<text transform="matrix(1 0 0 1 136 268.14)" font-family="'ArialMT'" font-size="12px">+ supprimer_commentaire()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M270.5,716.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,716.5v104h160v-104"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,716.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 316.3174 708)" font-family="'Arial-BoldMT'" font-size="12px">Newsletters</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_13_" x="274.5" y="721.5" width="152" height="54"/>
+		</defs>
+		<clipPath id="SVGID_14_">
+			<use xlink:href="#SVGID_13_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_14_)">
+			<text transform="matrix(1 0 0 1 276 734)" font-family="'ArialMT'" font-size="12px">- idNewsletter : int</text>
+			<text transform="matrix(1 0 0 1 276 748)" font-family="'ArialMT'" font-size="12px">- mail : varchar(80)</text>
+			<text transform="matrix(1 0 0 1 276 762)" font-family="'ArialMT'" font-size="12px">- content : text</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,774.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_15_" x="274.5" y="783.5" width="152" height="42"/>
+		</defs>
+		<clipPath id="SVGID_16_">
+			<use xlink:href="#SVGID_15_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_16_)">
+			<text transform="matrix(1 0 0 1 276 796)" font-family="'ArialMT'" font-size="12px">+ envoyer()</text>
+			<text transform="matrix(1 0 0 1 276 810)" font-family="'ArialMT'" font-size="12px">+ gerer_liste()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M0.5,896.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0.5,896.5v154h160v-154"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0.5,896.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 47.3223 888)" font-family="'Arial-BoldMT'" font-size="12px">Prestations</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_17_" x="4.5" y="901.5" width="152" height="74"/>
+		</defs>
+		<clipPath id="SVGID_18_">
+			<use xlink:href="#SVGID_17_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_18_)">
+			<text transform="matrix(1 0 0 1 6 914)" font-family="'ArialMT'" font-size="12px">- idPresta : int </text>
+			<text transform="matrix(1 0 0 1 6 928)" font-family="'ArialMT'" font-size="12px">- nom : varchar(80)</text>
+			<text transform="matrix(1 0 0 1 6 942)" font-family="'ArialMT'" font-size="12px">- description : text</text>
+			<text transform="matrix(1 0 0 1 6 956)" font-family="'ArialMT'" font-size="12px">- tarif : float</text>
+			<text transform="matrix(1 0 0 1 6 970)" font-family="'ArialMT'" font-size="12px">- type : varchar(30)</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0.5,974.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_19_" x="4.5" y="983.5" width="152" height="72"/>
+		</defs>
+		<clipPath id="SVGID_20_">
+			<use xlink:href="#SVGID_19_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_20_)">
+			<text transform="matrix(1 0 0 1 6 996)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 6 1010)" font-family="'ArialMT'" font-size="12px">+ publier_presta()</text>
+			<text transform="matrix(1 0 0 1 6 1024)" font-family="'ArialMT'" font-size="12px">+ supprimer_presta()</text>
+			<text transform="matrix(1 0 0 1 6 1038)" font-family="'ArialMT'" font-size="12px">+ modifier_infos()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M270.5,896.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,896.5v134h160v-134"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,896.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 332.3252 888)" font-family="'Arial-BoldMT'" font-size="12px">Slides</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_21_" x="274.5" y="901.5" width="152" height="64"/>
+		</defs>
+		<clipPath id="SVGID_22_">
+			<use xlink:href="#SVGID_21_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_22_)">
+			<text transform="matrix(1 0 0 1 276 914)" font-family="'ArialMT'" font-size="12px">- idSlider : int</text>
+			<text transform="matrix(1 0 0 1 276 928)" font-family="'ArialMT'" font-size="12px">- bg_image : varchar(255)</text>
+			<text transform="matrix(1 0 0 1 276 942)" font-family="'ArialMT'" font-size="12px">- text : text </text>
+			<text transform="matrix(1 0 0 1 276 956)" font-family="'ArialMT'" font-size="12px">- libelle : varchar(120) </text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,964.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_23_" x="274.5" y="973.5" width="152" height="62"/>
+		</defs>
+		<clipPath id="SVGID_24_">
+			<use xlink:href="#SVGID_23_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_24_)">
+			<text transform="matrix(1 0 0 1 276 986)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 276 1000)" font-family="'ArialMT'" font-size="12px">+ supprimer_infos()</text>
+			<text transform="matrix(1 0 0 1 276 1014)" font-family="'ArialMT'" font-size="12px">+ modifier_slides()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M0.5,516.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0.5,516.5v134h160v-134"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0.5,516.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 48.9893 508)" font-family="'Arial-BoldMT'" font-size="12px">Categories</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_25_" x="4.5" y="521.5" width="152" height="64"/>
+		</defs>
+		<clipPath id="SVGID_26_">
+			<use xlink:href="#SVGID_25_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_26_)">
+			<text transform="matrix(1 0 0 1 6 534)" font-family="'ArialMT'" font-size="12px">- idCategorie : int</text>
+			<text transform="matrix(1 0 0 1 6 548)" font-family="'ArialMT'" font-size="12px">- libelle : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 6 562)" font-family="'ArialMT'" font-size="12px">- description : text </text>
+			<text transform="matrix(1 0 0 1 6 576)" font-family="'ArialMT'" font-size="12px">- slug : varchar(225)</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0.5,584.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_27_" x="4.5" y="593.5" width="152" height="62"/>
+		</defs>
+		<clipPath id="SVGID_28_">
+			<use xlink:href="#SVGID_27_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_28_)">
+			<text transform="matrix(1 0 0 1 6 606)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 6 620)" font-family="'ArialMT'" font-size="12px">+ supprimer_infos()</text>
+			<text transform="matrix(1 0 0 1 6 634)" font-family="'ArialMT'" font-size="12px">+ modifier_categories()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M530.5,516.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M530.5,516.5v124h160v-124"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M530.5,516.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 591.3291 508)" font-family="'Arial-BoldMT'" font-size="12px">Profils</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_29_" x="534.5" y="521.5" width="152" height="54"/>
+		</defs>
+		<clipPath id="SVGID_30_">
+			<use xlink:href="#SVGID_29_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_30_)">
+			<text transform="matrix(1 0 0 1 536 534)" font-family="'ArialMT'" font-size="12px">- idProfil : int</text>
+			<text transform="matrix(1 0 0 1 536 548)" font-family="'ArialMT'" font-size="12px">- libelle : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 536 562)" font-family="'ArialMT'" font-size="12px">- description : text</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M530.5,574.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_31_" x="534.5" y="583.5" width="152" height="62"/>
+		</defs>
+		<clipPath id="SVGID_32_">
+			<use xlink:href="#SVGID_31_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_32_)">
+			<text transform="matrix(1 0 0 1 536 596)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 536 610)" font-family="'ArialMT'" font-size="12px">+ supprimer_infos()</text>
+			<text transform="matrix(1 0 0 1 536 624)" font-family="'ArialMT'" font-size="12px">+ modifier_profils()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M890.5,516.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M890.5,516.5v174h160v-174"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M890.5,516.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 934.3164 508)" font-family="'Arial-BoldMT'" font-size="12px">Permissions</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_33_" x="894.5" y="521.5" width="152" height="84"/>
+		</defs>
+		<clipPath id="SVGID_34_">
+			<use xlink:href="#SVGID_33_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_34_)">
+			<text transform="matrix(1 0 0 1 896 534)" font-family="'ArialMT'" font-size="12px">- idPermissions : int</text>
+			<text transform="matrix(1 0 0 1 896 548)" font-family="'ArialMT'" font-size="12px">- libelle : varchar(50)</text>
+			<text transform="matrix(1 0 0 1 896 562)" font-family="'ArialMT'" font-size="12px">- administrer : boolean</text>
+			<text transform="matrix(1 0 0 1 896 576)" font-family="'ArialMT'" font-size="12px">- publier : boolean </text>
+			<text transform="matrix(1 0 0 1 896 590)" font-family="'ArialMT'" font-size="12px">- moderer : boolean</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M890.5,604.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_35_" x="894.5" y="613.5" width="152" height="82"/>
+		</defs>
+		<clipPath id="SVGID_36_">
+			<use xlink:href="#SVGID_35_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_36_)">
+			<text transform="matrix(1 0 0 1 896 626)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 896 640)" font-family="'ArialMT'" font-size="12px">+ supprimer_infos()</text>
+			<text transform="matrix(1 0 0 1 896 654)" font-family="'ArialMT'" font-size="12px">+ modifier_infos()</text>
+			<text transform="matrix(1 0 0 1 896 668)" font-family="'ArialMT'" font-size="12px">+ modifier_droits()</text>
+			<text transform="matrix(1 0 0 1 896 682)" font-family="'ArialMT'" font-size="12px">+ modifier_publications()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M270.5,516.5v-26h160v26"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,516.5v134h160v-134"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,516.5h160"/>
+	<g>
+		<text transform="matrix(1 0 0 1 290.6504 508)" font-family="'Arial-BoldMT'" font-size="12px">Abonnes_Newsletter</text>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_37_" x="274.5" y="521.5" width="152" height="54"/>
+		</defs>
+		<clipPath id="SVGID_38_">
+			<use xlink:href="#SVGID_37_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_38_)">
+			<text transform="matrix(1 0 0 1 276 534)" font-family="'ArialMT'" font-size="12px">- idRole : int</text>
+			<text transform="matrix(1 0 0 1 276 548)" font-family="'ArialMT'" font-size="12px">- libelle : varchar(255)</text>
+			<text transform="matrix(1 0 0 1 276 562)" font-family="'ArialMT'" font-size="12px">- description : text</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M270.5,574.5h160"/>
+	<g>
+		<defs>
+			<rect id="SVGID_39_" x="274.5" y="583.5" width="152" height="72"/>
+		</defs>
+		<clipPath id="SVGID_40_">
+			<use xlink:href="#SVGID_39_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_40_)">
+			<text transform="matrix(1 0 0 1 276 596)" font-family="'ArialMT'" font-size="12px">+ ajouter_infos()</text>
+			<text transform="matrix(1 0 0 1 276 610)" font-family="'ArialMT'" font-size="12px">+ modifier_infos()</text>
+			<text transform="matrix(1 0 0 1 276 624)" font-family="'ArialMT'" font-size="12px">+ supprimer_infos()</text>
+			<text transform="matrix(1 0 0 1 276 638)" font-family="'ArialMT'" font-size="12px">+ modifier_abo_news()</text>
+		</g>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M310.5,80.5l219.04,0.08"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M310.5,200.5l219.04,0.08"/>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 500.4922 74.5)" font-family="'ArialMT'" font-size="12px">1..1</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 320.4922 74.5)" font-family="'ArialMT'" font-size="12px">0..n</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 401.4893 74.5)" font-family="'ArialMT'" font-size="12px">Ajouter</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 391.1592 194.5)" font-family="'ArialMT'" font-size="12px">Commen...</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 500.4922 194.5)" font-family="'ArialMT'" font-size="12px">1..n</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 320.4922 194.5)" font-family="'ArialMT'" font-size="12px">0..n</text>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M690.5,80.5h190"/>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M690.5,200.5h190"/>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 850.4922 74.5)" font-family="'ArialMT'" font-size="12px">0..n</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 700.4922 74.5)" font-family="'ArialMT'" font-size="12px">1..1</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 771.8232 74.5)" font-family="'ArialMT'" font-size="12px">Publier</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 771.1641 194.5)" font-family="'ArialMT'" font-size="12px">Inscri...</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 850.4922 194.5)" font-family="'ArialMT'" font-size="12px">0..n</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 700.4922 194.5)" font-family="'ArialMT'" font-size="12px">0..n</text>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M602.02,391.72v98.78"/>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 570.4922 404.5)" font-family="'ArialMT'" font-size="12px">1..n</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 570.4922 484.5)" font-family="'ArialMT'" font-size="12px">1..1</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 566.9385 444.5)" font-family="'ArialMT'" font-size="12px">Avoir</text>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M690.58,550.5H890.5"/>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 765.4863 544.5)" font-family="'ArialMT'" font-size="12px">Possed...</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 860.4922 544.5)" font-family="'ArialMT'" font-size="12px">0..n</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 700.4922 544.5)" font-family="'ArialMT'" font-size="12px">1..n</text>
+	</g>
+	<path pointer-events="none" fill="none" stroke="#000000" stroke-miterlimit="10" d="M79.02,650.22l-0.76,219.74"/>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 17.8213 754.5)" font-family="'ArialMT'" font-size="12px">Appart...</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 50.4922 864.5)" font-family="'ArialMT'" font-size="12px">0..n</text>
+	</g>
+	<g transform="translate(-0.5 -0.5)">
+		<text transform="matrix(1 0 0 1 50.4922 664.5)" font-family="'ArialMT'" font-size="12px">1..1</text>
+	</g>
+</g>
+<path fill="none" d="z"/>
+<g>
+	<polygon fill="none" stroke="#000000" stroke-width="0.5628" stroke-miterlimit="10" points="806.37,884.12 671.78,884.12 
+		671.78,766.88 773.5,766.88 806.37,799.76 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="0.5628" stroke-miterlimit="10" points="806.37,799.76 773.5,799.76 
+		773.5,766.88 	"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 684.0938 822.1979)"><tspan x="0" y="0" font-family="'ArialMT'" font-size="12.8821px">Toutes les classes</tspan><tspan x="0" y="15.46" font-family="'ArialMT'" font-size="12.8821px">possèdent un Setter</tspan><tspan x="0" y="30.92" font-family="'ArialMT'" font-size="12.8821px">et un Getter</tspan></text>
+</g>
+</svg>
