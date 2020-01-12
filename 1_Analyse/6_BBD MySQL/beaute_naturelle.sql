@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  Dim 12 jan. 2020 à 14:01
+-- Généré le :  Dim 12 jan. 2020 à 14:11
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.12
 
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `slide` (
   `slide_libelle` varchar(80) NOT NULL,
   `slide_bg_image` varchar(255) NOT NULL,
   `slide_banner_content` text NOT NULL,
-  PRIMARY KEY (`slide_id`,`slide_libelle`)
+  PRIMARY KEY (`slide_id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
