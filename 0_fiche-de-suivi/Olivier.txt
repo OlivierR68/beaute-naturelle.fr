@@ -9,4 +9,53 @@
 - Finalisation du Diagramme de Gantt
 
 20-12-19
-- Envoi du Diagramme de Gantt
+- <> Rendu du Diagramme de Gantt
+
+06-01-20
+- Création des dossiers pour le dossier d'analyse
+- Création du Dico des données
+- Création du Diagramme de Merise
+- Création du Cahier des charges
+
+07-01-20
+- Mis a jour Dico des données
+- Mis a jour Digramme de Merise
+- Mis a jour cahier des charges
+
+08-01-20
+- Mis a jour Dico des données
+- Mis a jour Digramme de Merise
+- Mis a jour cas d'utilisation
+- Mis a jour cahier des charges
+
+09-01-20
+- Mis a jour Dico des données
+- Mis a jour Digramme de Merise
+- Mis a jour cas d'utilisation
+- Mis a jour cahier des charges
+
+10-01-20
+- Mis a jour Dico des données
+- Mis a jour Digramme de Merise
+- Mis a jour cas d'utilisation
+- Mis a jour cahier des charges
+
+10-01-20
+- Mis a jour Dico des données
+- Mis a jour Diagramme de Merise
+- Mis a jour cas d'utilisation
+- Mis a jour cahier des charges
+
+12-01-20
+- Correction Dico des données
+- Correction Digramme de Merise
+- Correction cas d'utilisation
+- Correction diagramme des classes
+- Correction Base de données
+- Finalisation Dico des données
+- Finalisation Digramme de Merise
+- Finalisation cas d'utilisation
+- Finalisation cahier des charges
+- <> Rendu du cahier des charges + export SQL
+
+
