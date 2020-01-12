@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 12 jan. 2020 à 12:24
+-- Généré le :  Dim 12 jan. 2020 à 12:48
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -64,7 +64,8 @@ CREATE TABLE IF NOT EXISTS `evénements` (
   `event_create_date` date NOT NULL,
   `event_start_date` date NOT NULL,
   `event_end_start` date NOT NULL,
-  `event_capacity` int(11) NOT NULL
+  `event_capacity` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf32 COLLATE=utf32_swedish_ci;
 
 -- --------------------------------------------------------
@@ -82,7 +83,8 @@ CREATE TABLE IF NOT EXISTS `galerie_images` (
   `img_description` text COLLATE utf32_swedish_ci NOT NULL,
   `img_author` varchar(50) COLLATE utf32_swedish_ci NOT NULL,
   `img_publi_date` date NOT NULL,
-  `img_validation` tinyint(1) NOT NULL
+  `img_validation` tinyint(1) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf32 COLLATE=utf32_swedish_ci;
 
 -- --------------------------------------------------------
@@ -123,7 +125,8 @@ CREATE TABLE IF NOT EXISTS `prestations` (
   `prestation_name` varchar(80) COLLATE utf32_swedish_ci NOT NULL,
   `prestation_slug` varchar(80) COLLATE utf32_swedish_ci NOT NULL,
   `prestation_description` text COLLATE utf32_swedish_ci NOT NULL,
-  `prestation_tarif` float NOT NULL
+  `prestation_tarif` float NOT NULL,
+  `categorie_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf32 COLLATE=utf32_swedish_ci;
 
 -- --------------------------------------------------------
@@ -170,7 +173,8 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `user_age` int(11) NOT NULL,
   `user_gender` int(11) NOT NULL,
   `user_email` varchar(30) COLLATE utf32_swedish_ci NOT NULL,
-  `user_tel` varchar(30) COLLATE utf32_swedish_ci NOT NULL
+  `user_tel` varchar(30) COLLATE utf32_swedish_ci NOT NULL,
+  `profil_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf32 COLLATE=utf32_swedish_ci;
 COMMIT;
 
