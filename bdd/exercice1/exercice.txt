@@ -1,0 +1,157 @@
+Exercice 1
+
+1) Afficher tous les clients habitant Colmar.
+SELECT NomCli FROM client WHERE AdresseVilleCli = "Colmar" 
+
+2) Afficher les clients habitant Mazamet ou Pithiviers
+SELECT NomCli, AdresseVilleCli
+FROM client 
+WHERE AdresseVilleCli = "Pithiviers" 
+OR AdresseVilleCli = "Mazamet" 
+
+SELECT NomCli, AdresseVilleCli
+FROM client 
+WHERE AdresseVilleCli IN ("Colmar","Mazamet")
+
+3) Afficher les clients habitant Colmar par ordre alphabétique
+SELECT NomCli FROM client WHERE AdresseVilleCli = "Colmar" ORDER BY NomCli ASC 
+
+4) Afficher les factures émises pour le client 5.
+SELECT * FROM facture WHERE CodeCli = 5 
+
+5) Afficher les factures émises entre 10 novembre et 20 novembre 2019.
+SELECT * FROM facture WHERE DateFact BETWEEN '2019-11-10' AND '2019-12-20' 
+
+Exercice 2 : utilisation de fonctions
+
+6) Afficher le nombre de clients habitant Colmar.
+SELECT count(codecli) FROM client WHERE AdresseVilleCli = "Colmar"
+
+7) Afficher le nombre de factures émises au client numéro 6.
+SELECT count(NumFact) FROM facture WHERE CodeCli = 6
+
+8) Afficher la quantité achetée du produit 6.
+SELECT SUM(QteAch) FROM lignefact WHERE CodeArt = 6 
+
+9) Afficher le produit le plus commandé en terme de quantité.
+SELECT MAX(QteAch), CodeArt FROM lignefact 
+
+Exercice 3 : utilisation de caractères génériques
+
+10) Afficher tous les clients dont le nom commence par "L"
+SELECT * FROM client WHERE NomCli LIKE 'L%' 
+
+11) Afficher toutes les entreprises du haut-rhin.
+SELECT * FROM client WHERE AdresseCPcli LIKE '68%'  
+
+12) Afficher tous les éclairs proposés.
+SELECT * FROM article WHERE LibelleArt LIKE 'éclair%' 
+
+Exercice 4 : regroupement
+
+13) Afficher le nombre d articles par facture
+SELECT CodeFact, count(CodeArt) FROM lignefact GROUP BY CodeFact 
+ou
+SELECT CodeFact, SUM(QteAch) FROM lignefact GROUP BY CodeFact 
+
+14) Afficher le nombre de clients par ville.
+SELECT AdresseVilleCli, count(CodeCli) FROM client GROUP BY AdresseVilleCli
+
+Exercice 5 : requête imbriquée 
+
+15) Afficher les clients qui habitent la même ville que le client 'Sezanne'.
+SELECT NomCli FROM client WHERE AdresseVilleCli = (Select AdresseVilleCli FROM client WHERE NomCli = "Sézanne")
+
+16) Afficher les factures émises le même jour que la facture numéro 3.
+SELECT * FROM facture WHERE Datefact = (SELECT DateFact FROM facture WHERE NumFact = 3)
+
+Exercice 6 : utilisation de plusieurs tables
+
+17) Afficher le nom du client et le libellé de sa catégorie
+SELECT NomCli, LibelleCategorie 
+FROM client c, categorie_client cc 
+WHERE c.CodeCategorie = cc.CodeCategorie 
+
+18) Afficher le numéro de facture et le nom du client associé.
+SELECT NumFact, NomCli FROM facture f, client c WHERE c.CodeCli = f.CodeCli
+
+19) Afficher le nom du client, son téléphone fixe, le libellé de sa catégorie et le libellé de son moyen de règlement.
+SELECT NomCli, TelFixCli, LibelleCategorie, LibelleRegl FROM client c, categorie_client cc, reglement r WHERE c.CodeCategorie = cc.CodeCategorie AND c.CodeRegl = r.CodeRegl
+
+20) Afficher le code de la facture, la date, le nom des articles commandés, la quantité achetée, le prix unitaire et le montant total.
+SELECT NumFact, DateFact, LibelleArt, QteAch, PrixUnitArt, round((QteAch*PrixUnitArt), 2) AS montant
+FROM facture f, article a, lignefact l 
+WHERE l.CodeFact = f.NumFact 
+AND l.CodeArt = a.CodeArt 
+
+21) Afficher le nom des articles dont la quantité achetée a été supérieure à 30, le tout sans doublon.
+SELECT DISTINCT(LibelleArt) FROM article a, lignefact l WHERE l.CodeArt = a.CodeArt AND QteAch > 30 
+
+22) Afficher les clients de Colmar ayant reçu une facture après le 20 novembre 2019.
+SELECT NumFact, NomCli FROM facture f, client c WHERE c.CodeCli = f.CodeCli AND dateFact > "2019-11-20" AND AdresseVilleCli = "Colmar"
+
+23) Afficher le nom des clients qui paient par chèque et qui ont reçu une facture en novembre 2019.
+SELECT nomcli, LibelleRegl FROM client c, reglement r, facture f 
+WHERE c.CodeCli = f.CodeCli 
+AND c.CodeRegl = r.CodeRegl
+AND LibelleRegl LIKE "Chèque%"
+AND dateFact LIKE "2019-11-__"
+
+24) Afficher le nombre de produits par facture pour le client "Le sablé d'or".
+SELECT CodeFact, count(CodeArt) FROM lignefact l, client c, facture f 
+WHERE c.CodeCli = f.CodeCli 
+AND l.CodeFact = f.NumFact 
+AND NomCli = "Le sablé d'or"
+GROUP by CodeFact
+
+25) Afficher le code de la facture, la date, le nom des articles commandés, la quantité achetée, le prix unitaire et le montant total. Vous en garderez que les montants supérieurs à 50 €.
+SELECT NumFact, DateFact, LibelleArt, QteAch, PrixUnitArt, round((QteAch*PrixUnitArt), 2) AS montant
+FROM facture f, article a, lignefact l 
+WHERE l.CodeFact = f.NumFact 
+AND l.CodeArt = a.CodeArt 
+HAVING montant > 50
+
+26) Afficher les articles, la quantité achetée et le montant par produit de la facture n°11.
+SELECT LibelleArt, QteAch, round((QteAch*PrixUnitArt), 2) AS montant
+FROM article a, lignefact l 
+WHERE l.CodeArt = a.CodeArt 
+AND CodeFact = 11
+
+27) Afficher le montant total de la facture n°11
+SELECT SUM(round((QteAch*PrixUnitArt), 2)) AS montant
+FROM article a, lignefact l 
+WHERE l.CodeArt = a.CodeArt 
+AND CodeFact = 11
+
+28) Afficher le mode de règlement par facture.
+SELECT NumFact, LibelleRegl 
+FROM reglement r, client c, facture f 
+WHERE c.CodeCli = f.CodeCli 
+AND c.CodeRegl = r.CodeRegl 
+ORDER BY NumFact ASC 
+
+29) Afficher la liste des produits achetés par le client "Le Sablé d'or"
+SELECT LibelleArt
+FROM client c, facture f, article a, lignefact l 
+WHERE c.CodeCli = f.CodeCli 
+AND l.CodeFact = f.NumFact 
+AND l.CodeArt = a.CodeArt 
+AND NomCli = "Le sablé d'or"
+
+30) Afficher les produits qui ne sont pas des éclairs.
+SELECT * FROM article WHERE LibelleArt NOT LIKE 'éclair%' 
+
+31) Afficher les factures émises avant la date du jour à la "La rose des vents", "Chez Norbert" et "CHOCOLATERIE GANACHE".
+SELECT NumFact
+FROM client c, facture f
+WHERE c.CodeCli = f.CodeCli 
+AND NomCli IN ("La rose des vents", "Chez Norbert", "CHOCOLATERIE GANACHE")
+AND DateFact < NOW()
+
+32) Afficher dans une même colonne qui s'appellera "boxon" le nom des clients et le nom des articles, le tout trié par ordre alphabétique.
+SELECT nomcli AS boxon
+FROM Client
+UNION 
+SELECT LibelleArt
+FROM Article
+ORDER BY boxon ASC
