@@ -1,0 +1,15 @@
+07-01-2020
+- Création du cahier des charges
+- Remplissage des premières informations du cahier des charges
+
+09-01-2020
+- Poursuite du remplissage du cahier des charges
+
+10-01-2020
+- Finalisation du cahier des charges
+
+11-01-2020
+- Correction de certains éléments du cahier des charges
+
+12-01-2020
+- Création de la base de données

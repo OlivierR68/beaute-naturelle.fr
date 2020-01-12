@@ -16,6 +16,13 @@ Modif diagramme de cas d'utilisation
 
 10-01-2020
 
-Modif diagramme de cas d'utilisation
+Finalisation diagramme de cas d'utilisation
 
- 
+11-01-2020 
+
+Modif diagramme de classe
+
+12-01-2020
+
+Finalisation diagramme de classe 
+Création BDD
