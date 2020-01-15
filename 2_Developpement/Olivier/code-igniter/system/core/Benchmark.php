@@ -81,7 +81,7 @@ class CI_Benchmark {
 	 *
 	 * If the first parameter is empty this function instead returns the
 	 * {elapsed_time} pseudo-variable. This permits the full system
-	 * execution time to be shown in a template. The output class will
+	 * execution time to be shown in a templates. The output class will
 	 * swap the real value for this variable.
 	 *
 	 * @param	string	$point1		A particular marked point
@@ -119,7 +119,7 @@ class CI_Benchmark {
 	 *
 	 * Simply returns the {memory_usage} marker.
 	 *
-	 * This permits it to be put it anywhere in a template
+	 * This permits it to be put it anywhere in a templates
 	 * without the memory being calculated until the end.
 	 * The output class will swap the real value for this variable.
 	 *

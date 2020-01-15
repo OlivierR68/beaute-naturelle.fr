@@ -390,7 +390,7 @@ if ( ! function_exists('show_error'))
 	 * Error Handler
 	 *
 	 * This function lets us invoke the exception class and
-	 * display errors using the standard error template located
+	 * display errors using the standard error templates located
 	 * in application/views/errors/error_general.php
 	 * This function will send the error page directly to the
 	 * browser and exit.
@@ -427,7 +427,7 @@ if ( ! function_exists('show_404'))
 	 * 404 Page Handler
 	 *
 	 * This function is similar to the show_error() function above
-	 * However, instead of the standard error template it displays
+	 * However, instead of the standard error templates it displays
 	 * 404 errors.
 	 *
 	 * @param	string
@@ -584,7 +584,7 @@ if ( ! function_exists('_error_handler'))
 	 * not have access to server logs. Since this function effectively
 	 * intercepts PHP errors, however, we also need to display errors
 	 * based on the current error_reporting level.
-	 * We do that with the use of a PHP error template.
+	 * We do that with the use of a PHP error templates.
 	 *
 	 * @param	int	$severity
 	 * @param	string	$message

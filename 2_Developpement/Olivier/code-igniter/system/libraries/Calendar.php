@@ -51,14 +51,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class CI_Calendar {
 
 	/**
-	 * Calendar layout template
+	 * Calendar layout templates
 	 *
 	 * @var mixed
 	 */
 	public $template = '';
 
 	/**
-	 * Replacements array for template
+	 * Replacements array for templates
 	 *
 	 * @var array
 	 */
@@ -233,7 +233,7 @@ class CI_Calendar {
 
 		$is_current_month = ($cur_year == $year && $cur_month == $month);
 
-		// Generate the template data array
+		// Generate the templates data array
 		$this->parse_template();
 
 		// Begin building the calendar output
@@ -466,7 +466,7 @@ class CI_Calendar {
 	/**
 	 * Set Default Template Data
 	 *
-	 * This is used in the event that the user has not created their own template
+	 * This is used in the event that the user has not created their own templates
 	 *
 	 * @return	array
 	 */
@@ -505,7 +505,7 @@ class CI_Calendar {
 	/**
 	 * Parse Template
 	 *
-	 * Harvests the data within the template {pseudo-variables}
+	 * Harvests the data within the templates {pseudo-variables}
 	 * used to display the calendar
 	 *
 	 * @return	CI_Calendar

@@ -85,9 +85,9 @@ class CI_Parser {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Parse a template
+	 * Parse a templates
 	 *
-	 * Parses pseudo-variables contained in the specified template view,
+	 * Parses pseudo-variables contained in the specified templates view,
 	 * replacing them with the data in the second param
 	 *
 	 * @param	string
@@ -123,9 +123,9 @@ class CI_Parser {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Parse a template
+	 * Parse a templates
 	 *
-	 * Parses pseudo-variables contained in the specified template,
+	 * Parses pseudo-variables contained in the specified templates,
 	 * replacing them with the data in the second param
 	 *
 	 * @param	string

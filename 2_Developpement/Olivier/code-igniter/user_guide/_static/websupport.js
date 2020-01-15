@@ -586,7 +586,7 @@
   }
 
   /**
-   * A simple template renderer. Placeholders such as <%id%> are replaced
+   * A simple templates renderer. Placeholders such as <%id%> are replaced
    * by context['id'] with items being escaped. Placeholders such as <#id#>
    * are not escaped.
    */
