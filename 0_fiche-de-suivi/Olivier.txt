@@ -47,10 +47,6 @@
 - Mis a jour cahier des charges
 
 12-01-20
-- Correction Dico des données
-- Correction Digramme de Merise
-- Correction cas d'utilisation
-- Correction diagramme des classes
 - Correction Base de données
 - Finalisation Dico des données
 - Finalisation Digramme de Merise
