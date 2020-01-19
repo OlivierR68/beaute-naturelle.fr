@@ -280,7 +280,7 @@ class CI_Migration {
 			}
 
 			include_once($file);
-			$class = 'Migration_'.ucfirst(strtolower($this->_get_migration_name(basename($file, '.php'))));
+			$class = 'Migration_'.ucfirst(strtolower($this->_get_migration_name(basename($file, 'header.php'))));
 
 			// Validate the migration file structure
 			if ( ! class_exists($class, FALSE))
@@ -379,10 +379,10 @@ class CI_Migration {
 	{
 		$migrations = array();
 
-		// Load all *_*.php files in the migrations path
-		foreach (glob($this->_migration_path.'*_*.php') as $file)
+		// Load all *_*header.php files in the migrations path
+		foreach (glob($this->_migration_path.'*_*header.php') as $file)
 		{
-			$name = basename($file, '.php');
+			$name = basename($file, 'header.php');
 
 			// Filter out non-migration files
 			if (preg_match($this->_migration_regex, $name))

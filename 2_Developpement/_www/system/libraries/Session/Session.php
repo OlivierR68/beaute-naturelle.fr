@@ -212,7 +212,7 @@ class CI_Session {
 		$class = 'Session_'.$driver.'_driver';
 
 		// Allow custom drivers without the CI_ or MY_ prefix
-		if ( ! class_exists($class, FALSE) && file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$class.'.php'))
+		if ( ! class_exists($class, FALSE) && file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$class.'header.php'))
 		{
 			require_once($file_path);
 			if (class_exists($class, FALSE))
@@ -223,7 +223,7 @@ class CI_Session {
 
 		if ( ! class_exists('CI_'.$class, FALSE))
 		{
-			if (file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$class.'.php') OR file_exists($file_path = BASEPATH.'libraries/Session/drivers/'.$class.'.php'))
+			if (file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$class.'header.php') OR file_exists($file_path = BASEPATH.'libraries/Session/drivers/'.$class.'header.php'))
 			{
 				require_once($file_path);
 			}
@@ -234,7 +234,7 @@ class CI_Session {
 			}
 		}
 
-		if ( ! class_exists($prefix.$class, FALSE) && file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$prefix.$class.'.php'))
+		if ( ! class_exists($prefix.$class, FALSE) && file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$prefix.$class.'header.php'))
 		{
 			require_once($file_path);
 			if (class_exists($prefix.$class, FALSE))
@@ -242,7 +242,7 @@ class CI_Session {
 				return $prefix.$class;
 			}
 
-			log_message('debug', 'Session: '.$prefix.$class.".php found but it doesn't declare class ".$prefix.$class.'.');
+			log_message('debug', 'Session: '.$prefix.$class."header.php found but it doesn't declare class ".$prefix.$class.'.');
 		}
 
 		return 'CI_'.$class;
