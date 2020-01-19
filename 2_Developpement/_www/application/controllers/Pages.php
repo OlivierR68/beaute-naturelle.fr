@@ -23,7 +23,7 @@ class Pages extends CI_Controller
 
 
 
-		$data['CONTENT']	= '<h1>Hello</h1>';
+		$data['CONTENT']	= $this->load->view('front/contact', $data, TRUE);
 		$this->load->view('front/content', $data);
 	}
 }

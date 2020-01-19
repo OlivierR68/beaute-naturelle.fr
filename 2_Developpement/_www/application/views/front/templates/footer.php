@@ -94,8 +94,8 @@
 				</div>
 
 				<div class="d-flex justify-content-center justify-content-lg-end bn_payment mt-2">
-					<img src="assets/img/pay-cash.svg" class="mx-2" alt="Logo paiement liquide">
-					<img src="assets/img/pay-cb.svg" class="mx-2" alt="Logo paiement Carte bleu">
+					<img src="<?php echo base_url() ?>assets/img/pay-cash.svg" class="mx-2" alt="Logo paiement liquide">
+					<img src="<?php echo base_url() ?>assets/img/pay-cb.svg" class="mx-2" alt="Logo paiement Carte bleu">
 					<i class="fab fa-cc-visa mx-2"></i>
 					<i class="fab fa-cc-mastercard mx-2"></i>
 					<i class="fab fa-cc-apple-pay ml-2"></i>
@@ -114,7 +114,7 @@
 	<div class="bn_gap-25"></div>
 	<div class="container text-center">
             <span class="bn_copyright ">Tous droits réservés 2010-2019 - Beauté Naturelle - Site réalisé par <a
-					href="http://webolive.fr" target="_blank">webolive.fr</a></span>
+					href="http://webolive.fr" target="_blank">Studio 241</a></span>
 	</div>
 
 
@@ -131,7 +131,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
 <!-- SCRIPTS -->
-<script src="<?php base_url() ?>assets/js/main.js"></script>
+<script src="<?php echo base_url() ?>assets/js/main.js"></script>
 <script src="https://kit.fontawesome.com/defbc714c8.js" crossorigin="anonymous"></script>
 
 </body>
