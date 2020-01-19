@@ -1,0 +1,26 @@
+Organisation des classes
+
+-application
+
+--controllers
+---Controller
+---Pages_controller
+---Events_controller
+
+
+
+--models
+---Manager
+---EventManager
+---RegistrationManager
+---UserManager
+---SlideManager
+---ImageManager
+---CommentManager
+---NewsletterManager
+---SubscriberManager
+---PrestationManager
+
+
+
+

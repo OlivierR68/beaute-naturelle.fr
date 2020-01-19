@@ -154,13 +154,13 @@ if ( ! function_exists('load_class'))
 		// then in the native system/libraries folder
 		foreach (array(APPPATH, BASEPATH) as $path)
 		{
-			if (file_exists($path.$directory.'/'.$class.'header.php'))
+			if (file_exists($path.$directory.'/'.$class.'.php'))
 			{
 				$name = 'CI_'.$class;
 
 				if (class_exists($name, FALSE) === FALSE)
 				{
-					require_once($path.$directory.'/'.$class.'header.php');
+					require_once($path.$directory.'/'.$class.'.php');
 				}
 
 				break;
@@ -168,13 +168,13 @@ if ( ! function_exists('load_class'))
 		}
 
 		// Is the request a class extension? If so we load it too
-		if (file_exists(APPPATH.$directory.'/'.config_item('subclass_prefix').$class.'header.php'))
+		if (file_exists(APPPATH.$directory.'/'.config_item('subclass_prefix').$class.'.php'))
 		{
 			$name = config_item('subclass_prefix').$class;
 
 			if (class_exists($name, FALSE) === FALSE)
 			{
-				require_once(APPPATH.$directory.'/'.$name.'header.php');
+				require_once(APPPATH.$directory.'/'.$name.'.php');
 			}
 		}
 
@@ -184,7 +184,7 @@ if ( ! function_exists('load_class'))
 			// Note: We use exit() rather than show_error() in order to avoid a
 			// self-referencing loop with the Exceptions class
 			set_status_header(503);
-			echo 'Unable to locate the specified class: '.$class.'header.php';
+			echo 'Unable to locate the specified class: '.$class.'.php';
 			exit(5); // EXIT_UNK_CLASS
 		}
 
