@@ -14,7 +14,7 @@
 <body>
     <div class="newsletter">
         <p>Abonnez-vous à notre Newsletter</p>
-        <form action="">
+        <form action="#" method="GET">
             <input type="email" name="mail" placeholder="Entrez votre adresse mail" required>
             <input type="submit" value="valider">
         </form>
