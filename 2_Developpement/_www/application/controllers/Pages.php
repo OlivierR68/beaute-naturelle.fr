@@ -24,8 +24,8 @@ class Pages extends CI_Controller
 
 	public function about()
 	{
-		$data['preTITLE']	= "Notre Établissement";
-		$data['TITLE'] 		= "Découvrez";
+		$data['preTITLE']	= "Découvrez";
+		$data['TITLE'] 		= "Notre Établissement";
 		$data['headerImg']	= "img-magasin.jpg";
 
 		$data['CONTENT']	= $this->load->view('front/about', $data, TRUE);

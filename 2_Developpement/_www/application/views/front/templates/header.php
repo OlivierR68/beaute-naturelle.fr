@@ -98,12 +98,19 @@
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active" : "" ;?>">
                                 <a class="nav-link bn_nav-link" href="<?php echo base_url("events") ?>">Évènements</a>
                             </li>
+
+							<li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>">
+								<a class="nav-link bn_nav-link" href="<?php echo base_url("prestations") ?>">Prestations</a>
+							</li>
+							<!-- Rajouter un foreach ici ?
+
                             <li class="nav-item mx-1 bn_nav-item dropdown <?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>">
                                 <a class="nav-link bn_nav-link dropdown-toggle" href="<?php echo base_url("prestations") ?>" id="navbarDropdown"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Prestations
                                 </a>
                                 <div class="dropdown-menu bn_bg-main" aria-labelledby="navbarDropdown">
+
                                     <a class="dropdown-item<?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>" href="<?php echo base_url("prestations") ?>">Prestations</a>
                                     <a class="dropdown-item" href="prestations/epilation.html">Epilations</a>
                                     <a class="dropdown-item" href="prestations/mains-pieds.html">Mains & Pieds</a>
@@ -114,13 +121,16 @@
                                     <a class="dropdown-item" href="prestations/spa.html">SPA</a>
                                     <a class="dropdown-item" href="prestations/hommes.html">Hommes</a>
 
+
+
                                 </div>
                             </li>
+                            -->
                             <li class="nav-item mx-1 bn_nav-item mx-1 <?php echo ($this->uri->rsegments[2] == "about") ? "bn_active" : "" ;?>">
                                 <a class="nav-link bn_nav-link" href="<?php echo base_url('pages/about')?>">L'Établissement </a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "galerie") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link" href="galerie.html">Galerie</a>
+                            <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "images") ? "bn_active" : "" ;?>">
+                                <a class="nav-link bn_nav-link" href="<?php echo base_url('images')?>">Galerie</a>
                             </li>
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[2] == "contact") ? "bn_active" : "" ;?>">
                                 <a class="nav-link bn_nav-link" href="<?php echo base_url('pages/contact') ?>">Contact</a>
