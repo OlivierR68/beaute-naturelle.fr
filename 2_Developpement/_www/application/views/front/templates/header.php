@@ -40,13 +40,13 @@
             <div
                 class="container bn_top-bar d-flex align-items-center justify-content-center justify-content-md-between">
                 <div class="bn_infos">
-                    <a class="bn_infos-items d-none d-lg-inline" href="contact.html"><i
+                    <a class="bn_infos-items d-none d-lg-inline" href="<?php echo base_url('pages/contact') ?>"><i
                             class="fas fa-map-marker-alt"></i>328 rue des clefs, 68 000 Colmar</a>
                     <a class="bn_infos-items" href="tel:+33389545646"><i class="fas fa-phone-alt"></i>03
                         89 54 56 46</a>
                     <a class="bn_infos-items d-none d-lg-inline" href="mailto:contact@beaute-naturelle.fr"><i
                             class="far fa-envelope"></i></i>contact@beaute-naturelle.fr</a>
-                    <a class="bn_infos-items" href="contact.html"><i class="far fa-clock"></i></i><span
+                    <a class="bn_infos-items" href="<?php echo base_url('pages/contact') ?>"><i class="far fa-clock"></i></i><span
                             class="d-none d-sm-inline">Ouvert tous les
                             jours, (sauf le Dimanche) de</span> 9H00 à 18H00</a>
                 </div>
@@ -67,7 +67,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
 
-                    <a class="navbar-brand mx-auto mx-lg-0" href="<?php echo base_url('pages/home') ?>">
+                    <a class="navbar-brand mx-auto mx-lg-0" href="<?php echo base_url() ?>">
                         <!--TOP LOGO -->
                         <div class="bn_logo-top">
                             <img src="<?php echo base_url()?>assets/img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">

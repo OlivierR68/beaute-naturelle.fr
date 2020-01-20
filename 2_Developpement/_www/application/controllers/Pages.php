@@ -3,14 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pages extends CI_Controller
 {
-	public function home()
-	{
-		$data['preTITLE']	= "Magasin & Institut";
-		$data['TITLE'] 		= "A propos de Beauté Naturelle";
-
-		$data['CONTENT']	= $this->load->view('front/home', $data, TRUE);
-		$this->load->view('front/content', $data);
-	}
 
 	public function contact()
 	{

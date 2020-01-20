@@ -1,0 +1,6 @@
+attention de bien créer la bdd avec les configs suivantes avant d'importer, sinon vous pourrais ne pas l'utiliser sur CodeIgniter :
+
+user : 'root'
+mdp : ''
+nom de la base données : 'beaute_naturelle'
+interclassement : 'utf8mb4_general_ci' 
