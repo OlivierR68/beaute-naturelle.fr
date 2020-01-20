@@ -10,7 +10,7 @@ class Events extends CI_Controller {
 		$data['headerImg']	= "img-events.jpg";
 
 
-		// à remplir ici, parttie frontend
+		// à remplir ici, partie frontend
 
 
 
