@@ -5,8 +5,10 @@ class Slide_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_slide_id;
 	private $_slide_libelle;
-	private $_slide_bg_image;
-	private $_slide_banner_content;
+	private $_slide_img;
+	private $_slide_type;
+	private $_slide_title;
+	private $_slide_text;
 
 	/** Constructeur **/
 	public function __construct(){
@@ -36,12 +38,20 @@ class Slide_class extends CI_Model {
 		return $this->_slide_libelle;
 	}
 
-	public function getBg_image(){
-		return $this->_slide_bg_image;
+	public function getImg(){
+		return $this->_slide_img;
 	}
 
-	public function getBanner_content(){
-		return $this->_slide_banner_content;
+	public function getType(){
+		return $this->_slide_type;
+	}
+
+	public function getTitle(){
+		return $this->_slide_title;
+	}
+
+	public function getText(){
+		return $this->_slide_text;
 	}
 
 	/** SETTERS (pour chaque attribut) **/
@@ -54,12 +64,20 @@ class Slide_class extends CI_Model {
 		$this->_slide_libelle = $id;
 	}
 
-	public function setBg_imd($id){
-		$this->_slide_bg_image = $id;
+	public function setImg($img){
+		$this->_slide_img = $img;
 	}
 
-	public function setBanner_content($text){
-		$this->_slide_banner_content = $text;
+	public function setType($type){
+		$this->_slide_type = $type;
+	}
+
+	public function setTitle($title){
+		$this->_slide_title = $title;
+	}
+
+	public function setText($text){
+		$this->_slide_text = $text;
 	}
 
 }

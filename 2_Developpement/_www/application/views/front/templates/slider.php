@@ -5,29 +5,39 @@
 
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<?php for ($i = 0; $i < count($arrSlides);$i++){ ?>
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="<?php if($i === 0) echo 'active' ?>"></li>
+				<?php } ?>
 			</ol>
 			<div class="carousel-inner justify-content-center">
 
 			<!-- foreach ici -->
 
-				<?php var_dump($arrSlides); ?>
+				<?php
 
-				<div class="carousel-item active">
+				$slideCounter = 0;
 
-					<div class="bn_slide-bg bn_side-bg-1">
-						<div class="bn_slide-banner">
-							<div class="bn_slider-border">
-								<span class="bn_h1">Le Choix</span>
-								<span class="bn_h1-pre">Plus de 50 références bio</span>
+				foreach($arrSlides as $objSlide) { ?>
+
+					<div class="carousel-item <?php  if($slideCounter===0) echo 'active'; ?>">
+
+						<div class="bn_slide-bg" style="background-image: url(<?php echo base_url()."assets/img/".$objSlide->getImg() ?>)">
+							<div class="bn_slide-banner">
+								<div class="bn_slider-border">
+									<span class="bn_<?php echo $objSlide->getType()?>"><?php echo $objSlide->getTitle() ?></span>
+									<span class="bn_<?php echo $objSlide->getType()?>-pre"><?php echo $objSlide->getText() ?></span>
+								</div>
 							</div>
 						</div>
-					</div>
 
-				</div>
-			<!-- fin du foreach -->
+					</div>
+					$slideCounter++
+					<!-- fin du foreach -->
+
+					<?php
+					$slideCounter++; } ?>
+
+
 
 			</div>
 		</div>
