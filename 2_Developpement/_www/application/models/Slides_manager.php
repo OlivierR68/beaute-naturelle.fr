@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Articles_manager extends CI_Model {
+class Slides_manager extends CI_Model {
 
 
 	public function findAll(){

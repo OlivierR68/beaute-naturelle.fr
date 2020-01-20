@@ -15,10 +15,14 @@ class Slides extends CI_Controller {
 		$data['TITLE'] 		= "A propos de Beauté Naturelle";
 
 		$slides	= $this->Slides_manager->findAll();
-		$slidesToDisplay = [];
-		foreach ()
+		$slidesToDisplay = array();
+		foreach($slides as $slide){
+			$objSlide 	= new Slide_class();
+			$objSlide->hydrate($slide);
+			$slidesToDisplay[] = $objSlide;
+		}
 
-
+		$data['arrSlides'] 	= $slidesToDisplay;
 		$data['CONTENT']	= $this->load->view('front/home', $data, TRUE);
 		$this->load->view('front/content', $data);
 	}

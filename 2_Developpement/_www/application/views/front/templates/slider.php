@@ -12,6 +12,9 @@
 			<div class="carousel-inner justify-content-center">
 
 			<!-- foreach ici -->
+
+				<?php var_dump($arrSlides); ?>
+
 				<div class="carousel-item active">
 
 					<div class="bn_slide-bg bn_side-bg-1">
