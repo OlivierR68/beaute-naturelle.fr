@@ -11,21 +11,10 @@
 			</ol>
 			<div class="carousel-inner justify-content-center">
 
+			<!-- foreach ici -->
 				<div class="carousel-item active">
 
 					<div class="bn_slide-bg bn_side-bg-1">
-						<div class="bn_slide-banner">
-							<div class="bn_slider-border">
-								<span class="bn_h1">Qualités<wbr> & Conseils</span>
-								<span class="bn_h1-pre">Depuis 10 ans</span>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="carousel-item">
-
-					<div class="bn_slide-bg bn_side-bg-2">
 						<div class="bn_slide-banner">
 							<div class="bn_slider-border">
 								<span class="bn_h1">Le Choix</span>
@@ -35,20 +24,7 @@
 					</div>
 
 				</div>
-				<div class="carousel-item">
-
-					<div class="bn_slide-bg bn_side-bg-3">
-						<div class="bn_slide-banner">
-							<div class="bn_slider-border">
-                                    <span class="bn_h2 bn_em-50">“Sous le maquillage et derrière le sourire, je ne suis
-                                        qu'une fille qui souhaite le monde."</span>
-								<span class="bn_h2-pre">- Marilyn Monroe</span>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
+			<!-- fin du foreach -->
 
 			</div>
 		</div>

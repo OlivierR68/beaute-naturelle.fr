@@ -28,13 +28,12 @@
 </main>
 <div class="bn_gap-50"></div>
 
-<!-- faudra faire un foreach par ici avec le menu -->
 
 
 <div class="container">
 
 	<div class="row">
-
+		<!-- Foreach de catégorie ici -->
 		<a href="prestations/epilation.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-1 d-flex">
 
 			<div></div>
@@ -43,65 +42,7 @@
                 </span>
 
 		</a>
-
-		<a href="prestations/mains-pieds.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-2 d-flex">
-
-			<div class="bn_bg-color-2"></div>
-			<span>
-                    mains & pieds
-                </span>
-
-		</a>
-
-		<a href="prestations/regard.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-3 d-flex">
-
-			<div></div>
-			<span>
-                    regard
-                </span>
-
-		</a>
-
-		<a href="prestations/visage.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-4 d-flex">
-			<div class="bn_bg-color-2"></div>
-			<span>
-                    visage
-                </span>
-
-		</a>
-
-		<a href="prestations/minceur.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-5 d-flex">
-
-			<div></div>
-			<span>
-                    minceur
-                </span>
-
-		</a>
-
-		<a href="prestations/carita.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-6 d-flex">
-
-			<div class="bn_bg-color-2"></div>
-			<span>
-                    carita
-                </span>
-		</a>
-
-		<a href="prestations/spa.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-7 d-flex">
-
-			<div></div>
-			<span>
-                    spa
-                </span>
-		</a>
-
-		<a href="prestations/hommes.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-8 d-flex">
-
-			<div class="bn_bg-color-2"></div>
-			<span>
-                    hommes
-                </span>
-		</a>
+		<!-- fin du foreach -->
 
 	</div>
 
