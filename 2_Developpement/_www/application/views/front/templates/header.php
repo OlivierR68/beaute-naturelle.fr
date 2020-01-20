@@ -96,7 +96,7 @@
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link disabled" href="<?php echo base_url("events") ?>">Évènements</a>
+                                <a class="nav-link bn_nav-link" href="<?php echo base_url("events") ?>">Évènements</a>
                             </li>
                             <li class="nav-item mx-1 bn_nav-item dropdown <?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>">
                                 <a class="nav-link bn_nav-link dropdown-toggle" href="<?php echo base_url("prestations") ?>" id="navbarDropdown"
@@ -116,8 +116,8 @@
 
                                 </div>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item mx-1 <?php echo ($this->uri->rsegments[2] == "magasin") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link" href="<?php echo base_url('pages/about')?>">Qui sommes-nous </a>
+                            <li class="nav-item mx-1 bn_nav-item mx-1 <?php echo ($this->uri->rsegments[2] == "about") ? "bn_active" : "" ;?>">
+                                <a class="nav-link bn_nav-link" href="<?php echo base_url('pages/about')?>">L'Établissement </a>
                             </li>
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "galerie") ? "bn_active" : "" ;?>">
                                 <a class="nav-link bn_nav-link" href="galerie.html">Galerie</a>

@@ -77,19 +77,19 @@
 			<div class="col-12 col-lg-5 text-center text-lg-right">
 				<div>
 					<div class="bn_nav-bottom" class="bn_nav-bottom">
-						<a href="mentions-legales.html">Mentions Légales</a> |
-						<a href="politique-confidentialite.html">Politique de
+						<a class="<?php  echo ($this->uri->rsegments[2] == "mentions") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/mentions") ?>">Mentions Légales</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "politique") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/politique") ?>">Politique de
 							confidentialité</a> |
-						<a href="plan-site.html">Plan du Site</a>
+						<a class="<?php  echo ($this->uri->rsegments[2] == "sitemap") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/sitemap") ?>">Plan du Site</a>
 					</div>
 
 					<div class="bn_nav-bottom">
-						<a href="index.html" class="bn_active-2">Accueil</a> |
-						<span class="bn_opacity-60">Évènements</span> |
-						<a href="institut.html">L'Institut</a> |
-						<a href="magasin.html">Le Magasin</a> |
-						<a href="galerie.html">Galerie</a> |
-						<a href="contact.html">Contact</a>
+						<a class="<?php  echo ($this->uri->rsegments[2] == "home") ? "bn_active-2" : "" ;?>" href="<?php echo base_url()  ?>">Accueil</a> |
+						<a class="<?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("events") ?>">Évènements</a> |
+						<a class="<?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("prestations") ?>">Prestations</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "about") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/about") ?>">L'Établissement</a> |
+						<a class="<?php  echo ($this->uri->rsegments[1] == "images") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("images") ?>">Galerie</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "contact") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/contact") ?>">Contact</a>
 					</div>
 				</div>
 
