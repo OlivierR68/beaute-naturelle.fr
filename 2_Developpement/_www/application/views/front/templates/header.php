@@ -34,7 +34,20 @@
 
 
     <header>
-        <!--TOP BAR -->
+		<!-- TOP BAR ADMIN -->
+
+		<div class="bg-dark bn_adm-top-bar">
+			<div class="container py-2 d-flex justify-content-center">
+				<div class="">
+					<a href="#"><i class="fas fa-tachometer-alt mr-2"></i>Tableau de bord</a>
+					<a href="#"><span class="bn_cube mr-2">10</span></i>Inscriptions<span class="d-none d-sm-inline"> en cours</span></a>
+					<a href="#"><span class="bn_cube mr-2">0</span></i>Images<span class="d-none d-sm-inline"> à valider</span></a>
+				</div>
+
+			</div>
+		</div>
+
+        <!--TOP BAR USER -->
 
         <div class="bn_bg-color-1">
             <div

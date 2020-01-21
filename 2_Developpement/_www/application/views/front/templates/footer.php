@@ -64,11 +64,11 @@
 			<div class="col-12 col-sm-6 col-lg-3  text-center">
 				<span>Suivez-Nous :</span>
 				<div class="d-flex justify-content-center mt-2">
-					<a href="https://fr-fr.facebook.com/" class=" bn_social-bottom"><i
+					<a href="https://fr-fr.facebook.com/" target="_blank" class=" bn_social-bottom"><i
 							class="fab fa-facebook-square mx-1"></i></a>
-					<a href="https://twitter.com/" class=" bn_social-bottom"><i
+					<a href="https://twitter.com/" target="_blank" class=" bn_social-bottom"><i
 							class="fab fa-twitter-square mx-1"></i></a>
-					<a href="https://www.instagram.com/" class=" bn_social-bottom"><i
+					<a href="https://www.instagram.com/" target="_blank" class=" bn_social-bottom"><i
 							class="fab fa-instagram mx-1"></i></a>
 				</div>
 				<div class="d-lg-none bn_gap-50"></div>
