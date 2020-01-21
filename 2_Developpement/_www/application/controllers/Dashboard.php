@@ -17,6 +17,8 @@ class Dashboard extends CI_Controller {
 
 
 
+
+
 		$data['CONTENT']	= $this->load->view('back/dashboard', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
