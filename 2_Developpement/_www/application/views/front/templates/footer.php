@@ -25,20 +25,20 @@
 
 			<div class="col-12 col-sm-6 col-lg-4 bn_infos">
 				<div class="bn_h2-pre bn_color-white text-center text-sm-left">
-					<a href="magasin.html">Magasin</a> & <a href="institut.html">Institut</a>
+					<a href="<?php echo base_url('pages/about') ?>">l'Établissement</a>
 				</div>
 				<div class="bn_h2 bn_color-white text-center text-sm-left">
-					<a href="index.html">Beauté Naturelle</a>
+					<a href="<?php base_url() ?>">Beauté Naturelle</a>
 				</div>
 				<div class="d-flex justify-content-center justify-content-sm-start">
 					<ul class="list-unstyled">
 						<li>
-							<a href="contact.html">
+							<a href="<?php base_url('pages/contact') ?>">
                                     <span><i class="fas fa-map-marker-alt mr-1"></i> 328 rue des clefs, 68 000 Colmar
 							</a></span>
 						</li>
 						<li>
-							<a href="contact.html">
+							<a href="<?php base_url('pages/contact') ?>">
                                     <span><i class="fas fa-phone-alt mr-1"></i> 03 89 54 56 46
 							</a></span>
 						</li>
@@ -48,7 +48,7 @@
 							</a></span>
 						</li>
 						<li>
-                                <span><a href="contact.html"><i class="far fa-clock mr-1"></i> Ouvert tous les
+                                <span><a href="<?php base_url('pages/contact') ?>"><i class="far fa-clock mr-1"></i> Ouvert tous les
                                         jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à
                                             18H00</span></a></span>
 						</li>
@@ -78,14 +78,13 @@
 				<div>
 					<div class="bn_nav-bottom" class="bn_nav-bottom">
 						<a class="<?php  echo ($this->uri->rsegments[2] == "mentions") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/mentions") ?>">Mentions Légales</a> |
-						<a class="<?php  echo ($this->uri->rsegments[2] == "politique") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/politique") ?>">Politique de
-							confidentialité</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "politique") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/politique") ?>">Politique de confidentialité</a> |
 						<a class="<?php  echo ($this->uri->rsegments[2] == "sitemap") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/sitemap") ?>">Plan du Site</a>
 					</div>
 
 					<div class="bn_nav-bottom">
 						<a class="<?php  echo ($this->uri->rsegments[2] == "home") ? "bn_active-2" : "" ;?>" href="<?php echo base_url()  ?>">Accueil</a> |
-						<a class="<?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("events") ?>">Évènements</a> |
+						<a class="<?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("events") ?>">Événements</a> |
 						<a class="<?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("prestations") ?>">Prestations</a> |
 						<a class="<?php  echo ($this->uri->rsegments[2] == "about") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/about") ?>">L'Établissement</a> |
 						<a class="<?php  echo ($this->uri->rsegments[1] == "images") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("images") ?>">Galerie</a> |
