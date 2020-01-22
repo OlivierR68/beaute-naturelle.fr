@@ -20,19 +20,18 @@ class Images extends CI_Controller {
 
 	public function back()
 	{
+		$data['preTITLE']	= "Participer à nos";
+		$data['TITLE'] 		= "Événements";
+		$data['headerImg']	= "img-events.jpg";
+
+
+		// à remplir ici, partie frontend
 
 
 
-		// à remplir ici, partie backend
 
 
-
-
-
-
-
-
-		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
-		$this->load->view('front/content', $data);
+		$data['CONTENT']	= $this->load->view('back/dashboard', $data, TRUE);
+		$this->load->view('back/content', $data);
 	}
 }
