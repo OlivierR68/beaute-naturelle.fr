@@ -5,9 +5,9 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		$data['preTITLE']	= "Participer à nos";
+
 		$data['TITLE'] 		= "Événements";
-		$data['headerImg']	= "img-events.jpg";
+
 
 
 		// à remplir ici, partie frontend

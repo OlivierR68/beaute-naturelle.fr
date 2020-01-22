@@ -935,7 +935,7 @@ td::first-letter {
 
 #b2top-button::after {
   content: "\f077";
-  font-family: FontAwesome;
+	font-family: FontAwesome, serif;
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
@@ -965,10 +965,11 @@ td::first-letter {
 	color: white !important;
 	display: inline-flex;
 	justify-content: center;
-	font-size: 0.8em;
+	font-size: 0.75em;
 	background: grey;
-	width: 1.5em;
+	width: 2em;
 	height: 1.5em;
 	border-radius: 0.5em;
+	margin-right: 0.3em;
 }
 
