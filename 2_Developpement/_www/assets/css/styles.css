@@ -959,32 +959,7 @@ td::first-letter {
 
 
 /* =============== BACKEND ==================== */
-.bn_adm-top-bar {
-	font-size: 0.8em ;
-}
-.bn_adm-top-bar a {
-	color: white !important;
-	padding-right: 2em;
-	padding-left: 1.2em;
-	border-right: white solid 1px;
-}
 
-.bn_adm-top-bar a:first-child {
-
-	padding-left: 0;
-
-}
-
-.bn_adm-top-bar a:last-child {
-
-	border-right: none;
-	padding-right: 0;
-
-}
-
-.bn_adm-top-bar a:hover {
-	color: #98C23A !important;
-}
 
 .bn_cube {
 	color: white !important;
@@ -994,6 +969,6 @@ td::first-letter {
 	background: grey;
 	width: 1.5em;
 	height: 1.5em;
-	border-radius: 0.3em;
+	border-radius: 0.5em;
 }
 

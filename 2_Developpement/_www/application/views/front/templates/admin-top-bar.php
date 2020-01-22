@@ -8,15 +8,15 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a  class="nav-link" href="<?php echo base_url('dashboard') ?>"><i class="fas fa-tachometer-alt mr-2"></i>Tableau de bord</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('images/back') ?>">Images à ajouter</a>
+					<a class="nav-link" href="<?php echo base_url('images/back') ?>"><span class="bn_cube">1</span> Images à ajouter</a>
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('events/back') ?>">Inscription à gérer</a>
+					<a class="nav-link" href="<?php echo base_url('events/back') ?>"><span class="bn_cube">1</span> Inscription à gérer</a>
 				</li>
 
 
@@ -24,23 +24,4 @@
 		</div>
 	</nav>
 
-</div>
-
-
-<div class="bg-dark bn_adm-top-bar">
-
-
-	<!--
-	<div class="container py-2 d-flex justify-content-between">
-		<div class="">
-			<a href="#"><i class="fas fa-tachometer-alt mr-2"></i>Tableau de bord</a>
-		</div>
-		<div class="">
-			<a href="#"><span class="bn_cube mr-2">10</span></i>Inscriptions<span class="d-none d-sm-inline"> en cours</span></a>
-			<a href="#"><span class="bn_cube mr-2">0</span></i>Images<span class="d-none d-sm-inline"> à valider</span></a>
-		</div>
-
-	</div>
-
-	-->
 </div>
