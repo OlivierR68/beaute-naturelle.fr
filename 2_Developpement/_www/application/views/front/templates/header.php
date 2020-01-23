@@ -17,13 +17,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/styles.css">
 
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./assets/favicon.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="./assets/favicon-32.png" type="image/png">
-    <link rel="icon" sizes="64x64" href="./assets/favicon-64.png" type="image/png">
-    <link rel="icon" sizes="96x96" href="./assets/favicon-96.png" type="image/png">
+    <link rel="shortcut icon" href="<?php echo base_url()?>assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url()?>assets/favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="<?php echo base_url()?>assets/favicon-32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="<?php echo base_url()?>assets/favicon-64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="<?php echo base_url()?>assets/favicon-96.png" type="image/png">
 
 </head>
 
@@ -73,7 +73,7 @@
                     <a class="navbar-brand mx-auto mx-lg-0" href="<?php echo base_url() ?>">
                         <!--TOP LOGO -->
                         <div class="bn_logo-top">
-                            <img src="./assets/img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">
+                            <img src="<?php echo base_url()?>assets/img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">
                             <div class="bn_logg-text">
 
                                 <span class="bn_logo-text-1">beauté naturelle</span>
