@@ -1,7 +1,7 @@
 <?php
 	class User{
 		/* ATTRIBUTS */
-		private $_id;
+		private $_prestation_id;
 		private $_name;
 		private $_firstname;
 		private $_mail;
