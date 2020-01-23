@@ -1,7 +1,7 @@
 <?php
-	include("connect_bdd.php");
+	include("");
 	
-	class prestations_tarifs_manager extends Connection{
+	class prestations extends Connection{
 		
 		public function __construct(){
 			parent::__construct();
@@ -9,54 +9,44 @@
 		
 		public function is_in_base(){
 			//var_dump($_POST);
-			$strQuery = "	SELECT categorie_id, categorie_name, categorie_firstname,
-									categorie_mail
-							FROM categorie
-							WHERE categorie_mail = '".$_POST['mail']."'
-								AND categorie_pwd = '".$_POST['passwd']."'
-							";
+			$strQuery = "	SELECT prestation_id, prestation_slug, prestation_name, prestation_time,prestation_tarif,";
 			/*$query = $this->_db->query($strQuery);
 			return $query->fetchAll();*/
 			return $this->_db->query($strQuery)->fetch();
 		}
 		
 		/*public function is_in_base2($mail, $pwd){
-			$strQuery = "	SELECT categorie_id, categorie_name, categorie_firstname,
-									categorie_mail
-							FROM categorie
-							WHERE categorie_mail = '".$mail."'
-								AND categorie_pwd = '".$pwd."'
+			$strQuery = "	SELECT prestation_id, prestation_slug, prestation_name, prestation_time,prestation_tarif,";
 							";
 
 			return $this->_db->query($strQuery)->fetchAll();
 		}*/
 
 		public function get(){
-			$strQuery = "	SELECT categorie_id, categorie_name, categorie_firstname,
-									categorie_mail
-							FROM categorie
-							WHERE categorie_id = ".$_SESSION['categorie']['id'];
+			$strQuery = "	SELECT prestation_id, prestation_slug, prestation_name, prestation_time,prestation_tarif,";
+							
 			return $this->_db->query($strQuery)->fetch();
 		}
 
 		public function edit($objUser, $boolEditPwd = false){
-			$strQuery = "	UPDATE categorie
-							SET categorie_name = '".$objUser->getName()."',
-								categorie_firstname = '".$objUser->getFirstname()."',
-								categorie_mail = '".$objUser->getMail()."'";
+			$strQuery = "	UPDATE prestation
+							SET prestation_name = '".$objprestation->getprestation_name()."',
+								prestation_time = '".$objprestation->getprestation_time()."',
+								prestation_tarif = '".$objprestation->getprestation_tarif()."'";
 			if ($boolEditPwd){
-				$strQuery .= "	, categorie_pwd = '".$objUser->getPwd()."'";
+				$strQuery .= "	, prestation_pwd = '".$objUser->getPwd()."'";
 			}
 								
-			$strQuery .= "	WHERE categorie_id = ".$_SESSION['user']['id'];
+			$strQuery .= "	WHERE prestation_id = ".$_SESSION['prestation']['prestation_id'];
 			return $this->_db->exec($strQuery);
 		}
 
 		public function add($objUser){
-			$strQuery = "	INSERT INTO categorie (categorie_name, categorie_firstname, 
-												categorie_mail, categorie_pwd)
-							VALUES ('".$objUser->getName()."', '".$objUser->getFirstname()."', 
-									'".$objUser->getMail()."', '".$objUser->getPwd()."')";
+			$strQuery = "	INSERT INTO categorie (prestation_id, prestation_slug, prestation_name, prestation_time,prestation_tarif)
+							VALUES (
+                            '".$objprestation->getprestation_slug()."',
+                            '".$objprestation->getprestation_name()."', '".$objprestation->getprestation_time()."', 
+									'".$objprestation->getprestation_tarif()."', '".$objprestation->getprestation_tarif()."')";
 			return $this->_db->exec($strQuery);
 		}
 	}
