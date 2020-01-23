@@ -1,11 +1,11 @@
 <?php
-	class User{
+	class prestation{
 		/* ATTRIBUTS */
-		private $_prestation_id;
-		private $_name;
-		private $_firstname;
-		private $_mail;
-		private $_pwd;
+		public $_prestation_id;
+        public $_prestation_slug;
+		public $_prestation_name;
+		public $_prestation_time;
+		public $_prestation_tarif;
 		
 		/* CONSTRUCTEUR */
 		public function __construct(){
@@ -14,7 +14,7 @@
 		/* HYDRATATION */
 		public function hydrate($arrData){
 			foreach($arrData as $key=>$value){
-				$strSetterName = "set".ucfirst(str_replace("user_", "", $key));
+				$strSetterName = "set".ucfirst(str_replace("prestation_", "", $key));
 				if(method_exists($this, $strSetterName)){
 					$this->$strSetterName($value);
 				}
@@ -22,42 +22,44 @@
 		}
 		
 		/* SETTERS */
-		public function setId($intId){
-			$this->_id = $intId;
+		public function setprestation_id($intprestation_id){
+			$this->_id = $intprestation_id;
 		}
-		public function setName($strName){
-			$this->_name = trim($strName);
+        public function setprestation_slug($strprestation_slug){
+			$this->_prestation_slug = trim($strprestation_slug);
 		}
-		public function setFirstname($strFirstname){
-			$this->_firstname = trim($strFirstname);
+		public function setprestation_name($strprestation_name){
+			$this->_prestation_name = trim($strprestation_name);
 		}
-		public function setMail($strMail){
-			$this->_mail = strtolower(trim($strMail));
+		public function setprestation_time($strprestation_time){
+			$this->_prestation_time = trim($strprestation_time);
 		}
-		public function setPwd($strPwd){
-			$this->_pwd = $strPwd;
+		public function setprestation_tarif($strprestation_tarif){
+			$this->_prestation_tarif = strtolower(trim($strprestation_tarif));
 		}
+		
 		
 		/* GETTERS */
-		public function getId(){
-			return $this->_id;
+		public function getprestation_id(){
+			return $this->_prestation_id;
 		}
-		public function getName(){
-			return strtoupper($this->_name);
+		public function getprestation_slug(){
+			return strtoupper($this->_prestation_slug);
+		}
+        public function prestation_name(){
+			return strtoupper($this->_prestation_name);
 		}		
-		public function getFirstname(){
-			return $this->_firstname;
+		public function getprestation_time(){
+			return $this->_prestation_time;
 		}
-		public function getMail(){
-			return $this->_mail;
-		}
-		public function getPwd(){
-			return $this->_pwd;
+		public function getprestation_tarif(){
+			return $this->_prestation_tarif;
 		}
 		
 		
-		public function getFullName(){
-			return $this->getFirstname()." ".$this->getName();
+		
+		public function getFullprestation(){
+			return $this->getFirstprestation()." ".$this->getprestation();
 		}
 
 	}
