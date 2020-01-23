@@ -5,7 +5,8 @@ class Events extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-
+		$this->load->model("Events_manager");
+		$this->load->model("Event_class");
 	}
 
 	public function index()
@@ -16,15 +17,15 @@ class Events extends CI_Controller {
 		$data['headerImg']	= "img-events.jpg";
 
 
-		// à remplir ici, partie frontend
+		$events	= $this->Events_manager->findAll();
+		$eventsToDisplay = array();
+		foreach($events as $event){
+			$objEvent 	= new Event_class();
+			$objEvent->hydrate($event);
+			$eventsToDisplay[] = $objEvent;
+		}
 
-
-
-
-
-
-
-
+		$data['arrEvents'] 	= $eventsToDisplay;
 		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
 		$this->load->view('front/content', $data);
 	}
