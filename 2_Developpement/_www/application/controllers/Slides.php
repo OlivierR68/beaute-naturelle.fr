@@ -7,6 +7,7 @@ class Slides extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Slides_manager");
 		$this->load->model("Slide_class");
+		$this->load->helper('url');
 	}
 
 	public function home()
