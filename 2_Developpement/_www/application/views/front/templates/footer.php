@@ -25,20 +25,20 @@
 
 			<div class="col-12 col-sm-6 col-lg-4 bn_infos">
 				<div class="bn_h2-pre bn_color-white text-center text-sm-left">
-					<a href="<?php echo base_url('pages/about') ?>">l'Établissement</a>
+					<a href="<?php echo site_url('pages/about') ?>">l'Établissement</a>
 				</div>
 				<div class="bn_h2 bn_color-white text-center text-sm-left">
-					<a href="<?php base_url() ?>">Beauté Naturelle</a>
+					<a href="<?php site_url() ?>">Beauté Naturelle</a>
 				</div>
 				<div class="d-flex justify-content-center justify-content-sm-start">
 					<ul class="list-unstyled">
 						<li>
-							<a href="<?php base_url('pages/contact') ?>">
+							<a href="<?php site_url('pages/contact') ?>">
                                     <span><i class="fas fa-map-marker-alt mr-1"></i> 328 rue des clefs, 68 000 Colmar
 							</a></span>
 						</li>
 						<li>
-							<a href="<?php base_url('pages/contact') ?>">
+							<a href="<?php site_url('pages/contact') ?>">
                                     <span><i class="fas fa-phone-alt mr-1"></i> 03 89 54 56 46
 							</a></span>
 						</li>
@@ -48,7 +48,7 @@
 							</a></span>
 						</li>
 						<li>
-                                <span><a href="<?php base_url('pages/contact') ?>"><i class="far fa-clock mr-1"></i> Ouvert tous les
+                                <span><a href="<?php site_url('pages/contact') ?>"><i class="far fa-clock mr-1"></i> Ouvert tous les
                                         jours,<br><span class="ml-3">(sauf le dimanche) de 9H00 à
                                             18H00</span></a></span>
 						</li>
@@ -77,24 +77,24 @@
 			<div class="col-12 col-lg-5 text-center text-lg-right">
 				<div>
 					<div class="bn_nav-bottom" class="bn_nav-bottom">
-						<a class="<?php  echo ($this->uri->rsegments[2] == "mentions") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/mentions") ?>">Mentions Légales</a> |
-						<a class="<?php  echo ($this->uri->rsegments[2] == "politique") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/politique") ?>">Politique de confidentialité</a> |
-						<a class="<?php  echo ($this->uri->rsegments[2] == "sitemap") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/sitemap") ?>">Plan du Site</a>
+						<a class="<?php  echo ($this->uri->rsegments[2] == "mentions") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("pages/mentions") ?>">Mentions Légales</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "politique") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("pages/politique") ?>">Politique de confidentialité</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "sitemap") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("pages/sitemap") ?>">Plan du Site</a>
 					</div>
 
 					<div class="bn_nav-bottom">
-						<a class="<?php  echo ($this->uri->rsegments[2] == "home") ? "bn_active-2" : "" ;?>" href="<?php echo base_url()  ?>">Accueil</a> |
-						<a class="<?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("events") ?>">Événements</a> |
-						<a class="<?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("prestations") ?>">Prestations</a> |
-						<a class="<?php  echo ($this->uri->rsegments[2] == "about") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/about") ?>">L'Établissement</a> |
-						<a class="<?php  echo ($this->uri->rsegments[1] == "images") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("images") ?>">Galerie</a> |
-						<a class="<?php  echo ($this->uri->rsegments[2] == "contact") ? "bn_active-2" : "" ;?>" href="<?php echo base_url("pages/contact") ?>">Contact</a>
+						<a class="<?php  echo ($this->uri->rsegments[2] == "home") ? "bn_active-2" : "" ;?>" href="<?php echo site_url()  ?>">Accueil</a> |
+						<a class="<?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("events") ?>">Événements</a> |
+						<a class="<?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("prestations") ?>">Prestations</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "about") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("pages/about") ?>">L'Établissement</a> |
+						<a class="<?php  echo ($this->uri->rsegments[1] == "images") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("images") ?>">Galerie</a> |
+						<a class="<?php  echo ($this->uri->rsegments[2] == "contact") ? "bn_active-2" : "" ;?>" href="<?php echo site_url("pages/contact") ?>">Contact</a>
 					</div>
 				</div>
 
 				<div class="d-flex justify-content-center justify-content-lg-end bn_payment mt-2">
-					<img src="<?php echo base_url() ?>assets/img/pay-cash.svg" class="mx-2" alt="Logo paiement liquide">
-					<img src="<?php echo base_url() ?>assets/img/pay-cb.svg" class="mx-2" alt="Logo paiement Carte bleu">
+					<img src="<?php echo base_url("assets/img/pay-cash.svg") ?>" class="mx-2" alt="Logo paiement liquide">
+					<img src="<?php echo base_url("assets/img/pay-cb.svg") ?>" class="mx-2" alt="Logo paiement Carte bleu">
 					<i class="fab fa-cc-visa mx-2"></i>
 					<i class="fab fa-cc-mastercard mx-2"></i>
 					<i class="fab fa-cc-apple-pay ml-2"></i>
@@ -130,7 +130,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
 <!-- SCRIPTS -->
-<script src="<?php echo base_url() ?>assets/js/main.js"></script>
+<script src="<?php echo base_url("assets/js/main.js") ?>"></script>
 <script src="https://kit.fontawesome.com/defbc714c8.js" crossorigin="anonymous"></script>
 
 </body>

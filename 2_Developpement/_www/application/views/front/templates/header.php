@@ -17,13 +17,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/styles.css")?>">
 
     <link rel="shortcut icon" href="<?php echo base_url()?>assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="<?php echo base_url()?>assets/favicon.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="<?php echo base_url()?>assets/favicon-32.png" type="image/png">
-    <link rel="icon" sizes="64x64" href="<?php echo base_url()?>assets/favicon-64.png" type="image/png">
-    <link rel="icon" sizes="96x96" href="<?php echo base_url()?>assets/favicon-96.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="<?php echo base_url("assets/favicon-32.png")?>" type="image/png">
+    <link rel="icon" sizes="64x64" href="<?php echo base_url("assets/favicon-64.png")?>" type="image/png">
+    <link rel="icon" sizes="96x96" href="<?php echo base_url("assets/favicon-96.png")?>" type="image/png">
 
 </head>
 
@@ -43,13 +43,13 @@
             <div
                 class="container bn_top-bar d-flex align-items-center justify-content-center justify-content-md-between">
                 <div class="bn_infos">
-                    <a class="bn_infos-items d-none d-lg-inline" href="<?php echo base_url('pages/contact') ?>"><i
+                    <a class="bn_infos-items d-none d-lg-inline" href="<?php echo site_url('pages/contact') ?>"><i
                             class="fas fa-map-marker-alt"></i>328 rue des clefs, 68 000 Colmar</a>
                     <a class="bn_infos-items" href="tel:+33389545646"><i class="fas fa-phone-alt"></i>03
                         89 54 56 46</a>
                     <a class="bn_infos-items d-none d-lg-inline" href="mailto:contact@beaute-naturelle.fr"><i
                             class="far fa-envelope"></i></i>contact@beaute-naturelle.fr</a>
-                    <a class="bn_infos-items" href="<?php echo base_url('pages/contact') ?>"><i class="far fa-clock"></i></i><span
+                    <a class="bn_infos-items" href="<?php echo site_url('pages/contact') ?>"><i class="far fa-clock"></i></i><span
                             class="d-none d-sm-inline">Ouvert tous les
                             jours, (sauf le Dimanche) de</span> 9H00 à 18H00</a>
                 </div>
@@ -70,10 +70,10 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
 
-                    <a class="navbar-brand mx-auto mx-lg-0" href="<?php echo base_url() ?>">
+                    <a class="navbar-brand mx-auto mx-lg-0" href="<?php echo site_url() ?>">
                         <!--TOP LOGO -->
                         <div class="bn_logo-top">
-                            <img src="<?php echo base_url()?>assets/img/logo.svg" class="bn_logo-svg" alt="logo beauté naturelle">
+                            <img src="<?php echo base_url("assets/img/logo.svg")?>" class="bn_logo-svg" alt="logo beauté naturelle">
                             <div class="bn_logg-text">
 
                                 <span class="bn_logo-text-1">beauté naturelle</span>
@@ -95,26 +95,26 @@
                         <ul class="navbar-nav  ml-auto">
 
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[2] == "home") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link " href="<?php echo base_url() ?>">Accueil <span
+                                <a class="nav-link bn_nav-link " href="<?php echo site_url() ?>">Accueil <span
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "events") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link" href="<?php echo base_url("events") ?>">Évènements</a>
+                                <a class="nav-link bn_nav-link" href="<?php echo site_url("events") ?>">Évènements</a>
                             </li>
 
 							<li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>">
-								<a class="nav-link bn_nav-link" href="<?php echo base_url("prestations") ?>">Prestations</a>
+								<a class="nav-link bn_nav-link" href="<?php echo site_url("prestations") ?>">Prestations</a>
 							</li>
 							<!-- Rajouter un foreach ici ?
 
                             <li class="nav-item mx-1 bn_nav-item dropdown <?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link dropdown-toggle" href="<?php echo base_url("prestations") ?>" id="navbarDropdown"
+                                <a class="nav-link bn_nav-link dropdown-toggle" href="<?php echo site_url("prestations") ?>" id="navbarDropdown"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Prestations
                                 </a>
                                 <div class="dropdown-menu bn_bg-main" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown-item<?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>" href="<?php echo base_url("prestations") ?>">Prestations</a>
+                                    <a class="dropdown-item<?php  echo ($this->uri->rsegments[1] == "prestations") ? "bn_active" : "" ;?>" href="<?php echo site_url("prestations") ?>">Prestations</a>
                                     <a class="dropdown-item" href="prestations/epilation.html">Epilations</a>
                                     <a class="dropdown-item" href="prestations/mains-pieds.html">Mains & Pieds</a>
                                     <a class="dropdown-item" href="prestations/regard.html">Regard</a>
@@ -130,13 +130,13 @@
                             </li>
                             -->
                             <li class="nav-item mx-1 bn_nav-item mx-1 <?php echo ($this->uri->rsegments[2] == "about") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link" href="<?php echo base_url('pages/about')?>">L'Établissement </a>
+                                <a class="nav-link bn_nav-link" href="<?php echo site_url('pages/about')?>">L'Établissement </a>
                             </li>
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[1] == "images") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link" href="<?php echo base_url('images')?>">Galerie</a>
+                                <a class="nav-link bn_nav-link" href="<?php echo site_url('images')?>">Galerie</a>
                             </li>
                             <li class="nav-item mx-1 bn_nav-item <?php  echo ($this->uri->rsegments[2] == "contact") ? "bn_active" : "" ;?>">
-                                <a class="nav-link bn_nav-link" href="<?php echo base_url('pages/contact') ?>">Contact</a>
+                                <a class="nav-link bn_nav-link" href="<?php echo site_url('pages/contact') ?>">Contact</a>
                             </li>
                         </ul>
                 </nav>
