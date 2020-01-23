@@ -5,10 +5,10 @@ class Event_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_event_id;
 	private $_event_img;
-	private $_event_title;
-    private $_event_createDate;
-    private $_event_startDate;
-	private $_event_endDate;
+	private $_event_name;
+    private $_event_create_date;
+    private $_event_start_date;
+	private $_event_end_date;
 	private $_event_content;
     private $_event_capacity;
 
@@ -40,20 +40,20 @@ class Event_class extends CI_Model {
 		return $this->_event_img;
 	}
 
-	public function getTitle(){
-		return $this->_event_title;
+	public function getName(){
+		return $this->_event_name;
 	}
 
-	public function getCeateDate(){
-		return $this->_event_createDate;
+	public function getCeate_date(){
+		return $this->_event_create_date;
 	}
 
-	public function getStartDate(){
-		return $this->_event_startDate;
+	public function getStart_date(){
+		return $this->_event_start_date;
 	}
 
-	public function getEndDAte(){
-		return $this->_slide_text;
+	public function getEnd_date(){
+		return $this->_event_end_date;
 	}
 	
 	public function getContent(){
@@ -70,27 +70,23 @@ class Event_class extends CI_Model {
 	}
 
 	public function setImg($img){
-		$this->_event_Img = $img;
-	}
-
-	public function setImg($img){
 		$this->_event_img = $img;
 	}
 
-	public function setTitle($title){
-		$this->_event_title = $title;
+	public function setName($name){
+		$this->_event_name = $name;
 	}
 
-	public function setCreateDate($createDate){
-		$this->_event_createDate = $createDate;
+	public function setCreate_date($create_date){
+		$this->_event_create_date = $create_date;
 	}
 
-	public function setStartDate($createStartDate){
-		$this->_event_startDate = $startDate;
+	public function setStart_date($start_date){
+		$this->_event_start_date = $start_date;
 	}
 
-	public function setEndDate($endDate){
-		$this->_event_endDate = $endDate;
+	public function setEnd_date($end_date){
+		$this->_event_end_date = $end_date;
 	}
 
 	public function setContent($content){
