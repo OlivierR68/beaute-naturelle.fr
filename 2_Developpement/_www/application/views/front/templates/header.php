@@ -34,7 +34,10 @@
 
 
     <header>
-        <!--TOP BAR -->
+		<?php include_once 'admin-top-bar.php' ?>
+
+
+        <!--TOP BAR USER -->
 
         <div class="bn_bg-color-1">
             <div

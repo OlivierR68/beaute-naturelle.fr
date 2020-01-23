@@ -19,7 +19,7 @@
 
 				foreach($arrSlides as $objSlide) { ?>
 
-					<div class="carousel-item <?php  if($slideCounter===0) echo 'active'; ?>">
+					<div class="carousel-item <?php  if($slideCounter === 0) echo 'active'; ?>">
 
 						<div class="bn_slide-bg" style="background-image: url(<?php echo base_url()."assets/img/".$objSlide->getImg() ?>)">
 							<div class="bn_slide-banner">
