@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Slide_class extends CI_Model {
+class Event_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_event_id;
 	private $_event_img;
@@ -19,7 +19,7 @@ class Slide_class extends CI_Model {
 
 	/** HYDRATATION *
 	 * @param $datas
-	 * @return Slide_class
+	 * @return Event_class
 	 */
 	public function hydrate($datas){
 		foreach($datas as $keyData => $data){
@@ -48,10 +48,6 @@ class Slide_class extends CI_Model {
 		return $this->_event_createDate;
 	}
 
-	public function getContent(){
-		return $this->_event_content;
-	}
-
 	public function getStartDate(){
 		return $this->_event_startDate;
 	}
@@ -59,31 +55,50 @@ class Slide_class extends CI_Model {
 	public function getEndDAte(){
 		return $this->_slide_text;
 	}
+	
+	public function getContent(){
+		return $this->_event_content;
+	}
 
+	public function getCapacity(){
+		return $this->_event_capacity;
+	}
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){
-		$this->_slide_id = $id;
-	}
-
-	public function setLibelle($id){
-		$this->_slide_libelle = $id;
+		$this->_event_id = $id;
 	}
 
 	public function setImg($img){
-		$this->_slide_img = $img;
+		$this->_event_Img = $img;
 	}
 
-	public function setType($type){
-		$this->_slide_type = $type;
+	public function setImg($img){
+		$this->_event_img = $img;
 	}
 
 	public function setTitle($title){
-		$this->_slide_title = $title;
+		$this->_event_title = $title;
 	}
 
-	public function setText($text){
-		$this->_slide_text = $text;
+	public function setCreateDate($createDate){
+		$this->_event_createDate = $createDate;
+	}
+
+	public function setStartDate($createStartDate){
+		$this->_event_startDate = $startDate;
+	}
+
+	public function setEndDate($endDate){
+		$this->_event_endDate = $endDate;
+	}
+
+	public function setContent($content){
+		$this->_event_content = $content;
+	}
+
+	public function setCapacity($capacity){
+		$this->_event_capacity = $capacity;
 	}
 
 }
