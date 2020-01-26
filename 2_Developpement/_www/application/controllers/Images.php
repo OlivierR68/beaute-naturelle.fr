@@ -27,18 +27,23 @@ class Images extends CI_Controller {
 		$this->load->view('front/content', $data);
 	}
 
-	public function back()
+        public function back()
 	{
-		$data['preTITLE']	= "Participer à nos";
-		$data['TITLE'] 		= "Événements";
-		$data['headerImg']	= "img-events.jpg";
+		$data['preTITLE']	= "Consultez notre";
+		$data['TITLE'] 		= "Galerie Photos";
+		$data['headerImg']	= "img-gallerie.jpg";
 
+		// Partie frontend
 
-		// à remplir ici, partie frontend
-
-
-
-
+		$images	= $this->Images_manager->findAll();
+		$slidesToDisplay = array();
+		foreach($images as $image){
+			$objImages 	= new Images_class();
+			$objImages->hydrate($images);
+			$slidesToDisplay[] = $objImages;
+		
+		$data['CONTENT']	= $this->load->view('front/images', $data, TRUE);
+		$this->load->view('front/content', $data);
 
 		$data['CONTENT']	= $this->load->view('back/dashboard', $data, TRUE);
 		$this->load->view('back/content', $data);
