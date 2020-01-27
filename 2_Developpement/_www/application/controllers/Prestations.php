@@ -5,7 +5,8 @@ class Prestations extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-
+        $this->load->model("Prestations_manager");
+        $this->load->model("Prestations_class");
 	}
 
 	public function index()
@@ -17,37 +18,16 @@ class Prestations extends CI_Controller {
 
 		// à remplir ici, parttie frontend
 
-        $prestation	= $this->Prestation_manager->findAll();
+        $prestations	= $this->Prestations_manager->findAll();
         $slidesToDisplay = array();
-        foreach($prestation as $prestation){
-        $objPrestation 	= new Prestation_class();
-        $objPrestation->hydrate($prestation);
-        $slidesToDisplay[] = $objPrestation;
-
+        foreach($prestations as $prestations){
+        $objPrestations 	= new Prestations_class();
+        $objPrestations->hydrate($prestations);
+        $slidesToDisplay[] = $objPrestations;
+        }
 		$data['CONTENT']	= $this->load->view('front/prestations', $data, TRUE);
 		$this->load->view('front/content', $data);
 	}
 
-	   public function back()
-	{   
-        $data['preTITLE']	= "Préstations & Tarifs";
-		$data['TITLE'] 		= "L'Institut";
-		$data['headerImg']	= "img-institut.jpg";
-
-
-
-		// à remplir ici, partie backend
-
-
-
-
-
-
-
-
-		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
-		$this->load->view('front/content', $data);
-        
-        
-	}
+	   
 }
