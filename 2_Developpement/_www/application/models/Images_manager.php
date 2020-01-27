@@ -9,10 +9,12 @@ class Images_manager extends CI_Model {
 		$this->db->select("*");
 		$this->db->from("image");
 		// $this->db->join("")
-		$this->db->order_by("img_id", "asc");
+		//$this->db->order_by("img_id", "asc");
 
-		$queryGroup	= $this->db->get();
+		$queryGroup	= $this->db->get();		
+
 		return $queryGroup->result_array();
-	}
+
+	} 
 
 }

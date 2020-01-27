@@ -16,13 +16,17 @@ class Images extends CI_Controller {
 		$data['headerImg']	= "img-gallerie.jpg";
 
 		$images	= $this->Images_manager->findAll();
+
 		$slidesToDisplay = array();
 		foreach($images as $image){
+
 			$objImages 	= new Images_class();
 			$objImages->hydrate($images);
+
+
 			$slidesToDisplay[] = $objImages;
 		}
-
+		
 		$data['arrImages']  = $slidesToDisplay;
 		$data['CONTENT']	= $this->load->view('front/images', $data, TRUE);
 		$this->load->view('front/content', $data);

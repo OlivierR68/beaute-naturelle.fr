@@ -21,16 +21,19 @@ class Images_class extends CI_Model {
 	 * @param $datas
 	 * @return Images_class
 	 */
+	 
 	 public function hydrate($datas){
 		foreach($datas as $keyData => $data){
 			$strSetter	= "set".str_replace("img_", "", $keyData);
 			if (method_exists($this, $strSetter)){
 				$this->$strSetter($data);
+				echo('ok');
 			}
+			var_dump($strSetter);
 		}
 		return $this;
 	}
-	
+		
 	/** GETTERS (pour chaque attribut) **/
 	public function getId(){
 		return $this->_img_id;
