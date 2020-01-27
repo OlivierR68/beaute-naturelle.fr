@@ -7,6 +7,7 @@ class categorie_manager extends CI_Model{
 		$this->db->select("*");
 		$this->db->from("categorie");
 		$this->db->order_by("categorie_id", "asc");
-		return $query->result('array');
+        $queryGroup	= $this->db->get();
+		return $queryGroup->result_array();
 	}
 }
