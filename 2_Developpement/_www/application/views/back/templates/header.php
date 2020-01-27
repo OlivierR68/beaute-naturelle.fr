@@ -32,6 +32,21 @@
 					<a class="nav-link" href="<?php echo site_url("dashboard") ?>"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div> Tableau de bord</a>
 
 					<!-- Bloc nav -->
+
+					<a class="nav-link collapsed <?php if($this->uri->rsegments[1] == 'slides') echo 'active' ?>" href="<?php echo site_url("slides/list") ?>" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
+						Slider Accueil
+						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+					</a>
+
+					<div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+						<nav class="sb-sidenav-menu-nested nav">
+							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/list') echo 'active' ?>" href="<?php echo site_url("slides/list") ?>">Liste des slides</a>
+							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/add') echo 'active' ?>" href="<?php echo site_url("slides/add") ?>">Ajouter un slide</a>
+						</nav>
+					</div>
+
+					<!-- Bloc nav -->
 					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
 						Événements
@@ -60,37 +75,6 @@
 						</nav>
 					</div>
 
-					<!-- Bloc nav -->
-
-					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
-						Slider Accueil
-						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-					</a>
-
-					<div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="#">Liste des slides</a>
-							<a class="nav-link" href="#">Ajouter un slide</a>
-						</nav>
-					</div>
-
-					<!-- Bloc nav -->
-
-					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="fas fa-envelope-open-text"></i></div>
-						Newsletter
-						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-					</a>
-
-					<div class="collapse" id="collapseLayouts4" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="#">Liste des abonnées</a>
-							<a class="nav-link" href="#">Liste des newsletter</a>
-							<a class="nav-link" href="#">Ajouter une newsletter</a>
-							<a class="nav-link" href="#">Envoyer newsletters</a>
-						</nav>
-					</div>
 
 					<!-- Bloc nav -->
 
@@ -125,6 +109,24 @@
 							<a class="nav-link" href="#">Ajouter un profile</a>
 						</nav>
 					</div>
+
+					<!-- Bloc nav -->
+
+					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="fas fa-envelope-open-text"></i></div>
+						Newsletter
+						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+					</a>
+
+					<div class="collapse" id="collapseLayouts4" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+						<nav class="sb-sidenav-menu-nested nav">
+							<a class="nav-link" href="#">Liste des abonnées</a>
+							<a class="nav-link" href="#">Liste des newsletter</a>
+							<a class="nav-link" href="#">Ajouter une newsletter</a>
+							<a class="nav-link" href="#">Envoyer newsletters</a>
+						</nav>
+					</div>
+
 
 
 					<a class="nav-link disabled" href="#"><div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div> Réglages</a>

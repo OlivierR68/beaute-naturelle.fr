@@ -28,21 +28,25 @@ class Slides extends CI_Controller {
 		$this->load->view('front/content', $data);
 	}
 
-	public function back()
+	public function list()
 	{
-		$data['TITLE'] 		= "A propos de Beauté Naturelle";
-
-
-		// à remplir ici, partie backend
+		$data['TITLE'] 		= "Liste des slides";
 
 
 
 
+		$data['CONTENT']	= $this->load->view('back/slider', $data, TRUE);
+		$this->load->view('back/content', $data);
+	}
+
+	public function add()
+	{
+		$data['TITLE'] 		= "Ajouter un slide";
 
 
 
 
-		$data['CONTENT']	= $this->load->view('back/events', $data, TRUE);
+		$data['CONTENT']	= $this->load->view('back/slider', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
 }

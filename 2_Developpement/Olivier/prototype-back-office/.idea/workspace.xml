@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42f6361f-038b-419c-aa55-9e7d9d554245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../_www/assets/css/back-model.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_www/application/views/back/slider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_www/application/controllers/Slides.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../_www/application/controllers/Slides.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_www/application/views/back/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../_www/application/views/back/content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_www/application/views/back/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../_www/application/views/back/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_www/application/views/back/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../_www/application/views/back/templates/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_www/assets/css/back.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../_www/assets/css/back.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
