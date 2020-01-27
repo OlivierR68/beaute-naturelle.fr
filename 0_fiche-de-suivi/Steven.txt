@@ -42,3 +42,6 @@ Galerie
 27/01/2020
 
 Debug galerie + debug bdd connexion
+Ajout images galerie
+Traitement form contact
+
