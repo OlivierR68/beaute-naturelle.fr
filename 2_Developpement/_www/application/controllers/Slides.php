@@ -30,7 +30,7 @@ class Slides extends CI_Controller {
 
 	public function back()
 	{
-
+		$data['TITLE'] 		= "A propos de Beauté Naturelle";
 
 
 		// à remplir ici, partie backend
@@ -42,7 +42,7 @@ class Slides extends CI_Controller {
 
 
 
-		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
-		$this->load->view('front/content', $data);
+		$data['CONTENT']	= $this->load->view('back/events', $data, TRUE);
+		$this->load->view('back/content', $data);
 	}
 }
