@@ -47,5 +47,7 @@ class Prestations extends CI_Controller {
 
 		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
 		$this->load->view('front/content', $data);
+        
+        
 	}
 }
