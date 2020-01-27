@@ -8,7 +8,7 @@ const sass = require('sass');
 const sh = require('shelljs');
 
 const stylesPath = path.resolve(path.dirname(__filename), '../src/scss/styles.scss');
-const destPath = path.resolve(path.dirname(__filename), '../dist/css/styles.css');
+const destPath = path.resolve(path.dirname(__filename), '../dist/css/back.css');
 
 module.exports = function renderSCSS() {
     
@@ -19,7 +19,7 @@ module.exports = function renderSCSS() {
             path.resolve(path.dirname(__filename), '../node_modules')
         ],
         // sourceMap: true,
-        // outFile: 'styles.css'
+        // outFile: 'back.css'
       });
 
     const destPathDirname = path.dirname(destPath);
@@ -27,7 +27,7 @@ module.exports = function renderSCSS() {
         sh.mkdir('-p', destPathDirname);
     }
 
-    postcss([ autoprefixer ]).process(results.css, {from: 'styles.css', to: 'styles.css'}).then(result => {
+    postcss([ autoprefixer ]).process(results.css, {from: 'back.css', to: 'back.css'}).then(result => {
         result.warnings().forEach(warn => {
             console.warn(warn.toString())
         })

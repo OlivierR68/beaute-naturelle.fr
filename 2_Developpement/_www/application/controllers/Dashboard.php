@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 
-		$data['TITLE'] 		= "Dasboard";
+		$data['TITLE'] 		= "Tableau de bord";
 
 
 
