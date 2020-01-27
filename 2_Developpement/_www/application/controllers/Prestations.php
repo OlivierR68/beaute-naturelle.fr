@@ -24,7 +24,7 @@ class Prestations extends CI_Controller {
         $objPrestations->hydrate($prestations);
         $slidesToDisplay[] = $objPrestations;
         }
-		$data['CONTENT']	= $this->load->view('front/prestations', $data, TRUE);
+		$data['CONTENT'] = $this->load->view('front/prestations', $data, TRUE);
 		$this->load->view('front/content', $data);
 	}
 
