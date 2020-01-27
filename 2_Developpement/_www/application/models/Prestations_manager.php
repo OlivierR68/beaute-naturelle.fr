@@ -5,8 +5,8 @@ class prestations_manager extends CI_Model{
 	
 	public function findAll(){
 		$this->db->select("*");
-		$this->db->from("prestations");
-		$this->db->order_by("prestations_id", "asc");
-		return $query->result('array');
+		$this->db->from("prestation");
+		$queryGroup	= $this->db->get();
+		return $queryGroup->result_array();
 	}
 }
