@@ -7,7 +7,7 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<title>Dashboard - SB Admin</title>
-	<link href="assets/css/back.css" rel="stylesheet" />
+	<link href="<?php echo base_url("assets/css/back.css") ?>" rel="stylesheet" />
 	<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -28,12 +28,12 @@
 		<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
 			<div class="sb-sidenav-menu">
 				<div class="nav">
-					<a class="nav-link" href="#"><div class="sb-nav-link-icon"><i class="fas fa-store"></i></div> Aller sur le site</a>
-					<a class="nav-link" href="#"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div> Tableau de bord</a>
+					<a class="nav-link" href="<?php echo base_url() ?>"><div class="sb-nav-link-icon"><i class="fas fa-store"></i></div> Aller sur le site</a>
+					<a class="nav-link" href="<?php echo site_url("dashboard") ?>"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div> Tableau de bord</a>
 
 					<!-- Bloc nav -->
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
 						Événements
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
@@ -47,8 +47,8 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="far fa-images"></i></div>
 						Galerie
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
@@ -62,8 +62,8 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
 						Slider Accueil
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
@@ -77,8 +77,8 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="fas fa-envelope-open-text"></i></div>
 						Newsletter
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
@@ -94,8 +94,8 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts5" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts5" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="fas fa-hand-holding-usd"></i></div>
 						Prestations
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
@@ -111,8 +111,8 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts">
+						<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
 						Utilisateurs
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
@@ -127,7 +127,7 @@
 					</div>
 
 
-					<a class="nav-link" href="#"><div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div> Réglages</a>
+					<a class="nav-link disabled" href="#"><div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div> Réglages</a>
 
 				</div>
 			</div>
