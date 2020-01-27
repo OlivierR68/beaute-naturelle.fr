@@ -21,7 +21,6 @@ class Slide_class extends CI_Model {
 	 */
 	public function hydrate($datas){
 		foreach($datas as $keyData => $data){
-			var_dump($datas);;
 			$strSetter	= "set".str_replace("slide_", "", $keyData);
 			if (method_exists($this, $strSetter)){
 				$this->$strSetter($data);
@@ -49,6 +48,17 @@ class Slide_class extends CI_Model {
 
 	public function getTitle(){
 		return $this->_slide_title;
+	}
+
+	public function getShortTitle($strLimit = 50){
+
+		if(strlen($this->_slide_title) > $strLimit) {
+			return substr($this->_slide_title, 0, $strLimit)."..."; ;
+		} else {
+			return $this->_slide_title;
+		}
+
+
 	}
 
 	public function getText(){

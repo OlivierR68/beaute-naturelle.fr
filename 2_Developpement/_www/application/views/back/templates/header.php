@@ -7,9 +7,11 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<title>Dashboard - SB Admin</title>
-	<link href="<?php echo base_url("assets/css/back.css") ?>" rel="stylesheet" />
+
 	<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+	<link href="<?php echo base_url("assets/css/back-model.css") ?>" rel="stylesheet" />
+	<link href="<?php echo base_url("assets/css/back.css") ?>" rel="stylesheet" />
 </head>
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -33,13 +35,13 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed <?php if($this->uri->rsegments[1] == 'slides') echo 'active' ?>" href="<?php echo site_url("slides/list") ?>" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link  <?php if($this->uri->rsegments[1] == 'slides') echo 'active' ?>" href="<?php echo site_url("slides/list") ?>" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
 						Slider Accueil
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
 
-					<div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+					<div class="collapse <?php if($this->uri->rsegments[1] == 'slides') echo 'show' ?>" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/list') echo 'active' ?>" href="<?php echo site_url("slides/list") ?>">Liste des slides</a>
 							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/add') echo 'active' ?>" href="<?php echo site_url("slides/add") ?>">Ajouter un slide</a>

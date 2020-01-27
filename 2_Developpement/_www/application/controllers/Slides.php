@@ -32,21 +32,33 @@ class Slides extends CI_Controller {
 	{
 		$data['TITLE'] 		= "Liste des slides";
 
+		$slides	= $this->Slides_manager->findAll();
+		$slidesToDisplay = array();
+		foreach($slides as $slide){
+			$objSlide 	= new Slide_class();
+			$objSlide->hydrate($slide);
+			$slidesToDisplay[] = $objSlide;
+		}
 
+		$data['arrSlides'] 	= $slidesToDisplay;
 
-
-		$data['CONTENT']	= $this->load->view('back/slider', $data, TRUE);
+		$data['CONTENT']	= $this->load->view('back/slidesList', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
 
 	public function add()
 	{
 		$data['TITLE'] 		= "Ajouter un slide";
+		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
+		$this->load->view('back/content', $data);
+	}
+
+	public function edit()
+	{
+		$data['TITLE'] 		= "Ajouter un slide";
 
 
-
-
-		$data['CONTENT']	= $this->load->view('back/slider', $data, TRUE);
+		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
 }
