@@ -15,10 +15,9 @@ class Prestations extends CI_Controller {
 		$data['TITLE'] 		= "L'Institut";
 		$data['headerImg']	= "img-institut.jpg";
 
-
 		// à remplir ici, parttie frontend
 
-        $prestations	= $this->Prestations_manager->findAll();
+        $prestations = $this->Prestations_manager->findAll();
         $slidesToDisplay = array();
         foreach($prestations as $prestations){
         $objPrestations 	= new Prestations_class();
