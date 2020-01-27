@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Slide_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_slide_id;
+	private $_slide_position;
+	private $_slide_default; // Boolean si true, le slide ne peut pas être supprimer
 	private $_slide_libelle;
 	private $_slide_img;
 	private $_slide_type;
@@ -29,9 +31,20 @@ class Slide_class extends CI_Model {
 		return $this;
 	}
 
+
 	/** GETTERS (pour chaque attribut) **/
 	public function getId(){
 		return $this->_slide_id;
+	}
+
+	public function getPosition(){
+		return $this->_slide_position;
+
+	}
+
+	public function getDefault(){
+		return $this->_slide_default;
+
 	}
 
 	public function getLibelle(){
@@ -45,6 +58,12 @@ class Slide_class extends CI_Model {
 	public function getType(){
 		return $this->_slide_type;
 	}
+
+	public function getTaille(){
+		return $this->_slide_type=='h2' ?  'Moyen' : 'Grand';
+	}
+
+
 
 	public function getTitle(){
 		return $this->_slide_title;
@@ -69,6 +88,14 @@ class Slide_class extends CI_Model {
 
 	public function setId($id){
 		$this->_slide_id = $id;
+	}
+
+	public function setPosition($position){
+		$this->_slide_position = $position;
+	}
+
+	public function setDefault($default = 0){
+		$this->_slide_default = $default;
 	}
 
 	public function setLibelle($id){

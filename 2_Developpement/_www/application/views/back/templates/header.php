@@ -35,7 +35,7 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link  <?php if($this->uri->rsegments[1] == 'slides') echo 'active' ?>" href="<?php echo site_url("slides/list") ?>" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link  <?php if($this->uri->rsegments[1] == 'slides') echo 'active' ?>" href="<?php echo site_url("slides/listPage") ?>" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
 						Slider Accueil
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -43,8 +43,8 @@
 
 					<div class="collapse <?php if($this->uri->rsegments[1] == 'slides') echo 'show' ?>" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/list') echo 'active' ?>" href="<?php echo site_url("slides/list") ?>">Liste des slides</a>
-							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/add') echo 'active' ?>" href="<?php echo site_url("slides/add") ?>">Ajouter un slide</a>
+							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/list') echo 'active' ?>" href="<?php echo site_url("slides/listPage") ?>">Liste des slides</a>
+							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/add') echo 'active' ?>" href="<?php echo site_url("slides/addPage") ?>">Ajouter un slide</a>
 						</nav>
 					</div>
 

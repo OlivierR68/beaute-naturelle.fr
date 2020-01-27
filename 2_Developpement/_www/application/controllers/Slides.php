@@ -28,7 +28,7 @@ class Slides extends CI_Controller {
 		$this->load->view('front/content', $data);
 	}
 
-	public function list()
+	public function listPage()
 	{
 		$data['TITLE'] 		= "Liste des slides";
 
@@ -46,14 +46,14 @@ class Slides extends CI_Controller {
 		$this->load->view('back/content', $data);
 	}
 
-	public function add()
+	public function addPage()
 	{
 		$data['TITLE'] 		= "Ajouter un slide";
 		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
 
-	public function edit()
+	public function editPage()
 	{
 		$data['TITLE'] 		= "Ajouter un slide";
 
