@@ -15,8 +15,6 @@ class Images extends CI_Controller {
 		$data['TITLE'] 		= "Galerie Photos";
 		$data['headerImg']	= "img-gallerie.jpg";
 
-;
-
 
 
 		$images	= $this->Images_manager->findAll();
