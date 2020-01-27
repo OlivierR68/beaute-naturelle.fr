@@ -17,19 +17,22 @@ class Prestations extends CI_Controller {
 
 		// à remplir ici, parttie frontend
 
-
-
-
-
-
-
+        $prestation	= $this->Prestation_manager->findAll();
+        $slidesToDisplay = array();
+        foreach($prestation as $prestation){
+        $objPrestation 	= new Prestation_class();
+        $objPrestation->hydrate($prestation);
+        $slidesToDisplay[] = $objPrestation;
 
 		$data['CONTENT']	= $this->load->view('front/prestations', $data, TRUE);
 		$this->load->view('front/content', $data);
 	}
 
-	public function back()
-	{
+	   public function back()
+	{   
+        $data['preTITLE']	= "Préstations & Tarifs";
+		$data['TITLE'] 		= "L'Institut";
+		$data['headerImg']	= "img-institut.jpg";
 
 
 
@@ -44,5 +47,7 @@ class Prestations extends CI_Controller {
 
 		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
 		$this->load->view('front/content', $data);
+        
+        
 	}
 }
