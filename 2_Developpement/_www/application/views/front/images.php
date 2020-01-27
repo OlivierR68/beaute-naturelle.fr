@@ -14,9 +14,16 @@
                         <img src="<?php base_url() ?>assets/img/album/photos-1_thumb.jpg" alt="Belle Photo">
                     </div>
 
-                    <?php 
+                    <?php
 
-                echo $objImage->getSrc(); ?>  
+					echo $objImage->getID();
+					echo $objImage->getLibelle();
+					echo $objImage->getSlug();
+					echo $objImage->getSrc();
+
+
+
+					?>
 
                 </a>
             </div>

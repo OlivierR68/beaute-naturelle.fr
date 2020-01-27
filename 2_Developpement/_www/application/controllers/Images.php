@@ -15,19 +15,20 @@ class Images extends CI_Controller {
 		$data['TITLE'] 		= "Galerie Photos";
 		$data['headerImg']	= "img-gallerie.jpg";
 
+;
+
+
+
 		$images	= $this->Images_manager->findAll();
-
-		$slidesToDisplay = array();
+		$imagesToDisplay = array();
 		foreach($images as $image){
-
-			$objImages 	= new Images_class();
-			$objImages->hydrate($images);
-
-
-			$slidesToDisplay[] = $objImages;
+			$objImage 	= new Images_class();
+			$objImage->hydrate($image);
+			$imagesToDisplay[] = $objImage;
 		}
-		
-		$data['arrImages']  = $slidesToDisplay;
+
+		$data['arrImages']  = $imagesToDisplay;
+
 		$data['CONTENT']	= $this->load->view('front/images', $data, TRUE);
 		$this->load->view('front/content', $data);
 		

@@ -21,6 +21,7 @@ class Slide_class extends CI_Model {
 	 */
 	public function hydrate($datas){
 		foreach($datas as $keyData => $data){
+			var_dump($datas);;
 			$strSetter	= "set".str_replace("slide_", "", $keyData);
 			if (method_exists($this, $strSetter)){
 				$this->$strSetter($data);

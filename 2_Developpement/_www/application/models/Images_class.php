@@ -21,15 +21,15 @@ class Images_class extends CI_Model {
 	 * @param $datas
 	 * @return Images_class
 	 */
-	 
-	 public function hydrate($datas){
-		foreach($datas as $keyData => $data){
+
+	public function hydrate($datas){
+		foreach($datas as $keyData => $value){
+
 			$strSetter	= "set".str_replace("img_", "", $keyData);
 			if (method_exists($this, $strSetter)){
-				$this->$strSetter($data);
-				echo('ok');
+				$this->$strSetter($value);
+
 			}
-			var_dump($strSetter);
 		}
 		return $this;
 	}

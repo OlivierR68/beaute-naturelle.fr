@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Images_manager extends CI_Model {
 
-	
+
  		public function findAll(){
 
 		$this->db->select("*");
@@ -11,9 +11,12 @@ class Images_manager extends CI_Model {
 		// $this->db->join("")
 		//$this->db->order_by("img_id", "asc");
 
-		$queryGroup	= $this->db->get();		
+		$query	= $this->db->get();
+		var_dump($query->result_array());
+		return $query->result_array();
 
-		return $queryGroup->result_array();
+
+
 
 	} 
 
