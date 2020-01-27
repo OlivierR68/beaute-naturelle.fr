@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Event_class extends CI_Model {
+class Images_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_img_id;
 	private $_img_libelle;
@@ -21,80 +21,80 @@ class Event_class extends CI_Model {
 	 * @param $datas
 	 * @return Images_class
 	 */
-	public function hydrate($datas){
+	 public function hydrate($datas){
 		foreach($datas as $keyData => $data){
-			$strSetter	= "set".str_replace("event_", "", $keyData);
+			$strSetter	= "set".str_replace("img_", "", $keyData);
 			if (method_exists($this, $strSetter)){
 				$this->$strSetter($data);
 			}
 		}
 		return $this;
 	}
-
+	
 	/** GETTERS (pour chaque attribut) **/
 	public function getId(){
-		return $this->_images_id;
+		return $this->_img_id;
 	}
 
 	public function getLibelle(){
-		return $this->_images_libelle;
+		return $this->_img_libelle;
 	}
 
 	public function getSlug(){
-		return $this->_images_slug;
+		return $this->_img_slug;
 	}
 
 	public function getSrc(){
-		return $this->_images_src;
+		return $this->_img_src;
 	}
 
 	public function getDescription(){
-		return $this->_images_description;
+		return $this->_img_description;
 	}
 
 	public function getAuthor(){
-		return $this->_images_author;
+		return $this->_img_author;
 	}
 	
 	public function getPubli_Date(){
-		return $this->_images_publi_date;
+		return $this->_img_publi_date;
 	}
 
 	public function getValidation(){
-		return $this->_images_validation;
+		return $this->_img_validation;
 	}
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){
-		$this->_images_id = $id;
+		$this->_img_id = $id;
 	}
 
 	public function setLibelle($libelle){
-		$this->_images_Img = $libelle;
+		$this->_img_libelle = $libelle;
 	}
 
 	public function setSlug($slug){
-		$this->_images_slug = $slug;
+		$this->_img_slug = $slug;
 	}
 
 	public function setSrc($src){
-		$this->_images_src = $src;
+		$this->_img_src = $src;
 	}
 
 	public function setDescription($descritpion){
-		$this->_images_description = $descritpion;
+		$this->_img_description = $descritpion;
 	}
 
 	public function setAuthor($author){
-		$this->_images_author = $author;
+		$this->_img_author = $author;
 	}
 
 	public function setPubli_Date($publiDate){
-		$this->_images_publiDate = $publiDate;
+		$this->_img_publi_date = $publiDate;
 	}
 
 	public function setValidation($validation){
-		$this->_images_validation = $validation;
+		$this->_img_validation = $validation;
 	}
 
 }

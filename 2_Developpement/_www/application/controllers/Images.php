@@ -23,11 +23,13 @@ class Images extends CI_Controller {
 			$slidesToDisplay[] = $objImages;
 		}
 
+		$data['arrImages']  = $slidesToDisplay;
 		$data['CONTENT']	= $this->load->view('front/images', $data, TRUE);
 		$this->load->view('front/content', $data);
+		
 	}
 
-        public function back()
+    public function back()
 	{
 		$data['preTITLE']	= "Consultez notre";
 		$data['TITLE'] 		= "Galerie Photos";
@@ -41,11 +43,12 @@ class Images extends CI_Controller {
 			$objImages 	= new Images_class();
 			$objImages->hydrate($images);
 			$slidesToDisplay[] = $objImages;
-		
+			
 		$data['CONTENT']	= $this->load->view('front/images', $data, TRUE);
 		$this->load->view('front/content', $data);
 
 		$data['CONTENT']	= $this->load->view('back/dashboard', $data, TRUE);
 		$this->load->view('back/content', $data);
+		}
 	}
-}
+	}

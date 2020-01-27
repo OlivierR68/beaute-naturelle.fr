@@ -16,11 +16,11 @@
 
                     <?php 
 
-                echo $objImage->getSrc() ?>  
+                echo $objImage->getSrc(); ?>  
 
                 </a>
             </div>
-
+                    
             <?php } ?>
             <!-- fin du foreach -->
         </div>
