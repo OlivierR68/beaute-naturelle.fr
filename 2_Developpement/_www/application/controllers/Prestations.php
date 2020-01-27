@@ -17,12 +17,12 @@ class Prestations extends CI_Controller {
 
 		// à remplir ici, parttie frontend
 
-
-
-
-
-
-
+        $prestation	= $this->Prestation_manager->findAll();
+        slidesToDisplay = array();
+        foreach($prestation as $prestation){
+        $objPrestation 	= new Prestation_class();
+        $objPrestation->hydrate($prestation);
+        $slidesToDisplay[] = $objPrestation;
 
 		$data['CONTENT']	= $this->load->view('front/prestations', $data, TRUE);
 		$this->load->view('front/content', $data);
