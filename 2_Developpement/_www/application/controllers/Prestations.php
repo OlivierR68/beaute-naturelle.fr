@@ -18,7 +18,7 @@ class Prestations extends CI_Controller {
 		// à remplir ici, parttie frontend
 
         $prestation	= $this->Prestation_manager->findAll();
-        slidesToDisplay = array();
+        $slidesToDisplay = array();
         foreach($prestation as $prestation){
         $objPrestation 	= new Prestation_class();
         $objPrestation->hydrate($prestation);
@@ -28,8 +28,11 @@ class Prestations extends CI_Controller {
 		$this->load->view('front/content', $data);
 	}
 
-	public function back()
-	{
+	   public function back()
+	{   
+        $data['preTITLE']	= "Préstations & Tarifs";
+		$data['TITLE'] 		= "L'Institut";
+		$data['headerImg']	= "img-institut.jpg";
 
 
 
