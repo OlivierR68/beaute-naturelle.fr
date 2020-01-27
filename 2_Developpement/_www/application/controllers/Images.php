@@ -14,9 +14,7 @@ class Images extends CI_Controller {
 		$data['preTITLE']	= "Consultez notre";
 		$data['TITLE'] 		= "Galerie Photos";
 		$data['headerImg']	= "img-gallerie.jpg";
-
-
-
+		
 		$images	= $this->Images_manager->findAll();
 		$imagesToDisplay = array();
 		foreach($images as $image){

@@ -2,7 +2,7 @@
 
 <main class="container bn_content">
         <div class="row no-gutters bn_galerie">
-            <!--- Faudra faire un foreach ici -->
+            
             <?php 
 
             foreach($arrImages as $objImage) { ?>                   
@@ -26,6 +26,7 @@
 
                 </a>
             </div>
+            
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
 
                     <a href="<?php base_url() ?>assets/img/album/photos-2.jpg" data-lightbox="roadtrip">

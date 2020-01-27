@@ -34,14 +34,20 @@
 
 	<div class="row">
 		<!-- Foreach de catégorie ici -->
-		<a href="prestations/epilation.html" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-1 d-flex">
-
-			<div></div>
+		<?php 
+            var_dump($arrCategorie);
+            foreach($arrPrestations as $objPrestations) { ?>
+       <a href="<?php base_url() ?>assets/img/prestations/presta-top-1.jpg" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-1 d-flex">
+        
+			<div>
+			        
+			</div>
 			<span>
                     épilations
                 </span>
 
 		</a>
+		<?php } ?>
 		<!-- fin du foreach -->
 
 	</div>
