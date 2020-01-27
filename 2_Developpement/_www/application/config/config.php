@@ -23,6 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+// base_url à utiliser pour le site site internet
+// $config['base_url'] = 'http://ravoli.formation-web-cci.aradev.fr/';
 $config['base_url'] = '';
 
 /*
