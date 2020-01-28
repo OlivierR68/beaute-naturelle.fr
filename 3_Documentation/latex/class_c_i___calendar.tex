@@ -1,0 +1,225 @@
+\doxysection{C\+I\+\_\+\+Calendar Class Reference}
+\label{class_c_i___calendar}\index{CI\_Calendar@{CI\_Calendar}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$config=array())
+\item 
+\textbf{ initialize} (\$config=array())
+\item 
+\textbf{ generate} (\$year=\textquotesingle{}\textquotesingle{}, \$month=\textquotesingle{}\textquotesingle{}, \$data=array())
+\item 
+\textbf{ get\+\_\+month\+\_\+name} (\$month)
+\item 
+\textbf{ get\+\_\+day\+\_\+names} (\$day\+\_\+type=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ adjust\+\_\+date} (\$month, \$year)
+\item 
+\textbf{ get\+\_\+total\+\_\+days} (\$month, \$year)
+\item 
+\textbf{ default\+\_\+template} ()
+\item 
+\textbf{ parse\+\_\+template} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___calendar_aa3e9534005fd516d941f6a5569896e01}} 
+{\bfseries \$template} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___calendar_a93cb3f67ace379a71de4fb00bcc7a605}} 
+{\bfseries \$replacements} = array()
+\item 
+\mbox{\label{class_c_i___calendar_ac4e461505bb7cd9a2fdb2bf47560a389}} 
+{\bfseries \$start\+\_\+day} = \textquotesingle{}sunday\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___calendar_ab40961ce0a0e4a7ee10ad389c9566b28}} 
+{\bfseries \$month\+\_\+type} = \textquotesingle{}long\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___calendar_a1e35fdb6b6cc297a6bb256517a8d813d}} 
+{\bfseries \$day\+\_\+type} = \textquotesingle{}abr\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___calendar_aeade2ffe515604c0dffb78d32ca846ae}} 
+{\bfseries \$show\+\_\+next\+\_\+prev} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___calendar_a3ed0df912e3e67eb17d432c1f54ae2de}} 
+{\bfseries \$next\+\_\+prev\+\_\+url} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___calendar_a52c552ab98b51789690522ff7d41ecb7}} 
+{\bfseries \$show\+\_\+other\+\_\+days} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___calendar_ae0314d046ddf7fcfaec03222977427d3}} 
+{\bfseries \$\+CI}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___calendar_af7f9493844d2d66e924e3c1df51ce616}} 
+\index{CI\_Calendar@{CI\_Calendar}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Class constructor
+
+Loads the calendar language file and sets the default time reference.
+
+@uses C\+I\+\_\+\+Lang\+::\$is\+\_\+loaded
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & Calendar options \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___calendar_ac216356ab0ff31e8538fd9208a26577a}} 
+\index{CI\_Calendar@{CI\_Calendar}!adjust\_date@{adjust\_date}}
+\index{adjust\_date@{adjust\_date}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{adjust\_date()}
+{\footnotesize\ttfamily adjust\+\_\+date (\begin{DoxyParamCaption}\item[{}]{\$month,  }\item[{}]{\$year }\end{DoxyParamCaption})}
+
+Adjust Date
+
+This function makes sure that we have a valid month/year. For example, if you submit 13 as the month, the year will increment and the month will become January.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & the month \\
+\hline
+{\em int} & the year \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___calendar_a5d174710ed7a2a08df21dbaa2bb6a50f}} 
+\index{CI\_Calendar@{CI\_Calendar}!default\_template@{default\_template}}
+\index{default\_template@{default\_template}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{default\_template()}
+{\footnotesize\ttfamily default\+\_\+template (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set Default Template Data
+
+This is used in the event that the user has not created their own template
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___calendar_aabfc9d516a481b11230cd6562f6809f2}} 
+\index{CI\_Calendar@{CI\_Calendar}!generate@{generate}}
+\index{generate@{generate}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{generate()}
+{\footnotesize\ttfamily generate (\begin{DoxyParamCaption}\item[{}]{\$year = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$month = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$data = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Generate the calendar
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & the year \\
+\hline
+{\em int} & the month \\
+\hline
+{\em array} & the data to be shown in the calendar cells \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___calendar_a31e09ae5dac8a808676ebddab1e735cc}} 
+\index{CI\_Calendar@{CI\_Calendar}!get\_day\_names@{get\_day\_names}}
+\index{get\_day\_names@{get\_day\_names}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{get\_day\_names()}
+{\footnotesize\ttfamily get\+\_\+day\+\_\+names (\begin{DoxyParamCaption}\item[{}]{\$day\+\_\+type = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Get Day Names
+
+Returns an array of day names (Sunday, Monday, etc.) based on the type. Options\+: long, short, abr
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___calendar_a056208e620b0ffc2525a07d8646eb194}} 
+\index{CI\_Calendar@{CI\_Calendar}!get\_month\_name@{get\_month\_name}}
+\index{get\_month\_name@{get\_month\_name}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{get\_month\_name()}
+{\footnotesize\ttfamily get\+\_\+month\+\_\+name (\begin{DoxyParamCaption}\item[{}]{\$month }\end{DoxyParamCaption})}
+
+Get Month Name
+
+Generates a textual month name based on the numeric month provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & the month \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___calendar_a3c863f62907e445af2711df11fb90ff9}} 
+\index{CI\_Calendar@{CI\_Calendar}!get\_total\_days@{get\_total\_days}}
+\index{get\_total\_days@{get\_total\_days}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{get\_total\_days()}
+{\footnotesize\ttfamily get\+\_\+total\+\_\+days (\begin{DoxyParamCaption}\item[{}]{\$month,  }\item[{}]{\$year }\end{DoxyParamCaption})}
+
+Total days in a given month
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & the month \\
+\hline
+{\em int} & the year \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___calendar_a481385e36d920f5a5005ace05c6cd016}} 
+\index{CI\_Calendar@{CI\_Calendar}!initialize@{initialize}}
+\index{initialize@{initialize}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{initialize()}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}\item[{}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Initialize the user preferences
+
+Accepts an associative array as input, containing display preferences
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & config preferences \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Calendar}{p.}{class_c_i___calendar} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___calendar_ac0331959620d18320ab6587621730d44}} 
+\index{CI\_Calendar@{CI\_Calendar}!parse\_template@{parse\_template}}
+\index{parse\_template@{parse\_template}!CI\_Calendar@{CI\_Calendar}}
+\doxysubsubsection{parse\_template()}
+{\footnotesize\ttfamily parse\+\_\+template (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Parse Template
+
+Harvests the data within the template \{pseudo-\/variables\} used to display the calendar
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Calendar}{p.}{class_c_i___calendar} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Calendar.\+php\end{DoxyCompactItemize}

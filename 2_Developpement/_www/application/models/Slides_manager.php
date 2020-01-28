@@ -1,9 +1,20 @@
 <?php
+/**
+ * Classe Slides_manager
+ * @author  Olivier Ravinasaga
+ * @version 1
+ *
+ */
+
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Slides_manager extends CI_Model {
 
-
+/**
+ * Fonction permettant de récupérer la liste des articles
+ * @return array Tableau des slides
+ */
 	public function findAll(){
 		$queryGroup	= $this->db
 			->select("*")

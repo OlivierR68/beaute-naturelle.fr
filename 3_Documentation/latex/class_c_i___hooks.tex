@@ -1,0 +1,92 @@
+\doxysection{C\+I\+\_\+\+Hooks Class Reference}
+\label{class_c_i___hooks}\index{CI\_Hooks@{CI\_Hooks}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ call\+\_\+hook} (\$which=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___hooks_a8d376199cc641e3e7af6e1a0d5c736d9}} 
+{\bfseries \$enabled} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___hooks_a05aec88c3516c6db5da524fbcc673aff}} 
+{\bfseries \$hooks} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+run\+\_\+hook} (\$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___hooks_a7f925b11c74f8a8aa0d4627c6f7844ce}} 
+{\bfseries \$\+\_\+objects} = array()
+\item 
+\mbox{\label{class_c_i___hooks_a6e8d0edcf7a4fb3e76c0f6d00e70053e}} 
+{\bfseries \$\+\_\+in\+\_\+progress} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___hooks_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Hooks@{CI\_Hooks}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Hooks@{CI\_Hooks}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___hooks_a2cd07b3fcfaf153a37f164d3fbc7c3d9}} 
+\index{CI\_Hooks@{CI\_Hooks}!\_run\_hook@{\_run\_hook}}
+\index{\_run\_hook@{\_run\_hook}!CI\_Hooks@{CI\_Hooks}}
+\doxysubsubsection{\_run\_hook()}
+{\footnotesize\ttfamily \+\_\+run\+\_\+hook (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Run Hook
+
+Runs a particular hook
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & Hook details \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___hooks_a470d397aaf24f1ca3ef73021ad03492b}} 
+\index{CI\_Hooks@{CI\_Hooks}!call\_hook@{call\_hook}}
+\index{call\_hook@{call\_hook}!CI\_Hooks@{CI\_Hooks}}
+\doxysubsubsection{call\_hook()}
+{\footnotesize\ttfamily call\+\_\+hook (\begin{DoxyParamCaption}\item[{}]{\$which = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Call Hook
+
+Calls a particular hook. Called by Code\+Igniter.\+php.
+
+@uses \doxyref{C\+I\+\_\+\+Hooks\+::\+\_\+run\+\_\+hook()}{p.}{class_c_i___hooks_a2cd07b3fcfaf153a37f164d3fbc7c3d9}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$which} & Hook name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/Hooks.\+php\end{DoxyCompactItemize}

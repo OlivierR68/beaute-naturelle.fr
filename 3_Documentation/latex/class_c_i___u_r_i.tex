@@ -1,0 +1,451 @@
+\doxysection{C\+I\+\_\+\+U\+RI Class Reference}
+\label{class_c_i___u_r_i}\index{CI\_URI@{CI\_URI}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ filter\+\_\+uri} (\&\$str)
+\item 
+\textbf{ segment} (\$n, \$no\+\_\+result=N\+U\+LL)
+\item 
+\textbf{ rsegment} (\$n, \$no\+\_\+result=N\+U\+LL)
+\item 
+\textbf{ uri\+\_\+to\+\_\+assoc} (\$n=3, \$default=array())
+\item 
+\textbf{ ruri\+\_\+to\+\_\+assoc} (\$n=3, \$default=array())
+\item 
+\textbf{ assoc\+\_\+to\+\_\+uri} (\$array)
+\item 
+\textbf{ slash\+\_\+segment} (\$n, \$where=\textquotesingle{}trailing\textquotesingle{})
+\item 
+\textbf{ slash\+\_\+rsegment} (\$n, \$where=\textquotesingle{}trailing\textquotesingle{})
+\item 
+\textbf{ segment\+\_\+array} ()
+\item 
+\textbf{ rsegment\+\_\+array} ()
+\item 
+\textbf{ total\+\_\+segments} ()
+\item 
+\textbf{ total\+\_\+rsegments} ()
+\item 
+\textbf{ uri\+\_\+string} ()
+\item 
+\textbf{ ruri\+\_\+string} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___u_r_i_ae15942155aae4760439f552ad1fc3c34}} 
+{\bfseries \$keyval} = array()
+\item 
+\mbox{\label{class_c_i___u_r_i_ab908b3e655463a05e8a646c965ca4e53}} 
+{\bfseries \$uri\+\_\+string} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___u_r_i_a8d7f597e2b6cf2aaef663822d1b96a82}} 
+{\bfseries \$segments} = array()
+\item 
+\mbox{\label{class_c_i___u_r_i_abf60189292b5fda02cdf36e5d7417a33}} 
+{\bfseries \$rsegments} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+set\+\_\+uri\+\_\+string} (\$str)
+\item 
+\textbf{ \+\_\+parse\+\_\+request\+\_\+uri} ()
+\item 
+\textbf{ \+\_\+parse\+\_\+query\+\_\+string} ()
+\item 
+\textbf{ \+\_\+parse\+\_\+argv} ()
+\item 
+\textbf{ \+\_\+remove\+\_\+relative\+\_\+directory} (\$uri)
+\item 
+\textbf{ \+\_\+uri\+\_\+to\+\_\+assoc} (\$n=3, \$default=array(), \$which=\textquotesingle{}\textbf{ segment}\textquotesingle{})
+\item 
+\textbf{ \+\_\+slash\+\_\+segment} (\$n, \$where=\textquotesingle{}trailing\textquotesingle{}, \$which=\textquotesingle{}\textbf{ segment}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___u_r_i_a5f6c67e88b35c1006295f41bc878f8b7}} 
+{\bfseries \$\+\_\+permitted\+\_\+uri\+\_\+chars}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___u_r_i_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_URI@{CI\_URI}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___u_r_i_a336e05909197d401613263ebdab6550c}} 
+\index{CI\_URI@{CI\_URI}!\_parse\_argv@{\_parse\_argv}}
+\index{\_parse\_argv@{\_parse\_argv}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_parse\_argv()}
+{\footnotesize\ttfamily \+\_\+parse\+\_\+argv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse C\+LI arguments
+
+Take each command line argument and assume it is a U\+RI segment.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a2bb6abbe64a923ffef79a4a4c3da93db}} 
+\index{CI\_URI@{CI\_URI}!\_parse\_query\_string@{\_parse\_query\_string}}
+\index{\_parse\_query\_string@{\_parse\_query\_string}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_parse\_query\_string()}
+{\footnotesize\ttfamily \+\_\+parse\+\_\+query\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse Q\+U\+E\+R\+Y\+\_\+\+S\+T\+R\+I\+NG
+
+Will parse Q\+U\+E\+R\+Y\+\_\+\+S\+T\+R\+I\+NG and automatically detect the U\+RI from it.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_ae2e75a6f6657df51c7b6de926979af29}} 
+\index{CI\_URI@{CI\_URI}!\_parse\_request\_uri@{\_parse\_request\_uri}}
+\index{\_parse\_request\_uri@{\_parse\_request\_uri}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_parse\_request\_uri()}
+{\footnotesize\ttfamily \+\_\+parse\+\_\+request\+\_\+uri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse R\+E\+Q\+U\+E\+S\+T\+\_\+\+U\+RI
+
+Will parse R\+E\+Q\+U\+E\+S\+T\+\_\+\+U\+RI and automatically detect the U\+RI from it, while fixing the query string if necessary.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a01fdc82a66a1611d3e5d42461c1ad59c}} 
+\index{CI\_URI@{CI\_URI}!\_remove\_relative\_directory@{\_remove\_relative\_directory}}
+\index{\_remove\_relative\_directory@{\_remove\_relative\_directory}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_remove\_relative\_directory()}
+{\footnotesize\ttfamily \+\_\+remove\+\_\+relative\+\_\+directory (\begin{DoxyParamCaption}\item[{}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Remove relative directory (../) and multi slashes (///)
+
+Do some final cleaning of the U\+RI and return it, currently only used in self\+::\+\_\+parse\+\_\+request\+\_\+uri()
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$uri} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a81a4c4d50fbac24b9ae091f9cfcaade3}} 
+\index{CI\_URI@{CI\_URI}!\_set\_uri\_string@{\_set\_uri\_string}}
+\index{\_set\_uri\_string@{\_set\_uri\_string}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_set\_uri\_string()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+uri\+\_\+string (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set U\+RI String
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a98974ace6ccf1b5e0923a7de9018095a}} 
+\index{CI\_URI@{CI\_URI}!\_slash\_segment@{\_slash\_segment}}
+\index{\_slash\_segment@{\_slash\_segment}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_slash\_segment()}
+{\footnotesize\ttfamily \+\_\+slash\+\_\+segment (\begin{DoxyParamCaption}\item[{}]{\$n,  }\item[{}]{\$where = {\ttfamily \textquotesingle{}trailing\textquotesingle{}},  }\item[{}]{\$which = {\ttfamily \textquotesingle{}\textbf{ segment}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Internal Slash segment
+
+Fetches an U\+RI Segment and adds a slash to it.
+
+@used-\/by \doxyref{C\+I\+\_\+\+U\+R\+I\+::slash\+\_\+segment()}{p.}{class_c_i___u_r_i_ac0b17861bb5ec6faf59d1157b9b60131} @used-\/by \doxyref{C\+I\+\_\+\+U\+R\+I\+::slash\+\_\+rsegment()}{p.}{class_c_i___u_r_i_abeb00696116ba389fe26f3e49fd69ed5}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index \\
+\hline
+string & {\em \$where} & Where to add the slash (\textquotesingle{}trailing\textquotesingle{} or \textquotesingle{}leading\textquotesingle{}) \\
+\hline
+string & {\em \$which} & Array name (\textquotesingle{}segment\textquotesingle{} or \textquotesingle{}rsegment\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a8a4949bcf405b03c1bf2cd94e689a0c7}} 
+\index{CI\_URI@{CI\_URI}!\_uri\_to\_assoc@{\_uri\_to\_assoc}}
+\index{\_uri\_to\_assoc@{\_uri\_to\_assoc}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{\_uri\_to\_assoc()}
+{\footnotesize\ttfamily \+\_\+uri\+\_\+to\+\_\+assoc (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 3},  }\item[{}]{\$default = {\ttfamily array()},  }\item[{}]{\$which = {\ttfamily \textquotesingle{}\textbf{ segment}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Internal U\+R\+I-\/to-\/assoc
+
+Generates a key/value pair from the U\+RI string or re-\/routed U\+RI string.
+
+@used-\/by \doxyref{C\+I\+\_\+\+U\+R\+I\+::uri\+\_\+to\+\_\+assoc()}{p.}{class_c_i___u_r_i_a67cca74de71898ee88c167a265cff140} @used-\/by \doxyref{C\+I\+\_\+\+U\+R\+I\+::ruri\+\_\+to\+\_\+assoc()}{p.}{class_c_i___u_r_i_a3f375a2026349f1fce7915966eba6d5b} 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index (default\+: 3) \\
+\hline
+array & {\em \$default} & Default values \\
+\hline
+string & {\em \$which} & Array name (\textquotesingle{}segment\textquotesingle{} or \textquotesingle{}rsegment\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a5c17149885c92fef1ed7f191f14a3f4d}} 
+\index{CI\_URI@{CI\_URI}!assoc\_to\_uri@{assoc\_to\_uri}}
+\index{assoc\_to\_uri@{assoc\_to\_uri}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{assoc\_to\_uri()}
+{\footnotesize\ttfamily assoc\+\_\+to\+\_\+uri (\begin{DoxyParamCaption}\item[{}]{\$array }\end{DoxyParamCaption})}
+
+Assoc to U\+RI
+
+Generates a U\+RI string from an associative array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$array} & Input array of key/value pairs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string U\+RI string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a0449aea4e186717ecbf1eacfc59fc5b6}} 
+\index{CI\_URI@{CI\_URI}!filter\_uri@{filter\_uri}}
+\index{filter\_uri@{filter\_uri}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{filter\_uri()}
+{\footnotesize\ttfamily filter\+\_\+uri (\begin{DoxyParamCaption}\item[{\&}]{\$str }\end{DoxyParamCaption})}
+
+Filter U\+RI
+
+Filters segments for malicious characters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a0fbd875ee8f8965b0b495b1dce0080fb}} 
+\index{CI\_URI@{CI\_URI}!rsegment@{rsegment}}
+\index{rsegment@{rsegment}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{rsegment()}
+{\footnotesize\ttfamily rsegment (\begin{DoxyParamCaption}\item[{}]{\$n,  }\item[{}]{\$no\+\_\+result = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch U\+RI \char`\"{}routed\char`\"{} Segment
+
+Returns the re-\/routed U\+RI segment (assuming routing rules are used) based on the index provided. If there is no routing, will return the same result as \doxyref{C\+I\+\_\+\+U\+R\+I\+::segment()}{p.}{class_c_i___u_r_i_aeea297fbd38079886a2de35d633c1ed5}.
+
+\begin{DoxySeeAlso}{See also}
+C\+I\+\_\+\+U\+R\+I\+::\$rsegments 
+
+\doxyref{C\+I\+\_\+\+U\+R\+I\+::segment()}{p.}{class_c_i___u_r_i_aeea297fbd38079886a2de35d633c1ed5} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index \\
+\hline
+mixed & {\em \$no\+\_\+result} & What to return if the segment index is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_aaac2da0a6641a4a874a178442eb99624}} 
+\index{CI\_URI@{CI\_URI}!rsegment\_array@{rsegment\_array}}
+\index{rsegment\_array@{rsegment\_array}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{rsegment\_array()}
+{\footnotesize\ttfamily rsegment\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Routed Segment Array
+
+\begin{DoxyReturn}{Returns}
+array C\+I\+\_\+\+U\+R\+I\+::\$rsegments 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a53a97a8b68f500980b84e3b060400221}} 
+\index{CI\_URI@{CI\_URI}!ruri\_string@{ruri\_string}}
+\index{ruri\_string@{ruri\_string}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{ruri\_string()}
+{\footnotesize\ttfamily ruri\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetch Re-\/routed U\+RI string
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a3f375a2026349f1fce7915966eba6d5b}} 
+\index{CI\_URI@{CI\_URI}!ruri\_to\_assoc@{ruri\_to\_assoc}}
+\index{ruri\_to\_assoc@{ruri\_to\_assoc}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{ruri\_to\_assoc()}
+{\footnotesize\ttfamily ruri\+\_\+to\+\_\+assoc (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 3},  }\item[{}]{\$default = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Routed U\+RI to assoc
+
+Identical to \doxyref{C\+I\+\_\+\+U\+R\+I\+::uri\+\_\+to\+\_\+assoc()}{p.}{class_c_i___u_r_i_a67cca74de71898ee88c167a265cff140}, only it uses the re-\/routed segment array.
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{C\+I\+\_\+\+U\+R\+I\+::uri\+\_\+to\+\_\+assoc()}{p.}{class_c_i___u_r_i_a67cca74de71898ee88c167a265cff140} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index (default\+: 3) \\
+\hline
+array & {\em \$default} & Default values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_aeea297fbd38079886a2de35d633c1ed5}} 
+\index{CI\_URI@{CI\_URI}!segment@{segment}}
+\index{segment@{segment}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{segment()}
+{\footnotesize\ttfamily segment (\begin{DoxyParamCaption}\item[{}]{\$n,  }\item[{}]{\$no\+\_\+result = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch U\+RI Segment
+
+\begin{DoxySeeAlso}{See also}
+C\+I\+\_\+\+U\+R\+I\+::\$segments 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index \\
+\hline
+mixed & {\em \$no\+\_\+result} & What to return if the segment index is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_ac0db37475b7a41e156f2e9375a2b7cc6}} 
+\index{CI\_URI@{CI\_URI}!segment\_array@{segment\_array}}
+\index{segment\_array@{segment\_array}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{segment\_array()}
+{\footnotesize\ttfamily segment\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Segment Array
+
+\begin{DoxyReturn}{Returns}
+array C\+I\+\_\+\+U\+R\+I\+::\$segments 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_abeb00696116ba389fe26f3e49fd69ed5}} 
+\index{CI\_URI@{CI\_URI}!slash\_rsegment@{slash\_rsegment}}
+\index{slash\_rsegment@{slash\_rsegment}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{slash\_rsegment()}
+{\footnotesize\ttfamily slash\+\_\+rsegment (\begin{DoxyParamCaption}\item[{}]{\$n,  }\item[{}]{\$where = {\ttfamily \textquotesingle{}trailing\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Slash routed segment
+
+Fetches an U\+RI routed segment with a slash.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index \\
+\hline
+string & {\em \$where} & Where to add the slash (\textquotesingle{}trailing\textquotesingle{} or \textquotesingle{}leading\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_ac0b17861bb5ec6faf59d1157b9b60131}} 
+\index{CI\_URI@{CI\_URI}!slash\_segment@{slash\_segment}}
+\index{slash\_segment@{slash\_segment}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{slash\_segment()}
+{\footnotesize\ttfamily slash\+\_\+segment (\begin{DoxyParamCaption}\item[{}]{\$n,  }\item[{}]{\$where = {\ttfamily \textquotesingle{}trailing\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Slash segment
+
+Fetches an U\+RI segment with a slash.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index \\
+\hline
+string & {\em \$where} & Where to add the slash (\textquotesingle{}trailing\textquotesingle{} or \textquotesingle{}leading\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_aead39329dc096b94eef0955fdcdd635f}} 
+\index{CI\_URI@{CI\_URI}!total\_rsegments@{total\_rsegments}}
+\index{total\_rsegments@{total\_rsegments}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{total\_rsegments()}
+{\footnotesize\ttfamily total\+\_\+rsegments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Total number of routed segments
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a5805c40e1c916e7b00b49f131765ac1c}} 
+\index{CI\_URI@{CI\_URI}!total\_segments@{total\_segments}}
+\index{total\_segments@{total\_segments}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{total\_segments()}
+{\footnotesize\ttfamily total\+\_\+segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Total number of segments
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_ac7a3f945c14cc37f89b6d9d1c7a037a4}} 
+\index{CI\_URI@{CI\_URI}!uri\_string@{uri\_string}}
+\index{uri\_string@{uri\_string}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{uri\_string()}
+{\footnotesize\ttfamily uri\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetch U\+RI string
+
+\begin{DoxyReturn}{Returns}
+string C\+I\+\_\+\+U\+R\+I\+::\$uri\+\_\+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___u_r_i_a67cca74de71898ee88c167a265cff140}} 
+\index{CI\_URI@{CI\_URI}!uri\_to\_assoc@{uri\_to\_assoc}}
+\index{uri\_to\_assoc@{uri\_to\_assoc}!CI\_URI@{CI\_URI}}
+\doxysubsubsection{uri\_to\_assoc()}
+{\footnotesize\ttfamily uri\+\_\+to\+\_\+assoc (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 3},  }\item[{}]{\$default = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+U\+RI to assoc
+
+Generates an associative array of U\+RI data starting at the supplied segment index. For example, if this is your U\+RI\+:
+
+example.\+com/user/search/name/joe/location/\+U\+K/gender/male
+
+You can use this method to generate an array with this prototype\+:
+
+array ( name =$>$ joe location =$>$ UK gender =$>$ male )
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & Index (default\+: 3) \\
+\hline
+array & {\em \$default} & Default values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/U\+R\+I.\+php\end{DoxyCompactItemize}

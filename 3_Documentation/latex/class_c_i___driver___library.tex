@@ -1,0 +1,68 @@
+\doxysection{C\+I\+\_\+\+Driver\+\_\+\+Library Class Reference}
+\label{class_c_i___driver___library}\index{CI\_Driver\_Library@{CI\_Driver\_Library}}
+Inheritance diagram for C\+I\+\_\+\+Driver\+\_\+\+Library\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___driver___library}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+get} (\$child)
+\item 
+\textbf{ load\+\_\+driver} (\$child)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___driver___library_a32d963b3d49fd67f188c1a74d38be6df}} 
+{\bfseries \$valid\+\_\+drivers} = array()
+\item 
+\mbox{\label{class_c_i___driver___library_ab820c27413d5904686c58f6b2941b603}} 
+{\bfseries \$lib\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___driver___library_a2fac4d4694e05e7eeba5282bd6ff8caf}} 
+\index{CI\_Driver\_Library@{CI\_Driver\_Library}!\_\_get@{\_\_get}}
+\index{\_\_get@{\_\_get}!CI\_Driver\_Library@{CI\_Driver\_Library}}
+\doxysubsubsection{\_\_get()}
+{\footnotesize\ttfamily \+\_\+\+\_\+get (\begin{DoxyParamCaption}\item[{}]{\$child }\end{DoxyParamCaption})}
+
+Get magic method
+
+The first time a child is used it won\textquotesingle{}t exist, so we instantiate it subsequents calls will go straight to the proper child.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Child class name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object Child class 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___driver___library_a7cc2908487e106164664ef7d743690b8}} 
+\index{CI\_Driver\_Library@{CI\_Driver\_Library}!load\_driver@{load\_driver}}
+\index{load\_driver@{load\_driver}!CI\_Driver\_Library@{CI\_Driver\_Library}}
+\doxysubsubsection{load\_driver()}
+{\footnotesize\ttfamily load\+\_\+driver (\begin{DoxyParamCaption}\item[{}]{\$child }\end{DoxyParamCaption})}
+
+Load driver
+
+Separate load\+\_\+driver call to support explicit driver load by library or user
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Driver name (w/o parent prefix) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object Child class 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Driver.\+php\end{DoxyCompactItemize}

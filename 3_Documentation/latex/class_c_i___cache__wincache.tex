@@ -1,0 +1,199 @@
+\doxysection{C\+I\+\_\+\+Cache\+\_\+wincache Class Reference}
+\label{class_c_i___cache__wincache}\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+Inheritance diagram for C\+I\+\_\+\+Cache\+\_\+wincache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___cache__wincache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ get} (\$id)
+\item 
+\textbf{ save} (\$id, \$data, \$ttl=60, \$raw=F\+A\+L\+SE)
+\item 
+\textbf{ delete} (\$id)
+\item 
+\textbf{ increment} (\$id, \$offset=1)
+\item 
+\textbf{ decrement} (\$id, \$offset=1)
+\item 
+\textbf{ clean} ()
+\item 
+\textbf{ cache\+\_\+info} ()
+\item 
+\textbf{ get\+\_\+metadata} (\$id)
+\item 
+\textbf{ is\+\_\+supported} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___cache__wincache_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+Only present so that an error message is logged if A\+PC is not available.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___cache__wincache_acb4742926a6fa901e4f0917e1a35ef4c}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!cache\_info@{cache\_info}}
+\index{cache\_info@{cache\_info}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{cache\_info()}
+{\footnotesize\ttfamily cache\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cache Info
+
+\begin{DoxyReturn}{Returns}
+mixed array on success, false on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_adb40b812890a8bc058bf6b7a0e1a54d9}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!clean@{clean}}
+\index{clean@{clean}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{clean()}
+{\footnotesize\ttfamily clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clean the cache
+
+\begin{DoxyReturn}{Returns}
+bool false on failure/true on success 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_a4eb1c2772c8efc48c411ea060dd040b7}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!decrement@{decrement}}
+\index{decrement@{decrement}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{decrement()}
+{\footnotesize\ttfamily decrement (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Decrement a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to reduce by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed New value on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_a2f8258add505482d7f00ea26493a5723}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!delete@{delete}}
+\index{delete@{delete}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{delete()}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Delete from Cache
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & unique identifier of the item in the cache \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true on success/false on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_a50e3bfb586b2f42932a6a93f3fbb0828}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!get@{get}}
+\index{get@{get}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{get()}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Get
+
+Look for a value in the cache. If it exists, return the data, if not, return F\+A\+L\+SE
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache Ide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed Value that is stored/\+F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_a59635cf18e997c5141bffa05ff7622e0}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!get\_metadata@{get\_metadata}}
+\index{get\_metadata@{get\_metadata}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{get\_metadata()}
+{\footnotesize\ttfamily get\+\_\+metadata (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Get Cache Metadata
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & key to get cache metadata on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed array on success/false on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_a2f07a4e09b57f4460d49852497d1808f}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!increment@{increment}}
+\index{increment@{increment}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{increment()}
+{\footnotesize\ttfamily increment (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Increment a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed New value on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_a98c68fd153468bc148c4ed8c716859fc}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!is\_supported@{is\_supported}}
+\index{is\_supported@{is\_supported}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{is\_supported()}
+{\footnotesize\ttfamily is\+\_\+supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{is\+\_\+supported()}{p.}{class_c_i___cache__wincache_a98c68fd153468bc148c4ed8c716859fc}
+
+Check to see if Win\+Cache is available on this system, bail if it isn\textquotesingle{}t.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__wincache_a472645db04a8ce4b040b789a3062a7d2}} 
+\index{CI\_Cache\_wincache@{CI\_Cache\_wincache}!save@{save}}
+\index{save@{save}!CI\_Cache\_wincache@{CI\_Cache\_wincache}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$data,  }\item[{}]{\$ttl = {\ttfamily 60},  }\item[{}]{\$raw = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Cache Save
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+mixed & {\em \$data} & Data to store \\
+\hline
+int & {\em \$ttl} & Time to live (in seconds) \\
+\hline
+bool & {\em \$raw} & Whether to store the raw value (unused) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true on success/false on failure 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/\+Cache/drivers/Cache\+\_\+wincache.\+php\end{DoxyCompactItemize}

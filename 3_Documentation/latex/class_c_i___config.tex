@@ -1,0 +1,209 @@
+\doxysection{C\+I\+\_\+\+Config Class Reference}
+\label{class_c_i___config}\index{CI\_Config@{CI\_Config}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ load} (\$file=\textquotesingle{}\textquotesingle{}, \$use\+\_\+sections=F\+A\+L\+SE, \$fail\+\_\+gracefully=F\+A\+L\+SE)
+\item 
+\textbf{ item} (\$item, \$index=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ slash\+\_\+item} (\$\textbf{ item})
+\item 
+\textbf{ site\+\_\+url} (\$uri=\textquotesingle{}\textquotesingle{}, \$protocol=N\+U\+LL)
+\item 
+\textbf{ base\+\_\+url} (\$uri=\textquotesingle{}\textquotesingle{}, \$protocol=N\+U\+LL)
+\item 
+\textbf{ system\+\_\+url} ()
+\item 
+\textbf{ set\+\_\+item} (\$\textbf{ item}, \$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___config_a49c7011be9c979d9174c52a8b83e5d8e}} 
+{\bfseries \$config} = array()
+\item 
+\mbox{\label{class_c_i___config_a908e9ad52a5d1956d360689452f6bdbe}} 
+{\bfseries \$is\+\_\+loaded} = array()
+\item 
+\mbox{\label{class_c_i___config_a5f47dbd2111b5bb6c91ece69fefebf26}} 
+{\bfseries \$\+\_\+config\+\_\+paths} = array(A\+P\+P\+P\+A\+TH)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+uri\+\_\+string} (\$uri)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___config_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Config@{CI\_Config}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+Sets the \$config data from the primary config.\+php file as a class variable.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___config_a8a0a35d53f0904d9f655e82804b9998d}} 
+\index{CI\_Config@{CI\_Config}!\_uri\_string@{\_uri\_string}}
+\index{\_uri\_string@{\_uri\_string}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{\_uri\_string()}
+{\footnotesize\ttfamily \+\_\+uri\+\_\+string (\begin{DoxyParamCaption}\item[{}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Build U\+RI string
+
+@used-\/by \doxyref{C\+I\+\_\+\+Config\+::site\+\_\+url()}{p.}{class_c_i___config_a3a12687251c502cb2d9c1e3f77ca56b8} @used-\/by \doxyref{C\+I\+\_\+\+Config\+::base\+\_\+url()}{p.}{class_c_i___config_a209120be5e55785e74609097123b40cf}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string[$\,$] & {\em \$uri} & U\+RI string or an array of segments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___config_a209120be5e55785e74609097123b40cf}} 
+\index{CI\_Config@{CI\_Config}!base\_url@{base\_url}}
+\index{base\_url@{base\_url}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{base\_url()}
+{\footnotesize\ttfamily base\+\_\+url (\begin{DoxyParamCaption}\item[{}]{\$uri = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$protocol = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Base U\+RL
+
+Returns base\+\_\+url [. uri\+\_\+string]
+
+@uses \doxyref{C\+I\+\_\+\+Config\+::\+\_\+uri\+\_\+string()}{p.}{class_c_i___config_a8a0a35d53f0904d9f655e82804b9998d}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string[$\,$] & {\em \$uri} & U\+RI string or an array of segments \\
+\hline
+string & {\em \$protocol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___config_a5fcaaca1b4d8a9d4c96311ce97d398c0}} 
+\index{CI\_Config@{CI\_Config}!item@{item}}
+\index{item@{item}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{item()}
+{\footnotesize\ttfamily item (\begin{DoxyParamCaption}\item[{}]{\$item,  }\item[{}]{\$index = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Fetch a config file item
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$item} & Config item name \\
+\hline
+string & {\em \$index} & Index name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null The configuration item or N\+U\+LL if the item doesn\textquotesingle{}t exist 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___config_a057a1ef8c730d6e00e3eeccbafe46f0d}} 
+\index{CI\_Config@{CI\_Config}!load@{load}}
+\index{load@{load}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{load()}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{}]{\$file = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$use\+\_\+sections = {\ttfamily FALSE},  }\item[{}]{\$fail\+\_\+gracefully = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Load Config File
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & Configuration file name \\
+\hline
+bool & {\em \$use\+\_\+sections} & Whether configuration values should be loaded into their own section \\
+\hline
+bool & {\em \$fail\+\_\+gracefully} & Whether to just return F\+A\+L\+SE or display an error message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE if the file was loaded correctly or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___config_a3cbd3bcacb546d42f5dd12213df48627}} 
+\index{CI\_Config@{CI\_Config}!set\_item@{set\_item}}
+\index{set\_item@{set\_item}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{set\_item()}
+{\footnotesize\ttfamily set\+\_\+item (\begin{DoxyParamCaption}\item[{}]{\$item,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set a config file item
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$item} & Config item key \\
+\hline
+string & {\em \$value} & Config item value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___config_a3a12687251c502cb2d9c1e3f77ca56b8}} 
+\index{CI\_Config@{CI\_Config}!site\_url@{site\_url}}
+\index{site\_url@{site\_url}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{site\_url()}
+{\footnotesize\ttfamily site\+\_\+url (\begin{DoxyParamCaption}\item[{}]{\$uri = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$protocol = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Site U\+RL
+
+Returns base\+\_\+url . index\+\_\+page [. uri\+\_\+string]
+
+@uses \doxyref{C\+I\+\_\+\+Config\+::\+\_\+uri\+\_\+string()}{p.}{class_c_i___config_a8a0a35d53f0904d9f655e82804b9998d}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string[$\,$] & {\em \$uri} & U\+RI string or an array of segments \\
+\hline
+string & {\em \$protocol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___config_abead21ebddc51d12402b5320d531eb1f}} 
+\index{CI\_Config@{CI\_Config}!slash\_item@{slash\_item}}
+\index{slash\_item@{slash\_item}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{slash\_item()}
+{\footnotesize\ttfamily slash\+\_\+item (\begin{DoxyParamCaption}\item[{}]{\$item }\end{DoxyParamCaption})}
+
+Fetch a config file item with slash appended (if not empty)
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$item} & Config item name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null The configuration item or N\+U\+LL if the item doesn\textquotesingle{}t exist 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___config_a71e857f8dd38c230f1ce11bacf177ba8}} 
+\index{CI\_Config@{CI\_Config}!system\_url@{system\_url}}
+\index{system\_url@{system\_url}!CI\_Config@{CI\_Config}}
+\doxysubsubsection{system\_url()}
+{\footnotesize\ttfamily system\+\_\+url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+System U\+RL
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]3.\+0.\+0 Encourages insecure practices \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/Config.\+php\end{DoxyCompactItemize}

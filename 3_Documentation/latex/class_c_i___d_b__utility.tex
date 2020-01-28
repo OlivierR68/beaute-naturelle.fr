@@ -1,0 +1,202 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+utility Class Reference}
+\label{class_c_i___d_b__utility}\index{CI\_DB\_utility@{CI\_DB\_utility}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+utility\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_c_i___d_b__utility}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\&\$db)
+\item 
+\textbf{ list\+\_\+databases} ()
+\item 
+\textbf{ database\+\_\+exists} (\$database\+\_\+name)
+\item 
+\textbf{ optimize\+\_\+table} (\$table\+\_\+name)
+\item 
+\textbf{ optimize\+\_\+database} ()
+\item 
+\textbf{ repair\+\_\+table} (\$table\+\_\+name)
+\item 
+\textbf{ csv\+\_\+from\+\_\+result} (\$query, \$delim=\textquotesingle{},\textquotesingle{}, \$newline=\char`\"{}\textbackslash{}n\char`\"{}, \$enclosure=\textquotesingle{}\char`\"{}\textquotesingle{}) 
+\item 
+\textbf{ xml\+\_\+from\+\_\+result} (\$query, \$params=array())
+\item 
+\textbf{ backup} (\$params=array())
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__utility_a1fa3127fc82f96b1436d871ef02be319}} 
+{\bfseries \$db}
+\item 
+\mbox{\label{class_c_i___d_b__utility_afe3a5b80562d93d6bc7e2b53c95b7e5a}} 
+{\bfseries \$\+\_\+list\+\_\+databases} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__utility_a083199e5c22c78912dae0a47bb2d7fad}} 
+{\bfseries \$\+\_\+optimize\+\_\+table} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__utility_a5cf925cbd52e3f6ba5b7ada3fa436efc}} 
+{\bfseries \$\+\_\+repair\+\_\+table} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b__utility_aaf2ef772755ec6f361d44e16cc9ffd69}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$db }\end{DoxyParamCaption})}
+
+Class constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \&\$db} & Database object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__utility_abe2b9d47f950dfbaf8c6ec757a9af9a2}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!backup@{backup}}
+\index{backup@{backup}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{backup()}
+{\footnotesize\ttfamily backup (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Database Backup
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__utility_aba64f8ac8169c018d251eefe95de1c84}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!csv\_from\_result@{csv\_from\_result}}
+\index{csv\_from\_result@{csv\_from\_result}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{csv\_from\_result()}
+{\footnotesize\ttfamily csv\+\_\+from\+\_\+result (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$delim = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{}]{\$newline = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}},  }\item[{}]{\$enclosure = {\ttfamily \textquotesingle{}\char`\"{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Generate C\+SV from a query result object
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$query} & Query result object \\
+\hline
+string & {\em \$delim} & Delimiter (default\+: ,) \\
+\hline
+string & {\em \$newline} & Newline character (default\+: ~\newline
+) \\
+\hline
+string & {\em \$enclosure} & Enclosure (default\+: ") \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__utility_ac0ba63aa14b19a37d4773fcc252bde81}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!database\_exists@{database\_exists}}
+\index{database\_exists@{database\_exists}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{database\_exists()}
+{\footnotesize\ttfamily database\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{\$database\+\_\+name }\end{DoxyParamCaption})}
+
+Determine if a particular database exists
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$database\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__utility_a8486b247a8868504b055622cb2dd34d3}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!list\_databases@{list\_databases}}
+\index{list\_databases@{list\_databases}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{list\_databases()}
+{\footnotesize\ttfamily list\+\_\+databases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+List databases
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+utility} \doxyref{}{p.}{class_c_i___d_b__cubrid__utility_a8486b247a8868504b055622cb2dd34d3}.
+
+\mbox{\label{class_c_i___d_b__utility_acb26598e177f525b39978f6dfca1f212}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!optimize\_database@{optimize\_database}}
+\index{optimize\_database@{optimize\_database}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{optimize\_database()}
+{\footnotesize\ttfamily optimize\+\_\+database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Optimize Database
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__utility_a6aed9274f43b64eeee607d172b51529d}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!optimize\_table@{optimize\_table}}
+\index{optimize\_table@{optimize\_table}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{optimize\_table()}
+{\footnotesize\ttfamily optimize\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table\+\_\+name }\end{DoxyParamCaption})}
+
+Optimize Table
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__utility_a41a627004d26198c69bf466eef7eaeeb}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!repair\_table@{repair\_table}}
+\index{repair\_table@{repair\_table}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{repair\_table()}
+{\footnotesize\ttfamily repair\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table\+\_\+name }\end{DoxyParamCaption})}
+
+Repair Table
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__utility_a09decb7db409060365ad2c20072523f9}} 
+\index{CI\_DB\_utility@{CI\_DB\_utility}!xml\_from\_result@{xml\_from\_result}}
+\index{xml\_from\_result@{xml\_from\_result}!CI\_DB\_utility@{CI\_DB\_utility}}
+\doxysubsubsection{xml\_from\_result()}
+{\footnotesize\ttfamily xml\+\_\+from\+\_\+result (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$params = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Generate X\+ML data from a query result object
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$query} & Query result object \\
+\hline
+array & {\em \$params} & Any preferences \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/D\+B\+\_\+utility.\+php\end{DoxyCompactItemize}

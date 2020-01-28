@@ -1,0 +1,493 @@
+\doxysection{C\+I\+\_\+\+Input Class Reference}
+\label{class_c_i___input}\index{CI\_Input@{CI\_Input}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ get} (\$index=N\+U\+LL, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ post} (\$index=N\+U\+LL, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ post\+\_\+get} (\$index, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ get\+\_\+post} (\$index, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ cookie} (\$index=N\+U\+LL, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ server} (\$index, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ input\+\_\+stream} (\$index=N\+U\+LL, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ set\+\_\+cookie} (\$name, \$value=\textquotesingle{}\textquotesingle{}, \$expire=\textquotesingle{}\textquotesingle{}, \$domain=\textquotesingle{}\textquotesingle{}, \$path=\textquotesingle{}/\textquotesingle{}, \$prefix=\textquotesingle{}\textquotesingle{}, \$secure=N\+U\+LL, \$httponly=N\+U\+LL)
+\item 
+\textbf{ ip\+\_\+address} ()
+\item 
+\textbf{ valid\+\_\+ip} (\$ip, \$which=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ user\+\_\+agent} (\$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ request\+\_\+headers} (\$xss\+\_\+clean=F\+A\+L\+SE)
+\item 
+\textbf{ get\+\_\+request\+\_\+header} (\$index, \$xss\+\_\+clean=F\+A\+L\+SE)
+\item 
+\textbf{ is\+\_\+ajax\+\_\+request} ()
+\item 
+\textbf{ is\+\_\+cli\+\_\+request} ()
+\item 
+\textbf{ method} (\$upper=F\+A\+L\+SE)
+\item 
+\textbf{ \+\_\+\+\_\+get} (\$name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+fetch\+\_\+from\+\_\+array} (\&\$array, \$index=N\+U\+LL, \$xss\+\_\+clean=N\+U\+LL)
+\item 
+\textbf{ \+\_\+sanitize\+\_\+globals} ()
+\item 
+\textbf{ \+\_\+clean\+\_\+input\+\_\+data} (\$str)
+\item 
+\textbf{ \+\_\+clean\+\_\+input\+\_\+keys} (\$str, \$fatal=T\+R\+UE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___input_a614e10d1ab6dcf06fa7fef37af7b7eee}} 
+{\bfseries \$ip\+\_\+address} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___input_a359b1debb6f1d80e345d6215af6946fb}} 
+{\bfseries \$\+\_\+allow\+\_\+get\+\_\+array} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___input_ad9ebdfce8f992b3a41aaf64ea8782933}} 
+{\bfseries \$\+\_\+standardize\+\_\+newlines}
+\item 
+\mbox{\label{class_c_i___input_a42b707bea5d9604a7460e953d9e39d7d}} 
+{\bfseries \$\+\_\+enable\+\_\+xss} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___input_a463c89c07e7cf7f5e4337a2a8e460d17}} 
+{\bfseries \$\+\_\+enable\+\_\+csrf} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___input_a52500036ee807241b8b4b7e2367c49ef}} 
+{\bfseries \$headers} = array()
+\item 
+\mbox{\label{class_c_i___input_a6f70bcba6388b55275db11f519649441}} 
+{\bfseries \$\+\_\+raw\+\_\+input\+\_\+stream}
+\item 
+\mbox{\label{class_c_i___input_aa67cd17f9c04d6c58d10a80630e4faf2}} 
+{\bfseries \$\+\_\+input\+\_\+stream}
+\item 
+\mbox{\label{class_c_i___input_a7ef3408af92597c92305e22f79e67d61}} 
+{\bfseries \$security}
+\item 
+\mbox{\label{class_c_i___input_a6ed6e0f7f970550e288f83845eec6393}} 
+{\bfseries \$uni}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___input_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Input@{CI\_Input}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+Determines whether to globally enable the X\+SS processing and whether to allow the \$\+\_\+\+G\+ET array.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___input_abc8e9e31bb15c8a44c3210ec551407c8}} 
+\index{CI\_Input@{CI\_Input}!\_\_get@{\_\_get}}
+\index{\_\_get@{\_\_get}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{\_\_get()}
+{\footnotesize\ttfamily \+\_\+\+\_\+get (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Magic \doxyref{\+\_\+\+\_\+get()}{p.}{class_c_i___input_abc8e9e31bb15c8a44c3210ec551407c8}
+
+Allows read access to protected properties
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a9c594152e7b189a290f6425df8712b73}} 
+\index{CI\_Input@{CI\_Input}!\_clean\_input\_data@{\_clean\_input\_data}}
+\index{\_clean\_input\_data@{\_clean\_input\_data}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{\_clean\_input\_data()}
+{\footnotesize\ttfamily \+\_\+clean\+\_\+input\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Clean Input Data
+
+Internal method that aids in escaping data and standardizing newline characters to P\+H\+P\+\_\+\+E\+OL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string[$\,$] & {\em \$str} & Input string(s) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_ac1c5fa9a21372d3dacb1fb99f9418384}} 
+\index{CI\_Input@{CI\_Input}!\_clean\_input\_keys@{\_clean\_input\_keys}}
+\index{\_clean\_input\_keys@{\_clean\_input\_keys}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{\_clean\_input\_keys()}
+{\footnotesize\ttfamily \+\_\+clean\+\_\+input\+\_\+keys (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$fatal = {\ttfamily TRUE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Clean Keys
+
+Internal method that helps to prevent malicious users from trying to exploit keys we make sure that keys are only named with alpha-\/numeric text and a few other items.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & Input string \\
+\hline
+bool & {\em \$fatal} & Whether to terminate script exection or to return F\+A\+L\+SE if an invalid key is encountered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_aac46f9fee9467fac5711f236d248fbc7}} 
+\index{CI\_Input@{CI\_Input}!\_fetch\_from\_array@{\_fetch\_from\_array}}
+\index{\_fetch\_from\_array@{\_fetch\_from\_array}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{\_fetch\_from\_array()}
+{\footnotesize\ttfamily \+\_\+fetch\+\_\+from\+\_\+array (\begin{DoxyParamCaption}\item[{\&}]{\$array,  }\item[{}]{\$index = {\ttfamily NULL},  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fetch from array
+
+Internal method used to retrieve values from global arrays.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$array} & \$\+\_\+\+G\+ET, \$\+\_\+\+P\+O\+ST, \$\+\_\+\+C\+O\+O\+K\+IE, \$\+\_\+\+S\+E\+R\+V\+ER, etc. \\
+\hline
+mixed & {\em \$index} & Index for item to be fetched from \$array \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_aadbb0e5cbf9b5783c872cb402ea6a2fa}} 
+\index{CI\_Input@{CI\_Input}!\_sanitize\_globals@{\_sanitize\_globals}}
+\index{\_sanitize\_globals@{\_sanitize\_globals}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{\_sanitize\_globals()}
+{\footnotesize\ttfamily \+\_\+sanitize\+\_\+globals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sanitize Globals
+
+Internal method serving for the following purposes\+:
+
+
+\begin{DoxyItemize}
+\item Unsets \$\+\_\+\+G\+ET data, if query strings are not enabled
+\item Cleans P\+O\+ST, C\+O\+O\+K\+IE and S\+E\+R\+V\+ER data
+\begin{DoxyItemize}
+\item Standardizes newline characters to P\+H\+P\+\_\+\+E\+OL
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a473ce915ac81faa466ca351dacae799d}} 
+\index{CI\_Input@{CI\_Input}!cookie@{cookie}}
+\index{cookie@{cookie}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{cookie()}
+{\footnotesize\ttfamily cookie (\begin{DoxyParamCaption}\item[{}]{\$index = {\ttfamily NULL},  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch an item from the C\+O\+O\+K\+IE array
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$index} & Index for item to be fetched from \$\+\_\+\+C\+O\+O\+K\+IE \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a970536cd64a3d4457502140cce03fb05}} 
+\index{CI\_Input@{CI\_Input}!get@{get}}
+\index{get@{get}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{get()}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$index = {\ttfamily NULL},  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch an item from the G\+ET array
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$index} & Index for item to be fetched from \$\+\_\+\+G\+ET \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_aaf7eba2dc5fda4e14ae063f66236821f}} 
+\index{CI\_Input@{CI\_Input}!get\_post@{get\_post}}
+\index{get\_post@{get\_post}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{get\_post()}
+{\footnotesize\ttfamily get\+\_\+post (\begin{DoxyParamCaption}\item[{}]{\$index,  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch an item from G\+ET data with fallback to P\+O\+ST
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$index} & Index for item to be fetched from \$\+\_\+\+G\+ET or \$\+\_\+\+P\+O\+ST \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a099af71b54f9edbfb20576a4e8a3df41}} 
+\index{CI\_Input@{CI\_Input}!get\_request\_header@{get\_request\_header}}
+\index{get\_request\_header@{get\_request\_header}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{get\_request\_header()}
+{\footnotesize\ttfamily get\+\_\+request\+\_\+header (\begin{DoxyParamCaption}\item[{}]{\$index,  }\item[{}]{\$xss\+\_\+clean = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Get Request Header
+
+Returns the value of a single member of the headers class member
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$index} & Header name \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null The requested header on success or N\+U\+LL on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a55235beafbbc257c5e511435a4d9ec81}} 
+\index{CI\_Input@{CI\_Input}!input\_stream@{input\_stream}}
+\index{input\_stream@{input\_stream}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{input\_stream()}
+{\footnotesize\ttfamily input\+\_\+stream (\begin{DoxyParamCaption}\item[{}]{\$index = {\ttfamily NULL},  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch an item from the php\+://input stream
+
+Useful when you need to access P\+UT, D\+E\+L\+E\+TE or P\+A\+T\+CH request data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$index} & Index for item to be fetched \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_aec2f772317b4fb79cc696412c2e455c3}} 
+\index{CI\_Input@{CI\_Input}!ip\_address@{ip\_address}}
+\index{ip\_address@{ip\_address}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{ip\_address()}
+{\footnotesize\ttfamily ip\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetch the IP Address
+
+Determines and validates the visitor\textquotesingle{}s IP address.
+
+\begin{DoxyReturn}{Returns}
+string IP address 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a4ae07120b0b2ace90eb2f7ec72b29426}} 
+\index{CI\_Input@{CI\_Input}!is\_ajax\_request@{is\_ajax\_request}}
+\index{is\_ajax\_request@{is\_ajax\_request}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{is\_ajax\_request()}
+{\footnotesize\ttfamily is\+\_\+ajax\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is A\+J\+AX request?
+
+Test to see if a request contains the H\+T\+T\+P\+\_\+\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+E\+D\+\_\+\+W\+I\+TH header.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a70c1e8a081ef955c1a52164634d4f66e}} 
+\index{CI\_Input@{CI\_Input}!is\_cli\_request@{is\_cli\_request}}
+\index{is\_cli\_request@{is\_cli\_request}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{is\_cli\_request()}
+{\footnotesize\ttfamily is\+\_\+cli\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is C\+LI request?
+
+Test to see if a request was made from the command line.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]3.\+0.\+0 Use is\+\_\+cli() instead \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_aaa22626885bdf9dda2346ee6422203ef}} 
+\index{CI\_Input@{CI\_Input}!method@{method}}
+\index{method@{method}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{method()}
+{\footnotesize\ttfamily method (\begin{DoxyParamCaption}\item[{}]{\$upper = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Get Request Method
+
+Return the request method
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$upper} & Whether to return in upper or lower case (default\+: F\+A\+L\+SE) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_abe57ddea9c16f0d9194c82c700c0416f}} 
+\index{CI\_Input@{CI\_Input}!post@{post}}
+\index{post@{post}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{post()}
+{\footnotesize\ttfamily post (\begin{DoxyParamCaption}\item[{}]{\$index = {\ttfamily NULL},  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch an item from the P\+O\+ST array
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$index} & Index for item to be fetched from \$\+\_\+\+P\+O\+ST \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a3c554376c4a437c5363a143d1ca88ecc}} 
+\index{CI\_Input@{CI\_Input}!post\_get@{post\_get}}
+\index{post\_get@{post\_get}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{post\_get()}
+{\footnotesize\ttfamily post\+\_\+get (\begin{DoxyParamCaption}\item[{}]{\$index,  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch an item from P\+O\+ST data with fallback to G\+ET
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$index} & Index for item to be fetched from \$\+\_\+\+P\+O\+ST or \$\+\_\+\+G\+ET \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a4bc8f8c9a9488ff359a61f1fb60e6097}} 
+\index{CI\_Input@{CI\_Input}!request\_headers@{request\_headers}}
+\index{request\_headers@{request\_headers}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{request\_headers()}
+{\footnotesize\ttfamily request\+\_\+headers (\begin{DoxyParamCaption}\item[{}]{\$xss\+\_\+clean = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Request Headers
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_aab98211ca0db00061e8eb8b928f4fd90}} 
+\index{CI\_Input@{CI\_Input}!server@{server}}
+\index{server@{server}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{server()}
+{\footnotesize\ttfamily server (\begin{DoxyParamCaption}\item[{}]{\$index,  }\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch an item from the S\+E\+R\+V\+ER array
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$index} & Index for item to be fetched from \$\+\_\+\+S\+E\+R\+V\+ER \\
+\hline
+bool & {\em \$xss\+\_\+clean} & Whether to apply X\+SS filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_aa3601d205cabc35a3d1f56ed90024eda}} 
+\index{CI\_Input@{CI\_Input}!set\_cookie@{set\_cookie}}
+\index{set\_cookie@{set\_cookie}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{set\_cookie()}
+{\footnotesize\ttfamily set\+\_\+cookie (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$value = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$expire = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$domain = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$path = {\ttfamily \textquotesingle{}/\textquotesingle{}},  }\item[{}]{\$prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$secure = {\ttfamily NULL},  }\item[{}]{\$httponly = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Set cookie
+
+Accepts an arbitrary number of parameters (up to 7) or an associative array in the first parameter containing all the values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | mixed[$\,$] & {\em \$name} & Cookie name or an array containing parameters \\
+\hline
+string & {\em \$value} & Cookie value \\
+\hline
+int & {\em \$expire} & Cookie expiration time in seconds \\
+\hline
+string & {\em \$domain} & Cookie domain (e.\+g.\+: \textquotesingle{}.yourdomain.\+com\textquotesingle{}) \\
+\hline
+string & {\em \$path} & Cookie path (default\+: \textquotesingle{}/\textquotesingle{}) \\
+\hline
+string & {\em \$prefix} & Cookie name prefix \\
+\hline
+bool & {\em \$secure} & Whether to only transfer cookies via S\+SL \\
+\hline
+bool & {\em \$httponly} & Whether to only makes the cookie accessible via H\+T\+TP (no javascript) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a4374172b6440fd600f78ff8efc0906c9}} 
+\index{CI\_Input@{CI\_Input}!user\_agent@{user\_agent}}
+\index{user\_agent@{user\_agent}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{user\_agent()}
+{\footnotesize\ttfamily user\+\_\+agent (\begin{DoxyParamCaption}\item[{}]{\$xss\+\_\+clean = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Fetch User Agent string
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null User Agent string or N\+U\+LL if it doesn\textquotesingle{}t exist 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___input_a10da42e1fde6cd5b335efcd2338c4ff8}} 
+\index{CI\_Input@{CI\_Input}!valid\_ip@{valid\_ip}}
+\index{valid\_ip@{valid\_ip}!CI\_Input@{CI\_Input}}
+\doxysubsubsection{valid\_ip()}
+{\footnotesize\ttfamily valid\+\_\+ip (\begin{DoxyParamCaption}\item[{}]{\$ip,  }\item[{}]{\$which = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Validate IP Address
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ip} & IP address \\
+\hline
+string & {\em \$which} & IP protocol\+: \textquotesingle{}ipv4\textquotesingle{} or \textquotesingle{}ipv6\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/Input.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,1161 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+driver Class Reference}
+\label{class_c_i___d_b__driver}\index{CI\_DB\_driver@{CI\_DB\_driver}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___d_b__driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$params)
+\item 
+\textbf{ initialize} ()
+\item 
+\textbf{ db\+\_\+connect} ()
+\item 
+\textbf{ db\+\_\+pconnect} ()
+\item 
+\textbf{ reconnect} ()
+\item 
+\textbf{ db\+\_\+select} ()
+\item 
+\textbf{ error} ()
+\item 
+\textbf{ db\+\_\+set\+\_\+charset} (\$charset)
+\item 
+\textbf{ platform} ()
+\item 
+\textbf{ version} ()
+\item 
+\textbf{ query} (\$sql, \$binds=F\+A\+L\+SE, \$return\+\_\+object=N\+U\+LL)
+\item 
+\textbf{ load\+\_\+rdriver} ()
+\item 
+\textbf{ simple\+\_\+query} (\$sql)
+\item 
+\textbf{ trans\+\_\+off} ()
+\item 
+\textbf{ trans\+\_\+strict} (\$mode=T\+R\+UE)
+\item 
+\textbf{ trans\+\_\+start} (\$test\+\_\+mode=F\+A\+L\+SE)
+\item 
+\textbf{ trans\+\_\+complete} ()
+\item 
+\textbf{ trans\+\_\+status} ()
+\item 
+\textbf{ trans\+\_\+begin} (\$test\+\_\+mode=F\+A\+L\+SE)
+\item 
+\textbf{ trans\+\_\+commit} ()
+\item 
+\textbf{ trans\+\_\+rollback} ()
+\item 
+\textbf{ compile\+\_\+binds} (\$sql, \$binds)
+\item 
+\textbf{ is\+\_\+write\+\_\+type} (\$sql)
+\item 
+\textbf{ elapsed\+\_\+time} (\$decimals=6)
+\item 
+\textbf{ total\+\_\+queries} ()
+\item 
+\textbf{ last\+\_\+query} ()
+\item 
+\textbf{ escape} (\$str)
+\item 
+\textbf{ escape\+\_\+str} (\$str, \$like=F\+A\+L\+SE)
+\item 
+\textbf{ escape\+\_\+like\+\_\+str} (\$str)
+\item 
+\textbf{ primary} (\$table)
+\item 
+\textbf{ count\+\_\+all} (\$table=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ list\+\_\+tables} (\$constrain\+\_\+by\+\_\+prefix=F\+A\+L\+SE)
+\item 
+\textbf{ table\+\_\+exists} (\$table\+\_\+name)
+\item 
+\textbf{ list\+\_\+fields} (\$table)
+\item 
+\textbf{ field\+\_\+exists} (\$field\+\_\+name, \$table\+\_\+name)
+\item 
+\textbf{ field\+\_\+data} (\$table)
+\item 
+\textbf{ escape\+\_\+identifiers} (\$item)
+\item 
+\textbf{ insert\+\_\+string} (\$table, \$data)
+\item 
+\textbf{ update\+\_\+string} (\$table, \$data, \$where)
+\item 
+\textbf{ call\+\_\+function} (\$function)
+\item 
+\textbf{ cache\+\_\+set\+\_\+path} (\$path=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ cache\+\_\+on} ()
+\item 
+\textbf{ cache\+\_\+off} ()
+\item 
+\textbf{ cache\+\_\+delete} (\$segment\+\_\+one=\textquotesingle{}\textquotesingle{}, \$segment\+\_\+two=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ cache\+\_\+delete\+\_\+all} ()
+\item 
+\textbf{ close} ()
+\item 
+\textbf{ display\+\_\+error} (\$\textbf{ error}=\textquotesingle{}\textquotesingle{}, \$swap=\textquotesingle{}\textquotesingle{}, \$native=F\+A\+L\+SE)
+\item 
+\textbf{ protect\+\_\+identifiers} (\$item, \$prefix\+\_\+single=F\+A\+L\+SE, \$protect\+\_\+identifiers=N\+U\+LL, \$\textbf{ field\+\_\+exists}=T\+R\+UE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a6441cca8c9fa11e16d2017e8cb733c10}} 
+{\bfseries \$dsn}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a0eb82aa5f81cf845de4b36cd653c42cf}} 
+{\bfseries \$username}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a607686ef9f99ea7c42f4f3dd3dbb2b0d}} 
+{\bfseries \$password}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a8bf9ffb42ed554b203b55377d1fc9aa4}} 
+{\bfseries \$hostname}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a7691c0162d89de0b6ba47edcd8ba8878}} 
+{\bfseries \$database}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a0cde2a16322a023d040aa7f725877597}} 
+{\bfseries \$dbdriver} = \textquotesingle{}mysqli\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a1322ca756348b11d080cb7a4f590de15}} 
+{\bfseries \$subdriver}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a81398da65aef92236c2bc2e0307f1fa4}} 
+{\bfseries \$dbprefix} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a0ea660eb249174aefdc2c35238fb1dc8}} 
+{\bfseries \$char\+\_\+set} = \textquotesingle{}utf8\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a303eb205131e0266c2a57bcc6a34e80a}} 
+{\bfseries \$dbcollat} = \textquotesingle{}utf8\+\_\+general\+\_\+ci\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a1e32803d860e58570971345dddd14d8e}} 
+{\bfseries \$encrypt} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a913c5a5af0c805fe64f884af6028fb73}} 
+{\bfseries \$swap\+\_\+pre} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_aa0787efab4b22e8a212882f3409d4c77}} 
+{\bfseries \$port} = N\+U\+LL
+\item 
+\mbox{\label{class_c_i___d_b__driver_a5b7c010f6dfe8dfd41ce86fdaed67ebf}} 
+{\bfseries \$pconnect} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a16c23f1dcbfed2f2759f5e54f604106d}} 
+{\bfseries \$conn\+\_\+id} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a0ebacb40e3b6f8bf33d3de0f2cc71474}} 
+{\bfseries \$result\+\_\+id} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a2c1bc80cc98589e419a6c535e53735de}} 
+{\bfseries \$db\+\_\+debug} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_ac75dbf878e2ceec25d2abe6730855f6b}} 
+{\bfseries \$benchmark} = 0
+\item 
+\mbox{\label{class_c_i___d_b__driver_aa7f7fc5b08bc2c3626ea7065d50c8847}} 
+{\bfseries \$query\+\_\+count} = 0
+\item 
+\mbox{\label{class_c_i___d_b__driver_a253af4ebf23051f23690926079f4285d}} 
+{\bfseries \$bind\+\_\+marker} = \textquotesingle{}?\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a083a278ea2075824db1db85edaa8e0a8}} 
+{\bfseries \$save\+\_\+queries} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a576b05de2f452e4cce4e3de12667ba0f}} 
+{\bfseries \$queries} = array()
+\item 
+\mbox{\label{class_c_i___d_b__driver_a060b2893433dfc037803cf6541420f5f}} 
+{\bfseries \$query\+\_\+times} = array()
+\item 
+\mbox{\label{class_c_i___d_b__driver_aab3007e30adbaf71d06218aa6c90e384}} 
+{\bfseries \$data\+\_\+cache} = array()
+\item 
+\mbox{\label{class_c_i___d_b__driver_a450683d6d87929985766484b2f6a9e7b}} 
+{\bfseries \$trans\+\_\+enabled} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___d_b__driver_ae3111155f1f3ec59fe667b90dafb179f}} 
+{\bfseries \$trans\+\_\+strict} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___d_b__driver_ab29a8930111a4f2a57987a9031982c34}} 
+{\bfseries \$cache\+\_\+on} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a01f61437be9e9a04ee228f5d455265db}} 
+{\bfseries \$cachedir} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a3da421c22206e24614dc73c9536ff605}} 
+{\bfseries \$cache\+\_\+autodel} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a54f3ab89da1323e5680116d8e9e94b83}} 
+{\bfseries \$\+C\+A\+C\+HE}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+version} ()
+\item 
+\textbf{ \+\_\+escape\+\_\+str} (\$str)
+\item 
+\textbf{ \+\_\+insert} (\$table, \$keys, \$values)
+\item 
+\textbf{ \+\_\+update} (\$table, \$values)
+\item 
+\textbf{ \+\_\+has\+\_\+operator} (\$str)
+\item 
+\textbf{ \+\_\+get\+\_\+operator} (\$str)
+\item 
+\textbf{ \+\_\+cache\+\_\+init} ()
+\item 
+\textbf{ \+\_\+close} ()
+\item 
+\textbf{ \+\_\+reset\+\_\+select} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a0724b7f82d62f35ef5e150146ed2a27b}} 
+{\bfseries \$\+\_\+trans\+\_\+depth} = 0
+\item 
+\mbox{\label{class_c_i___d_b__driver_a93acf0189d34131e156c6eb4a48c2b5b}} 
+{\bfseries \$\+\_\+trans\+\_\+status} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___d_b__driver_afb63c722ff858ef7a4f662ec2930aad3}} 
+{\bfseries \$\+\_\+trans\+\_\+failure} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__driver_a2e8a156a3c2abda43a4f160bcb5252e9}} 
+{\bfseries \$\+\_\+protect\+\_\+identifiers} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___d_b__driver_aa3298c4c62fbee8bb09f1b75b633fb0d}} 
+{\bfseries \$\+\_\+reserved\+\_\+identifiers} = array(\textquotesingle{}$\ast$\textquotesingle{})
+\item 
+\mbox{\label{class_c_i___d_b__driver_aaec2fb0112850159063a8e47ad3aed6e}} 
+{\bfseries \$\+\_\+escape\+\_\+char} = \textquotesingle{}\char`\"{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_adf86ecadf3d0e1ce3f5e0eaeeb3867ae}} 
+{\bfseries \$\+\_\+like\+\_\+escape\+\_\+str} = \char`\"{} E\+S\+C\+A\+PE \textquotesingle{}\%s\textquotesingle{} \char`\"{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a668acfd923d0342389cd3a614628cf2a}} 
+{\bfseries \$\+\_\+like\+\_\+escape\+\_\+chr} = \textquotesingle{}!\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__driver_a10213aa6e05f6d924d3277bb1d2fea00}} 
+{\bfseries \$\+\_\+random\+\_\+keyword} = array(\textquotesingle{}R\+A\+ND()\textquotesingle{}, \textquotesingle{}R\+A\+ND(\%d)\textquotesingle{})
+\item 
+\mbox{\label{class_c_i___d_b__driver_a06c80bac2ecbd0557827e96949c23097}} 
+{\bfseries \$\+\_\+count\+\_\+string} = \textquotesingle{}S\+E\+L\+E\+CT C\+O\+U\+NT($\ast$) AS \textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b__driver_a9162320adff1a1a4afd7f2372f753a3e}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$params }\end{DoxyParamCaption})}
+
+Class constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__odbc__driver_a9162320adff1a1a4afd7f2372f753a3e}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__driver_a3991c9b589034f12f6fed26d83ac47e4}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_cache\_init@{\_cache\_init}}
+\index{\_cache\_init@{\_cache\_init}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_cache\_init()}
+{\footnotesize\ttfamily \+\_\+cache\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initialize the Cache Class
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a4d9082658000e5ede8312067c6dda9db}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_close@{\_close}}
+\index{\_close@{\_close}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_close()}
+{\footnotesize\ttfamily \+\_\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Close DB Connection
+
+This method would be overridden by most of the drivers.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__odbc__driver_a4d9082658000e5ede8312067c6dda9db}.
+
+\mbox{\label{class_c_i___d_b__driver_af8ef0237bfcdb19215b63fff769e7a55}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_escape\_str@{\_escape\_str}}
+\index{\_escape\_str@{\_escape\_str}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_escape\_str()}
+{\footnotesize\ttfamily \+\_\+escape\+\_\+str (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Platform-\/dependent string escape
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__odbc__driver_af8ef0237bfcdb19215b63fff769e7a55}.
+
+\mbox{\label{class_c_i___d_b__driver_af932ab30583179e70fa44f91dc9c5b4d}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_get\_operator@{\_get\_operator}}
+\index{\_get\_operator@{\_get\_operator}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_get\_operator()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+operator (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the S\+QL string operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a2e0ab20a3cd2941eaa854fe0b4a81e6b}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_has\_operator@{\_has\_operator}}
+\index{\_has\_operator@{\_has\_operator}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_has\_operator()}
+{\footnotesize\ttfamily \+\_\+has\+\_\+operator (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tests whether the string has an S\+QL operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a69ee76b136052e0a8f06097fb388e53e}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_insert@{\_insert}}
+\index{\_insert@{\_insert}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_insert()}
+{\footnotesize\ttfamily \+\_\+insert (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$keys,  }\item[{}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Insert statement
+
+Generates a platform-\/specific insert string from the supplied data
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table name \\
+\hline
+{\em array} & the insert keys \\
+\hline
+{\em array} & the insert values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a7c6cc16411b9c36fbfd42a9317f64317}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_reset\_select@{\_reset\_select}}
+\index{\_reset\_select@{\_reset\_select}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_reset\_select()}
+{\footnotesize\ttfamily \+\_\+reset\+\_\+select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dummy method that allows Query Builder class to be disabled and keep \doxyref{count\+\_\+all()}{p.}{class_c_i___d_b__driver_a7f59c2dc2e3226fe49f35f8c49e8fc94} working.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder} \doxyref{}{p.}{class_c_i___d_b__query__builder_a7c6cc16411b9c36fbfd42a9317f64317}.
+
+\mbox{\label{class_c_i___d_b__driver_a2540b03a93fa73ae74c10d0e16fc073e}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_update@{\_update}}
+\index{\_update@{\_update}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_update()}
+{\footnotesize\ttfamily \+\_\+update (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Update statement
+
+Generates a platform-\/specific update string from the supplied data
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table name \\
+\hline
+{\em array} & the update data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ac997a462bb342f97f414910f0e033fb6}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!\_version@{\_version}}
+\index{\_version@{\_version}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{\_version()}
+{\footnotesize\ttfamily \+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Version number query string
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a4ccac0d027f9e49091f98d0acbbff13c}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!cache\_delete@{cache\_delete}}
+\index{cache\_delete@{cache\_delete}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{cache\_delete()}
+{\footnotesize\ttfamily cache\+\_\+delete (\begin{DoxyParamCaption}\item[{}]{\$segment\+\_\+one = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$segment\+\_\+two = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Delete the cache files associated with a particular U\+RI
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$segment\+\_\+one} & = \textquotesingle{}\textquotesingle{} \\
+\hline
+string & {\em \$segment\+\_\+two} & = \textquotesingle{}\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a6e74f4d3938c78892f490b4f11faf318}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!cache\_delete\_all@{cache\_delete\_all}}
+\index{cache\_delete\_all@{cache\_delete\_all}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{cache\_delete\_all()}
+{\footnotesize\ttfamily cache\+\_\+delete\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Delete All cache files
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ae577e2be88cb5f0d184f76dc6fd87482}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!cache\_off@{cache\_off}}
+\index{cache\_off@{cache\_off}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{cache\_off()}
+{\footnotesize\ttfamily cache\+\_\+off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disable Query Caching
+
+\begin{DoxyReturn}{Returns}
+bool cache\+\_\+on value 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a69ca9bb8bc31400922a565d5c4d64d8d}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!cache\_on@{cache\_on}}
+\index{cache\_on@{cache\_on}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{cache\_on()}
+{\footnotesize\ttfamily cache\+\_\+on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enable Query Caching
+
+\begin{DoxyReturn}{Returns}
+bool cache\+\_\+on value 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_aec8df4c9b46f8ba06831911d4c3121df}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!cache\_set\_path@{cache\_set\_path}}
+\index{cache\_set\_path@{cache\_set\_path}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{cache\_set\_path()}
+{\footnotesize\ttfamily cache\+\_\+set\+\_\+path (\begin{DoxyParamCaption}\item[{}]{\$path = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set Cache Directory Path
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the path to the cache directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_af7892f758c89d0e243def92140dbe099}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!call\_function@{call\_function}}
+\index{call\_function@{call\_function}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{call\_function()}
+{\footnotesize\ttfamily call\+\_\+function (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Enables a native P\+HP function to be run, using a platform agnostic wrapper.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$function} & Function name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!close@{close}}
+\index{close@{close}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{close()}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close DB Connection
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a0ba381d2e9078472bd0167e75cc8033c}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!compile\_binds@{compile\_binds}}
+\index{compile\_binds@{compile\_binds}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{compile\_binds()}
+{\footnotesize\ttfamily compile\+\_\+binds (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{}]{\$binds }\end{DoxyParamCaption})}
+
+Compile Bindings
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the sql statement \\
+\hline
+{\em array} & an array of bind data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__odbc__driver_a0ba381d2e9078472bd0167e75cc8033c}.
+
+\mbox{\label{class_c_i___d_b__driver_a7f59c2dc2e3226fe49f35f8c49e8fc94}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!count\_all@{count\_all}}
+\index{count\_all@{count\_all}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{count\_all()}
+{\footnotesize\ttfamily count\+\_\+all (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\char`\"{}\+Count All\char`\"{} query
+
+Generates a platform-\/specific query string that counts all records in the specified database
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a6aa545dcb7768f0b62d37cdcf7f09adc}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!db\_connect@{db\_connect}}
+\index{db\_connect@{db\_connect}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{db\_connect()}
+{\footnotesize\ttfamily db\+\_\+connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+DB connect
+
+This is just a dummy method that all drivers will override.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a0f69e662bd02de5bcf98647068e7c653}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!db\_pconnect@{db\_pconnect}}
+\index{db\_pconnect@{db\_pconnect}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{db\_pconnect()}
+{\footnotesize\ttfamily db\+\_\+pconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Persistent database connection
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_af0c7f2602586ea2050b19fb36baefb24}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!db\_select@{db\_select}}
+\index{db\_select@{db\_select}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{db\_select()}
+{\footnotesize\ttfamily db\+\_\+select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Select database
+
+This is just a dummy method to allow drivers without such functionality to not declare it, while others will override it.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a66d47c23180629f6ccea934fd2ab6d0e}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!db\_set\_charset@{db\_set\_charset}}
+\index{db\_set\_charset@{db\_set\_charset}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{db\_set\_charset()}
+{\footnotesize\ttfamily db\+\_\+set\+\_\+charset (\begin{DoxyParamCaption}\item[{}]{\$charset }\end{DoxyParamCaption})}
+
+Set client character set
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a1ca178ae41a8c6c0e461dfb2653cfd81}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!display\_error@{display\_error}}
+\index{display\_error@{display\_error}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{display\_error()}
+{\footnotesize\ttfamily display\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$error = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$swap = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$native = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Display an error message
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the error message \\
+\hline
+{\em string} & any \char`\"{}swap\char`\"{} values \\
+\hline
+{\em bool} & whether to localize the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string sends the application/views/errors/error\+\_\+db.\+php template 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a7bcec8d3f7d72453deb78e296815711a}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!elapsed\_time@{elapsed\_time}}
+\index{elapsed\_time@{elapsed\_time}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{elapsed\_time()}
+{\footnotesize\ttfamily elapsed\+\_\+time (\begin{DoxyParamCaption}\item[{}]{\$decimals = {\ttfamily 6} }\end{DoxyParamCaption})}
+
+Calculate the aggregate query elapsed time
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & The number of decimal places \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a43b8d30b879d4f09ceb059b02af2bc02}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!error@{error}}
+\index{error@{error}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{error()}
+{\footnotesize\ttfamily error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Last error
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__odbc__driver_a43b8d30b879d4f09ceb059b02af2bc02}.
+
+\mbox{\label{class_c_i___d_b__driver_ac8f37ca5703d4558c732e692194f8cd6}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!escape@{escape}}
+\index{escape@{escape}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{escape()}
+{\footnotesize\ttfamily escape (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+\char`\"{}\+Smart\char`\"{} Escape String
+
+Escapes data based on type Sets boolean and null types
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_abe5c555644f8bac97c3f84c7d2325fdc}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!escape\_identifiers@{escape\_identifiers}}
+\index{escape\_identifiers@{escape\_identifiers}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{escape\_identifiers()}
+{\footnotesize\ttfamily escape\+\_\+identifiers (\begin{DoxyParamCaption}\item[{}]{\$item }\end{DoxyParamCaption})}
+
+Escape the S\+QL Identifiers
+
+This function escapes column and table names
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a1a15f371afab8d5cfb35e38fc53c620f}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!escape\_like\_str@{escape\_like\_str}}
+\index{escape\_like\_str@{escape\_like\_str}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{escape\_like\_str()}
+{\footnotesize\ttfamily escape\+\_\+like\+\_\+str (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Escape L\+I\+KE String
+
+Calls the individual driver for platform specific escaping for L\+I\+KE conditions
+
+
+\begin{DoxyParams}{Parameters}
+{\em string$\vert$string\mbox{[}$\,$\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_aaba16891c8c93600a87075800cc5b72b}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!escape\_str@{escape\_str}}
+\index{escape\_str@{escape\_str}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{escape\_str()}
+{\footnotesize\ttfamily escape\+\_\+str (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$like = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Escape String
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string[$\,$] & {\em \$str} & Input string \\
+\hline
+bool & {\em \$like} & Whether or not the string will be used in a L\+I\+KE condition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a90355121e1ed009e0efdbd544ab56efa}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{field\_data()}
+{\footnotesize\ttfamily field\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Returns an object with field data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & the table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ad349ffee1eed59a2eb8f0f1d3033764f}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!field\_exists@{field\_exists}}
+\index{field\_exists@{field\_exists}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{field\_exists()}
+{\footnotesize\ttfamily field\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{\$field\+\_\+name,  }\item[{}]{\$table\+\_\+name }\end{DoxyParamCaption})}
+
+Determine if a particular field exists
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a91098fa7d1917ce4833f284bbef12627}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!initialize@{initialize}}
+\index{initialize@{initialize}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{initialize()}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize Database Settings
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ad27720d886add2c9abf9ac48a9ff56d5}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!insert\_string@{insert\_string}}
+\index{insert\_string@{insert\_string}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{insert\_string()}
+{\footnotesize\ttfamily insert\+\_\+string (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$data }\end{DoxyParamCaption})}
+
+Generate an insert string
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table upon which the query will be performed \\
+\hline
+{\em array} & an associative array data of key/values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_af435df5703c238769d6d16fde6d51182}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!is\_write\_type@{is\_write\_type}}
+\index{is\_write\_type@{is\_write\_type}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{is\_write\_type()}
+{\footnotesize\ttfamily is\+\_\+write\+\_\+type (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Determines if a query is a \char`\"{}write\char`\"{} type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & An S\+QL query string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__odbc__driver_af435df5703c238769d6d16fde6d51182}.
+
+\mbox{\label{class_c_i___d_b__driver_a8117354f1fa0b2873f0ad2792dc21389}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!last\_query@{last\_query}}
+\index{last\_query@{last\_query}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{last\_query()}
+{\footnotesize\ttfamily last\+\_\+query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the last query that was executed
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_aef08cd376b16b24608100ca0e3f2f85b}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!list\_fields@{list\_fields}}
+\index{list\_fields@{list\_fields}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{list\_fields()}
+{\footnotesize\ttfamily list\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Fetch Field Names
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_accef90659bed312aba1c3df80620b402}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!list\_tables@{list\_tables}}
+\index{list\_tables@{list\_tables}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{list\_tables()}
+{\footnotesize\ttfamily list\+\_\+tables (\begin{DoxyParamCaption}\item[{}]{\$constrain\+\_\+by\+\_\+prefix = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Returns an array of table names
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$constrain\+\_\+by\+\_\+prefix} & = F\+A\+L\+SE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a0bd509a0088f09f4bbfbcbbe78bc3547}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!load\_rdriver@{load\_rdriver}}
+\index{load\_rdriver@{load\_rdriver}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{load\_rdriver()}
+{\footnotesize\ttfamily load\+\_\+rdriver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Load the result drivers
+
+\begin{DoxyReturn}{Returns}
+string the name of the result class 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ad69bddb2ba31b27415484b3da4213ba8}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!platform@{platform}}
+\index{platform@{platform}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{platform()}
+{\footnotesize\ttfamily platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The name of the platform in use (mysql, mssql, etc...)
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a68e5f4a4a6fdb79a9a403b045c59b618}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!primary@{primary}}
+\index{primary@{primary}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{primary()}
+{\footnotesize\ttfamily primary (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Primary
+
+Retrieves the primary key. It assumes that the row in the first position is the primary key
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ade8e28ac268bbe2f985c5359bc949f21}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!protect\_identifiers@{protect\_identifiers}}
+\index{protect\_identifiers@{protect\_identifiers}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{protect\_identifiers()}
+{\footnotesize\ttfamily protect\+\_\+identifiers (\begin{DoxyParamCaption}\item[{}]{\$item,  }\item[{}]{\$prefix\+\_\+single = {\ttfamily FALSE},  }\item[{}]{\$protect\+\_\+identifiers = {\ttfamily NULL},  }\item[{}]{\$field\+\_\+exists = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Protect Identifiers
+
+This function is used extensively by the Query Builder class, and by a couple functions in this class. It takes a column or table name (optionally with an alias) and inserts the table prefix onto it. Some logic is necessary in order to deal with column names that include the path. Consider a query like this\+:
+
+S\+E\+L\+E\+CT hostname.\+database.\+table.\+column AS c F\+R\+OM hostname.\+database.\+table
+
+Or a query with aliasing\+:
+
+S\+E\+L\+E\+CT m.\+member\+\_\+id, m.\+member\+\_\+name F\+R\+OM members AS m
+
+Since the column name can include up to four segments (host, DB, table, column) or also have an alias prefix, we need to do a bit of work to figure this out and insert the table prefix (if it exists) in the proper position, and escape only the correct identifiers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+{\em mixed} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a4711d63638a755f763352472063f0bbf}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!query@{query}}
+\index{query@{query}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{query()}
+{\footnotesize\ttfamily query (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{}]{\$binds = {\ttfamily FALSE},  }\item[{}]{\$return\+\_\+object = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Execute the query
+
+Accepts an S\+QL string as input and returns a result object upon successful execution of a \char`\"{}read\char`\"{} type query. Returns boolean T\+R\+UE upon successful execution of a \char`\"{}write\char`\"{} type query. Returns boolean F\+A\+L\+SE upon failure, and if the \$db\+\_\+debug variable is set to T\+R\+UE will raise an error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+array & {\em \$binds} & = F\+A\+L\+SE An array of binding data \\
+\hline
+bool & {\em \$return\+\_\+object} & = N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a57c19c642ab3023e28d10c50f86ff0a8}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!reconnect@{reconnect}}
+\index{reconnect@{reconnect}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{reconnect()}
+{\footnotesize\ttfamily reconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reconnect
+
+Keep / reestablish the db connection if no queries have been sent for a length of time exceeding the server\textquotesingle{}s idle timeout.
+
+This is just a dummy method to allow drivers without such functionality to not declare it, while others will override it.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a6ac4d82d7ba4e8df07e1367229084c91}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!simple\_query@{simple\_query}}
+\index{simple\_query@{simple\_query}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{simple\_query()}
+{\footnotesize\ttfamily simple\+\_\+query (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Simple Query This is a simplified version of the \doxyref{query()}{p.}{class_c_i___d_b__driver_a4711d63638a755f763352472063f0bbf} function. Internally we only use it when running transaction commands since they do not require all the features of the main \doxyref{query()}{p.}{class_c_i___d_b__driver_a4711d63638a755f763352472063f0bbf} function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the sql query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_af148cb2cd5d490d2a480c0c741ceed03}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!table\_exists@{table\_exists}}
+\index{table\_exists@{table\_exists}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{table\_exists()}
+{\footnotesize\ttfamily table\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{\$table\+\_\+name }\end{DoxyParamCaption})}
+
+Determine if a particular table exists
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a8fc0b6551e1ca0c68c6e3a66b27310fc}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!total\_queries@{total\_queries}}
+\index{total\_queries@{total\_queries}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{total\_queries()}
+{\footnotesize\ttfamily total\+\_\+queries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the total number of queries
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a90e153cf190d273336d77cce930587e1}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_begin@{trans\_begin}}
+\index{trans\_begin@{trans\_begin}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_begin()}
+{\footnotesize\ttfamily trans\+\_\+begin (\begin{DoxyParamCaption}\item[{}]{\$test\+\_\+mode = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Begin Transaction
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$test\+\_\+mode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_af4fbdcdace4aa94a139b64877601fe9b}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_commit@{trans\_commit}}
+\index{trans\_commit@{trans\_commit}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_commit()}
+{\footnotesize\ttfamily trans\+\_\+commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Commit Transaction
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_aa0edd209de428801ce5faa1fe740852e}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_complete@{trans\_complete}}
+\index{trans\_complete@{trans\_complete}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_complete()}
+{\footnotesize\ttfamily trans\+\_\+complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Complete Transaction
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ae9080ca6b0a9a258f5e87750b266e337}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_off@{trans\_off}}
+\index{trans\_off@{trans\_off}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_off()}
+{\footnotesize\ttfamily trans\+\_\+off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disable Transactions This permits transactions to be disabled at run-\/time.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a53f76d4dfcd6ac04fb653982442aeef8}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_rollback@{trans\_rollback}}
+\index{trans\_rollback@{trans\_rollback}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_rollback()}
+{\footnotesize\ttfamily trans\+\_\+rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Rollback Transaction
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_ab082d21c9a77398c6d6705d9e978fb20}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_start@{trans\_start}}
+\index{trans\_start@{trans\_start}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_start()}
+{\footnotesize\ttfamily trans\+\_\+start (\begin{DoxyParamCaption}\item[{}]{\$test\+\_\+mode = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Start Transaction
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$test\+\_\+mode} & = F\+A\+L\+SE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a7ce49452153f13afde8f9c5212028be6}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_status@{trans\_status}}
+\index{trans\_status@{trans\_status}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_status()}
+{\footnotesize\ttfamily trans\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lets you retrieve the transaction flag to determine if it has failed
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a648f8e6b3d0c53ce2afd63cfcea1fe74}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!trans\_strict@{trans\_strict}}
+\index{trans\_strict@{trans\_strict}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{trans\_strict()}
+{\footnotesize\ttfamily trans\+\_\+strict (\begin{DoxyParamCaption}\item[{}]{\$mode = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Enable/disable Transaction Strict Mode
+
+When strict mode is enabled, if you are running multiple groups of transactions, if one group fails all subsequent groups will be rolled back.
+
+If strict mode is disabled, each group is treated autonomously, meaning a failure of one group will not affect any others
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$mode} & = T\+R\+UE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_af9eb76a74d10fa81e44ecb0dd9bf00d4}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!update\_string@{update\_string}}
+\index{update\_string@{update\_string}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{update\_string()}
+{\footnotesize\ttfamily update\+\_\+string (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$data,  }\item[{}]{\$where }\end{DoxyParamCaption})}
+
+Generate an update string
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table upon which the query will be performed \\
+\hline
+{\em array} & an associative array data of key/values \\
+\hline
+{\em mixed} & the \char`\"{}where\char`\"{} statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__driver_a6080dae0886626b9a4cedb29240708b1}} 
+\index{CI\_DB\_driver@{CI\_DB\_driver}!version@{version}}
+\index{version@{version}!CI\_DB\_driver@{CI\_DB\_driver}}
+\doxysubsubsection{version()}
+{\footnotesize\ttfamily version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Database version number
+
+Returns a string containing the version of the database being used. Most drivers will override this method.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/D\+B\+\_\+driver.\+php\end{DoxyCompactItemize}

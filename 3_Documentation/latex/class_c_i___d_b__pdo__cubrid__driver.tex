@@ -1,0 +1,163 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+cubrid\+\_\+driver Class Reference}
+\label{class_c_i___d_b__pdo__cubrid__driver}\index{CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+cubrid\+\_\+driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_c_i___d_b__pdo__cubrid__driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$params)
+\item 
+\textbf{ field\+\_\+data} (\$table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_a1322ca756348b11d080cb7a4f590de15}} 
+{\bfseries \$subdriver} = \textquotesingle{}cubrid\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+list\+\_\+tables} (\$prefix\+\_\+limit=F\+A\+L\+SE)
+\item 
+\textbf{ \+\_\+list\+\_\+columns} (\$table=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ \+\_\+truncate} (\$table)
+\item 
+\textbf{ \+\_\+from\+\_\+tables} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_aaec2fb0112850159063a8e47ad3aed6e}} 
+{\bfseries \$\+\_\+escape\+\_\+char} = \textquotesingle{}\`{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_a10213aa6e05f6d924d3277bb1d2fea00}} 
+{\bfseries \$\+\_\+random\+\_\+keyword} = array(\textquotesingle{}R\+A\+N\+D\+OM()\textquotesingle{}, \textquotesingle{}R\+A\+N\+D\+OM(\%d)\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_a9162320adff1a1a4afd7f2372f753a3e}} 
+\index{CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$params }\end{DoxyParamCaption})}
+
+Class constructor
+
+Builds the D\+SN if not already set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__pdo__driver_a9162320adff1a1a4afd7f2372f753a3e}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_aef43f7e3e7b71d337ff3724c5eb14f10}} 
+\index{CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}!\_from\_tables@{\_from\_tables}}
+\index{\_from\_tables@{\_from\_tables}!CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}}
+\doxysubsubsection{\_from\_tables()}
+{\footnotesize\ttfamily \+\_\+from\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+F\+R\+OM tables
+
+Groups tables in F\+R\+OM clauses if needed, so there is no confusion about operator precedence.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_a7ccb7f9c301fe7f0a9db701254142b63}} 
+\index{CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}!\_list\_columns@{\_list\_columns}}
+\index{\_list\_columns@{\_list\_columns}!CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}}
+\doxysubsubsection{\_list\_columns()}
+{\footnotesize\ttfamily \+\_\+list\+\_\+columns (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Show column query
+
+Generates a platform-\/specific query string so that the column names can be fetched
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_a435c0f3ce54fe7daa178baa8532ebd54}} 
+\index{CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}!\_list\_tables@{\_list\_tables}}
+\index{\_list\_tables@{\_list\_tables}!CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}}
+\doxysubsubsection{\_list\_tables()}
+{\footnotesize\ttfamily \+\_\+list\+\_\+tables (\begin{DoxyParamCaption}\item[{}]{\$prefix\+\_\+limit = {\ttfamily FALSE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Show table query
+
+Generates a platform-\/specific query string so that the table names can be fetched
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$prefix\+\_\+limit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_aa029600528fc1ce660a23ff4b4667f95}} 
+\index{CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}!\_truncate@{\_truncate}}
+\index{\_truncate@{\_truncate}!CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}}
+\doxysubsubsection{\_truncate()}
+{\footnotesize\ttfamily \+\_\+truncate (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Truncate statement
+
+Generates a platform-\/specific truncate string from the supplied data
+
+If the database does not support the T\+R\+U\+N\+C\+A\+TE statement, then this method maps to \textquotesingle{}D\+E\+L\+E\+TE F\+R\+OM table\textquotesingle{}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__pdo__driver_aa029600528fc1ce660a23ff4b4667f95}.
+
+\mbox{\label{class_c_i___d_b__pdo__cubrid__driver_a90355121e1ed009e0efdbd544ab56efa}} 
+\index{CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!CI\_DB\_pdo\_cubrid\_driver@{CI\_DB\_pdo\_cubrid\_driver}}
+\doxysubsubsection{field\_data()}
+{\footnotesize\ttfamily field\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Returns an object with field data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/drivers/pdo/subdrivers/pdo\+\_\+cubrid\+\_\+driver.\+php\end{DoxyCompactItemize}

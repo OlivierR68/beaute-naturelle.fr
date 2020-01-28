@@ -1,0 +1,134 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+\+Cache Class Reference}
+\label{class_c_i___d_b___cache}\index{CI\_DB\_Cache@{CI\_DB\_Cache}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\&\$db)
+\item 
+\textbf{ check\+\_\+path} (\$path=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ read} (\$sql)
+\item 
+\textbf{ write} (\$sql, \$object)
+\item 
+\textbf{ delete} (\$segment\+\_\+one=\textquotesingle{}\textquotesingle{}, \$segment\+\_\+two=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ delete\+\_\+all} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b___cache_ae0314d046ddf7fcfaec03222977427d3}} 
+{\bfseries \$\+CI}
+\item 
+\mbox{\label{class_c_i___d_b___cache_a1fa3127fc82f96b1436d871ef02be319}} 
+{\bfseries \$db}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b___cache_aaf2ef772755ec6f361d44e16cc9ffd69}} 
+\index{CI\_DB\_Cache@{CI\_DB\_Cache}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_Cache@{CI\_DB\_Cache}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$db }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \&\$db} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b___cache_adb73b6f91025d00c565d228c4f611f41}} 
+\index{CI\_DB\_Cache@{CI\_DB\_Cache}!check\_path@{check\_path}}
+\index{check\_path@{check\_path}!CI\_DB\_Cache@{CI\_DB\_Cache}}
+\doxysubsubsection{check\_path()}
+{\footnotesize\ttfamily check\+\_\+path (\begin{DoxyParamCaption}\item[{}]{\$path = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set Cache Directory Path
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & Path to the cache directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b___cache_ab97f36d9c24db4b2e91c9e02342cc994}} 
+\index{CI\_DB\_Cache@{CI\_DB\_Cache}!delete@{delete}}
+\index{delete@{delete}!CI\_DB\_Cache@{CI\_DB\_Cache}}
+\doxysubsubsection{delete()}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$segment\+\_\+one = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$segment\+\_\+two = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Delete cache files within a particular directory
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$segment\+\_\+one} & \\
+\hline
+string & {\em \$segment\+\_\+two} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b___cache_ac83c8ea1573fe325dfd87a282627fe6d}} 
+\index{CI\_DB\_Cache@{CI\_DB\_Cache}!delete\_all@{delete\_all}}
+\index{delete\_all@{delete\_all}!CI\_DB\_Cache@{CI\_DB\_Cache}}
+\doxysubsubsection{delete\_all()}
+{\footnotesize\ttfamily delete\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Delete all existing cache files
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b___cache_a6e421e93555105d187d7e6ba4c84521b}} 
+\index{CI\_DB\_Cache@{CI\_DB\_Cache}!read@{read}}
+\index{read@{read}!CI\_DB\_Cache@{CI\_DB\_Cache}}
+\doxysubsubsection{read()}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Retrieve a cached query
+
+The U\+RI being requested will become the name of the cache sub-\/folder. An M\+D5 hash of the S\+QL statement will become the cache file name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b___cache_a483ea50183465928c931aa17b4f4b5b8}} 
+\index{CI\_DB\_Cache@{CI\_DB\_Cache}!write@{write}}
+\index{write@{write}!CI\_DB\_Cache@{CI\_DB\_Cache}}
+\doxysubsubsection{write()}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Write a query to a cache file
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+object & {\em \$object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/D\+B\+\_\+cache.\+php\end{DoxyCompactItemize}

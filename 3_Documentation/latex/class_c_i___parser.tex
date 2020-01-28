@@ -1,0 +1,185 @@
+\doxysection{C\+I\+\_\+\+Parser Class Reference}
+\label{class_c_i___parser}\index{CI\_Parser@{CI\_Parser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ parse} (\$template, \$data, \$return=F\+A\+L\+SE)
+\item 
+\textbf{ parse\+\_\+string} (\$template, \$data, \$return=F\+A\+L\+SE)
+\item 
+\textbf{ set\+\_\+delimiters} (\$l=\textquotesingle{}\{\textquotesingle{}, \$r=\textquotesingle{}\}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___parser_ab957da01a735e612795fba1c5802b1fb}} 
+{\bfseries \$l\+\_\+delim} = \textquotesingle{}\{\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___parser_a4d80dc6a622989846dbd0e39fde0f3bb}} 
+{\bfseries \$r\+\_\+delim} = \textquotesingle{}\}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+parse} (\$template, \$data, \$return=F\+A\+L\+SE)
+\item 
+\textbf{ \+\_\+parse\+\_\+single} (\$key, \$val, \$string)
+\item 
+\textbf{ \+\_\+parse\+\_\+pair} (\$variable, \$data, \$string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___parser_ae0314d046ddf7fcfaec03222977427d3}} 
+{\bfseries \$\+CI}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___parser_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Parser@{CI\_Parser}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Parser@{CI\_Parser}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___parser_a6bd5ad826db82a61de1f3a13031faaf9}} 
+\index{CI\_Parser@{CI\_Parser}!\_parse@{\_parse}}
+\index{\_parse@{\_parse}!CI\_Parser@{CI\_Parser}}
+\doxysubsubsection{\_parse()}
+{\footnotesize\ttfamily \+\_\+parse (\begin{DoxyParamCaption}\item[{}]{\$template,  }\item[{}]{\$data,  }\item[{}]{\$return = {\ttfamily FALSE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse a template
+
+Parses pseudo-\/variables contained in the specified template, replacing them with the data in the second param
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em array} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___parser_a3f01fef88e49c40d679e35dedf89a128}} 
+\index{CI\_Parser@{CI\_Parser}!\_parse\_pair@{\_parse\_pair}}
+\index{\_parse\_pair@{\_parse\_pair}!CI\_Parser@{CI\_Parser}}
+\doxysubsubsection{\_parse\_pair()}
+{\footnotesize\ttfamily \+\_\+parse\+\_\+pair (\begin{DoxyParamCaption}\item[{}]{\$variable,  }\item[{}]{\$data,  }\item[{}]{\$string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse a tag pair
+
+Parses tag pairs\+: \{some\+\_\+tag\} string... \{/some\+\_\+tag\}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em array} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___parser_a01c9bb8a5e8802a1b21acf829cc181e7}} 
+\index{CI\_Parser@{CI\_Parser}!\_parse\_single@{\_parse\_single}}
+\index{\_parse\_single@{\_parse\_single}!CI\_Parser@{CI\_Parser}}
+\doxysubsubsection{\_parse\_single()}
+{\footnotesize\ttfamily \+\_\+parse\+\_\+single (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$val,  }\item[{}]{\$string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse a single key/value
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___parser_aed3a838a4afdff95c4bf2b1fb5062cbd}} 
+\index{CI\_Parser@{CI\_Parser}!parse@{parse}}
+\index{parse@{parse}!CI\_Parser@{CI\_Parser}}
+\doxysubsubsection{parse()}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}\item[{}]{\$template,  }\item[{}]{\$data,  }\item[{}]{\$return = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Parse a template
+
+Parses pseudo-\/variables contained in the specified template view, replacing them with the data in the second param
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em array} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___parser_a5cdfa809d6f2988d2741cb26b5a51d36}} 
+\index{CI\_Parser@{CI\_Parser}!parse\_string@{parse\_string}}
+\index{parse\_string@{parse\_string}!CI\_Parser@{CI\_Parser}}
+\doxysubsubsection{parse\_string()}
+{\footnotesize\ttfamily parse\+\_\+string (\begin{DoxyParamCaption}\item[{}]{\$template,  }\item[{}]{\$data,  }\item[{}]{\$return = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Parse a String
+
+Parses pseudo-\/variables contained in the specified string, replacing them with the data in the second param
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em array} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___parser_afd4d621c3786d2cdb554f3c2f7cf2749}} 
+\index{CI\_Parser@{CI\_Parser}!set\_delimiters@{set\_delimiters}}
+\index{set\_delimiters@{set\_delimiters}!CI\_Parser@{CI\_Parser}}
+\doxysubsubsection{set\_delimiters()}
+{\footnotesize\ttfamily set\+\_\+delimiters (\begin{DoxyParamCaption}\item[{}]{\$l = {\ttfamily \textquotesingle{}\{\textquotesingle{}},  }\item[{}]{\$r = {\ttfamily \textquotesingle{}\}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set the left/right variable delimiters
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Parser.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,149 @@
+\doxysection{C\+I\+\_\+\+Typography Class Reference}
+\label{class_c_i___typography}\index{CI\_Typography@{CI\_Typography}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ auto\+\_\+typography} (\$str, \$reduce\+\_\+linebreaks=F\+A\+L\+SE)
+\item 
+\textbf{ format\+\_\+characters} (\$str)
+\item 
+\textbf{ nl2br\+\_\+except\+\_\+pre} (\$str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___typography_ac99f5bbe8e02dc1147e9a4205dc161eb}} 
+{\bfseries \$block\+\_\+elements} = \textquotesingle{}address$\vert$blockquote$\vert$div$\vert$dl$\vert$fieldset$\vert$form$\vert$h\textbackslash{}d$\vert$hr$\vert$noscript$\vert$object$\vert$ol$\vert$p$\vert$pre$\vert$script$\vert$table$\vert$ul\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___typography_a80c70a349bff88ad1ef94dea8753bc2e}} 
+{\bfseries \$skip\+\_\+elements} = \textquotesingle{}p$\vert$pre$\vert$ol$\vert$ul$\vert$dl$\vert$object$\vert$table$\vert$h\textbackslash{}d\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___typography_a7ee5f0598125dc7e6b17a08aa6da384f}} 
+{\bfseries \$inline\+\_\+elements} = \textquotesingle{}a$\vert$abbr$\vert$acronym$\vert$b$\vert$bdo$\vert$big$\vert$br$\vert$button$\vert$cite$\vert$code$\vert$del$\vert$dfn$\vert$em$\vert$i$\vert$img$\vert$ins$\vert$input$\vert$label$\vert$map$\vert$kbd$\vert$q$\vert$samp$\vert$select$\vert$small$\vert$span$\vert$strong$\vert$sub$\vert$sup$\vert$textarea$\vert$tt$\vert$var\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___typography_a822eaf22f556c5c52bd766779d9ee22f}} 
+{\bfseries \$inner\+\_\+block\+\_\+required} = array(\textquotesingle{}blockquote\textquotesingle{})
+\item 
+\mbox{\label{class_c_i___typography_a8d5c4b7f2f7b74e118c682cf95688e22}} 
+{\bfseries \$last\+\_\+block\+\_\+element} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___typography_a6a74364571da23cc7187c864cde167ca}} 
+{\bfseries \$protect\+\_\+braced\+\_\+quotes} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+format\+\_\+newlines} (\$str)
+\item 
+\textbf{ \+\_\+protect\+\_\+characters} (\$match)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___typography_ac3384cbfc88fcd17e40624bdd6002801}} 
+\index{CI\_Typography@{CI\_Typography}!\_format\_newlines@{\_format\_newlines}}
+\index{\_format\_newlines@{\_format\_newlines}!CI\_Typography@{CI\_Typography}}
+\doxysubsubsection{\_format\_newlines()}
+{\footnotesize\ttfamily \+\_\+format\+\_\+newlines (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Format Newlines
+
+Converts newline characters into either 
+
+tags or ~\newline
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___typography_a03e8f97de4301e0fe0cf0e9f0bcd936c}} 
+\index{CI\_Typography@{CI\_Typography}!\_protect\_characters@{\_protect\_characters}}
+\index{\_protect\_characters@{\_protect\_characters}!CI\_Typography@{CI\_Typography}}
+\doxysubsubsection{\_protect\_characters()}
+{\footnotesize\ttfamily \+\_\+protect\+\_\+characters (\begin{DoxyParamCaption}\item[{}]{\$match }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Protect Characters
+
+Protects special characters from being formatted later We don\textquotesingle{}t want quotes converted within tags so we\textquotesingle{}ll temporarily convert them to \{@\+DQ\} and \{@\+SQ\} and we don\textquotesingle{}t want double dashes converted to emdash entities, so they are marked with \{@\+DD\} likewise double spaces are converted to \{@\+N\+BS\} to prevent entity conversion
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___typography_a24c284b560f34d6c7fad07e36baaa024}} 
+\index{CI\_Typography@{CI\_Typography}!auto\_typography@{auto\_typography}}
+\index{auto\_typography@{auto\_typography}!CI\_Typography@{CI\_Typography}}
+\doxysubsubsection{auto\_typography()}
+{\footnotesize\ttfamily auto\+\_\+typography (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$reduce\+\_\+linebreaks = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Auto Typography
+
+This function converts text, making it typographically correct\+:
+\begin{DoxyItemize}
+\item Converts double spaces into paragraphs.
+\item Converts single line breaks into ~\newline
+ tags
+\item Converts single and double quotes into correctly facing curly quote entities.
+\item Converts three dots into ellipsis.
+\item Converts double dashes into em-\/dashes.
+\item Converts two spaces into entities
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em bool} & whether to reduce more then two consecutive newlines to two \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___typography_a45df135c8811c2b27085dbdfd05a1eed}} 
+\index{CI\_Typography@{CI\_Typography}!format\_characters@{format\_characters}}
+\index{format\_characters@{format\_characters}!CI\_Typography@{CI\_Typography}}
+\doxysubsubsection{format\_characters()}
+{\footnotesize\ttfamily format\+\_\+characters (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Format Characters
+
+This function mainly converts double and single quotes to curly entities, but it also converts em-\/dashes, double spaces, and ampersands
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___typography_af9db9732eaa94a62b3a3ccc7f6bf860b}} 
+\index{CI\_Typography@{CI\_Typography}!nl2br\_except\_pre@{nl2br\_except\_pre}}
+\index{nl2br\_except\_pre@{nl2br\_except\_pre}!CI\_Typography@{CI\_Typography}}
+\doxysubsubsection{nl2br\_except\_pre()}
+{\footnotesize\ttfamily nl2br\+\_\+except\+\_\+pre (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Convert newlines to H\+T\+ML line breaks except within P\+RE tags
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Typography.\+php\end{DoxyCompactItemize}

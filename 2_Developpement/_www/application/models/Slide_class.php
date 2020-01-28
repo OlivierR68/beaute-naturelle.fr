@@ -1,6 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Classe Slides_class
+ * @author  Olivier Ravinasaga
+ * @version 1
+ *
+ */
+
 class Slide_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_slide_id;
@@ -69,6 +76,11 @@ class Slide_class extends CI_Model {
 		return $this->_slide_title;
 	}
 
+	/** GETTER pour sous-titre raccourci
+	 * @param $strLimit integer Limite de taille de la chaîne de caractère
+	 * @return string sous-titre
+	 */
+
 	public function getShortTitle($strLimit = 50){
 
 		if(strlen($this->_slide_title) > $strLimit) {
@@ -76,8 +88,6 @@ class Slide_class extends CI_Model {
 		} else {
 			return $this->_slide_title;
 		}
-
-
 	}
 
 	public function getText(){

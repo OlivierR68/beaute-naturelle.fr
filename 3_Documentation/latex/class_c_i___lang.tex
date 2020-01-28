@@ -1,0 +1,86 @@
+\doxysection{C\+I\+\_\+\+Lang Class Reference}
+\label{class_c_i___lang}\index{CI\_Lang@{CI\_Lang}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ load} (\$langfile, \$idiom=\textquotesingle{}\textquotesingle{}, \$return=F\+A\+L\+SE, \$add\+\_\+suffix=T\+R\+UE, \$alt\+\_\+path=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ line} (\$line, \$log\+\_\+errors=T\+R\+UE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___lang_a83170d318260a5a2e2a79dccdd371b10}} 
+{\bfseries \$language} = array()
+\item 
+\mbox{\label{class_c_i___lang_a908e9ad52a5d1956d360689452f6bdbe}} 
+{\bfseries \$is\+\_\+loaded} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___lang_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Lang@{CI\_Lang}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Lang@{CI\_Lang}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___lang_a60a06468111224f49dd5cd51e5dc1410}} 
+\index{CI\_Lang@{CI\_Lang}!line@{line}}
+\index{line@{line}!CI\_Lang@{CI\_Lang}}
+\doxysubsubsection{line()}
+{\footnotesize\ttfamily line (\begin{DoxyParamCaption}\item[{}]{\$line,  }\item[{}]{\$log\+\_\+errors = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Language line
+
+Fetches a single line of text from the language array
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$line} & Language line key \\
+\hline
+bool & {\em \$log\+\_\+errors} & Whether to log an error message if the line is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Translation 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___lang_a38b49b0297816c583824cefbc30d0217}} 
+\index{CI\_Lang@{CI\_Lang}!load@{load}}
+\index{load@{load}!CI\_Lang@{CI\_Lang}}
+\doxysubsubsection{load()}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{}]{\$langfile,  }\item[{}]{\$idiom = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$return = {\ttfamily FALSE},  }\item[{}]{\$add\+\_\+suffix = {\ttfamily TRUE},  }\item[{}]{\$alt\+\_\+path = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Load a language file
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$langfile} & Language file name \\
+\hline
+string & {\em \$idiom} & Language name (english, etc.) \\
+\hline
+bool & {\em \$return} & Whether to return the loaded array of translations \\
+\hline
+bool & {\em \$add\+\_\+suffix} & Whether to add suffix to \$langfile \\
+\hline
+string & {\em \$alt\+\_\+path} & Alternative path to look for the language file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\vert$string[] Array containing translations, if \$return is set to T\+R\+UE 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/Lang.\+php\end{DoxyCompactItemize}

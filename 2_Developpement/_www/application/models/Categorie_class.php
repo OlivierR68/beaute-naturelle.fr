@@ -58,22 +58,22 @@ class  categorie_class extends CI_Model {
 		$this->_categorie_id = $id;
 	}
 
-	public function setImg($id){
+	public function setImg($img){
 		$this->_categorie_img = $img;
 	}
 
-	public function setAlt($img){
+	public function setAlt($alt){
 		$this->_categorie_alt = $alt;
 	}
 
-	public function setSlug($type){
+	public function setSlug($slug){
 		$this->_categorie_slug = $slug;
 	}
 
-	public function setName($title){
+	public function setName($name){
 		$this->_categorie_name = $name;
 	}
-    public function setDescription($title){
+    public function setDescription($description){
 		$this->_categorie_description = $description;
 	}
 
