@@ -3,7 +3,7 @@
 
 		<div class="row no-gutters">
 			<div class="col-12 col-lg-6 d-flex">
-				<img src="assets/img/petite-venise-colmar.jpg" class="img-fluid w-100" alt="petite venise de colmar">
+				<img src="<?php echo base_url('assets/img/petite-venise-colmar.jpg')?>" class="img-fluid w-100" alt="petite venise de colmar">
 			</div>
 			<div class="col-12 col-lg-6 bn_bg-color-2 px-4 d-flex flex-column justify-content-center">
 				<div class="bn_gap-25"></div>
@@ -30,7 +30,7 @@
 
 		<div class="row no-gutters">
 			<div class="col-12 col-lg-6 d-flex align-items-center order-lg-2">
-				<img src="assets/img/flacon-de-fleur-orange-huile.jpg" alt="flacon d'huile essentiels bio"
+				<img src="<?php echo base_url('assets/img/flacon-de-fleur-orange-huile.jpg') ?>" alt="flacon d'huile essentiels bio"
 					 class="img-fluid w-100" alt="petite venise de colmar">
 			</div>
 			<div class="col-12 col-lg-6 px-4 d-flex flex-column justify-content-center">
@@ -45,7 +45,7 @@
 						Evernat, Pukka, Solgar, Thés de la Pagode... </p>
 					<p>Venez-nous voir en magasin.</p>
 
-					<a href="./magasin.html" class="btn bn_btn-green text-uppercase">Où nous
+					<a href="<?php echo site_url('pages/about') ?>" class="btn bn_btn-green text-uppercase">Où nous
 						trouver</a>
 				</div>
 				<div class="bn_gap-25"></div>
@@ -56,7 +56,7 @@
 	<section>
 		<div class="row no-gutters">
 			<div class="col-12 col-lg-6 d-flex align-items-center">
-				<img src="assets/img/soin-pierre-femmme-fleur.jpg" alt="femme alongée avec soin pierre chaude et huile"
+				<img src="<?php echo base_url('assets/img/soin-pierre-femmme-fleur.jpg') ?>" alt="femme alongée avec soin pierre chaude et huile"
 					 class="img-fluid w-100" alt="petite venise de colmar">
 			</div>
 			<div class="col-12 col-lg-6 px-4 d-flex flex-column justify-content-center">
@@ -74,7 +74,7 @@
 						spécifique.
 					</p>
 
-					<a href="./institut.html" class="btn bn_btn-green text-uppercase">nos
+					<a href="<?php echo site_url('prestations') ?>" class="btn bn_btn-green text-uppercase">nos
 						prestations</a>
 
 
@@ -105,22 +105,22 @@
 
 	<div class="bn_certif-row d-flex align-items-center justify-content-center flex-wrap">
 		<a href="https://www.usda.gov/" target="_blank" class="bn_certif-col">
-			<img src="assets/img/certif/USDA.svg" class="bn_certif-btn" alt="Logo USDA">
+			<img src="<?php echo base_url('assets/img/certif/USDA.svg') ?>" class="bn_certif-btn" alt="Logo USDA">
 		</a>
 		<a href="https://www.soilassociation.org/" target="_blank" class="bn_certif-col">
-			<img src="assets/img/certif/soil-association.svg" class="bn_certif-btn" alt="Logo Soil Association">
+			<img src="<?php echo base_url('assets/img/certif/soil-association.svg') ?>" class="bn_certif-btn" alt="Logo Soil Association">
 		</a>
 		<a href="https://www.cosmebio.org/fr/" target="_blank" class=" bn_certif-col">
-			<img src="assets/img/certif/Cosmebio.svg" class="bn_certif-btn" alt="Logo CosmeBio">
+			<img src="<?php echo base_url('assets/img/certif/Cosmebio.svg') ?>" class="bn_certif-btn" alt="Logo CosmeBio">
 		</a>
 		<a href="https://www.ecocert.com/" target="_blank" class="bn_certif-col">
-			<img src="assets/img/certif/Ecocert.svg" class="bn_certif-btn" alt="Logo Ecocert">
+			<img src="<?php echo base_url('assets/img/certif/Ecocert.svg') ?>" class="bn_certif-btn" alt="Logo Ecocert">
 		</a>
 		<a href="https://www.kontrollierte-naturkosmetik.de/f/index_f.htm" class="bn_certif-col">
-			<img src="assets/img/certif/BDIH.png" target="_blank" class="bn_certif-btn" alt="Logo BDIH">
+			<img src="<?php echo base_url('assets/img/certif/BDIH.png') ?>" target="_blank" class="bn_certif-btn" alt="Logo BDIH">
 		</a>
 		<a href="https://www.natrue.org/" target="_blank" class="bn_certif-col">
-			<img src="assets/img/certif/Natrue.gif" class="bn_certif-btn" alt="Logo Natrue.org">
+			<img src="<?php echo base_url('assets/img/certif/Natrue.gif') ?>" class="bn_certif-btn" alt="Logo Natrue.org">
 		</a>
 
 	</div>
