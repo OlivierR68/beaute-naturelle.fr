@@ -1,6 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Controller Pages
+ * @author  Olivier Ravinasaga
+ * @version 1
+ *
+ */
+
 class Pages extends CI_Controller
 {
 	public function __construct(){
@@ -8,6 +15,7 @@ class Pages extends CI_Controller
 
 	}
 
+	/** Front : Fonction permettant d'afficher la page de contact */
 	public function contact()
 	{
 		$data['preTITLE']	= "Vous avez des questions ?";
@@ -18,6 +26,7 @@ class Pages extends CI_Controller
 		$this->load->view('front/content', $data);
 	}
 
+	/** Front : Fonction permettant d'afficher la page 'A propos' */
 	public function about()
 	{
 		$data['preTITLE']	= "Découvrez";
@@ -28,6 +37,7 @@ class Pages extends CI_Controller
 		$this->load->view('front/content', $data);
 	}
 
+	/** Front : Fonction permettant d'afficher la page des mentions légales */
 	public function mentions()
 	{
 		$data['preTITLE']	= "Obligations Légales";
@@ -39,6 +49,7 @@ class Pages extends CI_Controller
 
 	}
 
+	/** Front : Fonction permettant d'afficher la page de politique de confidentialité */
 	public function politique()
 	{
 		$data['preTITLE']	= "Protection des Données";
@@ -50,6 +61,7 @@ class Pages extends CI_Controller
 
 	}
 
+	/** Front : Fonction permettant d'afficher la page du plan du site */
 	public function sitemap()
 	{
 		$data['preTITLE']	= "Arborescence";

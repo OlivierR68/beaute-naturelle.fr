@@ -65,8 +65,17 @@
                 -->
 				<div class="d-none d-md-block bn_infos">
 
-					<a class="bn_infos-items" href="<?php echo site_url('users') ?>"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
+					<?php if(!empty($this->session->firstName)) { ?>
+
+						<span class="bn_infos-items text-light">Bonjour <?php echo $this->session->firstName ?> </span>
+
+					<?php } else { ?>
+
+					<a class="bn_infos-items" href="<?php echo site_url('users/login') ?>"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
 					<a class="bn_infos-items" href="#"><i class="fas fa-user-plus"></i> S'Inscrire</a>
+
+
+					<?php }	?>
 
 
 				</div>

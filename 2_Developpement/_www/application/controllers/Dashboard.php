@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller {
 
 	}
 
+	/** Front : Fonction permettant d'afficher la page du tableau de bord */
 	public function index()
 	{
 
@@ -16,9 +17,6 @@ class Dashboard extends CI_Controller {
 
 
 		// à remplir ici, partie frontend
-
-
-
 
 
 		$data['CONTENT']	= $this->load->view('back/dashboard', $data, TRUE);
