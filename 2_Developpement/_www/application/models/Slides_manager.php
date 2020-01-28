@@ -1,6 +1,6 @@
 <?php
 /**
- * Classe Article_manager
+ * Classe Slides_manager
  * @author  Olivier Ravinasaga
  * @version 1
  *
@@ -13,8 +13,7 @@ class Slides_manager extends CI_Model {
 
 /**
  * Fonction permettant de récupérer la liste des articles
- * @parem nomVariable integer Nombre de résultat
- * @return array Tableau des articles
+ * @return array Tableau des slides
  */
 	public function findAll(){
 		$this->db->select("*");

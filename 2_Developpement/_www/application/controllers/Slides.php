@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Controller Slides
+ * @author  Olivier Ravinasaga
+ * @version 1
+ *
+ */
 class Slides extends CI_Controller {
 
 	public function __construct(){
@@ -10,6 +16,7 @@ class Slides extends CI_Controller {
 
 	}
 
+	/** Front : Fonction permettant d'afficher la page d'accueil  */
 	public function home()
 	{
 		$data['preTITLE']	= "Magasin & Institut";
@@ -28,6 +35,7 @@ class Slides extends CI_Controller {
 		$this->load->view('front/content', $data);
 	}
 
+	/** Back : Fonction permettant d'afficher la liste des slides  */
 	public function list()
 	{
 		$data['TITLE'] 		= "Liste des slides";
@@ -46,6 +54,7 @@ class Slides extends CI_Controller {
 		$this->load->view('back/content', $data);
 	}
 
+	/** Back : Fonction d'ajouter un slide */
 	public function add()
 	{
 		$data['TITLE'] 		= "Ajouter un slide";
@@ -53,6 +62,7 @@ class Slides extends CI_Controller {
 		$this->load->view('back/content', $data);
 	}
 
+	/** Back : Fonction d'éditer un slide */
 	public function edit()
 	{
 		$data['TITLE'] 		= "Ajouter un slide";

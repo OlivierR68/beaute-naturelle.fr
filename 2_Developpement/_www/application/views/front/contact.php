@@ -1,7 +1,12 @@
+  
+        <?php // echo validation_errors(); ?>
+        <?php // echo form_open('form'); ?>
+
 
 <main class="container bn_content">
 
         <div class="bn_gap-50"></div>
+
 
         <div class="row">
             <div class="col-12 col-md-6">
@@ -42,11 +47,11 @@
 
             <div class="form-row bn_form-row">
                 <div class="form-group col-12 col-md-6 bn_form-input pr-lg-3">
-                    <label for="inputAddress">Email</label>
+                    <label for="inputaddress">Email</label>
                     <input type="email" class="form-control" id="inputAddress">
                 </div>
                 <div class="form-group col-12 col-md-6 bn_form-input">
-                    <label for="inputAddress2">Téléphone</label>
+                    <label for="inputaddress2">Téléphone</label>
                     <input type="tel" class="form-control" id="inputAddress2">
                 </div>
 

@@ -1,6 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Controller Users
+ * @author Olivier Ravinasaga
+ * @author Morand Claisse
+ * @version 1
+ *
+ */
+
 class Prestations extends CI_Controller {
 
 	public function __construct(){
@@ -9,6 +17,7 @@ class Prestations extends CI_Controller {
         $this->load->model("Categorie_class");
 	}
 
+	/** Front : Fonction permettant d'afficher la page de prestation  */
 	public function index()
 	{
 		$data['preTITLE']	= "Préstations & Tarifs";
