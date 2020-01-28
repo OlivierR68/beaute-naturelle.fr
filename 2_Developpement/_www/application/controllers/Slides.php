@@ -13,6 +13,7 @@ class Slides extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Slides_manager");
 		$this->load->model("Slide_class");
+		$this->load->library('upload');
 
 	}
 
@@ -36,7 +37,7 @@ class Slides extends CI_Controller {
 	}
 
 	/** Back : Fonction permettant d'afficher la liste des slides  */
-	public function list()
+	public function ListPage()
 	{
 		$data['TITLE'] 		= "Liste des slides";
 
@@ -54,18 +55,36 @@ class Slides extends CI_Controller {
 		$this->load->view('back/content', $data);
 	}
 
-	/** Back : Fonction d'ajouter un slide */
-	public function add()
+	/** Back : Fonction pour afficher la page d'un slide */
+	public function addPage()
 	{
+
+
+		if(count($this->input->post())>0){
+
+			$objSlide = new Slide_class();
+			$objSlide->hydrate($this->input->post());
+
+			var_dump($objSlide->getArray());
+
+			$this->Slides_manager->new($objSlide);
+
+		}
+
+		$_POST = array();
+
 		$data['TITLE'] 		= "Ajouter un slide";
 		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
 
+
+
 	/** Back : Fonction d'éditer un slide */
 	public function edit()
 	{
 		$data['TITLE'] 		= "Ajouter un slide";
+
 
 
 		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);

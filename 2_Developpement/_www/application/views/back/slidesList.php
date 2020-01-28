@@ -34,6 +34,8 @@
 						<td><?php echo $objSlide->getPosition() ?></td>
 						<td class="bn_action">
 
+							<?php /* à implémenter si j'ai le temps...
+
 							<?php if($objSlide->getPosition() == 1) { ?>
 								<i class="fas fa-arrow-up text-muted"></i> |
 							<?php } else { ?>
@@ -45,7 +47,7 @@
 							<?php } else { ?>
 								<a href="#" title="- Position"><i class="fas fa-arrow-down"></i></a> |
 							<?php } ?>
-
+							*/ ?>
 
 							<a href="#" title="Modifier"><i class="far fa-edit"></i></a> |
 							<a href="#" title="Copier"><i class="far fa-copy"></i></a> |

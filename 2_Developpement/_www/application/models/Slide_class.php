@@ -66,15 +66,44 @@ class Slide_class extends CI_Model {
 		return $this->_slide_type;
 	}
 
+	public function getTitle(){
+		return $this->_slide_title;
+	}
+
+
+	public function getText(){
+		return $this->_slide_text;
+	}
+
+
+	/** GETTER savoir si le texte est grand ou moyen selon le type
+	 *@return string  moyen ou grand
+	 */
+
 	public function getTaille(){
 		return $this->_slide_type=='h2' ?  'Moyen' : 'Grand';
 	}
 
 
+	/** GETTER pour la liste des attributs
+	 *@return array Liste des attributs
+	 */
 
-	public function getTitle(){
-		return $this->_slide_title;
+	public function getArray(){
+
+		$varArray = ['id','position','default','libelle','img','type','title','text'];
+		$array = array();
+
+		foreach ($varArray as &$var) {
+			$varName = "_slide_".$var;
+			$keyName = substr($varName,1);
+			$array[$keyName] =  $this->$varName;
+		}
+
+		return $array;
+
 	}
+
 
 	/** GETTER pour sous-titre raccourci
 	 * @param $strLimit integer Limite de taille de la chaîne de caractère
@@ -90,9 +119,6 @@ class Slide_class extends CI_Model {
 		}
 	}
 
-	public function getText(){
-		return $this->_slide_text;
-	}
 
 	/** SETTERS (pour chaque attribut) **/
 

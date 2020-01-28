@@ -25,6 +25,17 @@ class Slides_manager extends CI_Model {
 		return $queryGroup->result_array();
 	}
 
+
+	public function new($obj){
+
+		if(method_exists($obj,'getArray')) {
+			$this->db->insert('slide', $obj->getArray());
+		}
+
+	}
+
+
+
 	function switchPosition($idFrom, $idTo) {
 
 		// fonction à finir... <-------------------------------------------[!]
