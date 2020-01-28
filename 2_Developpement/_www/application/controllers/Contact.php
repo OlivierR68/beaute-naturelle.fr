@@ -1,97 +1,35 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Contact extends CI_Controller {
 
-    public function __construct(){
-        parent::__construct();
-        $this->load->model("Contact_manager");
-		$this->load->model("Contact_class");
-    }
-}
+        public function index()
+        {
+                $this->load->helper(array('form', 'url'));
 
-public function index(){
-    $data = $postData = array()
+                $this->load->library('form_validation');
 
-    // Si la requete est envoyée
-    if($this->input->post('contactSubmit')){
-
-        // Donnée du contact
-        $formData = $this->input->post();
-
-        // Regle du formulaire pour validation
-        $this->form_validation->set_rules('name', 'Name', 'required')
-        $this->form_validation->set_rules('name', 'Name', 'required')
-        $this->form_validation->set_rules('email', 'Email', 'required')
-        $this->form_validation->set_rules('tel', 'Tel', 'required')
-        $this->form_validation->set_rules('message', 'Message', 'required')
-
-        // Valider le formulaire du data
-        if($this->form_validation->run() == true){
-
-            // Definire email data
-            $mailData = array(
-                'name' => $formData['name'],
-                'email' => $formData['email'],
-                'tel' => $formData['tel'],
-                'message' => $formData['message'],
-            );
-
-            // Envoyer l'email
-            $send = $this->sendEmail($mailData);
-
-            // Verifier le status de l'envoi
-            if($send){
-                $formData = array();
-
-                $data['status'] = array(
-                    'type' => 'reussi'
-                    'msg' => 'Votre demande de contact a bien été envoyé.'
+                $this->form_validation->set_rules(
+                    'name', 'Name',
+                    'trim|required|min_length[2]|max_lenght[20]',
+                /*    array(
+                            'required'  => 'ERREUR %s.',
+                            'is_unique' => 'This %s existe déjà.'
+                    ) */
                 );
-            }else{
-                $data['status'] = array(
-                    'type' => 'erreur',
-                    'msg' => 'Votre demande a échouée, veuillez réessayer.'
-                );
-            }
+                $this->form_validation->set_rules('lastname', 'Lastname', 'trim|required|min_length[2]|max_lenght[20]');
+                $this->form_validation->set_rules('inputaddress', 'Inputaddress', 'trim|required|valid_email');
+                $this->form_validation->set_rules('inputaddress2', 'Inputaddress2', 'required');
+                $this->form_validation->set_rules('message', 'Message', 'required');
+
+                // Si la requete est fausse
+                if ($this->form_validation->run() == FALSE)
+                {
+                        $this->load->view('contact');
+                }
+                // Si la requete est bonne
+                else
+                {
+                        $this->load->view('contactsuccess');
+                }
         }
-    }
-    
-    // POST data vers view
-    $data['postData'] = $formData;
-    
-    // Pass data vers view
-    $this->load->view('contact/index', $data);
-}
-
-private function sendEmail($mailData){
-    // Email library
-    $this->load->library('email');
-    
-    // Mail config
-    $to = 'stevenrobert08@gmail.com';
-    $from = 'Mariejeanne@gmail.com';
-    $fromName = 'Marie jeanne';
-    $mailSubject = 'Demande de contact envoyée par '.$mailData['name'];
-    
-    // Mail contenu
-    $mailContent = '
-        <h2>Contact Request Submitted</h2>
-        <p><b>Name: </b>'.$mailData['name'].'</p>
-        <p><b>Email: </b>'.$mailData['email'].'</p>
-        <p><b>Subject: </b>'.$mailData['tel'].'</p>
-        <p><b>Message: </b>'.$mailData['message'].'</p>
-    ';
-        
-    $config['mailtype'] = 'html';
-    $this->email->initialize($config);
-    $this->email->to($to);
-    $this->email->from($from, $fromName);
-    $this->email->subject($mailTel);
-    $this->email->message($mailContent);
-    
-    // Envoyer email & return status
-    return $this->email->send()?true:false;
-}
-
-}
+} 
