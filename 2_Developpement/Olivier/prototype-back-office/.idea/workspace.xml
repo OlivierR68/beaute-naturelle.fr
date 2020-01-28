@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42f6361f-038b-419c-aa55-9e7d9d554245" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../_www/application/views/back/slidesAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../_www/application/views/back/slidesAdd.php" afterDir="false" />
-    </list>
+    <list default="true" id="42f6361f-038b-419c-aa55-9e7d9d554245" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580111710842</updated>
       <workItem from="1580111712160" duration="1240000" />
+      <workItem from="1580196002894" duration="16000" />
     </task>
     <servers />
   </component>
@@ -64,9 +63,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1580111800757">
+    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1580196017653">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1580111800757" />
+    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1580196017653" />
+    <state x="2016" y="315" key="com.intellij.ide.util.TipDialog" timestamp="1580196004874">
+      <screen x="1680" y="0" width="1280" height="984" />
+    </state>
+    <state x="2016" y="315" key="com.intellij.ide.util.TipDialog/0.0.1680.1010/1680.0.1280.984@1680.0.1280.984" timestamp="1580196004874" />
   </component>
 </project>
