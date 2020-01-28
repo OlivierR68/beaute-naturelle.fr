@@ -1,0 +1,202 @@
+\doxysection{X\+M\+L\+\_\+\+R\+P\+C\+\_\+\+Message Class Reference}
+\label{class_x_m_l___r_p_c___message}\index{XML\_RPC\_Message@{XML\_RPC\_Message}}
+Inheritance diagram for X\+M\+L\+\_\+\+R\+P\+C\+\_\+\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_x_m_l___r_p_c___message}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$\textbf{ method}, \$pars=F\+A\+L\+SE)
+\item 
+\textbf{ create\+Payload} ()
+\item 
+\textbf{ parse\+Response} (\$fp)
+\item 
+\textbf{ open\+\_\+tag} (\$the\+\_\+parser, \$name)
+\item 
+\textbf{ closing\+\_\+tag} (\$the\+\_\+parser, \$name)
+\item 
+\textbf{ character\+\_\+data} (\$the\+\_\+parser, \$data)
+\item 
+\textbf{ add\+Param} (\$par)
+\item 
+\textbf{ output\+\_\+parameters} (array \$array=array())
+\item 
+\textbf{ decode\+\_\+message} (\$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___message_ab6c08f2335783abfa1bce5d22fb3466e}} 
+{\bfseries \$payload}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___message_a88c34f4701e451bbcef63e44e5902ebd}} 
+{\bfseries \$method\+\_\+name}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___message_afe68e6fbe7acfbffc0af0c84a1996466}} 
+{\bfseries \$params} = array()
+\item 
+\mbox{\label{class_x_m_l___r_p_c___message_aad3b174789357e147f0daa5b69930ac8}} 
+{\bfseries \$xh} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_x_m_l___r_p_c___message_a099ea001f597681d3e5d9004923ccbcf}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$pars = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & \\
+\hline
+array & {\em \$pars} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_x_m_l___r_p_c___message_a8000e3ae75e90052e5ee10febb9ce2d0}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!addParam@{addParam}}
+\index{addParam@{addParam}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{addParam()}
+{\footnotesize\ttfamily add\+Param (\begin{DoxyParamCaption}\item[{}]{\$par }\end{DoxyParamCaption})}
+
+Add parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___message_ae10d173fc93c23cb233ff01acb2afbe2}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!character\_data@{character\_data}}
+\index{character\_data@{character\_data}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{character\_data()}
+{\footnotesize\ttfamily character\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$the\+\_\+parser,  }\item[{}]{\$data }\end{DoxyParamCaption})}
+
+Parse character data
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___message_a6f0fbd9812fbf30516fa22d5743d9e89}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!closing\_tag@{closing\_tag}}
+\index{closing\_tag@{closing\_tag}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{closing\_tag()}
+{\footnotesize\ttfamily closing\+\_\+tag (\begin{DoxyParamCaption}\item[{}]{\$the\+\_\+parser,  }\item[{}]{\$name }\end{DoxyParamCaption})}
+
+End Element Handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___message_a9db0a53d149ebbb907ef60a27bbc9f1c}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!createPayload@{createPayload}}
+\index{createPayload@{createPayload}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{createPayload()}
+{\footnotesize\ttfamily create\+Payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create Payload to Send
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___message_a76c958448d4b6569bfab9bfd2fb3dff0}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!decode\_message@{decode\_message}}
+\index{decode\_message@{decode\_message}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{decode\_message()}
+{\footnotesize\ttfamily decode\+\_\+message (\begin{DoxyParamCaption}\item[{}]{\$param }\end{DoxyParamCaption})}
+
+Decode message
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___message_a7709ec5b6f0e3769592f8afdc23b9169}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!open\_tag@{open\_tag}}
+\index{open\_tag@{open\_tag}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{open\_tag()}
+{\footnotesize\ttfamily open\+\_\+tag (\begin{DoxyParamCaption}\item[{}]{\$the\+\_\+parser,  }\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Start Element Handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+An Invalid Element is Found, so we have trouble\mbox{\label{class_x_m_l___r_p_c___message_a763d97af7e5ff17493db7ecbd1064ba9}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!output\_parameters@{output\_parameters}}
+\index{output\_parameters@{output\_parameters}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{output\_parameters()}
+{\footnotesize\ttfamily output\+\_\+parameters (\begin{DoxyParamCaption}\item[{array}]{\$array = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Output parameters
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___message_ab1b93386615fce804baf236bf660a646}} 
+\index{XML\_RPC\_Message@{XML\_RPC\_Message}!parseResponse@{parseResponse}}
+\index{parseResponse@{parseResponse}!XML\_RPC\_Message@{XML\_RPC\_Message}}
+\doxysubsubsection{parseResponse()}
+{\footnotesize\ttfamily parse\+Response (\begin{DoxyParamCaption}\item[{}]{\$fp }\end{DoxyParamCaption})}
+
+Parse External X\+M\+L-\/\+R\+PC Server\textquotesingle{}s Response
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Xmlrpc.\+php\end{DoxyCompactItemize}

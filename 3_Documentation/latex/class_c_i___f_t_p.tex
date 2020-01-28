@@ -1,0 +1,419 @@
+\doxysection{C\+I\+\_\+\+F\+TP Class Reference}
+\label{class_c_i___f_t_p}\index{CI\_FTP@{CI\_FTP}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$config=array())
+\item 
+\textbf{ initialize} (\$config=array())
+\item 
+\textbf{ connect} (\$config=array())
+\item 
+\textbf{ changedir} (\$path, \$suppress\+\_\+debug=F\+A\+L\+SE)
+\item 
+\textbf{ mkdir} (\$path, \$permissions=N\+U\+LL)
+\item 
+\textbf{ upload} (\$locpath, \$rempath, \$mode=\textquotesingle{}auto\textquotesingle{}, \$permissions=N\+U\+LL)
+\item 
+\textbf{ download} (\$rempath, \$locpath, \$mode=\textquotesingle{}auto\textquotesingle{})
+\item 
+\textbf{ rename} (\$old\+\_\+file, \$new\+\_\+file, \$\textbf{ move}=F\+A\+L\+SE)
+\item 
+\textbf{ move} (\$old\+\_\+file, \$new\+\_\+file)
+\item 
+\textbf{ delete\+\_\+file} (\$filepath)
+\item 
+\textbf{ delete\+\_\+dir} (\$filepath)
+\item 
+\textbf{ chmod} (\$path, \$perm)
+\item 
+\textbf{ list\+\_\+files} (\$path=\textquotesingle{}.\textquotesingle{})
+\item 
+\textbf{ mirror} (\$locpath, \$rempath)
+\item 
+\textbf{ close} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___f_t_p_a8bf9ffb42ed554b203b55377d1fc9aa4}} 
+{\bfseries \$hostname} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___f_t_p_a0eb82aa5f81cf845de4b36cd653c42cf}} 
+{\bfseries \$username} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___f_t_p_a607686ef9f99ea7c42f4f3dd3dbb2b0d}} 
+{\bfseries \$password} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___f_t_p_aa0787efab4b22e8a212882f3409d4c77}} 
+{\bfseries \$port} = 21
+\item 
+\mbox{\label{class_c_i___f_t_p_a9fb61732ea9189fa2be5574ad3576d9c}} 
+{\bfseries \$passive} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___f_t_p_a85ae3e64cd40e9564adceb010085e9dd}} 
+{\bfseries \$debug} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+login} ()
+\item 
+\textbf{ \+\_\+is\+\_\+conn} ()
+\item 
+\textbf{ \+\_\+getext} (\$filename)
+\item 
+\textbf{ \+\_\+settype} (\$ext)
+\item 
+\textbf{ \+\_\+error} (\$line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___f_t_p_a16c23f1dcbfed2f2759f5e54f604106d}} 
+{\bfseries \$conn\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___f_t_p_af7f9493844d2d66e924e3c1df51ce616}} 
+\index{CI\_FTP@{CI\_FTP}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___f_t_p_ac618e7d56614851d2c54aa096e1bcace}} 
+\index{CI\_FTP@{CI\_FTP}!\_error@{\_error}}
+\index{\_error@{\_error}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{\_error()}
+{\footnotesize\ttfamily \+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Display error message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$line} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_ab06ef33f96f03cafbb8f2bb6d695ef1f}} 
+\index{CI\_FTP@{CI\_FTP}!\_getext@{\_getext}}
+\index{\_getext@{\_getext}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{\_getext()}
+{\footnotesize\ttfamily \+\_\+getext (\begin{DoxyParamCaption}\item[{}]{\$filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Extract the file extension
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_af20c08e4b61fe028e032b388cd73936a}} 
+\index{CI\_FTP@{CI\_FTP}!\_is\_conn@{\_is\_conn}}
+\index{\_is\_conn@{\_is\_conn}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{\_is\_conn()}
+{\footnotesize\ttfamily \+\_\+is\+\_\+conn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validates the connection ID
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_a95562e7b8a41561f4b0b525d9c7fe701}} 
+\index{CI\_FTP@{CI\_FTP}!\_login@{\_login}}
+\index{\_login@{\_login}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{\_login()}
+{\footnotesize\ttfamily \+\_\+login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+F\+TP Login
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_aacd9d6628615078d8df9aab1fe70e391}} 
+\index{CI\_FTP@{CI\_FTP}!\_settype@{\_settype}}
+\index{\_settype@{\_settype}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{\_settype()}
+{\footnotesize\ttfamily \+\_\+settype (\begin{DoxyParamCaption}\item[{}]{\$ext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the upload type
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ext} & Filename extension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_a81098bf710d7879da8d69130f136475b}} 
+\index{CI\_FTP@{CI\_FTP}!changedir@{changedir}}
+\index{changedir@{changedir}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{changedir()}
+{\footnotesize\ttfamily changedir (\begin{DoxyParamCaption}\item[{}]{\$path,  }\item[{}]{\$suppress\+\_\+debug = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Change directory
+
+The second parameter lets us momentarily turn off debugging so that this function can be used to test for the existence of a folder without throwing an error. There\textquotesingle{}s no F\+TP equivalent to is\+\_\+dir() so we do it by trying to change to a particular directory. Internally, this parameter is only used by the \char`\"{}mirror\char`\"{} function below.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+bool & {\em \$suppress\+\_\+debug} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_a9af83eefaf53c7362e7108d1f82bf1ab}} 
+\index{CI\_FTP@{CI\_FTP}!chmod@{chmod}}
+\index{chmod@{chmod}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{chmod()}
+{\footnotesize\ttfamily chmod (\begin{DoxyParamCaption}\item[{}]{\$path,  }\item[{}]{\$perm }\end{DoxyParamCaption})}
+
+Set file permissions
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & File path \\
+\hline
+int & {\em \$perm} & Permissions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{CI\_FTP@{CI\_FTP}!close@{close}}
+\index{close@{close}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{close()}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close the connection
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_ab2827759611aaaf0c59e69661122c534}} 
+\index{CI\_FTP@{CI\_FTP}!connect@{connect}}
+\index{connect@{connect}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{connect()}
+{\footnotesize\ttfamily connect (\begin{DoxyParamCaption}\item[{}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+F\+TP Connect
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & Connection values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_af09b3ab08984b145506dcff4f75a051c}} 
+\index{CI\_FTP@{CI\_FTP}!delete\_dir@{delete\_dir}}
+\index{delete\_dir@{delete\_dir}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{delete\_dir()}
+{\footnotesize\ttfamily delete\+\_\+dir (\begin{DoxyParamCaption}\item[{}]{\$filepath }\end{DoxyParamCaption})}
+
+Delete a folder and recursively delete everything (including sub-\/folders) contained within it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filepath} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_aad793fb503643d98b58426421718e18a}} 
+\index{CI\_FTP@{CI\_FTP}!delete\_file@{delete\_file}}
+\index{delete\_file@{delete\_file}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{delete\_file()}
+{\footnotesize\ttfamily delete\+\_\+file (\begin{DoxyParamCaption}\item[{}]{\$filepath }\end{DoxyParamCaption})}
+
+Rename (or move) a file
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filepath} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_aefb1987159bc6c547d8c02b2e5aa2f25}} 
+\index{CI\_FTP@{CI\_FTP}!download@{download}}
+\index{download@{download}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{download()}
+{\footnotesize\ttfamily download (\begin{DoxyParamCaption}\item[{}]{\$rempath,  }\item[{}]{\$locpath,  }\item[{}]{\$mode = {\ttfamily \textquotesingle{}auto\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Download a file from a remote server to the local server
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$rempath} & \\
+\hline
+string & {\em \$locpath} & \\
+\hline
+string & {\em \$mode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_a481385e36d920f5a5005ace05c6cd016}} 
+\index{CI\_FTP@{CI\_FTP}!initialize@{initialize}}
+\index{initialize@{initialize}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{initialize()}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}\item[{}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Initialize preferences
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_a2a40473caefcd36b60e3e96b3395975c}} 
+\index{CI\_FTP@{CI\_FTP}!list\_files@{list\_files}}
+\index{list\_files@{list\_files}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{list\_files()}
+{\footnotesize\ttfamily list\+\_\+files (\begin{DoxyParamCaption}\item[{}]{\$path = {\ttfamily \textquotesingle{}.\textquotesingle{}} }\end{DoxyParamCaption})}
+
+F\+TP List files in the specified directory
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_aea2de30bbdf050cb607bbc5a36772bf3}} 
+\index{CI\_FTP@{CI\_FTP}!mirror@{mirror}}
+\index{mirror@{mirror}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{mirror()}
+{\footnotesize\ttfamily mirror (\begin{DoxyParamCaption}\item[{}]{\$locpath,  }\item[{}]{\$rempath }\end{DoxyParamCaption})}
+
+Read a directory and recreate it remotely
+
+This function recursively reads a folder and everything it contains (including sub-\/folders) and creates a mirror via F\+TP based on it. Whatever the directory structure of the original file path will be recreated on the server.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$locpath} & Path to source with trailing slash \\
+\hline
+string & {\em \$rempath} & Path to destination -\/ include the base folder with trailing slash \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_a077f5ce3771d83b8196e07ccc27e49ff}} 
+\index{CI\_FTP@{CI\_FTP}!mkdir@{mkdir}}
+\index{mkdir@{mkdir}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{mkdir()}
+{\footnotesize\ttfamily mkdir (\begin{DoxyParamCaption}\item[{}]{\$path,  }\item[{}]{\$permissions = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Create a directory
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+int & {\em \$permissions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_acb1443339c3058c83b79f0f503630920}} 
+\index{CI\_FTP@{CI\_FTP}!move@{move}}
+\index{move@{move}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{move()}
+{\footnotesize\ttfamily move (\begin{DoxyParamCaption}\item[{}]{\$old\+\_\+file,  }\item[{}]{\$new\+\_\+file }\end{DoxyParamCaption})}
+
+Move a file
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$old\+\_\+file} & \\
+\hline
+string & {\em \$new\+\_\+file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_aa670f7340bb15f61d481f4b3c64bd9dc}} 
+\index{CI\_FTP@{CI\_FTP}!rename@{rename}}
+\index{rename@{rename}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{rename()}
+{\footnotesize\ttfamily rename (\begin{DoxyParamCaption}\item[{}]{\$old\+\_\+file,  }\item[{}]{\$new\+\_\+file,  }\item[{}]{\$move = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Rename (or move) a file
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$old\+\_\+file} & \\
+\hline
+string & {\em \$new\+\_\+file} & \\
+\hline
+bool & {\em \$move} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___f_t_p_a6e11a64f2c0a3f8f1659f4e32032031d}} 
+\index{CI\_FTP@{CI\_FTP}!upload@{upload}}
+\index{upload@{upload}!CI\_FTP@{CI\_FTP}}
+\doxysubsubsection{upload()}
+{\footnotesize\ttfamily upload (\begin{DoxyParamCaption}\item[{}]{\$locpath,  }\item[{}]{\$rempath,  }\item[{}]{\$mode = {\ttfamily \textquotesingle{}auto\textquotesingle{}},  }\item[{}]{\$permissions = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Upload a file to the server
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$locpath} & \\
+\hline
+string & {\em \$rempath} & \\
+\hline
+string & {\em \$mode} & \\
+\hline
+int & {\em \$permissions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Ftp.\+php\end{DoxyCompactItemize}

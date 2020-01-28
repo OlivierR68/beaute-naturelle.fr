@@ -1,0 +1,153 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+forge Class Reference}
+\label{class_c_i___d_b__mysql__forge}\index{CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+forge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___d_b__mysql__forge}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+create\+\_\+table\+\_\+attr} (\$attributes)
+\item 
+\textbf{ \+\_\+alter\+\_\+table} (\$alter\+\_\+type, \$table, \$field)
+\item 
+\textbf{ \+\_\+process\+\_\+column} (\$field)
+\item 
+\textbf{ \+\_\+process\+\_\+indexes} (\$table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__mysql__forge_acd23c9a8735806155f1a5d0a87c151f2}} 
+{\bfseries \$\+\_\+create\+\_\+database} = \textquotesingle{}C\+R\+E\+A\+TE D\+A\+T\+A\+B\+A\+SE \%s C\+H\+A\+R\+A\+C\+T\+ER S\+ET \%s C\+O\+L\+L\+A\+TE \%s\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__mysql__forge_a73e07acdd35c948ad353903c2827af6e}} 
+{\bfseries \$\+\_\+create\+\_\+table\+\_\+keys} = T\+R\+UE
+\item 
+{\bfseries \$\+\_\+unsigned}
+\item 
+\mbox{\label{class_c_i___d_b__mysql__forge_ae58fe6a5104d4a069a49b27533ce808f}} 
+{\bfseries \$\+\_\+null} = \textquotesingle{}N\+U\+LL\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__mysql__forge_a41c6cae02f2fda8b429ad0afb9509426}} 
+\index{CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}!\_alter\_table@{\_alter\_table}}
+\index{\_alter\_table@{\_alter\_table}!CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}}
+\doxysubsubsection{\_alter\_table()}
+{\footnotesize\ttfamily \+\_\+alter\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$alter\+\_\+type,  }\item[{}]{\$table,  }\item[{}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+A\+L\+T\+ER T\+A\+B\+LE
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alter\+\_\+type} & A\+L\+T\+ER type \\
+\hline
+string & {\em \$table} & Table name \\
+\hline
+mixed & {\em \$field} & Column definition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$string[] 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__forge_a41c6cae02f2fda8b429ad0afb9509426}.
+
+\mbox{\label{class_c_i___d_b__mysql__forge_a10b25326d82f6ddd9af1935e52e42b72}} 
+\index{CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}!\_create\_table\_attr@{\_create\_table\_attr}}
+\index{\_create\_table\_attr@{\_create\_table\_attr}!CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}}
+\doxysubsubsection{\_create\_table\_attr()}
+{\footnotesize\ttfamily \+\_\+create\+\_\+table\+\_\+attr (\begin{DoxyParamCaption}\item[{}]{\$attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+C\+R\+E\+A\+TE T\+A\+B\+LE attributes
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$attributes} & Associative array of table attributes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__forge_a10b25326d82f6ddd9af1935e52e42b72}.
+
+\mbox{\label{class_c_i___d_b__mysql__forge_a8f38f1c5b5dddecca4befbe393f3f299}} 
+\index{CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}!\_process\_column@{\_process\_column}}
+\index{\_process\_column@{\_process\_column}!CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}}
+\doxysubsubsection{\_process\_column()}
+{\footnotesize\ttfamily \+\_\+process\+\_\+column (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Process column
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__forge_a8f38f1c5b5dddecca4befbe393f3f299}.
+
+\mbox{\label{class_c_i___d_b__mysql__forge_ae0bdb4ea3418590d1894c5b621b5ca50}} 
+\index{CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}!\_process\_indexes@{\_process\_indexes}}
+\index{\_process\_indexes@{\_process\_indexes}!CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}}
+\doxysubsubsection{\_process\_indexes()}
+{\footnotesize\ttfamily \+\_\+process\+\_\+indexes (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Process indexes
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & (ignored) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__forge_ae0bdb4ea3418590d1894c5b621b5ca50}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_c_i___d_b__mysql__forge_aae977ae6d61fa183f0b25422b6ddc31c}} 
+\index{CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}!\$\_unsigned@{\$\_unsigned}}
+\index{\$\_unsigned@{\$\_unsigned}!CI\_DB\_mysql\_forge@{CI\_DB\_mysql\_forge}}
+\doxysubsubsection{\$\_unsigned}
+{\footnotesize\ttfamily \$\+\_\+unsigned\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'TINYINT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SMALLINT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'MEDIUMINT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'INT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'INTEGER'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BIGINT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'REAL'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'DOUBLE'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'DOUBLE PRECISION'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'FLOAT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'DECIMAL'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'NUMERIC'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/drivers/mysql/mysql\+\_\+forge.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,427 @@
+\doxysection{C\+I\+\_\+\+User\+\_\+agent Class Reference}
+\label{class_c_i___user__agent}\index{CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ is\+\_\+browser} (\$key=N\+U\+LL)
+\item 
+\textbf{ is\+\_\+robot} (\$key=N\+U\+LL)
+\item 
+\textbf{ is\+\_\+mobile} (\$key=N\+U\+LL)
+\item 
+\textbf{ is\+\_\+referral} ()
+\item 
+\textbf{ agent\+\_\+string} ()
+\item 
+\textbf{ platform} ()
+\item 
+\textbf{ browser} ()
+\item 
+\textbf{ version} ()
+\item 
+\textbf{ robot} ()
+\item 
+\textbf{ mobile} ()
+\item 
+\textbf{ referrer} ()
+\item 
+\textbf{ languages} ()
+\item 
+\textbf{ charsets} ()
+\item 
+\textbf{ accept\+\_\+lang} (\$lang=\textquotesingle{}en\textquotesingle{})
+\item 
+\textbf{ accept\+\_\+charset} (\$charset=\textquotesingle{}utf-\/8\textquotesingle{})
+\item 
+\textbf{ parse} (\$string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___user__agent_a0606e5b321c8c85527efdd1c17a9a569}} 
+{\bfseries \$agent} = N\+U\+LL
+\item 
+\mbox{\label{class_c_i___user__agent_af9608f790bc03edf6c152d11cd879e04}} 
+{\bfseries \$is\+\_\+browser} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___user__agent_a4b3d4b92832b15f313661bc9af0323fa}} 
+{\bfseries \$is\+\_\+robot} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___user__agent_a15f8c9cdaac57894151997b80f38224d}} 
+{\bfseries \$is\+\_\+mobile} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___user__agent_a8856d0a49881ef8e0a6d205d37d4a7af}} 
+{\bfseries \$languages} = array()
+\item 
+\mbox{\label{class_c_i___user__agent_ae269ee30c94deb9b791c1ae5489b88f3}} 
+{\bfseries \$charsets} = array()
+\item 
+\mbox{\label{class_c_i___user__agent_a1c1a0a860242698ee6b3f4ef7d6eb343}} 
+{\bfseries \$platforms} = array()
+\item 
+\mbox{\label{class_c_i___user__agent_a81edf933083b5ac5b380385f59074a7d}} 
+{\bfseries \$browsers} = array()
+\item 
+\mbox{\label{class_c_i___user__agent_a6928dde5aa0be443766d5b2376de908a}} 
+{\bfseries \$mobiles} = array()
+\item 
+\mbox{\label{class_c_i___user__agent_a5752e2a66d1c03bc34666492746037ab}} 
+{\bfseries \$robots} = array()
+\item 
+\mbox{\label{class_c_i___user__agent_a9cb2b1a2275f65f39415f0366139fb1c}} 
+{\bfseries \$platform} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___user__agent_ada6112ba48917a0c8cc154ed90908b28}} 
+{\bfseries \$browser} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___user__agent_a17c8948c68aa44fa9961ae169b6a8961}} 
+{\bfseries \$version} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___user__agent_a4144d0c9c54f204811328b221f06fc3d}} 
+{\bfseries \$mobile} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___user__agent_aaf86508e45876d0081cadac4cb8a8808}} 
+{\bfseries \$robot} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___user__agent_a872d93ddbbb879ab5c0eb29261a520a4}} 
+{\bfseries \$referer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+load\+\_\+agent\+\_\+file} ()
+\item 
+\textbf{ \+\_\+compile\+\_\+data} ()
+\item 
+\textbf{ \+\_\+set\+\_\+platform} ()
+\item 
+\textbf{ \+\_\+set\+\_\+browser} ()
+\item 
+\textbf{ \+\_\+set\+\_\+robot} ()
+\item 
+\textbf{ \+\_\+set\+\_\+mobile} ()
+\item 
+\textbf{ \+\_\+set\+\_\+languages} ()
+\item 
+\textbf{ \+\_\+set\+\_\+charsets} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___user__agent_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor
+
+Sets the User Agent and runs the compilation routine
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___user__agent_a4ced3acbcc2ab5e599f212c676590d06}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_compile\_data@{\_compile\_data}}
+\index{\_compile\_data@{\_compile\_data}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_compile\_data()}
+{\footnotesize\ttfamily \+\_\+compile\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Compile the User Agent Data
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a96ec01490c667b47c5faec7cb53c34b2}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_load\_agent\_file@{\_load\_agent\_file}}
+\index{\_load\_agent\_file@{\_load\_agent\_file}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_load\_agent\_file()}
+{\footnotesize\ttfamily \+\_\+load\+\_\+agent\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Compile the User Agent Data
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a6788d0353e44d81a1214fe367ebce0f5}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_set\_browser@{\_set\_browser}}
+\index{\_set\_browser@{\_set\_browser}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_set\_browser()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+browser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the Browser
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_ae97780ac0ec104137f47641061288f3c}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_set\_charsets@{\_set\_charsets}}
+\index{\_set\_charsets@{\_set\_charsets}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_set\_charsets()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+charsets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the accepted character sets
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a14307e07c78ada7733b36660bce03db8}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_set\_languages@{\_set\_languages}}
+\index{\_set\_languages@{\_set\_languages}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_set\_languages()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+languages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the accepted languages
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_aa2b84face2c8bd1830f618bf9a57f196}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_set\_mobile@{\_set\_mobile}}
+\index{\_set\_mobile@{\_set\_mobile}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_set\_mobile()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+mobile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the Mobile Device
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a3e3af24bc0adb0483c3965765b28a25b}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_set\_platform@{\_set\_platform}}
+\index{\_set\_platform@{\_set\_platform}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_set\_platform()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the Platform
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a037f28a8a54578f57417d15fae820817}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!\_set\_robot@{\_set\_robot}}
+\index{\_set\_robot@{\_set\_robot}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{\_set\_robot()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the Robot
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_adc1f6218ec74ef1686ae6cb1218be7b1}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!accept\_charset@{accept\_charset}}
+\index{accept\_charset@{accept\_charset}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{accept\_charset()}
+{\footnotesize\ttfamily accept\+\_\+charset (\begin{DoxyParamCaption}\item[{}]{\$charset = {\ttfamily \textquotesingle{}utf-\/8\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Test for a particular character set
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$charset} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a89add2e480d14b5f755993f4f5e0bd72}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!accept\_lang@{accept\_lang}}
+\index{accept\_lang@{accept\_lang}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{accept\_lang()}
+{\footnotesize\ttfamily accept\+\_\+lang (\begin{DoxyParamCaption}\item[{}]{\$lang = {\ttfamily \textquotesingle{}en\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Test for a particular language
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$lang} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a2a75d1ec3cf3f59cdcae64f6afbc8a1b}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!agent\_string@{agent\_string}}
+\index{agent\_string@{agent\_string}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{agent\_string()}
+{\footnotesize\ttfamily agent\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Agent String
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a7dbfb19bfe0682921dcfad5de8dc987c}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!browser@{browser}}
+\index{browser@{browser}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{browser()}
+{\footnotesize\ttfamily browser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get Browser Name
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a1c3819a3fa2777b0b0f2c8ab5d97d833}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!charsets@{charsets}}
+\index{charsets@{charsets}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{charsets()}
+{\footnotesize\ttfamily charsets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the accepted Character Sets
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a3a0c84a9f4a781e53c7529af8a5075ae}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!is\_browser@{is\_browser}}
+\index{is\_browser@{is\_browser}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{is\_browser()}
+{\footnotesize\ttfamily is\+\_\+browser (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Is Browser
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_ab0ec0b7f6a5eeaf00e35743c25e68dfe}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!is\_mobile@{is\_mobile}}
+\index{is\_mobile@{is\_mobile}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{is\_mobile()}
+{\footnotesize\ttfamily is\+\_\+mobile (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Is Mobile
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_ab2ec679c069f45c4265dade1e1097f17}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!is\_referral@{is\_referral}}
+\index{is\_referral@{is\_referral}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{is\_referral()}
+{\footnotesize\ttfamily is\+\_\+referral (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is this a referral from another site?
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_aaf9eed8184635473476a24f6a850815c}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!is\_robot@{is\_robot}}
+\index{is\_robot@{is\_robot}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{is\_robot()}
+{\footnotesize\ttfamily is\+\_\+robot (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Is Robot
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_adda8fc15b6fe0efc05a50d2645189c77}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!languages@{languages}}
+\index{languages@{languages}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{languages()}
+{\footnotesize\ttfamily languages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the accepted languages
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a8e13f70e084cbb413d7b68805f3b09dd}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!mobile@{mobile}}
+\index{mobile@{mobile}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{mobile()}
+{\footnotesize\ttfamily mobile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the Mobile Device
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a8652be52c4455b8ce1a8e79fdb083703}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!parse@{parse}}
+\index{parse@{parse}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{parse()}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}\item[{}]{\$string }\end{DoxyParamCaption})}
+
+Parse a custom user-\/agent string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_ad69bddb2ba31b27415484b3da4213ba8}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!platform@{platform}}
+\index{platform@{platform}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{platform()}
+{\footnotesize\ttfamily platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get Platform
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a3a7bdecfe4516d7ce790734ae1449d29}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!referrer@{referrer}}
+\index{referrer@{referrer}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{referrer()}
+{\footnotesize\ttfamily referrer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the referrer
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a4d6a9230d82ec6fc2fdd6bc57f4da5e5}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!robot@{robot}}
+\index{robot@{robot}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{robot()}
+{\footnotesize\ttfamily robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get The Robot Name
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___user__agent_a6080dae0886626b9a4cedb29240708b1}} 
+\index{CI\_User\_agent@{CI\_User\_agent}!version@{version}}
+\index{version@{version}!CI\_User\_agent@{CI\_User\_agent}}
+\doxysubsubsection{version()}
+{\footnotesize\ttfamily version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the Browser Version
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/User\+\_\+agent.\+php\end{DoxyCompactItemize}

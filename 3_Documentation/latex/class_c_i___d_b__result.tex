@@ -1,0 +1,494 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+result Class Reference}
+\label{class_c_i___d_b__result}\index{CI\_DB\_result@{CI\_DB\_result}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_c_i___d_b__result}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\&\$driver\+\_\+object)
+\item 
+\textbf{ num\+\_\+rows} ()
+\item 
+\textbf{ result} (\$type=\textquotesingle{}object\textquotesingle{})
+\item 
+\textbf{ custom\+\_\+result\+\_\+object} (\$class\+\_\+name)
+\item 
+\textbf{ result\+\_\+object} ()
+\item 
+\textbf{ result\+\_\+array} ()
+\item 
+\textbf{ row} (\$n=0, \$type=\textquotesingle{}object\textquotesingle{})
+\item 
+\textbf{ set\+\_\+row} (\$key, \$value=N\+U\+LL)
+\item 
+\textbf{ custom\+\_\+row\+\_\+object} (\$n, \$type)
+\item 
+\textbf{ row\+\_\+object} (\$n=0)
+\item 
+\textbf{ row\+\_\+array} (\$n=0)
+\item 
+\textbf{ first\+\_\+row} (\$type=\textquotesingle{}object\textquotesingle{})
+\item 
+\textbf{ last\+\_\+row} (\$type=\textquotesingle{}object\textquotesingle{})
+\item 
+\textbf{ next\+\_\+row} (\$type=\textquotesingle{}object\textquotesingle{})
+\item 
+\textbf{ previous\+\_\+row} (\$type=\textquotesingle{}object\textquotesingle{})
+\item 
+\textbf{ unbuffered\+\_\+row} (\$type=\textquotesingle{}object\textquotesingle{})
+\item 
+\textbf{ num\+\_\+fields} ()
+\item 
+\textbf{ list\+\_\+fields} ()
+\item 
+\textbf{ field\+\_\+data} ()
+\item 
+\textbf{ free\+\_\+result} ()
+\item 
+\textbf{ data\+\_\+seek} (\$n=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__result_a16c23f1dcbfed2f2759f5e54f604106d}} 
+{\bfseries \$conn\+\_\+id}
+\item 
+\mbox{\label{class_c_i___d_b__result_a0ebacb40e3b6f8bf33d3de0f2cc71474}} 
+{\bfseries \$result\+\_\+id}
+\item 
+\mbox{\label{class_c_i___d_b__result_a153392b3ec395131d32c70cda855698e}} 
+{\bfseries \$result\+\_\+array} = array()
+\item 
+\mbox{\label{class_c_i___d_b__result_aa292cbb3dbb8c654cb4f6c61f250efd3}} 
+{\bfseries \$result\+\_\+object} = array()
+\item 
+\mbox{\label{class_c_i___d_b__result_a680c2e11eeb189d9bb8ba2a552766b7b}} 
+{\bfseries \$custom\+\_\+result\+\_\+object} = array()
+\item 
+\mbox{\label{class_c_i___d_b__result_a2ec3a266ee95cda75cdbb71bc9ee1b53}} 
+{\bfseries \$current\+\_\+row} = 0
+\item 
+\mbox{\label{class_c_i___d_b__result_ac926549b713e71c5f5fd63999cebfb8c}} 
+{\bfseries \$num\+\_\+rows}
+\item 
+\mbox{\label{class_c_i___d_b__result_a335b4c27a1529df9e484e044e470ec07}} 
+{\bfseries \$row\+\_\+data}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+fetch\+\_\+assoc} ()
+\item 
+\textbf{ \+\_\+fetch\+\_\+object} (\$class\+\_\+name=\textquotesingle{}std\+Class\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b__result_a8e093c8b6e5733bc3f306385ee426ab7}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$driver\+\_\+object }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$driver\+\_\+object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__oci8__result_a8e093c8b6e5733bc3f306385ee426ab7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_a8e093c8b6e5733bc3f306385ee426ab7}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_a8e093c8b6e5733bc3f306385ee426ab7}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__result_a43a9a92817f1334a1c10752ec44275a0}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!\_fetch\_assoc@{\_fetch\_assoc}}
+\index{\_fetch\_assoc@{\_fetch\_assoc}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{\_fetch\_assoc()}
+{\footnotesize\ttfamily \+\_\+fetch\+\_\+assoc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Result -\/ associative array
+
+Returns the result set as an array.
+
+Overridden by driver result classes.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__oci8__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__pdo__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__odbc__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite__result_a43a9a92817f1334a1c10752ec44275a0}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite3__result_a43a9a92817f1334a1c10752ec44275a0}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__ibase__result_a43a9a92817f1334a1c10752ec44275a0}.
+
+\mbox{\label{class_c_i___d_b__result_a60806be6a9c2488820813c2a7f4fef71}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!\_fetch\_object@{\_fetch\_object}}
+\index{\_fetch\_object@{\_fetch\_object}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{\_fetch\_object()}
+{\footnotesize\ttfamily \+\_\+fetch\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$class\+\_\+name = {\ttfamily \textquotesingle{}stdClass\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Result -\/ object
+
+Returns the result set as an object.
+
+Overridden by driver result classes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__oci8__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__pdo__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__odbc__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite__result_a60806be6a9c2488820813c2a7f4fef71}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite3__result_a60806be6a9c2488820813c2a7f4fef71}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__ibase__result_a60806be6a9c2488820813c2a7f4fef71}.
+
+\mbox{\label{class_c_i___d_b__result_a5ac3523f878efb629fae30a7d9156e77}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!custom\_result\_object@{custom\_result\_object}}
+\index{custom\_result\_object@{custom\_result\_object}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{custom\_result\_object()}
+{\footnotesize\ttfamily custom\+\_\+result\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$class\+\_\+name }\end{DoxyParamCaption})}
+
+Custom query result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a223538c34395626655fd483f3a55e653}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!custom\_row\_object@{custom\_row\_object}}
+\index{custom\_row\_object@{custom\_row\_object}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{custom\_row\_object()}
+{\footnotesize\ttfamily custom\+\_\+row\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$n,  }\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Returns a single result row -\/ custom object version
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a8255ae91816e4206e29eb7581c5af0f1}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!data\_seek@{data\_seek}}
+\index{data\_seek@{data\_seek}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{data\_seek()}
+{\footnotesize\ttfamily data\+\_\+seek (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Data Seek
+
+Moves the internal pointer to the desired offset. We call this internally before fetching results to make sure the result set starts at zero.
+
+Overridden by driver result classes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_a8255ae91816e4206e29eb7581c5af0f1}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite3__result_a8255ae91816e4206e29eb7581c5af0f1}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_a8255ae91816e4206e29eb7581c5af0f1}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_a8255ae91816e4206e29eb7581c5af0f1}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_a8255ae91816e4206e29eb7581c5af0f1}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_a8255ae91816e4206e29eb7581c5af0f1}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite__result_a8255ae91816e4206e29eb7581c5af0f1}.
+
+\mbox{\label{class_c_i___d_b__result_a84bffd65e53902ade1591716749a33e3}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{field\_data()}
+{\footnotesize\ttfamily field\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Field data
+
+Generates an array of objects containing field meta-\/data.
+
+Overridden by driver result classes.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__oci8__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__odbc__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__pdo__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_a84bffd65e53902ade1591716749a33e3}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__ibase__result_a84bffd65e53902ade1591716749a33e3}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite3__result_a84bffd65e53902ade1591716749a33e3}.
+
+\mbox{\label{class_c_i___d_b__result_a9d7ddad4b02edf86c4f1ec27c0c8a2d7}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!first\_row@{first\_row}}
+\index{first\_row@{first\_row}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{first\_row()}
+{\footnotesize\ttfamily first\+\_\+row (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}object\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Returns the \char`\"{}first\char`\"{} row
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_aad2d98d6beb3d6095405356c6107b473}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!free\_result@{free\_result}}
+\index{free\_result@{free\_result}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{free\_result()}
+{\footnotesize\ttfamily free\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free the result
+
+Overridden by driver result classes.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__oci8__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__pdo__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__odbc__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite3__result_aad2d98d6beb3d6095405356c6107b473}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_aad2d98d6beb3d6095405356c6107b473}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__ibase__result_aad2d98d6beb3d6095405356c6107b473}.
+
+\mbox{\label{class_c_i___d_b__result_a2c420342d5b577d91b6b993be86f68c0}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!last\_row@{last\_row}}
+\index{last\_row@{last\_row}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{last\_row()}
+{\footnotesize\ttfamily last\+\_\+row (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}object\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Returns the \char`\"{}last\char`\"{} row
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a50b54eb4ea7cfd039740f532988ea776}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!list\_fields@{list\_fields}}
+\index{list\_fields@{list\_fields}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{list\_fields()}
+{\footnotesize\ttfamily list\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetch Field Names
+
+Generates an array of column names.
+
+Overridden by driver result classes.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__oci8__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__odbc__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__pdo__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite__result_a50b54eb4ea7cfd039740f532988ea776}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__ibase__result_a50b54eb4ea7cfd039740f532988ea776}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite3__result_a50b54eb4ea7cfd039740f532988ea776}.
+
+\mbox{\label{class_c_i___d_b__result_a5664a519252b14c1cdd93d9de0322a9f}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!next\_row@{next\_row}}
+\index{next\_row@{next\_row}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{next\_row()}
+{\footnotesize\ttfamily next\+\_\+row (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}object\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Returns the \char`\"{}next\char`\"{} row
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_af831bf363e4d7d661a717a4932af449d}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!num\_fields@{num\_fields}}
+\index{num\_fields@{num\_fields}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{num\_fields()}
+{\footnotesize\ttfamily num\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The following methods are normally overloaded by the identically named methods in the platform-\/specific driver -- except when query caching is used. When caching is enabled we do not load the other driver. These functions are primarily here to prevent undefined function errors when a cached result object is in use. They are not otherwise fully operational due to the unavailability of the database resource I\+Ds with cached results. Number of fields in the result set
+
+Overridden by driver result classes.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__oci8__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__odbc__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__pdo__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite__result_af831bf363e4d7d661a717a4932af449d}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__ibase__result_af831bf363e4d7d661a717a4932af449d}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite3__result_af831bf363e4d7d661a717a4932af449d}.
+
+\mbox{\label{class_c_i___d_b__result_a218657c303ee499b97710ab0cd2f5d6e}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!num\_rows@{num\_rows}}
+\index{num\_rows@{num\_rows}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{num\_rows()}
+{\footnotesize\ttfamily num\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Number of rows in the result set
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__result_a218657c303ee499b97710ab0cd2f5d6e}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysql__result_a218657c303ee499b97710ab0cd2f5d6e}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mssql__result_a218657c303ee499b97710ab0cd2f5d6e}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__mysqli__result_a218657c303ee499b97710ab0cd2f5d6e}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__odbc__result_a218657c303ee499b97710ab0cd2f5d6e}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__pdo__result_a218657c303ee499b97710ab0cd2f5d6e}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__postgre__result_a218657c303ee499b97710ab0cd2f5d6e}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__cubrid__result_a218657c303ee499b97710ab0cd2f5d6e}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__sqlite__result_a218657c303ee499b97710ab0cd2f5d6e}.
+
+\mbox{\label{class_c_i___d_b__result_a458567a19d160a814b41b2964ec192ce}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!previous\_row@{previous\_row}}
+\index{previous\_row@{previous\_row}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{previous\_row()}
+{\footnotesize\ttfamily previous\+\_\+row (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}object\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Returns the \char`\"{}previous\char`\"{} row
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a86bc3a5f1694241cf86a6fd754553884}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!result@{result}}
+\index{result@{result}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{result()}
+{\footnotesize\ttfamily result (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}object\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Query result. Acts as a wrapper function for the following functions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \textquotesingle{}object\textquotesingle{}, \textquotesingle{}array\textquotesingle{} or a custom class name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a444f7dd61bfbe3931a7188adad61feae}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!result\_array@{result\_array}}
+\index{result\_array@{result\_array}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{result\_array()}
+{\footnotesize\ttfamily result\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Query result. \char`\"{}array\char`\"{} version.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a266a17f340dab35b8f2858931ff772a2}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!result\_object@{result\_object}}
+\index{result\_object@{result\_object}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{result\_object()}
+{\footnotesize\ttfamily result\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Query result. \char`\"{}object\char`\"{} version.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a43764449dacaf9b61bbd1efee9cdb256}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!row@{row}}
+\index{row@{row}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{row()}
+{\footnotesize\ttfamily row (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 0},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}object\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Row
+
+A wrapper method.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$n} & \\
+\hline
+string & {\em \$type} & \textquotesingle{}object\textquotesingle{} or \textquotesingle{}array\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a8dbff471ffdaf617d49189f8636e4f81}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!row\_array@{row\_array}}
+\index{row\_array@{row\_array}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{row\_array()}
+{\footnotesize\ttfamily row\+\_\+array (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns a single result row -\/ array version
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a0bd3520c57f5cb192bdfaeed1f597c0a}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!row\_object@{row\_object}}
+\index{row\_object@{row\_object}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{row\_object()}
+{\footnotesize\ttfamily row\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns a single result row -\/ object version
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a77628e90fac65184ec9f583e7c30a48a}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!set\_row@{set\_row}}
+\index{set\_row@{set\_row}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{set\_row()}
+{\footnotesize\ttfamily set\+\_\+row (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Assigns an item into a particular column slot
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$key} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__result_a75f3fff759e63b51c93bb1588e9b0a77}} 
+\index{CI\_DB\_result@{CI\_DB\_result}!unbuffered\_row@{unbuffered\_row}}
+\index{unbuffered\_row@{unbuffered\_row}!CI\_DB\_result@{CI\_DB\_result}}
+\doxysubsubsection{unbuffered\_row()}
+{\footnotesize\ttfamily unbuffered\+\_\+row (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}object\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Returns an unbuffered row and move pointer to next row
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \textquotesingle{}array\textquotesingle{}, \textquotesingle{}object\textquotesingle{} or a custom class name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/D\+B\+\_\+result.\+php\end{DoxyCompactItemize}

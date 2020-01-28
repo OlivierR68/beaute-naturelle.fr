@@ -1,0 +1,597 @@
+\doxysection{C\+I\+\_\+\+Image\+\_\+lib Class Reference}
+\label{class_c_i___image__lib}\index{CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$props=array())
+\item 
+\textbf{ clear} ()
+\item 
+\textbf{ initialize} (\$props=array())
+\item 
+\textbf{ resize} ()
+\item 
+\textbf{ crop} ()
+\item 
+\textbf{ rotate} ()
+\item 
+\textbf{ image\+\_\+process\+\_\+gd} (\$action=\textquotesingle{}\textbf{ resize}\textquotesingle{})
+\item 
+\textbf{ image\+\_\+process\+\_\+imagemagick} (\$action=\textquotesingle{}\textbf{ resize}\textquotesingle{})
+\item 
+\textbf{ image\+\_\+process\+\_\+netpbm} (\$action=\textquotesingle{}\textbf{ resize}\textquotesingle{})
+\item 
+\textbf{ image\+\_\+rotate\+\_\+gd} ()
+\item 
+\textbf{ image\+\_\+mirror\+\_\+gd} ()
+\item 
+\textbf{ watermark} ()
+\item 
+\textbf{ overlay\+\_\+watermark} ()
+\item 
+\textbf{ text\+\_\+watermark} ()
+\item 
+\textbf{ image\+\_\+create\+\_\+gd} (\$path=\textquotesingle{}\textquotesingle{}, \$image\+\_\+type=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ image\+\_\+save\+\_\+gd} (\$resource)
+\item 
+\textbf{ image\+\_\+display\+\_\+gd} (\$resource)
+\item 
+\textbf{ image\+\_\+reproportion} ()
+\item 
+\textbf{ get\+\_\+image\+\_\+properties} (\$path=\textquotesingle{}\textquotesingle{}, \$return=F\+A\+L\+SE)
+\item 
+\textbf{ size\+\_\+calculator} (\$vals)
+\item 
+\textbf{ explode\+\_\+name} (\$source\+\_\+image)
+\item 
+\textbf{ gd\+\_\+loaded} ()
+\item 
+\textbf{ gd\+\_\+version} ()
+\item 
+\textbf{ set\+\_\+error} (\$msg)
+\item 
+\textbf{ display\+\_\+errors} (\$open=\textquotesingle{}$<$ p $>$\textquotesingle{}, \$close=\textquotesingle{}$<$/p $>$\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___image__lib_ac4b224358e1169eec8db344bcb3186c0}} 
+{\bfseries \$image\+\_\+library} = \textquotesingle{}gd2\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_ac09f7fc802884aae2149f1df0e53f17a}} 
+{\bfseries \$library\+\_\+path} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_ad90737913d82776e7d3a7dfaef68e167}} 
+{\bfseries \$dynamic\+\_\+output} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___image__lib_a54fc395722d5e9f15d656d22ba84e382}} 
+{\bfseries \$source\+\_\+image} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a6147ac30032312f2b42a9b05618faf12}} 
+{\bfseries \$new\+\_\+image} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a5795120b4b324bc4ca83f1e6fdce7d57}} 
+{\bfseries \$width} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a2c265bba1724371bb03e6901297c30b2}} 
+{\bfseries \$height} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a0e342ea32cccdc2c932ad23b9796a62a}} 
+{\bfseries \$quality} = 90
+\item 
+\mbox{\label{class_c_i___image__lib_ab1250903cbadaaadb42ec188d38ab398}} 
+{\bfseries \$create\+\_\+thumb} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___image__lib_a3176700c651c0c3cd8cfa186ba03302a}} 
+{\bfseries \$thumb\+\_\+marker} = \textquotesingle{}\+\_\+thumb\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a7fe1beb3e7d60245c97c60ee4b668d93}} 
+{\bfseries \$maintain\+\_\+ratio} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___image__lib_ae86c3d7ce316cc0c48a8dcba8ae4130d}} 
+{\bfseries \$master\+\_\+dim} = \textquotesingle{}auto\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a9410d2e216c0c1dd852031f2a39e7ec7}} 
+{\bfseries \$rotation\+\_\+angle} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a128914b11765a500690f876962196ca6}} 
+{\bfseries \$x\+\_\+axis} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_ac60512307da37068c0821f7dc2488608}} 
+{\bfseries \$y\+\_\+axis} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a412eac22e8d585a33f28f132f13d482b}} 
+{\bfseries \$wm\+\_\+text} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a530808b613890909a92bf6096401e9be}} 
+{\bfseries \$wm\+\_\+type} = \textquotesingle{}text\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a720496900551e5c29b11a732fb4f35ab}} 
+{\bfseries \$wm\+\_\+x\+\_\+transp} = 4
+\item 
+\mbox{\label{class_c_i___image__lib_aa9ab81b196739723a7c38d9431c9fa11}} 
+{\bfseries \$wm\+\_\+y\+\_\+transp} = 4
+\item 
+\mbox{\label{class_c_i___image__lib_a82ec5b8a6822dc7f9c70f4b5aafdebd4}} 
+{\bfseries \$wm\+\_\+overlay\+\_\+path} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a6870985f3e6bbf1a29e5875c054598f4}} 
+{\bfseries \$wm\+\_\+font\+\_\+path} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a0ea2a2f73623aa0631670017a4e68419}} 
+{\bfseries \$wm\+\_\+font\+\_\+size} = 17
+\item 
+\mbox{\label{class_c_i___image__lib_a1c52f46917a30e084db07a8c8e13af86}} 
+{\bfseries \$wm\+\_\+vrt\+\_\+alignment} = \textquotesingle{}B\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a74d790b77baa0c22cd0b812abc41765c}} 
+{\bfseries \$wm\+\_\+hor\+\_\+alignment} = \textquotesingle{}C\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_ab1f63f5ae604d060dbc39653f6440826}} 
+{\bfseries \$wm\+\_\+padding} = 0
+\item 
+\mbox{\label{class_c_i___image__lib_aed778e3e9ecb74e8c61d8c4894581f7f}} 
+{\bfseries \$wm\+\_\+hor\+\_\+offset} = 0
+\item 
+\mbox{\label{class_c_i___image__lib_a577602650e0c67f9f4bfcdeda075fa50}} 
+{\bfseries \$wm\+\_\+vrt\+\_\+offset} = 0
+\item 
+\mbox{\label{class_c_i___image__lib_a3d5174ca66ce7149799b5830873aa747}} 
+{\bfseries \$wm\+\_\+shadow\+\_\+distance} = 2
+\item 
+\mbox{\label{class_c_i___image__lib_a9cc2d95dbcbb26a2f3f0c7416fc5920b}} 
+{\bfseries \$wm\+\_\+opacity} = 50
+\item 
+\mbox{\label{class_c_i___image__lib_a8fa5462b549251df178487f869c49800}} 
+{\bfseries \$source\+\_\+folder} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a23c580d10b1ba89c5b532f43fe2c6f59}} 
+{\bfseries \$dest\+\_\+folder} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a4d1985caafb49b059e3ca3dedfee257a}} 
+{\bfseries \$mime\+\_\+type} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a336a3be3539aaae0ad42aaf4c544bb41}} 
+{\bfseries \$orig\+\_\+width} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a68713f45d7d236dfdd6aafdc9668a44d}} 
+{\bfseries \$orig\+\_\+height} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a939d6733d998cce893403d2f59f40317}} 
+{\bfseries \$image\+\_\+type} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_aff68567b98390e0db61065df80af5d49}} 
+{\bfseries \$size\+\_\+str} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a7ccf54c8f559eaf70600f69554be39eb}} 
+{\bfseries \$full\+\_\+src\+\_\+path} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_aa830804dc9d15c51e0672bd4d3602e07}} 
+{\bfseries \$full\+\_\+dst\+\_\+path} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_abeba5c64fb89ae12956958b88a58f9bf}} 
+{\bfseries \$file\+\_\+permissions} = 0644
+\item 
+\mbox{\label{class_c_i___image__lib_af70f0124d1a34ec7b7360bee16c3a3ea}} 
+{\bfseries \$create\+\_\+fnc} = \textquotesingle{}imagecreatetruecolor\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a4c7eeae509bbd8ac493cafa8a5b9980e}} 
+{\bfseries \$copy\+\_\+fnc} = \textquotesingle{}imagecopyresampled\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_acf910733622c1fa671b9f755c69c2ec7}} 
+{\bfseries \$error\+\_\+msg} = array()
+\item 
+\mbox{\label{class_c_i___image__lib_a0415d8aa18349f21751f7a81255918ad}} 
+{\bfseries \$wm\+\_\+use\+\_\+truetype} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___image__lib_ae9498442637ff2466d4426af45f68c6b}} 
+{\bfseries \$wm\+\_\+font\+\_\+color} = \textquotesingle{}\#ffffff\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_aca292b49514fe3238440675c4b2642ca}} 
+{\bfseries \$wm\+\_\+shadow\+\_\+color} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___image__lib_a49b77ed476cebe5f357705e7a9c4ccce}} 
+{\bfseries \$wm\+\_\+use\+\_\+drop\+\_\+shadow} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___image__lib_a563262d396a1cef6153c9998d77bb548}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$props = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Initialize Image Library
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$props} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+A work-\/around for some improperly formatted, but usable J\+P\+E\+Gs; known to be produced by Samsung smartphones\textquotesingle{} front-\/facing cameras.
+
+\begin{DoxySeeAlso}{See also}
+{\texttt{ https\+://github.\+com/bcit-\/ci/\+Code\+Igniter/issues/4967}} 
+
+{\texttt{ https\+://bugs.\+php.\+net/bug.\+php?id=72404}}
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___image__lib_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!clear@{clear}}
+\index{clear@{clear}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{clear()}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize image properties
+
+Resets values in case this class is used in a loop
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a77248c0134d1b117eb36774ecee6e04c}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!crop@{crop}}
+\index{crop@{crop}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{crop()}
+{\footnotesize\ttfamily crop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Image Crop
+
+This is a wrapper function that chooses the proper cropping function based on the protocol specified
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a71a6f2e6d97ff5347257f101002bc903}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!display\_errors@{display\_errors}}
+\index{display\_errors@{display\_errors}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{display\_errors()}
+{\footnotesize\ttfamily display\+\_\+errors (\begin{DoxyParamCaption}\item[{}]{\$open = {\ttfamily \textquotesingle{}$<$p$>$\textquotesingle{}},  }\item[{}]{\$close = {\ttfamily \textquotesingle{}$<$/p$>$\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Show error messages
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a32661288e0bea18ea50fbb7be6535af5}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!explode\_name@{explode\_name}}
+\index{explode\_name@{explode\_name}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{explode\_name()}
+{\footnotesize\ttfamily explode\+\_\+name (\begin{DoxyParamCaption}\item[{}]{\$source\+\_\+image }\end{DoxyParamCaption})}
+
+Explode source\+\_\+image
+
+This is a helper function that extracts the extension from the source\+\_\+image. This function lets us deal with source\+\_\+images with multiple periods, like\+: my.\+cool.\+jpg It returns an associative array with two elements\+: \$array[\textquotesingle{}ext\textquotesingle{}] = \textquotesingle{}.jpg\textquotesingle{}; \$array[\textquotesingle{}name\textquotesingle{}] = \textquotesingle{}my.\+cool\textquotesingle{};
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a04376d5530f38a1a61f59c2d769284ba}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!gd\_loaded@{gd\_loaded}}
+\index{gd\_loaded@{gd\_loaded}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{gd\_loaded()}
+{\footnotesize\ttfamily gd\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is GD Installed?
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a7d141f85d677d5e6db12020009569fde}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!gd\_version@{gd\_version}}
+\index{gd\_version@{gd\_version}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{gd\_version()}
+{\footnotesize\ttfamily gd\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get GD version
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a91627ce4406f63c429ab13aab8f0e53c}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!get\_image\_properties@{get\_image\_properties}}
+\index{get\_image\_properties@{get\_image\_properties}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{get\_image\_properties()}
+{\footnotesize\ttfamily get\+\_\+image\+\_\+properties (\begin{DoxyParamCaption}\item[{}]{\$path = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$return = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Get image properties
+
+A helper function that gets info about the file
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a1a222111448274ffca4e59d8a473c5fc}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_create\_gd@{image\_create\_gd}}
+\index{image\_create\_gd@{image\_create\_gd}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_create\_gd()}
+{\footnotesize\ttfamily image\+\_\+create\+\_\+gd (\begin{DoxyParamCaption}\item[{}]{\$path = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$image\+\_\+type = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Create Image -\/ GD
+
+This simply creates an image resource handle based on the type of image being processed
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resource 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_af641d1806701b178dfba3dbf7da54462}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_display\_gd@{image\_display\_gd}}
+\index{image\_display\_gd@{image\_display\_gd}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_display\_gd()}
+{\footnotesize\ttfamily image\+\_\+display\+\_\+gd (\begin{DoxyParamCaption}\item[{}]{\$resource }\end{DoxyParamCaption})}
+
+Dynamically outputs an image
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a3f6d47ec077726da699890d4644797ad}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_mirror\_gd@{image\_mirror\_gd}}
+\index{image\_mirror\_gd@{image\_mirror\_gd}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_mirror\_gd()}
+{\footnotesize\ttfamily image\+\_\+mirror\+\_\+gd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create Mirror Image using GD
+
+This function will flip horizontal or vertical
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_aa8ef6ef7b931a663dd906ce27236c6fd}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_process\_gd@{image\_process\_gd}}
+\index{image\_process\_gd@{image\_process\_gd}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_process\_gd()}
+{\footnotesize\ttfamily image\+\_\+process\+\_\+gd (\begin{DoxyParamCaption}\item[{}]{\$action = {\ttfamily \textquotesingle{}\textbf{ resize}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Image Process Using G\+D/\+G\+D2
+
+This function will resize or crop
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a141ec7c2c7cbe7a9a6a913d12fe973da}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_process\_imagemagick@{image\_process\_imagemagick}}
+\index{image\_process\_imagemagick@{image\_process\_imagemagick}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_process\_imagemagick()}
+{\footnotesize\ttfamily image\+\_\+process\+\_\+imagemagick (\begin{DoxyParamCaption}\item[{}]{\$action = {\ttfamily \textquotesingle{}\textbf{ resize}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Image Process Using Image\+Magick
+
+This function will resize, crop or rotate
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_ab40d1235dccf0611ef4fe5a6b0272dd3}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_process\_netpbm@{image\_process\_netpbm}}
+\index{image\_process\_netpbm@{image\_process\_netpbm}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_process\_netpbm()}
+{\footnotesize\ttfamily image\+\_\+process\+\_\+netpbm (\begin{DoxyParamCaption}\item[{}]{\$action = {\ttfamily \textquotesingle{}\textbf{ resize}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Image Process Using Net\+P\+BM
+
+This function will resize, crop or rotate
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a55ee590fb313c50e99d6c1d4cd9618d2}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_reproportion@{image\_reproportion}}
+\index{image\_reproportion@{image\_reproportion}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_reproportion()}
+{\footnotesize\ttfamily image\+\_\+reproportion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Re-\/proportion Image Width/\+Height
+
+When creating thumbs, the desired width/height can end up warping the image due to an incorrect ratio between the full-\/sized image and the thumb.
+
+This function lets us re-\/proportion the width/height if users choose to maintain the aspect ratio when resizing.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_ae0d52ef7503342a0a1c56c99da140446}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_rotate\_gd@{image\_rotate\_gd}}
+\index{image\_rotate\_gd@{image\_rotate\_gd}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_rotate\_gd()}
+{\footnotesize\ttfamily image\+\_\+rotate\+\_\+gd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Image Rotate Using GD
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a802a33d51249d4d31d59cbc89fbc4dd5}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!image\_save\_gd@{image\_save\_gd}}
+\index{image\_save\_gd@{image\_save\_gd}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{image\_save\_gd()}
+{\footnotesize\ttfamily image\+\_\+save\+\_\+gd (\begin{DoxyParamCaption}\item[{}]{\$resource }\end{DoxyParamCaption})}
+
+Write image file to disk -\/ GD
+
+Takes an image resource as input and writes the file to the specified destination
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a0bccf32e3d2d283de0521949330cb969}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!initialize@{initialize}}
+\index{initialize@{initialize}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{initialize()}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}\item[{}]{\$props = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+initialize image preferences
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a7fa0fd0aabe26803d61d7e09c1cb73de}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!overlay\_watermark@{overlay\_watermark}}
+\index{overlay\_watermark@{overlay\_watermark}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{overlay\_watermark()}
+{\footnotesize\ttfamily overlay\+\_\+watermark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Watermark -\/ Graphic Version
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a94e38a7d478ce07200a52c51497e598e}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!resize@{resize}}
+\index{resize@{resize}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{resize()}
+{\footnotesize\ttfamily resize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Image Resize
+
+This is a wrapper function that chooses the proper resize function based on the protocol specified
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a74e94d71195d9cbb9c9e3bca3353d912}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!rotate@{rotate}}
+\index{rotate@{rotate}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{rotate()}
+{\footnotesize\ttfamily rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Image Rotate
+
+This is a wrapper function that chooses the proper rotation function based on the protocol specified
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a892f1ba7cba3731a3fc68f1f64e92610}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!set\_error@{set\_error}}
+\index{set\_error@{set\_error}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{set\_error()}
+{\footnotesize\ttfamily set\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$msg }\end{DoxyParamCaption})}
+
+Set error message
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a827549db4de2281a8f2b35ada2ef3909}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!size\_calculator@{size\_calculator}}
+\index{size\_calculator@{size\_calculator}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{size\_calculator()}
+{\footnotesize\ttfamily size\+\_\+calculator (\begin{DoxyParamCaption}\item[{}]{\$vals }\end{DoxyParamCaption})}
+
+Size calculator
+
+This function takes a known width x height and recalculates it to a new size. Only one new variable needs to be known
+
+\$props = array( \textquotesingle{}width\textquotesingle{} =$>$ \$width, \textquotesingle{}height\textquotesingle{} =$>$ \$height, \textquotesingle{}new\+\_\+width\textquotesingle{} =$>$ 40, \textquotesingle{}new\+\_\+height\textquotesingle{} =$>$ \textquotesingle{}\textquotesingle{} );
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_afb7640b6150e16b00efac0511d9fa03d}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!text\_watermark@{text\_watermark}}
+\index{text\_watermark@{text\_watermark}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{text\_watermark()}
+{\footnotesize\ttfamily text\+\_\+watermark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Watermark -\/ Text Version
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___image__lib_a4732a76680e7c0b28f98f6634b567cc9}} 
+\index{CI\_Image\_lib@{CI\_Image\_lib}!watermark@{watermark}}
+\index{watermark@{watermark}!CI\_Image\_lib@{CI\_Image\_lib}}
+\doxysubsubsection{watermark()}
+{\footnotesize\ttfamily watermark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Image Watermark
+
+This is a wrapper function that chooses the type of watermarking based on the specified preference.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Image\+\_\+lib.\+php\end{DoxyCompactItemize}

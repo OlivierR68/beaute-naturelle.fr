@@ -1,0 +1,262 @@
+\doxysection{C\+I\+\_\+\+Cache\+\_\+redis Class Reference}
+\label{class_c_i___cache__redis}\index{CI\_Cache\_redis@{CI\_Cache\_redis}}
+Inheritance diagram for C\+I\+\_\+\+Cache\+\_\+redis\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___cache__redis}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ get} (\$key)
+\item 
+\textbf{ save} (\$id, \$data, \$ttl=60, \$raw=F\+A\+L\+SE)
+\item 
+\textbf{ delete} (\$key)
+\item 
+\textbf{ increment} (\$id, \$offset=1)
+\item 
+\textbf{ decrement} (\$id, \$offset=1)
+\item 
+\textbf{ clean} ()
+\item 
+\textbf{ cache\+\_\+info} (\$type=N\+U\+LL)
+\item 
+\textbf{ get\+\_\+metadata} (\$key)
+\item 
+\textbf{ is\+\_\+supported} ()
+\item 
+\textbf{ \+\_\+\+\_\+destruct} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___cache__redis_a36de60a8fcbe3efac91a87577d0728de}} 
+{\bfseries \$\+\_\+redis}
+\item 
+\mbox{\label{class_c_i___cache__redis_a138ded30ad61d04611681cdf7060a6cf}} 
+{\bfseries \$\+\_\+serialized} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static {\bfseries \$\+\_\+default\+\_\+config}
+\item 
+\mbox{\label{class_c_i___cache__redis_aa03c570677d71f742760a7ed2764d8b5}} 
+static {\bfseries \$\+\_\+delete\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___cache__redis_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+Setup Redis
+
+Loads Redis config file if present. Will halt execution if a Redis connection can\textquotesingle{}t be established.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Redis\+::connect() 
+\end{DoxySeeAlso}
+\mbox{\label{class_c_i___cache__redis_a421831a265621325e1fdd19aace0c758}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{\_\_destruct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class destructor
+
+Closes the connection to Redis if present.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___cache__redis_aa8b9c4d9f0387156736ccd8850f0727e}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!cache\_info@{cache\_info}}
+\index{cache\_info@{cache\_info}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{cache\_info()}
+{\footnotesize\ttfamily cache\+\_\+info (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Get cache driver info
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & Not supported in Redis. Only included in order to offer a consistent cache A\+PI. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Redis\+::info() 
+\end{DoxySeeAlso}
+\mbox{\label{class_c_i___cache__redis_adb40b812890a8bc058bf6b7a0e1a54d9}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!clean@{clean}}
+\index{clean@{clean}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{clean()}
+{\footnotesize\ttfamily clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clean cache
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Redis\+::flush\+D\+B() 
+\end{DoxySeeAlso}
+\mbox{\label{class_c_i___cache__redis_a4eb1c2772c8efc48c411ea060dd040b7}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!decrement@{decrement}}
+\index{decrement@{decrement}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{decrement()}
+{\footnotesize\ttfamily decrement (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Decrement a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to reduce by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed New value on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__redis_aa74a2edd6f3cbb5c5353f7faa97b6d70}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!delete@{delete}}
+\index{delete@{delete}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{delete()}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$key }\end{DoxyParamCaption})}
+
+Delete from cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Cache key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__redis_a24a9bf83a1002d46ece83a93d14bd921}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!get@{get}}
+\index{get@{get}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{get()}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$key }\end{DoxyParamCaption})}
+
+Get cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Cache ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__redis_ae0041475d947465622dfcef1fc53e43d}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!get\_metadata@{get\_metadata}}
+\index{get\_metadata@{get\_metadata}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{get\_metadata()}
+{\footnotesize\ttfamily get\+\_\+metadata (\begin{DoxyParamCaption}\item[{}]{\$key }\end{DoxyParamCaption})}
+
+Get cache metadata
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Cache key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__redis_a2f07a4e09b57f4460d49852497d1808f}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!increment@{increment}}
+\index{increment@{increment}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{increment()}
+{\footnotesize\ttfamily increment (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Increment a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed New value on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__redis_a98c68fd153468bc148c4ed8c716859fc}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!is\_supported@{is\_supported}}
+\index{is\_supported@{is\_supported}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{is\_supported()}
+{\footnotesize\ttfamily is\+\_\+supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if Redis driver is supported
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__redis_a472645db04a8ce4b040b789a3062a7d2}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!save@{save}}
+\index{save@{save}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$data,  }\item[{}]{\$ttl = {\ttfamily 60},  }\item[{}]{\$raw = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Save cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+mixed & {\em \$data} & Data to save \\
+\hline
+int & {\em \$ttl} & Time to live in seconds \\
+\hline
+bool & {\em \$raw} & Whether to store the raw value (unused) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_c_i___cache__redis_afbad69596f851c659fd07255c321fb97}} 
+\index{CI\_Cache\_redis@{CI\_Cache\_redis}!\$\_default\_config@{\$\_default\_config}}
+\index{\$\_default\_config@{\$\_default\_config}!CI\_Cache\_redis@{CI\_Cache\_redis}}
+\doxysubsubsection{\$\_default\_config}
+{\footnotesize\ttfamily \$\+\_\+default\+\_\+config\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'socket\_type'} => \textcolor{stringliteral}{'tcp'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'host'} => \textcolor{stringliteral}{'127.0.0.1'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'password'} => NULL,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'port'} => 6379,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'timeout'} => 0}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/\+Cache/drivers/Cache\+\_\+redis.\+php\end{DoxyCompactItemize}

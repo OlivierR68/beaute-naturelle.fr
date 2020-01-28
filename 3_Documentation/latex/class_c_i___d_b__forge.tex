@@ -1,0 +1,615 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+forge Class Reference}
+\label{class_c_i___d_b__forge}\index{CI\_DB\_forge@{CI\_DB\_forge}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+forge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_c_i___d_b__forge}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\&\$db)
+\item 
+\textbf{ create\+\_\+database} (\$db\+\_\+name)
+\item 
+\textbf{ drop\+\_\+database} (\$db\+\_\+name)
+\item 
+\textbf{ add\+\_\+key} (\$key, \$primary=F\+A\+L\+SE)
+\item 
+\textbf{ add\+\_\+field} (\$field)
+\item 
+\textbf{ create\+\_\+table} (\$table, \$if\+\_\+not\+\_\+exists=F\+A\+L\+SE, array \$attributes=array())
+\item 
+\textbf{ drop\+\_\+table} (\$table\+\_\+name, \$if\+\_\+exists=F\+A\+L\+SE)
+\item 
+\textbf{ rename\+\_\+table} (\$table\+\_\+name, \$new\+\_\+table\+\_\+name)
+\item 
+\textbf{ add\+\_\+column} (\$table, \$field, \$\+\_\+after=N\+U\+LL)
+\item 
+\textbf{ drop\+\_\+column} (\$table, \$column\+\_\+name)
+\item 
+\textbf{ modify\+\_\+column} (\$table, \$field)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__forge_ab2303c817e3b402b77b7f99627b9c319}} 
+{\bfseries \$fields} = array()
+\item 
+\mbox{\label{class_c_i___d_b__forge_af20635b6c08e03bfee9e3fc036fa80f3}} 
+{\bfseries \$keys} = array()
+\item 
+\mbox{\label{class_c_i___d_b__forge_a09349689030ba7198a094abf357c78bc}} 
+{\bfseries \$primary\+\_\+keys} = array()
+\item 
+\mbox{\label{class_c_i___d_b__forge_a6e90c3633cd0984a7e8de501f7771c53}} 
+{\bfseries \$db\+\_\+char\+\_\+set} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+create\+\_\+table} (\$table, \$if\+\_\+not\+\_\+exists, \$attributes)
+\item 
+\textbf{ \+\_\+create\+\_\+table\+\_\+attr} (\$attributes)
+\item 
+\textbf{ \+\_\+drop\+\_\+table} (\$table, \$if\+\_\+exists)
+\item 
+\textbf{ \+\_\+alter\+\_\+table} (\$alter\+\_\+type, \$table, \$field)
+\item 
+\textbf{ \+\_\+process\+\_\+fields} (\$\textbf{ create\+\_\+table}=F\+A\+L\+SE)
+\item 
+\textbf{ \+\_\+process\+\_\+column} (\$field)
+\item 
+\textbf{ \+\_\+attr\+\_\+type} (\&\$attributes)
+\item 
+\textbf{ \+\_\+attr\+\_\+unsigned} (\&\$attributes, \&\$field)
+\item 
+\textbf{ \+\_\+attr\+\_\+default} (\&\$attributes, \&\$field)
+\item 
+\textbf{ \+\_\+attr\+\_\+unique} (\&\$attributes, \&\$field)
+\item 
+\textbf{ \+\_\+attr\+\_\+auto\+\_\+increment} (\&\$attributes, \&\$field)
+\item 
+\textbf{ \+\_\+process\+\_\+primary\+\_\+keys} (\$table)
+\item 
+\textbf{ \+\_\+process\+\_\+indexes} (\$table)
+\item 
+\textbf{ \+\_\+reset} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__forge_a1fa3127fc82f96b1436d871ef02be319}} 
+{\bfseries \$db}
+\item 
+\mbox{\label{class_c_i___d_b__forge_acd23c9a8735806155f1a5d0a87c151f2}} 
+{\bfseries \$\+\_\+create\+\_\+database} = \textquotesingle{}C\+R\+E\+A\+TE D\+A\+T\+A\+B\+A\+SE \%s\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__forge_a8305b12fc17f6f87778260ebdff287b4}} 
+{\bfseries \$\+\_\+drop\+\_\+database} = \textquotesingle{}D\+R\+OP D\+A\+T\+A\+B\+A\+SE \%s\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__forge_a5950510a854f546e14f781b079a0a2b0}} 
+{\bfseries \$\+\_\+create\+\_\+table} = \char`\"{}\%s \%s (\%s\textbackslash{}n)\char`\"{}
+\item 
+\mbox{\label{class_c_i___d_b__forge_a2f6484fcb8d1dc3eef67a637227cd583}} 
+{\bfseries \$\+\_\+create\+\_\+table\+\_\+if} = \textquotesingle{}C\+R\+E\+A\+TE T\+A\+B\+LE IF N\+OT E\+X\+I\+S\+TS\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__forge_a73e07acdd35c948ad353903c2827af6e}} 
+{\bfseries \$\+\_\+create\+\_\+table\+\_\+keys} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__forge_a92a8a9145a7fc91e252e58d019373581}} 
+{\bfseries \$\+\_\+drop\+\_\+table\+\_\+if} = \textquotesingle{}D\+R\+OP T\+A\+B\+LE IF E\+X\+I\+S\+TS\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__forge_a1a649e7cf9de16bcf932977b18bc91de}} 
+{\bfseries \$\+\_\+rename\+\_\+table} = \textquotesingle{}A\+L\+T\+ER T\+A\+B\+LE \%s R\+E\+N\+A\+ME TO \%s;\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__forge_aae977ae6d61fa183f0b25422b6ddc31c}} 
+{\bfseries \$\+\_\+unsigned} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___d_b__forge_ae58fe6a5104d4a069a49b27533ce808f}} 
+{\bfseries \$\+\_\+null} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__forge_aa119e1b4e3d00f47a7b83b7066087915}} 
+{\bfseries \$\+\_\+default} = \textquotesingle{} D\+E\+F\+A\+U\+LT \textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b__forge_aaf2ef772755ec6f361d44e16cc9ffd69}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$db }\end{DoxyParamCaption})}
+
+Class constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \&\$db} & Database object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+pgsql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__pgsql__forge_aaf2ef772755ec6f361d44e16cc9ffd69}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlite__forge_aaf2ef772755ec6f361d44e16cc9ffd69}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__postgre__forge_aaf2ef772755ec6f361d44e16cc9ffd69}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite3__forge_aaf2ef772755ec6f361d44e16cc9ffd69}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__forge_a41c6cae02f2fda8b429ad0afb9509426}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_alter\_table@{\_alter\_table}}
+\index{\_alter\_table@{\_alter\_table}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_alter\_table()}
+{\footnotesize\ttfamily \+\_\+alter\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$alter\+\_\+type,  }\item[{}]{\$table,  }\item[{}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+A\+L\+T\+ER T\+A\+B\+LE
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alter\+\_\+type} & A\+L\+T\+ER type \\
+\hline
+string & {\em \$table} & Table name \\
+\hline
+mixed & {\em \$field} & Column definition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$string[] 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlite__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__mysql__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__ibase__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite3__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysqli__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysql__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+firebird\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__firebird__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+4d\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__4d__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+pgsql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__pgsql__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__cubrid__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__cubrid__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__postgre__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__oci8__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+oci\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__oci__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mssql__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+informix\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__informix__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+dblib\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__dblib__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlsrv\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlsrv__forge_a41c6cae02f2fda8b429ad0afb9509426}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__forge_a41c6cae02f2fda8b429ad0afb9509426}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+ibm\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__ibm__forge_a41c6cae02f2fda8b429ad0afb9509426}.
+
+\mbox{\label{class_c_i___d_b__forge_a2a013a5932439c3c44f0dad3436525f7}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_attr\_auto\_increment@{\_attr\_auto\_increment}}
+\index{\_attr\_auto\_increment@{\_attr\_auto\_increment}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_attr\_auto\_increment()}
+{\footnotesize\ttfamily \+\_\+attr\+\_\+auto\+\_\+increment (\begin{DoxyParamCaption}\item[{\&}]{\$attributes,  }\item[{\&}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Field attribute A\+U\+T\+O\+\_\+\+I\+N\+C\+R\+E\+M\+E\+NT
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$attributes} & \\
+\hline
+array & {\em \&\$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__ibase__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+firebird\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__firebird__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlite__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite3__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+4d\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__4d__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+pgsql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__pgsql__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__postgre__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__oci8__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+informix\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__informix__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+oci\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__oci__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+ibm\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__ibm__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mssql__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+dblib\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__dblib__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlsrv\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlsrv__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__forge_a2a013a5932439c3c44f0dad3436525f7}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__odbc__forge_a2a013a5932439c3c44f0dad3436525f7}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+odbc\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__odbc__forge_a2a013a5932439c3c44f0dad3436525f7}.
+
+\mbox{\label{class_c_i___d_b__forge_a033e9e430791efe4206512668ddf318e}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_attr\_default@{\_attr\_default}}
+\index{\_attr\_default@{\_attr\_default}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_attr\_default()}
+{\footnotesize\ttfamily \+\_\+attr\+\_\+default (\begin{DoxyParamCaption}\item[{\&}]{\$attributes,  }\item[{\&}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Field attribute D\+E\+F\+A\+U\+LT
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$attributes} & \\
+\hline
+array & {\em \&\$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a8553be952084c6f7cdfff370a1d14f6b}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_attr\_type@{\_attr\_type}}
+\index{\_attr\_type@{\_attr\_type}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_attr\_type()}
+{\footnotesize\ttfamily \+\_\+attr\+\_\+type (\begin{DoxyParamCaption}\item[{\&}]{\$attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Field attribute T\+Y\+PE
+
+Performs a data type mapping between different databases.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$attributes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__ibase__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlite__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+firebird\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__firebird__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite3__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+oci8\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__oci8__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__cubrid__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__cubrid__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+pgsql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__pgsql__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+oci\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__oci__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__postgre__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+4d\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__4d__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mssql__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+dblib\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__dblib__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlsrv\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlsrv__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlsrv\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlsrv__forge_a8553be952084c6f7cdfff370a1d14f6b}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+informix\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__informix__forge_a8553be952084c6f7cdfff370a1d14f6b}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+ibm\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__ibm__forge_a8553be952084c6f7cdfff370a1d14f6b}.
+
+\mbox{\label{class_c_i___d_b__forge_a7568a93ea53a7392a63fffe83bb7a090}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_attr\_unique@{\_attr\_unique}}
+\index{\_attr\_unique@{\_attr\_unique}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_attr\_unique()}
+{\footnotesize\ttfamily \+\_\+attr\+\_\+unique (\begin{DoxyParamCaption}\item[{\&}]{\$attributes,  }\item[{\&}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Field attribute U\+N\+I\+Q\+UE
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$attributes} & \\
+\hline
+array & {\em \&\$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+4d\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__4d__forge_a7568a93ea53a7392a63fffe83bb7a090}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+informix\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__informix__forge_a7568a93ea53a7392a63fffe83bb7a090}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+ibm\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__ibm__forge_a7568a93ea53a7392a63fffe83bb7a090}.
+
+\mbox{\label{class_c_i___d_b__forge_aebcfa19bad617858b7d728ff4df87f2c}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_attr\_unsigned@{\_attr\_unsigned}}
+\index{\_attr\_unsigned@{\_attr\_unsigned}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_attr\_unsigned()}
+{\footnotesize\ttfamily \+\_\+attr\+\_\+unsigned (\begin{DoxyParamCaption}\item[{\&}]{\$attributes,  }\item[{\&}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Field attribute U\+N\+S\+I\+G\+N\+ED
+
+Depending on the \+\_\+unsigned property value\+:
+
+
+\begin{DoxyItemize}
+\item T\+R\+UE will always set \$field[\textquotesingle{}unsigned\textquotesingle{}] to \textquotesingle{}U\+N\+S\+I\+G\+N\+ED\textquotesingle{}
+\item F\+A\+L\+SE will always set \$field[\textquotesingle{}unsigned\textquotesingle{}] to \textquotesingle{}\textquotesingle{}
+\item array(\+T\+Y\+P\+E) will set \$field[\textquotesingle{}unsigned\textquotesingle{}] to \textquotesingle{}U\+N\+S\+I\+G\+N\+ED\textquotesingle{}, if \$attributes[\textquotesingle{}T\+Y\+PE\textquotesingle{}] is found in the array
+\item array(T\+Y\+PE =$>$ U\+T\+Y\+PE) will change \$field[\textquotesingle{}type\textquotesingle{}], from T\+Y\+PE to U\+T\+Y\+PE in case of a match
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$attributes} & \\
+\hline
+array & {\em \&\$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a609e3ae24bd762e8d154f38a2ec7cfda}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_create\_table@{\_create\_table}}
+\index{\_create\_table@{\_create\_table}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_create\_table()}
+{\footnotesize\ttfamily \+\_\+create\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$if\+\_\+not\+\_\+exists,  }\item[{}]{\$attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create Table
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+bool & {\em \$if\+\_\+not\+\_\+exists} & Whether to add \textquotesingle{}IF N\+OT E\+X\+I\+S\+TS\textquotesingle{} condition \\
+\hline
+array & {\em \$attributes} & Associative array of table attributes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a10b25326d82f6ddd9af1935e52e42b72}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_create\_table\_attr@{\_create\_table\_attr}}
+\index{\_create\_table\_attr@{\_create\_table\_attr}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_create\_table\_attr()}
+{\footnotesize\ttfamily \+\_\+create\+\_\+table\+\_\+attr (\begin{DoxyParamCaption}\item[{}]{\$attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+C\+R\+E\+A\+TE T\+A\+B\+LE attributes
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$attributes} & Associative array of table attributes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__mysql__forge_a10b25326d82f6ddd9af1935e52e42b72}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysqli__forge_a10b25326d82f6ddd9af1935e52e42b72}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysql__forge_a10b25326d82f6ddd9af1935e52e42b72}.
+
+\mbox{\label{class_c_i___d_b__forge_a1875c16d087f2c269fc3666f0488c4c8}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_drop\_table@{\_drop\_table}}
+\index{\_drop\_table@{\_drop\_table}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_drop\_table()}
+{\footnotesize\ttfamily \+\_\+drop\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$if\+\_\+exists }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Drop Table
+
+Generates a platform-\/specific D\+R\+OP T\+A\+B\+LE string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+bool & {\em \$if\+\_\+exists} & Whether to add an IF E\+X\+I\+S\+TS condition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed (Returns a platform-\/specific D\+R\+OP table string, or T\+R\+UE to indicate there\textquotesingle{}s nothing to do) 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a8f38f1c5b5dddecca4befbe393f3f299}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_process\_column@{\_process\_column}}
+\index{\_process\_column@{\_process\_column}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_process\_column()}
+{\footnotesize\ttfamily \+\_\+process\+\_\+column (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Process column
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__ibase__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__mysql__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlite__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+firebird\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__firebird__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysqli__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysql__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite3__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__cubrid__forge_a8f38f1c5b5dddecca4befbe393f3f299}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__cubrid__forge_a8f38f1c5b5dddecca4befbe393f3f299}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+4d\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__4d__forge_a8f38f1c5b5dddecca4befbe393f3f299}.
+
+\mbox{\label{class_c_i___d_b__forge_ae469322e7aad35ff5689973878175922}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_process\_fields@{\_process\_fields}}
+\index{\_process\_fields@{\_process\_fields}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_process\_fields()}
+{\footnotesize\ttfamily \+\_\+process\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{\$create\+\_\+table = {\ttfamily FALSE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Process fields
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$create\+\_\+table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_ae0bdb4ea3418590d1894c5b621b5ca50}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_process\_indexes@{\_process\_indexes}}
+\index{\_process\_indexes@{\_process\_indexes}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_process\_indexes()}
+{\footnotesize\ttfamily \+\_\+process\+\_\+indexes (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Process indexes
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string[] list of S\+QL statements 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__mysql__forge_ae0bdb4ea3418590d1894c5b621b5ca50}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysqli\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysqli__forge_ae0bdb4ea3418590d1894c5b621b5ca50}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+mysql\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__mysql__forge_ae0bdb4ea3418590d1894c5b621b5ca50}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__cubrid__forge_ae0bdb4ea3418590d1894c5b621b5ca50}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+cubrid\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__cubrid__forge_ae0bdb4ea3418590d1894c5b621b5ca50}.
+
+\mbox{\label{class_c_i___d_b__forge_a207c32e2b5c14364b2e33d2f15500b7e}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_process\_primary\_keys@{\_process\_primary\_keys}}
+\index{\_process\_primary\_keys@{\_process\_primary\_keys}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_process\_primary\_keys()}
+{\footnotesize\ttfamily \+\_\+process\+\_\+primary\+\_\+keys (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Process primary keys
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_ab90fa1f6f390913fed8670e6535dc180}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!\_reset@{\_reset}}
+\index{\_reset@{\_reset}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{\_reset()}
+{\footnotesize\ttfamily \+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reset
+
+Resets table creation vars
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a855261dcf98c0cf401aa469994919c51}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!add\_column@{add\_column}}
+\index{add\_column@{add\_column}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{add\_column()}
+{\footnotesize\ttfamily add\+\_\+column (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$field,  }\item[{}]{\$\+\_\+after = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Column Add
+
+\begin{DoxyRefDesc}{Todo}
+\item[\textbf{ Todo}]Remove deprecated \$\+\_\+after option in 3.\+1+ \end{DoxyRefDesc}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+array & {\em \$field} & Column definition \\
+\hline
+string & {\em \$\+\_\+after} & Column for A\+F\+T\+ER clause (deprecated) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_acdaeff5aae80d6128c7ed9817ee82f1c}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!add\_field@{add\_field}}
+\index{add\_field@{add\_field}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{add\_field()}
+{\footnotesize\ttfamily add\+\_\+field (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Add Field
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+forge}{p.}{class_c_i___d_b__forge} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a70e5c5fca213d8ad84cc71ba1698c3dd}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!add\_key@{add\_key}}
+\index{add\_key@{add\_key}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{add\_key()}
+{\footnotesize\ttfamily add\+\_\+key (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$primary = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Add Key
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+bool & {\em \$primary} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+forge}{p.}{class_c_i___d_b__forge} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a902a7267babceb2ce595706f217e00ad}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!create\_database@{create\_database}}
+\index{create\_database@{create\_database}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{create\_database()}
+{\footnotesize\ttfamily create\+\_\+database (\begin{DoxyParamCaption}\item[{}]{\$db\+\_\+name }\end{DoxyParamCaption})}
+
+Create database
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$db\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlite__forge_a902a7267babceb2ce595706f217e00ad}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__ibase__forge_a902a7267babceb2ce595706f217e00ad}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite3__forge_a902a7267babceb2ce595706f217e00ad}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+firebird\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__firebird__forge_a902a7267babceb2ce595706f217e00ad}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite__forge_a902a7267babceb2ce595706f217e00ad}.
+
+\mbox{\label{class_c_i___d_b__forge_a0904375ba759fbe7961b424a46c0adae}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!create\_table@{create\_table}}
+\index{create\_table@{create\_table}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{create\_table()}
+{\footnotesize\ttfamily create\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$if\+\_\+not\+\_\+exists = {\ttfamily FALSE},  }\item[{array}]{\$attributes = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Create Table
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+bool & {\em \$if\+\_\+not\+\_\+exists} & Whether to add IF N\+OT E\+X\+I\+S\+TS condition \\
+\hline
+array & {\em \$attributes} & Associative array of table attributes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_aed0d6a0b12511dbdf19bb68fed7fd467}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!drop\_column@{drop\_column}}
+\index{drop\_column@{drop\_column}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{drop\_column()}
+{\footnotesize\ttfamily drop\+\_\+column (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$column\+\_\+name }\end{DoxyParamCaption})}
+
+Column Drop
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+string & {\em \$column\+\_\+name} & Column name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a9612987b2d4230de2638d15857e92e67}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!drop\_database@{drop\_database}}
+\index{drop\_database@{drop\_database}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{drop\_database()}
+{\footnotesize\ttfamily drop\+\_\+database (\begin{DoxyParamCaption}\item[{}]{\$db\+\_\+name }\end{DoxyParamCaption})}
+
+Drop database
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$db\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__sqlite__forge_a9612987b2d4230de2638d15857e92e67}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+ibase\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__ibase__forge_a9612987b2d4230de2638d15857e92e67}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite3\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite3__forge_a9612987b2d4230de2638d15857e92e67}, \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+firebird\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__pdo__firebird__forge_a9612987b2d4230de2638d15857e92e67}, and \textbf{ C\+I\+\_\+\+D\+B\+\_\+sqlite\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__sqlite__forge_a9612987b2d4230de2638d15857e92e67}.
+
+\mbox{\label{class_c_i___d_b__forge_ac46bdab43413dcc115d1be4a05dbcd0f}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!drop\_table@{drop\_table}}
+\index{drop\_table@{drop\_table}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{drop\_table()}
+{\footnotesize\ttfamily drop\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table\+\_\+name,  }\item[{}]{\$if\+\_\+exists = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Drop Table
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+\_\+name} & Table name \\
+\hline
+bool & {\em \$if\+\_\+exists} & Whether to add an IF E\+X\+I\+S\+TS condition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_aa03cc8de0ac9ce03016bd2b50ddeff87}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!modify\_column@{modify\_column}}
+\index{modify\_column@{modify\_column}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{modify\_column()}
+{\footnotesize\ttfamily modify\+\_\+column (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Column Modify
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+string & {\em \$field} & Column definition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__forge_a0fb4802acad335ebdecd921d59de9a51}} 
+\index{CI\_DB\_forge@{CI\_DB\_forge}!rename\_table@{rename\_table}}
+\index{rename\_table@{rename\_table}!CI\_DB\_forge@{CI\_DB\_forge}}
+\doxysubsubsection{rename\_table()}
+{\footnotesize\ttfamily rename\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table\+\_\+name,  }\item[{}]{\$new\+\_\+table\+\_\+name }\end{DoxyParamCaption})}
+
+Rename Table
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+\_\+name} & Old table name \\
+\hline
+string & {\em \$new\+\_\+table\+\_\+name} & New table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/D\+B\+\_\+forge.\+php\end{DoxyCompactItemize}

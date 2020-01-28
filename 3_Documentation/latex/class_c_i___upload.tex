@@ -1,0 +1,623 @@
+\doxysection{C\+I\+\_\+\+Upload Class Reference}
+\label{class_c_i___upload}\index{CI\_Upload@{CI\_Upload}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$config=array())
+\item 
+\textbf{ initialize} (array \$config=array(), \$reset=T\+R\+UE)
+\item 
+\textbf{ do\+\_\+upload} (\$field=\textquotesingle{}userfile\textquotesingle{})
+\item 
+\textbf{ data} (\$index=N\+U\+LL)
+\item 
+\textbf{ set\+\_\+upload\+\_\+path} (\$path)
+\item 
+\textbf{ set\+\_\+filename} (\$path, \$filename)
+\item 
+\textbf{ set\+\_\+max\+\_\+filesize} (\$n)
+\item 
+\textbf{ set\+\_\+max\+\_\+filename} (\$n)
+\item 
+\textbf{ set\+\_\+max\+\_\+width} (\$n)
+\item 
+\textbf{ set\+\_\+max\+\_\+height} (\$n)
+\item 
+\textbf{ set\+\_\+min\+\_\+width} (\$n)
+\item 
+\textbf{ set\+\_\+min\+\_\+height} (\$n)
+\item 
+\textbf{ set\+\_\+allowed\+\_\+types} (\$types)
+\item 
+\textbf{ set\+\_\+image\+\_\+properties} (\$path=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ set\+\_\+xss\+\_\+clean} (\$flag=F\+A\+L\+SE)
+\item 
+\textbf{ is\+\_\+image} ()
+\item 
+\textbf{ is\+\_\+allowed\+\_\+filetype} (\$ignore\+\_\+mime=F\+A\+L\+SE)
+\item 
+\textbf{ is\+\_\+allowed\+\_\+filesize} ()
+\item 
+\textbf{ is\+\_\+allowed\+\_\+dimensions} ()
+\item 
+\textbf{ validate\+\_\+upload\+\_\+path} ()
+\item 
+\textbf{ get\+\_\+extension} (\$filename)
+\item 
+\textbf{ limit\+\_\+filename\+\_\+length} (\$filename, \$length)
+\item 
+\textbf{ do\+\_\+xss\+\_\+clean} ()
+\item 
+\textbf{ set\+\_\+error} (\$msg, \$log\+\_\+level=\textquotesingle{}error\textquotesingle{})
+\item 
+\textbf{ display\+\_\+errors} (\$open=\textquotesingle{}$<$ p $>$\textquotesingle{}, \$close=\textquotesingle{}$<$/p $>$\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___upload_a3fec414be9f76cb7ba77ed79b784de62}} 
+{\bfseries \$max\+\_\+size} = 0
+\item 
+\mbox{\label{class_c_i___upload_a7f6a5db40a5fd00c8babbd37480b00fc}} 
+{\bfseries \$max\+\_\+width} = 0
+\item 
+\mbox{\label{class_c_i___upload_a7f2b56fde8cdd8907f9228149fc4b9bc}} 
+{\bfseries \$max\+\_\+height} = 0
+\item 
+\mbox{\label{class_c_i___upload_ad481f92f436b46aa9e400c3350c1971d}} 
+{\bfseries \$min\+\_\+width} = 0
+\item 
+\mbox{\label{class_c_i___upload_ade5021b056dd0ca6a46b293851ee8347}} 
+{\bfseries \$min\+\_\+height} = 0
+\item 
+\mbox{\label{class_c_i___upload_a7c8c80e453111c2521e355b83331a9df}} 
+{\bfseries \$max\+\_\+filename} = 0
+\item 
+\mbox{\label{class_c_i___upload_a95a9bbb06c792949b16879a515366b73}} 
+{\bfseries \$max\+\_\+filename\+\_\+increment} = 100
+\item 
+\mbox{\label{class_c_i___upload_a2e0df9e15179e2db66d161206842d6c0}} 
+{\bfseries \$allowed\+\_\+types} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a8b49917820e40f0b8956d95c1fd6ee6e}} 
+{\bfseries \$file\+\_\+temp} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a59bf132c77b5bee5adff2098cc2a6fbc}} 
+{\bfseries \$file\+\_\+name} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a2704f7723b97b03285de219442ae3e2b}} 
+{\bfseries \$orig\+\_\+name} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a6210dfa92a7e2e5e9db1aa2337ce4cd1}} 
+{\bfseries \$file\+\_\+type} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a5b3595a69dbf686d879bd009ec9c0317}} 
+{\bfseries \$file\+\_\+size} = N\+U\+LL
+\item 
+\mbox{\label{class_c_i___upload_a65b080519869bc14d792c1800e3362f5}} 
+{\bfseries \$file\+\_\+ext} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a19d10a169638eedd95a6a85d71146db8}} 
+{\bfseries \$file\+\_\+ext\+\_\+tolower} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___upload_a38507bf82f955d4b13642a3c7fd6e773}} 
+{\bfseries \$upload\+\_\+path} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a8d31b0ad9cccde7e2d857097672ed6cf}} 
+{\bfseries \$overwrite} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___upload_a54a751add0762edd4da11373e3b56687}} 
+{\bfseries \$encrypt\+\_\+name} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___upload_a4dae8ae20ed5fdf406554e1911065753}} 
+{\bfseries \$is\+\_\+image} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___upload_a8dadc2d2dcc0f25529a2d1e080d08169}} 
+{\bfseries \$image\+\_\+width} = N\+U\+LL
+\item 
+\mbox{\label{class_c_i___upload_af1b0485025a4c66fa3b2fc442df02d72}} 
+{\bfseries \$image\+\_\+height} = N\+U\+LL
+\item 
+\mbox{\label{class_c_i___upload_a939d6733d998cce893403d2f59f40317}} 
+{\bfseries \$image\+\_\+type} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a3a1769072af8ab3b0c5d6e0c1a1ae2ef}} 
+{\bfseries \$image\+\_\+size\+\_\+str} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_acf910733622c1fa671b9f755c69c2ec7}} 
+{\bfseries \$error\+\_\+msg} = array()
+\item 
+\mbox{\label{class_c_i___upload_ad9f32a52b4b2c16e42a007e0fa832721}} 
+{\bfseries \$remove\+\_\+spaces} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___upload_a50f6c723a0c96d773ecff982e7117a5f}} 
+{\bfseries \$detect\+\_\+mime} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___upload_a0f2ee8861c0b3164a5c6e126dd98c0cc}} 
+{\bfseries \$xss\+\_\+clean} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___upload_a5f54983a6ad24a5ee5c4ff5d9de48d83}} 
+{\bfseries \$mod\+\_\+mime\+\_\+fix} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___upload_ab38888cba65ae75bbc5b3841bc69d64a}} 
+{\bfseries \$temp\+\_\+prefix} = \textquotesingle{}temp\+\_\+file\+\_\+\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a3b81ba4d3535269e20e0b4a2ddab2edc}} 
+{\bfseries \$client\+\_\+name} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ set\+\_\+max\+\_\+size} (\$n)
+\item 
+\textbf{ \+\_\+prep\+\_\+filename} (\$filename)
+\item 
+\textbf{ \+\_\+file\+\_\+mime\+\_\+type} (\$file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___upload_a9f09c7cb693d391de63f9c8e91f159e1}} 
+{\bfseries \$\+\_\+file\+\_\+name\+\_\+override} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___upload_a7cc0f09266cdbeff9d73c31b88d5af87}} 
+{\bfseries \$\+\_\+mimes} = array()
+\item 
+\mbox{\label{class_c_i___upload_a9b6039aa2ad20924954fde50a2db8d26}} 
+{\bfseries \$\+\_\+\+CI}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___upload_af7f9493844d2d66e924e3c1df51ce616}} 
+\index{CI\_Upload@{CI\_Upload}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___upload_a8ac4511eca70b271965b7f8ef00faf66}} 
+\index{CI\_Upload@{CI\_Upload}!\_file\_mime\_type@{\_file\_mime\_type}}
+\index{\_file\_mime\_type@{\_file\_mime\_type}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{\_file\_mime\_type()}
+{\footnotesize\ttfamily \+\_\+file\+\_\+mime\+\_\+type (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+File M\+I\+ME type
+
+Detects the (actual) M\+I\+ME type of the uploaded file, if possible. The input array is expected to be \$\+\_\+\+F\+I\+L\+ES[\$field]
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Fileinfo extension -\/ most reliable method
+
+Apparently X\+A\+M\+PP, Cent\+OS, c\+Panel and who knows what other P\+HP distribution channels E\+X\+P\+L\+I\+C\+I\+T\+LY D\+I\+S\+A\+B\+LE ext/fileinfo, which is otherwise enabled by default since P\+HP 5.\+3 ...\mbox{\label{class_c_i___upload_a00936ce870d818794909bf16dc2ff70b}} 
+\index{CI\_Upload@{CI\_Upload}!\_prep\_filename@{\_prep\_filename}}
+\index{\_prep\_filename@{\_prep\_filename}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{\_prep\_filename()}
+{\footnotesize\ttfamily \+\_\+prep\+\_\+filename (\begin{DoxyParamCaption}\item[{}]{\$filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prep Filename
+
+Prevents possible script execution from Apache\textquotesingle{}s handling of files\textquotesingle{} multiple extensions.
+
+\doxyref{string \$filename  string }{p.}{}\mbox{\label{class_c_i___upload_afe56c7645362202d2f1c7b8f7da67f39}} 
+\index{CI\_Upload@{CI\_Upload}!data@{data}}
+\index{data@{data}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{data()}
+{\footnotesize\ttfamily data (\begin{DoxyParamCaption}\item[{}]{\$index = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Finalized Data Array
+
+Returns an associative array containing all of the information related to the upload, allowing the developer easy access in one array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a71a6f2e6d97ff5347257f101002bc903}} 
+\index{CI\_Upload@{CI\_Upload}!display\_errors@{display\_errors}}
+\index{display\_errors@{display\_errors}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{display\_errors()}
+{\footnotesize\ttfamily display\+\_\+errors (\begin{DoxyParamCaption}\item[{}]{\$open = {\ttfamily \textquotesingle{}$<$p$>$\textquotesingle{}},  }\item[{}]{\$close = {\ttfamily \textquotesingle{}$<$/p$>$\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Display the error message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$open} & \\
+\hline
+string & {\em \$close} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a4cace770be6503a3563aae6cbb98086b}} 
+\index{CI\_Upload@{CI\_Upload}!do\_upload@{do\_upload}}
+\index{do\_upload@{do\_upload}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{do\_upload()}
+{\footnotesize\ttfamily do\+\_\+upload (\begin{DoxyParamCaption}\item[{}]{\$field = {\ttfamily \textquotesingle{}userfile\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Perform the file upload
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_ae7e5f9b6d774795da126647f10c3c2a6}} 
+\index{CI\_Upload@{CI\_Upload}!do\_xss\_clean@{do\_xss\_clean}}
+\index{do\_xss\_clean@{do\_xss\_clean}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{do\_xss\_clean()}
+{\footnotesize\ttfamily do\+\_\+xss\+\_\+clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runs the file through the X\+SS clean function
+
+This prevents people from embedding malicious code in their files. I\textquotesingle{}m not sure that it won\textquotesingle{}t negatively affect certain files in unexpected ways, but so far I haven\textquotesingle{}t found that it causes trouble.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a6c656eedccb1131accc8e350bc50632f}} 
+\index{CI\_Upload@{CI\_Upload}!get\_extension@{get\_extension}}
+\index{get\_extension@{get\_extension}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{get\_extension()}
+{\footnotesize\ttfamily get\+\_\+extension (\begin{DoxyParamCaption}\item[{}]{\$filename }\end{DoxyParamCaption})}
+
+Extract the file extension
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a58cef448bae0c178f3f675700b7e4413}} 
+\index{CI\_Upload@{CI\_Upload}!initialize@{initialize}}
+\index{initialize@{initialize}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{initialize()}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}\item[{array}]{\$config = {\ttfamily array()},  }\item[{}]{\$reset = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Initialize preferences
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & \\
+\hline
+bool & {\em \$reset} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a70d66ccc85ab4ec9e76e02cfeaccc193}} 
+\index{CI\_Upload@{CI\_Upload}!is\_allowed\_dimensions@{is\_allowed\_dimensions}}
+\index{is\_allowed\_dimensions@{is\_allowed\_dimensions}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{is\_allowed\_dimensions()}
+{\footnotesize\ttfamily is\+\_\+allowed\+\_\+dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Verify that the image is within the allowed width/height
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_aa1283241c3b2fc700c7b577beecd5f97}} 
+\index{CI\_Upload@{CI\_Upload}!is\_allowed\_filesize@{is\_allowed\_filesize}}
+\index{is\_allowed\_filesize@{is\_allowed\_filesize}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{is\_allowed\_filesize()}
+{\footnotesize\ttfamily is\+\_\+allowed\+\_\+filesize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Verify that the file is within the allowed size
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a248e8cef69fc954953dc988e8d82afca}} 
+\index{CI\_Upload@{CI\_Upload}!is\_allowed\_filetype@{is\_allowed\_filetype}}
+\index{is\_allowed\_filetype@{is\_allowed\_filetype}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{is\_allowed\_filetype()}
+{\footnotesize\ttfamily is\+\_\+allowed\+\_\+filetype (\begin{DoxyParamCaption}\item[{}]{\$ignore\+\_\+mime = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Verify that the filetype is allowed
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$ignore\+\_\+mime} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_af6f513bc693e3ba836f23fe9bebc6427}} 
+\index{CI\_Upload@{CI\_Upload}!is\_image@{is\_image}}
+\index{is\_image@{is\_image}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{is\_image()}
+{\footnotesize\ttfamily is\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Validate the image
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_ab1f627192a69c4b88a44ad60ba05d0af}} 
+\index{CI\_Upload@{CI\_Upload}!limit\_filename\_length@{limit\_filename\_length}}
+\index{limit\_filename\_length@{limit\_filename\_length}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{limit\_filename\_length()}
+{\footnotesize\ttfamily limit\+\_\+filename\+\_\+length (\begin{DoxyParamCaption}\item[{}]{\$filename,  }\item[{}]{\$length }\end{DoxyParamCaption})}
+
+Limit the File Name Length
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filename} & \\
+\hline
+int & {\em \$length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a7c7ddfefedddc3fd625dd816d67c21bf}} 
+\index{CI\_Upload@{CI\_Upload}!set\_allowed\_types@{set\_allowed\_types}}
+\index{set\_allowed\_types@{set\_allowed\_types}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_allowed\_types()}
+{\footnotesize\ttfamily set\+\_\+allowed\+\_\+types (\begin{DoxyParamCaption}\item[{}]{\$types }\end{DoxyParamCaption})}
+
+Set Allowed File Types
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$types} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_aab6e33df2ad916fc21e93a84b6fd48bf}} 
+\index{CI\_Upload@{CI\_Upload}!set\_error@{set\_error}}
+\index{set\_error@{set\_error}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_error()}
+{\footnotesize\ttfamily set\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$msg,  }\item[{}]{\$log\+\_\+level = {\ttfamily \textquotesingle{}error\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set an error message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$msg} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a4b09b3f2b57a8bafcac1700f43d12c36}} 
+\index{CI\_Upload@{CI\_Upload}!set\_filename@{set\_filename}}
+\index{set\_filename@{set\_filename}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_filename()}
+{\footnotesize\ttfamily set\+\_\+filename (\begin{DoxyParamCaption}\item[{}]{\$path,  }\item[{}]{\$filename }\end{DoxyParamCaption})}
+
+Set the file name
+
+This function takes a filename/path as input and looks for the existence of a file with the same name. If found, it will append a number to the end of the filename to avoid overwriting a pre-\/existing file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+string & {\em \$filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a80c9b8c6e9f28d1f2a5a7e572c38915f}} 
+\index{CI\_Upload@{CI\_Upload}!set\_image\_properties@{set\_image\_properties}}
+\index{set\_image\_properties@{set\_image\_properties}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_image\_properties()}
+{\footnotesize\ttfamily set\+\_\+image\+\_\+properties (\begin{DoxyParamCaption}\item[{}]{\$path = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set Image Properties
+
+Uses GD to determine the width/height/type of image
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_aa288c7337b534788b32d66b23e25548e}} 
+\index{CI\_Upload@{CI\_Upload}!set\_max\_filename@{set\_max\_filename}}
+\index{set\_max\_filename@{set\_max\_filename}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_max\_filename()}
+{\footnotesize\ttfamily set\+\_\+max\+\_\+filename (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})}
+
+Set Maximum File Name Length
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a1f78c3a54f32d313294b27cde4eafaf4}} 
+\index{CI\_Upload@{CI\_Upload}!set\_max\_filesize@{set\_max\_filesize}}
+\index{set\_max\_filesize@{set\_max\_filesize}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_max\_filesize()}
+{\footnotesize\ttfamily set\+\_\+max\+\_\+filesize (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})}
+
+Set Maximum File Size
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_aaed82d431f5aeee6a0af294bc604a51e}} 
+\index{CI\_Upload@{CI\_Upload}!set\_max\_height@{set\_max\_height}}
+\index{set\_max\_height@{set\_max\_height}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_max\_height()}
+{\footnotesize\ttfamily set\+\_\+max\+\_\+height (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})}
+
+Set Maximum Image Height
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_ac6e7445ece6780c730e910d978dde95e}} 
+\index{CI\_Upload@{CI\_Upload}!set\_max\_size@{set\_max\_size}}
+\index{set\_max\_size@{set\_max\_size}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_max\_size()}
+{\footnotesize\ttfamily set\+\_\+max\+\_\+size (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set Maximum File Size
+
+An internal alias to \doxyref{set\+\_\+max\+\_\+filesize()}{p.}{class_c_i___upload_a1f78c3a54f32d313294b27cde4eafaf4} to help with configuration as \doxyref{initialize()}{p.}{class_c_i___upload_a58cef448bae0c178f3f675700b7e4413} will look for a set\+\_\+$<$property\+\_\+name$>$() method ...
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a4028f187a825a666976cc3fe47cd44a8}} 
+\index{CI\_Upload@{CI\_Upload}!set\_max\_width@{set\_max\_width}}
+\index{set\_max\_width@{set\_max\_width}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_max\_width()}
+{\footnotesize\ttfamily set\+\_\+max\+\_\+width (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})}
+
+Set Maximum Image Width
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a72c6007605b27c92dfd83c6e21fe82e3}} 
+\index{CI\_Upload@{CI\_Upload}!set\_min\_height@{set\_min\_height}}
+\index{set\_min\_height@{set\_min\_height}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_min\_height()}
+{\footnotesize\ttfamily set\+\_\+min\+\_\+height (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})}
+
+Set minimum image height
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_afe47751e024dc9bf07333060628e0fb4}} 
+\index{CI\_Upload@{CI\_Upload}!set\_min\_width@{set\_min\_width}}
+\index{set\_min\_width@{set\_min\_width}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_min\_width()}
+{\footnotesize\ttfamily set\+\_\+min\+\_\+width (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})}
+
+Set minimum image width
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_ab2407f3a942d9b203f54e21194cf040d}} 
+\index{CI\_Upload@{CI\_Upload}!set\_upload\_path@{set\_upload\_path}}
+\index{set\_upload\_path@{set\_upload\_path}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_upload\_path()}
+{\footnotesize\ttfamily set\+\_\+upload\+\_\+path (\begin{DoxyParamCaption}\item[{}]{\$path }\end{DoxyParamCaption})}
+
+Set Upload Path
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a5556024223414507d84d221862919212}} 
+\index{CI\_Upload@{CI\_Upload}!set\_xss\_clean@{set\_xss\_clean}}
+\index{set\_xss\_clean@{set\_xss\_clean}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{set\_xss\_clean()}
+{\footnotesize\ttfamily set\+\_\+xss\+\_\+clean (\begin{DoxyParamCaption}\item[{}]{\$flag = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Set X\+SS Clean
+
+Enables the X\+SS flag so that the file that was uploaded will be run through the X\+SS filter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$flag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Upload}{p.}{class_c_i___upload} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___upload_a067f092935018f0d1fbfa955ddecfee3}} 
+\index{CI\_Upload@{CI\_Upload}!validate\_upload\_path@{validate\_upload\_path}}
+\index{validate\_upload\_path@{validate\_upload\_path}!CI\_Upload@{CI\_Upload}}
+\doxysubsubsection{validate\_upload\_path()}
+{\footnotesize\ttfamily validate\+\_\+upload\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Validate Upload Path
+
+Verifies that it is a valid upload path with proper permissions.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Upload.\+php\end{DoxyCompactItemize}

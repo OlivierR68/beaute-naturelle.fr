@@ -1,0 +1,120 @@
+\doxysection{X\+M\+L\+\_\+\+R\+P\+C\+\_\+\+Client Class Reference}
+\label{class_x_m_l___r_p_c___client}\index{XML\_RPC\_Client@{XML\_RPC\_Client}}
+Inheritance diagram for X\+M\+L\+\_\+\+R\+P\+C\+\_\+\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_x_m_l___r_p_c___client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$path, \$\textbf{ server}, \$port=80, \$proxy=F\+A\+L\+SE, \$proxy\+\_\+port=8080)
+\item 
+\textbf{ send} (\$msg)
+\item 
+\textbf{ send\+Payload} (\$msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a0a4baf0b22973c07685c3981f0d17fc4}} 
+{\bfseries \$path} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_ad135cc8a47e55f0829949cf62214170f}} 
+{\bfseries \$server} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_aa0787efab4b22e8a212882f3409d4c77}} 
+{\bfseries \$port} = 80
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a0eb82aa5f81cf845de4b36cd653c42cf}} 
+{\bfseries \$username}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a607686ef9f99ea7c42f4f3dd3dbb2b0d}} 
+{\bfseries \$password}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a01564a63e754b8037a987f7f8fde0e6d}} 
+{\bfseries \$proxy} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a778054bf2337c6516bdad84294329511}} 
+{\bfseries \$proxy\+\_\+port} = 8080
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a2be10a914e39a6b1f855ddf3b9a21367}} 
+{\bfseries \$errno} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_ac0e00fea1b952868a67648a9442a58da}} 
+{\bfseries \$errstring} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a84320a9bf3e591d7ae20dfcb0dfe6a0d}} 
+{\bfseries \$timeout} = 5
+\item 
+\mbox{\label{class_x_m_l___r_p_c___client_a77b58d3e00e1054158dc707e34334497}} 
+{\bfseries \$no\+\_\+multicall} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_x_m_l___r_p_c___client_ab665c9b62c100416c6c1e20ec650f553}} 
+\index{XML\_RPC\_Client@{XML\_RPC\_Client}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!XML\_RPC\_Client@{XML\_RPC\_Client}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$path,  }\item[{}]{\$server,  }\item[{}]{\$port = {\ttfamily 80},  }\item[{}]{\$proxy = {\ttfamily FALSE},  }\item[{}]{\$proxy\+\_\+port = {\ttfamily 8080} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+object & {\em \$server} & \\
+\hline
+int & {\em \$port} & \\
+\hline
+string & {\em \$proxy} & \\
+\hline
+int & {\em \$proxy\+\_\+port} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_x_m_l___r_p_c___client_a10284ca4704ff9e94185f95baa21973f}} 
+\index{XML\_RPC\_Client@{XML\_RPC\_Client}!send@{send}}
+\index{send@{send}!XML\_RPC\_Client@{XML\_RPC\_Client}}
+\doxysubsubsection{send()}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{}]{\$msg }\end{DoxyParamCaption})}
+
+Send message
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$msg} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___client_a040f0b8dcbcaac6a33ca0541befed955}} 
+\index{XML\_RPC\_Client@{XML\_RPC\_Client}!sendPayload@{sendPayload}}
+\index{sendPayload@{sendPayload}!XML\_RPC\_Client@{XML\_RPC\_Client}}
+\doxysubsubsection{sendPayload()}
+{\footnotesize\ttfamily send\+Payload (\begin{DoxyParamCaption}\item[{}]{\$msg }\end{DoxyParamCaption})}
+
+Send payload
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$msg} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Xmlrpc.\+php\end{DoxyCompactItemize}

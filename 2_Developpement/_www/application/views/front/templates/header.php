@@ -53,6 +53,7 @@
                             class="d-none d-sm-inline">Ouvert tous les
                             jours, (sauf le Dimanche) de</span> 9H00 à 18H00</a>
                 </div>
+				<!--
                 <div class="bn_social d-none d-md-block">
                     <a href="https://www.facebook.com/" target="_blank" class="ml-1 bn_social-items"><i
                             class="fab fa-facebook-square"></i></a>
@@ -61,6 +62,14 @@
                     <a href="https://www.instagram.com/" target="_blank" class="ml-1 bn_social-items"><i
                             class="fab fa-instagram"></i></a>
                 </div>
+                -->
+				<div class="d-none d-md-block bn_infos">
+
+					<a class="bn_infos-items" href="<?php echo site_url('users') ?>"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
+					<a class="bn_infos-items" href="#"><i class="fas fa-user-plus"></i> S'Inscrire</a>
+
+
+				</div>
             </div>
         </div>
 

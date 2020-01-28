@@ -1,0 +1,164 @@
+\doxysection{X\+M\+L\+\_\+\+R\+P\+C\+\_\+\+Response Class Reference}
+\label{class_x_m_l___r_p_c___response}\index{XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$val, \$code=0, \$fstr=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ fault\+Code} ()
+\item 
+\textbf{ fault\+String} ()
+\item 
+\textbf{ value} ()
+\item 
+\textbf{ prepare\+\_\+response} ()
+\item 
+\textbf{ decode} (\$array=N\+U\+LL)
+\item 
+\textbf{ xmlrpc\+\_\+decoder} (\$xmlrpc\+\_\+val)
+\item 
+\textbf{ iso8601\+\_\+decode} (\$time, \$utc=F\+A\+L\+SE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___response_aac81a74a7b30767af29bfd9a695636df}} 
+{\bfseries \$val} = 0
+\item 
+\mbox{\label{class_x_m_l___r_p_c___response_a2be10a914e39a6b1f855ddf3b9a21367}} 
+{\bfseries \$errno} = 0
+\item 
+\mbox{\label{class_x_m_l___r_p_c___response_a126a4369646afcf007816bfa8c208d11}} 
+{\bfseries \$errstr} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___response_a52500036ee807241b8b4b7e2367c49ef}} 
+{\bfseries \$headers} = array()
+\item 
+\mbox{\label{class_x_m_l___r_p_c___response_a0f2ee8861c0b3164a5c6e126dd98c0cc}} 
+{\bfseries \$xss\+\_\+clean} = T\+R\+UE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_x_m_l___r_p_c___response_a62cc1aaff0155564cfc1c280707a8f86}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$val,  }\item[{}]{\$code = {\ttfamily 0},  }\item[{}]{\$fstr = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$val} & \\
+\hline
+int & {\em \$code} & \\
+\hline
+string & {\em \$fstr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_x_m_l___r_p_c___response_a03c0253c215ae6aaafc6a949276b06bd}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!decode@{decode}}
+\index{decode@{decode}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{decode()}
+{\footnotesize\ttfamily decode (\begin{DoxyParamCaption}\item[{}]{\$array = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Decode
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___response_ad6849a82f23db4d67e06a7fcaa94aec2}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!faultCode@{faultCode}}
+\index{faultCode@{faultCode}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{faultCode()}
+{\footnotesize\ttfamily fault\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fault code
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___response_a2f922009ed0801616d3df198a48d193b}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!faultString@{faultString}}
+\index{faultString@{faultString}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{faultString()}
+{\footnotesize\ttfamily fault\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fault string
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___response_afd1f70f703eb82303e1199e8653c9c44}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!iso8601\_decode@{iso8601\_decode}}
+\index{iso8601\_decode@{iso8601\_decode}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{iso8601\_decode()}
+{\footnotesize\ttfamily iso8601\+\_\+decode (\begin{DoxyParamCaption}\item[{}]{\$time,  }\item[{}]{\$utc = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+I\+S\+O-\/8601 time to server or U\+TC time
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int unix timestamp 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___response_ac6925a06291928e6d4e8e53ea10fb1e2}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!prepare\_response@{prepare\_response}}
+\index{prepare\_response@{prepare\_response}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{prepare\_response()}
+{\footnotesize\ttfamily prepare\+\_\+response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prepare response
+
+\begin{DoxyReturn}{Returns}
+string xml 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___response_aefbfa229f1c9e1fc967bff724a010f9e}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!value@{value}}
+\index{value@{value}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{value()}
+{\footnotesize\ttfamily value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Value
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___response_a44f453c58a4aad3ccb76dd9926f9fa64}} 
+\index{XML\_RPC\_Response@{XML\_RPC\_Response}!xmlrpc\_decoder@{xmlrpc\_decoder}}
+\index{xmlrpc\_decoder@{xmlrpc\_decoder}!XML\_RPC\_Response@{XML\_RPC\_Response}}
+\doxysubsubsection{xmlrpc\_decoder()}
+{\footnotesize\ttfamily xmlrpc\+\_\+decoder (\begin{DoxyParamCaption}\item[{}]{\$xmlrpc\+\_\+val }\end{DoxyParamCaption})}
+
+X\+M\+L-\/\+R\+PC Object to P\+HP Types
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Xmlrpc.\+php\end{DoxyCompactItemize}

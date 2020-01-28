@@ -1,0 +1,82 @@
+\doxysection{C\+I\+\_\+\+Benchmark Class Reference}
+\label{class_c_i___benchmark}\index{CI\_Benchmark@{CI\_Benchmark}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ mark} (\$name)
+\item 
+\textbf{ elapsed\+\_\+time} (\$point1=\textquotesingle{}\textquotesingle{}, \$point2=\textquotesingle{}\textquotesingle{}, \$decimals=4)
+\item 
+\textbf{ memory\+\_\+usage} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___benchmark_aad34fbf53cda6bd8a3a9c46764d534fa}} 
+{\bfseries \$marker} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___benchmark_acfe5ce040b92f677e01b5dcc9cdcc3bf}} 
+\index{CI\_Benchmark@{CI\_Benchmark}!elapsed\_time@{elapsed\_time}}
+\index{elapsed\_time@{elapsed\_time}!CI\_Benchmark@{CI\_Benchmark}}
+\doxysubsubsection{elapsed\_time()}
+{\footnotesize\ttfamily elapsed\+\_\+time (\begin{DoxyParamCaption}\item[{}]{\$point1 = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$point2 = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$decimals = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+Elapsed time
+
+Calculates the time difference between two marked points.
+
+If the first parameter is empty this function instead returns the \{elapsed\+\_\+time\} pseudo-\/variable. This permits the full system execution time to be shown in a template. The output class will swap the real value for this variable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$point1} & A particular marked point \\
+\hline
+string & {\em \$point2} & A particular marked point \\
+\hline
+int & {\em \$decimals} & Number of decimal places\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Calculated elapsed time on success, an \textquotesingle{}\{elapsed\+\_\+string\}\textquotesingle{} if \$point1 is empty or an empty string if \$point1 is not found. 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___benchmark_a18c82f5dd0118d3e7c57bcd86dc32e9e}} 
+\index{CI\_Benchmark@{CI\_Benchmark}!mark@{mark}}
+\index{mark@{mark}!CI\_Benchmark@{CI\_Benchmark}}
+\doxysubsubsection{mark()}
+{\footnotesize\ttfamily mark (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Set a benchmark marker
+
+Multiple calls to this function can be made so that several execution points can be timed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Marker name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___benchmark_abdb10dca75c4c15f94796af1602d5b80}} 
+\index{CI\_Benchmark@{CI\_Benchmark}!memory\_usage@{memory\_usage}}
+\index{memory\_usage@{memory\_usage}!CI\_Benchmark@{CI\_Benchmark}}
+\doxysubsubsection{memory\_usage()}
+{\footnotesize\ttfamily memory\+\_\+usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Memory Usage
+
+Simply returns the \{memory\+\_\+usage\} marker.
+
+This permits it to be put it anywhere in a template without the memory being calculated until the end. The output class will swap the real value for this variable.
+
+\begin{DoxyReturn}{Returns}
+string \textquotesingle{}\{memory\+\_\+usage\}\textquotesingle{} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/Benchmark.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,231 @@
+\doxysection{C\+I\+\_\+\+Cache\+\_\+file Class Reference}
+\label{class_c_i___cache__file}\index{CI\_Cache\_file@{CI\_Cache\_file}}
+Inheritance diagram for C\+I\+\_\+\+Cache\+\_\+file\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___cache__file}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ get} (\$id)
+\item 
+\textbf{ save} (\$id, \$data, \$ttl=60, \$raw=F\+A\+L\+SE)
+\item 
+\textbf{ delete} (\$id)
+\item 
+\textbf{ increment} (\$id, \$offset=1)
+\item 
+\textbf{ decrement} (\$id, \$offset=1)
+\item 
+\textbf{ clean} ()
+\item 
+\textbf{ cache\+\_\+info} (\$type=N\+U\+LL)
+\item 
+\textbf{ get\+\_\+metadata} (\$id)
+\item 
+\textbf{ is\+\_\+supported} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+get} (\$id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___cache__file_ae9407d6ae1ddd132cca3c7f855f89dfe}} 
+{\bfseries \$\+\_\+cache\+\_\+path}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___cache__file_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize file-\/based cache
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___cache__file_aae09ed79c1d2dc8b2093602181ddf911}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!\_get@{\_get}}
+\index{\_get@{\_get}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{\_get()}
+{\footnotesize\ttfamily \+\_\+get (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get all data
+
+Internal method to get all the relevant data about a cache item
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed Data array on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_aa8b9c4d9f0387156736ccd8850f0727e}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!cache\_info@{cache\_info}}
+\index{cache\_info@{cache\_info}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{cache\_info()}
+{\footnotesize\ttfamily cache\+\_\+info (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Cache Info
+
+Not supported by file-\/based caching
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & user/filehits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_adb40b812890a8bc058bf6b7a0e1a54d9}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!clean@{clean}}
+\index{clean@{clean}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{clean()}
+{\footnotesize\ttfamily clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clean the Cache
+
+\begin{DoxyReturn}{Returns}
+bool false on failure/true on success 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_a4eb1c2772c8efc48c411ea060dd040b7}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!decrement@{decrement}}
+\index{decrement@{decrement}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{decrement()}
+{\footnotesize\ttfamily decrement (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Decrement a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to reduce by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New value on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_a2f8258add505482d7f00ea26493a5723}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!delete@{delete}}
+\index{delete@{delete}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{delete()}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Delete from Cache
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & unique identifier of item in cache \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true on success/false on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_a50e3bfb586b2f42932a6a93f3fbb0828}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!get@{get}}
+\index{get@{get}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{get()}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Fetch from cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed Data on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_a59635cf18e997c5141bffa05ff7622e0}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!get\_metadata@{get\_metadata}}
+\index{get\_metadata@{get\_metadata}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{get\_metadata()}
+{\footnotesize\ttfamily get\+\_\+metadata (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Get Cache Metadata
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & key to get cache metadata on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed F\+A\+L\+SE on failure, array on success. 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_a2f07a4e09b57f4460d49852497d1808f}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!increment@{increment}}
+\index{increment@{increment}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{increment()}
+{\footnotesize\ttfamily increment (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Increment a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New value on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_a98c68fd153468bc148c4ed8c716859fc}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!is\_supported@{is\_supported}}
+\index{is\_supported@{is\_supported}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{is\_supported()}
+{\footnotesize\ttfamily is\+\_\+supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is supported
+
+In the file driver, check to see that the cache directory is indeed writable
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__file_a472645db04a8ce4b040b789a3062a7d2}} 
+\index{CI\_Cache\_file@{CI\_Cache\_file}!save@{save}}
+\index{save@{save}!CI\_Cache\_file@{CI\_Cache\_file}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$data,  }\item[{}]{\$ttl = {\ttfamily 60},  }\item[{}]{\$raw = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Save into cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+mixed & {\em \$data} & Data to store \\
+\hline
+int & {\em \$ttl} & Time to live in seconds \\
+\hline
+bool & {\em \$raw} & Whether to store the raw value (unused) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/\+Cache/drivers/Cache\+\_\+file.\+php\end{DoxyCompactItemize}

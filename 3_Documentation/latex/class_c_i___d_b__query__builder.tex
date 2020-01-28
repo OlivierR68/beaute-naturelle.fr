@@ -1,0 +1,1817 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder Class Reference}
+\label{class_c_i___d_b__query__builder}\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___d_b__query__builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ select} (\$select=\textquotesingle{} $\ast$\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ select\+\_\+max} (\$\textbf{ select}=\textquotesingle{}\textquotesingle{}, \$alias=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ select\+\_\+min} (\$\textbf{ select}=\textquotesingle{}\textquotesingle{}, \$alias=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ select\+\_\+avg} (\$\textbf{ select}=\textquotesingle{}\textquotesingle{}, \$alias=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ select\+\_\+sum} (\$\textbf{ select}=\textquotesingle{}\textquotesingle{}, \$alias=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ distinct} (\$val=T\+R\+UE)
+\item 
+\textbf{ from} (\$from)
+\item 
+\textbf{ join} (\$table, \$cond, \$type=\textquotesingle{}\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ where} (\$key, \$value=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ or\+\_\+where} (\$key, \$value=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ where\+\_\+in} (\$key=N\+U\+LL, \$values=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ or\+\_\+where\+\_\+in} (\$key=N\+U\+LL, \$values=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ where\+\_\+not\+\_\+in} (\$key=N\+U\+LL, \$values=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ or\+\_\+where\+\_\+not\+\_\+in} (\$key=N\+U\+LL, \$values=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ like} (\$field, \$match=\textquotesingle{}\textquotesingle{}, \$side=\textquotesingle{}both\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ not\+\_\+like} (\$field, \$match=\textquotesingle{}\textquotesingle{}, \$side=\textquotesingle{}both\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ or\+\_\+like} (\$field, \$match=\textquotesingle{}\textquotesingle{}, \$side=\textquotesingle{}both\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ or\+\_\+not\+\_\+like} (\$field, \$match=\textquotesingle{}\textquotesingle{}, \$side=\textquotesingle{}both\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ group\+\_\+start} (\$not=\textquotesingle{}\textquotesingle{}, \$type=\textquotesingle{}A\+ND \textquotesingle{})
+\item 
+\textbf{ or\+\_\+group\+\_\+start} ()
+\item 
+\textbf{ not\+\_\+group\+\_\+start} ()
+\item 
+\textbf{ or\+\_\+not\+\_\+group\+\_\+start} ()
+\item 
+\textbf{ group\+\_\+end} ()
+\item 
+\textbf{ group\+\_\+by} (\$by, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ having} (\$key, \$value=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ or\+\_\+having} (\$key, \$value=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ order\+\_\+by} (\$orderby, \$direction=\textquotesingle{}\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ limit} (\$value, \$\textbf{ offset}=0)
+\item 
+\textbf{ offset} (\$offset)
+\item 
+\textbf{ set} (\$key, \$value=\textquotesingle{}\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ get\+\_\+compiled\+\_\+select} (\$table=\textquotesingle{}\textquotesingle{}, \$reset=T\+R\+UE)
+\item 
+\textbf{ get} (\$table=\textquotesingle{}\textquotesingle{}, \$\textbf{ limit}=N\+U\+LL, \$\textbf{ offset}=N\+U\+LL)
+\item 
+\textbf{ count\+\_\+all\+\_\+results} (\$table=\textquotesingle{}\textquotesingle{}, \$reset=T\+R\+UE)
+\item 
+\textbf{ get\+\_\+where} (\$table=\textquotesingle{}\textquotesingle{}, \$\textbf{ where}=N\+U\+LL, \$\textbf{ limit}=N\+U\+LL, \$\textbf{ offset}=N\+U\+LL)
+\item 
+\textbf{ insert\+\_\+batch} (\$table, \$\textbf{ set}=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL, \$batch\+\_\+size=100)
+\item 
+\textbf{ set\+\_\+insert\+\_\+batch} (\$key, \$value=\textquotesingle{}\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ get\+\_\+compiled\+\_\+insert} (\$table=\textquotesingle{}\textquotesingle{}, \$reset=T\+R\+UE)
+\item 
+\textbf{ insert} (\$table=\textquotesingle{}\textquotesingle{}, \$\textbf{ set}=N\+U\+LL, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ replace} (\$table=\textquotesingle{}\textquotesingle{}, \$\textbf{ set}=N\+U\+LL)
+\item 
+\textbf{ get\+\_\+compiled\+\_\+update} (\$table=\textquotesingle{}\textquotesingle{}, \$reset=T\+R\+UE)
+\item 
+\textbf{ update} (\$table=\textquotesingle{}\textquotesingle{}, \$\textbf{ set}=N\+U\+LL, \$\textbf{ where}=N\+U\+LL, \$\textbf{ limit}=N\+U\+LL)
+\item 
+\textbf{ update\+\_\+batch} (\$table, \$\textbf{ set}=N\+U\+LL, \$index=N\+U\+LL, \$batch\+\_\+size=100)
+\item 
+\textbf{ set\+\_\+update\+\_\+batch} (\$key, \$index=\textquotesingle{}\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ empty\+\_\+table} (\$table=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ truncate} (\$table=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ get\+\_\+compiled\+\_\+delete} (\$table=\textquotesingle{}\textquotesingle{}, \$reset=T\+R\+UE)
+\item 
+\textbf{ delete} (\$table=\textquotesingle{}\textquotesingle{}, \$\textbf{ where}=\textquotesingle{}\textquotesingle{}, \$\textbf{ limit}=N\+U\+LL, \$reset\+\_\+data=T\+R\+UE)
+\item 
+\textbf{ dbprefix} (\$table=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ set\+\_\+dbprefix} (\$prefix=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ start\+\_\+cache} ()
+\item 
+\textbf{ stop\+\_\+cache} ()
+\item 
+\textbf{ flush\+\_\+cache} ()
+\item 
+\textbf{ reset\+\_\+query} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+max\+\_\+min\+\_\+avg\+\_\+sum} (\$\textbf{ select}=\textquotesingle{}\textquotesingle{}, \$alias=\textquotesingle{}\textquotesingle{}, \$type=\textquotesingle{}M\+AX\textquotesingle{})
+\item 
+\textbf{ \+\_\+create\+\_\+alias\+\_\+from\+\_\+table} (\$item)
+\item 
+\textbf{ \+\_\+wh} (\$qb\+\_\+key, \$key, \$value=N\+U\+LL, \$type=\textquotesingle{}A\+ND \textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ \+\_\+where\+\_\+in} (\$key=N\+U\+LL, \$values=N\+U\+LL, \$not=F\+A\+L\+SE, \$type=\textquotesingle{}A\+ND \textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ \+\_\+like} (\$field, \$match=\textquotesingle{}\textquotesingle{}, \$type=\textquotesingle{}A\+ND \textquotesingle{}, \$side=\textquotesingle{}both\textquotesingle{}, \$not=\textquotesingle{}\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\item 
+\textbf{ \+\_\+group\+\_\+get\+\_\+type} (\$type)
+\item 
+\textbf{ \+\_\+limit} (\$sql)
+\item 
+\textbf{ \+\_\+insert\+\_\+batch} (\$table, \$keys, \$values)
+\item 
+\textbf{ \+\_\+validate\+\_\+insert} (\$table=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ \+\_\+replace} (\$table, \$keys, \$values)
+\item 
+\textbf{ \+\_\+from\+\_\+tables} ()
+\item 
+\textbf{ \+\_\+validate\+\_\+update} (\$table)
+\item 
+\textbf{ \+\_\+update\+\_\+batch} (\$table, \$values, \$index)
+\item 
+\textbf{ \+\_\+truncate} (\$table)
+\item 
+\textbf{ \+\_\+delete} (\$table)
+\item 
+\textbf{ \+\_\+track\+\_\+aliases} (\$table)
+\item 
+\textbf{ \+\_\+compile\+\_\+select} (\$select\+\_\+override=F\+A\+L\+SE)
+\item 
+\textbf{ \+\_\+compile\+\_\+wh} (\$qb\+\_\+key)
+\item 
+\textbf{ \+\_\+compile\+\_\+group\+\_\+by} ()
+\item 
+\textbf{ \+\_\+compile\+\_\+order\+\_\+by} ()
+\item 
+\textbf{ \+\_\+object\+\_\+to\+\_\+array} (\$object)
+\item 
+\textbf{ \+\_\+object\+\_\+to\+\_\+array\+\_\+batch} (\$object)
+\item 
+\textbf{ \+\_\+merge\+\_\+cache} ()
+\item 
+\textbf{ \+\_\+is\+\_\+literal} (\$str)
+\item 
+\textbf{ \+\_\+reset\+\_\+run} (\$qb\+\_\+reset\+\_\+items)
+\item 
+\textbf{ \+\_\+reset\+\_\+select} ()
+\item 
+\textbf{ \+\_\+reset\+\_\+write} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_aee0c1cc88062e1b49fe9e057bfb288e6}} 
+{\bfseries \$return\+\_\+delete\+\_\+sql} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_aaeed877e8b1faeddaecaec6c890567ef}} 
+{\bfseries \$reset\+\_\+delete\+\_\+data} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a0ffc5292702e6f9ffbd830f149762e87}} 
+{\bfseries \$qb\+\_\+select} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_ab25ffde080220f90531e2c7fb63dae61}} 
+{\bfseries \$qb\+\_\+distinct} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_ae3b7c9b5e80df14e86603e12e5af7878}} 
+{\bfseries \$qb\+\_\+from} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a21c59bf512aeedb532e61ef101aefc17}} 
+{\bfseries \$qb\+\_\+join} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_afc34268c5a4d034aa3802e3310ec9419}} 
+{\bfseries \$qb\+\_\+where} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a93e14f322d0e6e6cbc3eebe21ce6a034}} 
+{\bfseries \$qb\+\_\+groupby} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a3f6570da7e71b44280a01265f18e1a54}} 
+{\bfseries \$qb\+\_\+having} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a08fe63db41a3e804650206850175c1dc}} 
+{\bfseries \$qb\+\_\+keys} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a383e4f5a10c762a271105c85b3ebca61}} 
+{\bfseries \$qb\+\_\+limit} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_aa45418e873986d0f6e6bc768ea5567e5}} 
+{\bfseries \$qb\+\_\+offset} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a8e856c95a5ca3df7c7deba3782182a3e}} 
+{\bfseries \$qb\+\_\+orderby} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a377913806717a7b6bcd35ed1df5ac072}} 
+{\bfseries \$qb\+\_\+set} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_af816caafbd6c91c12d1cf7b39ad9de35}} 
+{\bfseries \$qb\+\_\+set\+\_\+ub} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a1a27aa0ceada8a74b23613bf3cd04e65}} 
+{\bfseries \$qb\+\_\+aliased\+\_\+tables} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_aaae9d24ab424373f1bdbc1b601074433}} 
+{\bfseries \$qb\+\_\+where\+\_\+group\+\_\+started} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a2fcbcc620115436314a2d25e7c9ce366}} 
+{\bfseries \$qb\+\_\+where\+\_\+group\+\_\+count} = 0
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_aa1fb22248b06dc9b0b803ba19e54bcbd}} 
+{\bfseries \$qb\+\_\+caching} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a895766ccda772ba2c14b755e5eed3615}} 
+{\bfseries \$qb\+\_\+cache\+\_\+exists} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a5fd3adf4f7eb7361b707c1172bd9581e}} 
+{\bfseries \$qb\+\_\+cache\+\_\+select} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a37229f5eb9d9d16137a76956d12c31a1}} 
+{\bfseries \$qb\+\_\+cache\+\_\+from} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_ae4641bc6264db400498f5ed8e9ec683e}} 
+{\bfseries \$qb\+\_\+cache\+\_\+join} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_abcc9582480472e76d30a16183959b60b}} 
+{\bfseries \$qb\+\_\+cache\+\_\+aliased\+\_\+tables} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_ac325a253ad5ee9ac7fd5cbdad2603de3}} 
+{\bfseries \$qb\+\_\+cache\+\_\+where} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_af74e5310be3853a3ed7a62666b9a8da3}} 
+{\bfseries \$qb\+\_\+cache\+\_\+groupby} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a37ceb9118d6a143e889dca4493a42cb2}} 
+{\bfseries \$qb\+\_\+cache\+\_\+having} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a0ff4129b83d9dd14b978c25d0a25a4d1}} 
+{\bfseries \$qb\+\_\+cache\+\_\+orderby} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a3f8cb0d781813dbc441265cfc1371a00}} 
+{\bfseries \$qb\+\_\+cache\+\_\+set} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_a95b3a934937b47f5c90f381cf8a50860}} 
+{\bfseries \$qb\+\_\+no\+\_\+escape} = array()
+\item 
+\mbox{\label{class_c_i___d_b__query__builder_aab4ea89afea227fad65eec8dfb3844b3}} 
+{\bfseries \$qb\+\_\+cache\+\_\+no\+\_\+escape} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__query__builder_a953e760f382d7187dc5d7b238a7ff439}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_compile\_group\_by@{\_compile\_group\_by}}
+\index{\_compile\_group\_by@{\_compile\_group\_by}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_compile\_group\_by()}
+{\footnotesize\ttfamily \+\_\+compile\+\_\+group\+\_\+by (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Compile G\+R\+O\+UP BY
+
+Escapes identifiers in G\+R\+O\+UP BY statements at execution time.
+
+Required so that aliases are tracked properly, regardless of whether \doxyref{group\+\_\+by()}{p.}{class_c_i___d_b__query__builder_a111cc822f85357c4cfe37886e6315dce} is called prior to \doxyref{from()}{p.}{class_c_i___d_b__query__builder_a91f5f004ed8e2237a4decc5d23ac3457}, \doxyref{join()}{p.}{class_c_i___d_b__query__builder_a54557b1ef757507cbbd2a8802a99810b} and dbprefix is added only if needed.
+
+\begin{DoxyReturn}{Returns}
+string S\+QL statement 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a78ef026e2ca49e2b371f9cc577f6e777}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_compile\_order\_by@{\_compile\_order\_by}}
+\index{\_compile\_order\_by@{\_compile\_order\_by}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_compile\_order\_by()}
+{\footnotesize\ttfamily \+\_\+compile\+\_\+order\+\_\+by (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Compile O\+R\+D\+ER BY
+
+Escapes identifiers in O\+R\+D\+ER BY statements at execution time.
+
+Required so that aliases are tracked properly, regardless of whether \doxyref{order\+\_\+by()}{p.}{class_c_i___d_b__query__builder_a6d1ce6a3b22187165ce7d710ce91841d} is called prior to \doxyref{from()}{p.}{class_c_i___d_b__query__builder_a91f5f004ed8e2237a4decc5d23ac3457}, \doxyref{join()}{p.}{class_c_i___d_b__query__builder_a54557b1ef757507cbbd2a8802a99810b} and dbprefix is added only if needed.
+
+\begin{DoxyReturn}{Returns}
+string S\+QL statement 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a441f6e994a212cfa12dd33d92973915b}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_compile\_select@{\_compile\_select}}
+\index{\_compile\_select@{\_compile\_select}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_compile\_select()}
+{\footnotesize\ttfamily \+\_\+compile\+\_\+select (\begin{DoxyParamCaption}\item[{}]{\$select\+\_\+override = {\ttfamily FALSE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Compile the S\+E\+L\+E\+CT statement
+
+Generates a query string based on which functions were used. Should not be called directly.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$select\+\_\+override} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a3d2301b84734fd18a0db6d0602106f48}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_compile\_wh@{\_compile\_wh}}
+\index{\_compile\_wh@{\_compile\_wh}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_compile\_wh()}
+{\footnotesize\ttfamily \+\_\+compile\+\_\+wh (\begin{DoxyParamCaption}\item[{}]{\$qb\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Compile W\+H\+E\+RE, H\+A\+V\+I\+NG statements
+
+Escapes identifiers in W\+H\+E\+RE and H\+A\+V\+I\+NG statements at execution time.
+
+Required so that aliases are tracked properly, regardless of whether \doxyref{where()}{p.}{class_c_i___d_b__query__builder_a2356c4b7b93fb83c62a354a8a0748222}, \doxyref{or\+\_\+where()}{p.}{class_c_i___d_b__query__builder_a8d25e93a09f60fbe77541d0faef29bf0}, \doxyref{having()}{p.}{class_c_i___d_b__query__builder_af19efb51311e6f648a0035a0f94fceb6}, or\+\_\+having are called prior to \doxyref{from()}{p.}{class_c_i___d_b__query__builder_a91f5f004ed8e2237a4decc5d23ac3457}, \doxyref{join()}{p.}{class_c_i___d_b__query__builder_a54557b1ef757507cbbd2a8802a99810b} and dbprefix is added only if needed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$qb\+\_\+key} & \textquotesingle{}qb\+\_\+where\textquotesingle{} or \textquotesingle{}qb\+\_\+having\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string S\+QL statement 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a194edea7be9a8636b67b7d2c8a3de04e}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_create\_alias\_from\_table@{\_create\_alias\_from\_table}}
+\index{\_create\_alias\_from\_table@{\_create\_alias\_from\_table}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_create\_alias\_from\_table()}
+{\footnotesize\ttfamily \+\_\+create\+\_\+alias\+\_\+from\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Determines the alias name based on the table
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a133ea8446ded52589bd22cc9163d0896}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_delete@{\_delete}}
+\index{\_delete@{\_delete}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_delete()}
+{\footnotesize\ttfamily \+\_\+delete (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Delete statement
+
+Generates a platform-\/specific delete string from the supplied data
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_aef43f7e3e7b71d337ff3724c5eb14f10}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_from\_tables@{\_from\_tables}}
+\index{\_from\_tables@{\_from\_tables}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_from\_tables()}
+{\footnotesize\ttfamily \+\_\+from\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+F\+R\+OM tables
+
+Groups tables in F\+R\+OM clauses if needed, so there is no confusion about operator precedence.
+
+Note\+: This is only used (and overridden) by My\+S\+QL and C\+U\+B\+R\+ID.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a0101619da9c48cfa269730ace38a774a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_group\_get\_type@{\_group\_get\_type}}
+\index{\_group\_get\_type@{\_group\_get\_type}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_group\_get\_type()}
+{\footnotesize\ttfamily \+\_\+group\+\_\+get\+\_\+type (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Group\+\_\+get\+\_\+type
+
+@used-\/by \doxyref{group\+\_\+start()}{p.}{class_c_i___d_b__query__builder_a0ad001f7f7d1a41fdee4a85b4f7db9b4} @used-\/by \doxyref{\+\_\+like()}{p.}{class_c_i___d_b__query__builder_abe8f3477d4b15bf422fc52ba753056b5} @used-\/by \doxyref{\+\_\+wh()}{p.}{class_c_i___d_b__query__builder_a616af9ae6c40b3fe7074a8517207934f} @used-\/by \doxyref{\+\_\+where\+\_\+in()}{p.}{class_c_i___d_b__query__builder_a768333bb814b0e99783117da4b51f097}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a1978e1358c812587a46e242630365099}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_insert\_batch@{\_insert\_batch}}
+\index{\_insert\_batch@{\_insert\_batch}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_insert\_batch()}
+{\footnotesize\ttfamily \+\_\+insert\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$keys,  }\item[{}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Insert batch statement
+
+Generates a platform-\/specific insert string from the supplied data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+array & {\em \$keys} & I\+N\+S\+E\+RT keys \\
+\hline
+array & {\em \$values} & I\+N\+S\+E\+RT values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a645d9af97f1d078041e8ae451fae9e1b}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_is\_literal@{\_is\_literal}}
+\index{\_is\_literal@{\_is\_literal}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_is\_literal()}
+{\footnotesize\ttfamily \+\_\+is\+\_\+literal (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Is literal
+
+Determines if a string represents a literal value or a field name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_abe8f3477d4b15bf422fc52ba753056b5}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_like@{\_like}}
+\index{\_like@{\_like}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_like()}
+{\footnotesize\ttfamily \+\_\+like (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$match = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}AND~\textquotesingle{}},  }\item[{}]{\$side = {\ttfamily \textquotesingle{}both\textquotesingle{}},  }\item[{}]{\$not = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Internal L\+I\+KE
+
+@used-\/by \doxyref{like()}{p.}{class_c_i___d_b__query__builder_ada4c73fd6f292084d8b84b0db958fcc1} @used-\/by \doxyref{or\+\_\+like()}{p.}{class_c_i___d_b__query__builder_aef08c014f8925124292fa6a65c014d25} @used-\/by \doxyref{not\+\_\+like()}{p.}{class_c_i___d_b__query__builder_ac87c3421e7d396a714740b1a9c0fe8ea} @used-\/by \doxyref{or\+\_\+not\+\_\+like()}{p.}{class_c_i___d_b__query__builder_a37af2f8d33a06c1cc2ad9dafc2c88e90}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$field} & \\
+\hline
+string & {\em \$match} & \\
+\hline
+string & {\em \$type} & \\
+\hline
+string & {\em \$side} & \\
+\hline
+string & {\em \$not} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a3a02ea06541b8ecc25a33a61651562c8}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_limit@{\_limit}}
+\index{\_limit@{\_limit}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_limit()}
+{\footnotesize\ttfamily \+\_\+limit (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+L\+I\+M\+IT string
+
+Generates a platform-\/specific L\+I\+M\+IT clause.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & S\+QL Query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_aea731223718d87a26bb6dc676ee4ee8c}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_max\_min\_avg\_sum@{\_max\_min\_avg\_sum}}
+\index{\_max\_min\_avg\_sum@{\_max\_min\_avg\_sum}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_max\_min\_avg\_sum()}
+{\footnotesize\ttfamily \+\_\+max\+\_\+min\+\_\+avg\+\_\+sum (\begin{DoxyParamCaption}\item[{}]{\$select = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$alias = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}MAX\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+S\+E\+L\+E\+CT [M\+A\+X$\vert$\+M\+I\+N$\vert$\+A\+V\+G$\vert$\+S\+UM]()
+
+@used-\/by \doxyref{select\+\_\+max()}{p.}{class_c_i___d_b__query__builder_a4eac30ba8703ba8f62664e3b4ea1a177} @used-\/by \doxyref{select\+\_\+min()}{p.}{class_c_i___d_b__query__builder_ab8cf650dd779435da91d6f50bf082528} @used-\/by \doxyref{select\+\_\+avg()}{p.}{class_c_i___d_b__query__builder_a0377f6833e394c977823e21413772761} @used-\/by \doxyref{select\+\_\+sum()}{p.}{class_c_i___d_b__query__builder_a42348c349cf2fa7ca0210087efcf98d3}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$select} & Field name \\
+\hline
+string & {\em \$alias} & \\
+\hline
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_aeee4c0cf664e1a65d7eb8a3c8e9970c6}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_merge\_cache@{\_merge\_cache}}
+\index{\_merge\_cache@{\_merge\_cache}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_merge\_cache()}
+{\footnotesize\ttfamily \+\_\+merge\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Merge Cache
+
+When called, this function merges any cached QB arrays with locally called ones.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a50b3069661bbf4605b6b561f38eae849}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_object\_to\_array@{\_object\_to\_array}}
+\index{\_object\_to\_array@{\_object\_to\_array}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_object\_to\_array()}
+{\footnotesize\ttfamily \+\_\+object\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Object to Array
+
+Takes an object as input and converts the class variables to array key/vals
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ab53f659c5df0b0b6d30eaab74f507dc5}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_object\_to\_array\_batch@{\_object\_to\_array\_batch}}
+\index{\_object\_to\_array\_batch@{\_object\_to\_array\_batch}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_object\_to\_array\_batch()}
+{\footnotesize\ttfamily \+\_\+object\+\_\+to\+\_\+array\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Object to Array
+
+Takes an object as input and converts the class variables to array key/vals
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ae0adf73984daf2d42ad29b66c484c82b}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_replace@{\_replace}}
+\index{\_replace@{\_replace}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_replace()}
+{\footnotesize\ttfamily \+\_\+replace (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$keys,  }\item[{}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Replace statement
+
+Generates a platform-\/specific replace string from the supplied data
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table name \\
+\hline
+{\em array} & the insert keys \\
+\hline
+{\em array} & the insert values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_aebc5876417533f3347aeae458ccde988}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_reset\_run@{\_reset\_run}}
+\index{\_reset\_run@{\_reset\_run}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_reset\_run()}
+{\footnotesize\ttfamily \+\_\+reset\+\_\+run (\begin{DoxyParamCaption}\item[{}]{\$qb\+\_\+reset\+\_\+items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Resets the query builder values. Called by the \doxyref{get()}{p.}{class_c_i___d_b__query__builder_a02c629b7cdb54c95ccc23c21d910320d} function
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & An array of fields to reset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a7c6cc16411b9c36fbfd42a9317f64317}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_reset\_select@{\_reset\_select}}
+\index{\_reset\_select@{\_reset\_select}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_reset\_select()}
+{\footnotesize\ttfamily \+\_\+reset\+\_\+select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Resets the query builder values. Called by the \doxyref{get()}{p.}{class_c_i___d_b__query__builder_a02c629b7cdb54c95ccc23c21d910320d} function
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__driver_a7c6cc16411b9c36fbfd42a9317f64317}.
+
+\mbox{\label{class_c_i___d_b__query__builder_ae49808f6becc0366eef957756c8309e4}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_reset\_write@{\_reset\_write}}
+\index{\_reset\_write@{\_reset\_write}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_reset\_write()}
+{\footnotesize\ttfamily \+\_\+reset\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Resets the query builder \char`\"{}write\char`\"{} values.
+
+Called by the \doxyref{insert()}{p.}{class_c_i___d_b__query__builder_a487027d8e320a1ea657af2d7e61df389} \doxyref{update()}{p.}{class_c_i___d_b__query__builder_a130a26da2dd4e4582ee18f42d71fe6e4} \doxyref{insert\+\_\+batch()}{p.}{class_c_i___d_b__query__builder_ac35c8959b57eb08416e09c094371aaca} \doxyref{update\+\_\+batch()}{p.}{class_c_i___d_b__query__builder_a718928dc54d935761439538836f1e70d} and \doxyref{delete()}{p.}{class_c_i___d_b__query__builder_a482722b9989c53ed8ecd68b22df64507} functions
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_afb539c1557a7cb20a190f5b68d96b74a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_track\_aliases@{\_track\_aliases}}
+\index{\_track\_aliases@{\_track\_aliases}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_track\_aliases()}
+{\footnotesize\ttfamily \+\_\+track\+\_\+aliases (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Track Aliases
+
+Used to track S\+QL statements written with aliased tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The table to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_aa029600528fc1ce660a23ff4b4667f95}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_truncate@{\_truncate}}
+\index{\_truncate@{\_truncate}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_truncate()}
+{\footnotesize\ttfamily \+\_\+truncate (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Truncate statement
+
+Generates a platform-\/specific truncate string from the supplied data
+
+If the database does not support the \doxyref{truncate()}{p.}{class_c_i___d_b__query__builder_acaa636a6a61d4362c5a32941fc9932ba} command, then this method maps to \textquotesingle{}D\+E\+L\+E\+TE F\+R\+OM table\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a336b9ebb119e47b6a84bb7fc9d4dae93}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_update\_batch@{\_update\_batch}}
+\index{\_update\_batch@{\_update\_batch}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_update\_batch()}
+{\footnotesize\ttfamily \+\_\+update\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$values,  }\item[{}]{\$index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Update\+\_\+\+Batch statement
+
+Generates a platform-\/specific batch update string from the supplied data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+array & {\em \$values} & Update data \\
+\hline
+string & {\em \$index} & W\+H\+E\+RE key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_acbc0cb4b9bd889fa2ffc5086f65a88a1}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_validate\_insert@{\_validate\_insert}}
+\index{\_validate\_insert@{\_validate\_insert}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_validate\_insert()}
+{\footnotesize\ttfamily \+\_\+validate\+\_\+insert (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate Insert
+
+This method is used by both \doxyref{insert()}{p.}{class_c_i___d_b__query__builder_a487027d8e320a1ea657af2d7e61df389} and \doxyref{get\+\_\+compiled\+\_\+insert()}{p.}{class_c_i___d_b__query__builder_a09abce3658cfaba8d8a148c91a9be0ea} to validate that the there data is actually being set and that table has been chosen to be inserted into.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to insert data into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a0da7b6bb840e0331733abafc14399a32}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_validate\_update@{\_validate\_update}}
+\index{\_validate\_update@{\_validate\_update}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_validate\_update()}
+{\footnotesize\ttfamily \+\_\+validate\+\_\+update (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate Update
+
+This method is used by both \doxyref{update()}{p.}{class_c_i___d_b__query__builder_a130a26da2dd4e4582ee18f42d71fe6e4} and \doxyref{get\+\_\+compiled\+\_\+update()}{p.}{class_c_i___d_b__query__builder_a77fb150224714405067df7c300c317b0} to validate that data is actually being set and that a table has been chosen to be update.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to update data on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a616af9ae6c40b3fe7074a8517207934f}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_wh@{\_wh}}
+\index{\_wh@{\_wh}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_wh()}
+{\footnotesize\ttfamily \+\_\+wh (\begin{DoxyParamCaption}\item[{}]{\$qb\+\_\+key,  }\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily NULL},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}AND~\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+W\+H\+E\+RE, H\+A\+V\+I\+NG
+
+@used-\/by \doxyref{where()}{p.}{class_c_i___d_b__query__builder_a2356c4b7b93fb83c62a354a8a0748222} @used-\/by \doxyref{or\+\_\+where()}{p.}{class_c_i___d_b__query__builder_a8d25e93a09f60fbe77541d0faef29bf0} @used-\/by \doxyref{having()}{p.}{class_c_i___d_b__query__builder_af19efb51311e6f648a0035a0f94fceb6} @used-\/by \doxyref{or\+\_\+having()}{p.}{class_c_i___d_b__query__builder_a14528cda8dcca86ebb9b597d9c8d1c14}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$qb\+\_\+key} & \textquotesingle{}qb\+\_\+where\textquotesingle{} or \textquotesingle{}qb\+\_\+having\textquotesingle{} \\
+\hline
+mixed & {\em \$key} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+string & {\em \$type} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a768333bb814b0e99783117da4b51f097}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!\_where\_in@{\_where\_in}}
+\index{\_where\_in@{\_where\_in}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{\_where\_in()}
+{\footnotesize\ttfamily \+\_\+where\+\_\+in (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL},  }\item[{}]{\$values = {\ttfamily NULL},  }\item[{}]{\$not = {\ttfamily FALSE},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}AND~\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Internal W\+H\+E\+RE IN
+
+@used-\/by \doxyref{where\+\_\+in()}{p.}{class_c_i___d_b__query__builder_ad74b2c2b21b33f4aa54229a323b7ba59} @used-\/by \doxyref{or\+\_\+where\+\_\+in()}{p.}{class_c_i___d_b__query__builder_a9c3f8f4d2f9b9b033a27a2d868278662} @used-\/by \doxyref{where\+\_\+not\+\_\+in()}{p.}{class_c_i___d_b__query__builder_ab9f1b5e0622e0392796c5c9f4cca705a} @used-\/by \doxyref{or\+\_\+where\+\_\+not\+\_\+in()}{p.}{class_c_i___d_b__query__builder_ace5f568aace8a66636091e220fcd03c3}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The field to search \\
+\hline
+array & {\em \$values} & The values searched on \\
+\hline
+bool & {\em \$not} & If the statement would be IN or N\+OT IN \\
+\hline
+string & {\em \$type} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a2484516af4a0a9e1d84663d63aa7e505}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!count\_all\_results@{count\_all\_results}}
+\index{count\_all\_results@{count\_all\_results}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{count\_all\_results()}
+{\footnotesize\ttfamily count\+\_\+all\+\_\+results (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$reset = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+\char`\"{}\+Count All Results\char`\"{} query
+
+Generates a platform-\/specific query string that counts all records returned by an Query Builder query.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em bool} & the reset clause \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a98b692562f4990d04d161d0408061ed8}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!dbprefix@{dbprefix}}
+\index{dbprefix@{dbprefix}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{dbprefix()}
+{\footnotesize\ttfamily dbprefix (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+DB Prefix
+
+Prepends a database prefix if one exists in configuration
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a482722b9989c53ed8ecd68b22df64507}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!delete@{delete}}
+\index{delete@{delete}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{delete()}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$where = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$limit = {\ttfamily NULL},  }\item[{}]{\$reset\+\_\+data = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Delete
+
+Compiles a delete string and runs the query
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & the table(s) to delete from. String or array \\
+\hline
+{\em mixed} & the where clause \\
+\hline
+{\em mixed} & the limit clause \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a65b172f03eea17b7fa243f5732a592bd}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!distinct@{distinct}}
+\index{distinct@{distinct}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{distinct()}
+{\footnotesize\ttfamily distinct (\begin{DoxyParamCaption}\item[{}]{\$val = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+D\+I\+S\+T\+I\+N\+CT
+
+Sets a flag which tells the query string compiler to add D\+I\+S\+T\+I\+N\+CT
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_af665fbf0b83f396d6c5529aca1f43517}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!empty\_table@{empty\_table}}
+\index{empty\_table@{empty\_table}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{empty\_table()}
+{\footnotesize\ttfamily empty\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Empty Table
+
+Compiles a delete string and runs \char`\"{}\+D\+E\+L\+E\+T\+E F\+R\+O\+M table\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to empty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_aa3c94d79d552f6e10277b01c447ebbb6}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!flush\_cache@{flush\_cache}}
+\index{flush\_cache@{flush\_cache}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{flush\_cache()}
+{\footnotesize\ttfamily flush\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flush Cache
+
+Empties the QB cache
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a91f5f004ed8e2237a4decc5d23ac3457}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!from@{from}}
+\index{from@{from}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{from()}
+{\footnotesize\ttfamily from (\begin{DoxyParamCaption}\item[{}]{\$from }\end{DoxyParamCaption})}
+
+From
+
+Generates the F\+R\+OM portion of the query
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$from} & can be a string or array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a02c629b7cdb54c95ccc23c21d910320d}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!get@{get}}
+\index{get@{get}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{get()}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$limit = {\ttfamily NULL},  }\item[{}]{\$offset = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Get
+
+Compiles the select statement based on the other functions called and runs the query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table \\
+\hline
+{\em string} & the limit clause \\
+\hline
+{\em string} & the offset clause \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+result}{p.}{class_c_i___d_b__result} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a3e2f8775363646e099009ff62b25a21a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!get\_compiled\_delete@{get\_compiled\_delete}}
+\index{get\_compiled\_delete@{get\_compiled\_delete}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{get\_compiled\_delete()}
+{\footnotesize\ttfamily get\+\_\+compiled\+\_\+delete (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$reset = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Get D\+E\+L\+E\+TE query string
+
+Compiles a delete query string and returns the sql
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to delete from \\
+\hline
+{\em bool} & T\+R\+UE\+: reset QB values; F\+A\+L\+SE\+: leave QB values alone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a09abce3658cfaba8d8a148c91a9be0ea}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!get\_compiled\_insert@{get\_compiled\_insert}}
+\index{get\_compiled\_insert@{get\_compiled\_insert}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{get\_compiled\_insert()}
+{\footnotesize\ttfamily get\+\_\+compiled\+\_\+insert (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$reset = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Get I\+N\+S\+E\+RT query string
+
+Compiles an insert query and returns the sql
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to insert into \\
+\hline
+{\em bool} & T\+R\+UE\+: reset QB values; F\+A\+L\+SE\+: leave QB values alone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a23325dd8908b76e716e430b4968e3987}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!get\_compiled\_select@{get\_compiled\_select}}
+\index{get\_compiled\_select@{get\_compiled\_select}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{get\_compiled\_select()}
+{\footnotesize\ttfamily get\+\_\+compiled\+\_\+select (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$reset = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Get S\+E\+L\+E\+CT query string
+
+Compiles a S\+E\+L\+E\+CT query string and returns the sql.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table name to select from (optional) \\
+\hline
+{\em bool} & T\+R\+UE\+: resets QB values; F\+A\+L\+SE\+: leave QB values alone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a77fb150224714405067df7c300c317b0}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!get\_compiled\_update@{get\_compiled\_update}}
+\index{get\_compiled\_update@{get\_compiled\_update}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{get\_compiled\_update()}
+{\footnotesize\ttfamily get\+\_\+compiled\+\_\+update (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$reset = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Get U\+P\+D\+A\+TE query string
+
+Compiles an update query and returns the sql
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to update \\
+\hline
+{\em bool} & T\+R\+UE\+: reset QB values; F\+A\+L\+SE\+: leave QB values alone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a8cae750fdc32b3c91544c091673fd17b}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!get\_where@{get\_where}}
+\index{get\_where@{get\_where}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{get\_where()}
+{\footnotesize\ttfamily get\+\_\+where (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$where = {\ttfamily NULL},  }\item[{}]{\$limit = {\ttfamily NULL},  }\item[{}]{\$offset = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+\doxyref{get\+\_\+where()}{p.}{class_c_i___d_b__query__builder_a8cae750fdc32b3c91544c091673fd17b}
+
+Allows the where clause, limit and offset to be added directly
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+string & {\em \$where} & \\
+\hline
+int & {\em \$limit} & \\
+\hline
+int & {\em \$offset} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+result}{p.}{class_c_i___d_b__result} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a111cc822f85357c4cfe37886e6315dce}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!group\_by@{group\_by}}
+\index{group\_by@{group\_by}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{group\_by()}
+{\footnotesize\ttfamily group\+\_\+by (\begin{DoxyParamCaption}\item[{}]{\$by,  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+G\+R\+O\+UP BY
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$by} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ad97adc35e18afc9d4f26e0f568cdc6ed}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!group\_end@{group\_end}}
+\index{group\_end@{group\_end}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{group\_end()}
+{\footnotesize\ttfamily group\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ends a query group
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a0ad001f7f7d1a41fdee4a85b4f7db9b4}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!group\_start@{group\_start}}
+\index{group\_start@{group\_start}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{group\_start()}
+{\footnotesize\ttfamily group\+\_\+start (\begin{DoxyParamCaption}\item[{}]{\$not = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}AND~\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Starts a query group.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$not} & (Internal use only) \\
+\hline
+string & {\em \$type} & (Internal use only) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_af19efb51311e6f648a0035a0f94fceb6}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!having@{having}}
+\index{having@{having}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{having()}
+{\footnotesize\ttfamily having (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+H\+A\+V\+I\+NG
+
+Separates multiple calls with \textquotesingle{}A\+ND\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+string & {\em \$value} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a487027d8e320a1ea657af2d7e61df389}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!insert@{insert}}
+\index{insert@{insert}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{insert()}
+{\footnotesize\ttfamily insert (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$set = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Insert
+
+Compiles an insert string and runs the query
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em string} & the table to insert data into \\
+\hline
+ & {\em array} & an associative array of insert values \\
+\hline
+bool & {\em \$escape} & Whether to escape values and identifiers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ac35c8959b57eb08416e09c094371aaca}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!insert\_batch@{insert\_batch}}
+\index{insert\_batch@{insert\_batch}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{insert\_batch()}
+{\footnotesize\ttfamily insert\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$set = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL},  }\item[{}]{\$batch\+\_\+size = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+Insert\+\_\+\+Batch
+
+Compiles batch insert strings and runs the queries
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table to insert into \\
+\hline
+array & {\em \$set} & An associative array of insert values \\
+\hline
+bool & {\em \$escape} & Whether to escape values and identifiers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of rows inserted or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a54557b1ef757507cbbd2a8802a99810b}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!join@{join}}
+\index{join@{join}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{join()}
+{\footnotesize\ttfamily join (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$cond,  }\item[{}]{\$type = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+J\+O\+IN
+
+Generates the J\+O\+IN portion of the query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & the join condition \\
+\hline
+{\em string} & the type of join \\
+\hline
+{\em string} & whether not to try to escape identifiers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ada4c73fd6f292084d8b84b0db958fcc1}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!like@{like}}
+\index{like@{like}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{like()}
+{\footnotesize\ttfamily like (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$match = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$side = {\ttfamily \textquotesingle{}both\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+L\+I\+KE
+
+Generates a L\+I\+KE\% portion of the query. Separates multiple calls with \textquotesingle{}A\+ND\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$field} & \\
+\hline
+string & {\em \$match} & \\
+\hline
+string & {\em \$side} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a875b0d4703f176c36e771d728a9a04a0}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!limit@{limit}}
+\index{limit@{limit}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{limit()}
+{\footnotesize\ttfamily limit (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+L\+I\+M\+IT
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$value} & L\+I\+M\+IT value \\
+\hline
+int & {\em \$offset} & O\+F\+F\+S\+ET value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ae0b543e6db440c4a717714b5d5782e7a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!not\_group\_start@{not\_group\_start}}
+\index{not\_group\_start@{not\_group\_start}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{not\_group\_start()}
+{\footnotesize\ttfamily not\+\_\+group\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts a query group, but N\+O\+Ts the group
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ac87c3421e7d396a714740b1a9c0fe8ea}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!not\_like@{not\_like}}
+\index{not\_like@{not\_like}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{not\_like()}
+{\footnotesize\ttfamily not\+\_\+like (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$match = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$side = {\ttfamily \textquotesingle{}both\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+N\+OT L\+I\+KE
+
+Generates a N\+OT L\+I\+KE portion of the query. Separates multiple calls with \textquotesingle{}A\+ND\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$field} & \\
+\hline
+string & {\em \$match} & \\
+\hline
+string & {\em \$side} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_afd31b65425a2b5cf30711bf29e1b1851}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!offset@{offset}}
+\index{offset@{offset}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{offset()}
+{\footnotesize\ttfamily offset (\begin{DoxyParamCaption}\item[{}]{\$offset }\end{DoxyParamCaption})}
+
+Sets the O\+F\+F\+S\+ET value
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$offset} & O\+F\+F\+S\+ET value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a80d5e4a0d8f2d0f202e8df6816865838}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_group\_start@{or\_group\_start}}
+\index{or\_group\_start@{or\_group\_start}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_group\_start()}
+{\footnotesize\ttfamily or\+\_\+group\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts a query group, but O\+Rs the group
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a14528cda8dcca86ebb9b597d9c8d1c14}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_having@{or\_having}}
+\index{or\_having@{or\_having}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_having()}
+{\footnotesize\ttfamily or\+\_\+having (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+OR H\+A\+V\+I\+NG
+
+Separates multiple calls with \textquotesingle{}OR\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+string & {\em \$value} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_aef08c014f8925124292fa6a65c014d25}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_like@{or\_like}}
+\index{or\_like@{or\_like}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_like()}
+{\footnotesize\ttfamily or\+\_\+like (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$match = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$side = {\ttfamily \textquotesingle{}both\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+OR L\+I\+KE
+
+Generates a L\+I\+KE\% portion of the query. Separates multiple calls with \textquotesingle{}OR\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$field} & \\
+\hline
+string & {\em \$match} & \\
+\hline
+string & {\em \$side} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a16a0c2a5f37a7be4c487670650d13faf}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_not\_group\_start@{or\_not\_group\_start}}
+\index{or\_not\_group\_start@{or\_not\_group\_start}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_not\_group\_start()}
+{\footnotesize\ttfamily or\+\_\+not\+\_\+group\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts a query group, but OR N\+O\+Ts the group
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a37af2f8d33a06c1cc2ad9dafc2c88e90}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_not\_like@{or\_not\_like}}
+\index{or\_not\_like@{or\_not\_like}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_not\_like()}
+{\footnotesize\ttfamily or\+\_\+not\+\_\+like (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$match = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$side = {\ttfamily \textquotesingle{}both\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+OR N\+OT L\+I\+KE
+
+Generates a N\+OT L\+I\+KE portion of the query. Separates multiple calls with \textquotesingle{}OR\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$field} & \\
+\hline
+string & {\em \$match} & \\
+\hline
+string & {\em \$side} & \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a8d25e93a09f60fbe77541d0faef29bf0}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_where@{or\_where}}
+\index{or\_where@{or\_where}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_where()}
+{\footnotesize\ttfamily or\+\_\+where (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+OR W\+H\+E\+RE
+
+Generates the W\+H\+E\+RE portion of the query. Separates multiple calls with \textquotesingle{}OR\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & \\
+\hline
+{\em mixed} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a9c3f8f4d2f9b9b033a27a2d868278662}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_where\_in@{or\_where\_in}}
+\index{or\_where\_in@{or\_where\_in}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_where\_in()}
+{\footnotesize\ttfamily or\+\_\+where\+\_\+in (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL},  }\item[{}]{\$values = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+OR W\+H\+E\+RE IN
+
+Generates a W\+H\+E\+RE field IN(\textquotesingle{}item\textquotesingle{}, \textquotesingle{}item\textquotesingle{}) S\+QL query, joined with \textquotesingle{}OR\textquotesingle{} if appropriate.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The field to search \\
+\hline
+array & {\em \$values} & The values searched on \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ace5f568aace8a66636091e220fcd03c3}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!or\_where\_not\_in@{or\_where\_not\_in}}
+\index{or\_where\_not\_in@{or\_where\_not\_in}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{or\_where\_not\_in()}
+{\footnotesize\ttfamily or\+\_\+where\+\_\+not\+\_\+in (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL},  }\item[{}]{\$values = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+OR W\+H\+E\+RE N\+OT IN
+
+Generates a W\+H\+E\+RE field N\+OT IN(\textquotesingle{}item\textquotesingle{}, \textquotesingle{}item\textquotesingle{}) S\+QL query, joined with \textquotesingle{}OR\textquotesingle{} if appropriate.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The field to search \\
+\hline
+array & {\em \$values} & The values searched on \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a6d1ce6a3b22187165ce7d710ce91841d}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!order\_by@{order\_by}}
+\index{order\_by@{order\_by}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{order\_by()}
+{\footnotesize\ttfamily order\+\_\+by (\begin{DoxyParamCaption}\item[{}]{\$orderby,  }\item[{}]{\$direction = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+O\+R\+D\+ER BY
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$orderby} & \\
+\hline
+string & {\em \$direction} & A\+SC, D\+E\+SC or R\+A\+N\+D\+OM \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a9571a23501fb4dc9e724a06bcb78dc9a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!replace@{replace}}
+\index{replace@{replace}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{replace()}
+{\footnotesize\ttfamily replace (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$set = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Replace
+
+Compiles an replace into string and runs the query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to replace data into \\
+\hline
+{\em array} & an associative array of insert values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a66636a017a1115d983424cdfca677ddf}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!reset\_query@{reset\_query}}
+\index{reset\_query@{reset\_query}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{reset\_query()}
+{\footnotesize\ttfamily reset\+\_\+query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset Query Builder values.
+
+Publicly-\/visible method to reset the QB values.
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a406a7ea81e717e56496f61baf3e03f44}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!select@{select}}
+\index{select@{select}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{select()}
+{\footnotesize\ttfamily select (\begin{DoxyParamCaption}\item[{}]{\$select = {\ttfamily \textquotesingle{}$\ast$\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Select
+
+Generates the S\+E\+L\+E\+CT portion of the query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em mixed} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a0377f6833e394c977823e21413772761}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!select\_avg@{select\_avg}}
+\index{select\_avg@{select\_avg}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{select\_avg()}
+{\footnotesize\ttfamily select\+\_\+avg (\begin{DoxyParamCaption}\item[{}]{\$select = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$alias = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Select Average
+
+Generates a S\+E\+L\+E\+CT A\+V\+G(field) portion of a query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the field \\
+\hline
+{\em string} & an alias \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a4eac30ba8703ba8f62664e3b4ea1a177}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!select\_max@{select\_max}}
+\index{select\_max@{select\_max}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{select\_max()}
+{\footnotesize\ttfamily select\+\_\+max (\begin{DoxyParamCaption}\item[{}]{\$select = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$alias = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Select Max
+
+Generates a S\+E\+L\+E\+CT M\+A\+X(field) portion of a query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the field \\
+\hline
+{\em string} & an alias \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ab8cf650dd779435da91d6f50bf082528}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!select\_min@{select\_min}}
+\index{select\_min@{select\_min}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{select\_min()}
+{\footnotesize\ttfamily select\+\_\+min (\begin{DoxyParamCaption}\item[{}]{\$select = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$alias = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Select Min
+
+Generates a S\+E\+L\+E\+CT M\+I\+N(field) portion of a query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the field \\
+\hline
+{\em string} & an alias \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a42348c349cf2fa7ca0210087efcf98d3}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!select\_sum@{select\_sum}}
+\index{select\_sum@{select\_sum}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{select\_sum()}
+{\footnotesize\ttfamily select\+\_\+sum (\begin{DoxyParamCaption}\item[{}]{\$select = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$alias = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Select Sum
+
+Generates a S\+E\+L\+E\+CT S\+U\+M(field) portion of a query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the field \\
+\hline
+{\em string} & an alias \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a1589c46344f3a216a129cf65659b117c}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!set@{set}}
+\index{set@{set}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{set()}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+The \char`\"{}set\char`\"{} function.
+
+Allows key/value pairs to be set for inserting or updating
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & \\
+\hline
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a5349738c8f19329c8e074be683cd9015}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!set\_dbprefix@{set\_dbprefix}}
+\index{set\_dbprefix@{set\_dbprefix}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{set\_dbprefix()}
+{\footnotesize\ttfamily set\+\_\+dbprefix (\begin{DoxyParamCaption}\item[{}]{\$prefix = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set DB Prefix
+
+Set\textquotesingle{}s the DB Prefix to something new without needing to reconnect
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the prefix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a810cdf264ad4b8df2c02c59ad3197859}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!set\_insert\_batch@{set\_insert\_batch}}
+\index{set\_insert\_batch@{set\_insert\_batch}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{set\_insert\_batch()}
+{\footnotesize\ttfamily set\+\_\+insert\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+The \char`\"{}set\+\_\+insert\+\_\+batch\char`\"{} function. Allows key/value pairs to be set for batch inserts
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & \\
+\hline
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a7f212748fce6348224257ff09dec873a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!set\_update\_batch@{set\_update\_batch}}
+\index{set\_update\_batch@{set\_update\_batch}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{set\_update\_batch()}
+{\footnotesize\ttfamily set\+\_\+update\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$index = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+The \char`\"{}set\+\_\+update\+\_\+batch\char`\"{} function. Allows key/value pairs to be set for batch updating
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a2d4f0c7b71f87dc7ca7f7fcfbdd12ba0}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!start\_cache@{start\_cache}}
+\index{start\_cache@{start\_cache}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{start\_cache()}
+{\footnotesize\ttfamily start\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start Cache
+
+Starts QB caching
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a612e54a6230b7e899c4d2a42a234bd5a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!stop\_cache@{stop\_cache}}
+\index{stop\_cache@{stop\_cache}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{stop\_cache()}
+{\footnotesize\ttfamily stop\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop Cache
+
+Stops QB caching
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_acaa636a6a61d4362c5a32941fc9932ba}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!truncate@{truncate}}
+\index{truncate@{truncate}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{truncate()}
+{\footnotesize\ttfamily truncate (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Truncate
+
+Compiles a truncate string and runs the query If the database does not support the \doxyref{truncate()}{p.}{class_c_i___d_b__query__builder_acaa636a6a61d4362c5a32941fc9932ba} command This function maps to \char`\"{}\+D\+E\+L\+E\+T\+E F\+R\+O\+M table\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to truncate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a130a26da2dd4e4582ee18f42d71fe6e4}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!update@{update}}
+\index{update@{update}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{update()}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$set = {\ttfamily NULL},  }\item[{}]{\$where = {\ttfamily NULL},  }\item[{}]{\$limit = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+U\+P\+D\+A\+TE
+
+Compiles an update string and runs the query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+array & {\em \$set} & An associative array of update values \\
+\hline
+mixed & {\em \$where} & \\
+\hline
+int & {\em \$limit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success, F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a718928dc54d935761439538836f1e70d}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!update\_batch@{update\_batch}}
+\index{update\_batch@{update\_batch}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{update\_batch()}
+{\footnotesize\ttfamily update\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$set = {\ttfamily NULL},  }\item[{}]{\$index = {\ttfamily NULL},  }\item[{}]{\$batch\+\_\+size = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+Update\+\_\+\+Batch
+
+Compiles an update string and runs the query
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the table to retrieve the results from \\
+\hline
+{\em array} & an associative array of update values \\
+\hline
+{\em string} & the where key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int number of rows affected or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_a2356c4b7b93fb83c62a354a8a0748222}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!where@{where}}
+\index{where@{where}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{where()}
+{\footnotesize\ttfamily where (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+W\+H\+E\+RE
+
+Generates the W\+H\+E\+RE portion of the query. Separates multiple calls with \textquotesingle{}A\+ND\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & \\
+\hline
+{\em mixed} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ad74b2c2b21b33f4aa54229a323b7ba59}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!where\_in@{where\_in}}
+\index{where\_in@{where\_in}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{where\_in()}
+{\footnotesize\ttfamily where\+\_\+in (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL},  }\item[{}]{\$values = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+W\+H\+E\+RE IN
+
+Generates a W\+H\+E\+RE field IN(\textquotesingle{}item\textquotesingle{}, \textquotesingle{}item\textquotesingle{}) S\+QL query, joined with \textquotesingle{}A\+ND\textquotesingle{} if appropriate.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The field to search \\
+\hline
+array & {\em \$values} & The values searched on \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__query__builder_ab9f1b5e0622e0392796c5c9f4cca705a}} 
+\index{CI\_DB\_query\_builder@{CI\_DB\_query\_builder}!where\_not\_in@{where\_not\_in}}
+\index{where\_not\_in@{where\_not\_in}!CI\_DB\_query\_builder@{CI\_DB\_query\_builder}}
+\doxysubsubsection{where\_not\_in()}
+{\footnotesize\ttfamily where\+\_\+not\+\_\+in (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily NULL},  }\item[{}]{\$values = {\ttfamily NULL},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+W\+H\+E\+RE N\+OT IN
+
+Generates a W\+H\+E\+RE field N\+OT IN(\textquotesingle{}item\textquotesingle{}, \textquotesingle{}item\textquotesingle{}) S\+QL query, joined with \textquotesingle{}A\+ND\textquotesingle{} if appropriate.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The field to search \\
+\hline
+array & {\em \$values} & The values searched on \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+D\+B\+\_\+query\+\_\+builder}{p.}{class_c_i___d_b__query__builder} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/D\+B\+\_\+query\+\_\+builder.\+php\end{DoxyCompactItemize}

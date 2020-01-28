@@ -1,0 +1,312 @@
+\doxysection{C\+I\+\_\+\+Cart Class Reference}
+\label{class_c_i___cart}\index{CI\_Cart@{CI\_Cart}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$params=array())
+\item 
+\textbf{ insert} (\$items=array())
+\item 
+\textbf{ update} (\$items=array())
+\item 
+\textbf{ total} ()
+\item 
+\textbf{ remove} (\$rowid)
+\item 
+\textbf{ total\+\_\+items} ()
+\item 
+\textbf{ contents} (\$newest\+\_\+first=F\+A\+L\+SE)
+\item 
+\textbf{ get\+\_\+item} (\$row\+\_\+id)
+\item 
+\textbf{ has\+\_\+options} (\$row\+\_\+id=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ product\+\_\+options} (\$row\+\_\+id=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ format\+\_\+number} (\$n=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ destroy} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___cart_aef9fb0bb2a9ab37008d77ed80b7b122b}} 
+{\bfseries \$product\+\_\+id\+\_\+rules} = \textquotesingle{}\textbackslash{}.a-\/z0-\/9\+\_\+-\/\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___cart_afdc2e791be5e676e94580a0d9ed63ebf}} 
+{\bfseries \$product\+\_\+name\+\_\+rules} = \textquotesingle{}\textbackslash{}w \textbackslash{}-\/\textbackslash{}.\textbackslash{}\+:\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___cart_afefced563284b97869b3d35053857362}} 
+{\bfseries \$product\+\_\+name\+\_\+safe} = T\+R\+UE
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+insert} (\$items=array())
+\item 
+\textbf{ \+\_\+update} (\$items=array())
+\item 
+\textbf{ \+\_\+save\+\_\+cart} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___cart_ae0314d046ddf7fcfaec03222977427d3}} 
+{\bfseries \$\+CI}
+\item 
+\mbox{\label{class_c_i___cart_a93aff4174af6004d8cc7a51bf0c59632}} 
+{\bfseries \$\+\_\+cart\+\_\+contents} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___cart_a568ecdb0d73d2a870f33189739922a50}} 
+\index{CI\_Cart@{CI\_Cart}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Shopping Class Constructor
+
+The constructor loads the Session class, used to store the shopping cart contents.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___cart_a55d27979573b7d46bdf774f247c15b07}} 
+\index{CI\_Cart@{CI\_Cart}!\_insert@{\_insert}}
+\index{\_insert@{\_insert}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{\_insert()}
+{\footnotesize\ttfamily \+\_\+insert (\begin{DoxyParamCaption}\item[{}]{\$items = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Insert
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_abaa559f3e9e7f8ad933f19165fb61083}} 
+\index{CI\_Cart@{CI\_Cart}!\_save\_cart@{\_save\_cart}}
+\index{\_save\_cart@{\_save\_cart}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{\_save\_cart()}
+{\footnotesize\ttfamily \+\_\+save\+\_\+cart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Save the cart array to the session DB
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_ac7b19afff2357d4b9e926ee2df1f3e65}} 
+\index{CI\_Cart@{CI\_Cart}!\_update@{\_update}}
+\index{\_update@{\_update}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{\_update()}
+{\footnotesize\ttfamily \+\_\+update (\begin{DoxyParamCaption}\item[{}]{\$items = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Update the cart
+
+This function permits changing item properties. Typically it is called from the \char`\"{}view cart\char`\"{} page if a user makes changes to the quantity before checkout. That array must contain the rowid and quantity for each item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_a9d7b86f0ac41c6301e6373644011d87f}} 
+\index{CI\_Cart@{CI\_Cart}!contents@{contents}}
+\index{contents@{contents}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{contents()}
+{\footnotesize\ttfamily contents (\begin{DoxyParamCaption}\item[{}]{\$newest\+\_\+first = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Cart Contents
+
+Returns the entire cart array
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_aa118461de946085fe42989193337044a}} 
+\index{CI\_Cart@{CI\_Cart}!destroy@{destroy}}
+\index{destroy@{destroy}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{destroy()}
+{\footnotesize\ttfamily destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroy the cart
+
+Empties the cart and kills the session
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_aea64eda9cf978b1e25c24458ca7e69df}} 
+\index{CI\_Cart@{CI\_Cart}!format\_number@{format\_number}}
+\index{format\_number@{format\_number}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{format\_number()}
+{\footnotesize\ttfamily format\+\_\+number (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Format Number
+
+Returns the supplied number with commas and a decimal point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_a73841dfae18a2719c7eb6d31978067a9}} 
+\index{CI\_Cart@{CI\_Cart}!get\_item@{get\_item}}
+\index{get\_item@{get\_item}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{get\_item()}
+{\footnotesize\ttfamily get\+\_\+item (\begin{DoxyParamCaption}\item[{}]{\$row\+\_\+id }\end{DoxyParamCaption})}
+
+Get cart item
+
+Returns the details of a specific item in the cart
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$row\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_a276cedf02c823357a2b643a13806f2be}} 
+\index{CI\_Cart@{CI\_Cart}!has\_options@{has\_options}}
+\index{has\_options@{has\_options}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{has\_options()}
+{\footnotesize\ttfamily has\+\_\+options (\begin{DoxyParamCaption}\item[{}]{\$row\+\_\+id = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Has options
+
+Returns T\+R\+UE if the rowid passed to this function correlates to an item that has options associated with it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$row\+\_\+id} & = \textquotesingle{}\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_a07488e002c513013079157a9fe61a8e3}} 
+\index{CI\_Cart@{CI\_Cart}!insert@{insert}}
+\index{insert@{insert}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{insert()}
+{\footnotesize\ttfamily insert (\begin{DoxyParamCaption}\item[{}]{\$items = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Insert items into the cart and save it to the session table
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_a461e270ceff8b04d40e14e00b9c74447}} 
+\index{CI\_Cart@{CI\_Cart}!product\_options@{product\_options}}
+\index{product\_options@{product\_options}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{product\_options()}
+{\footnotesize\ttfamily product\+\_\+options (\begin{DoxyParamCaption}\item[{}]{\$row\+\_\+id = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Product options
+
+Returns the an array of options, for a particular product row ID
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$row\+\_\+id} & = \textquotesingle{}\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_acb40031fae650e22e4a32878c02dfbf7}} 
+\index{CI\_Cart@{CI\_Cart}!remove@{remove}}
+\index{remove@{remove}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{remove()}
+{\footnotesize\ttfamily remove (\begin{DoxyParamCaption}\item[{}]{\$rowid }\end{DoxyParamCaption})}
+
+Remove Item
+
+Removes an item from the cart
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_a9efa17b570797933c7c5b0c68f743a55}} 
+\index{CI\_Cart@{CI\_Cart}!total@{total}}
+\index{total@{total}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{total()}
+{\footnotesize\ttfamily total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cart Total
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_a785be13903ee65b8936d523b2728e53a}} 
+\index{CI\_Cart@{CI\_Cart}!total\_items@{total\_items}}
+\index{total\_items@{total\_items}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{total\_items()}
+{\footnotesize\ttfamily total\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Total Items
+
+Returns the total item count
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cart_adddf5d1a4f704b647f28b0322f8b64f2}} 
+\index{CI\_Cart@{CI\_Cart}!update@{update}}
+\index{update@{update}!CI\_Cart@{CI\_Cart}}
+\doxysubsubsection{update()}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$items = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Update the cart
+
+This function permits the quantity of a given item to be changed. Typically it is called from the \char`\"{}view cart\char`\"{} page if a user makes changes to the quantity before checkout. That array must contain the product ID and quantity for each item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Cart.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,428 @@
+\doxysection{C\+I\+\_\+\+Encrypt Class Reference}
+\label{class_c_i___encrypt}\index{CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ get\+\_\+key} (\$key=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ set\+\_\+key} (\$key=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ encode} (\$string, \$key=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ decode} (\$string, \$key=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ encode\+\_\+from\+\_\+legacy} (\$string, \$legacy\+\_\+mode=M\+C\+R\+Y\+P\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+CB, \$key=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ mcrypt\+\_\+encode} (\$data, \$key)
+\item 
+\textbf{ mcrypt\+\_\+decode} (\$data, \$key)
+\item 
+\textbf{ set\+\_\+cipher} (\$cipher)
+\item 
+\textbf{ set\+\_\+mode} (\$mode)
+\item 
+\textbf{ set\+\_\+hash} (\$type=\textquotesingle{}sha1\textquotesingle{})
+\item 
+\textbf{ hash} (\$str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___encrypt_a35bbf76a5bcca90ca9b39368ed28121c}} 
+{\bfseries \$encryption\+\_\+key} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+xor\+\_\+decode} (\$string, \$key)
+\item 
+\textbf{ \+\_\+xor\+\_\+merge} (\$string, \$key)
+\item 
+\textbf{ \+\_\+add\+\_\+cipher\+\_\+noise} (\$data, \$key)
+\item 
+\textbf{ \+\_\+remove\+\_\+cipher\+\_\+noise} (\$data, \$key)
+\item 
+\textbf{ \+\_\+get\+\_\+cipher} ()
+\item 
+\textbf{ \+\_\+get\+\_\+mode} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ strlen} (\$str)
+\item 
+static \textbf{ substr} (\$str, \$start, \$length=N\+U\+LL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___encrypt_a04e9d4ea0e45fc04c07aa1e291e17412}} 
+{\bfseries \$\+\_\+hash\+\_\+type} = \textquotesingle{}sha1\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___encrypt_aaf4246798dad057cc4e294706e5e4e37}} 
+{\bfseries \$\+\_\+mcrypt\+\_\+exists} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___encrypt_ab2cdedd99c4818b191c667f5e081a2db}} 
+{\bfseries \$\+\_\+mcrypt\+\_\+cipher}
+\item 
+\mbox{\label{class_c_i___encrypt_ace4d98b5320c7fe75e6a38505abcdb82}} 
+{\bfseries \$\+\_\+mcrypt\+\_\+mode}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___encrypt_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize Encryption class
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___encrypt_ada423e99876a54e7bc33afc9899d01a2}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!\_add\_cipher\_noise@{\_add\_cipher\_noise}}
+\index{\_add\_cipher\_noise@{\_add\_cipher\_noise}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{\_add\_cipher\_noise()}
+{\footnotesize\ttfamily \+\_\+add\+\_\+cipher\+\_\+noise (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{}]{\$key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds permuted noise to the IV + encrypted data to protect against Man-\/in-\/the-\/middle attacks on C\+BC mode ciphers {\texttt{ http\+://www.\+ciphersbyritter.\+com/\+G\+L\+O\+S\+S\+A\+R\+Y.\+H\+T\+M\#\+IV}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a663ee049f0b7596a0e4925a3eb2db062}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!\_get\_cipher@{\_get\_cipher}}
+\index{\_get\_cipher@{\_get\_cipher}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{\_get\_cipher()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+cipher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get Mcrypt cipher Value
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a8c6526d9458754249ee7268ead883a6c}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!\_get\_mode@{\_get\_mode}}
+\index{\_get\_mode@{\_get\_mode}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{\_get\_mode()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get Mcrypt Mode Value
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a35c2675b85803d42231d1f8353fa8dac}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!\_remove\_cipher\_noise@{\_remove\_cipher\_noise}}
+\index{\_remove\_cipher\_noise@{\_remove\_cipher\_noise}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{\_remove\_cipher\_noise()}
+{\footnotesize\ttfamily \+\_\+remove\+\_\+cipher\+\_\+noise (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{}]{\$key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Removes permuted noise from the IV + encrypted data, reversing \doxyref{\+\_\+add\+\_\+cipher\+\_\+noise()}{p.}{class_c_i___encrypt_ada423e99876a54e7bc33afc9899d01a2}
+
+Function description
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & \\
+\hline
+string & {\em \$key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_aa0cee348c5cef9a3a06c22a92c38fd4f}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!\_xor\_decode@{\_xor\_decode}}
+\index{\_xor\_decode@{\_xor\_decode}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{\_xor\_decode()}
+{\footnotesize\ttfamily \+\_\+xor\+\_\+decode (\begin{DoxyParamCaption}\item[{}]{\$string,  }\item[{}]{\$key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+X\+OR Decode
+
+Takes an encoded string and key as input and generates the plain-\/text original message
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_aaf2644aeb5ec418eb4ddc2d70f372ada}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!\_xor\_merge@{\_xor\_merge}}
+\index{\_xor\_merge@{\_xor\_merge}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{\_xor\_merge()}
+{\footnotesize\ttfamily \+\_\+xor\+\_\+merge (\begin{DoxyParamCaption}\item[{}]{\$string,  }\item[{}]{\$key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+X\+OR key + string Combiner
+
+Takes a string and key as input and computes the difference using X\+OR
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a54562258204ebec3d699eed228c51199}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!decode@{decode}}
+\index{decode@{decode}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{decode()}
+{\footnotesize\ttfamily decode (\begin{DoxyParamCaption}\item[{}]{\$string,  }\item[{}]{\$key = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Decode
+
+Reverses the above process
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a6320fc999db614bc009690cc4867e238}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!encode@{encode}}
+\index{encode@{encode}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{encode()}
+{\footnotesize\ttfamily encode (\begin{DoxyParamCaption}\item[{}]{\$string,  }\item[{}]{\$key = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Encode
+
+Encodes the message string using bitwise X\+OR encoding. The key is combined with a random hash, and then it too gets converted using X\+OR. The whole thing is then run through mcrypt using the randomized key. The end result is a double-\/encrypted message string that is randomized with each call to this function, even if the supplied message and key are the same.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to encode \\
+\hline
+{\em string} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a74e58407a40ff1f3d030a2065cf10182}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!encode\_from\_legacy@{encode\_from\_legacy}}
+\index{encode\_from\_legacy@{encode\_from\_legacy}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{encode\_from\_legacy()}
+{\footnotesize\ttfamily encode\+\_\+from\+\_\+legacy (\begin{DoxyParamCaption}\item[{}]{\$string,  }\item[{}]{\$legacy\+\_\+mode = {\ttfamily MCRYPT\+\_\+MODE\+\_\+ECB},  }\item[{}]{\$key = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Encode from Legacy
+
+Takes an encoded string from the original Encryption class algorithms and returns a newly encoded string using the improved method added in 2.\+0.\+0 This allows for backwards compatibility and a method to transition to the new encryption algorithms.
+
+For more details, see {\texttt{ https\+://codeigniter.\+com/user\+\_\+guide/installation/upgrade\+\_\+200.\+html\#encryption}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em int} & (mcrypt mode constant) \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a5ee53ce94c80d9259dee76cefdd2e948}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!get\_key@{get\_key}}
+\index{get\_key@{get\_key}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{get\_key()}
+{\footnotesize\ttfamily get\+\_\+key (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Fetch the encryption key
+
+Returns it as M\+D5 in order to have an exact-\/length 128 bit key. Mcrypt is sensitive to keys that are not the correct length
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_aea8db0058c00fd2bc1351ddb2ebf3191}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!hash@{hash}}
+\index{hash@{hash}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{hash()}
+{\footnotesize\ttfamily hash (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Hash encode a string
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a85f02c928abbbc5a6bf038ea5292324d}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!mcrypt\_decode@{mcrypt\_decode}}
+\index{mcrypt\_decode@{mcrypt\_decode}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{mcrypt\_decode()}
+{\footnotesize\ttfamily mcrypt\+\_\+decode (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{}]{\$key }\end{DoxyParamCaption})}
+
+Decrypt using Mcrypt
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_aa1d7e40f65deb526fe4619da65c6b1ec}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!mcrypt\_encode@{mcrypt\_encode}}
+\index{mcrypt\_encode@{mcrypt\_encode}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{mcrypt\_encode()}
+{\footnotesize\ttfamily mcrypt\+\_\+encode (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{}]{\$key }\end{DoxyParamCaption})}
+
+Encrypt using Mcrypt
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a6459059d757a362410feb13d96455747}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!set\_cipher@{set\_cipher}}
+\index{set\_cipher@{set\_cipher}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{set\_cipher()}
+{\footnotesize\ttfamily set\+\_\+cipher (\begin{DoxyParamCaption}\item[{}]{\$cipher }\end{DoxyParamCaption})}
+
+Set the Mcrypt Cipher
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Encrypt}{p.}{class_c_i___encrypt} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_aa7cef093f6581d1dbeecdf815c7fd8b2}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!set\_hash@{set\_hash}}
+\index{set\_hash@{set\_hash}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{set\_hash()}
+{\footnotesize\ttfamily set\+\_\+hash (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}sha1\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set the Hash type
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_ac8f224ccad805d0bcdf4ab7722058ae2}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!set\_key@{set\_key}}
+\index{set\_key@{set\_key}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{set\_key()}
+{\footnotesize\ttfamily set\+\_\+key (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set the encryption key
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Encrypt}{p.}{class_c_i___encrypt} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_ab32fd90a4ac2df4be1e56460d6f6daa3}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!set\_mode@{set\_mode}}
+\index{set\_mode@{set\_mode}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{set\_mode()}
+{\footnotesize\ttfamily set\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{\$mode }\end{DoxyParamCaption})}
+
+Set the Mcrypt Mode
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Encrypt}{p.}{class_c_i___encrypt} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a4c29a687d4ed62c26a10e41d98930d5f}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!strlen@{strlen}}
+\index{strlen@{strlen}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{strlen()}
+{\footnotesize\ttfamily static strlen (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Byte-\/safe \doxyref{strlen()}{p.}{class_c_i___encrypt_a4c29a687d4ed62c26a10e41d98930d5f}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___encrypt_a101caef57ef0b165da5747e2c2e6c9dc}} 
+\index{CI\_Encrypt@{CI\_Encrypt}!substr@{substr}}
+\index{substr@{substr}!CI\_Encrypt@{CI\_Encrypt}}
+\doxysubsubsection{substr()}
+{\footnotesize\ttfamily static substr (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$start,  }\item[{}]{\$length = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Byte-\/safe \doxyref{substr()}{p.}{class_c_i___encrypt_a101caef57ef0b165da5747e2c2e6c9dc}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+int & {\em \$start} & \\
+\hline
+int & {\em \$length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Encrypt.\+php\end{DoxyCompactItemize}

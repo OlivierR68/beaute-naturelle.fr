@@ -1,0 +1,155 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result Class Reference}
+\label{class_c_i___d_b__odbc__result}\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+odbc\+\_\+result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___d_b__odbc__result}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ num\+\_\+rows} ()
+\item 
+\textbf{ num\+\_\+fields} ()
+\item 
+\textbf{ list\+\_\+fields} ()
+\item 
+\textbf{ field\+\_\+data} ()
+\item 
+\textbf{ free\+\_\+result} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+fetch\+\_\+assoc} ()
+\item 
+\textbf{ \+\_\+fetch\+\_\+object} (\$class\+\_\+name=\textquotesingle{}std\+Class\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__odbc__result_a43a9a92817f1334a1c10752ec44275a0}} 
+\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}!\_fetch\_assoc@{\_fetch\_assoc}}
+\index{\_fetch\_assoc@{\_fetch\_assoc}!CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+\doxysubsubsection{\_fetch\_assoc()}
+{\footnotesize\ttfamily \+\_\+fetch\+\_\+assoc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Result -\/ associative array
+
+Returns the result set as an array
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__result_a43a9a92817f1334a1c10752ec44275a0}.
+
+\mbox{\label{class_c_i___d_b__odbc__result_a60806be6a9c2488820813c2a7f4fef71}} 
+\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}!\_fetch\_object@{\_fetch\_object}}
+\index{\_fetch\_object@{\_fetch\_object}!CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+\doxysubsubsection{\_fetch\_object()}
+{\footnotesize\ttfamily \+\_\+fetch\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$class\+\_\+name = {\ttfamily \textquotesingle{}stdClass\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Result -\/ object
+
+Returns the result set as an object
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__result_a60806be6a9c2488820813c2a7f4fef71}.
+
+\mbox{\label{class_c_i___d_b__odbc__result_a84bffd65e53902ade1591716749a33e3}} 
+\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+\doxysubsubsection{field\_data()}
+{\footnotesize\ttfamily field\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Field data
+
+Generates an array of objects containing field meta-\/data
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__result_a84bffd65e53902ade1591716749a33e3}.
+
+\mbox{\label{class_c_i___d_b__odbc__result_aad2d98d6beb3d6095405356c6107b473}} 
+\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}!free\_result@{free\_result}}
+\index{free\_result@{free\_result}!CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+\doxysubsubsection{free\_result()}
+{\footnotesize\ttfamily free\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free the result
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__result_aad2d98d6beb3d6095405356c6107b473}.
+
+\mbox{\label{class_c_i___d_b__odbc__result_a50b54eb4ea7cfd039740f532988ea776}} 
+\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}!list\_fields@{list\_fields}}
+\index{list\_fields@{list\_fields}!CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+\doxysubsubsection{list\_fields()}
+{\footnotesize\ttfamily list\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetch Field Names
+
+Generates an array of column names
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__result_a50b54eb4ea7cfd039740f532988ea776}.
+
+\mbox{\label{class_c_i___d_b__odbc__result_af831bf363e4d7d661a717a4932af449d}} 
+\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}!num\_fields@{num\_fields}}
+\index{num\_fields@{num\_fields}!CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+\doxysubsubsection{num\_fields()}
+{\footnotesize\ttfamily num\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Number of fields in the result set
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__result_af831bf363e4d7d661a717a4932af449d}.
+
+\mbox{\label{class_c_i___d_b__odbc__result_a218657c303ee499b97710ab0cd2f5d6e}} 
+\index{CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}!num\_rows@{num\_rows}}
+\index{num\_rows@{num\_rows}!CI\_DB\_odbc\_result@{CI\_DB\_odbc\_result}}
+\doxysubsubsection{num\_rows()}
+{\footnotesize\ttfamily num\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Number of rows in the result set
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+result} \doxyref{}{p.}{class_c_i___d_b__result_a218657c303ee499b97710ab0cd2f5d6e}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/drivers/odbc/odbc\+\_\+result.\+php\end{DoxyCompactItemize}

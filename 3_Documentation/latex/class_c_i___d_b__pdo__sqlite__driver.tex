@@ -1,0 +1,165 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+driver Class Reference}
+\label{class_c_i___d_b__pdo__sqlite__driver}\index{CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+sqlite\+\_\+driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_c_i___d_b__pdo__sqlite__driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$params)
+\item 
+\textbf{ list\+\_\+fields} (\$table)
+\item 
+\textbf{ field\+\_\+data} (\$table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_a1322ca756348b11d080cb7a4f590de15}} 
+{\bfseries \$subdriver} = \textquotesingle{}sqlite\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+list\+\_\+tables} (\$prefix\+\_\+limit=F\+A\+L\+SE)
+\item 
+\textbf{ \+\_\+replace} (\$table, \$keys, \$values)
+\item 
+\textbf{ \+\_\+truncate} (\$table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_a10213aa6e05f6d924d3277bb1d2fea00}} 
+{\bfseries \$\+\_\+random\+\_\+keyword} = array(\textquotesingle{}R\+A\+N\+D\+OM()\textquotesingle{}, \textquotesingle{}R\+A\+N\+D\+OM()\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_a9162320adff1a1a4afd7f2372f753a3e}} 
+\index{CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$params }\end{DoxyParamCaption})}
+
+Class constructor
+
+Builds the D\+SN if not already set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__pdo__driver_a9162320adff1a1a4afd7f2372f753a3e}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_a435c0f3ce54fe7daa178baa8532ebd54}} 
+\index{CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}!\_list\_tables@{\_list\_tables}}
+\index{\_list\_tables@{\_list\_tables}!CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}}
+\doxysubsubsection{\_list\_tables()}
+{\footnotesize\ttfamily \+\_\+list\+\_\+tables (\begin{DoxyParamCaption}\item[{}]{\$prefix\+\_\+limit = {\ttfamily FALSE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Show table query
+
+Generates a platform-\/specific query string so that the table names can be fetched
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$prefix\+\_\+limit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_ae0adf73984daf2d42ad29b66c484c82b}} 
+\index{CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}!\_replace@{\_replace}}
+\index{\_replace@{\_replace}!CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}}
+\doxysubsubsection{\_replace()}
+{\footnotesize\ttfamily \+\_\+replace (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$keys,  }\item[{}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Replace statement
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+array & {\em \$keys} & I\+N\+S\+E\+RT keys \\
+\hline
+array & {\em \$values} & I\+N\+S\+E\+RT values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_aa029600528fc1ce660a23ff4b4667f95}} 
+\index{CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}!\_truncate@{\_truncate}}
+\index{\_truncate@{\_truncate}!CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}}
+\doxysubsubsection{\_truncate()}
+{\footnotesize\ttfamily \+\_\+truncate (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Truncate statement
+
+Generates a platform-\/specific truncate string from the supplied data
+
+If the database does not support the T\+R\+U\+N\+C\+A\+TE statement, then this method maps to \textquotesingle{}D\+E\+L\+E\+TE F\+R\+OM table\textquotesingle{}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+pdo\+\_\+driver} \doxyref{}{p.}{class_c_i___d_b__pdo__driver_aa029600528fc1ce660a23ff4b4667f95}.
+
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_a90355121e1ed009e0efdbd544ab56efa}} 
+\index{CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}}
+\doxysubsubsection{field\_data()}
+{\footnotesize\ttfamily field\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Returns an object with field data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__pdo__sqlite__driver_aef08cd376b16b24608100ca0e3f2f85b}} 
+\index{CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}!list\_fields@{list\_fields}}
+\index{list\_fields@{list\_fields}!CI\_DB\_pdo\_sqlite\_driver@{CI\_DB\_pdo\_sqlite\_driver}}
+\doxysubsubsection{list\_fields()}
+{\footnotesize\ttfamily list\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Fetch Field Names
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/drivers/pdo/subdrivers/pdo\+\_\+sqlite\+\_\+driver.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,184 @@
+\doxysection{C\+I\+\_\+\+Cache\+\_\+dummy Class Reference}
+\label{class_c_i___cache__dummy}\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+Inheritance diagram for C\+I\+\_\+\+Cache\+\_\+dummy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___cache__dummy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ get} (\$id)
+\item 
+\textbf{ save} (\$id, \$data, \$ttl=60, \$raw=F\+A\+L\+SE)
+\item 
+\textbf{ delete} (\$id)
+\item 
+\textbf{ increment} (\$id, \$offset=1)
+\item 
+\textbf{ decrement} (\$id, \$offset=1)
+\item 
+\textbf{ clean} ()
+\item 
+\textbf{ cache\+\_\+info} (\$type=N\+U\+LL)
+\item 
+\textbf{ get\+\_\+metadata} (\$id)
+\item 
+\textbf{ is\+\_\+supported} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___cache__dummy_aa8b9c4d9f0387156736ccd8850f0727e}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!cache\_info@{cache\_info}}
+\index{cache\_info@{cache\_info}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{cache\_info()}
+{\footnotesize\ttfamily cache\+\_\+info (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Cache Info
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & user/filehits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_adb40b812890a8bc058bf6b7a0e1a54d9}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!clean@{clean}}
+\index{clean@{clean}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{clean()}
+{\footnotesize\ttfamily clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clean the cache
+
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE, simulating success 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_a4eb1c2772c8efc48c411ea060dd040b7}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!decrement@{decrement}}
+\index{decrement@{decrement}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{decrement()}
+{\footnotesize\ttfamily decrement (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Decrement a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to reduce by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed New value on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_a2f8258add505482d7f00ea26493a5723}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!delete@{delete}}
+\index{delete@{delete}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{delete()}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Delete from Cache
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & unique identifier of the item in the cache \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE, simulating success 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_a50e3bfb586b2f42932a6a93f3fbb0828}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!get@{get}}
+\index{get@{get}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{get()}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Get
+
+Since this is the dummy class, it\textquotesingle{}s always going to return F\+A\+L\+SE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_a59635cf18e997c5141bffa05ff7622e0}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!get\_metadata@{get\_metadata}}
+\index{get\_metadata@{get\_metadata}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{get\_metadata()}
+{\footnotesize\ttfamily get\+\_\+metadata (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Get Cache Metadata
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & key to get cache metadata on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_a2f07a4e09b57f4460d49852497d1808f}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!increment@{increment}}
+\index{increment@{increment}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{increment()}
+{\footnotesize\ttfamily increment (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$offset = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Increment a raw value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & Cache ID \\
+\hline
+int & {\em \$offset} & Step/value to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed New value on success or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_a98c68fd153468bc148c4ed8c716859fc}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!is\_supported@{is\_supported}}
+\index{is\_supported@{is\_supported}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{is\_supported()}
+{\footnotesize\ttfamily is\+\_\+supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is this caching driver supported on the system? Of course this one is.
+
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___cache__dummy_a472645db04a8ce4b040b789a3062a7d2}} 
+\index{CI\_Cache\_dummy@{CI\_Cache\_dummy}!save@{save}}
+\index{save@{save}!CI\_Cache\_dummy@{CI\_Cache\_dummy}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$data,  }\item[{}]{\$ttl = {\ttfamily 60},  }\item[{}]{\$raw = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Cache Save
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Unique Key \\
+\hline
+{\em mixed} & Data to store \\
+\hline
+{\em int} & Length of time (in seconds) to cache the data \\
+\hline
+{\em bool} & Whether to store the raw value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE, Simulating success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/\+Cache/drivers/Cache\+\_\+dummy.\+php\end{DoxyCompactItemize}

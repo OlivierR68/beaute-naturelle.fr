@@ -1,0 +1,124 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+forge Class Reference}
+\label{class_c_i___d_b__mssql__forge}\index{CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+mssql\+\_\+forge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___d_b__mssql__forge}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+alter\+\_\+table} (\$alter\+\_\+type, \$table, \$field)
+\item 
+\textbf{ \+\_\+attr\+\_\+type} (\&\$attributes)
+\item 
+\textbf{ \+\_\+attr\+\_\+auto\+\_\+increment} (\&\$attributes, \&\$field)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__mssql__forge_a2f6484fcb8d1dc3eef67a637227cd583}} 
+{\bfseries \$\+\_\+create\+\_\+table\+\_\+if} = \char`\"{}IF N\+OT E\+X\+I\+S\+TS (S\+E\+L\+E\+CT $\ast$ F\+R\+OM sysobjects W\+H\+E\+RE ID = object\+\_\+id(N\textquotesingle{}\%s\textquotesingle{}) A\+ND O\+B\+J\+E\+C\+T\+P\+R\+O\+P\+E\+R\+TY(id, N\textquotesingle{}Is\+User\+Table\textquotesingle{}) = 1)\textbackslash{}n\+C\+R\+E\+A\+TE T\+A\+B\+LE\char`\"{}
+\item 
+\mbox{\label{class_c_i___d_b__mssql__forge_a92a8a9145a7fc91e252e58d019373581}} 
+{\bfseries \$\+\_\+drop\+\_\+table\+\_\+if} = \char`\"{}IF E\+X\+I\+S\+TS (S\+E\+L\+E\+CT $\ast$ F\+R\+OM sysobjects W\+H\+E\+RE ID = object\+\_\+id(N\textquotesingle{}\%s\textquotesingle{}) A\+ND O\+B\+J\+E\+C\+T\+P\+R\+O\+P\+E\+R\+TY(id, N\textquotesingle{}Is\+User\+Table\textquotesingle{}) = 1)\textbackslash{}n\+D\+R\+OP T\+A\+B\+LE\char`\"{}
+\item 
+{\bfseries \$\+\_\+unsigned}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__mssql__forge_a41c6cae02f2fda8b429ad0afb9509426}} 
+\index{CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}!\_alter\_table@{\_alter\_table}}
+\index{\_alter\_table@{\_alter\_table}!CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}}
+\doxysubsubsection{\_alter\_table()}
+{\footnotesize\ttfamily \+\_\+alter\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$alter\+\_\+type,  }\item[{}]{\$table,  }\item[{}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+A\+L\+T\+ER T\+A\+B\+LE
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alter\+\_\+type} & A\+L\+T\+ER type \\
+\hline
+string & {\em \$table} & Table name \\
+\hline
+mixed & {\em \$field} & Column definition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$string[] 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__forge_a41c6cae02f2fda8b429ad0afb9509426}.
+
+\mbox{\label{class_c_i___d_b__mssql__forge_a2a013a5932439c3c44f0dad3436525f7}} 
+\index{CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}!\_attr\_auto\_increment@{\_attr\_auto\_increment}}
+\index{\_attr\_auto\_increment@{\_attr\_auto\_increment}!CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}}
+\doxysubsubsection{\_attr\_auto\_increment()}
+{\footnotesize\ttfamily \+\_\+attr\+\_\+auto\+\_\+increment (\begin{DoxyParamCaption}\item[{\&}]{\$attributes,  }\item[{\&}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Field attribute A\+U\+T\+O\+\_\+\+I\+N\+C\+R\+E\+M\+E\+NT
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$attributes} & \\
+\hline
+array & {\em \&\$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__forge_a2a013a5932439c3c44f0dad3436525f7}.
+
+\mbox{\label{class_c_i___d_b__mssql__forge_a8553be952084c6f7cdfff370a1d14f6b}} 
+\index{CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}!\_attr\_type@{\_attr\_type}}
+\index{\_attr\_type@{\_attr\_type}!CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}}
+\doxysubsubsection{\_attr\_type()}
+{\footnotesize\ttfamily \+\_\+attr\+\_\+type (\begin{DoxyParamCaption}\item[{\&}]{\$attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Field attribute T\+Y\+PE
+
+Performs a data type mapping between different databases.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \&\$attributes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ C\+I\+\_\+\+D\+B\+\_\+forge} \doxyref{}{p.}{class_c_i___d_b__forge_a8553be952084c6f7cdfff370a1d14f6b}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_c_i___d_b__mssql__forge_aae977ae6d61fa183f0b25422b6ddc31c}} 
+\index{CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}!\$\_unsigned@{\$\_unsigned}}
+\index{\$\_unsigned@{\$\_unsigned}!CI\_DB\_mssql\_forge@{CI\_DB\_mssql\_forge}}
+\doxysubsubsection{\$\_unsigned}
+{\footnotesize\ttfamily \$\+\_\+unsigned\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'TINYINT'}   => \textcolor{stringliteral}{'SMALLINT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SMALLINT'}  => \textcolor{stringliteral}{'INT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'INT'}       => \textcolor{stringliteral}{'BIGINT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'REAL'}      => \textcolor{stringliteral}{'FLOAT'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/drivers/mssql/mssql\+\_\+forge.\+php\end{DoxyCompactItemize}

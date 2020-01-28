@@ -1,0 +1,113 @@
+\doxysection{C\+I\+\_\+\+Utf8 Class Reference}
+\label{class_c_i___utf8}\index{CI\_Utf8@{CI\_Utf8}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ clean\+\_\+string} (\$str)
+\item 
+\textbf{ safe\+\_\+ascii\+\_\+for\+\_\+xml} (\$str)
+\item 
+\textbf{ convert\+\_\+to\+\_\+utf8} (\$str, \$encoding)
+\item 
+\textbf{ is\+\_\+ascii} (\$str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___utf8_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Utf8@{CI\_Utf8}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Utf8@{CI\_Utf8}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+Determines if U\+T\+F-\/8 support is to be enabled.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___utf8_af9fc6214803042dd0b46d6ac5bdb4b7b}} 
+\index{CI\_Utf8@{CI\_Utf8}!clean\_string@{clean\_string}}
+\index{clean\_string@{clean\_string}!CI\_Utf8@{CI\_Utf8}}
+\doxysubsubsection{clean\_string()}
+{\footnotesize\ttfamily clean\+\_\+string (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Clean U\+T\+F-\/8 strings
+
+Ensures strings contain only valid U\+T\+F-\/8 characters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & String to clean \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___utf8_a7f6a8b9f00d7d11b23abcadfc91e9583}} 
+\index{CI\_Utf8@{CI\_Utf8}!convert\_to\_utf8@{convert\_to\_utf8}}
+\index{convert\_to\_utf8@{convert\_to\_utf8}!CI\_Utf8@{CI\_Utf8}}
+\doxysubsubsection{convert\_to\_utf8()}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+utf8 (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$encoding }\end{DoxyParamCaption})}
+
+Convert to U\+T\+F-\/8
+
+Attempts to convert a string to U\+T\+F-\/8.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & Input string \\
+\hline
+string & {\em \$encoding} & Input encoding \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string \$str encoded in U\+T\+F-\/8 or F\+A\+L\+SE on failure 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___utf8_a8676dd1e98c759c6ef90fe6a9ba4e119}} 
+\index{CI\_Utf8@{CI\_Utf8}!is\_ascii@{is\_ascii}}
+\index{is\_ascii@{is\_ascii}!CI\_Utf8@{CI\_Utf8}}
+\doxysubsubsection{is\_ascii()}
+{\footnotesize\ttfamily is\+\_\+ascii (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Is A\+S\+C\+II?
+
+Tests if a string is standard 7-\/bit A\+S\+C\+II or not.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & String to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___utf8_a10d712b507a87fd841f134143eaedb8e}} 
+\index{CI\_Utf8@{CI\_Utf8}!safe\_ascii\_for\_xml@{safe\_ascii\_for\_xml}}
+\index{safe\_ascii\_for\_xml@{safe\_ascii\_for\_xml}!CI\_Utf8@{CI\_Utf8}}
+\doxysubsubsection{safe\_ascii\_for\_xml()}
+{\footnotesize\ttfamily safe\+\_\+ascii\+\_\+for\+\_\+xml (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Remove A\+S\+C\+II control characters
+
+Removes all A\+S\+C\+II control characters except horizontal tabs, line feeds, and carriage returns, as all others can cause problems in X\+ML.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & String to clean \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/Utf8.\+php\end{DoxyCompactItemize}

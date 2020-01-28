@@ -1,0 +1,332 @@
+\doxysection{C\+I\+\_\+\+Trackback Class Reference}
+\label{class_c_i___trackback}\index{CI\_Trackback@{CI\_Trackback}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ send} (\$tb\+\_\+data)
+\item 
+\textbf{ receive} ()
+\item 
+\textbf{ send\+\_\+error} (\$message=\textquotesingle{}Incomplete Information\textquotesingle{})
+\item 
+\textbf{ send\+\_\+success} ()
+\item 
+\textbf{ data} (\$item)
+\item 
+\textbf{ process} (\$url, \$\textbf{ data})
+\item 
+\textbf{ extract\+\_\+urls} (\$urls)
+\item 
+\textbf{ validate\+\_\+url} (\&\$url)
+\item 
+\textbf{ get\+\_\+id} (\$url)
+\item 
+\textbf{ convert\+\_\+xml} (\$str)
+\item 
+\textbf{ limit\+\_\+characters} (\$str, \$n=500, \$end\+\_\+char=\textquotesingle{}\&\#8230;\textquotesingle{})
+\item 
+\textbf{ convert\+\_\+ascii} (\$str)
+\item 
+\textbf{ set\+\_\+error} (\$msg)
+\item 
+\textbf{ display\+\_\+errors} (\$open=\textquotesingle{}$<$ p $>$\textquotesingle{}, \$close=\textquotesingle{}$<$/p $>$\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___trackback_af10158dd74b75f1d337e83102d6b82ce}} 
+{\bfseries \$charset} = \textquotesingle{}U\+TF-\/8\textquotesingle{}
+\item 
+{\bfseries \$data}
+\item 
+\mbox{\label{class_c_i___trackback_a488490c694dfefb9578fb22e0208e008}} 
+{\bfseries \$convert\+\_\+ascii} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___trackback_af4b6fb1bbc77ccc05f10da3b16935b99}} 
+{\bfseries \$response} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___trackback_acf910733622c1fa671b9f755c69c2ec7}} 
+{\bfseries \$error\+\_\+msg} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___trackback_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Trackback@{CI\_Trackback}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___trackback_a0029bda7d34a222a5bda4ac894c31ac1}} 
+\index{CI\_Trackback@{CI\_Trackback}!convert\_ascii@{convert\_ascii}}
+\index{convert\_ascii@{convert\_ascii}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{convert\_ascii()}
+{\footnotesize\ttfamily convert\+\_\+ascii (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+High A\+S\+C\+II to Entities
+
+Converts Hight ascii text and MS Word special chars to character entities
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a1ec67af2037561b65ffe49b59727cb53}} 
+\index{CI\_Trackback@{CI\_Trackback}!convert\_xml@{convert\_xml}}
+\index{convert\_xml@{convert\_xml}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{convert\_xml()}
+{\footnotesize\ttfamily convert\+\_\+xml (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Convert Reserved X\+ML characters to Entities
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a4d04a7a984a4bcc71e27be87706f393c}} 
+\index{CI\_Trackback@{CI\_Trackback}!data@{data}}
+\index{data@{data}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{data()}
+{\footnotesize\ttfamily data (\begin{DoxyParamCaption}\item[{}]{\$item }\end{DoxyParamCaption})}
+
+Fetch a particular item
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a71a6f2e6d97ff5347257f101002bc903}} 
+\index{CI\_Trackback@{CI\_Trackback}!display\_errors@{display\_errors}}
+\index{display\_errors@{display\_errors}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{display\_errors()}
+{\footnotesize\ttfamily display\+\_\+errors (\begin{DoxyParamCaption}\item[{}]{\$open = {\ttfamily \textquotesingle{}$<$p$>$\textquotesingle{}},  }\item[{}]{\$close = {\ttfamily \textquotesingle{}$<$/p$>$\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Show error messages
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_aab29f333201544b83e318dd761ac797a}} 
+\index{CI\_Trackback@{CI\_Trackback}!extract\_urls@{extract\_urls}}
+\index{extract\_urls@{extract\_urls}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{extract\_urls()}
+{\footnotesize\ttfamily extract\+\_\+urls (\begin{DoxyParamCaption}\item[{}]{\$urls }\end{DoxyParamCaption})}
+
+Extract Trackback U\+R\+Ls
+
+This function lets multiple trackbacks be sent. It takes a string of U\+R\+Ls (separated by comma or space) and puts each U\+RL into an array
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a404e345e61e00d5685117a101b5bc71a}} 
+\index{CI\_Trackback@{CI\_Trackback}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{get\_id()}
+{\footnotesize\ttfamily get\+\_\+id (\begin{DoxyParamCaption}\item[{}]{\$url }\end{DoxyParamCaption})}
+
+Find the Trackback U\+RL\textquotesingle{}s ID
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a55f0b98881441e99d74c657c3b005f11}} 
+\index{CI\_Trackback@{CI\_Trackback}!limit\_characters@{limit\_characters}}
+\index{limit\_characters@{limit\_characters}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{limit\_characters()}
+{\footnotesize\ttfamily limit\+\_\+characters (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$n = {\ttfamily 500},  }\item[{}]{\$end\+\_\+char = {\ttfamily \textquotesingle{}\&\#8230;\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Character limiter
+
+Limits the string based on the character count. Will preserve complete words.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em int} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a7244ffd64e186d863812bb300fec8cdc}} 
+\index{CI\_Trackback@{CI\_Trackback}!process@{process}}
+\index{process@{process}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{process()}
+{\footnotesize\ttfamily process (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$data }\end{DoxyParamCaption})}
+
+Process Trackback
+
+Opens a socket connection and passes the data to the server. Returns T\+R\+UE on success, F\+A\+L\+SE on failure
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_ac805eb3a4eb25b19c1ab093023da4d35}} 
+\index{CI\_Trackback@{CI\_Trackback}!receive@{receive}}
+\index{receive@{receive}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{receive()}
+{\footnotesize\ttfamily receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Receive Trackback Data
+
+This function simply validates the incoming TB data. It returns F\+A\+L\+SE on failure and T\+R\+UE on success. If the data is valid it is set to the \$this-\/$>$data array so that it can be inserted into a database.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a4ee54341ef16e67ca033704f4373a56b}} 
+\index{CI\_Trackback@{CI\_Trackback}!send@{send}}
+\index{send@{send}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{send()}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{}]{\$tb\+\_\+data }\end{DoxyParamCaption})}
+
+Send Trackback
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a1d4188b1ba4d71ad5392bee635102e87}} 
+\index{CI\_Trackback@{CI\_Trackback}!send\_error@{send\_error}}
+\index{send\_error@{send\_error}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{send\_error()}
+{\footnotesize\ttfamily send\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$message = {\ttfamily \textquotesingle{}Incomplete~Information\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Send Trackback Error Message
+
+Allows custom errors to be set. By default it sends the \char`\"{}incomplete information\char`\"{} error, as that\textquotesingle{}s the most common one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a57468453a4dc88340fdf12fb6e314248}} 
+\index{CI\_Trackback@{CI\_Trackback}!send\_success@{send\_success}}
+\index{send\_success@{send\_success}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{send\_success()}
+{\footnotesize\ttfamily send\+\_\+success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Send Trackback Success Message
+
+This should be called when a trackback has been successfully received and inserted.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a892f1ba7cba3731a3fc68f1f64e92610}} 
+\index{CI\_Trackback@{CI\_Trackback}!set\_error@{set\_error}}
+\index{set\_error@{set\_error}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{set\_error()}
+{\footnotesize\ttfamily set\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$msg }\end{DoxyParamCaption})}
+
+Set error message
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___trackback_a5caa264fab6d2b2344e6bd5b298b08f2}} 
+\index{CI\_Trackback@{CI\_Trackback}!validate\_url@{validate\_url}}
+\index{validate\_url@{validate\_url}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{validate\_url()}
+{\footnotesize\ttfamily validate\+\_\+url (\begin{DoxyParamCaption}\item[{\&}]{\$url }\end{DoxyParamCaption})}
+
+Validate U\+RL
+
+Simply adds \char`\"{}http\+://\char`\"{} if missing
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_c_i___trackback_a6efc15b5a2314dd4b5aaa556a375c6d6}} 
+\index{CI\_Trackback@{CI\_Trackback}!\$data@{\$data}}
+\index{\$data@{\$data}!CI\_Trackback@{CI\_Trackback}}
+\doxysubsubsection{\$data}
+{\footnotesize\ttfamily \$\textbf{ data}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'url'} => \textcolor{stringliteral}{''},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'title'} => \textcolor{stringliteral}{''},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'excerpt'} => \textcolor{stringliteral}{''},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'blog\_name'} => \textcolor{stringliteral}{''},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'charset'} => \textcolor{stringliteral}{''}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Trackback.\+php\end{DoxyCompactItemize}

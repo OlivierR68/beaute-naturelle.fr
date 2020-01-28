@@ -1,0 +1,1211 @@
+\doxysection{C\+I\+\_\+\+Email Class Reference}
+\label{class_c_i___email}\index{CI\_Email@{CI\_Email}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (array \$config=array())
+\item 
+\textbf{ initialize} (array \$config=array())
+\item 
+\textbf{ clear} (\$clear\+\_\+attachments=F\+A\+L\+SE)
+\item 
+\textbf{ from} (\$from, \$name=\textquotesingle{}\textquotesingle{}, \$return\+\_\+path=N\+U\+LL)
+\item 
+\textbf{ reply\+\_\+to} (\$replyto, \$name=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ to} (\$to)
+\item 
+\textbf{ cc} (\$cc)
+\item 
+\textbf{ bcc} (\$bcc, \$limit=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ subject} (\$subject)
+\item 
+\textbf{ message} (\$body)
+\item 
+\textbf{ attach} (\$file, \$disposition=\textquotesingle{}\textquotesingle{}, \$newname=N\+U\+LL, \$mime=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ attachment\+\_\+cid} (\$filename)
+\item 
+\textbf{ set\+\_\+header} (\$header, \$value)
+\item 
+\textbf{ set\+\_\+alt\+\_\+message} (\$str)
+\item 
+\textbf{ set\+\_\+mailtype} (\$type=\textquotesingle{}text\textquotesingle{})
+\item 
+\textbf{ set\+\_\+wordwrap} (\$wordwrap=T\+R\+UE)
+\item 
+\textbf{ set\+\_\+protocol} (\$protocol=\textquotesingle{}mail\textquotesingle{})
+\item 
+\textbf{ set\+\_\+priority} (\$n=3)
+\item 
+\textbf{ set\+\_\+newline} (\$newline=\char`\"{}\textbackslash{}n\char`\"{})
+\item 
+\textbf{ set\+\_\+crlf} (\$crlf=\char`\"{}\textbackslash{}n\char`\"{})
+\item 
+\textbf{ validate\+\_\+email} (\$email)
+\item 
+\textbf{ valid\+\_\+email} (\$email)
+\item 
+\textbf{ clean\+\_\+email} (\$email)
+\item 
+\textbf{ word\+\_\+wrap} (\$str, \$charlim=N\+U\+LL)
+\item 
+\textbf{ send} (\$auto\+\_\+clear=T\+R\+UE)
+\item 
+\textbf{ batch\+\_\+bcc\+\_\+send} ()
+\item 
+\textbf{ print\+\_\+debugger} (\$include=array(\textquotesingle{}headers\textquotesingle{}, \textquotesingle{}\textbf{ subject}\textquotesingle{}, \textquotesingle{}body\textquotesingle{}))
+\item 
+\textbf{ \+\_\+\+\_\+destruct} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___email_adc6d59b7c0768eeffafe3b78c4836959}} 
+{\bfseries \$useragent} = \textquotesingle{}Code\+Igniter\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_a23dd98b1852b9e73c20292b2cc96b20f}} 
+{\bfseries \$mailpath} = \textquotesingle{}/usr/sbin/sendmail\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_ac01bf1cf041487498864d054b991f570}} 
+{\bfseries \$protocol} = \textquotesingle{}mail\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_aa1ef5144d9ef39807b72f29299128eb1}} 
+{\bfseries \$smtp\+\_\+host} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_ac77010332fb55af4ed3ac38f0e39114d}} 
+{\bfseries \$smtp\+\_\+user} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_ae8b7daa14d7182bd564f04f752948400}} 
+{\bfseries \$smtp\+\_\+pass} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_af98a134522a65f513cff2718fc74968f}} 
+{\bfseries \$smtp\+\_\+port} = 25
+\item 
+\mbox{\label{class_c_i___email_afd19e9cbfc82dd26a270fccd29e29728}} 
+{\bfseries \$smtp\+\_\+timeout} = 5
+\item 
+\mbox{\label{class_c_i___email_a3ea493da94ea80d0439937af4eab7621}} 
+{\bfseries \$smtp\+\_\+keepalive} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___email_ab324ab40108bacab087e18556627ef1e}} 
+{\bfseries \$smtp\+\_\+crypto} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_abc150a71df67310da874f7399ab5f2cd}} 
+{\bfseries \$wordwrap} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___email_a8834e27a87a8b935ab1155d1d7bd44d2}} 
+{\bfseries \$wrapchars} = 76
+\item 
+\mbox{\label{class_c_i___email_a7f4dd7af7642585306869f8985ab744f}} 
+{\bfseries \$mailtype} = \textquotesingle{}text\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_af10158dd74b75f1d337e83102d6b82ce}} 
+{\bfseries \$charset} = \textquotesingle{}U\+TF-\/8\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_a266e7a7eb7cbcb0fc73a94b22a310a14}} 
+{\bfseries \$alt\+\_\+message} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_a320b75b46e1832c327d9d47b4cea9e7d}} 
+{\bfseries \$validate} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___email_a2677e505e860db863720ac4e216fd3f2}} 
+{\bfseries \$priority} = 3
+\item 
+\mbox{\label{class_c_i___email_a8735d5c31c4af1004825e6a28f236aeb}} 
+{\bfseries \$newline} = \char`\"{}\textbackslash{}n\char`\"{}
+\item 
+\mbox{\label{class_c_i___email_a85554ab78e9a915b4299dd3f1d5c2866}} 
+{\bfseries \$crlf} = \char`\"{}\textbackslash{}n\char`\"{}
+\item 
+\mbox{\label{class_c_i___email_a6441cca8c9fa11e16d2017e8cb733c10}} 
+{\bfseries \$dsn} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___email_ad646213e73754a396d49eacaa7fc8218}} 
+{\bfseries \$send\+\_\+multipart} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___email_ac67d3df67b03960980abe368f03e088e}} 
+{\bfseries \$bcc\+\_\+batch\+\_\+mode} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___email_abdb56da29fb9feee14d2374170c3cb5c}} 
+{\bfseries \$bcc\+\_\+batch\+\_\+size} = 200
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+str\+\_\+to\+\_\+array} (\$email)
+\item 
+\textbf{ \+\_\+get\+\_\+message\+\_\+id} ()
+\item 
+\textbf{ \+\_\+get\+\_\+protocol} ()
+\item 
+\textbf{ \+\_\+get\+\_\+encoding} ()
+\item 
+\textbf{ \+\_\+get\+\_\+content\+\_\+type} ()
+\item 
+\textbf{ \+\_\+set\+\_\+date} ()
+\item 
+\textbf{ \+\_\+get\+\_\+mime\+\_\+message} ()
+\item 
+\textbf{ \+\_\+get\+\_\+alt\+\_\+message} ()
+\item 
+\textbf{ \+\_\+build\+\_\+headers} ()
+\item 
+\textbf{ \+\_\+write\+\_\+headers} ()
+\item 
+\textbf{ \+\_\+build\+\_\+message} ()
+\item 
+\mbox{\label{class_c_i___email_ae652360ac4267d201218921f46b77df7}} 
+{\bfseries \+\_\+attachments\+\_\+have\+\_\+multipart} (\$type)
+\item 
+\textbf{ \+\_\+append\+\_\+attachments} (\&\$body, \$boundary, \$multipart=null)
+\item 
+\textbf{ \+\_\+prep\+\_\+quoted\+\_\+printable} (\$str)
+\item 
+\textbf{ \+\_\+prep\+\_\+q\+\_\+encoding} (\$str)
+\item 
+\textbf{ \+\_\+unwrap\+\_\+specials} ()
+\item 
+\textbf{ \+\_\+remove\+\_\+nl\+\_\+callback} (\$matches)
+\item 
+\textbf{ \+\_\+spool\+\_\+email} ()
+\item 
+\textbf{ \+\_\+validate\+\_\+email\+\_\+for\+\_\+shell} (\&\$email)
+\item 
+\textbf{ \+\_\+send\+\_\+with\+\_\+mail} ()
+\item 
+\textbf{ \+\_\+send\+\_\+with\+\_\+sendmail} ()
+\item 
+\textbf{ \+\_\+send\+\_\+with\+\_\+smtp} ()
+\item 
+\textbf{ \+\_\+smtp\+\_\+end} ()
+\item 
+\textbf{ \+\_\+smtp\+\_\+connect} ()
+\item 
+\textbf{ \+\_\+send\+\_\+command} (\$cmd, \$data=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ \+\_\+smtp\+\_\+authenticate} ()
+\item 
+\textbf{ \+\_\+send\+\_\+data} (\$data)
+\item 
+\textbf{ \+\_\+get\+\_\+smtp\+\_\+data} ()
+\item 
+\textbf{ \+\_\+get\+\_\+hostname} ()
+\item 
+\textbf{ \+\_\+set\+\_\+error\+\_\+message} (\$msg, \$val=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ \+\_\+mime\+\_\+types} (\$ext=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ strlen} (\$str)
+\item 
+static \textbf{ substr} (\$str, \$start, \$length=N\+U\+LL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___email_a9f2bbbf11ed324c1744f64d81242e8d5}} 
+{\bfseries \$\+\_\+safe\+\_\+mode} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___email_a3a212566602bb9c1c34e7619390b1bb8}} 
+{\bfseries \$\+\_\+subject} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_a2428d6733045fa7c07e5f61c8c85b8c9}} 
+{\bfseries \$\+\_\+body} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_afe3b263ee6d58805f3c06ef1fdc863a5}} 
+{\bfseries \$\+\_\+finalbody} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_a551b64b005666b98b001ed7ff405047c}} 
+{\bfseries \$\+\_\+header\+\_\+str} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_ab15af26ecd0970be1fb7609d06eec5ba}} 
+{\bfseries \$\+\_\+smtp\+\_\+connect} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_a37d569dfb47810a72ca1cfc5095ad149}} 
+{\bfseries \$\+\_\+encoding} = \textquotesingle{}8bit\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___email_a9b977d5970ceedb6cba44032a9976459}} 
+{\bfseries \$\+\_\+smtp\+\_\+auth} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___email_a00e8e2c2c72e6acf2cd91a8c4498695a}} 
+{\bfseries \$\+\_\+replyto\+\_\+flag} = F\+A\+L\+SE
+\item 
+\mbox{\label{class_c_i___email_a23c65b604c773811f76e75093fe9a77b}} 
+{\bfseries \$\+\_\+debug\+\_\+msg} = array()
+\item 
+\mbox{\label{class_c_i___email_aa5f5e78dd9477bdec18b4aadae77ba13}} 
+{\bfseries \$\+\_\+recipients} = array()
+\item 
+\mbox{\label{class_c_i___email_af979b4b8dc11cd847482938c13fd527d}} 
+{\bfseries \$\+\_\+cc\+\_\+array} = array()
+\item 
+\mbox{\label{class_c_i___email_a9e55a2ff848d216fa27361d3c66d979d}} 
+{\bfseries \$\+\_\+bcc\+\_\+array} = array()
+\item 
+\mbox{\label{class_c_i___email_a1481ae63a7fb295087c3a668a0359500}} 
+{\bfseries \$\+\_\+headers} = array()
+\item 
+\mbox{\label{class_c_i___email_a36f182452832f13cf40ab24ee9ffce90}} 
+{\bfseries \$\+\_\+attachments} = array()
+\item 
+\mbox{\label{class_c_i___email_a67dcd847790518bf5fbe6576a0c11c04}} 
+{\bfseries \$\+\_\+protocols} = array(\textquotesingle{}mail\textquotesingle{}, \textquotesingle{}sendmail\textquotesingle{}, \textquotesingle{}smtp\textquotesingle{})
+\item 
+\mbox{\label{class_c_i___email_a212a02e70f089ba2e1a29bd6f45b0691}} 
+{\bfseries \$\+\_\+base\+\_\+charsets} = array(\textquotesingle{}us-\/ascii\textquotesingle{}, \textquotesingle{}iso-\/2022-\/\textquotesingle{})
+\item 
+\mbox{\label{class_c_i___email_a65b779b2385490a293d286a135bdf00c}} 
+{\bfseries \$\+\_\+bit\+\_\+depths} = array(\textquotesingle{}7bit\textquotesingle{}, \textquotesingle{}8bit\textquotesingle{})
+\item 
+{\bfseries \$\+\_\+priorities}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___email_aef84be58d58a5895572c5689e56a1047}} 
+static {\bfseries \$func\+\_\+overload}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___email_a35018c0dc92a448db5c4686364ced754}} 
+\index{CI\_Email@{CI\_Email}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Constructor -\/ Sets Email Preferences
+
+The constructor can be passed an array of config values
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & = array() \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a421831a265621325e1fdd19aace0c758}} 
+\index{CI\_Email@{CI\_Email}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_\_destruct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___email_a24b79594abe7528b9207c3dad7494f70}} 
+\index{CI\_Email@{CI\_Email}!\_append\_attachments@{\_append\_attachments}}
+\index{\_append\_attachments@{\_append\_attachments}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_append\_attachments()}
+{\footnotesize\ttfamily \+\_\+append\+\_\+attachments (\begin{DoxyParamCaption}\item[{\&}]{\$body,  }\item[{}]{\$boundary,  }\item[{}]{\$multipart = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prepares attachment string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$body} & Message body to append to \\
+\hline
+string & {\em \$boundary} & Multipart boundary \\
+\hline
+string & {\em \$multipart} & When provided, only attachments of this type will be processed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a5dbec091c7efce89395a40e460b75d49}} 
+\index{CI\_Email@{CI\_Email}!\_build\_headers@{\_build\_headers}}
+\index{\_build\_headers@{\_build\_headers}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_build\_headers()}
+{\footnotesize\ttfamily \+\_\+build\+\_\+headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Build final headers
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a9ddc60e529eb909ff0879781a6f296ff}} 
+\index{CI\_Email@{CI\_Email}!\_build\_message@{\_build\_message}}
+\index{\_build\_message@{\_build\_message}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_build\_message()}
+{\footnotesize\ttfamily \+\_\+build\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Build Final Body and attachments
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a1a87461e94ab7466b7b6f22682c4a055}} 
+\index{CI\_Email@{CI\_Email}!\_get\_alt\_message@{\_get\_alt\_message}}
+\index{\_get\_alt\_message@{\_get\_alt\_message}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_alt\_message()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+alt\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Build alternative plain text message
+
+Provides the raw message for use in plain-\/text headers of H\+T\+M\+L-\/formatted emails. If the user hasn\textquotesingle{}t specified his own alternative message it creates one by stripping the H\+T\+ML
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a0df0801e489187b9f8108ec776f98f2e}} 
+\index{CI\_Email@{CI\_Email}!\_get\_content\_type@{\_get\_content\_type}}
+\index{\_get\_content\_type@{\_get\_content\_type}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_content\_type()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+content\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get content type (text/html/attachment)
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ab7a90b9198c0384a2a330728f2c78ebd}} 
+\index{CI\_Email@{CI\_Email}!\_get\_encoding@{\_get\_encoding}}
+\index{\_get\_encoding@{\_get\_encoding}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_encoding()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+encoding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get Mail Encoding
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ad2d333b7bb9f6c25400714dd8931fe11}} 
+\index{CI\_Email@{CI\_Email}!\_get\_hostname@{\_get\_hostname}}
+\index{\_get\_hostname@{\_get\_hostname}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_hostname()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+hostname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get Hostname
+
+There are only two legal types of hostname -\/ either a fully qualified domain name (eg\+: \char`\"{}mail.\+example.\+com\char`\"{}) or an IP literal (eg\+: \char`\"{}[1.\+2.\+3.\+4]\char`\"{}).
+
+\doxyref{{\texttt{ http\+://cbl.\+abuseat.\+org/namingproblems.\+html}}  string }{p.}{}\mbox{\label{class_c_i___email_a253c34263736465755f85ec4192aa6b4}} 
+\index{CI\_Email@{CI\_Email}!\_get\_message\_id@{\_get\_message\_id}}
+\index{\_get\_message\_id@{\_get\_message\_id}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_message\_id()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+message\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the Message ID
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a2211ba669bd8d076041d4e72bc8a9c59}} 
+\index{CI\_Email@{CI\_Email}!\_get\_mime\_message@{\_get\_mime\_message}}
+\index{\_get\_mime\_message@{\_get\_mime\_message}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_mime\_message()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+mime\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Mime message
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ad0000c693b4b2768f56fcc1049f8b3c7}} 
+\index{CI\_Email@{CI\_Email}!\_get\_protocol@{\_get\_protocol}}
+\index{\_get\_protocol@{\_get\_protocol}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_protocol()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+protocol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get Mail Protocol
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ac421324c92e681315a1f2d0d7fa96a5b}} 
+\index{CI\_Email@{CI\_Email}!\_get\_smtp\_data@{\_get\_smtp\_data}}
+\index{\_get\_smtp\_data@{\_get\_smtp\_data}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_get\_smtp\_data()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+smtp\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get S\+M\+TP data
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a7581ef570bb25b483e80ee996c42e454}} 
+\index{CI\_Email@{CI\_Email}!\_mime\_types@{\_mime\_types}}
+\index{\_mime\_types@{\_mime\_types}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_mime\_types()}
+{\footnotesize\ttfamily \+\_\+mime\+\_\+types (\begin{DoxyParamCaption}\item[{}]{\$ext = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Mime Types
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a56a4d842c3dfe77bcb41082a82c5df24}} 
+\index{CI\_Email@{CI\_Email}!\_prep\_q\_encoding@{\_prep\_q\_encoding}}
+\index{\_prep\_q\_encoding@{\_prep\_q\_encoding}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_prep\_q\_encoding()}
+{\footnotesize\ttfamily \+\_\+prep\+\_\+q\+\_\+encoding (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prep Q Encoding
+
+Performs \char`\"{}\+Q Encoding\char`\"{} on a string for use in email headers. It\textquotesingle{}s related but not identical to quoted-\/printable, so it has its own method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_af2beda05a0ab5d0ec65b03da633b1d33}} 
+\index{CI\_Email@{CI\_Email}!\_prep\_quoted\_printable@{\_prep\_quoted\_printable}}
+\index{\_prep\_quoted\_printable@{\_prep\_quoted\_printable}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_prep\_quoted\_printable()}
+{\footnotesize\ttfamily \+\_\+prep\+\_\+quoted\+\_\+printable (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prep Quoted Printable
+
+Prepares string for Quoted-\/\+Printable Content-\/\+Transfer-\/\+Encoding Refer to R\+FC 2045 {\texttt{ http\+://www.\+ietf.\+org/rfc/rfc2045.\+txt}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a3a624f07cca99fe6ab1b61dbec56eef8}} 
+\index{CI\_Email@{CI\_Email}!\_remove\_nl\_callback@{\_remove\_nl\_callback}}
+\index{\_remove\_nl\_callback@{\_remove\_nl\_callback}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_remove\_nl\_callback()}
+{\footnotesize\ttfamily \+\_\+remove\+\_\+nl\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{\$matches }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Strip line-\/breaks via callback
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$matches} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a5431c3309ee720b3d1cc55c892359371}} 
+\index{CI\_Email@{CI\_Email}!\_send\_command@{\_send\_command}}
+\index{\_send\_command@{\_send\_command}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_send\_command()}
+{\footnotesize\ttfamily \+\_\+send\+\_\+command (\begin{DoxyParamCaption}\item[{}]{\$cmd,  }\item[{}]{\$data = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send S\+M\+TP command
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a42fa768e8678b3c1462762b9b812a302}} 
+\index{CI\_Email@{CI\_Email}!\_send\_data@{\_send\_data}}
+\index{\_send\_data@{\_send\_data}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_send\_data()}
+{\footnotesize\ttfamily \+\_\+send\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send S\+M\+TP data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ae7e626556c4d619a7214bee6056badd4}} 
+\index{CI\_Email@{CI\_Email}!\_send\_with\_mail@{\_send\_with\_mail}}
+\index{\_send\_with\_mail@{\_send\_with\_mail}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_send\_with\_mail()}
+{\footnotesize\ttfamily \+\_\+send\+\_\+with\+\_\+mail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send using mail()
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a22ce9dc271da86e2a25041aa70e02502}} 
+\index{CI\_Email@{CI\_Email}!\_send\_with\_sendmail@{\_send\_with\_sendmail}}
+\index{\_send\_with\_sendmail@{\_send\_with\_sendmail}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_send\_with\_sendmail()}
+{\footnotesize\ttfamily \+\_\+send\+\_\+with\+\_\+sendmail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send using Sendmail
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a691e57a39f6f8956c5054fd7b109bb12}} 
+\index{CI\_Email@{CI\_Email}!\_send\_with\_smtp@{\_send\_with\_smtp}}
+\index{\_send\_with\_smtp@{\_send\_with\_smtp}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_send\_with\_smtp()}
+{\footnotesize\ttfamily \+\_\+send\+\_\+with\+\_\+smtp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send using S\+M\+TP
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a0c25effa0066e09273d092572709f6eb}} 
+\index{CI\_Email@{CI\_Email}!\_set\_date@{\_set\_date}}
+\index{\_set\_date@{\_set\_date}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_set\_date()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set R\+FC 822 Date
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a5f00196f0653becd7f5a7a590eaf0085}} 
+\index{CI\_Email@{CI\_Email}!\_set\_error\_message@{\_set\_error\_message}}
+\index{\_set\_error\_message@{\_set\_error\_message}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_set\_error\_message()}
+{\footnotesize\ttfamily \+\_\+set\+\_\+error\+\_\+message (\begin{DoxyParamCaption}\item[{}]{\$msg,  }\item[{}]{\$val = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set Message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$msg} & \\
+\hline
+string & {\em \$val} & = \textquotesingle{}\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a708494a94d2083993ede37cf65a0c0fa}} 
+\index{CI\_Email@{CI\_Email}!\_smtp\_authenticate@{\_smtp\_authenticate}}
+\index{\_smtp\_authenticate@{\_smtp\_authenticate}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_smtp\_authenticate()}
+{\footnotesize\ttfamily \+\_\+smtp\+\_\+authenticate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+S\+M\+TP Authenticate
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ae57fde4883dcd1dec9f8999efef13f06}} 
+\index{CI\_Email@{CI\_Email}!\_smtp\_connect@{\_smtp\_connect}}
+\index{\_smtp\_connect@{\_smtp\_connect}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_smtp\_connect()}
+{\footnotesize\ttfamily \+\_\+smtp\+\_\+connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+S\+M\+TP Connect
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+S\+T\+R\+E\+A\+M\+\_\+\+C\+R\+Y\+P\+T\+O\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+T\+L\+S\+\_\+\+C\+L\+I\+E\+NT is quite the mess ...
+
+
+\begin{DoxyItemize}
+\item On P\+HP $<$5.\+6 it doesn\textquotesingle{}t even mean T\+LS, but S\+SL 2.\+0, and there\textquotesingle{}s no option to use actual T\+LS
+\item On P\+HP 5.\+6.\+0-\/5.\+6.\+6, $>$=7.\+2 it means negotiation with any of T\+LS 1.\+0, 1.\+1, 1.\+2
+\item On P\+HP 5.\+6.\+7-\/7.\+1.$\ast$ it means only T\+LS 1.\+0
+\end{DoxyItemize}
+
+We want the negotiation, so we\textquotesingle{}ll force it below ...\mbox{\label{class_c_i___email_a275593e37ea7d04035b5ce80d8934a13}} 
+\index{CI\_Email@{CI\_Email}!\_smtp\_end@{\_smtp\_end}}
+\index{\_smtp\_end@{\_smtp\_end}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_smtp\_end()}
+{\footnotesize\ttfamily \+\_\+smtp\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+S\+M\+TP End
+
+Shortcut to send R\+S\+ET or Q\+U\+IT depending on keep-\/alive
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a5d45a2f98c27332dfe78086c88eafd3c}} 
+\index{CI\_Email@{CI\_Email}!\_spool\_email@{\_spool\_email}}
+\index{\_spool\_email@{\_spool\_email}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_spool\_email()}
+{\footnotesize\ttfamily \+\_\+spool\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Spool mail to the mail server
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a64cd83e470ede0781d028d7198474d1c}} 
+\index{CI\_Email@{CI\_Email}!\_str\_to\_array@{\_str\_to\_array}}
+\index{\_str\_to\_array@{\_str\_to\_array}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_str\_to\_array()}
+{\footnotesize\ttfamily \+\_\+str\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{}]{\$email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a String to an Array
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_af50bcab235f0eff47d7117d77733f1d9}} 
+\index{CI\_Email@{CI\_Email}!\_unwrap\_specials@{\_unwrap\_specials}}
+\index{\_unwrap\_specials@{\_unwrap\_specials}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_unwrap\_specials()}
+{\footnotesize\ttfamily \+\_\+unwrap\+\_\+specials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Unwrap special elements
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a468f4ab8b122318d39baffe9e727d2be}} 
+\index{CI\_Email@{CI\_Email}!\_validate\_email\_for\_shell@{\_validate\_email\_for\_shell}}
+\index{\_validate\_email\_for\_shell@{\_validate\_email\_for\_shell}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_validate\_email\_for\_shell()}
+{\footnotesize\ttfamily \+\_\+validate\+\_\+email\+\_\+for\+\_\+shell (\begin{DoxyParamCaption}\item[{\&}]{\$email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate email for shell
+
+Applies stricter, shell-\/safe validation to email addresses. Introduced to prevent R\+CE via sendmail\textquotesingle{}s -\/f option.
+
+\begin{DoxySeeAlso}{See also}
+{\texttt{ https\+://github.\+com/bcit-\/ci/\+Code\+Igniter/issues/4963}} 
+
+{\texttt{ https\+://gist.\+github.\+com/\+Zenexer/40d02da5e07f151adeaeeaa11af9ab36}} @license {\texttt{ https\+://creativecommons.\+org/publicdomain/zero/1.\+0/}} C\+C0 1.\+0, Public Domain
+\end{DoxySeeAlso}
+Credits for the base concept go to Paul Buonopane {\texttt{ paul@namepros.\+com}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$email} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a6bde7269215bc1093811ae098bb034bf}} 
+\index{CI\_Email@{CI\_Email}!\_write\_headers@{\_write\_headers}}
+\index{\_write\_headers@{\_write\_headers}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\_write\_headers()}
+{\footnotesize\ttfamily \+\_\+write\+\_\+headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Write Headers as a string
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_adb1bcf392d6cf38e3f94675a21cab563}} 
+\index{CI\_Email@{CI\_Email}!attach@{attach}}
+\index{attach@{attach}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{attach()}
+{\footnotesize\ttfamily attach (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$disposition = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$newname = {\ttfamily NULL},  }\item[{}]{\$mime = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Assign file attachments
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & Can be local path, U\+RL or buffered content \\
+\hline
+string & {\em \$disposition} & = \textquotesingle{}attachment\textquotesingle{} \\
+\hline
+string & {\em \$newname} & = N\+U\+LL \\
+\hline
+string & {\em \$mime} & = \textquotesingle{}\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_afd601b1ddbb0fc02f16f2e39d9881299}} 
+\index{CI\_Email@{CI\_Email}!attachment\_cid@{attachment\_cid}}
+\index{attachment\_cid@{attachment\_cid}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{attachment\_cid()}
+{\footnotesize\ttfamily attachment\+\_\+cid (\begin{DoxyParamCaption}\item[{}]{\$filename }\end{DoxyParamCaption})}
+
+Set and return attachment Content-\/\+ID
+
+Useful for attached inline pictures
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a889f14cabfcfe05b5c0d0dbbb8f557e0}} 
+\index{CI\_Email@{CI\_Email}!batch\_bcc\_send@{batch\_bcc\_send}}
+\index{batch\_bcc\_send@{batch\_bcc\_send}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{batch\_bcc\_send()}
+{\footnotesize\ttfamily batch\+\_\+bcc\+\_\+send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Batch Bcc Send. Sends groups of B\+C\+Cs in batches
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ae7da2abc30865dd8ba3fcb3366889d7a}} 
+\index{CI\_Email@{CI\_Email}!bcc@{bcc}}
+\index{bcc@{bcc}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{bcc()}
+{\footnotesize\ttfamily bcc (\begin{DoxyParamCaption}\item[{}]{\$bcc,  }\item[{}]{\$limit = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set B\+CC
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a785e883837f95eeffed21226563fc7e5}} 
+\index{CI\_Email@{CI\_Email}!cc@{cc}}
+\index{cc@{cc}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{cc()}
+{\footnotesize\ttfamily cc (\begin{DoxyParamCaption}\item[{}]{\$cc }\end{DoxyParamCaption})}
+
+Set CC
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_ab8139994bc1b1bee3d2750b627cdd0c6}} 
+\index{CI\_Email@{CI\_Email}!clean\_email@{clean\_email}}
+\index{clean\_email@{clean\_email}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{clean\_email()}
+{\footnotesize\ttfamily clean\+\_\+email (\begin{DoxyParamCaption}\item[{}]{\$email }\end{DoxyParamCaption})}
+
+Clean Extended Email Address\+: Joe Smith {\texttt{ joe@smith.\+com}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a84399b20dfff67877099743270c68538}} 
+\index{CI\_Email@{CI\_Email}!clear@{clear}}
+\index{clear@{clear}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{clear()}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}\item[{}]{\$clear\+\_\+attachments = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Initialize the Email Data
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_adfec40d06e4f3fcae4e2059dee1c26d0}} 
+\index{CI\_Email@{CI\_Email}!from@{from}}
+\index{from@{from}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{from()}
+{\footnotesize\ttfamily from (\begin{DoxyParamCaption}\item[{}]{\$from,  }\item[{}]{\$name = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$return\+\_\+path = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Set F\+R\+OM
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$from} & \\
+\hline
+string & {\em \$name} & \\
+\hline
+string & {\em \$return\+\_\+path} & = N\+U\+LL Return-\/\+Path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_accdda1f75fbf89ca5d63af410e60ee6d}} 
+\index{CI\_Email@{CI\_Email}!initialize@{initialize}}
+\index{initialize@{initialize}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{initialize()}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}\item[{array}]{\$config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Initialize preferences
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a62559aacd297073072c30009daa8de86}} 
+\index{CI\_Email@{CI\_Email}!message@{message}}
+\index{message@{message}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{message()}
+{\footnotesize\ttfamily message (\begin{DoxyParamCaption}\item[{}]{\$body }\end{DoxyParamCaption})}
+
+Set Body
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a11f22e40cb1409ee7569c0abc15fae09}} 
+\index{CI\_Email@{CI\_Email}!print\_debugger@{print\_debugger}}
+\index{print\_debugger@{print\_debugger}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{print\_debugger()}
+{\footnotesize\ttfamily print\+\_\+debugger (\begin{DoxyParamCaption}\item[{}]{\$include = {\ttfamily array(\textquotesingle{}headers\textquotesingle{},~\textquotesingle{}\textbf{ subject}\textquotesingle{},~\textquotesingle{}body\textquotesingle{})} }\end{DoxyParamCaption})}
+
+Get Debug Message
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$include} & List of raw data chunks to include in the output Valid options are\+: \textquotesingle{}headers\textquotesingle{}, \textquotesingle{}subject\textquotesingle{}, \textquotesingle{}body\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a1ee2303dece90d5b3afbb5dc75b9a0ca}} 
+\index{CI\_Email@{CI\_Email}!reply\_to@{reply\_to}}
+\index{reply\_to@{reply\_to}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{reply\_to()}
+{\footnotesize\ttfamily reply\+\_\+to (\begin{DoxyParamCaption}\item[{}]{\$replyto,  }\item[{}]{\$name = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set Reply-\/to
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a547a65a81ba2d1f98cc15121a45dab11}} 
+\index{CI\_Email@{CI\_Email}!send@{send}}
+\index{send@{send}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{send()}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{}]{\$auto\+\_\+clear = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Send Email
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$auto\+\_\+clear} & = T\+R\+UE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a18f0b650e6e9a859e1936a41e86fb3a6}} 
+\index{CI\_Email@{CI\_Email}!set\_alt\_message@{set\_alt\_message}}
+\index{set\_alt\_message@{set\_alt\_message}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_alt\_message()}
+{\footnotesize\ttfamily set\+\_\+alt\+\_\+message (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Set Multipart Value
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a8bfdf8b14a9dcf4ee18b52c0a2afa833}} 
+\index{CI\_Email@{CI\_Email}!set\_crlf@{set\_crlf}}
+\index{set\_crlf@{set\_crlf}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_crlf()}
+{\footnotesize\ttfamily set\+\_\+crlf (\begin{DoxyParamCaption}\item[{}]{\$crlf = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}} }\end{DoxyParamCaption})}
+
+Set C\+R\+LF
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_aff40701d50f18c87942be79f8b447247}} 
+\index{CI\_Email@{CI\_Email}!set\_header@{set\_header}}
+\index{set\_header@{set\_header}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_header()}
+{\footnotesize\ttfamily set\+\_\+header (\begin{DoxyParamCaption}\item[{}]{\$header,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Add a Header Item
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a9baeadff990ea673d75c3019c8cc3524}} 
+\index{CI\_Email@{CI\_Email}!set\_mailtype@{set\_mailtype}}
+\index{set\_mailtype@{set\_mailtype}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_mailtype()}
+{\footnotesize\ttfamily set\+\_\+mailtype (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}text\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set Mailtype
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a095be9606f6f063ee6e1af81b53d405e}} 
+\index{CI\_Email@{CI\_Email}!set\_newline@{set\_newline}}
+\index{set\_newline@{set\_newline}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_newline()}
+{\footnotesize\ttfamily set\+\_\+newline (\begin{DoxyParamCaption}\item[{}]{\$newline = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}} }\end{DoxyParamCaption})}
+
+Set Newline Character
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_aee3ae37c0bf5f8aca34f6e872efd66b8}} 
+\index{CI\_Email@{CI\_Email}!set\_priority@{set\_priority}}
+\index{set\_priority@{set\_priority}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_priority()}
+{\footnotesize\ttfamily set\+\_\+priority (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+Set Priority
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a7be40507898a21ce9172b225e973b107}} 
+\index{CI\_Email@{CI\_Email}!set\_protocol@{set\_protocol}}
+\index{set\_protocol@{set\_protocol}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_protocol()}
+{\footnotesize\ttfamily set\+\_\+protocol (\begin{DoxyParamCaption}\item[{}]{\$protocol = {\ttfamily \textquotesingle{}mail\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set Protocol
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a6abb8d5f17213eba1e243ca633da8084}} 
+\index{CI\_Email@{CI\_Email}!set\_wordwrap@{set\_wordwrap}}
+\index{set\_wordwrap@{set\_wordwrap}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{set\_wordwrap()}
+{\footnotesize\ttfamily set\+\_\+wordwrap (\begin{DoxyParamCaption}\item[{}]{\$wordwrap = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Set Wordwrap
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a4c29a687d4ed62c26a10e41d98930d5f}} 
+\index{CI\_Email@{CI\_Email}!strlen@{strlen}}
+\index{strlen@{strlen}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{strlen()}
+{\footnotesize\ttfamily static strlen (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Byte-\/safe \doxyref{strlen()}{p.}{class_c_i___email_a4c29a687d4ed62c26a10e41d98930d5f}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_aaa61b3aaa6cc4c90e26686e4bf41587a}} 
+\index{CI\_Email@{CI\_Email}!subject@{subject}}
+\index{subject@{subject}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{subject()}
+{\footnotesize\ttfamily subject (\begin{DoxyParamCaption}\item[{}]{\$subject }\end{DoxyParamCaption})}
+
+Set Email Subject
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a101caef57ef0b165da5747e2c2e6c9dc}} 
+\index{CI\_Email@{CI\_Email}!substr@{substr}}
+\index{substr@{substr}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{substr()}
+{\footnotesize\ttfamily static substr (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$start,  }\item[{}]{\$length = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Byte-\/safe \doxyref{substr()}{p.}{class_c_i___email_a101caef57ef0b165da5747e2c2e6c9dc}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+int & {\em \$start} & \\
+\hline
+int & {\em \$length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a453e853778ae341e4fb165551d1ba1aa}} 
+\index{CI\_Email@{CI\_Email}!to@{to}}
+\index{to@{to}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{to()}
+{\footnotesize\ttfamily to (\begin{DoxyParamCaption}\item[{}]{\$to }\end{DoxyParamCaption})}
+
+Set Recipients
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Email}{p.}{class_c_i___email} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_abe07a23d74d453da8fb639b5c3951873}} 
+\index{CI\_Email@{CI\_Email}!valid\_email@{valid\_email}}
+\index{valid\_email@{valid\_email}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{valid\_email()}
+{\footnotesize\ttfamily valid\+\_\+email (\begin{DoxyParamCaption}\item[{}]{\$email }\end{DoxyParamCaption})}
+
+Email Validation
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_a1907f0dba44e2968b8260dbc5770550f}} 
+\index{CI\_Email@{CI\_Email}!validate\_email@{validate\_email}}
+\index{validate\_email@{validate\_email}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{validate\_email()}
+{\footnotesize\ttfamily validate\+\_\+email (\begin{DoxyParamCaption}\item[{}]{\$email }\end{DoxyParamCaption})}
+
+Validate Email Address
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___email_aa3a2a5440115b320a0c2fcea542e546a}} 
+\index{CI\_Email@{CI\_Email}!word\_wrap@{word\_wrap}}
+\index{word\_wrap@{word\_wrap}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{word\_wrap()}
+{\footnotesize\ttfamily word\+\_\+wrap (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$charlim = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Word Wrap
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em int} & line-\/length limit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_c_i___email_af2e56ba04b214aad41be6db88e729645}} 
+\index{CI\_Email@{CI\_Email}!\$\_priorities@{\$\_priorities}}
+\index{\$\_priorities@{\$\_priorities}!CI\_Email@{CI\_Email}}
+\doxysubsubsection{\$\_priorities}
+{\footnotesize\ttfamily \$\+\_\+priorities\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        1 => \textcolor{stringliteral}{'1 (Highest)'},}
+\DoxyCodeLine{        2 => \textcolor{stringliteral}{'2 (High)'},}
+\DoxyCodeLine{        3 => \textcolor{stringliteral}{'3 (Normal)'},}
+\DoxyCodeLine{        4 => \textcolor{stringliteral}{'4 (Low)'},}
+\DoxyCodeLine{        5 => \textcolor{stringliteral}{'5 (Lowest)'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Email.\+php\end{DoxyCompactItemize}

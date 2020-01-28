@@ -1,0 +1,165 @@
+\doxysection{C\+I\+\_\+\+Exceptions Class Reference}
+\label{class_c_i___exceptions}\index{CI\_Exceptions@{CI\_Exceptions}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ log\+\_\+exception} (\$severity, \$message, \$filepath, \$line)
+\item 
+\textbf{ show\+\_\+404} (\$page=\textquotesingle{}\textquotesingle{}, \$log\+\_\+error=T\+R\+UE)
+\item 
+\textbf{ show\+\_\+error} (\$heading, \$message, \$template=\textquotesingle{}error\+\_\+general\textquotesingle{}, \$status\+\_\+code=500)
+\item 
+\mbox{\label{class_c_i___exceptions_a6ad5ac9b245835caf69b6d3de1f48a85}} 
+{\bfseries show\+\_\+exception} (\$exception)
+\item 
+\textbf{ show\+\_\+php\+\_\+error} (\$severity, \$message, \$filepath, \$line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___exceptions_abb6b6587dbaf0238bf26829c8df05d59}} 
+{\bfseries \$ob\+\_\+level}
+\item 
+{\bfseries \$levels}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___exceptions_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Exceptions@{CI\_Exceptions}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Exceptions@{CI\_Exceptions}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class constructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___exceptions_a477bd3360509887aeb6e0a56bcdcad2a}} 
+\index{CI\_Exceptions@{CI\_Exceptions}!log\_exception@{log\_exception}}
+\index{log\_exception@{log\_exception}!CI\_Exceptions@{CI\_Exceptions}}
+\doxysubsubsection{log\_exception()}
+{\footnotesize\ttfamily log\+\_\+exception (\begin{DoxyParamCaption}\item[{}]{\$severity,  }\item[{}]{\$message,  }\item[{}]{\$filepath,  }\item[{}]{\$line }\end{DoxyParamCaption})}
+
+Exception Logger
+
+Logs P\+HP generated error messages
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$severity} & Log level \\
+\hline
+string & {\em \$message} & Error message \\
+\hline
+string & {\em \$filepath} & File path \\
+\hline
+int & {\em \$line} & Line number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___exceptions_aaee13338b10f986f23d77eabcaf40fec}} 
+\index{CI\_Exceptions@{CI\_Exceptions}!show\_404@{show\_404}}
+\index{show\_404@{show\_404}!CI\_Exceptions@{CI\_Exceptions}}
+\doxysubsubsection{show\_404()}
+{\footnotesize\ttfamily show\+\_\+404 (\begin{DoxyParamCaption}\item[{}]{\$page = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$log\+\_\+error = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+404 Error Handler
+
+@uses \doxyref{C\+I\+\_\+\+Exceptions\+::show\+\_\+error()}{p.}{class_c_i___exceptions_a4214456af4ed4c4d7a292939dea95257}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$page} & Page U\+RI \\
+\hline
+bool & {\em \$log\+\_\+error} & Whether to log the error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___exceptions_a4214456af4ed4c4d7a292939dea95257}} 
+\index{CI\_Exceptions@{CI\_Exceptions}!show\_error@{show\_error}}
+\index{show\_error@{show\_error}!CI\_Exceptions@{CI\_Exceptions}}
+\doxysubsubsection{show\_error()}
+{\footnotesize\ttfamily show\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$heading,  }\item[{}]{\$message,  }\item[{}]{\$template = {\ttfamily \textquotesingle{}error\+\_\+general\textquotesingle{}},  }\item[{}]{\$status\+\_\+code = {\ttfamily 500} }\end{DoxyParamCaption})}
+
+General Error Page
+
+Takes an error message as input (either as a string or an array) and displays it using the specified template.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$heading} & Page heading \\
+\hline
+string | string[$\,$] & {\em \$message} & Error message \\
+\hline
+string & {\em \$template} & Template name \\
+\hline
+int & {\em \$status\+\_\+code} & (default\+: 500)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Error page output 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___exceptions_a7962c30cacf1341dac1c44d8ab57cebe}} 
+\index{CI\_Exceptions@{CI\_Exceptions}!show\_php\_error@{show\_php\_error}}
+\index{show\_php\_error@{show\_php\_error}!CI\_Exceptions@{CI\_Exceptions}}
+\doxysubsubsection{show\_php\_error()}
+{\footnotesize\ttfamily show\+\_\+php\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$severity,  }\item[{}]{\$message,  }\item[{}]{\$filepath,  }\item[{}]{\$line }\end{DoxyParamCaption})}
+
+Native P\+HP error handler
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$severity} & Error level \\
+\hline
+string & {\em \$message} & Error message \\
+\hline
+string & {\em \$filepath} & File path \\
+\hline
+int & {\em \$line} & Line number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_c_i___exceptions_a1035dc0448354cc79f8f9e1ca8dfd0cb}} 
+\index{CI\_Exceptions@{CI\_Exceptions}!\$levels@{\$levels}}
+\index{\$levels@{\$levels}!CI\_Exceptions@{CI\_Exceptions}}
+\doxysubsubsection{\$levels}
+{\footnotesize\ttfamily \$levels}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        E\_ERROR         =>  \textcolor{stringliteral}{'Error'},}
+\DoxyCodeLine{        E\_WARNING       =>  \textcolor{stringliteral}{'Warning'},}
+\DoxyCodeLine{        E\_PARSE         =>  \textcolor{stringliteral}{'Parsing Error'},}
+\DoxyCodeLine{        E\_NOTICE        =>  \textcolor{stringliteral}{'Notice'},}
+\DoxyCodeLine{        E\_CORE\_ERROR        =>  \textcolor{stringliteral}{'Core Error'},}
+\DoxyCodeLine{        E\_CORE\_WARNING      =>  \textcolor{stringliteral}{'Core Warning'},}
+\DoxyCodeLine{        E\_COMPILE\_ERROR     =>  \textcolor{stringliteral}{'Compile Error'},}
+\DoxyCodeLine{        E\_COMPILE\_WARNING   =>  \textcolor{stringliteral}{'Compile Warning'},}
+\DoxyCodeLine{        E\_USER\_ERROR        =>  \textcolor{stringliteral}{'User Error'},}
+\DoxyCodeLine{        E\_USER\_WARNING      =>  \textcolor{stringliteral}{'User Warning'},}
+\DoxyCodeLine{        E\_USER\_NOTICE       =>  \textcolor{stringliteral}{'User Notice'},}
+\DoxyCodeLine{        E\_STRICT        =>  \textcolor{stringliteral}{'Runtime Notice'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/core/Exceptions.\+php\end{DoxyCompactItemize}

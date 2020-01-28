@@ -1,0 +1,204 @@
+\doxysection{X\+M\+L\+\_\+\+R\+P\+C\+\_\+\+Values Class Reference}
+\label{class_x_m_l___r_p_c___values}\index{XML\_RPC\_Values@{XML\_RPC\_Values}}
+Inheritance diagram for X\+M\+L\+\_\+\+R\+P\+C\+\_\+\+Values\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_x_m_l___r_p_c___values}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$val=-\/1, \$type=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ add\+Scalar} (\$val, \$type=\textquotesingle{}string\textquotesingle{})
+\item 
+\textbf{ add\+Array} (\$vals)
+\item 
+\textbf{ add\+Struct} (\$vals)
+\item 
+\textbf{ kind\+Of} ()
+\item 
+\textbf{ serializedata} (\$typ, \$val)
+\item 
+\textbf{ serialize\+\_\+class} ()
+\item 
+\textbf{ serializeval} (\$o)
+\item 
+\textbf{ scalarval} ()
+\item 
+\textbf{ iso8601\+\_\+encode} (\$time, \$utc=F\+A\+L\+SE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_x_m_l___r_p_c___values_ad856a60cee1894f180e845f9b7b81458}} 
+{\bfseries \$me} = array()
+\item 
+\mbox{\label{class_x_m_l___r_p_c___values_a49afa471d90298c2a53fb4dba2b099bf}} 
+{\bfseries \$mytype} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_x_m_l___r_p_c___values_af3d459d43acf9109a9604d02b12ccf44}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$val = {\ttfamily -\/1},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$val} & \\
+\hline
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_x_m_l___r_p_c___values_a2081e6a72b7e1c15f8c1dbcdfa673d4c}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!addArray@{addArray}}
+\index{addArray@{addArray}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{addArray()}
+{\footnotesize\ttfamily add\+Array (\begin{DoxyParamCaption}\item[{}]{\$vals }\end{DoxyParamCaption})}
+
+Add array value
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_ac847166eee63ab7bfaa8b0e22ae19430}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!addScalar@{addScalar}}
+\index{addScalar@{addScalar}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{addScalar()}
+{\footnotesize\ttfamily add\+Scalar (\begin{DoxyParamCaption}\item[{}]{\$val,  }\item[{}]{\$type = {\ttfamily \textquotesingle{}string\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add scalar value
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_a5dbdf0121566791a201cd07a3de15531}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!addStruct@{addStruct}}
+\index{addStruct@{addStruct}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{addStruct()}
+{\footnotesize\ttfamily add\+Struct (\begin{DoxyParamCaption}\item[{}]{\$vals }\end{DoxyParamCaption})}
+
+Add struct value
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_a201f99ae311bb2c53526933576c890d0}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!iso8601\_encode@{iso8601\_encode}}
+\index{iso8601\_encode@{iso8601\_encode}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{iso8601\_encode()}
+{\footnotesize\ttfamily iso8601\+\_\+encode (\begin{DoxyParamCaption}\item[{}]{\$time,  }\item[{}]{\$utc = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Encode time in I\+S\+O-\/8601 form. Useful for sending time in X\+M\+L-\/\+R\+PC
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & unix timestamp \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_a3b169c364729cee2afdccadef5229f80}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!kindOf@{kindOf}}
+\index{kindOf@{kindOf}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{kindOf()}
+{\footnotesize\ttfamily kind\+Of (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get value type
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_ac9a3751dc2d5479f409d0a4683c37d26}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!scalarval@{scalarval}}
+\index{scalarval@{scalarval}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{scalarval()}
+{\footnotesize\ttfamily scalarval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Scalar value
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_a59df3d3c8fbb47a946d6a29f0b3c8e0c}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!serialize\_class@{serialize\_class}}
+\index{serialize\_class@{serialize\_class}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{serialize\_class()}
+{\footnotesize\ttfamily serialize\+\_\+class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Serialize class
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_a7058e00e310218c447d3c9fea0ee0a3d}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!serializedata@{serializedata}}
+\index{serializedata@{serializedata}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{serializedata()}
+{\footnotesize\ttfamily serializedata (\begin{DoxyParamCaption}\item[{}]{\$typ,  }\item[{}]{\$val }\end{DoxyParamCaption})}
+
+Serialize data
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em mixed} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_x_m_l___r_p_c___values_a1a4bfc79985c185745d96ebe3a1e5c3d}} 
+\index{XML\_RPC\_Values@{XML\_RPC\_Values}!serializeval@{serializeval}}
+\index{serializeval@{serializeval}!XML\_RPC\_Values@{XML\_RPC\_Values}}
+\doxysubsubsection{serializeval()}
+{\footnotesize\ttfamily serializeval (\begin{DoxyParamCaption}\item[{}]{\$o }\end{DoxyParamCaption})}
+
+Serialize value
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Xmlrpc.\+php\end{DoxyCompactItemize}

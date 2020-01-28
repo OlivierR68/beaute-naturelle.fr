@@ -1,0 +1,457 @@
+\doxysection{C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+driver Class Reference}
+\label{class_c_i___d_b__postgre__driver}\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+Inheritance diagram for C\+I\+\_\+\+D\+B\+\_\+postgre\+\_\+driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_i___d_b__postgre__driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$params)
+\item 
+\textbf{ db\+\_\+connect} (\$persistent=F\+A\+L\+SE)
+\item 
+\textbf{ reconnect} ()
+\item 
+\textbf{ version} ()
+\item 
+\textbf{ is\+\_\+write\+\_\+type} (\$sql)
+\item 
+\textbf{ escape} (\$str)
+\item 
+\textbf{ affected\+\_\+rows} ()
+\item 
+\textbf{ insert\+\_\+id} ()
+\item 
+\textbf{ field\+\_\+data} (\$table)
+\item 
+\textbf{ error} ()
+\item 
+\textbf{ order\+\_\+by} (\$orderby, \$direction=\textquotesingle{}\textquotesingle{}, \$\textbf{ escape}=N\+U\+LL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__postgre__driver_a0cde2a16322a023d040aa7f725877597}} 
+{\bfseries \$dbdriver} = \textquotesingle{}postgre\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___d_b__postgre__driver_a83022b1d70799d2bde3d64dca9cb40ee}} 
+{\bfseries \$schema} = \textquotesingle{}public\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+db\+\_\+set\+\_\+charset} (\$charset)
+\item 
+\textbf{ \+\_\+execute} (\$sql)
+\item 
+\textbf{ \+\_\+trans\+\_\+begin} ()
+\item 
+\textbf{ \+\_\+trans\+\_\+commit} ()
+\item 
+\textbf{ \+\_\+trans\+\_\+rollback} ()
+\item 
+\textbf{ \+\_\+escape\+\_\+str} (\$str)
+\item 
+\textbf{ \+\_\+list\+\_\+tables} (\$prefix\+\_\+limit=F\+A\+L\+SE)
+\item 
+\textbf{ \+\_\+list\+\_\+columns} (\$table=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ \+\_\+update} (\$table, \$values)
+\item 
+\textbf{ \+\_\+update\+\_\+batch} (\$table, \$values, \$index)
+\item 
+\textbf{ \+\_\+delete} (\$table)
+\item 
+\textbf{ \+\_\+limit} (\$sql)
+\item 
+\textbf{ \+\_\+close} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___d_b__postgre__driver_a10213aa6e05f6d924d3277bb1d2fea00}} 
+{\bfseries \$\+\_\+random\+\_\+keyword} = array(\textquotesingle{}R\+A\+N\+D\+OM()\textquotesingle{}, \textquotesingle{}R\+A\+N\+D\+OM()\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___d_b__postgre__driver_a9162320adff1a1a4afd7f2372f753a3e}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$params }\end{DoxyParamCaption})}
+
+Class constructor
+
+Creates a D\+SN string to be used for \doxyref{db\+\_\+connect()}{p.}{class_c_i___d_b__postgre__driver_a52bf595e79e96cc0a7c907a9b45aeb4d} and db\+\_\+pconnect()
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___d_b__postgre__driver_a4d9082658000e5ede8312067c6dda9db}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_close@{\_close}}
+\index{\_close@{\_close}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_close()}
+{\footnotesize\ttfamily \+\_\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Close DB Connection
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a2b808d420d8e9fea0b73ad7127f5efb8}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_db\_set\_charset@{\_db\_set\_charset}}
+\index{\_db\_set\_charset@{\_db\_set\_charset}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_db\_set\_charset()}
+{\footnotesize\ttfamily \+\_\+db\+\_\+set\+\_\+charset (\begin{DoxyParamCaption}\item[{}]{\$charset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set client character set
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$charset} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a133ea8446ded52589bd22cc9163d0896}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_delete@{\_delete}}
+\index{\_delete@{\_delete}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_delete()}
+{\footnotesize\ttfamily \+\_\+delete (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Delete statement
+
+Generates a platform-\/specific delete string from the supplied data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_af8ef0237bfcdb19215b63fff769e7a55}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_escape\_str@{\_escape\_str}}
+\index{\_escape\_str@{\_escape\_str}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_escape\_str()}
+{\footnotesize\ttfamily \+\_\+escape\+\_\+str (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Platform-\/dependent string escape
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a114ab675d89bf8324a41785fb475e86d}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_execute@{\_execute}}
+\index{\_execute@{\_execute}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_execute()}
+{\footnotesize\ttfamily \+\_\+execute (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Execute the query
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & an S\+QL query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resource 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a3a02ea06541b8ecc25a33a61651562c8}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_limit@{\_limit}}
+\index{\_limit@{\_limit}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_limit()}
+{\footnotesize\ttfamily \+\_\+limit (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+L\+I\+M\+IT
+
+Generates a platform-\/specific L\+I\+M\+IT clause
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & S\+QL Query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a7ccb7f9c301fe7f0a9db701254142b63}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_list\_columns@{\_list\_columns}}
+\index{\_list\_columns@{\_list\_columns}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_list\_columns()}
+{\footnotesize\ttfamily \+\_\+list\+\_\+columns (\begin{DoxyParamCaption}\item[{}]{\$table = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+List column query
+
+Generates a platform-\/specific query string so that the column names can be fetched
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a435c0f3ce54fe7daa178baa8532ebd54}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_list\_tables@{\_list\_tables}}
+\index{\_list\_tables@{\_list\_tables}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_list\_tables()}
+{\footnotesize\ttfamily \+\_\+list\+\_\+tables (\begin{DoxyParamCaption}\item[{}]{\$prefix\+\_\+limit = {\ttfamily FALSE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Show table query
+
+Generates a platform-\/specific query string so that the table names can be fetched
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$prefix\+\_\+limit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_ac81ac882c1d54347d810199a15856aac}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_trans\_begin@{\_trans\_begin}}
+\index{\_trans\_begin@{\_trans\_begin}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_trans\_begin()}
+{\footnotesize\ttfamily \+\_\+trans\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Begin Transaction
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a6fe7f373e0b11cfae23a5f41c0b35dda}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_trans\_commit@{\_trans\_commit}}
+\index{\_trans\_commit@{\_trans\_commit}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_trans\_commit()}
+{\footnotesize\ttfamily \+\_\+trans\+\_\+commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Commit Transaction
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_ad49a116b0776c26b53114c9093fd102a}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_trans\_rollback@{\_trans\_rollback}}
+\index{\_trans\_rollback@{\_trans\_rollback}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_trans\_rollback()}
+{\footnotesize\ttfamily \+\_\+trans\+\_\+rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Rollback Transaction
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a2540b03a93fa73ae74c10d0e16fc073e}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_update@{\_update}}
+\index{\_update@{\_update}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_update()}
+{\footnotesize\ttfamily \+\_\+update (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Update statement
+
+Generates a platform-\/specific update string from the supplied data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+array & {\em \$values} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a336b9ebb119e47b6a84bb7fc9d4dae93}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!\_update\_batch@{\_update\_batch}}
+\index{\_update\_batch@{\_update\_batch}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{\_update\_batch()}
+{\footnotesize\ttfamily \+\_\+update\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$values,  }\item[{}]{\$index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Update\+\_\+\+Batch statement
+
+Generates a platform-\/specific batch update string from the supplied data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+array & {\em \$values} & Update data \\
+\hline
+string & {\em \$index} & W\+H\+E\+RE key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a77248aaad33eb132c04cc4aa3f4bc8cb}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!affected\_rows@{affected\_rows}}
+\index{affected\_rows@{affected\_rows}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{affected\_rows()}
+{\footnotesize\ttfamily affected\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Affected Rows
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a52bf595e79e96cc0a7c907a9b45aeb4d}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!db\_connect@{db\_connect}}
+\index{db\_connect@{db\_connect}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{db\_connect()}
+{\footnotesize\ttfamily db\+\_\+connect (\begin{DoxyParamCaption}\item[{}]{\$persistent = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Database connection
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$persistent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resource 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a43b8d30b879d4f09ceb059b02af2bc02}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!error@{error}}
+\index{error@{error}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{error()}
+{\footnotesize\ttfamily error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Error
+
+Returns an array containing code and message of the last database error that has occurred.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_ac8f37ca5703d4558c732e692194f8cd6}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!escape@{escape}}
+\index{escape@{escape}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{escape()}
+{\footnotesize\ttfamily escape (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+\char`\"{}\+Smart\char`\"{} Escape String
+
+Escapes data based on type
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a90355121e1ed009e0efdbd544ab56efa}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{field\_data()}
+{\footnotesize\ttfamily field\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Returns an object with field data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a933f2cde8dc7f87875e257d0a4902e99}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!insert\_id@{insert\_id}}
+\index{insert\_id@{insert\_id}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{insert\_id()}
+{\footnotesize\ttfamily insert\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Insert ID
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_af435df5703c238769d6d16fde6d51182}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!is\_write\_type@{is\_write\_type}}
+\index{is\_write\_type@{is\_write\_type}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{is\_write\_type()}
+{\footnotesize\ttfamily is\+\_\+write\+\_\+type (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Determines if a query is a \char`\"{}write\char`\"{} type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & An S\+QL query string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a6d1ce6a3b22187165ce7d710ce91841d}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!order\_by@{order\_by}}
+\index{order\_by@{order\_by}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{order\_by()}
+{\footnotesize\ttfamily order\+\_\+by (\begin{DoxyParamCaption}\item[{}]{\$orderby,  }\item[{}]{\$direction = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$escape = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+O\+R\+D\+ER BY
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$orderby} & \\
+\hline
+string & {\em \$direction} & A\+SC, D\+E\+SC or R\+A\+N\+D\+OM \\
+\hline
+bool & {\em \$escape} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a57c19c642ab3023e28d10c50f86ff0a8}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!reconnect@{reconnect}}
+\index{reconnect@{reconnect}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{reconnect()}
+{\footnotesize\ttfamily reconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reconnect
+
+Keep / reestablish the db connection if no queries have been sent for a length of time exceeding the server\textquotesingle{}s idle timeout
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___d_b__postgre__driver_a6080dae0886626b9a4cedb29240708b1}} 
+\index{CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}!version@{version}}
+\index{version@{version}!CI\_DB\_postgre\_driver@{CI\_DB\_postgre\_driver}}
+\doxysubsubsection{version()}
+{\footnotesize\ttfamily version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Database version number
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/database/drivers/postgre/postgre\+\_\+driver.\+php\end{DoxyCompactItemize}

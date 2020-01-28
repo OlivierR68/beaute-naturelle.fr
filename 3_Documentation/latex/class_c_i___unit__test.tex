@@ -1,0 +1,266 @@
+\doxysection{C\+I\+\_\+\+Unit\+\_\+test Class Reference}
+\label{class_c_i___unit__test}\index{CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} ()
+\item 
+\textbf{ set\+\_\+test\+\_\+items} (\$items)
+\item 
+\textbf{ run} (\$test, \$expected=T\+R\+UE, \$test\+\_\+name=\textquotesingle{}undefined\textquotesingle{}, \$notes=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ report} (\$\textbf{ result}=array())
+\item 
+\textbf{ use\+\_\+strict} (\$state=T\+R\+UE)
+\item 
+\textbf{ active} (\$state=T\+R\+UE)
+\item 
+\textbf{ result} (\$results=array())
+\item 
+\textbf{ set\+\_\+template} (\$template)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___unit__test_aacd1fa47b7ea59451aff98beca4360ae}} 
+{\bfseries \$active} = T\+R\+UE
+\item 
+\mbox{\label{class_c_i___unit__test_a233d12bd8b6d3453e9a7a3f0b8c31db2}} 
+{\bfseries \$results} = array()
+\item 
+\mbox{\label{class_c_i___unit__test_a856bf794dded1ba70be4dfae635a1b06}} 
+{\bfseries \$strict} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+backtrace} ()
+\item 
+\textbf{ \+\_\+default\+\_\+template} ()
+\item 
+\textbf{ \+\_\+parse\+\_\+template} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___unit__test_a353afce17912a98c6a9ead92e679570d}} 
+{\bfseries \$\+\_\+template} = N\+U\+LL
+\item 
+\mbox{\label{class_c_i___unit__test_a5d3e2ba4262eb08f117b1e6842f1f162}} 
+{\bfseries \$\+\_\+template\+\_\+rows} = N\+U\+LL
+\item 
+{\bfseries \$\+\_\+test\+\_\+items\+\_\+visible}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___unit__test_a095c5d389db211932136b53f25f39685}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___unit__test_aae40ff64c7daf1d70efaf110181a257e}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!\_backtrace@{\_backtrace}}
+\index{\_backtrace@{\_backtrace}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{\_backtrace()}
+{\footnotesize\ttfamily \+\_\+backtrace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generate a backtrace
+
+This lets us show file names and line numbers
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_ae1990fcb9ffc455614eeac9a1091f0b0}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!\_default\_template@{\_default\_template}}
+\index{\_default\_template@{\_default\_template}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{\_default\_template()}
+{\footnotesize\ttfamily \+\_\+default\+\_\+template (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get Default Template
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_a884e99b431f75c1ad17ba9753dab3b49}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!\_parse\_template@{\_parse\_template}}
+\index{\_parse\_template@{\_parse\_template}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{\_parse\_template()}
+{\footnotesize\ttfamily \+\_\+parse\+\_\+template (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse Template
+
+Harvests the data within the template \{pseudo-\/variables\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_ac7b3030630fc7dd31513c75cf27c1a8a}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!active@{active}}
+\index{active@{active}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{active()}
+{\footnotesize\ttfamily active (\begin{DoxyParamCaption}\item[{}]{\$state = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Make Unit testing active
+
+Enables/disables unit testing
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_a339c46eabb709c1c492bc264c9634171}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!report@{report}}
+\index{report@{report}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{report()}
+{\footnotesize\ttfamily report (\begin{DoxyParamCaption}\item[{}]{\$result = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Generate a report
+
+Displays a table with the test data
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$result} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_adcfdd404b2f2610e0690b4beb7786ce5}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!result@{result}}
+\index{result@{result}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{result()}
+{\footnotesize\ttfamily result (\begin{DoxyParamCaption}\item[{}]{\$results = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Result Array
+
+Returns the raw result data
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$results} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_a0bb74f4cb9553ace4034633e69383c55}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!run@{run}}
+\index{run@{run}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{run()}
+{\footnotesize\ttfamily run (\begin{DoxyParamCaption}\item[{}]{\$test,  }\item[{}]{\$expected = {\ttfamily TRUE},  }\item[{}]{\$test\+\_\+name = {\ttfamily \textquotesingle{}undefined\textquotesingle{}},  }\item[{}]{\$notes = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Run the tests
+
+Runs the supplied tests
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$test} & \\
+\hline
+mixed & {\em \$expected} & \\
+\hline
+string & {\em \$test\+\_\+name} & \\
+\hline
+string & {\em \$notes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_ae65d1ab2a626d4ddfda31befc2b347f6}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!set\_template@{set\_template}}
+\index{set\_template@{set\_template}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{set\_template()}
+{\footnotesize\ttfamily set\+\_\+template (\begin{DoxyParamCaption}\item[{}]{\$template }\end{DoxyParamCaption})}
+
+Set the template
+
+This lets us set the template to be used to display results
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_a78e364204a36821e23124ae97d447aa3}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!set\_test\_items@{set\_test\_items}}
+\index{set\_test\_items@{set\_test\_items}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{set\_test\_items()}
+{\footnotesize\ttfamily set\+\_\+test\+\_\+items (\begin{DoxyParamCaption}\item[{}]{\$items }\end{DoxyParamCaption})}
+
+Run the tests
+
+Runs the supplied tests
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$items} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___unit__test_a3b12a79f69fab4221a0b887bdac1ba83}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!use\_strict@{use\_strict}}
+\index{use\_strict@{use\_strict}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{use\_strict()}
+{\footnotesize\ttfamily use\+\_\+strict (\begin{DoxyParamCaption}\item[{}]{\$state = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Use strict comparison
+
+Causes the evaluation to use === rather than ==
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_c_i___unit__test_aa8b5dd7058c9c945ed964e96777d72c4}} 
+\index{CI\_Unit\_test@{CI\_Unit\_test}!\$\_test\_items\_visible@{\$\_test\_items\_visible}}
+\index{\$\_test\_items\_visible@{\$\_test\_items\_visible}!CI\_Unit\_test@{CI\_Unit\_test}}
+\doxysubsubsection{\$\_test\_items\_visible}
+{\footnotesize\ttfamily \$\+\_\+test\+\_\+items\+\_\+visible\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'test\_name'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'test\_datatype'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'res\_datatype'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'result'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'file'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'line'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'notes'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Unit\+\_\+test.\+php\end{DoxyCompactItemize}

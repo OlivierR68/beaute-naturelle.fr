@@ -1,0 +1,1108 @@
+\doxysection{C\+I\+\_\+\+Form\+\_\+validation Class Reference}
+\label{class_c_i___form__validation}\index{CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$rules=array())
+\item 
+\textbf{ set\+\_\+rules} (\$field, \$label=\textquotesingle{}\textquotesingle{}, \$rules=array(), \$errors=array())
+\item 
+\textbf{ set\+\_\+data} (array \$data)
+\item 
+\textbf{ set\+\_\+message} (\$lang, \$val=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ set\+\_\+error\+\_\+delimiters} (\$prefix=\textquotesingle{}$<$ p $>$\textquotesingle{}, \$suffix=\textquotesingle{}$<$/p $>$\textquotesingle{})
+\item 
+\textbf{ error} (\$field, \$prefix=\textquotesingle{}\textquotesingle{}, \$suffix=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ error\+\_\+array} ()
+\item 
+\textbf{ error\+\_\+string} (\$prefix=\textquotesingle{}\textquotesingle{}, \$suffix=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ run} (\$group=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ has\+\_\+rule} (\$field)
+\item 
+\textbf{ set\+\_\+value} (\$field=\textquotesingle{}\textquotesingle{}, \$default=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ set\+\_\+select} (\$field=\textquotesingle{}\textquotesingle{}, \$value=\textquotesingle{}\textquotesingle{}, \$default=F\+A\+L\+SE)
+\item 
+\textbf{ set\+\_\+radio} (\$field=\textquotesingle{}\textquotesingle{}, \$value=\textquotesingle{}\textquotesingle{}, \$default=F\+A\+L\+SE)
+\item 
+\textbf{ set\+\_\+checkbox} (\$field=\textquotesingle{}\textquotesingle{}, \$value=\textquotesingle{}\textquotesingle{}, \$default=F\+A\+L\+SE)
+\item 
+\textbf{ required} (\$str)
+\item 
+\textbf{ regex\+\_\+match} (\$str, \$regex)
+\item 
+\textbf{ matches} (\$str, \$field)
+\item 
+\textbf{ differs} (\$str, \$field)
+\item 
+\textbf{ is\+\_\+unique} (\$str, \$field)
+\item 
+\textbf{ min\+\_\+length} (\$str, \$val)
+\item 
+\textbf{ max\+\_\+length} (\$str, \$val)
+\item 
+\textbf{ exact\+\_\+length} (\$str, \$val)
+\item 
+\textbf{ valid\+\_\+url} (\$str)
+\item 
+\textbf{ valid\+\_\+email} (\$str)
+\item 
+\textbf{ valid\+\_\+emails} (\$str)
+\item 
+\textbf{ valid\+\_\+ip} (\$ip, \$which=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ alpha} (\$str)
+\item 
+\textbf{ alpha\+\_\+numeric} (\$str)
+\item 
+\textbf{ alpha\+\_\+numeric\+\_\+spaces} (\$str)
+\item 
+\textbf{ alpha\+\_\+dash} (\$str)
+\item 
+\textbf{ numeric} (\$str)
+\item 
+\textbf{ integer} (\$str)
+\item 
+\textbf{ decimal} (\$str)
+\item 
+\textbf{ greater\+\_\+than} (\$str, \$min)
+\item 
+\textbf{ greater\+\_\+than\+\_\+equal\+\_\+to} (\$str, \$min)
+\item 
+\textbf{ less\+\_\+than} (\$str, \$max)
+\item 
+\textbf{ less\+\_\+than\+\_\+equal\+\_\+to} (\$str, \$max)
+\item 
+\textbf{ in\+\_\+list} (\$value, \$list)
+\item 
+\textbf{ is\+\_\+natural} (\$str)
+\item 
+\textbf{ is\+\_\+natural\+\_\+no\+\_\+zero} (\$str)
+\item 
+\textbf{ valid\+\_\+base64} (\$str)
+\item 
+\textbf{ prep\+\_\+for\+\_\+form} (\$data)
+\item 
+\textbf{ prep\+\_\+url} (\$str=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ strip\+\_\+image\+\_\+tags} (\$str)
+\item 
+\textbf{ encode\+\_\+php\+\_\+tags} (\$str)
+\item 
+\textbf{ reset\+\_\+validation} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___form__validation_af1df05337bb40c1d30c3d8c62fe8696c}} 
+{\bfseries \$validation\+\_\+data} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+prepare\+\_\+rules} (\$rules)
+\item 
+\textbf{ \+\_\+reduce\+\_\+array} (\$array, \$keys, \$i=0)
+\item 
+\textbf{ \+\_\+reset\+\_\+post\+\_\+array} ()
+\item 
+\textbf{ \+\_\+execute} (\$row, \$rules, \$postdata=N\+U\+LL, \$cycles=0)
+\item 
+\textbf{ \+\_\+get\+\_\+error\+\_\+message} (\$rule, \$field)
+\item 
+\textbf{ \+\_\+translate\+\_\+fieldname} (\$fieldname)
+\item 
+\textbf{ \+\_\+build\+\_\+error\+\_\+msg} (\$line, \$field=\textquotesingle{}\textquotesingle{}, \$param=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_c_i___form__validation_ae0314d046ddf7fcfaec03222977427d3}} 
+{\bfseries \$\+CI}
+\item 
+\mbox{\label{class_c_i___form__validation_a8263493b8d14294371f1f157ea632df5}} 
+{\bfseries \$\+\_\+field\+\_\+data} = array()
+\item 
+\mbox{\label{class_c_i___form__validation_aa1b63acebe8880c36ea51e11a57eb0d3}} 
+{\bfseries \$\+\_\+config\+\_\+rules} = array()
+\item 
+\mbox{\label{class_c_i___form__validation_a50e8f829178352ca2ea7777cb491b7f8}} 
+{\bfseries \$\+\_\+error\+\_\+array} = array()
+\item 
+\mbox{\label{class_c_i___form__validation_a04bf2e3e86d96dde4d4353c053b81473}} 
+{\bfseries \$\+\_\+error\+\_\+messages} = array()
+\item 
+\mbox{\label{class_c_i___form__validation_ad4e512c18b95689885fcee10b5489901}} 
+{\bfseries \$\+\_\+error\+\_\+prefix} = \textquotesingle{}$<$p$>$\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___form__validation_ab5c737026065a0b4c7bdd5414eec6a6d}} 
+{\bfseries \$\+\_\+error\+\_\+suffix} = \textquotesingle{}$<$/p$>$\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___form__validation_a22323b47b58139586ed855d04138d212}} 
+{\bfseries \$error\+\_\+string} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\label{class_c_i___form__validation_ad767d36cd2cc57999044f0a94a0e470f}} 
+{\bfseries \$\+\_\+safe\+\_\+form\+\_\+data} = F\+A\+L\+SE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_c_i___form__validation_ac7224a1f92da249b312d1400c459ba83}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$rules = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Initialize Form\+\_\+\+Validation class
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_c_i___form__validation_a970cb9f78d6cefc93e795d4d72e085af}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_build\_error\_msg@{\_build\_error\_msg}}
+\index{\_build\_error\_msg@{\_build\_error\_msg}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_build\_error\_msg()}
+{\footnotesize\ttfamily \+\_\+build\+\_\+error\+\_\+msg (\begin{DoxyParamCaption}\item[{}]{\$line,  }\item[{}]{\$field = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$param = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Build an error message using the field and param.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The error message line \\
+\hline
+{\em string} & A field\textquotesingle{}s human name \\
+\hline
+{\em mixed} & A rule\textquotesingle{}s optional parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a00fc7d98650d07098dd4a13b486c3dea}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_execute@{\_execute}}
+\index{\_execute@{\_execute}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_execute()}
+{\footnotesize\ttfamily \+\_\+execute (\begin{DoxyParamCaption}\item[{}]{\$row,  }\item[{}]{\$rules,  }\item[{}]{\$postdata = {\ttfamily NULL},  }\item[{}]{\$cycles = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Executes the Validation routines
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em array} & \\
+\hline
+{\em mixed} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a1c0eda169a1c36fe0bcc61a863690297}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_get\_error\_message@{\_get\_error\_message}}
+\index{\_get\_error\_message@{\_get\_error\_message}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_get\_error\_message()}
+{\footnotesize\ttfamily \+\_\+get\+\_\+error\+\_\+message (\begin{DoxyParamCaption}\item[{}]{\$rule,  }\item[{}]{\$field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the error message for the rule
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$rule} & The rule name \\
+\hline
+string & {\em \$field} & The field name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_ada388c3a7f360165699597f638faf127}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_prepare\_rules@{\_prepare\_rules}}
+\index{\_prepare\_rules@{\_prepare\_rules}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_prepare\_rules()}
+{\footnotesize\ttfamily \+\_\+prepare\+\_\+rules (\begin{DoxyParamCaption}\item[{}]{\$rules }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prepare rules
+
+Re-\/orders the provided rules in order of importance, so that they can easily be executed later without weird checks ...
+
+\char`\"{}\+Callbacks\char`\"{} are given the highest priority (always called), followed by \textquotesingle{}required\textquotesingle{} (called if callbacks didn\textquotesingle{}t fail), and then every next rule depends on the previous one passing.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a20ed7e44a35f5a5f6db5a6b220151df0}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_reduce\_array@{\_reduce\_array}}
+\index{\_reduce\_array@{\_reduce\_array}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_reduce\_array()}
+{\footnotesize\ttfamily \+\_\+reduce\+\_\+array (\begin{DoxyParamCaption}\item[{}]{\$array,  }\item[{}]{\$keys,  }\item[{}]{\$i = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Traverse a multidimensional \$\+\_\+\+P\+O\+ST array index until the data is found
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em array} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a5cb72e21d23a62d15655b8caaa493698}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_reset\_post\_array@{\_reset\_post\_array}}
+\index{\_reset\_post\_array@{\_reset\_post\_array}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_reset\_post\_array()}
+{\footnotesize\ttfamily \+\_\+reset\+\_\+post\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Re-\/populate the \+\_\+\+P\+O\+ST array with our finalized and processed data
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_ae6b1edc93754376c05622d905845c215}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!\_translate\_fieldname@{\_translate\_fieldname}}
+\index{\_translate\_fieldname@{\_translate\_fieldname}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{\_translate\_fieldname()}
+{\footnotesize\ttfamily \+\_\+translate\+\_\+fieldname (\begin{DoxyParamCaption}\item[{}]{\$fieldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Translate a field name
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the field name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a4784b18b432005bec36cdf437353ec76}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!alpha@{alpha}}
+\index{alpha@{alpha}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{alpha()}
+{\footnotesize\ttfamily alpha (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Alpha
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a4d1ca92bb78369923e57b2f6aca58c70}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!alpha\_dash@{alpha\_dash}}
+\index{alpha\_dash@{alpha\_dash}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{alpha\_dash()}
+{\footnotesize\ttfamily alpha\+\_\+dash (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Alpha-\/numeric with underscores and dashes
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_aa3b561d437be2774b1a6850ada97024a}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!alpha\_numeric@{alpha\_numeric}}
+\index{alpha\_numeric@{alpha\_numeric}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{alpha\_numeric()}
+{\footnotesize\ttfamily alpha\+\_\+numeric (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Alpha-\/numeric
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a9c7e61a17f9ff3cbf176d7afab3b1555}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!alpha\_numeric\_spaces@{alpha\_numeric\_spaces}}
+\index{alpha\_numeric\_spaces@{alpha\_numeric\_spaces}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{alpha\_numeric\_spaces()}
+{\footnotesize\ttfamily alpha\+\_\+numeric\+\_\+spaces (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Alpha-\/numeric w/ spaces
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_af460b7c2f8d785b7472329446c600f31}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!decimal@{decimal}}
+\index{decimal@{decimal}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{decimal()}
+{\footnotesize\ttfamily decimal (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Decimal number
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_aff14b601a3e51ef2323a4c241d81267e}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!differs@{differs}}
+\index{differs@{differs}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{differs()}
+{\footnotesize\ttfamily differs (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Differs from another field
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_ae8fff4cb083a2a66c900f8bd61216bdd}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!encode\_php\_tags@{encode\_php\_tags}}
+\index{encode\_php\_tags@{encode\_php\_tags}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{encode\_php\_tags()}
+{\footnotesize\ttfamily encode\+\_\+php\+\_\+tags (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Convert P\+HP tags to entities
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_ae249cb0a67da61052921cf2880876cc1}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!error@{error}}
+\index{error@{error}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{error()}
+{\footnotesize\ttfamily error (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$suffix = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Get Error Message
+
+Gets the error message associated with a particular field
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & Field name \\
+\hline
+string & {\em \$prefix} & H\+T\+ML start tag \\
+\hline
+string & {\em \$suffix} & H\+T\+ML end tag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a477a3b8cbc925367d5b6880c48a9b42a}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!error\_array@{error\_array}}
+\index{error\_array@{error\_array}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{error\_array()}
+{\footnotesize\ttfamily error\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get Array of Error Messages
+
+Returns the error messages as an array
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a63271bfb23c2963bed80f44fe9c27b09}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!error\_string@{error\_string}}
+\index{error\_string@{error\_string}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{error\_string()}
+{\footnotesize\ttfamily error\+\_\+string (\begin{DoxyParamCaption}\item[{}]{\$prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$suffix = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Error String
+
+Returns the error messages as a string, wrapped in the error delimiters
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a126edde2bb0ce82d7a202e340a61de9e}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!exact\_length@{exact\_length}}
+\index{exact\_length@{exact\_length}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{exact\_length()}
+{\footnotesize\ttfamily exact\+\_\+length (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$val }\end{DoxyParamCaption})}
+
+Exact Length
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a8dd73c5e1d6880a650bb41e1ec6ee2f4}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!greater\_than@{greater\_than}}
+\index{greater\_than@{greater\_than}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{greater\_than()}
+{\footnotesize\ttfamily greater\+\_\+than (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$min }\end{DoxyParamCaption})}
+
+Greater than
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a003319a504eca3e9d1b608f8e48f2daf}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!greater\_than\_equal\_to@{greater\_than\_equal\_to}}
+\index{greater\_than\_equal\_to@{greater\_than\_equal\_to}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{greater\_than\_equal\_to()}
+{\footnotesize\ttfamily greater\+\_\+than\+\_\+equal\+\_\+to (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$min }\end{DoxyParamCaption})}
+
+Equal to or Greater than
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_aaf0ef71d3e9ac390f52441f27e4b7786}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!has\_rule@{has\_rule}}
+\index{has\_rule@{has\_rule}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{has\_rule()}
+{\footnotesize\ttfamily has\+\_\+rule (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Checks if the rule is present within the validator
+
+Permits you to check if a rule is present within the validator
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the field name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a27365f05674ed5c959747000113f29aa}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!in\_list@{in\_list}}
+\index{in\_list@{in\_list}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{in\_list()}
+{\footnotesize\ttfamily in\+\_\+list (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$list }\end{DoxyParamCaption})}
+
+Value should be within an array of values
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_af1c6586c2e80ccbb28b09803c3b5461c}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!integer@{integer}}
+\index{integer@{integer}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{integer()}
+{\footnotesize\ttfamily integer (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Integer
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_aaf9d0b9bdaaef3658a78dd6a01629e5d}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!is\_natural@{is\_natural}}
+\index{is\_natural@{is\_natural}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{is\_natural()}
+{\footnotesize\ttfamily is\+\_\+natural (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Is a Natural number (0,1,2,3, etc.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_ae4f399db6305e565bcf9acd70eea86a6}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!is\_natural\_no\_zero@{is\_natural\_no\_zero}}
+\index{is\_natural\_no\_zero@{is\_natural\_no\_zero}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{is\_natural\_no\_zero()}
+{\footnotesize\ttfamily is\+\_\+natural\+\_\+no\+\_\+zero (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Is a Natural number, but not a zero (1,2,3, etc.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a1a5ee6b60f419248ca8796444aea3a78}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!is\_unique@{is\_unique}}
+\index{is\_unique@{is\_unique}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{is\_unique()}
+{\footnotesize\ttfamily is\+\_\+unique (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Is Unique
+
+Check if the input value doesn\textquotesingle{}t already exist in the specified database field.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+string & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a4f5222d1cc44e64ce520d94358f25291}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!less\_than@{less\_than}}
+\index{less\_than@{less\_than}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{less\_than()}
+{\footnotesize\ttfamily less\+\_\+than (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$max }\end{DoxyParamCaption})}
+
+Less than
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_aa7a42f791a145f6c36ad2b8babcb9c21}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!less\_than\_equal\_to@{less\_than\_equal\_to}}
+\index{less\_than\_equal\_to@{less\_than\_equal\_to}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{less\_than\_equal\_to()}
+{\footnotesize\ttfamily less\+\_\+than\+\_\+equal\+\_\+to (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$max }\end{DoxyParamCaption})}
+
+Equal to or Less than
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_aefdd25116835b684a2ab9ce6ef58d38c}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!matches@{matches}}
+\index{matches@{matches}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{matches()}
+{\footnotesize\ttfamily matches (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Match one field to another
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & string to compare against \\
+\hline
+string & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a0896e538dd761148e6b3dfb0e033d344}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!max\_length@{max\_length}}
+\index{max\_length@{max\_length}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{max\_length()}
+{\footnotesize\ttfamily max\+\_\+length (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$val }\end{DoxyParamCaption})}
+
+Max Length
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a63a166f35fed88ec433fd2a37ec5ae90}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!min\_length@{min\_length}}
+\index{min\_length@{min\_length}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{min\_length()}
+{\footnotesize\ttfamily min\+\_\+length (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$val }\end{DoxyParamCaption})}
+
+Minimum Length
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a058a2b065a28a929956630238d5bf5bb}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!numeric@{numeric}}
+\index{numeric@{numeric}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{numeric()}
+{\footnotesize\ttfamily numeric (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Numeric
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a53938e0a994c9995de5c979ecb27bf1d}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!prep\_for\_form@{prep\_for\_form}}
+\index{prep\_for\_form@{prep\_for\_form}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{prep\_for\_form()}
+{\footnotesize\ttfamily prep\+\_\+for\+\_\+form (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})}
+
+Prep data for form
+
+This function allows H\+T\+ML to be safely shown in a form. Special characters are converted.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]3.\+0.\+6 Not used anywhere within the framework and pretty much useless \end{DoxyRefDesc}
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$data} & Input data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a1218a70d68fe797013a53b3c7cd41d2f}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!prep\_url@{prep\_url}}
+\index{prep\_url@{prep\_url}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{prep\_url()}
+{\footnotesize\ttfamily prep\+\_\+url (\begin{DoxyParamCaption}\item[{}]{\$str = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Prep U\+RL
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_acef19e29276dbdd2c69dffd5ec635600}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!regex\_match@{regex\_match}}
+\index{regex\_match@{regex\_match}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{regex\_match()}
+{\footnotesize\ttfamily regex\+\_\+match (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$regex }\end{DoxyParamCaption})}
+
+Performs a Regular Expression match test.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & regex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_ada72eadfd041118d5f429a93dd0de07e}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!required@{required}}
+\index{required@{required}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{required()}
+{\footnotesize\ttfamily required (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Required
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a84b8bd64032f6be532968015cba11361}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!reset\_validation@{reset\_validation}}
+\index{reset\_validation@{reset\_validation}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{reset\_validation()}
+{\footnotesize\ttfamily reset\+\_\+validation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset validation vars
+
+Prevents subsequent validation routines from being affected by the results of any previous validation routine due to the CI singleton.
+
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Form\+\_\+validation}{p.}{class_c_i___form__validation} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a304567453dbe1809dc0dc3ad99918383}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!run@{run}}
+\index{run@{run}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{run()}
+{\footnotesize\ttfamily run (\begin{DoxyParamCaption}\item[{}]{\$group = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Run the Validator
+
+This function does all the work.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$group} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a9b8766fbc61e15894d8d036552503228}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_checkbox@{set\_checkbox}}
+\index{set\_checkbox@{set\_checkbox}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_checkbox()}
+{\footnotesize\ttfamily set\+\_\+checkbox (\begin{DoxyParamCaption}\item[{}]{\$field = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$value = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$default = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Set Checkbox
+
+Enables checkboxes to be set to the value the user selected in the event of an error
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_af211c000380b8b345c6eb102cb5ca453}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_data@{set\_data}}
+\index{set\_data@{set\_data}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_data()}
+{\footnotesize\ttfamily set\+\_\+data (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+By default, form validation uses the \$\+\_\+\+P\+O\+ST array to validate
+
+If an array is set through this method, then this array will be used instead of the \$\+\_\+\+P\+O\+ST array
+
+Note that if you are validating multiple arrays, then the \doxyref{reset\+\_\+validation()}{p.}{class_c_i___form__validation_a84b8bd64032f6be532968015cba11361} function should be called after validating each array due to the limitations of CI\textquotesingle{}s singleton
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Form\+\_\+validation}{p.}{class_c_i___form__validation} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_ac45ddc321a1c1e5d5aad6e11f1f29b9c}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_error\_delimiters@{set\_error\_delimiters}}
+\index{set\_error\_delimiters@{set\_error\_delimiters}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_error\_delimiters()}
+{\footnotesize\ttfamily set\+\_\+error\+\_\+delimiters (\begin{DoxyParamCaption}\item[{}]{\$prefix = {\ttfamily \textquotesingle{}$<$p$>$\textquotesingle{}},  }\item[{}]{\$suffix = {\ttfamily \textquotesingle{}$<$/p$>$\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set The Error Delimiter
+
+Permits a prefix/suffix to be added to each error message
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Form\+\_\+validation}{p.}{class_c_i___form__validation} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a5a0dc4d3aef1f228155320a1d5275895}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_message@{set\_message}}
+\index{set\_message@{set\_message}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_message()}
+{\footnotesize\ttfamily set\+\_\+message (\begin{DoxyParamCaption}\item[{}]{\$lang,  }\item[{}]{\$val = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Set Error Message
+
+Lets users set their own error messages on the fly. Note\+: The key name has to match the function name that it corresponds to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Form\+\_\+validation}{p.}{class_c_i___form__validation} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a9e66e3cdc5ceb81c054d48e1203613f2}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_radio@{set\_radio}}
+\index{set\_radio@{set\_radio}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_radio()}
+{\footnotesize\ttfamily set\+\_\+radio (\begin{DoxyParamCaption}\item[{}]{\$field = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$value = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$default = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Set Radio
+
+Enables radio buttons to be set to the value the user selected in the event of an error
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a7583f6c0643a979fbc5734c7b6e9fbe9}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_rules@{set\_rules}}
+\index{set\_rules@{set\_rules}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_rules()}
+{\footnotesize\ttfamily set\+\_\+rules (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$label = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$rules = {\ttfamily array()},  }\item[{}]{\$errors = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Set Rules
+
+This function takes an array of field names and validation rules as input, any custom error messages, validates the info, and stores it
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$field} & \\
+\hline
+string & {\em \$label} & \\
+\hline
+mixed & {\em \$rules} & \\
+\hline
+array & {\em \$errors} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{C\+I\+\_\+\+Form\+\_\+validation}{p.}{class_c_i___form__validation} 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_afbd59dc11005e77b4519cca4033a7abd}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_select@{set\_select}}
+\index{set\_select@{set\_select}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_select()}
+{\footnotesize\ttfamily set\+\_\+select (\begin{DoxyParamCaption}\item[{}]{\$field = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$value = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$default = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Set Select
+
+Enables pull-\/down lists to be set to the value the user selected in the event of an error
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \\
+\hline
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_af9a77be3fc2da5df878efad37d1c0fe8}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!set\_value@{set\_value}}
+\index{set\_value@{set\_value}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{set\_value()}
+{\footnotesize\ttfamily set\+\_\+value (\begin{DoxyParamCaption}\item[{}]{\$field = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$default = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Get the value from a form
+
+Permits you to repopulate a form field with the value it was submitted with, or, if that value doesn\textquotesingle{}t exist, with the default
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the field name \\
+\hline
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_abb836a42971c7bc641588db779c6ab1d}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!strip\_image\_tags@{strip\_image\_tags}}
+\index{strip\_image\_tags@{strip\_image\_tags}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{strip\_image\_tags()}
+{\footnotesize\ttfamily strip\+\_\+image\+\_\+tags (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Strip Image Tags
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a9bec2f0a508e0327d4b048ecfc204522}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!valid\_base64@{valid\_base64}}
+\index{valid\_base64@{valid\_base64}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{valid\_base64()}
+{\footnotesize\ttfamily valid\+\_\+base64 (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Valid Base64
+
+Tests a string for characters outside of the Base64 alphabet as defined by R\+FC 2045 {\texttt{ http\+://www.\+faqs.\+org/rfcs/rfc2045}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_af7d43edae9c6e388390176b3c62de140}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!valid\_email@{valid\_email}}
+\index{valid\_email@{valid\_email}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{valid\_email()}
+{\footnotesize\ttfamily valid\+\_\+email (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Valid Email
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a7692019b59978c17621e3920823621c4}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!valid\_emails@{valid\_emails}}
+\index{valid\_emails@{valid\_emails}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{valid\_emails()}
+{\footnotesize\ttfamily valid\+\_\+emails (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Valid Emails
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a10da42e1fde6cd5b335efcd2338c4ff8}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!valid\_ip@{valid\_ip}}
+\index{valid\_ip@{valid\_ip}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{valid\_ip()}
+{\footnotesize\ttfamily valid\+\_\+ip (\begin{DoxyParamCaption}\item[{}]{\$ip,  }\item[{}]{\$which = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Validate IP Address
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em string} & \textquotesingle{}ipv4\textquotesingle{} or \textquotesingle{}ipv6\textquotesingle{} to validate a specific IP format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\label{class_c_i___form__validation_a2879cd05a763105684cbad690e5cffd3}} 
+\index{CI\_Form\_validation@{CI\_Form\_validation}!valid\_url@{valid\_url}}
+\index{valid\_url@{valid\_url}!CI\_Form\_validation@{CI\_Form\_validation}}
+\doxysubsubsection{valid\_url()}
+{\footnotesize\ttfamily valid\+\_\+url (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Valid U\+RL
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/system/libraries/Form\+\_\+validation.\+php\end{DoxyCompactItemize}
