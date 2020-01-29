@@ -60,14 +60,26 @@ class Slides extends CI_Controller {
 	{
 
 
+
+
 		if(count($this->input->post())>0){
 
-			$objSlide = new Slide_class();
-			$objSlide->hydrate($this->input->post());
 
-			var_dump($objSlide->getArray());
+			$config['upload_path']          = './assets/img';
+			$config['allowed_types']        = 'gif|jpg|png';
+
+			$this->load->library('upload', $config);
+
+
+
+			$array = $this->input->post();
+
+			$objSlide = new Slide_class();
+			$objSlide->hydrate($array);
+
 
 			$this->Slides_manager->new($objSlide);
+			redirect('slides/ListPage', 'refresh');
 
 		}
 
@@ -76,14 +88,30 @@ class Slides extends CI_Controller {
 		$data['TITLE'] 		= "Ajouter un slide";
 		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
 		$this->load->view('back/content', $data);
+
 	}
 
+	public function delete($id)
+	{
+
+		$this->Slides_manager->delete($id);
+		redirect('slides/ListPage', 'refresh');
+
+	}
+
+	public function copy($id)
+	{
+
+		$this->Slides_manager->new($id);
+		redirect('slides/ListPage', 'refresh');
+
+	}
 
 
 	/** Back : Fonction d'éditer un slide */
 	public function edit()
 	{
-		$data['TITLE'] 		= "Ajouter un slide";
+		$data['TITLE'] 		= "Modifier slide";
 
 
 

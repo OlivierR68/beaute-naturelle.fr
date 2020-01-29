@@ -110,7 +110,7 @@ class Slide_class extends CI_Model {
 	 * @return string sous-titre
 	 */
 
-	public function getShortTitle($strLimit = 50){
+	public function getShortTitle($strLimit = 40){
 
 		if(strlen($this->_slide_title) > $strLimit) {
 			return substr($this->_slide_title, 0, $strLimit)."..."; ;

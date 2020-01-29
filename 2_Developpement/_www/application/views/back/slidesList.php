@@ -1,13 +1,13 @@
 <?php
 // var_dump($arrSlides);
 ?>
-<a class="btn btn-primary mb-3" href="<?php echo site_url('slides/add')?>" role="button">Ajouter un slide</a>
+<a class="btn btn-primary mb-3" href="<?php echo site_url('slides/addPage')?>" role="button">Ajouter un slide</a>
 
 		<div class="table-responsive">
 			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 				<thead>
 					<tr>
-						<th>#</th>
+						<th>id</th>
 						<th>Actions</th>
 						<th>Libelle</th>
 						<th>Image</th>
@@ -18,7 +18,7 @@
 				</thead>
 				<tfoot>
 					<tr>
-						<th>#</th>
+						<th>id</th>
 						<th>Actions</th>
 						<th>Libelle</th>
 						<th>Image</th>
@@ -31,7 +31,7 @@
 				<?php
 				foreach($arrSlides as $objSlide) { ?>
 					<tr>
-						<td><?php echo $objSlide->getPosition() ?></td>
+						<td><?php echo $objSlide->getId() ?></td>
 						<td class="bn_action">
 
 							<?php /* à implémenter si j'ai le temps...
@@ -55,7 +55,7 @@
 							<?php if($objSlide->getDefault() == true) { ?>
 								<i title="slide" class="fas fa-trash-alt text-muted"></i>
 							<?php } else { ?>
-								<a href="#" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
+								<a href="<?php echo base_url('slides/delete/'.$objSlide->getId())  ?>" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
 							<?php } ?>
 
 						</td>
@@ -63,7 +63,7 @@
 						<td><?php echo $objSlide->getLibelle() ?></td>
 						<td><a target="_blank" href="<?php echo base_url("assets/img")."/".$objSlide->getImg() ?>"><?php echo $objSlide->getImg() ?></a></td>
 						<td><?php echo $objSlide->getTaille() ?></td>
-						<td><?php echo $objSlide->getShortTitle() ?></td>
+						<td><?php echo $objSlide->getShortTitle(30) ?></td>
 						<td><?php echo $objSlide->getText() ?></td>
 					</tr>
 				<?php } ?>

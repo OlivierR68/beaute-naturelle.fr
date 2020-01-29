@@ -29,8 +29,17 @@ class Slides_manager extends CI_Model {
 	public function new($obj){
 
 		if(method_exists($obj,'getArray')) {
+
 			$this->db->insert('slide', $obj->getArray());
 		}
+
+	}
+
+
+	public function delete($id){
+
+		$this->db->where('slide_id', $id);
+		$this->db->delete('slide');
 
 	}
 
