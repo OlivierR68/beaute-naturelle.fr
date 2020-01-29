@@ -65,13 +65,18 @@ class Slides extends CI_Controller {
 		if(count($this->input->post())>0){
 
 
+			$config['upload_path']      = './assets/img/';
+			$config['allowed_types']    = 'gif|jpg|png';
+			$config['max_size']        	= 0;
+
+			$this->upload->initialize($config);
+			$this->upload->do_upload('img');
 
 
-			$file_name	 =  $_FILES['img']['name'];
-			$file_tmp 	 =  $_FILES['img']['tmp_name'];
-			$_POST['img'] = $file_name;
 
-			move_uploaded_file($file_tmp,"./assets/img/".$file_name);
+			$_POST['img'] = $_FILES['img']['name'];
+
+
 
 			$objSlide = new Slide_class();
 			$objSlide->hydrate($this->input->post());

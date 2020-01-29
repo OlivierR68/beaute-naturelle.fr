@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Slides_manager extends CI_Model {
 
-/**
+	/**
  * Fonction permettant de récupérer la liste des articles
  * @return array Tableau des slides
  */
