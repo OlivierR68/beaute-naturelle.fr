@@ -16,11 +16,25 @@ include_once ('templates/header.php');
 		</div>
 	<?php } ?>
 
+	<?php if(!empty($this->session->flashdata('error'))) { ?>
+		<div class="alert alert-danger" role="alert">
+			<?php echo $this->session->flashdata('error') ?>
+		</div>
+	<?php } ?>
+
 	<?php if(!empty($SUCCESS)) { ?>
 		<div class="alert alert-success" role="alert">
 			<?php echo $SUCCESS ?>
 		</div>
 	<?php } ?>
+
+	<?php if(!empty($this->session->flashdata('success'))) { ?>
+		<div class="alert alert-success" role="alert">
+			<?php echo $this->session->flashdata('success') ?>
+		</div>
+	<?php } ?>
+
+
 <?php echo $CONTENT;	?>
 
 </div>

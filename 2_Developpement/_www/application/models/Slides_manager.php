@@ -70,7 +70,8 @@ class Slides_manager extends CI_Model
 	 */
 	public function delete($id)
 	{
-		$this->db->where('slide_id', $id)->delete('slide');
+		$this->db->where('slide_id', $id)
+			->delete('slide');
 	}
 
 

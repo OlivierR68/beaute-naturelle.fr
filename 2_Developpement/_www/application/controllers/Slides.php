@@ -220,6 +220,7 @@ class Slides extends CI_Controller {
 	{
 
 		$this->Slides_manager->delete($id);
+		$this->session->set_flashdata('error', "Le slide #$id a été supprimé");
 		redirect('slides/ListPage', 'refresh');
 
 	}
@@ -233,6 +234,7 @@ class Slides extends CI_Controller {
 	{
 
 		$this->Slides_manager->copy($id);
+		$this->session->set_flashdata('success', "Le slide #$id a été copié");
 		redirect('slides/ListPage', 'refresh');
 
 	}
