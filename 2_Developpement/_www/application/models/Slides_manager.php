@@ -26,6 +26,19 @@ class Slides_manager extends CI_Model {
 	}
 
 
+	public function findOne($id){
+		$query	= $this->db
+			->select("*")
+			->from("slide")
+			->where('slide_id', $id)
+			->get();
+
+		return $query->row_array();
+	}
+
+
+
+
 	public function new($obj){
 
 		if(method_exists($obj,'getArray')) {
@@ -43,31 +56,29 @@ class Slides_manager extends CI_Model {
 
 	}
 
+	/**
+	 * @param $id
+	 */
+	public function copy($id){
 
-
-	function switchPosition($idFrom, $idTo) {
-
-		// fonction à finir... <-------------------------------------------[!]
-
-
-		$positionFrom = $this->db
-			->select("slide_position")
+		$query = $this->db->select("*")
 			->from("slide")
-			->where('slide_id', $idFrom)
+			->where('slide_id', $id)
 			->get();
 
+		$array = $query->row_array();
 
-		$positionTo = $this->db
-			->select("slide_position")
-			->from("slide")
-			->where('slide_id', $idTo)
-			->get();
+		$array['slide_id'] = null;
+		$array['slide_position'] = null;
+		$array['slide_default'] = false;
 
-
-
-		$this->db->select('field2');
-
+		$this->db->insert('slide',$array);
 
 	}
+
+
+
+
+
 
 }

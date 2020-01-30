@@ -58,6 +58,7 @@ class Slides extends CI_Controller {
 	/** Back : Fonction pour afficher la page d'un slide */
 	public function addPage()
 	{
+		$data['TITLE'] 		= "Ajouter un slide";
 
 
 
@@ -65,31 +66,37 @@ class Slides extends CI_Controller {
 		if(count($this->input->post())>0){
 
 
-			$config['upload_path']      = './assets/img/';
+			$config['upload_path']      = './uploads/slider/';
 			$config['allowed_types']    = 'gif|jpg|png';
-			$config['max_size']        	= 0;
+			$config['max_size']        	= 2048;
 
 			$this->upload->initialize($config);
 			$this->upload->do_upload('img');
 
 
+			if (!$this->upload->do_upload('img'))
+			{
+				$data['ERROR'] = $this->upload->display_errors();
 
-			$_POST['img'] = $_FILES['img']['name'];
+			} else {
+
+				$_POST['img'] = $_FILES['img']['name'];
 
 
+				$objSlide = new Slide_class();
+				$objSlide->hydrate($this->input->post());
 
-			$objSlide = new Slide_class();
-			$objSlide->hydrate($this->input->post());
 
+				$this->Slides_manager->new($objSlide);
 
-			$this->Slides_manager->new($objSlide);
-			redirect('slides/ListPage', 'refresh');
+				redirect('slides/ListPage', 'refresh');
+
+			}
+
 
 		}
 
 		$_POST = array();
-
-		$data['TITLE'] 		= "Ajouter un slide";
 		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
 		$this->load->view('back/content', $data);
 
@@ -106,18 +113,20 @@ class Slides extends CI_Controller {
 	public function copy($id)
 	{
 
-		$this->Slides_manager->new($id);
+		$this->Slides_manager->copy($id);
 		redirect('slides/ListPage', 'refresh');
 
 	}
 
 
 	/** Back : Fonction d'éditer un slide */
-	public function edit()
+	public function edit($id)
 	{
-		$data['TITLE'] 		= "Modifier slide";
+		$data['TITLE'] 		= "Modifier slide : id-$id";
 
-
+		$objSlide = new Slide_class();
+		$data['objSlide']  = $objSlide->hydrate($this->Slides_manager->findOne($id));
+		
 
 		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
 		$this->load->view('back/content', $data);

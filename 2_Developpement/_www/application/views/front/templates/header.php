@@ -181,3 +181,15 @@
 		<h1><?php echo $TITLE ?? "" ?></h1>
 		<div></div>
 	</div>
+
+	<?php if(isset($Error)) { ?>
+		<div class="alert alert-danger" role="alert">
+			<?php echo $Error ?>
+		</div>
+	<?php } ?>
+
+	<?php if(isset($Success)) { ?>
+		<div class="alert alert-success" role="alert">
+			<?php echo $Success ?>
+		</div>
+	<?php } ?>

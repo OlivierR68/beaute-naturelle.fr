@@ -10,7 +10,17 @@ include_once ('templates/header.php');
 		<li><?php  echo 'var_dump de <b>$this->uri->rsegments</b></b> <br>'.var_dump($this->uri->rsegments) ?></li>
 	</ol>
 
+	<?php if(isset($ERROR)) { ?>
+		<div class="alert alert-danger" role="alert">
+			<?php echo $ERROR ?>
+		</div>
+	<?php } ?>
 
+	<?php if(isset($SUCCESS)) { ?>
+		<div class="alert alert-success" role="alert">
+			<?php echo $SUCCESS ?>
+		</div>
+	<?php } ?>
 <?php echo $CONTENT;	?>
 
 </div>

@@ -49,8 +49,8 @@
 							<?php } ?>
 							*/ ?>
 
-							<a href="#" title="Modifier"><i class="far fa-edit"></i></a> |
-							<a href="#" title="Copier"><i class="far fa-copy"></i></a> |
+							<a href="<?php echo base_url('slides/edit/'.$objSlide->getId())  ?>" title="Modifier"><i class="far fa-edit"></i></a> |
+							<a href="<?php echo base_url('slides/copy/'.$objSlide->getId())  ?>" title="Copier"><i class="far fa-copy"></i></a> |
 
 							<?php if($objSlide->getDefault() == true) { ?>
 								<i title="slide" class="fas fa-trash-alt text-muted"></i>
