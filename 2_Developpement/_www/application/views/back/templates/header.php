@@ -43,7 +43,7 @@
 					<div class="collapse <?php if($this->uri->rsegments[1] == 'slides') echo 'show' ?>" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/list') echo 'active' ?>" href="<?php echo site_url("slides/listPage") ?>">Liste des slides</a>
-							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/add') echo 'active' ?>" href="<?php echo site_url("slides/addPage") ?>">Ajouter un slide</a>
+							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/add') echo 'active' ?>" href="<?php echo site_url("slides/addEdit") ?>">Ajouter un slide</a>
 						</nav>
 					</div>
 
@@ -71,7 +71,7 @@
 					<div class="collapse <?php if($this->uri->rsegments[1] == 'images') echo 'show' ?>" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link <?php if($this->uri->uri_string() == 'images/list') echo 'active' ?>" href="<?php echo site_url("images/listPage") ?>">Liste des images</a>
-							<a class="nav-link <?php if($this->uri->uri_string() == 'images/add') echo 'active' ?>" href="<?php echo site_url("images/addPage") ?>">Ajouter une image</a>
+							<a class="nav-link <?php if($this->uri->uri_string() == 'images/addEdit') echo 'active' ?>" href="<?php echo site_url("images/addEdit") ?>">Ajouter une image</a>
 						</nav>
 					</div>
 

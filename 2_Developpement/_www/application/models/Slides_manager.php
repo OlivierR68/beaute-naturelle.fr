@@ -9,76 +9,86 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Slides_manager extends CI_Model {
+class Slides_manager extends CI_Model
+{
 
 	/**
- * Fonction permettant de récupérer la liste des articles
- * @return array Tableau des slides
- */
-	public function findAll(){
-		$queryGroup	= $this->db
-			->select("*")
-			->from("slide")
-			->order_by("slide_position", "desc")
-			->get();
-
+	 * Récupération liste des slides
+	 * @return array  tous les slides
+	 */
+	public function findAll()
+	{
+		$queryGroup = $this->db->get('slide');
 		return $queryGroup->result_array();
 	}
 
 
-	public function findOne($id){
-		$query	= $this->db
-			->select("*")
-			->from("slide")
-			->where('slide_id', $id)
-			->get();
-
+	/**
+	 * Récupération d'1 slide
+	 * @param $id integer identifiant du slide dans la bdd
+	 * @return array les valeurs du slide avec clef associative
+	 */
+	public function findOne($id)
+	{
+		$query = $this->db->where('slide_id', $id)->get('slide');
 		return $query->row_array();
 	}
 
 
-
-
-	public function new($obj){
-
-		if(method_exists($obj,'getArray')) {
-
+	/**
+	 * Création d'1 slide
+	 * @param $obj object Slide_class
+	 * @return string l'id de l'insert
+	 */
+	public function new($obj)
+	{
+		if (method_exists($obj, 'getArray')) {
 			$this->db->insert('slide', $obj->getArray());
 		}
 
+		return $this->db->insert_id();
 	}
 
-
-	public function delete($id){
-
-		$this->db->where('slide_id', $id);
-		$this->db->delete('slide');
-
-	}
 
 	/**
-	 * @param $id
+	 * Création d'1 slide
+	 * @param $obj object Slide_class
+	 * @return string l'id de l'insert
 	 */
-	public function copy($id){
+	public function update($obj)
+	{
+		if (method_exists($obj, 'getArray')) {
+			$this->db->where('slide_id', $obj->getId())
+				->replace('slide', $obj->getArray());
+		}
+	}
 
-		$query = $this->db->select("*")
-			->from("slide")
-			->where('slide_id', $id)
-			->get();
 
+	/**
+	 * Suppression d'1 slide
+	 * @param $id integer identifiant du slide dans la bdd
+	 */
+	public function delete($id)
+	{
+		$this->db->where('slide_id', $id)->delete('slide');
+	}
+
+
+	/**
+	 * Duplication d'1 slide
+	 * @param $id integer identifiant du slide dans la bdd
+	 */
+	public function copy($id)
+	{
+		$query = $this->db->where('slide_id', $id)->get('slide');
 		$array = $query->row_array();
 
 		$array['slide_id'] = null;
 		$array['slide_position'] = null;
 		$array['slide_default'] = false;
 
-		$this->db->insert('slide',$array);
-
+		$this->db->insert('slide', $array);
 	}
-
-
-
-
-
-
 }
+
+

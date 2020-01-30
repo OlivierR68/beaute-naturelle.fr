@@ -1,7 +1,7 @@
 <?php
 // var_dump($arrSlides);
 ?>
-<a class="btn btn-primary mb-3" href="<?php echo site_url('slides/addPage')?>" role="button">Ajouter un slide</a>
+<a class="btn btn-primary mb-3" href="<?php echo site_url('slides/addEdit')?>" role="button">Ajouter un slide</a>
 
 		<div class="table-responsive">
 			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -49,7 +49,7 @@
 							<?php } ?>
 							*/ ?>
 
-							<a href="<?php echo base_url('slides/edit/'.$objSlide->getId())  ?>" title="Modifier"><i class="far fa-edit"></i></a> |
+							<a href="<?php echo base_url('slides/addEdit/'.$objSlide->getId())  ?>" title="Modifier"><i class="far fa-edit"></i></a> |
 							<a href="<?php echo base_url('slides/copy/'.$objSlide->getId())  ?>" title="Copier"><i class="far fa-copy"></i></a> |
 
 							<?php if($objSlide->getDefault() == true) { ?>
