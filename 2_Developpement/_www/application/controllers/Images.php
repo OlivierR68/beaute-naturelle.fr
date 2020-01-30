@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Controller Users
- * @author  Steven Roberts
+ * @author  Steven Robert
  * @author  Olivier Ravinasaga
  * @version 1
  *
@@ -41,5 +41,23 @@ class Images extends CI_Controller
 
 	}
 
-
 }
+
+	/** Back : Fonction permettant d'afficher la liste des slides  */
+	public function ListPage()
+	{
+		$data['TITLE'] 		= "Liste des images";
+
+		$images	= $this->Images_manager->findAll();
+		$imagesToDisplay = array();
+		foreach($images as $image){
+			$objImage 	= new Image_class();
+			$objImage->hydrate($image);
+			$imagesToDisplay[] = $objImage;
+		}
+
+		$data['arrImages'] 	= $imagesToDisplay;
+
+		$data['CONTENT']	= $this->load->view('back/imagesList', $data, TRUE);
+		$this->load->view('back/content', $data);
+	}

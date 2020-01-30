@@ -11,4 +11,9 @@
 		<li>Liste des slides : 'slides/list'</li>
 		<li>Ajouter un slide : 'slides/add'</li>
 	</ul>
+	<li>Galerie</li>
+	<ul>
+		<li>Liste des images : 'images/list'</li>
+		<li>Ajouter un slide : 'images/add'</li>
+	</ul>	
 </ul>
