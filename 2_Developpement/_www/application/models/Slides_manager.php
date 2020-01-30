@@ -26,7 +26,7 @@ class Slides_manager extends CI_Model
 	/**
 	 * Récupération d'1 slide
 	 * @param $id integer identifiant du slide dans la bdd
-	 * @return array les valeurs du slide avec clef associative
+	 * @return array les valeurs du slide avec clefs d'association
 	 */
 	public function findOne($id)
 	{
@@ -66,7 +66,7 @@ class Slides_manager extends CI_Model
 
 	/**
 	 * Suppression d'1 slide
-	 * @param $id integer identifiant du slide dans la bdd
+	 * @param $id integer identifiant du slide
 	 */
 	public function delete($id)
 	{
@@ -76,7 +76,7 @@ class Slides_manager extends CI_Model
 
 	/**
 	 * Duplication d'1 slide
-	 * @param $id integer identifiant du slide dans la bdd
+	 * @param $id integer identifiant du slide
 	 */
 	public function copy($id)
 	{
