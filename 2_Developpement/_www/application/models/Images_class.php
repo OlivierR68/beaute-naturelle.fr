@@ -24,7 +24,6 @@ class Images_class extends CI_Model {
 
 	public function hydrate($datas){
 		foreach($datas as $keyData => $value){
-
 			$strSetter	= "set".str_replace("img_", "", $keyData);
 			if (method_exists($this, $strSetter)){
 				$this->$strSetter($value);
@@ -66,6 +65,22 @@ class Images_class extends CI_Model {
 	public function getValidation(){
 		return $this->_img_validation;
 	}
+
+	public function getArray(){
+
+		$varArray = ['id','libelle','slug','src','description','author','publi_date','validation'];
+		$array = array();
+
+		foreach ($varArray as &$var) {
+			$varName = "_image_".$var;
+			$keyName = substr($varName,1);
+			$array[$keyName] =  $this->$varName;
+		}
+
+		return $array;
+
+	}
+
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){

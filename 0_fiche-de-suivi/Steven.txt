@@ -45,3 +45,14 @@ Debug galerie + debug bdd connexion
 Ajout images galerie
 Traitement form contact
 
+28/01/2020
+
+Form contact
+
+29/01/2020
+
+Form contact
+
+30/01/2020
+
+Extraire les images depuis la bdd

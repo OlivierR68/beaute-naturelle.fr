@@ -3,20 +3,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Images_manager extends CI_Model {
 
+/**
+ * Fonction permettant de récupérer la liste des articles
+ * @return array Tableau des slides
+ */
 
- 		public function findAll(){
+		public function findAll(){
+			$queryGroup	= $this->db
+				->select("*")
+				->from("image")
+				->order_by("img_id", "desc")
+				->get();
 
-		$this->db->select("*");
-		$this->db->from("image");
-		// $this->db->join("")
-		//$this->db->order_by("img_id", "asc");
+			return $queryGroup->result_array();
+		}
+	}
 
-		$query	= $this->db->get();
-		return $query->result_array();
+	public function new($obj){
 
+		if(method_exists($obj,'getArray')) {
 
+			$this->db->insert('image', $obj->getArray());
+		}
 
-
-	} 
-
-}
+	}

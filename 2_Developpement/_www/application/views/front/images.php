@@ -16,12 +16,12 @@
                     </div>
 
                   <?php 
-/* 
-					echo $objImage->getID();
-					echo $objImage->getLibelle();
-					echo $objImage->getSlug();
+
+//					echo $objImage->getID();
+//					echo $objImage->getLibelle();
+//					echo $objImage->getSlug();
 					echo $objImage->getSrc();
-*/
+
 				  ?>    
 
                 </a>
