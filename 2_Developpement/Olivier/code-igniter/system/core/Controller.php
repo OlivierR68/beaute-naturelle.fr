@@ -87,6 +87,8 @@ class CI_Controller {
 		log_message('info', 'Controller Class Initialized');
 	}
 
+
+
 	// --------------------------------------------------------------------
 
 	/**
@@ -98,6 +100,21 @@ class CI_Controller {
 	public static function &get_instance()
 	{
 		return self::$instance;
+	}
+
+
+
+	protected function front($file, $data) {
+
+		foreach ($data as $key => $value) {
+
+			$this->smarty->assign($key, $value);
+
+		}
+
+		$this->smarty->assign("content", $this->smarty->fetch("views/".$file.".tpl"));
+		return $this->smarty->display("views/structure.tpl");
+
 	}
 
 }
