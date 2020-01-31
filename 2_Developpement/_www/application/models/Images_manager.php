@@ -5,12 +5,12 @@ class Images_manager extends CI_Model {
 
 	/**
 	* Fonction permettant de récupérer la liste des articles
-	* @return array Tableau des slides
+	* @return array Tableau des images
 	*/
 
 	/**
-	 * Récupération liste des slides
-	 * @return array  tous les slides
+	 * Récupération liste des images
+	 * @return array  tous les images
 	 */
 	 public function findAll()
 	 {
@@ -19,9 +19,9 @@ class Images_manager extends CI_Model {
 	 }
 
 	/**
-	 * Récupération d'1 slide
-	 * @param $id integer identifiant du slide dans la bdd
-	 * @return array les valeurs du slide avec clefs d'association
+	 * Récupération d'1 image
+	 * @param $id integer identifiant des images dans la bdd
+	 * @return array les valeurs du image avec clefs d'association
 	 */
 	public function findOne($id)
 	{
@@ -30,8 +30,8 @@ class Images_manager extends CI_Model {
 	}
 
 	/**
-	 * Création d'1 slide
-	 * @param $obj object Slide_class
+	 * Création d'1 image
+	 * @param $obj object image_class
 	 * @return string l'id de l'insert
 	 */
 	 public function new($obj)
@@ -44,8 +44,8 @@ class Images_manager extends CI_Model {
 	 }
 
 	/**
-	 * Création d'1 slide
-	 * @param $obj object Slide_class
+	 * Création d'1 image
+	 * @param $obj object image_class
 	 * @return string l'id de l'insert
 	 */
 	public function update($obj)
@@ -57,8 +57,8 @@ class Images_manager extends CI_Model {
 	}
 
 	/**
-	 * Suppression d'1 slide
-	 * @param $id integer identifiant du slide
+	 * Suppression d'1 image
+	 * @param $id integer identifiant du image
 	 */
 	 public function delete($id)
 	 {
@@ -67,8 +67,8 @@ class Images_manager extends CI_Model {
 	 }
 
 	/**
-	 * Duplication d'1 slide
-	 * @param $id integer identifiant du slide
+	 * Duplication d'1 image
+	 * @param $id integer identifiant du image
 	 */
 	public function copy($id)
 	{
@@ -76,8 +76,8 @@ class Images_manager extends CI_Model {
 		$array = $query->row_array();
 
 		$array['image_id'] = null;
-//		$array['image_position'] = null;
-//		$array['image_default'] = false;
+		$array['image_position'] = null;
+		$array['image_default'] = false;
 
 		$this->db->insert('image', $array);
 	}

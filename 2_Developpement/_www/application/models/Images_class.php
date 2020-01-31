@@ -85,6 +85,20 @@ class Images_class extends CI_Model {
 
 	}
 
+	/** GETTER pour contenu raccourci
+	 * @param $strLimit integer Limite de taille de la chaîne de caractère
+	 * @return string contenu
+	 */
+
+	 public function getShortContent($strLimit = 40){
+
+		if(strlen($this->_image_content) > $strLimit) {
+			return substr($this->_image_content, 0, $strLimit)."..."; ;
+		} else {
+			return $this->_image_content;
+		}
+	}
+
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){

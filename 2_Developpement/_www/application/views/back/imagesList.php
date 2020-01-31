@@ -28,7 +28,7 @@
 					</tr>
 				</tfoot>
 				<tbody>
-				<?php var_dump($arrImages);
+				<?php 
 				foreach($arrImages as $objImage) { ?>
 					<tr>
 						<td><?php echo $objImage->getId() ?></td>

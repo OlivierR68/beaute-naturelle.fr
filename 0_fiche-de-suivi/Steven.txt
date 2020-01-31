@@ -55,4 +55,9 @@ Form contact
 
 30/01/2020
 
-Extraire les images depuis la bdd
+Dashboard galerie ajout
+
+31/01/2020 
+
+Dashboard galerie ajout
+
