@@ -17,6 +17,7 @@ class Images extends CI_Controller
 		parent::__construct();
 		$this->load->model("Images_manager");
 		$this->load->model("Images_class");
+		$this->load->library('upload');
 	}
 
 	/** Front : Fonction permettant d'afficher la galerie photos  */
@@ -41,23 +42,28 @@ class Images extends CI_Controller
 
 	}
 
-}
-
-	/** Back : Fonction permettant d'afficher la liste des slides  */
+	/** Back : Fonction permettant d'afficher la liste des images  */
 	public function ListPage()
 	{
 		$data['TITLE'] 		= "Liste des images";
 
+		
+
 		$images	= $this->Images_manager->findAll();
 		$imagesToDisplay = array();
+		
 		foreach($images as $image){
-			$objImage 	= new Image_class();
+			$objImage 	= new Images_class();
 			$objImage->hydrate($image);
-			$imagesToDisplay[] = $objImage;
+			$imagesToDisplay[] = $objImage; 
 		}
 
 		$data['arrImages'] 	= $imagesToDisplay;
 
 		$data['CONTENT']	= $this->load->view('back/imagesList', $data, TRUE);
 		$this->load->view('back/content', $data);
+
 	}
+
+}
+
