@@ -72,7 +72,7 @@
 					<?php } else { ?>
 
 					<a class="bn_infos-items" href="<?php echo site_url('users/login') ?>"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
-					<a class="bn_infos-items" href="#"><i class="fas fa-user-plus"></i> S'Inscrire</a>
+					<a class="bn_infos-items" href="<?php echo site_url('users/register') ?>"><i class="fas fa-user-plus"></i> S'Inscrire</a>
 
 
 					<?php }	?>
