@@ -66,6 +66,10 @@ class Images_class extends CI_Model {
 		return $this->_img_validation;
 	}
 
+	 /** GETTER pour la liste des attributs
+	 *@return array Liste des valeurs attributs avec clefs associatives
+	 */
+
 	public function getArray(){
 
 		$varArray = ['id','libelle','slug','src','description','author','publi_date','validation'];

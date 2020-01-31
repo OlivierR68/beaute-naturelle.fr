@@ -56,7 +56,7 @@ class Images extends CI_Controller
 			$imagesToDisplay[] = $objImage;
 		}
 
-		$data['arrImages'] 	= $imagesToDisplay;
+		$data['arrImages'] 	= $ImagesToDisplay;
 
 		$data['CONTENT']	= $this->load->view('back/imagesList', $data, TRUE);
 		$this->load->view('back/content', $data);
