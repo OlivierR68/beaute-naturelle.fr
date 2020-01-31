@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+    'hostname' => 'vps757867.ovh.net',
+    'username' => 'ravoli_db',
+    'password' => 'TNHXFFKo6J',
+    'database' => 'ravoli_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
