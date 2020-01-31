@@ -41,23 +41,19 @@ class Images extends CI_Controller
 
 	}
 
-}
+
 
 	/** Back : Fonction permettant d'afficher la liste des slides  */
 	public function ListPage()
 	{
 		$data['TITLE'] 		= "Liste des images";
 
-		$images	= $this->Images_manager->findAll();
-		$imagesToDisplay = array();
-		foreach($images as $image){
-			$objImage 	= new Image_class();
-			$objImage->hydrate($image);
-			$imagesToDisplay[] = $objImage;
-		}
+		
 
-		$data['arrImages'] 	= $ImagesToDisplay;
+
 
 		$data['CONTENT']	= $this->load->view('back/imagesList', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
+
+}
