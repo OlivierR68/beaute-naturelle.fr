@@ -32,6 +32,25 @@ class Event_class extends CI_Model {
 		return $this;
 	}
 
+		/** GETTER pour la liste des attributs
+	 *@return array Liste des valeurs attributs avec clefs associatives
+	 */
+
+	public function getArray(){
+
+		$varArray = ['id','img','name','slug','create_date','start_date','end_date','content', 'capacity'];
+		$array = array();
+
+		foreach ($varArray as &$var) {
+			$varName = "_event_".$var;
+			$keyName = substr($varName,1);
+			$array[$keyName] =  $this->$varName;
+		}
+
+		return $array;
+
+	}
+
 	/** GETTERS (pour chaque attribut) **/
 	public function getId(){
 		return $this->_event_id;
