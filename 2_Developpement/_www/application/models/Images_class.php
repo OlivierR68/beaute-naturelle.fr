@@ -66,6 +66,10 @@ class Images_class extends CI_Model {
 		return $this->_img_validation;
 	}
 
+	 /** GETTER pour la liste des attributs
+	 *@return array Liste des valeurs attributs avec clefs associatives
+	 */
+
 	public function getArray(){
 
 		$varArray = ['id','libelle','slug','src','description','author','publi_date','validation'];
@@ -79,6 +83,20 @@ class Images_class extends CI_Model {
 
 		return $array;
 
+	}
+
+	/** GETTER pour contenu raccourci
+	 * @param $strLimit integer Limite de taille de la chaîne de caractère
+	 * @return string contenu
+	 */
+
+	 public function getShortContent($strLimit = 40){
+
+		if(strlen($this->_image_content) > $strLimit) {
+			return substr($this->_image_content, 0, $strLimit)."..."; ;
+		} else {
+			return $this->_image_content;
+		}
 	}
 
 	/** SETTERS (pour chaque attribut) **/

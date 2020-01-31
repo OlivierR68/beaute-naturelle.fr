@@ -16,31 +16,27 @@ class Users extends CI_Controller {
 
 	}
 
+
 	public function login()
 	{
+		$data['preTITLE']	= "Magasin & Institut";
+		$data['TITLE'] 		= "A propos de Beauté Naturelle";
+		$data['headerImg']	= "img-institut.jpg";
 
-		if(!empty($something = $this->input->post('email')) && !empty($something = $this->input->post('password'))){
+		$data['CONTENT'] = $this->load->view('front/login', $data, TRUE);
+		$this->load->view('front/min-content', $data);
 
-			$user = $this->User_manager->verify($this->input->post('email'), $this->input->post('password'));
+	}
 
-			if(empty($user)){
-				echo "Adresse e-mail ou mot de passe invalide.";
-			} else {
-
-
-				$this->session->firstName  =  $user->user_first_name;
-				redirect('/slides/home', 'refresh');
-
-
-
-			}
-
-		}
+	public function register()
+	{
+		$data['preTITLE']	= "Créer votre compte";
+		$data['TITLE'] 		= "Rejoignez notre communauté!";
+		$data['headerImg']	= "img-register.jpg";
 
 
-
-
-		$this->load->view('front/login');
+		$data['CONTENT'] = $this->load->view('front/register', $data, TRUE);
+		$this->load->view('front/min-content', $data);
 	}
 
 
