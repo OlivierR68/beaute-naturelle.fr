@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Controller Slides
+ * @author  Marc Chanteranne
+ * @version version 1
+ */
+ 
 class Events extends CI_Controller {
 
 	public function __construct(){

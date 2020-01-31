@@ -36,7 +36,6 @@ class Images extends CI_Controller
 		}
 
 		$data['arrImages'] = $imagesToDisplay;
-
 		$data['CONTENT'] = $this->load->view('front/images', $data, TRUE);
 		$this->load->view('front/content', $data);
 
@@ -47,11 +46,8 @@ class Images extends CI_Controller
 	{
 		$data['TITLE'] 		= "Liste des images";
 
-		
-
 		$images	= $this->Images_manager->findAll();
 		$imagesToDisplay = array();
-		
 		foreach($images as $image){
 			$objImage 	= new Images_class();
 			$objImage->hydrate($image);
