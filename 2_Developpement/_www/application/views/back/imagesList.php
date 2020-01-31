@@ -1,7 +1,7 @@
 <?php
 // var_dump($arrImages);
 ?>
-<a class="btn btn-primary mb-3" href="<?php echo site_url('images/addPage')?>" role="button">Ajouter un slide</a>
+<a class="btn btn-primary mb-3" href="<?php echo site_url('images/addEdit')?>" role="button">Ajouter une image</a>
 
 		<div class="table-responsive">
 			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -54,19 +54,19 @@
 							<a href="#" title="Modifier"><i class="far fa-edit"></i></a> |
 							<a href="#" title="Copier"><i class="far fa-copy"></i></a> |
 
-							<?php if($objSlide->getDefault() == true) { ?>
-								<i title="slide" class="fas fa-trash-alt text-muted"></i>
+							<?php if($objImage->getDefault() == true) { ?>
+								<i title="image" class="fas fa-trash-alt text-muted"></i>
 							<?php } else { ?>
-								<a href="<?php echo base_url('images/delete/'.$objSlide->getId())  ?>" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
+								<a href="<?php echo base_url('images/delete/'.$objImage->getId()  ?>" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
 							<?php } ?>
 
 						</td>
 
-						<td><?php echo $objSlide->getLibelle() ?></td>
-						<td><a target="_blank" href="<?php echo base_url("assets/img")."/".$objSlide->getImg() ?>"><?php echo $objSlide->getImg() ?></a></td>
-						<td><?php echo $objSlide->getTaille() ?></td>
-						<td><?php echo $objSlide->getShortTitle(30) ?></td>
-						<td><?php echo $objSlide->getText() ?></td>
+						<td><?php echo $objImage->getLibelle() ?></td>
+						<td><a target="_blank" href="<?php echo base_url("assets/img")."/".$objImage->getImg() ?>"><?php echo $objImage->getImg() ?></a></td>
+						<td><?php echo $objImage->getDescription() ?></td>
+						<td><?php echo $objImage->getAuthor()) ?></td>
+						<td><?php echo $objImage->getPubli_Date() ?></td>
 					</tr>
 				<?php } ?>
 				</tbody>

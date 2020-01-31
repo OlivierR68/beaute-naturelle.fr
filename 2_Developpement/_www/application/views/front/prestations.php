@@ -35,16 +35,18 @@
 	<div class="row">
 		<!-- Foreach de catégorie ici -->
 		<?php 
-            var_dump($arrCategorie);
-            foreach($arrCategorie as $objCategorie) { ?>
-       <a href="<?php base_url() ?>assets/img/prestations/presta-top-1.jpg" class="col-6 col-lg-3 p-0 bn_presta-block bn_presta-bg-1 d-flex">
-        
-			<div>
-             <span>
-                    épilations
-                </span>  
 
-			</div>
+            foreach($arrCategorie as $objCategorie) { ?>
+
+        
+            <a href="#" style="background-image : url(<?php echo base_url('assets/img/prestations')."/".$objCategorie->getImg().".jpg" ?>)" class="col-6 col-lg-3 p-0 bn_presta-block  d-flex">
+
+                <div></div>
+                <span>
+                    <?php echo $objCategorie->getName() ?>
+                </span>
+
+            </a>
 			
 
 		</a>
