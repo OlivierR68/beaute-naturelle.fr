@@ -103,8 +103,8 @@ class Slides extends CI_Controller {
 	}
 
 
-	 *
-	 * /
+	 
+	 */
 
 
 	/** Back : Fonction d'éditer un slide */
