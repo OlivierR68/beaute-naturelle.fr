@@ -16,7 +16,13 @@ class Users extends CI_Controller {
 
 	}
 
-	public function login()
+
+	public function signUp()
+	{
+
+	}
+
+	public function signIn()
 	{
 
 		if(!empty($something = $this->input->post('email')) && !empty($something = $this->input->post('password'))){
