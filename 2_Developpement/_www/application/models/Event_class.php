@@ -6,6 +6,7 @@ class Event_class extends CI_Model {
 	private $_event_id;
 	private $_event_img;
 	private $_event_name;
+	private $_event_slug;
     private $_event_create_date;
     private $_event_start_date;
 	private $_event_end_date;
@@ -44,7 +45,11 @@ class Event_class extends CI_Model {
 		return $this->_event_name;
 	}
 
-	public function getCeate_date(){
+	public function getSlug(){
+		return $this->_event_slug;
+	}
+
+	public function getCreate_date(){
 		return $this->_event_create_date;
 	}
 
@@ -63,6 +68,21 @@ class Event_class extends CI_Model {
 	public function getCapacity(){
 		return $this->_event_capacity;
 	}
+
+/** GETTER pour contenu raccourci
+	 * @param $strLimit integer Limite de taille de la chaîne de caractère
+	 * @return string contenu
+	 */
+
+	public function getShortContent($strLimit = 40){
+
+		if(strlen($this->_event_content) > $strLimit) {
+			return substr($this->_event_content, 0, $strLimit)."..."; ;
+		} else {
+			return $this->_event_content;
+		}
+	}
+
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){
@@ -77,16 +97,20 @@ class Event_class extends CI_Model {
 		$this->_event_name = $name;
 	}
 
+	public function setSlug($slug){
+		$this->_event_slug = $slug;
+	}
+
 	public function setCreate_date($create_date){
-		$this->_event_create_date = $create_date;
+		$this->_event_create_date = date("d-m-Y", strtotime($create_date));
 	}
 
 	public function setStart_date($start_date){
-		$this->_event_start_date = $start_date;
+		$this->_event_start_date = date("d-m-Y", strtotime($start_date));
 	}
 
 	public function setEnd_date($end_date){
-		$this->_event_end_date = $end_date;
+		$this->_event_end_date = date("d-m-Y", strtotime($end_date));
 	}
 
 	public function setContent($content){

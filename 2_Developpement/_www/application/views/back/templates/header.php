@@ -48,16 +48,16 @@
 					</div>
 
 					<!-- Bloc nav event -->
-					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link <?php if($this->uri->rsegments[2] == 'events') echo 'active' ?>" href="<?php echo site_url("events/listPage") ?>" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
 						Événements
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
 
-					<div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+					<div class="collapse <?php if($this->uri->rsegments[2] == 'events') echo 'show' ?>" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="#">Liste des événements</a>
-							<a class="nav-link" href="#">Ajouter un événement</a>
+							<a class="nav-link <?php if($this->uri->uri_string() == 'events/list') echo 'active' ?>" href="<?php echo site_url("events/listPage") ?>">Liste des événements</a>
+							<a class="nav-link <?php if($this->uri->uri_string() == 'events/add') echo 'active' ?>" href="<?php echo site_url("events/addEdit") ?>">Ajouter un événement</a>
 						</nav>
 					</div>
 
