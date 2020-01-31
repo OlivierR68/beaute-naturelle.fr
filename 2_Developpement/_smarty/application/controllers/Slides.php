@@ -56,7 +56,7 @@ class Slides extends CI_Controller {
 		$data['CONTENT']	= $this->load->view('back/slidesList', $data, TRUE);
 		$this->load->view('back/content', $data);
 	}
-	
+
 
 
 	/**
