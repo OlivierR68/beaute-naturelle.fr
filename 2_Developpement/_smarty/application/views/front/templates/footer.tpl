@@ -79,18 +79,18 @@
 			<div class="col-12 col-lg-5 text-center text-lg-right">
 				<div>
 					<div class="bn_nav-bottom" class="bn_nav-bottom">
-						<a class="{if $pageName eq 'mentions'}bn_active-2{/if}" href="{site_url("pages/mentions")}">Mentions Légales</a> |
-						<a class="{if $pageName eq 'politique'}bn_active-2{/if}" href="{site_url("pages/politique")}">Politique de confidentialité</a> |
-						<a class="{if $pageName eq 'sitemap'}bn_active-2{/if}" href="{site_url("pages/sitemap")}">Plan du Site</a>
+						<a class="bn_{active_page('pages/mentions')}" href="{site_url("pages/mentions")}">Mentions Légales</a> |
+						<a class="bn_{active_page('pages/politique')}" href="{site_url("pages/politique")}">Politique de confidentialité</a> |
+						<a class="bn_{active_page('pages/sitemap')}" href="{site_url("pages/sitemap")}">Plan du Site</a>
 					</div>
 
 					<div class="bn_nav-bottom">
-						<a class="{if $pageName eq 'home'}bn_active-2{/if}"	href="{site_url()}">Accueil</a> |
-						<a class="{if $pageName eq 'events'}bn_active-2{/if}" href="{site_url("events")}">Événements</a> |
-						<a class="{if $pageName eq 'prestations'}bn_active-2{/if}" href="{site_url("prestations")}">Prestations</a> |
-						<a class="{if $pageName eq 'about'}bn_active-2{/if}" href="{site_url("pages/about")}">L'Établissement</a> |
-						<a class="{if $pageName eq 'images'}bn_active-2{/if}" href="{site_url("images")}">Galerie</a> |
-						<a class="{if $pageName eq 'contact'}bn_active-2{/if}" href="{site_url("pages/contact")}">Contact</a>
+						<a class="bn_{active_page('slides/home')}"	href="{site_url()}">Accueil</a> |
+						<a class="bn_{active_page('events')}" href="{site_url("events")}">Événements</a> |
+						<a class="bn_{active_page('prestations')}" href="{site_url("prestations")}">Prestations</a> |
+						<a class="bn_{active_page('pages/about')}" href="{site_url("pages/about")}">L'Établissement</a> |
+						<a class="bn_{active_page('images')}" href="{site_url("images")}">Galerie</a> |
+						<a class="bn_{active_page('pages/contact')}" href="{site_url("pages/contact")}">Contact</a>
 					</div>
 				</div>
 

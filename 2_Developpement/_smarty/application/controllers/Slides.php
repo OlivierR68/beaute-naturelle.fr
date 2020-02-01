@@ -22,7 +22,6 @@ class Slides extends CI_Controller {
 	{
 		$data['preTITLE']	= "Magasin & Institut";
 		$data['TITLE'] 		= "A propos de Beauté Naturelle";
-        $data['pageName'] 	= "home";
 
 		$slides	= $this->Slides_manager->findAll();
 		$slidesToDisplay = array();
@@ -53,8 +52,8 @@ class Slides extends CI_Controller {
 
 		$data['arrSlides'] 	= $slidesToDisplay;
 
-		$data['CONTENT']	= $this->load->view('back/slidesList', $data, TRUE);
-		$this->load->view('back/content', $data);
+        $data['CONTENT'] = $this->smarty->fetch('back/slidesList.tpl', $data);
+        $this->smarty->display('back/content.tpl', $data);
 	}
 
 
@@ -156,8 +155,8 @@ class Slides extends CI_Controller {
 
 		}
 
-		$data['CONTENT']	= $this->load->view('back/slidesAdd', $data, TRUE);
-		$this->load->view('back/content', $data);
+        $data['CONTENT'] = $this->smarty->fetch('back/slidesAdd.tpl', $data);
+        $this->smarty->display('back/content.tpl', $data);
 	}
 
 

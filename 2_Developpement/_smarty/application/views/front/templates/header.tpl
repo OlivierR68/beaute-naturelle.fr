@@ -56,14 +56,8 @@
 
 				<div class="d-none d-md-block bn_infos">
 
-
-
 					<a class="bn_infos-items" href="{site_url('users/login')}"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
 					<a class="bn_infos-items" href="{site_url('users/register')}"><i class="fas fa-user-plus"></i> S'Inscrire</a>
-
-
-
-
 
 				</div>
             </div>
@@ -99,25 +93,25 @@
                     <div class="collapse navbar-collapse bn_bg-main" id="navbarSupportedContent">
                         <ul class="navbar-nav  ml-auto">
 
-                            <li class="nav-item mx-1 bn_nav-item {if $pageName eq "home"}bn_active{/if}">
+                            <li class="nav-item mx-1 bn_nav-item bn_{active_page('slides/home')}">
                                 <a class="nav-link bn_nav-link " href="{site_url()}">Accueil <span
                                         class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item {if $pageName eq "events"}bn_active{/if}">
+                            <li class="nav-item mx-1 bn_nav-item {active_page('events','bn_active',1)}">
                                 <a class="nav-link bn_nav-link" href="{site_url("events")}">Évènements</a>
                             </li>
 
-							<li class="nav-item mx-1 bn_nav-item {if $pageName eq "prestations"}bn_active{/if}">
+							<li class="nav-item mx-1 bn_nav-item {active_page('prestations','bn_active',1)}">
 								<a class="nav-link bn_nav-link" href="{site_url("prestations")}">Prestations</a>
 							</li>
 
-                            <li class="nav-item mx-1 bn_nav-item mx-1 {if $pageName eq 'about'}bn_active{/if}">
+                            <li class="nav-item mx-1 bn_nav-item mx-1 bn_{active_page('pages/about')}">
                                 <a class="nav-link bn_nav-link" href="{site_url('pages/about')}">L'Établissement </a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item {if $pageName eq 'images'}bn_active{/if}">
+                            <li class="nav-item mx-1 bn_nav-item {active_page('images','bn_active',1)}">
                                 <a class="nav-link bn_nav-link" href="{site_url('images')}">Galerie</a>
                             </li>
-                            <li class="nav-item mx-1 bn_nav-item {if $pageName eq 'contact'}bn_active{/if}">
+                            <li class="nav-item mx-1 bn_nav-item bn_{active_page('pages/contact')}">
                                 <a class="nav-link bn_nav-link" href="{site_url('pages/contact')}">Contact</a>
                             </li>
                         </ul>
@@ -129,8 +123,7 @@
 
     </header>
 
-
-	{if $pageName eq 'home'}
+	{if page_name() eq 'home'}
 
         {include file="./slider.tpl"}
 

@@ -34,44 +34,44 @@
 
 					<!-- Bloc nav slider -->
 
-					<a class="nav-link  <?php if($this->uri->rsegments[1] == 'slides') echo 'active' ?>" href="<?php echo site_url("slides/listPage") ?>" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link  {active_page('slides','active',1)}" href="{site_url("slides/listPage")}" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
 						Slider Accueil
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
 
-					<div class="collapse <?php if($this->uri->rsegments[1] == 'slides') echo 'show' ?>" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+					<div class="collapse {active_page('slides','show',1)}" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/list') echo 'active' ?>" href="<?php echo site_url("slides/listPage") ?>">Liste des slides</a>
-							<a class="nav-link <?php if($this->uri->uri_string() == 'slides/add') echo 'active' ?>" href="<?php echo site_url("slides/addEdit") ?>">Ajouter un slide</a>
+							<a class="nav-link {active_page('slides/listPage')}" href="{site_url("slides/listPage")}">Liste des slides</a>
+							<a class="nav-link {active_page('slides/addEdit')}" href="{site_url("slides/addEdit")}">Ajouter un slide</a>
 						</nav>
 					</div>
 
 					<!-- Bloc nav event -->
-					<a class="nav-link <?php if($this->uri->rsegments[2] == 'events') echo 'active' ?>" href="<?php echo site_url("events/listPage") ?>" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link {active_page('events','active',1)}" href="{site_url("events/listPage")}" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
 						Événements
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
 
-					<div class="collapse <?php if($this->uri->rsegments[2] == 'events') echo 'show' ?>" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+					<div class="collapse {active_page('events','show',1)}" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link <?php if($this->uri->uri_string() == 'events/list') echo 'active' ?>" href="<?php echo site_url("events/listPage") ?>">Liste des événements</a>
-							<a class="nav-link <?php if($this->uri->uri_string() == 'events/add') echo 'active' ?>" href="<?php echo site_url("events/addEdit") ?>">Ajouter un événement</a>
+							<a class="nav-link {active_page('events/listPage')}" href="{site_url("events/listPage")}">Liste des événements</a>
+							<a class="nav-link {active_page('events/addEdit')}" href="{site_url("events/addEdit")}">Ajouter un événement</a>
 						</nav>
 					</div>
 
 					<!-- Bloc nav galerie -->
-					<a class="nav-link <?php if($this->uri->rsegments[1] == 'images') echo 'active' ?>" href="<?php echo site_url("images/listPage") ?>" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link {active_page('images','active',1)}" href="{site_url("images/listPage")}" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
 						Galerie
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
 
-					<div class="collapse <?php if($this->uri->rsegments[1] == 'images') echo 'show' ?>" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+					<div class="collapse {active_page('images','show',1)}" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link <?php if($this->uri->uri_string() == 'images/list') echo 'active' ?>" href="<?php echo site_url("images/listPage") ?>">Liste des images</a>
-							<a class="nav-link <?php if($this->uri->uri_string() == 'images/add') echo 'active' ?>" href="<?php echo site_url("images/addEdit") ?>">Ajouter une image</a>
+							<a class="nav-link {active_page('images/listPage','show',1)}" href="{site_url("images/listPage")}">Liste des images</a>
+							<a class="nav-link {active_page('images/addEdit','show',1)}" href="{site_url("images/addEdit")}">Ajouter une image</a>
 						</nav>
 					</div>
 

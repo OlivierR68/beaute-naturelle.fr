@@ -143,9 +143,10 @@ p>a:hover,
 
 .bn_active {
   color: #019839 !important;
+
 }
 
-.bn_active-2 {
+.bn_nav-bottom > .bn_active {
   color: #98C23A !important;
 }
 
