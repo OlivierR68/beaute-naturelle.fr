@@ -1,0 +1,536 @@
+
+﻿<? php  if (! defined ( 'BASEPATH' )) exit ( 'Aucun accès direct au script autorisé' );
+	/ * set_time_limit (0); 
+	ini_set ('memory_limit', '30240M'); // La limite maximale est de 10 Go
+	error_reporting (0); * /
+	classe  Mailer  étend  CI_Controller {
+		fonction  __construct () {
+			parent :: __construct ();
+			$ this -> load -> database ();
+			$ this -> load -> helper ( 'url' );
+			$ this -> load -> library ( 'grocery_CRUD' );
+		}
+		
+		 indice de fonction  publique ()
+		{
+			$ this -> _example_output (( object ) array ( 'output' => '' , 'js_files' => array (), 'css_files' => array ()));
+		}
+		
+		 fonction  publique _example_output ( $ output = null )
+		{
+			$ this -> load -> view ( 'example.php' , $ output );
+		}
+		
+		/ *
+		fonction publique insert_mails ()
+		{
+			$ query = $ this-> db-> query ("
+			SELECT 'id', 'Email' FROM 'table 10' ");
+			foreach ($ query-> result_array () as $ row) {
+				$ Email [$ i ++] = $ row ['Email'];
+			}
+			// var_dump ($ Email); mourir;
+			foreach ($ Email AS $ mail) {
+				essayer{
+					$ query = $ this-> db-> query ("INSERT INTO 'member' ('member_email') VALUES ('". $ mail. "')");
+				} catch (Exception $ e) {continue; }
+				
+			}
+			
+		}
+		
+		fonction validate_email () {
+			// inclut la classe de validation des e-mails SMTP
+			$ this-> load-> bibliothèque ('smtp_validateemail');
+			//require_once('smtp_validateEmail.class.php ');
+			// l'e-mail à valider
+			$ query = $ this-> db-> query ("
+			SELECT 'member_email' FROM 'member' where is_valid1 = '' order by member_id ");
+			foreach ($ query-> result_array () as $ row) {
+				$ EmailArr [$ i ++] = $ row ['member_email'];
+			}
+			$ i = 0;
+			foreach ($ EmailArr comme $ email) {
+				$ i ++;
+				// $ email = 'hemant.hingave@gmail.com';
+				// un expéditeur optionnel
+				// $ sender = 'user@mydomain.com';
+				// instancier la classe
+				$ results = array ();
+				$ SMTP_Validator = new SMTP_validateemail ();
+				// active le débogage si vous souhaitez afficher la transaction SMTP
+				$ SMTP_Validator-> debug = false;
+				// faire la validation
+				$ results = $ SMTP_Validator-> validate (array ($ email), $ sender);
+				// Voir les résultats
+				// echo $ email. ' est '. ($ results [$ email]?' valid ':' invalid '). "\ n";
+				
+				// envoyer un e-mail? 
+				if ($ results [$ email]) {
+					// mail ($ email, 'Confirm Email', 'Veuillez répondre à cet email pour confirmer', 'From:'. $ sender. "\ r \ n"); // envoyer un e-mail
+					$ this-> db-> query ("UPDATE 'member' 
+					SET 'is_valid1' = 'OUI'
+					où 'member_email' = '". $ email."' ");
+					} autre {
+					// echo 'Les adresses e-mail que vous avez saisies ne sont pas valides';
+					$ this-> db-> query ("UPDATE 'member' 
+					SET 'is_valid1' = 'NO'
+					où 'member_email' = '". $ email."' ");
+				}
+				if (($ i% 100) == 0) {
+					// echo $ i. "Enregistrements traités <br>";
+					sommeil (60); // sommeil pendant 1 min sec
+				}
+			}
+		}
+		
+		function validate_email_single ($ email) {
+			// inclut la classe de validation des e-mails SMTP
+			$ this-> load-> bibliothèque ('smtp_validateemail');
+			//require_once('smtp_validateEmail.class.php ');
+			// l'e-mail à valider
+			$ query = $ this-> db-> query ("
+			SELECT 'member_email' FROM 'member' where is_valid1 = '' order by member_id ");
+			foreach ($ query-> result_array () as $ row) {
+				$ EmailArr [$ i ++] = $ row ['member_email'];
+			}
+			$ i = 0;
+			foreach ($ EmailArr comme $ email) {
+				$ i ++;
+				// $ email = 'hemant.hingave@gmail.com';
+				// un expéditeur optionnel
+				// $ sender = 'user@mydomain.com';
+				// instancier la classe
+				$ results = array ();
+				$ SMTP_Validator = new SMTP_validateemail ();
+				// active le débogage si vous souhaitez afficher la transaction SMTP
+				$ SMTP_Validator-> debug = false;
+				// faire la validation
+				$ results = $ SMTP_Validator-> validate (array ($ email), $ sender);
+				// Voir les résultats
+				// echo $ email. ' est '. ($ results [$ email]?' valid ':' invalid '). "\ n";
+				
+				// envoyer un e-mail? 
+				if ($ results [$ email]) {
+					// mail ($ email, 'Confirm Email', 'Veuillez répondre à cet email pour confirmer', 'From:'. $ sender. "\ r \ n"); // envoyer un e-mail
+					$ this-> db-> query ("UPDATE 'member' 
+					SET 'is_valid1' = 'OUI'
+					où 'member_email' = '". $ email."' ");
+					} autre {
+					// echo 'Les adresses e-mail que vous avez saisies ne sont pas valides';
+					$ this-> db-> query ("UPDATE 'member' 
+					SET 'is_valid1' = 'NO'
+					où 'member_email' = '". $ email."' ");
+				}
+				if (($ i% 100) == 0) {
+					// echo $ i. "Enregistrements traités <br>";
+					sommeil (60); // sommeil pendant 1 min sec
+				}
+			}
+		}
+		
+		fonction publique mailto ()
+		{
+			$ data ['main_link'] = 'Accueil';
+			$ data ['header'] = 'Mail';
+			$ data ['header_link'] = 'mailer / mailto';
+			$ data ['main_content'] = 'mailto';
+			$ this-> load-> view ('includes / site_template', $ data);
+			// var_dump ($ this-> session);
+		}
+		* /
+	
+		 groupes de fonctions ()
+		{
+			$ crud = new grocery_CRUD ();
+			$ crud -> set_table ( 'newsletter_group' );
+			$ crud -> set_subject ( 'Groupes' );
+			$ crud -> order_by ( "group_id" , "desc" );
+			$ crud -> colonnes ( 'nom_groupe' );				
+			$ crud -> champs ( 'group_name' );
+			$ output = $ crud -> render ();
+			$ this -> _example_output ( $ sortie );
+		}
+		
+		 membres de fonction ()
+		{
+			$ crud = new grocery_CRUD ();
+			$ crud -> set_table ( 'newsletter_member' );
+			$ crud -> set_subject ( 'Member' );
+			$ crud -> order_by ( "member_id" , "desc" );
+			$ crud -> colonnes ( 'groups' , 'member_id' , 'name' , 'member_email' , 'contact1' , 'contact2' );				
+			$ crud -> champs ( 'groups' , 'name' , 'member_email' , 'contact1' , 'contact2' , 'is_available' , 'is_valid' );
+			$ crud -> set_relation_n_n ( 'groups' , 'newsletter_group_member_rel' , 'newsletter_group' , 'member_id' , 'group_id' , 'group_name' );
+			$ output = $ crud -> render (); // SELECT * FROM `newsletter_group_member_rel` WHERE 1
+			$ this -> _example_output ( $ sortie );
+			// SELECT `group_id`,` group_name` FROM `newsletter_group` WHERE 1
+		}
+		
+		fonction  draft_mail ()
+		{
+			$ crud = new grocery_CRUD ();
+			$ crud -> set_table ( 'newsletter_mail_draft' );
+			// SELECT `id`,` to_group`, `to_individual`,` subject`, `from_email`,` title`, `description`,` alink`, `attachment_link`,` attachment_link2`, `attachment_link3`,` attachment_link4` , `attachment_link5`,` message`, `AdvimageLink`,` created_on`, `sent_on` FROM` newsletter_mail_draft` OERE 1
+			$ crud -> set_subject ( 'Draft Mail' );
+			$ crud -> order_by ( "id" , "desc" );
+			$ crud -> colonnes ( 'to_group' , 'to_individual' , 'subject' , 'message' , 'created_on' );				
+			$ crud -> champs ( 'to_group' , 'to_individual' , 'subject' , 'title' , 'description' , 'alink' , 'attachment_link' , 'attachment_link2' , 'attachment_link3' , 'attachment_link4' , 'attachment_link5' , 'AdvimageLink' , 'created_on' );
+			$ crud -> set_relation ( 'to_group' , 'newsletter_group' , 'group_name' );
+			$ crud -> field_type ( 'created_on' , 'invisible' );
+			$ crud -> set_field_upload ( 'attachment_link' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link2' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link3' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link4' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link5' , 'assets / uploads / files' );
+			$ crud -> add_action ( 'Sent Mail' , 'http://icons.iconarchive.com/icons/dryicons/aesthetica-2/16/mail-next-icon.png' , 'mailer / sent_mail' , 'ui- icône-image ' );
+			$ crud -> required_fields ( 'sujet' , 'message' , 'titre' , 'alink' , 'description' );
+			$ crud -> unset_texteditor ( 'to_individual' , 'subject' );
+			$ crud -> display_as ( 'to_group' , 'To Group' );
+			$ crud -> display_as ( 'to_individual' , 'To Individual' );
+			$ crud -> display_as ( 'attachment_link' , 'Attachment 1' );
+			$ crud -> display_as ( 'attachment_link2' , 'Attachment 2' );
+			$ crud -> display_as ( 'attachment_link3' , 'Attachment 3' );
+			$ crud -> display_as ( 'attachment_link4' , 'Attachment 4' );
+			$ crud -> display_as ( 'attachment_link5' , 'Attachment 5' );
+			$ crud -> display_as ( 'AdvimageLink' , 'Image de publicité' );
+			
+			$ crud -> display_as ( 'title' , 'Title 1' );
+			$ crud -> display_as ( 'description' , 'Description 1' );
+			$ crud -> display_as ( 'alink' , 'Lien pour le titre 1' );
+			$ crud -> display_as ( 'attachment_link' , 'Attachment 1' );
+			
+			$ output = $ crud -> render ();
+			$ this -> _example_output ( $ sortie );
+		}
+		
+		fonction  sent_mail_pre ()
+		{
+			$ data [ 'main_link' ] = 'Accueil' ;
+			$ data [ 'header' ] = 'Mails envoyés' ;
+			$ data [ 'header_link' ] = 'mailer / sent_mail_pre_inner' ;
+			$ data [ 'height' ] = '600' ;
+			$ data [ 'main_content' ] = 'includes / module_template' ;
+			$ this -> load -> view ( 'includes / site_template' , $ data );
+		}
+		
+		function  sent_mails ()
+		{
+			$ crud = new  Grocery_CRUD ();
+			$ crud -> set_table ( 'newsletter_sent_mail' );
+			$ crud -> set_subject ( 'Courrier envoyé' );
+			// $ crud-> set_theme ('flexigrid');
+			// SELECT `id`,` to_group`, `to_individual`,` subject`, `from_email`,` title`, `description`,` alink`, `attachment_link`,` attachment_link2`, `attachment_link3`,` attachment_link4` , `attachment_link5`,` message`, `AdvimageLink`,` created_on`, `sent_on` FROM` newsletter_sent_mail` OERE 1
+			$ crud -> order_by ( "id" , "desc" );
+			$ crud -> colonnes ( 'sent_on' , 'created_on' , 'to_group' , 'subject' , 'title' , 'description' );				
+			$ crud -> champs ( 'sent_on' , 'created_on' , 'to_group' , 'to_individual' , 'subject' , 'title' , 'description' , 'alink' , 'attachment_link' , 'AdvimageLink' );
+			// $ crud-> unset_read_fields ('sent_on', 'created_on');
+			$ crud -> set_relation ( 'to_group' , 'newsletter_group' , 'group_name' );
+			$ crud -> set_field_upload ( 'attachment_link' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link2' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link3' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link4' , 'assets / uploads / files' );
+			$ crud -> set_field_upload ( 'attachment_link5' , 'assets / uploads / files' );
+			// $ crud-> set_relation ('from_email', 'newsletter_from_emails', 'email');
+			$ crud -> unset_texteditor ( 'to_individual' , 'subject' , 'description' , 'description2' , 'description3' , 'description4' , 'description5' );
+			$ crud -> unset_add ();
+            $ crud -> unset_edit ();
+            $ crud -> unset_delete ();
+			$ crud -> display_as ( 'to_group' , 'To Group' );
+			$ crud -> display_as ( 'to_individual' , 'To Individual' );
+			
+			$ crud -> display_as ( 'title' , 'Title 1' );
+			$ crud -> display_as ( 'description' , 'Description 1' );
+			$ crud -> display_as ( 'alink' , 'Lien pour le titre 1' );
+			$ crud -> display_as ( 'attachment_link' , 'Attachment 1' );
+			
+			$ crud -> display_as ( 'title2' , 'Title 2' );
+			$ crud -> display_as ( 'description2' , 'Description 2' );
+			$ crud -> display_as ( 'alink2' , 'Lien pour le titre 2' );
+			$ crud -> display_as ( 'attachment_link2' , 'Attachment 2' );
+			
+			$ crud -> display_as ( 'title3' , 'Title 3' );
+			$ crud -> display_as ( 'description3' , 'Description 3' );
+			$ crud -> display_as ( 'alink3' , 'Lien pour le titre 3' );
+			$ crud -> display_as ( 'attachment_link3' , 'Attachment 3' );
+			
+			$ crud -> display_as ( 'title4' , 'Title 4' );
+			$ crud -> display_as ( 'description4' , 'Description 4' );
+			$ crud -> display_as ( 'alink4' , 'Lien pour le titre 4' );
+			$ crud -> display_as ( 'attachment_link4' , 'Attachment 4' );
+			
+			$ crud -> display_as ( 'title5' , 'Title 5' );
+			$ crud -> display_as ( 'description5' , 'Description 5' );
+			$ crud -> display_as ( 'alink5' , 'Lien pour le titre 5' );
+			$ crud -> display_as ( 'attachment_link5' , 'Attachment 5' );
+			
+			$ crud -> display_as ( 'AdvimageLink' , 'Image de publicité' );
+			$ output = $ crud -> render ();
+			$ this -> _example_output ( $ sortie );
+		}
+		
+		fonction  sent_mail ( $ primary_key = '' )
+		{
+			$ result = $ this -> db -> query ( "select * from` newsletter_master` " );
+			foreach ( $ result -> result_array () as  $ row ) {
+				$ checkpoint_sentmail 		= $ row [ 'checkpoint_sentmail' ];			
+			}
+			// si déjà envoyé un mail
+			if ( $ checkpoint_sentmail ) {
+				echo  "<script> window.parent.location.href = '" . site_url ( 'mailer / mail_progress' ). "'; </script>" ;
+				// redirect ('mailer / mail_progress', 'refresh');
+			} else {
+				$ this -> db -> query ( "INSERT INTO newsletter_sent_mail (` to_group`, `to_individual`,` subject`, `from_email`,` title`, `description`,` alink`, `attachment_link`,` attachment_link2`, `attachment_link3`,` attachment_link4`, `attachment_link5`,` message`, `AdvimageLink`,` created_on`, `sent_on`)
+				SELECT `to_group`,` to_individual`, `subject`,` from_email`, `title`,` description`, `alink`,` attachment_link`, `attachment_link2`,` attachment_link3`, `attachment_link4`,` attachment_link5`, ` message`, `AdvimageLink`,` created_on`, now () FROM `newsletter_mail_draft` WHERE id = '" . $ primary_key . "'" );
+				$ insert_id = $ this -> db -> insert_id ();
+				$ result = $ this -> db -> query ( "SELECT * FROM` newsletter_mail_draft` WHERE id = '" . $ primary_key . "' " );
+				foreach ( $ result -> result_array () as  $ row ) {
+					$ id 				= $ row [ 'id' ];
+					$ to_group 		= $ row [ 'to_group' ];
+					$ to_individual 	= $ ligne [ 'to_individual' ];
+					$ subject 		= $ row [ 'subject' ];
+					$ from_email 		= $ row [ 'from_email' ];
+					$ message 		= $ row [ 'message' ];
+					
+					$ title [ 1 ] = $ row [ 'title' ];
+					$ description [ 1 ] = $ ligne [ 'description' ];
+					if (! empty ( $ row [ 'attachment_link' ]))) {
+						$ attachment_link [ 1 ] = base_url (). msgstr "actifs / téléchargements / fichiers /" . $ row [ 'attachment_link' ];
+					} 
+					$ alink [ 1 ] = $ row [ 'alink' ];
+
+					$ AdvimageLink 	= $ row [ 'AdvimageLink' ];
+				}
+				
+				$ member_emails = $ member_emails_ind = array ();
+				$ group_where = "" ;
+				if ( $ to_group == 2 ) { // 2 pour tous les membres
+					$ sql = "SELECT * FROM` newsletter_member` WHERE `is_valid` = 'YES'" ;
+				}
+				if (! vide ( $ to_group )) {
+					// Récupère tous les e-mails du groupe
+					$ sql = "SELECT m. *
+					DE `newsletter_member` m, newsletter_group_member_rel r
+					OERE m.`member_id` = r.`member_id` AND m.`is_valid` = 'YES' AND r.group_id = '" . $ To_group . "' " ;
+				}
+				$ result = $ this -> db -> query ( $ sql );
+				$ i = 0 ;
+				foreach ( $ result -> result_array () as  $ row ) {
+					$ member_emails [ $ i ++] = $ row [ 'member_email' ];
+				}
+					
+				if (! vide ( $ to_individual )) {
+					$ Member_emails_ind = exploser ( "" , $ to_individual );
+				} 
+				$ result = array_merge ( $ member_emails , $ member_emails_ind );
+				// var_dump ($ result); mourir;
+				$ result = array_unique ( $ result );
+				
+				/ * ajouter un identifiant d'e-mail à la fin pour vérifier si l'e-mail est envoyé à tous les membres 
+				// à des fins de test uniquement
+				array_push ($ result, "hemant.hingave@gmail.com"); * /
+				
+				$ noOfemailsInArray = count ( $ result );
+				$ this -> db -> query ( "UPDATE` newsletter_master`
+				SET `checkpoint_sentmail` = '1', TotalnoOfemails = '" . ( $ NoOfemailsInArray - 1 ). "'
+				OERE id = '1' " );
+				$ adv_cnt = $ body_content = "" ;
+				if ( $ AdvimageLink ) {
+					// extrait src de la balise img 
+					$ doc = new  DOMDocument ();
+					$ doc -> loadHTML ( $ AdvimageLink );
+					$ xpath = new  DOMXPath ( $ doc );
+					$ src = $ xpath -> evaluer ( "chaîne (// img / @ src)" );
+					$ AdvimageLink = base_url (). $ src ;
+					$ adv_cnt = '<br> <br>
+					<a href="'. base_url ().'" target="_blank">
+					<img src = "' . $ AdvimageLink . '" "> </a> ' ;
+				}
+				//fin 
+				pour ( $ t = 1 ; $ t <= 5 ; $ t ++) {
+					if (! ( vide ( $ alink [ $ t ]) || vide ( $ title [ $ t ]) || vide ( $ description [ $ t ]))) {
+					$ body_content . = '
+						<p style = "padding: 0 0 0 10px; margin: 10px 10px 0px; border-left: 5px solid #eeeeee;">
+							<a href = "' . $ alink [ $ t ]. '" style = "font-family: inherit; font-weight: bold; line-height: 30px; text-rendering: optimizelegibility; font-size: 14px; color : # 2196F3; " target = "_ blank"> ' . $ title [ $ t ]. "</a>
+						</p>
+						<div style = "padding: 1px 10px; border-bottom: 1px solid # e2e2e2;">
+							<div style = "padding: 1px 15px; border-left: 4px solid # 09F! important; margin: 0px 0px; border-bottom: # 09F 1px solid! important; border-top: # 09F 1px solid! important; border- à droite: # 09F 1px solide! important; arrière-plan: # e7f2f8; couleur: # 06C; ">
+								<font face = "Georgia, Helvetica, Arial, sans-serif" color = "# bf9000"> <span style = "-webkit-margin-before: 0em; -webkit-margin-after: -1em;" > ' . $ description [ $ t ]. "</span> </font>
+							</div>
+							<div>
+								<a href = "' . $ alink [ $ t ]. '" style = "taille de police: 13px; famille de polices: Georgia, Helvetica, Arial, sans-serif; hauteur de ligne: 25px; dessus de remplissage: 10px ; color: # 0000ff "target =" _ blank "> Cliquez ici pour plus de détails. </a>
+							</div>
+							</br>
+						</div>
+						' ;
+					}
+				}
+				
+				$ script4share = "" ;
+				$ body =
+					'<! DOCTYPE html PUBLIC "- // W3C // DTD XHTML 1.0 Transitional // EN" "http: www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+					<html xmlns = "http://www.w3.org/1999/xhtml">
+					<head>
+					<meta http-equiv = "Content-Type" content = "text / html; charset = ' . strtolower ( config_item ( ' charset ' )). '" />
+					<titre> ' . html_escape ( $ subject ). "</title>
+					<style type = "text / css">
+					corps {
+					famille de polices: Arial, Verdana, Helvetica, sans-serif;
+					taille de police: 16px;
+					}
+					" . $ script4share . "
+					</style>
+					</head>
+					<body>
+					<center>
+						<div style = "width: 90%; border-left: 1px solid # 2185C5; border-right: 1px solid # 2185C5; border-bottom: 1px solid # 2185C5;" >
+							 
+							 <div style = "padding-top: 10px; padding-left: 20px; text-align: left; font-family: cursive;"> Cher abonné, Nouveau message disponible sur <a target = "blank" href = "http: //demo.com">demo.com </a> sont ....
+							 </div>
+							 <div style = "padding: 10px; text-align: left;">
+							" . $ body_content . $ adv_cnt . "
+							</div>
+							<br />
+							<br />
+							<br />
+							<div style = "font-size: 11px; color: # a3a3a3" align = "center" height = "46"> Vous recevez ce message en tant que membre enregistré de demo.com. Si vous ne souhaitez plus recevoir de mails de demo.com à l'avenir, vous pouvez <a style = "text-decoration: underline; color: # 0f529d" href = "' . Base_url (). ' / Unsubscribe /" target = "_ blank"> se désinscrire. </a> </div>
+							<br>
+						</div>
+					</center>
+					</body>
+					</html> ' ;
+				$ j = 1 ; $ counter = 1 ;
+				// var_dump ($ result);
+				// echo $ body; mourir;
+				
+				foreach ( $ result  as  $ single_email ) {
+					$ temp_arr [ $ j ++] = $ single_email ;
+					$ counter ++;
+					// Envoyé 100 mails à la fois
+					if ( $ counter > $ noOfemailsInArray   || $ counter % 100 == 0 ) {
+						$ to = implode ( ',' , $ temp_arr );
+						$ this -> load -> library ( 'email' );
+						// En outre, pour obtenir du code HTML complet, vous pouvez utiliser la méthode interne suivante:
+						$ body = $ this -> email -> full_html ( $ subject , $ body );
+						$ this -> email -> from ( 'newsletter@domain.com' , 'Display Name' ); // de l'email
+						$ this -> email -> reply_to ( 'newsletter@domain.com' ); // Facultatif, un compte où un être humain lit.
+						// $ headers. = "BCC: hiddenemail@gmail.com \ r \ n";
+						$ this -> email -> bcc ( $ to ); // masquer le reçu de l'e-mail
+						//$this->email->to('actual-mail@gmail.com ')
+						$ this -> email -> sujet ( $ sujet );
+						$ this -> email -> message ( $ body );
+						pour ( $ t = 1 ; $ t <= 5 ; $ t ++) {
+							if (! vide ( $ attachment_link [ $ t ])) {
+								$ this -> email -> attach ( $ attachment_link [ $ t ]);     // attachement
+								// echo "Je suis ici ..";
+							}
+						}
+						$ result = $ this -> email -> send ();
+						/ ********************** Arrêtez manuellement le script ***************** /
+							$ result1 = $ this -> db -> query ( "select * from` newsletter_master` " );
+							foreach ( $ result1 -> result_array () as  $ row1 ) {
+								$ manual_checkpoint_sentmail 		= $ row1 [ 'checkpoint_sentmail' ];			
+							}
+							if ( $ manual_checkpoint_sentmail == '0' ) {
+								mourir;
+							}
+						/ ********************** Arrêtez manuellement la fin du script ***************** /
+						$ this -> db -> query ( "UPDATE` newsletter_master`
+						SET `noOfMailSent` = '" . $ Counter . "'
+						OERE id = '1' " );
+						$ temp_arr = array (); // réinitialiser le tableau
+						sommeil ( 30 ); // dormir pendant 30sec
+						// $ j = 1;
+					} else {
+						continuer ;
+					}
+				}
+				
+				/ * if ($ result) {
+					$ data ['success'] = $ success;
+					$ this-> load-> view ('site / mail_sucess_progress', $ data);
+				}; * /
+				$ data [ 'success' ] = 1 ;
+				/ * $ this-> load-> view ('site / mail_sucess_progress', $ data);
+				echo $ this-> email-> print_debugger ();
+				sortie; * /
+				echo  "<script> window.parent.location.href = '" . site_url ( 'mailer / mail_sent_success' ). "'; </script>" ;
+			}
+			
+		}
+		
+		fonction  mail_progress () {
+			$ data [ 'display_msg' ] = '<div class = "alert alert-warning" role = "alert"> Le script de messagerie est en cours d'exécution. </div>' ;
+			$ data [ 'main_content' ] = 'msg' ;
+			$ this -> load -> view ( 'includes / site_template.php' , $ data );	
+		}
+		
+		fonction  mail_sent_success () {
+			$ result = $ this -> db -> query ( "UPDATE` newsletter_master` SET `checkpoint_sentmail` = '0', TotalnoOfemails = '0', noOfMailSent = '0'" );
+			$ data [ 'display_msg' ] = '<div class = "alert alert-success" role = "alert"> Le courrier a été réinitialisé avec succès. </div> ' ;
+			$ data [ 'main_content' ] = 'msg.php' ;
+			$ this -> load -> view ( 'includes / site_template' , $ data );	
+		}
+		
+		fonction  share_fb ( $ id , $ item ) {
+		// echo $ id. $ item;
+			if ( is_numeric ( $ id ) && ( $ item == 1 || $ item == 2 || $ item == 3 || $ item == 4 || $ item == 5 )) {
+				$ result = $ this -> db -> query ( "SET character_set_results = utf8" );
+				$ result = $ this -> db -> query ( "SELECT *
+				DE `sent_mail`
+				WHERE id = '" . $ Id . "' " );
+				foreach ( $ result -> result_array () as  $ row ) {
+					$ id 				= $ row [ 'id' ];
+					$ title [ 1 ] = $ row [ 'title' ];
+					$ description [ 1 ] = $ ligne [ 'description' ];
+					$ alink [ 1 ] = $ row [ 'alink' ];
+					
+					$ title [ 2 ] = $ row [ 'title2' ];
+					$ description [ 2 ] = $ ligne [ 'description2' ];
+					$ alink [ 2 ] = $ row [ 'alink2' ];
+					
+					$ title [ 3 ] = $ row [ 'title3' ];
+					$ description [ 3 ] = $ ligne [ 'description3' ];
+					$ alink [ 3 ] = $ row [ 'alink3' ];
+					
+					$ title [ 4 ] = $ row [ 'title4' ];
+					$ description [ 4 ] = $ ligne [ 'description4' ];
+					$ alink [ 4 ] = $ row [ 'alink4' ];
+					
+					$ title [ 5 ] = $ row [ 'title5' ];
+					$ description [ 5 ] = $ ligne [ 'description5' ];
+					$ alink [ 5 ] = $ row [ 'alink5' ];
+				}
+				$ data [ 'id' ] = $ id ;
+				$ data [ 'alink' ] = $ alink [ $ item ];
+				$ data [ 'title' ] = $ title [ $ item ];
+				$ data [ 'description' ] = $ description [ $ item ];
+				$ this -> load -> view ( 'site / share_fb' , $ data );
+			} else {
+			 echo  "<center> <h1 style = 'color: red'> Quelque chose s'est mal passé, veuillez réessayer plus tard </h1> </center>" ;
+			}
+		}
+		
+		fonction  share_google ( $ id ) {
+			$ this -> input -> get ( 'some_data' , TRUE );
+		}
+		
+		fonction  db_reflect () {
+			// Exécuter à partir de l'invite de commande pour afficher le processus
+			$ output = shell_exec ( 'kill -9 280035' );  // tuer -9 PID
+			$ output . = shell_exec ( 'ps aux | more' );  //! ps aux | moins! ps aux | plus
+			echo  "<pre> $ output </pre>" ;
+			/ * $ result = $ this-> db-> query ("UPDATE` static` 
+			SET `checkpoint_sentmail` = 'Non'");
+			foreach ($ result-> result_array () as $ row) {
+				echo $ checkpoint_sentmail = $ row ['checkpoint_sentmail'];			
+			} * /
+		}
+		
+		fonction  reset_mailer () {
+			$ result = $ this -> db -> query ( "UPDATE` newsletter_master` SET `checkpoint_sentmail` = '0', TotalnoOfemails = '0', noOfMailSent = '0' WHERE id = 1" );
+			$ data [ 'display_msg' ] = '
+			<div class = "alert alert-success" role = "alert"> Mailer a été réinitialisé avec succès. Cliquez <a href="' site_url ("mailer/draft_mail" ).'">. </a> pour composer / mail envoyé </ div>. ;
+			$ data [ 'main_content' ] = 'msg.php' ;
+			$ this -> load -> view ( 'includes / site_template.php' , $ data );
+		}
+	}
