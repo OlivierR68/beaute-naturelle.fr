@@ -143,7 +143,7 @@ class Slides extends CI_Controller {
 
 		if ($id > 0) { // modification de l'affichage selon on se trouve
 
-			$data['TITLE'] 		= "Modifier du slide :".$objSlide->getLibelle();
+			$data['TITLE'] 		= "Modifier le slide : ".$objSlide->getLibelle();
 			$data['buttonSubmit']  = "Modifier";
 			$data['buttonCancel']  = "Revenir à la liste";
 

@@ -3,10 +3,12 @@
 
 <div class="container-fluid">
 	<h1 class="mt-4">{$TITLE}</h1>
-	<ol class="breadcrumb mb-4">
-		<li class="breadcrumb-item active"></li>
-		<li>{ctrl_name()} / {page_name()}</li>
-	</ol>
+    {if ctrl_name() != 'dashboard'}
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active"></li>
+            <li><a href="{site_url('dashboard')}">Tableau de bord</a> / <a href="{base_url()}{ctrl_name()}/ListPage">{ctrl_slug()}</a> / {$TITLE}</li>
+        </ol>
+    {/if}
 
 	{if !empty($ERROR)}
 		<div class="alert alert-danger" role="alert">

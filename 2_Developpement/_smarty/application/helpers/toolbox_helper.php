@@ -68,4 +68,20 @@ function flash_data($name)
     return $ci->session->flashdata($name);
 }
 
+function ctrl_slug()
+{
+    $ctrl = ctrl_name();
+
+    switch ($ctrl) {
+        case "dashboard"    : $slug = "Tableau de bord";        break;
+        case "events"       : $slug = "Événements";             break;
+        case "images"       : $slug = "Galerie d'image";        break;
+        case "pages"        : $slug = "Pages";                  break;
+        case "prestations"  : $slug = "Prestations";            break;
+        case "slides"       : $slug = "Slider page d'accueil";  break;
+        case "users"        : $slug = "Utilisateurs";           break;
+    }
+
+    return $slug;
+}
 
