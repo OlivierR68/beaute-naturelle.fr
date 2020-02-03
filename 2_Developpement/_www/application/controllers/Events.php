@@ -83,6 +83,7 @@ class Events extends CI_Controller {
 		if($id >= 0) {
 
 			$objEvent->hydrate($this->Events_manager->findOne($id));
+			//var_dump($objEvent);
 		}
 
 		// on vérifie si il y des choses qui ont été envoyés par le formulaire ($_POST)

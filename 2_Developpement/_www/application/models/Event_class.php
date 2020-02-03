@@ -102,6 +102,15 @@ class Event_class extends CI_Model {
 		}
 	}
 
+	public function getStart_date_form(){
+		return date('Y-m-d', strtotime($this->_event_start_date));
+	}
+
+
+	public function getEnd_date_form(){
+		return date('Y-m-d', strtotime($this->_event_end_date));
+	}
+
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){
@@ -113,7 +122,7 @@ class Event_class extends CI_Model {
 	}
 
 	public function setName($name){
-		$this->_event_name = $name;
+		$this->_event_name = ucfirst($name);
 	}
 
 	public function setSlug($slug){
@@ -121,15 +130,15 @@ class Event_class extends CI_Model {
 	}
 
 	public function setCreate_date($create_date){
-		$this->_event_create_date = date("d-m-Y", strtotime($create_date));
+		$this->_event_create_date = date('Y-m-d H:i:s', strtotime($create_date));
 	}
 
 	public function setStart_date($start_date){
-		$this->_event_start_date = date("d-m-Y", strtotime($start_date));
+		$this->_event_start_date = date('Y-m-d H:i:s', strtotime($start_date));
 	}
 
 	public function setEnd_date($end_date){
-		$this->_event_end_date = date("d-m-Y", strtotime($end_date));
+		$this->_event_end_date = date('Y-m-d H:i:s', strtotime($end_date));
 	}
 
 	public function setContent($content){
