@@ -60,7 +60,7 @@ class Images extends CI_Controller
 		
 	}
 
-}
+
 
 
 	/** Fonction permettant de créer ou de modifier un événement
@@ -172,7 +172,7 @@ class Images extends CI_Controller
 	* @param int $id identifiant bdd de l'événement
 	*/
 	public function delete($id)
-	{
+	{ 
 
 		$this->Images_manager->delete($id);
 		$this->session->set_flashdata('error', "L'image' #$id a été supprimé");
