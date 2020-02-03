@@ -58,5 +58,5 @@
 	</div>
 
 
-	<button type="submit" class="btn btn-primary"><?php echo $buttonSubmit ?></button> <a href="<?php echo base_url('slides/listPage')?>" class="btn btn-dark"><?php echo $buttonCancel ?></a>
+	<button type="submit" class="btn btn-primary"><?php echo $buttonSubmit ?></button> <a href="<?php echo base_url('events/listPage')?>" class="btn btn-dark"><?php echo $buttonCancel ?></a>
 </form>

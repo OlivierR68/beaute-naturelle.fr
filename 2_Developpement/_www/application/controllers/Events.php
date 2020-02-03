@@ -186,7 +186,7 @@ class Events extends CI_Controller {
 
 		$this->Events_manager->copy($id);
 		$this->session->set_flashdata('success', "L'événement' #$id a été copié");
-		redirect('events/ListePage', 'refresh');
+		redirect('events/ListPage', 'refresh');
 
 	}
 }
