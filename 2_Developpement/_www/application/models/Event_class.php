@@ -103,12 +103,12 @@ class Event_class extends CI_Model {
 	}
 
 	public function getStart_date_form(){
-		return date('Y-m-d', strtotime($this->_event_start_date));
+		return date('d-m-Y', strtotime($this->_event_start_date));
 	}
 
 
 	public function getEnd_date_form(){
-		return date('Y-m-d', strtotime($this->_event_end_date));
+		return date('d-m-Y', strtotime($this->_event_end_date));
 	}
 
 	/** SETTERS (pour chaque attribut) **/
