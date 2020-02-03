@@ -13,7 +13,7 @@
 
 				
 				<div class="col-8">
-					<span class="bn_h2-pre">Du <?php echo $objEvent->getStart_date() ?> au <?php echo $objEvent->getEnd_date() ?></span>
+					<span class="bn_h2-pre">Du <?php echo $objEvent->getStart_date_form() ?> au <?php echo $objEvent->getEnd_date_form() ?></span>
 					<h2><?php echo $objEvent->getName() ?></h2>
 					<p><?php echo $objEvent->getContent() ?></p>
 					<div>

@@ -83,6 +83,7 @@ class Events extends CI_Controller {
 		if($id >= 0) {
 
 			$objEvent->hydrate($this->Events_manager->findOne($id));
+			//var_dump($objEvent);
 		}
 
 		// on vérifie si il y des choses qui ont été envoyés par le formulaire ($_POST)
@@ -186,7 +187,7 @@ class Events extends CI_Controller {
 
 		$this->Events_manager->copy($id);
 		$this->session->set_flashdata('success', "L'événement' #$id a été copié");
-		redirect('events/ListePage', 'refresh');
+		redirect('events/ListPage', 'refresh');
 
 	}
 }
