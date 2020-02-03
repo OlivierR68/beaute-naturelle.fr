@@ -14,7 +14,7 @@
                     <a src="<?php echo base_url("assets/img/album/").$objImage->getSrc() ?>" data-lightbox="roadtrip">
                     <div class="bn_galerie-img">
                         <img src="<?php echo base_url("assets/img/album/").$objImage->getSrc() ?>" alt="Belle Photo">
-                           <p><?php echo $objImage->getId() ?></p>
+                           <p><?php echo $objImage->getAuthor() ?></p>
                     </div>
 
                 </a>

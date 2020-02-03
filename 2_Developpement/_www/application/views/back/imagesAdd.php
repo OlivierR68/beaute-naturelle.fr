@@ -9,7 +9,7 @@
 		<div class="form-group">
 			<?php if (!empty($objImage->getId())) { ?>
 				<div>
-					<img src="<?php echo base_url('assets/img').'/'.$objImage->getSrc();  ?>" alt="" class="w-25 py-4 border-light">
+					<img src="<?php echo base_url('assets/img/album/').'/'.$objImage->getSrc();  ?>" alt="" class="w-25 py-4 border-light">
 				</div>
 
 
