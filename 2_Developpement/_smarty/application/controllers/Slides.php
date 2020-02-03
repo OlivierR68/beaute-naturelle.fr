@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Slides extends CI_Controller {
 
 
+
 	public function __construct(){
 		parent::__construct();
 		$this->load->model("Slides_manager");
@@ -32,6 +33,10 @@ class Slides extends CI_Controller {
 		}
 		$data['arrSlides'] 	= $slidesToDisplay;
 
+/**
+		$data['CONTENT'] = $this->load->view('content',$data,TRUE);
+        $this->load->view('content',$data);
+*/
 
         $data['CONTENT'] = $this->smarty->fetch('front/home.tpl', $data);
         $this->smarty->display('front/content.tpl', $data);

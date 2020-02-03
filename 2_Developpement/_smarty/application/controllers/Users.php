@@ -12,7 +12,8 @@ class Users extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model("User_manager");
+        $this->load->model("Users_manager");
+        $this->load->model("User_class");
 
 	}
 
@@ -34,9 +35,20 @@ class Users extends CI_Controller {
 		$data['TITLE'] 		= "Rejoignez notre communauté!";
 		$data['headerImg']	= "img-register.jpg";
 
+        if (!empty($this->input->post())) {
+            $objUser = new User_class();
 
-		$data['CONTENT'] = $this->load->view('front/register', $data, TRUE);
-		$this->load->view('front/min-content', $data);
+            $objUser->hydrate($this->input->post());
+            $objUser->setProfil_id(1);
+            $this->Users_manager->createAccount($objUser);
+
+            $data['SUCCESS'] = "Utilisateur Créer avec succès!";
+
+
+        }
+
+        $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
+        $this->smarty->display('front/min-content.tpl', $data);
 	}
 
 

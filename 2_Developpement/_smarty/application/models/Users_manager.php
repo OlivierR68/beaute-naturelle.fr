@@ -9,7 +9,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_manager extends CI_Model {
+class Users_manager extends CI_Model {
 
 	/**
 	 * Fonction permettant de récupérer la liste des articles
@@ -26,5 +26,15 @@ class User_manager extends CI_Model {
 
 		return $query->row();
 	}
+
+	public function createAccount($obj) {
+
+        if (method_exists($obj, 'getArray')) {
+            $this->db->insert('user', $obj->getArray());
+        }
+
+        return $this->db->insert_id();
+
+    }
 
 }

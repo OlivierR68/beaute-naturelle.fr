@@ -8,14 +8,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  */
 
-class Slide_class extends CI_Model {
+class User_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
-	private $_slide_id;
-	private $_slide_libelle;
-	private $_slide_img;
-	private $_slide_type;
-	private $_slide_title;
-	private $_slide_text;
+
+    private $_user_id;
+    private $_user_pseudo;
+    private $_user_pwd;
+    private $_user_inscription_date;
+    private $_user_last_name;
+    private $_user_first_name;
+    private $_user_age;
+    private $_user_gender;
+    private $_user_email;
+    private $_user_tel;
+    private $_user_profil_id;
 
 	/** Constructeur **/
 	public function __construct(){
@@ -38,67 +44,110 @@ class Slide_class extends CI_Model {
 
 	/** GETTERS (pour chaque attribut) **/
 	public function getId(){
-		return $this->_slide_id;
+		return $this->_user_id;
 	}
 
-	public function getLibelle(){
-		return $this->_slide_libelle;
+	public function getPseudo(){
+		return $this->_user_pseudo;
 	}
 
-	public function getImg(){
-		return $this->_slide_img;
+	public function getPwd(){
+		return $this->_user_pwd;
 	}
 
-	public function getType(){
-		return $this->_slide_type;
+	public function getInscription_date(){
+		return $this->_user_inscription_date;
 	}
 
-	public function getTitle(){
-		return $this->_slide_title;
+	public function getLast_name(){
+		return $this->_user_last_name;
 	}
 
-	/** GETTER pour sous-titre raccourci
-	 * @param $strLimit integer Limite de taille de la chaîne de caractère
-	 * @return string sous-titre
-	 */
+    public function getFirst_name(){
+        return $this->_user_first_name;
+    }
 
-	public function getShortTitle($strLimit = 50){
+    public function getAge(){
+        return $this->_user_age;
+    }
 
-		if(strlen($this->_slide_title) > $strLimit) {
-			return substr($this->_slide_title, 0, $strLimit)."..."; ;
-		} else {
-			return $this->_slide_title;
-		}
-	}
+    public function getGender(){
+        return $this->_user_gender;
+    }
 
-	public function getText(){
-		return $this->_slide_text;
-	}
+    public function getEmail(){
+        return $this->_user_email;
+    }
 
-	/** SETTERS (pour chaque attribut) **/
+    public function getTel(){
+        return $this->_user_tel;
+    }
 
+    public function getProfil_id(){
+        return $this->_user_profil_id;
+    }
+
+
+    public function getArray(){
+
+        $varArray = ['id','pseudo','pwd','inscription_date','last_name','first_name','age','gender','email','tel','profil_id'];
+        $array = array();
+
+        foreach ($varArray as &$var) {
+            $varName = "_user_".$var;
+            $keyName = substr($varName,1);
+            $array[$keyName] =  $this->$varName;
+        }
+
+        return $array;
+
+    }
+
+    /** SETTERS (pour chaque attribut) *
+     * @param $id
+     */
 	public function setId($id){
-		$this->_slide_id = $id;
+		$this->_user_id = $id;
 	}
 
-	public function setLibelle($id){
-		$this->_slide_libelle = $id;
+	public function setPseudo($pseudo){
+		$this->_user_pseudo = trim($pseudo);
 	}
 
-	public function setImg($img){
-		$this->_slide_img = $img;
+	public function setPwd($pwd){
+		$this->_user_pwd = password_hash($pwd , PASSWORD_DEFAULT);
 	}
 
-	public function setType($type){
-		$this->_slide_type = $type;
+	public function setInscription_date($date){
+		$this->_user_inscription_date = $date;
 	}
 
-	public function setTitle($title){
-		$this->_slide_title = $title;
+	public function setLast_name($name){
+		$this->_user_last_name = trim($name);
 	}
 
-	public function setText($text){
-		$this->_slide_text = $text;
+    public function setFirst_name($name){
+        $this->_user_first_name = trim($name);
+    }
+
+	public function setAge($age){
+		$this->_user_age = trim($age);
 	}
+
+    public function setGender($gender){
+        $this->_user_gender = $gender;
+    }
+
+    public function setEmail($email){
+        $this->_user_email = $email;
+    }
+
+    public function setTel($tel){
+        $this->_user_tel = $tel;
+    }
+
+    public function setProfil_id($id){
+        $this->_user_profil_id = $id;
+    }
 
 }

@@ -41,7 +41,7 @@ class Images extends CI_Controller
 
 	}
 
-	/** Back : Fonction permettant d'afficher la liste des images  */
+	/** Back : Fonction permettant d'afficher la liste des images */
 	public function ListPage()
 	{
 		$data['TITLE'] 		= "Liste des images";
