@@ -60,7 +60,7 @@ class Images extends CI_Controller
 		
 	}
 
-}
+
 
 
 	/** Fonction permettant de créer ou de modifier un événement
@@ -99,7 +99,7 @@ class Images extends CI_Controller
 			if($_FILES['img']['size'] > 0){
 
 				//  on configure l'upload de l'image
-				$config['upload_path']      = './assets/img/';
+				$config['upload_path']      = './assets/img/album';
 				$config['allowed_types']    = 'gif|jpg|jpeg|png';
 				$config['max_size']        	= 2048;
 
@@ -132,13 +132,13 @@ class Images extends CI_Controller
 			}
 
 
-			// crée ou on modifie un événement selon si on est dans la page de création ou modification
+			// crée ou on modifie une image selon si on est dans la page de création ou modification
 			if($id < 0){
 
 				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
-				redirect('images/addEdit/'.$insertId, 'refresh'); // rédirrection sur la page modification
+				redirect('images/addEdit/'.$insertId, 'refresh'); // redirection sur la page modification
 
 			} else {
 
@@ -172,7 +172,7 @@ class Images extends CI_Controller
 	* @param int $id identifiant bdd de l'événement
 	*/
 	public function delete($id)
-	{
+	{ 
 
 		$this->Images_manager->delete($id);
 		$this->session->set_flashdata('error', "L'image' #$id a été supprimé");
@@ -189,7 +189,7 @@ class Images extends CI_Controller
 	{
 
 		$this->Images_manager->copy($id);
-		$this->session->set_flashdata('success', "L'événement' #$id a été copié");
+		$this->session->set_flashdata('success', "L'image' #$id a été copié");
 		redirect('images/ListePage', 'refresh');
 
 	}

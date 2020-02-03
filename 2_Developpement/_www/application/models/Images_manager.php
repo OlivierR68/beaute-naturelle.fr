@@ -82,3 +82,7 @@ class Images_manager extends CI_Model {
 		$this->db->insert('image', $array);
 	}
 }
+
+
+
+
