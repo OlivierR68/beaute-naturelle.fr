@@ -1,7 +1,9 @@
 
+
 {include file="./templates/header.tpl"}
 
 <div class="container-fluid">
+
 	<h1 class="mt-4">{$TITLE}</h1>
     {if ctrl_name() != 'dashboard'}
         <ol class="breadcrumb mb-4">
@@ -9,6 +11,10 @@
             <li><a href="{site_url('dashboard')}">Tableau de bord</a> / <a href="{base_url()}{ctrl_name()}/ListPage">{ctrl_slug()}</a> / {$TITLE}</li>
         </ol>
     {/if}
+
+    <ol class="breadcrumb mb-4">
+        <li> {$smarty.session|var_dump}</li>
+    </ol>
 
 	{if !empty($ERROR)}
 		<div class="alert alert-danger" role="alert">
