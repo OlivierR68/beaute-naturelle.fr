@@ -99,7 +99,7 @@ class Images extends CI_Controller
 			if($_FILES['img']['size'] > 0){
 
 				//  on configure l'upload de l'image
-				$config['upload_path']      = './assets/img/album';
+				$config['upload_path']      = './assets/img/album/';
 				$config['allowed_types']    = 'gif|jpg|jpeg|png';
 				$config['max_size']        	= 2048;
 
@@ -134,7 +134,6 @@ class Images extends CI_Controller
 
 			// crée ou on modifie une image selon si on est dans la page de création ou modification
 			if($id < 0){
-
 				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 

@@ -14,7 +14,7 @@
 
 
 				<label for="inputImg">Changer l'image :</label>
-			<?php } else { ?>
+				<?php } else { ?>
 
 				<label for="inputImg">Uploader une image :</label>
 
