@@ -35,15 +35,10 @@
 						<td class="bn_action">
 
 
-							<a href="{base_url('images/addEdit/'.$objImage->getId())}" title="Modifier"><i class="far fa-edit"></i></a> |
-							<a href="{base_url('images/copy/'.$objImage->getId())}" title="Copier"><i class="far fa-copy"></i></a> |
-
-							{if $objImage->getId() eq true}
-								<i title="slide" class="fas fa-trash-alt text-muted"></i>
-							{else}
-								<a href="{base_url('images/delete/'.$objImages>getId())}  ?>" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
-							{/if}
-
+							<a href="{base_url('images/addEdit/')}{$objImage->getId()}" title="Modifier"><i class="far fa-edit"></i></a> |
+							<a href="{base_url('images/copy/')}{$objImage->getId()}" title="Copier"><i class="far fa-copy"></i></a> |
+							<a href="{base_url('images/delete/')}{$objImage->getId()}" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
+					
 						</td>
 						<td>{$objImage->getSlug()}</td>
 						<td>{$objImage->getSrc()}</td>
