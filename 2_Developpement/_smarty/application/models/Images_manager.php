@@ -25,7 +25,7 @@ class Images_manager extends CI_Model {
 	 */
 	public function findOne($id)
 	{
-		$query = $this->db->where('image_id', $id)->get('image');
+		$query = $this->db->where('img_id', $id)->get('image');
 		return $query->row_array();
 	}
 
@@ -51,8 +51,8 @@ class Images_manager extends CI_Model {
 	public function update($obj)
 	{
 		if (method_exists($obj, 'getArray')) {
-			$this->db->where('image_id', $obj->getId())
-				->replace('image', $obj->getArray());
+			$this->db->where('img_id', $obj->getId())
+					 ->replace('image', $obj->getArray());
 		}
 	}
 
@@ -62,8 +62,8 @@ class Images_manager extends CI_Model {
 	 */
 	 public function delete($id)
 	 {
-		 $this->db->where('image_id', $id)
-			 ->delete('image');
+		 $this->db->where('img_id', $id)
+			 	  ->delete('image');
 	 }
 
 	/**
@@ -72,12 +72,8 @@ class Images_manager extends CI_Model {
 	 */
 	public function copy($id)
 	{
-		$query = $this->db->where('image_id', $id)->get('image');
+		$query = $this->db->where('img_id', $id)->get('image');
 		$array = $query->row_array();
-
-		$array['image_id'] = null;
-		$array['image_position'] = null;
-		$array['image_default'] = false;
 
 		$this->db->insert('image', $array);
 	}
