@@ -32,7 +32,6 @@
 					<tr>
 						<td>{$objUser->getId()}</td>
 						<td class="bn_action nowrap">
-							<a href="{base_url('users/copy/')}{$objUser->getId()}" title="Copier"><i class="far fa-copy"></i></a>
 							<a href="{base_url('users/addEdit/')}{$objUser->getId()}" title="Modifier"><i class="far fa-edit"></i></a>
 							<a href="{base_url('users/delete/')}{$objUser->getId()}" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
 						</td>

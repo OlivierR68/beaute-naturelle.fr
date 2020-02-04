@@ -25,7 +25,7 @@
 
 			<div class="form-group">
 				<label for="inputGender">Sexe : </label>
-				<select class="form-control" id="inputGender">
+				<select class="form-control" id="inputGender" name="gender">
 					<option value="1" {if $objUser->getGender() eq 1}selected{/if}>Homme</option>
 					<option value="2" {if $objUser->getGender() eq 2}selected{/if}>Femme</option>
 					<option value="3" {if $objUser->getGender() eq 3}selected{/if}>Autre</option>
@@ -35,7 +35,7 @@
 		<div class="col">
 			<div class="form-group">
 				<label for="inputTel">Téléphone  :</label>
-				<input type="tel" name="tel" class="form-control" id="inputTel" value="{$objUser->getAge()}">
+				<input type="tel" name="tel" class="form-control" id="inputTel" value="{$objUser->getTel()}">
 			</div>
 
 			<div class="form-group">
@@ -51,6 +51,15 @@
 			<div class="form-group">
 				<label for="inputEmail">Confirmation nouveau mot de passe :</label>
 				<input type="password" name="pconf" class="form-control" id="inputPconf" autocomplete="off">
+			</div>
+
+			<div class="form-group">
+				<label for="inputProfil">Profil id (à refaire...)</label>
+				<select class="form-control" id="inputProfil" name="profil_id">
+					<option value="1" {if $objUser->getGender() eq 1}selected{/if}>Membre</option>
+					<option value="2" {if $objUser->getGender() eq 2}selected{/if}>Modérateur</option>
+					<option value="3" {if $objUser->getGender() eq 3}selected{/if}>Administrateur</option>
+				</select>
 			</div>
 		</div>
 

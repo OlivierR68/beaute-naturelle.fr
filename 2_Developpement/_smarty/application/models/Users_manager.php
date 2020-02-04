@@ -92,4 +92,44 @@ class Users_manager extends CI_Model {
 
     }
 
+    /**
+     * Création d'1 slide
+     * @param $obj object Slide_class
+     * @return string l'id de l'insert
+     */
+    public function new($obj)
+    {
+        if (method_exists($obj, 'getArray')) {
+            $this->db->insert('user', $obj->getArray());
+        }
+
+        return $this->db->insert_id();
+    }
+
+
+    /**
+     * Création d'1 slide
+     * @param $obj object Slide_class
+     * @return string l'id de l'insert
+     */
+    public function update($obj)
+    {
+        if (method_exists($obj, 'getArray')) {
+            $this->db->where('user_id', $obj->getId())
+                ->replace('user', $obj->getArray());
+        }
+    }
+
+
+    /**
+     * Suppression d'1 slide
+     * @param $id integer identifiant du slide
+     */
+    public function delete($id)
+    {
+        $this->db->where('user_id', $id)
+            ->delete('user');
+    }
+
+
 }

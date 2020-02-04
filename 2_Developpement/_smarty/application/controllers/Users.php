@@ -132,14 +132,14 @@ class Users extends CI_Controller {
             if($id < 0){
 
                 $insertId = $this->Users_manager->new($objUser);
-                $this->session->set_flashdata("success", "Le slider <b>{$objUser->getLibelle()}</b> a été ajouté");
+                $this->session->set_flashdata("success", "Le slider <b>{$objUser->getPseudo()}</b> a été ajouté");
 
-                redirect('slides/addEdit/'.$insertId, 'refresh');
+                redirect('users/addEdit/'.$insertId, 'refresh');
 
             } else {
 
                 $insertId = $this->Users_manager->update($objUser);
-                $data['SUCCESS'] = "L'utilisateur <b>{$objUser->getLibelle()}</b> a été modifié";
+                $data['SUCCESS'] = "L'utilisateur <b>{$objUser->getPseudo()}</b> a été modifié";
             }
         }
 
@@ -161,5 +161,15 @@ class Users extends CI_Controller {
         $data['CONTENT'] = $this->smarty->fetch('back/usersAdd.tpl', $data);
         $this->smarty->display('back/content.tpl', $data);
     }
+
+    public function delete($id)
+    {
+
+        $this->Users_manager->delete($id);
+        $this->session->set_flashdata('error', "L'Utilisateur #$id a été supprimé");
+        redirect('users/ListPage', 'refresh');
+
+    }
+
 
 }
