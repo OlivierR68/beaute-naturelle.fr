@@ -25,6 +25,7 @@ class Events_manager extends CI_Model {
 		if (method_exists($obj, 'getArray')) {
 			$this->db->insert('event', $obj->getArray());
 		}
+		
 
 		return $this->db->insert_id();
 	}
@@ -74,8 +75,6 @@ class Events_manager extends CI_Model {
 		$array = $query->row_array();
 
 		$array['event_id'] = null;
-		$array['event_position'] = null;
-		$array['event_default'] = false;
 
 		$this->db->insert('event', $array);
 	}

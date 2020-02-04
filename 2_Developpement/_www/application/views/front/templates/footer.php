@@ -8,10 +8,12 @@
 			<div class="form-group mt-3 mt-sm-0">
 				<input type="email" class="form-control bn_newsletter-input" id="inputNewsletter"
 					   placeholder="Entrez votre adresse mail">
+					   
 			</div>
 			<button id="newsletter" type="submit" class="btn bn_btn-green ml-2">VALIDER</button>
-		
-            
+	<?php
+$mail = mail;
+?>   
 		</form>
 		<div class="bn_gap-30"></div>
 
@@ -134,6 +136,7 @@
 <!-- SCRIPTS -->
 <script src="<?php echo base_url("assets/js/main.js") ?>"></script>
 <script src="https://kit.fontawesome.com/defbc714c8.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="./assets/js/newsletter.js"></script>
 </body>
 </html>

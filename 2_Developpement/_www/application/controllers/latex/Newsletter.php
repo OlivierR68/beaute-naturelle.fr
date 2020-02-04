@@ -12,7 +12,7 @@ class Newsletter extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model("User_manager");
+		$this->load->model("footer");
 	}
     function index() {
         $this->load->view('front/templates/footer');
@@ -26,19 +26,4 @@ class Newsletter extends CI_Controller {
     echo(json_encode($insezrt));
 }
 }
-    /// ajax post request
-         
-            $(document).ready(function() {
-           }
-            $("#newsletter").click(function(e) {
-                e.preventDefault();
-                var email = $("yurEmail").val();
-                $.ajax({
-                type: "POST",
-                url: post_url,
-                data : {"email" : email},
-                dataType: "json",
-                success: function (data) {
-                console.log(data);}
-                });
-            });
+    

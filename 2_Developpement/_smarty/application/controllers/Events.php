@@ -34,8 +34,8 @@ class Events extends CI_Controller {
 		}
 
 		$data['arrEvents'] 	= $eventsToDisplay;
-		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
-		$this->load->view('front/content', $data);
+		$data['CONTENT']	= $this->smarty->fetch('front/events.tpl', $data);
+		$this->smarty->display('front/content.tpl', $data);
 	}
 
 	/** Fonction permettant d'afficher la liste des événements
@@ -55,8 +55,8 @@ class Events extends CI_Controller {
 
 		$data['arrEvents'] 	= $eventsToDisplay;
 
-		$data['CONTENT']	= $this->load->view('back/eventsList', $data, TRUE);
-		$this->load->view('back/content', $data);
+		$data['CONTENT']	= $this->smarty->fetch('back/eventsList.tpl', $data);
+		$this->smarty->display('back/content.tpl', $data);
 	}
 
 
@@ -72,7 +72,7 @@ class Events extends CI_Controller {
 		 	-1 = page de création | 1+ = page de modification
 		 */
 
-		$data['SUCCESS'] = $this->session->flashdata('success') ?? ''; // récupération du message de succes si il a été envoyé
+		// récupération du message de succes si il a été envoyé
 
 		 // Création d'un objet event qu'on utilisera tout au long de la fonction
 		$objEvent = new Event_class();
@@ -83,6 +83,7 @@ class Events extends CI_Controller {
 		if($id >= 0) {
 
 			$objEvent->hydrate($this->Events_manager->findOne($id));
+			//var_dump($objEvent);
 		}
 
 		// on vérifie si il y des choses qui ont été envoyés par le formulaire ($_POST)
@@ -130,7 +131,7 @@ class Events extends CI_Controller {
 
 			// crée ou on modifie un événement selon si on est dans la page de création ou modification
 			if($id < 0){
-
+				$objEvent->setSlug();
 				$insertId = $this->Events_manager->new($objEvent); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'événement' <b>{$objEvent->getName()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
@@ -160,8 +161,8 @@ class Events extends CI_Controller {
 
 		}
 
-		$data['CONTENT']	= $this->load->view('back/eventsAdd', $data, TRUE);
-		$this->load->view('back/content', $data);
+		$data['CONTENT']	= $this->smarty->fetch('back/eventsAdd.tpl', $data);
+		$this->smarty->display('back/content.tpl', $data);
 	}
 
 	/** Fonction permettant de supprimer un événement et de rediriger sur la page de la liste
@@ -186,7 +187,7 @@ class Events extends CI_Controller {
 
 		$this->Events_manager->copy($id);
 		$this->session->set_flashdata('success', "L'événement' #$id a été copié");
-		redirect('events/ListePage', 'refresh');
+		redirect('events/ListPage', 'refresh');
 
 	}
 }
