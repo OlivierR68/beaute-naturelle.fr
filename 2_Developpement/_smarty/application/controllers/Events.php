@@ -72,7 +72,7 @@ class Events extends CI_Controller {
 		 	-1 = page de création | 1+ = page de modification
 		 */
 
-		$data['SUCCESS'] = $this->session->flashdata('success') ?? ''; // récupération du message de succes si il a été envoyé
+		// récupération du message de succes si il a été envoyé
 
 		 // Création d'un objet event qu'on utilisera tout au long de la fonction
 		$objEvent = new Event_class();
@@ -131,7 +131,7 @@ class Events extends CI_Controller {
 
 			// crée ou on modifie un événement selon si on est dans la page de création ou modification
 			if($id < 0){
-
+				$objEvent->setSlug();
 				$insertId = $this->Events_manager->new($objEvent); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'événement' <b>{$objEvent->getName()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 

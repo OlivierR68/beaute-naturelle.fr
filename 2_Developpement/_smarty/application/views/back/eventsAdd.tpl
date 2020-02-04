@@ -4,10 +4,6 @@
 		<input type="text" name="name" class="form-control" id="inputName" value="{$objEvent->getName()}" required>
 	</div>
 	
-	<div class="form-group">
-		<label for="inputSlug">Slug :</label>
-		<input type="text" name="slug" class="form-control" id="inputSlug" value="{$objEvent->getSlug()}" disabled>
-	</div>
 
 	<div class="form-group">
 		<label for="inputStartDate">Date de début :</label>
