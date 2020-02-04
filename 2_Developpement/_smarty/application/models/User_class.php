@@ -22,6 +22,7 @@ class User_class extends CI_Model {
     private $_user_email;
     private $_user_tel;
     private $_user_profil_id;
+    private $_user_profil_libelle;
 
 	/** Constructeur **/
 	public function __construct(){
@@ -34,7 +35,7 @@ class User_class extends CI_Model {
 	 */
 	public function hydrate($datas){
 		foreach($datas as $keyData => $data){
-			$strSetter	= "set".str_replace("slide_", "", $keyData);
+			$strSetter	= "set".str_replace("user_", "", $keyData);
 			if (method_exists($this, $strSetter)){
 				$this->$strSetter($data);
 			}
@@ -85,6 +86,10 @@ class User_class extends CI_Model {
 
     public function getProfil_id(){
         return $this->_user_profil_id;
+    }
+
+    public function getProfil_libelle(){
+        return $this->_user_profil_libelle;
     }
 
 
@@ -148,6 +153,10 @@ class User_class extends CI_Model {
 
     public function setProfil_id($id){
         $this->_user_profil_id = $id;
+    }
+
+    public function setProfil_libelle($libelle){
+        $this->_user_profil_libelle = $libelle;
     }
 
 }

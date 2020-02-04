@@ -94,18 +94,18 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link collapsed {active_page('users','active',1)}" href="{site_url("users/listPage")}" data-toggle="collapse" data-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
 						Utilisateurs
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
 
-					<div class="collapse" id="collapseLayouts6" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+					<div class="collapse  {active_page('users','show',1)}" id="collapseLayouts6" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="#">Liste des utilisateurs</a>
-							<a class="nav-link" href="#">Ajouter un utilisateur</a>
-							<a class="nav-link" href="#">Liste des profiles</a>
-							<a class="nav-link" href="#">Ajouter un profile</a>
+							<a class="nav-link {active_page('users/listPage')}" href="{site_url("users/listPage")}">Liste des utilisateurs</a>
+							<a class="nav-link {active_page('users/addEdit')}" href="{site_url("users/addEdit")}">Ajouter un utilisateur</a>
+							<a class="nav-link {active_page('profiles/listPage')}" href="{site_url("profiles/listPage")}">Liste des profiles</a>
+							<a class="nav-link {active_page('profiles/addEdit')}" href="{site_url("profiles/addEdit")}">Ajouter un profile</a>
 						</nav>
 					</div>
 

@@ -23,19 +23,19 @@
 	</div>
 
 	<div class="form-label-group">
-		{form_input('name="email" id="inputEmail" class="form-control" placeholder="Adresse Email" required',set_value('email'))}
+		{form_input('name="email" id="inputEmail" class="form-control" placeholder="Adresse Email" required autocomplete="off"',set_value('email'))}
 		{form_error('email', '<div class="invalid-feedback">', '</div>')}
 		{form_label('Adresse Email', 'inputEmail')}
 	</div>
 
 	<div class="form-label-group">
-		{form_password('name="pwd" id="inputPassword" class="form-control" placeholder="Mot de Passe" required',set_value('pwd'))}
+		{form_password('name="pwd" id="inputPassword" class="form-control" placeholder="Mot de Passe" required autocomplete="off"',set_value('pwd'))}
 		{form_error('pwd', '<div class="invalid-feedback">', '</div>')}
 		{form_label('Mot de Passe', 'inputPassword')}
 	</div>
 
 	<div class="form-label-group">
-		{form_password('name="pconf" id="inputPassconf" class="form-control" placeholder="Mot de Passe" required',set_value('pconf'))}
+		{form_password('name="pconf" id="inputPassconf" class="form-control" placeholder="Mot de Passe" required autocomplete="off"',set_value('pconf'))}
 		{form_error('pconf', '<div class="invalid-feedback">', '</div>')}
 		{form_label('Confirmation Mot de Passe', 'inputPassconf')}
 	</div>

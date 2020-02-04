@@ -53,6 +53,17 @@ class Users_manager extends CI_Model {
         return $result;
     }
 
+    public function findOne($id)
+    {
+        $query = $this->db->where('user_id', $id)->get('user');
+        return $query->row_array();
+    }
+
+    public function findAll()
+    {
+        $queryGroup = $this->db->join('profil', 'profil.profil_id = user.user_profil_id')->get('user');
+        return $queryGroup->result_array();
+    }
 
 
     public function getSessionData($id){

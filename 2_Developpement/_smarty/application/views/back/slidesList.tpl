@@ -40,7 +40,7 @@
 							<?php } ?>
 
 							<?php if($objSlide->getPosition() == count($arrSlides)) { ?>
-								<i class="fas fa-arrow-down text-muted"></i> |
+								<i class="fas fa-arrow-down text-muted"></i> |slidesList.tpl
 							<?php } else { ?>
 								<a href="#" title="- Position"><i class="fas fa-arrow-down"></i></a> |
 							<?php } ?>

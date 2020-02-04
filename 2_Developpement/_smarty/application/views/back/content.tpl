@@ -12,10 +12,6 @@
         </ol>
     {/if}
 
-    <ol class="breadcrumb mb-4">
-        <li> {$smarty.session|var_dump}</li>
-    </ol>
-
 	{if !empty($ERROR)}
 		<div class="alert alert-danger" role="alert">
 			{$ERROR}
