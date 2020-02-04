@@ -1,24 +1,29 @@
 {include file="./templates/min-header.tpl"}
+
 {if isset($SUCCESS)}
-    <div class="alert alert-success" role="alert">
-        {$SUCCESS}
+    <div class="text-center" >
+        <div class="alert alert-success d-inline" role="alert">
+            {$SUCCESS}
+        </div>
     </div>
 {/if}
 
 {if isset(flash_data('success'))}
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success text-center d-inline" role="alert">
         {flash_data('success')}
     </div>
 {/if}
 
 {if isset($ERRORS)}
-    <div class="alert alert-danger" role="alert">
-        {$ERRORS}
+    <div class="text-center" >
+        <div class="alert alert-danger d-inline" role="alert">
+            {$ERRORS}
+        </div>
     </div>
 {/if}
 
 {if isset(flash_data('errors'))}
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger text-center" role="alert">
         {flash_data('errors')}
     </div>
 {/if}

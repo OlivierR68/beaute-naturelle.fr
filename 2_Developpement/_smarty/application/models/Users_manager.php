@@ -13,26 +13,42 @@ class Users_manager extends CI_Model {
 
 	/**
 	 * Fonction permettant de récupérer la liste des articles
-	 * @return array Tableau des slides
+	 * @return bool
 	 */
-	public function verify($email, $pwd){
+	public function checkPseudo($pseudo){
 
-		$this->db->select("*")
-			->from("user")
-			->where("user_email", $email)
-			->where("user_pwd", $pwd);
+		$query = $this->db->where('user_pseudo',$pseudo)
+                    ->get("user");
 
-		$query	= $this->db->get();
+        return !empty($query->row()) ? true : false;
 
-		return $query->row();
 	}
+
+    public function checkEmail($email){
+
+        $query = $this->db->where('user_email',$email)
+            ->get("user");
+
+        return !empty($query->row()) ? true : false;
+
+    }
+
+    public function getSessionData($id){
+	    $query = $this->db->where('user_id',$id)
+            ->select('user_pseudo, user_last_name AS name, user_first_name AS first_name, profil_level AS level')
+            ->from('user')
+            ->join('profil', 'profil.profil_id = user.user_profil_id')
+            ->get();
+	    return $query->row_array();
+
+    }
 
 	public function createAccount($obj) {
 
         if (method_exists($obj, 'getArray')) {
             $this->db->insert('user', $obj->getArray());
         }
-
+        $obj->setProfil_id = 3;
         return $this->db->insert_id();
 
     }
