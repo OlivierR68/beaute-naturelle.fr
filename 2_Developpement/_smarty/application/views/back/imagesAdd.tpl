@@ -1,7 +1,7 @@
 <form method="post" enctype="multipart/form-data">
 	<div class="form-group">
 		<label for="inputName">Nom de l'image :</label>
-		<input type="text" name="name" class="form-control" id="inputName" value="<?php echo $objImage->getLibelle() ?>">
+		<input type="text" name="name" class="form-control" id="inputName" value="{$objImage->getLibelle()}">
 	</div>
 
 	<div class="form-group">
@@ -23,13 +23,13 @@
 			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif">
 			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo</small>
 		</div>
-		
+
 	</div>
 
 	<div class="form-group">
 		<label for="inputContent">Description :</label>
-		<input type="textarea" name="content" class="form-control" id="inputContent" value="<?php echo $objImage->getDescription() ?>">
+		<input type="textarea" name="content" class="form-control" id="inputContent" value="{$objImage->getDescription()}">
 	</div>
 
-	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('images/listPage')}" class="btn btn-dark"><?php echo $buttonCancel ?></a>
+	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('images/listPage')}" class="btn btn-dark">{$buttonCancel}</a>
 </form>

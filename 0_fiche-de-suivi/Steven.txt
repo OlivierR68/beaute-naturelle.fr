@@ -71,4 +71,5 @@ Debug galerie
 
 04/02/2020 
 
-Final dashboard
+Galerie en smarty
+
