@@ -7,7 +7,6 @@
 						<th>id</th>
 						<th>Actions</th>
 						<th>Nom</th>
-                        <th>Mot-clé</th>
                         <th>Image</th>
 						<th>Contenu</th>
                         <th>Date de création</th>
@@ -21,7 +20,6 @@
                         <th>id</th>
 						<th>Actions</th>
 						<th>Nom</th>
-                        <th>Mot-clé</th>
                         <th>Image</th>
 						<th>Contenu</th>
                         <th>Date de création</th>
@@ -42,15 +40,15 @@
 						</td>
 
 						<td><?php echo $objEvent->getName() ?></td>
-                        <td><?php echo $objEvent->getSlug() ?></td>
 						<td><a target="_blank" href="<?php echo base_url("assets/img/events")."/".$objEvent->getImg() ?>"><?php echo $objEvent->getImg() ?></a></td>
 						<td><?php echo $objEvent->getShortContent(30) ?></td>
-                        <td><?php echo $objEvent->getCreate_date() ?></td>
-						<td><?php echo $objEvent->getStart_date() ?></td>
-						<td><?php echo $objEvent->getEnd_date() ?></td>
+                        <td><?php echo $objEvent->getCreate_date_form() ?></td>
+						<td><?php echo $objEvent->getStart_date_form() ?></td>
+						<td><?php echo $objEvent->getEnd_date_form() ?></td>
                         <td><?php echo $objEvent->getCapacity() ?></td>
 					</tr>
-				<?php } ?>
+				<?php
+					} ?>
 				</tbody>
 			</table>
 		</div>
