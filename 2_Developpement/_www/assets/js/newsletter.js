@@ -1,9 +1,9 @@
- $(document).ready(function() {
+ $(document).ready(function( {
            }
             $("#newsletter").click(function(e) {
                 e.preventDefault();
                 var email = $("#inputNewsletter").val();
-                var post_url = 
+                var post_url = $("#urlnewsletter").val();
                 $.ajax({
                 type: "POST",
                 url: post_url,
@@ -13,4 +13,3 @@
                 console.log(data);}
                 });
             });
-echo $reponse['Mail'];
