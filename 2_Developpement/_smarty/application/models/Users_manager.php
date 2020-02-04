@@ -33,9 +33,31 @@ class Users_manager extends CI_Model {
 
     }
 
+    public function checkLogin($email, $pwd)
+    {
+
+        $result = false;
+        $query = $this->db->where('user_email', $email)
+            ->get("user");
+
+        $arrUser = $query->row_array();
+        if (!empty($arrUser)) {
+
+            if (password_verify($pwd, $arrUser['user_pwd'])) {
+
+                $result = $arrUser['user_id'];
+
+            }
+        }
+
+        return $result;
+    }
+
+
+
     public function getSessionData($id){
 	    $query = $this->db->where('user_id',$id)
-            ->select('user_pseudo, user_last_name AS name, user_first_name AS first_name, profil_level AS level')
+            ->select('user_id AS id, user_pseudo AS pseudo, user_last_name AS name, user_first_name AS first_name, profil_level AS level')
             ->from('user')
             ->join('profil', 'profil.profil_id = user.user_profil_id')
             ->get();

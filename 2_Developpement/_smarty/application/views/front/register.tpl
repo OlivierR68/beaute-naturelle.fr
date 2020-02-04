@@ -1,7 +1,7 @@
 <form class="form-signin" method="post">
 	<div class="text-center my-4">
 		<img class="mb-4" src="{base_url('./assets/img/logo.svg')}" alt="logo beauté-naturelle" width="140" height="140">
-		<h1 class="h3 mb-3 font-weight-normal">Inscrivez-vous</h1>
+		<h1 class="h3 mb-3 font-weight-normal">{$TITLE}</h1>
 </div>
 
 	<div class="form-label-group">

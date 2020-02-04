@@ -21,22 +21,31 @@ class Users extends CI_Controller {
 
 	public function login()
 	{
-		$data['preTITLE']	= "Magasin & Institut";
-		$data['TITLE'] 		= "A propos de Beauté Naturelle";
-		$data['headerImg']	= "img-institut.jpg";
+        $data['TITLE']	= "Connectez-vous";
 
-		$data['CONTENT'] = $this->load->view('front/login', $data, TRUE);
-		$this->load->view('front/min-content', $data);
+        if (!empty($this->input->post())) {
+
+            $id = $this->Users_manager->checkLogin($this->input->post('email'),$this->input->post('pwd'));
+
+            if(!empty($id)) {
+                $this->connect($id);
+            } else {
+                $data['ERRORS'] = 'Identifiants de connexion incorrectes';
+            }
+
+        }
+
+        $data['CONTENT'] = $this->smarty->fetch('front/login.tpl', $data);
+        $this->smarty->display('front/min-content.tpl', $data);
 
 	}
 
 	public function connect($id)
     {
-        $this->session->sess_destroy();
 
-        $arruser = $this->Users_manager->getSessionData($id);
-        $this->session->set_userdata($arruser);
-
+        $arrUser = $this->Users_manager->getSessionData($id);
+        $arrUser['login'] = TRUE;
+        $this->session->set_userdata($arrUser);
         redirect('', 'refresh');
 
     }
@@ -51,11 +60,8 @@ class Users extends CI_Controller {
     }
 
 	public function register()
-	{
-
-		$data['preTITLE']	= "Créer votre compte";
-		$data['TITLE'] 		= "Rejoignez notre communauté!";
-		$data['headerImg']	= "img-register.jpg";
+    {
+        $data['TITLE']	= "Inscrivez-vous";
 
         $objUser = new User_class();
 

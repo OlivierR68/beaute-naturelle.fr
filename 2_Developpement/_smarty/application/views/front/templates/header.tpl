@@ -26,7 +26,6 @@
     <link rel="icon" sizes="96x96" href="{base_url("assets/favicon-96.png")}" type="image/png">
 
 </head>
-
 <body>
     <!-- Back to top button -->
     <a id="b2top-button"></a>
@@ -34,9 +33,15 @@
 
 
     <header>
-		<?php include_once 'admin-top-bar.php' ?>
+        {if isset($smarty.session.login)}
 
+            {if $smarty.session.level > 1}
 
+                {include file='./admin-top-bar.tpl'}
+
+            {/if}
+
+        {/if}
         <!--TOP BAR USER -->
 
         <div class="bn_bg-color-1">
@@ -56,8 +61,14 @@
 
 				<div class="d-none d-md-block bn_infos">
 
-					<a class="bn_infos-items" href="{site_url('users/login')}"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
-					<a class="bn_infos-items" href="{site_url('users/register')}"><i class="fas fa-user-plus"></i> S'Inscrire</a>
+                    {if isset($smarty.session.login)}
+                        <a class="bn_infos-items" href="{site_url('users/profile')}"><i class="far fa-caret-square-down"></i>Bonjour {$smarty.session.first_name}</a>
+                        <a class="bn_infos-items" href="{site_url('users/disconnect')}"><i class="fas fa-sign-out-alt"></i>Se Deconnecter</a>
+                    {else}
+                        <a class="bn_infos-items" href="{site_url('users/login')}"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
+                        <a class="bn_infos-items" href="{site_url('users/register')}"><i class="fas fa-user-plus"></i> S'Inscrire</a>
+                    {/if}
+
 
 				</div>
             </div>
