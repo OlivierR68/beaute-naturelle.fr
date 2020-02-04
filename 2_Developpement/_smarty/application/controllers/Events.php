@@ -34,8 +34,8 @@ class Events extends CI_Controller {
 		}
 
 		$data['arrEvents'] 	= $eventsToDisplay;
-		$data['CONTENT']	= $this->load->view('front/events', $data, TRUE);
-		$this->load->view('front/content', $data);
+		$data['CONTENT']	= $this->smarty->fetch('front/events.tpl', $data);
+		$this->smarty->display('front/content.tpl', $data);
 	}
 
 	/** Fonction permettant d'afficher la liste des événements
@@ -55,8 +55,8 @@ class Events extends CI_Controller {
 
 		$data['arrEvents'] 	= $eventsToDisplay;
 
-		$data['CONTENT']	= $this->load->view('back/eventsList', $data, TRUE);
-		$this->load->view('back/content', $data);
+		$data['CONTENT']	= $this->smarty->fetch('back/eventsList.tpl', $data);
+		$this->smarty->display('back/content.tpl', $data);
 	}
 
 
@@ -83,6 +83,7 @@ class Events extends CI_Controller {
 		if($id >= 0) {
 
 			$objEvent->hydrate($this->Events_manager->findOne($id));
+			//var_dump($objEvent);
 		}
 
 		// on vérifie si il y des choses qui ont été envoyés par le formulaire ($_POST)
@@ -160,8 +161,8 @@ class Events extends CI_Controller {
 
 		}
 
-		$data['CONTENT']	= $this->load->view('back/eventsAdd', $data, TRUE);
-		$this->load->view('back/content', $data);
+		$data['CONTENT']	= $this->smarty->fetch('back/eventsAdd.tpl', $data);
+		$this->smarty->display('back/content.tpl', $data);
 	}
 
 	/** Fonction permettant de supprimer un événement et de rediriger sur la page de la liste
@@ -186,7 +187,7 @@ class Events extends CI_Controller {
 
 		$this->Events_manager->copy($id);
 		$this->session->set_flashdata('success', "L'événement' #$id a été copié");
-		redirect('events/ListePage', 'refresh');
+		redirect('events/ListPage', 'refresh');
 
 	}
 }

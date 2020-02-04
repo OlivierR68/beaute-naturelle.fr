@@ -29,7 +29,7 @@
 		<div class="form-group">
 			{if (!empty($objEvent->getImg()))}
 				<div>
-					<img src="{base_url('assets/img').'/'.$objEvent->getImg();}" alt="" class="w-25 py-4 border-light">
+					<img src="{base_url('assets/img')}{$objEvent->getImg()}" alt="" class="w-25 py-4 border-light">
 				</div>
 
 
@@ -52,5 +52,5 @@
 		<textarea name="content" class="form-control" id="inputContent"  required>{$objEvent->getContent()}</textarea>
 	</div>
 
-	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('events/listPage'}" class="btn btn-dark">{$buttonCancel}</a>
+	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('events/listPage')}" class="btn btn-dark">{$buttonCancel}</a>
 </form>

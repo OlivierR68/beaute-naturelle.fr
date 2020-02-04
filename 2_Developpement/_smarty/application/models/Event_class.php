@@ -102,6 +102,19 @@ class Event_class extends CI_Model {
 		}
 	}
 
+	public function getCreate_date_form(){
+		return date('d-m-Y', strtotime($this->_event_create_date));
+	}
+
+	public function getStart_date_form(){
+		return date('d-m-Y', strtotime($this->_event_start_date));
+	}
+
+
+	public function getEnd_date_form(){
+		return date('d-m-Y', strtotime($this->_event_end_date));
+	}
+
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){
@@ -113,23 +126,43 @@ class Event_class extends CI_Model {
 	}
 
 	public function setName($name){
-		$this->_event_name = $name;
+		$this->_event_name = ucfirst($name);
 	}
 
-	public function setSlug($slug){
-		$this->_event_slug = $slug;
+	public function setSlug(){
+		$name = $this->getName();
+		$arrAcc = array(
+			'e' => array('é', 'ë', 'ê', 'è', 'É', 'È', 'Ê', 'Ë'),
+			'a' => array('à', 'â', 'ä', 'ã', 'À', 'Â', 'Ä', 'Ã'),
+			'i' => array('ï', 'î', 'ì', 'Ì', 'Ï', 'Î'),
+			'o' => array('ö', 'ô', 'ò', 'õ', 'Ö', 'Ô', 'Ò', 'Õ'),
+			'u' => array('ù', 'û', 'ü', 'Ù', 'Û', 'Ü')
+		);
+
+		foreach($arrAcc as $key => $array){
+			foreach($array as $value){
+
+				$name = str_replace($value, $key, $name);
+				
+				
+			}
+		}
+
+		$name = trim(strtolower($name));
+		$name = str_replace(' ', '-',$name);
+		$this->_event_slug = $name;
 	}
 
 	public function setCreate_date($create_date){
-		$this->_event_create_date = date("d-m-Y", strtotime($create_date));
+		$this->_event_create_date = $create_date;
 	}
 
 	public function setStart_date($start_date){
-		$this->_event_start_date = date("d-m-Y", strtotime($start_date));
+		$this->_event_start_date = $start_date;
 	}
 
 	public function setEnd_date($end_date){
-		$this->_event_end_date = date("d-m-Y", strtotime($end_date));
+		$this->_event_end_date = $end_date;
 	}
 
 	public function setContent($content){
