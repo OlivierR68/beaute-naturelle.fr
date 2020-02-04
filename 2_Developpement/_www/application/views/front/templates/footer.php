@@ -9,7 +9,9 @@
 				<input type="email" class="form-control bn_newsletter-input" id="inputNewsletter"
 					   placeholder="Entrez votre adresse mail">
 			</div>
-			<button type="submit" class="btn bn_btn-green ml-2">VALIDER</button>
+			<button id="newsletter" type="submit" class="btn bn_btn-green ml-2">VALIDER</button>
+		
+            
 		</form>
 		<div class="bn_gap-30"></div>
 

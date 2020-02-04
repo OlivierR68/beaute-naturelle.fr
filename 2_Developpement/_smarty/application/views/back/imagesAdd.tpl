@@ -7,18 +7,18 @@
 	<div class="form-group">
 
 		<div class="form-group">
-			<?php if (!empty($objImage->getId())) { ?>
+			{if (!empty($objImage->getId()))}
 				<div>
-					<img src="<?php echo base_url('assets/img/album/').'/'.$objImage->getSrc();  ?>" alt="" class="w-25 py-4 border-light">
+					<img src="{base_url('assets/img/album/')}{$objImage->getSrc()}" alt="" class="w-25 py-4 border-light">
 				</div>
 
 
 				<label for="inputImg">Changer l'image :</label>
-				<?php } else { ?>
+			{else}
 
 				<label for="inputImg">Uploader une image :</label>
 
-			<?php } ?>
+			{/if}
 
 			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif">
 			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo</small>
@@ -31,5 +31,5 @@
 		<input type="textarea" name="content" class="form-control" id="inputContent" value="<?php echo $objImage->getDescription() ?>">
 	</div>
 
-	<button type="submit" class="btn btn-primary"><?php echo $buttonSubmit ?></button> <a href="<?php echo base_url('images/listPage')?>" class="btn btn-dark"><?php echo $buttonCancel ?></a>
+	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('images/listPage')}" class="btn btn-dark"><?php echo $buttonCancel ?></a>
 </form>
