@@ -43,3 +43,4 @@ class Newsletter extends CI_Controller {
          return $result;
         }
     }
+var post_url = "<?- site_url(uri:'') ?>";
