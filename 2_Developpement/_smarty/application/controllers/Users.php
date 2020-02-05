@@ -96,5 +96,20 @@ class Users extends CI_Controller {
         $this->smarty->display('front/min-content.tpl', $data);
 	}
 
+    public function register2()
+    {
+        $data['TITLE']	= "Inscrivez-vous 2";
+        $this->load->library('form_validation');
+
+
+
+
+
+
+
+        $data['CONTENT'] = $this->smarty->fetch('front/register2.tpl', $data);
+        $this->smarty->display('front/min-content.tpl', $data);
+    }
+
 
 }
