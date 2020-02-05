@@ -187,7 +187,7 @@ class Users extends CI_Controller {
 
         foreach ($arrConfig as $name => $formGroup) {
             $strType = 'form_'.$formGroup['type'];
-            $input[$name][$formGroup['type']] = $strType($name, set_value($name), "id=input".ucfirst($name)." class='form-control' placeholder='".$formGroup['name']."'");
+            $input[$name][$formGroup['type']] = $strType($name, set_value($name), "id=input".ucfirst($name)." class='form-control invalid' placeholder='".$formGroup['name']."'");
             $input[$name]['label'] = form_label($formGroup['name'],"input".ucfirst($name));
         }
 
@@ -196,7 +196,7 @@ class Users extends CI_Controller {
             $data['SUCCESS'] = 'SA MARCHE!';
         } else {
             foreach ($arrConfig as $name => $formGroup) {
-                $input[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
+                 $input[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
             }
         }
 
