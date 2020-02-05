@@ -1,6 +1,9 @@
 
 
 <main class="container bn_content">
+
+        <input type="button" name="name" class="form-control col-2 mb-4" id="inputName" value="Ajouter une image">
+
         <div class="row no-gutters bn_galerie">
 
             {foreach from=$arrImages item=$objImage}                   

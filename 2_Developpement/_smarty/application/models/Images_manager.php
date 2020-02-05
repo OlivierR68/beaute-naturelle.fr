@@ -44,19 +44,6 @@ class Images_manager extends CI_Model {
 	 }
 
 	/**
-	 * Création d'1 image
-	 * @param $obj object image_class
-	 * @return string l'id de l'insert
-	 */
-	public function update($obj)
-	{
-		if (method_exists($obj, 'getArray')) {
-			$this->db->where('img_id', $obj->getId())
-					 ->replace('image', $obj->getArray());
-		}
-	}
-
-	/**
 	 * Suppression d'1 image
 	 * @param $id integer identifiant du image
 	 */

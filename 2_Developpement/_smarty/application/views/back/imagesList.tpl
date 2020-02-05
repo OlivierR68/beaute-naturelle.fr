@@ -9,7 +9,7 @@
 					<tr>
 						<th>id</th>
 						<th>Libelle</th>
-						<th>Slug</th>
+						<th>Nom</th>
 						<th>Source</th>
 						<th>Description</th>
 						<th>Auteur</th>
@@ -19,7 +19,7 @@
 				<tfoot>
 					<tr>
 						<th>id</th>
-						<th>Libelle</th>
+						<th>Nom</th>
 						<th>Slug</th>
 						<th>Source</th>
 						<th>Description</th>

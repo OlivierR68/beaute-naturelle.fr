@@ -20,7 +20,7 @@
 
 			{/if}
 
-			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif">
+			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif" required>
 			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo</small>
 		</div>
 
@@ -28,7 +28,7 @@
 
 	<div class="form-group">
 		<label for="inputContent">Description :</label>
-		<input type="textarea" name="content" class="form-control" id="inputContent" value="{$objImage->getDescription()}">
+		<input type="textarea" name="content" class="form-control" id="inputContent" value="{$objImage->getDescription()}" required>
 	</div>
 
 	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('images/listPage')}" class="btn btn-dark">{$buttonCancel}</a>

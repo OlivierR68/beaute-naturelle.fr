@@ -138,7 +138,7 @@ class Images extends CI_Controller
 				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
-				redirect('images/AddPage', 'refresh');; // redirection sur la page modification
+				redirect('images/AddPage', 'refresh'); // redirection sur la page modification
 
 			} else {
 
