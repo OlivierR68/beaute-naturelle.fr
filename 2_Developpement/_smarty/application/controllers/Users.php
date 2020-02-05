@@ -171,18 +171,29 @@ class Users extends CI_Controller {
 
     }
 
+
+    /**
+     *  Fonction test form_validation
+     */
     public function register2()
     {
         $data['TITLE']	= "Inscrivez-vous 2";
         $this->load->library('form_validation');
 
+        $this->form_validation->set_rules('pseudo', 'Pseudo', 'required');
+        $this->form_validation->set_rules('last_name', 'Nom', 'required');
+        $this->form_validation->set_rules('first_name', 'Prenom', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('pwd', 'Mot de passe', 'required');
+        $this->form_validation->set_rules('pconf', 'Confirmation mot de passe', 'required');
 
 
+        if ($this->form_validation->run() == TRUE)
+        {
+            $data['SUCCESS'] = 'SA MARCHE!';
+        }
 
-
-
-
-        $data['CONTENT'] = $this->smarty->fetch('front/register2.tpl', $data);
+        $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
         $this->smarty->display('front/min-content.tpl', $data);
     }
 
