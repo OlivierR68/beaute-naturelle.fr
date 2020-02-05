@@ -13,6 +13,7 @@ class Events extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Events_manager");
 		$this->load->model("Event_class");
+		$this->load->model("Users_manager");
 		$this->load->library('upload');
 	}
 
@@ -190,4 +191,5 @@ class Events extends CI_Controller {
 		redirect('events/ListPage', 'refresh');
 
 	}
+
 }
