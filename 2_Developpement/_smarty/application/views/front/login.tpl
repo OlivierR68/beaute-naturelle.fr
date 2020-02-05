@@ -6,8 +6,8 @@
 
 
     <div class="form-label-group">
-        <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Pseudo" required autofocus>
-        <label for="inputEmail">Pseudo</label>
+        <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+        <label for="inputEmail">Email</label>
     </div>
     <div class="form-label-group">
         <input type="password" name="pwd" id="inputPassword" class="form-control" placeholder="Mot de Passe" required>

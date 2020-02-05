@@ -40,7 +40,7 @@ class Users extends CI_Controller {
 
 	}
 
-	public function connect($id)
+    public function connect($id)
     {
 
         $arrUser = $this->Users_manager->getSessionData($id);
@@ -53,13 +53,12 @@ class Users extends CI_Controller {
     public function disconnect()
     {
 
-
         $this->session->sess_destroy();
         redirect('', 'refresh');
 
     }
 
-	public function register()
+    public function register()
     {
         $data['TITLE']	= "Inscrivez-vous";
 
@@ -94,7 +93,83 @@ class Users extends CI_Controller {
         $data['objUser'] = $objUser;
         $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
         $this->smarty->display('front/min-content.tpl', $data);
-	}
+    }
+
+
+    public function listPage() {
+
+        $data['TITLE'] 	= "Liste des Utilisateurs";
+
+        $users	= $this->Users_manager->findAll();
+        $usersToDisplay = array();
+        foreach($users as $user){
+            $objUser 	= new User_class();
+            $objUser->hydrate($user);
+            $usersToDisplay[] = $objUser;
+        }
+
+        $data['arrUsers'] 	= $usersToDisplay;
+        $data['CONTENT'] = $this->smarty->fetch('back/usersList.tpl', $data);
+        $this->smarty->display('back/content.tpl', $data);
+
+    }
+
+
+    public function addEdit($id = -1)
+    {
+
+        $objUser = new User_class();
+
+        if($id >= 0) {
+            $objUser->hydrate($this->Users_manager->findOne($id));
+        }
+
+        if(!empty($this->input->post())){
+
+            $objUser->hydrate($this->input->post());
+
+
+            if($id < 0){
+
+                $insertId = $this->Users_manager->new($objUser);
+                $this->session->set_flashdata("success", "Le slider <b>{$objUser->getPseudo()}</b> a été ajouté");
+
+                redirect('users/addEdit/'.$insertId, 'refresh');
+
+            } else {
+
+                $insertId = $this->Users_manager->update($objUser);
+                $data['SUCCESS'] = "L'utilisateur <b>{$objUser->getPseudo()}</b> a été modifié";
+            }
+        }
+
+        if ($id > 0) {
+
+            $data['TITLE'] 		= "Modifier l'Utilisateur : ".$objUser->getPseudo();
+            $data['buttonSubmit']  = "Modifier";
+            $data['buttonCancel']  = "Revenir à la liste";
+
+        } else {
+
+            $data['TITLE'] 	= "Ajouter un nouvelle utilisateur";
+            $data['buttonSubmit']  = "Ajouter l'utilisateur";
+            $data['buttonCancel']  = "Annuler";
+
+        }
+
+        $data['objUser']	= $objUser;
+        $data['CONTENT'] = $this->smarty->fetch('back/usersAdd.tpl', $data);
+        $this->smarty->display('back/content.tpl', $data);
+    }
+
+    public function delete($id)
+    {
+
+        $this->Users_manager->delete($id);
+        $this->session->set_flashdata('error', "L'Utilisateur #$id a été supprimé");
+        redirect('users/ListPage', 'refresh');
+
+    }
 
     public function register2()
     {

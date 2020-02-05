@@ -53,6 +53,17 @@ class Users_manager extends CI_Model {
         return $result;
     }
 
+    public function findOne($id)
+    {
+        $query = $this->db->where('user_id', $id)->get('user');
+        return $query->row_array();
+    }
+
+    public function findAll()
+    {
+        $queryGroup = $this->db->join('profil', 'profil.profil_id = user.user_profil_id')->get('user');
+        return $queryGroup->result_array();
+    }
 
 
     public function getSessionData($id){
@@ -80,5 +91,45 @@ class Users_manager extends CI_Model {
         return $this->db->insert_id();
 
     }
+
+    /**
+     * Création d'1 slide
+     * @param $obj object Slide_class
+     * @return string l'id de l'insert
+     */
+    public function new($obj)
+    {
+        if (method_exists($obj, 'getArray')) {
+            $this->db->insert('user', $obj->getArray());
+        }
+
+        return $this->db->insert_id();
+    }
+
+
+    /**
+     * Création d'1 slide
+     * @param $obj object Slide_class
+     * @return string l'id de l'insert
+     */
+    public function update($obj)
+    {
+        if (method_exists($obj, 'getArray')) {
+            $this->db->where('user_id', $obj->getId())
+                ->replace('user', $obj->getArray());
+        }
+    }
+
+
+    /**
+     * Suppression d'1 slide
+     * @param $id integer identifiant du slide
+     */
+    public function delete($id)
+    {
+        $this->db->where('user_id', $id)
+            ->delete('user');
+    }
+
 
 }

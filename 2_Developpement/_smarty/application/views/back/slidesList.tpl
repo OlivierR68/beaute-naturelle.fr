@@ -1,7 +1,7 @@
 <a class="btn btn-primary mb-3" href="{site_url('slides/addEdit')}" role="button">Ajouter un slide</a>
 
 		<div class="table-responsive">
-			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+			<table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
 				<thead>
 					<tr>
 						<th>id</th>
@@ -29,7 +29,7 @@
 
 					<tr>
 						<td>{$objSlide->getId()}</td>
-						<td class="bn_action">
+						<td class="bn_action nowrap">
 
 							{* à implémenter si j'ai le temps...
 
@@ -40,28 +40,30 @@
 							<?php } ?>
 
 							<?php if($objSlide->getPosition() == count($arrSlides)) { ?>
-								<i class="fas fa-arrow-down text-muted"></i> |
+								<i class="fas fa-arrow-down text-muted"></i> |slidesList.tpl
 							<?php } else { ?>
 								<a href="#" title="- Position"><i class="fas fa-arrow-down"></i></a> |
 							<?php } ?>
 
 							*}
-
-							<a href="{base_url('slides/addEdit/')}{$objSlide->getId()}" title="Modifier"><i class="far fa-edit"></i></a> |
-							<a href="{base_url('slides/copy/')}{$objSlide->getId()}" title="Copier"><i class="far fa-copy"></i></a> |
-
+							<a href="{base_url('slides/copy/')}{$objSlide->getId()}" title="Copier"><i class="far fa-copy"></i></a>
 							{if $objSlide->getDefault() eq true}
+								<i title="slide" class="fas fa-edit text-muted"></i>
 								<i title="slide" class="fas fa-trash-alt text-muted"></i>
 							{else}
+								<a href="{base_url('slides/addEdit/')}{$objSlide->getId()}" title="Modifier"><i class="far fa-edit"></i></a>
 								<a href="{base_url('slides/delete/')}{$objSlide->getId()}" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i></a>
 							{/if}
-
 						</td>
 
 						<td>{$objSlide->getLibelle()}</td>
+						{if $objSlide->getDefault() eq true}
 						<td><a target="_blank" href="{base_url('assets/img')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
+						{else}
+						<td><a target="_blank" href="{base_url('uploads/slides')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
+						{/if}
 						<td>{$objSlide->getTaille()}</td>
-						<td>{$objSlide->getShortTitle(30)}</td>
+						<td>{$objSlide->getShortTitle(60)}</td>
 						<td>{$objSlide->getText()}</td>
 					</tr>
 				{/foreach}

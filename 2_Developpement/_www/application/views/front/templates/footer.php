@@ -7,19 +7,18 @@
 		<form class="form-inline justify-content-center align-items-center mt-2">
 			<div class="form-group mt-3 mt-sm-0">
 				<input type="email" class="form-control bn_newsletter-input" id="inputNewsletter"
-					   placeholder="Entrez votre adresse mail">
-					   
+					   placeholder="Entrez votre adresse mail"> 
 			</div>
-			<button id="newsletter" type="submit" class="btn bn_btn-green ml-2">VALIDER</button>
-	<?php
-$mail = mail;
-?>   
+			<button id="newsletter" type="submit" class="btn bn_btn-green ml-2">VALIDER</button> 
+			<?php
+echo 'Bonjour ' . htmlspecialchars($_GET["name"]) . '!';
+?>
 		</form>
 		<div class="bn_gap-30"></div>
 
 	</div>
 </div>
-
+<input type="text" id="urlnewsletter" class="d-none" value="<?php echo site_url("newsletter/add")?>">
 <!-- BLOCK FOOTER -->
 
 <footer class="bn_bg-color-1">
