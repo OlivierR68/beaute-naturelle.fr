@@ -128,7 +128,7 @@ class Images extends CI_Controller
 				si on dans la page de création et qu'il n'y pas d'image uploadé on assigne une image par défault,
 				attention ce n'est pas valable partout, pour la galerie par exemple il faudra refuser la création si il n'y pas d'image
 				*/
-				$objImage->setImg('album/photos-1.jpg');
+				$objImage->setId('album/photos-1.jpg');
 
 			}
 
@@ -138,7 +138,7 @@ class Images extends CI_Controller
 				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
-				redirect('images/addEdit/'.$insertId, 'refresh'); // redirection sur la page modification
+				redirect('images/AddPage', 'refresh');; // redirection sur la page modification
 
 			} else {
 
@@ -189,10 +189,11 @@ class Images extends CI_Controller
 	*/
 	public function copy($id)
 	{
-
+		
 		$this->Images_manager->copy($id);
 		$this->session->set_flashdata('success', "L'image' #$id a été copié");
-		redirect('images/ListePage', 'refresh');
+		redirect('images/ListPage', 'refresh');
+
 
 	}
 }

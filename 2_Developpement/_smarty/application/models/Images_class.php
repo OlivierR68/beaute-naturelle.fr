@@ -76,7 +76,7 @@ class Images_class extends CI_Model {
 		$array = array();
 
 		foreach ($varArray as &$var) {
-			$varName = "_image_".$var;
+			$varName = "_img_".$var;
 			$keyName = substr($varName,1);
 			$array[$keyName] =  $this->$varName;
 		}

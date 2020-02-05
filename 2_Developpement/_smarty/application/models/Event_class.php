@@ -79,7 +79,7 @@ class Event_class extends CI_Model {
 	public function getEnd_date(){
 		return $this->_event_end_date;
 	}
-	
+
 	public function getContent(){
 		return $this->_event_content;
 	}
