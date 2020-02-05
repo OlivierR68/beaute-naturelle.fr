@@ -179,20 +179,28 @@ class Users extends CI_Controller {
     {
         $data['TITLE']	= "Inscrivez-vous 2";
         $this->load->library('form_validation');
-
-        $this->form_validation->set_rules('pseudo', 'Pseudo', 'required');
-        $this->form_validation->set_rules('last_name', 'Nom', 'required');
-        $this->form_validation->set_rules('first_name', 'Prenom', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-        $this->form_validation->set_rules('pwd', 'Mot de passe', 'required');
-        $this->form_validation->set_rules('pconf', 'Confirmation mot de passe', 'required');
+        $this->config->load('register');
 
 
-        if ($this->form_validation->run() == TRUE)
-        {
-            $data['SUCCESS'] = 'SA MARCHE!';
+        $this->form_validation->set_rules($this->config->item('register_rules'));
+        $arrConfig = $this->config->item('register_form2');
+
+        foreach ($arrConfig as $name => $formGroup) {
+            $strType = 'form_'.$formGroup['type'];
+            $input[$name][$formGroup['type']] = $strType($name, set_value($name), "id=input".ucfirst($name)." class='form-control' placeholder='".$formGroup['name']."'");
+            $input[$name]['label'] = form_label($formGroup['name'],"input".ucfirst($name));
         }
 
+        if ($this->form_validation->run() == true)
+        {
+            $data['SUCCESS'] = 'SA MARCHE!';
+        } else {
+            foreach ($arrConfig as $name => $formGroup) {
+                $input[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
+            }
+        }
+
+        $data['inputArray'] = $input;
         $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
         $this->smarty->display('front/min-content.tpl', $data);
     }

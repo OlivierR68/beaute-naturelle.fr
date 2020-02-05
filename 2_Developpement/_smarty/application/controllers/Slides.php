@@ -81,21 +81,21 @@ class Slides extends CI_Controller {
 			$objSlide->hydrate($this->input->post());
 			if($_FILES['img']['size'] > 0){
 
-
+                // gestion configuration d'image
 				$config['upload_path']      = './uploads/slider/';
 				$config['allowed_types']    = 'gif|jpg|jpeg|png';
 				$config['max_size']        	= 2048;
 
 
 				$this->upload->initialize($config);
-				$this->upload->do_upload('img');
+				$this->upload->do_upload('img'); // on lance l'upload
 				if (!$this->upload->do_upload('img'))
 				{
-					$data['ERROR'] = $this->upload->display_errors();
+					$data['ERROR'] = $this->upload->display_errors(); // on envoi une erreur
 
 				} else {
 
-					$upload_data = $this->upload->data();
+					$upload_data = $this->upload->data(); // on récupère le nom et le met en attribut
 					$objSlide->setImg($upload_data['file_name']);
 
 				}
@@ -110,6 +110,7 @@ class Slides extends CI_Controller {
 			if($id < 0){
 
 				$insertId = $this->Slides_manager->new($objSlide);
+
 				$this->session->set_flashdata("success", "Le slider <b>{$objSlide->getLibelle()}</b> a été ajouté");
 
 				redirect('slides/addEdit/'.$insertId, 'refresh');
@@ -117,6 +118,7 @@ class Slides extends CI_Controller {
 			} else {
 
 				$insertId = $this->Slides_manager->update($objSlide);
+
 				$data['SUCCESS'] = "Le slider <b>{$objSlide->getLibelle()}</b> a été modifié";
 			}
 		}
