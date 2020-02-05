@@ -32,7 +32,7 @@ $( document ).ready(function() {
 
 
 	$('.bn_cube').each(function (i, el) {
-		console.log(Number($(el).html()));
+
 		if (Number($(el).html()) > 0 ) {
 			$(el).css('background','#c63939');
 		}
@@ -43,6 +43,10 @@ $( document ).ready(function() {
 		}
 
 	});
+
+	// fonction pour la page register
+
+	$('.invalid-feedback').prev().css('border','red 1px solid');
 
 
 });

@@ -181,29 +181,84 @@ class Users extends CI_Controller {
         $this->load->library('form_validation');
         $this->config->load('register');
 
-
+        // chargement regle form-validation
         $this->form_validation->set_rules($this->config->item('register_rules'));
+
+        // chargement données du formlaire
         $arrConfig = $this->config->item('register_form2');
 
+        // création des inputs du formulaire
         foreach ($arrConfig as $name => $formGroup) {
             $strType = 'form_'.$formGroup['type'];
-            $input[$name][$formGroup['type']] = $strType($name, set_value($name), "id=input".ucfirst($name)." class='form-control invalid' placeholder='".$formGroup['name']."'");
-            $input[$name]['label'] = form_label($formGroup['name'],"input".ucfirst($name));
+            $inputArray[$name][$formGroup['type']] = $strType($name, $this->input->post($name) ?? '', "id=input".ucfirst($name)." class='form-control' placeholder='".$formGroup['name']."'");
+            $inputArray[$name]['label'] = form_label($formGroup['name'],"input".ucfirst($name));
         }
 
+        // validation du formulaire
         if ($this->form_validation->run() == true)
         {
-            $data['SUCCESS'] = 'SA MARCHE!';
+            $objUser = new User_class();
+            $objUser->hydrate($this->input->post());
+            $objUser->setProfil_id(1);
+
+            $lastInsertId = $this->Users_manager->createAccount($objUser);
+            $this->connect($lastInsertId);
+
         } else {
+
+            var_dump($this->input->post());
+            // retour messages d'erreurs
             foreach ($arrConfig as $name => $formGroup) {
-                 $input[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
+                 $inputArray[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
             }
         }
 
-        $data['inputArray'] = $input;
+
+
+        $data['inputArray'] = $inputArray;
         $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
         $this->smarty->display('front/min-content.tpl', $data);
+
+
+
     }
 
+    // callbacks du form validation
+
+    public function email_check($email)
+    {
+        $test = $this->Users_manager->checkEmail($email);
+        if($test) {
+            $this->form_validation->set_message('email_check', '{field} déjà utilisé.');
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
+
+    public function pseudo_check($pseudo)
+    {
+        $test = $this->Users_manager->checkPseudo($pseudo);
+        if($test) {
+            $this->form_validation->set_message('pseudo_check', '{field} non disponible.');
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
+
+
+    public function pwd_check($pwd)
+    {
+
+        if (preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{6,}$#', $pwd)) {
+            return TRUE;
+        } else {
+            $this->form_validation->set_message('pwd_check', 'le {field} doit contenir au moins 1 majuscule, 1 chiffre et 1 caractères spécial.');
+            return FALSE;
+        }
+
+
+    }
 
 }

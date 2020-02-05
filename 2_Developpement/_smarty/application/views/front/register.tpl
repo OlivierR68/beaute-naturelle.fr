@@ -11,15 +11,13 @@
 </div>
 {/foreach}
 
-<div class="form-label-group">
-
-</div>
 
 <div class="form-group small">
 	<div class="form-check">
-		<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-		<label class="form-check-label" for="invalidCheck">
-			Agree to terms and conditions
+		<input class="form-check-input" type="checkbox" name="rgpd" {if isset($smarty.post.rgpd)}checked{/if} id="rgpdCheck" required>
+		<label class="form-check-label" for="rgpdCheck">
+			En soumettant cce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de l'utilisation des services du site,
+			<a href="{site_url('pages/politique')}">Politique de confidentialités.</a>
 		</label>
 	</div>
 </div>
@@ -27,4 +25,5 @@
 
 <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
 {form_close()}
+
 
