@@ -8,8 +8,9 @@ class  categorie_class extends CI_Model {
 	private $_categorie_alt;
 	private $_categorie_slug;
 	private $_categorie_name;
+    private $_categorie_description;
 
-	/** Constructeur **/
+    /** Constructeur **/
 	public function __construct(){
 		parent::__construct();
 	}
