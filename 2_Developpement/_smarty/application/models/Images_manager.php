@@ -74,7 +74,9 @@ class Images_manager extends CI_Model {
 	{
 		$query = $this->db->where('img_id', $id)->get('image');
 		$array = $query->row_array();
+		$array['img_id'] = null;
 
 		$this->db->insert('image', $array);
 	}
+
 }

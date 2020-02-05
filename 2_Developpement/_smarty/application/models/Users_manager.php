@@ -131,5 +131,6 @@ class Users_manager extends CI_Model {
             ->delete('user');
     }
 
+    
 
 }
