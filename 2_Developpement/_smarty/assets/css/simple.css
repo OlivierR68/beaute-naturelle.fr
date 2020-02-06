@@ -115,3 +115,12 @@ body {
 		font-size: 3.5rem;
 	}
 }
+
+/* Style perso
+-------------------------------------------------- */
+
+.form-control {
+	border-radius: 0 !important;
+
+
+}

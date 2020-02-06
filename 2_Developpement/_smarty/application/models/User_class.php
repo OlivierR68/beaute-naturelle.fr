@@ -151,7 +151,7 @@ class User_class extends CI_Model {
         $this->_user_tel = $tel;
     }
 
-    public function setProfil_id($id){
+    public function setProfil_id($id = 1){
         $this->_user_profil_id = $id;
     }
 

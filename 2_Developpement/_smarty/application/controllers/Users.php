@@ -58,42 +58,6 @@ class Users extends CI_Controller {
 
     }
 
-    public function register()
-    {
-        $data['TITLE']	= "Inscrivez-vous";
-
-        $objUser = new User_class();
-
-        if (!empty($this->input->post())) {
-
-            $objUser->hydrate($this->input->post());
-            $objUser->setProfil_id(1);
-
-            $checkPseudo = $this->Users_manager->checkPseudo($this->input->post('pseudo'));
-            $checkEmail  = $this->Users_manager->checkEmail($this->input->post('email'));
-
-            if ($checkPseudo) {
-
-                $data['ERRORS'] = "Pseudo non disponible";
-
-            } else {
-
-                if ($checkEmail) {
-
-                    $data['ERRORS'] = "Email déjà utilisé";
-
-                } else {
-
-                    $lastInsertId = $this->Users_manager->createAccount($objUser);
-                    $this->connect($lastInsertId);
-                }
-            }
-        }
-
-        $data['objUser'] = $objUser;
-        $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
-        $this->smarty->display('front/min-content.tpl', $data);
-    }
 
 
     public function listPage() {
@@ -175,9 +139,9 @@ class Users extends CI_Controller {
     /**
      *  Fonction test form_validation
      */
-    public function register2()
+    public function register()
     {
-        $data['TITLE']	= "Inscrivez-vous 2";
+
         $this->load->library('form_validation');
         $this->config->load('register');
 
@@ -199,14 +163,12 @@ class Users extends CI_Controller {
         {
             $objUser = new User_class();
             $objUser->hydrate($this->input->post());
-            $objUser->setProfil_id(1);
 
             $lastInsertId = $this->Users_manager->createAccount($objUser);
             $this->connect($lastInsertId);
 
         } else {
 
-            var_dump($this->input->post());
             // retour messages d'erreurs
             foreach ($arrConfig as $name => $formGroup) {
                  $inputArray[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
@@ -214,7 +176,7 @@ class Users extends CI_Controller {
         }
 
 
-
+        $data['TITLE']	= "Inscrivez-vous";
         $data['inputArray'] = $inputArray;
         $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
         $this->smarty->display('front/min-content.tpl', $data);
@@ -222,6 +184,7 @@ class Users extends CI_Controller {
 
 
     }
+
 
     // callbacks du form validation
 
@@ -259,6 +222,18 @@ class Users extends CI_Controller {
         }
 
 
+    }
+
+
+    public function register2()
+    {
+        $data['preTITLE']	= "Devenez membre !";
+        $data['TITLE'] 		= "Rejoignez-nous";
+        $data['headerImg']	= "img-register.jpg";
+
+
+        $data['CONTENT'] = $this->smarty->fetch('front/register2.tpl', $data);
+        $this->smarty->display('front/content.tpl', $data);
     }
 
 }
