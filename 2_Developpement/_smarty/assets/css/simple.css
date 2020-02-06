@@ -124,3 +124,13 @@ body {
 
 
 }
+
+body {
+	background: #FFFAF5;
+	min-height: 120%;
+	font-family: "Lato", sans-serif;
+}
+
+h1 {
+	font-family: "Lora", serif;
+}

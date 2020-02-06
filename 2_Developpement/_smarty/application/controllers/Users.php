@@ -8,26 +8,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @version 1
  *
  */
+class Users extends CI_Controller
+{
 
-class Users extends CI_Controller {
-
-	public function __construct(){
-		parent::__construct();
+    public function __construct()
+    {
+        parent::__construct();
         $this->load->model("Users_manager");
         $this->load->model("User_class");
 
-	}
+    }
 
 
-	public function login()
-	{
-        $data['TITLE']	= "Connectez-vous";
+    public function login()
+    {
+        $data['TITLE'] = "Connectez-vous";
 
         if (!empty($this->input->post())) {
 
-            $id = $this->Users_manager->checkLogin($this->input->post('email'),$this->input->post('pwd'));
+            $id = $this->Users_manager->checkLogin($this->input->post('email'), $this->input->post('pwd'));
 
-            if(!empty($id)) {
+            if (!empty($id)) {
                 $this->connect($id);
             } else {
                 $data['ERRORS'] = 'Identifiants de connexion incorrectes';
@@ -36,18 +37,21 @@ class Users extends CI_Controller {
         }
 
         $data['CONTENT'] = $this->smarty->fetch('front/login.tpl', $data);
-        $this->smarty->display('front/min-content.tpl', $data);
+        $this->smarty->display('front/templates/min-content.tpl', $data);
 
-	}
+    }
 
     public function connect($id)
     {
 
-        $arrUser = $this->Users_manager->getSessionData($id);
-        $arrUser['login'] = TRUE;
-        $this->session->set_userdata($arrUser);
-        redirect('', 'refresh');
+        if($this->reCapchaV3()) {
 
+            $arrUser = $this->Users_manager->getSessionData($id);
+            $arrUser['login'] = TRUE;
+            $this->session->set_userdata($arrUser);
+            redirect('', 'refresh');
+
+        }
     }
 
     public function disconnect()
@@ -59,22 +63,22 @@ class Users extends CI_Controller {
     }
 
 
+    public function listPage()
+    {
 
-    public function listPage() {
+        $data['TITLE'] = "Liste des Utilisateurs";
 
-        $data['TITLE'] 	= "Liste des Utilisateurs";
-
-        $users	= $this->Users_manager->findAll();
+        $users = $this->Users_manager->findAll();
         $usersToDisplay = array();
-        foreach($users as $user){
-            $objUser 	= new User_class();
+        foreach ($users as $user) {
+            $objUser = new User_class();
             $objUser->hydrate($user);
             $usersToDisplay[] = $objUser;
         }
 
-        $data['arrUsers'] 	= $usersToDisplay;
+        $data['arrUsers'] = $usersToDisplay;
         $data['CONTENT'] = $this->smarty->fetch('back/usersList.tpl', $data);
-        $this->smarty->display('back/content.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
 
     }
 
@@ -84,21 +88,21 @@ class Users extends CI_Controller {
 
         $objUser = new User_class();
 
-        if($id >= 0) {
+        if ($id >= 0) {
             $objUser->hydrate($this->Users_manager->findOne($id));
         }
 
-        if(!empty($this->input->post())){
+        if (!empty($this->input->post())) {
 
             $objUser->hydrate($this->input->post());
 
 
-            if($id < 0){
+            if ($id < 0) {
 
                 $insertId = $this->Users_manager->new($objUser);
                 $this->session->set_flashdata("success", "Le slider <b>{$objUser->getPseudo()}</b> a été ajouté");
 
-                redirect('users/addEdit/'.$insertId, 'refresh');
+                redirect('users/addEdit/' . $insertId, 'refresh');
 
             } else {
 
@@ -109,21 +113,21 @@ class Users extends CI_Controller {
 
         if ($id > 0) {
 
-            $data['TITLE'] 		= "Modifier l'Utilisateur : ".$objUser->getPseudo();
-            $data['buttonSubmit']  = "Modifier";
-            $data['buttonCancel']  = "Revenir à la liste";
+            $data['TITLE'] = "Modifier l'Utilisateur : " . $objUser->getPseudo();
+            $data['buttonSubmit'] = "Modifier";
+            $data['buttonCancel'] = "Revenir à la liste";
 
         } else {
 
-            $data['TITLE'] 	= "Ajouter un nouvelle utilisateur";
-            $data['buttonSubmit']  = "Ajouter l'utilisateur";
-            $data['buttonCancel']  = "Annuler";
+            $data['TITLE'] = "Ajouter un nouvelle utilisateur";
+            $data['buttonSubmit'] = "Ajouter l'utilisateur";
+            $data['buttonCancel'] = "Annuler";
 
         }
 
-        $data['objUser']	= $objUser;
+        $data['objUser'] = $objUser;
         $data['CONTENT'] = $this->smarty->fetch('back/usersAdd.tpl', $data);
-        $this->smarty->display('back/content.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
     }
 
     public function delete($id)
@@ -153,34 +157,38 @@ class Users extends CI_Controller {
 
         // création des inputs du formulaire
         foreach ($arrConfig as $name => $formGroup) {
-            $strType = 'form_'.$formGroup['type'];
-            $inputArray[$name][$formGroup['type']] = $strType($name, $this->input->post($name) ?? '', "id=input".ucfirst($name)." class='form-control' placeholder='".$formGroup['name']."'");
-            $inputArray[$name]['label'] = form_label($formGroup['name'],"input".ucfirst($name));
+            $strType = 'form_' . $formGroup['type'];
+            $inputArray[$name][$formGroup['type']] = $strType($name, $this->input->post($name) ?? '', "id=input" . ucfirst($name) . " class='form-control' placeholder='" . $formGroup['name'] . "'");
+            $inputArray[$name]['label'] = form_label($formGroup['name'], "input" . ucfirst($name));
         }
 
         // validation du formulaire
-        if ($this->form_validation->run() == true)
-        {
-            $objUser = new User_class();
-            $objUser->hydrate($this->input->post());
+        if ($this->form_validation->run() == true) {
 
-            $lastInsertId = $this->Users_manager->createAccount($objUser);
-            $this->connect($lastInsertId);
+            if ($this->reCapchaV3()) {
+
+                $objUser = new User_class();
+                $objUser->hydrate($this->input->post());
+                $objUser->setProfil_id(1);
+                $lastInsertId = $this->Users_manager->createAccount($objUser);
+                $this->connect($lastInsertId);
+            }
 
         } else {
 
             // retour messages d'erreurs
             foreach ($arrConfig as $name => $formGroup) {
-                 $inputArray[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
+                $inputArray[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
             }
         }
 
+        // reCapcha
 
-        $data['TITLE']	= "Inscrivez-vous";
+
+        $data['TITLE'] = "Inscrivez-vous";
         $data['inputArray'] = $inputArray;
         $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
-        $this->smarty->display('front/min-content.tpl', $data);
-
+        $this->smarty->display('front/templates/min-content.tpl', $data);
 
 
     }
@@ -191,7 +199,7 @@ class Users extends CI_Controller {
     public function email_check($email)
     {
         $test = $this->Users_manager->checkEmail($email);
-        if($test) {
+        if ($test) {
             $this->form_validation->set_message('email_check', '{field} déjà utilisé.');
             return FALSE;
         } else {
@@ -202,7 +210,7 @@ class Users extends CI_Controller {
     public function pseudo_check($pseudo)
     {
         $test = $this->Users_manager->checkPseudo($pseudo);
-        if($test) {
+        if ($test) {
             $this->form_validation->set_message('pseudo_check', '{field} non disponible.');
             return FALSE;
         } else {
@@ -224,16 +232,47 @@ class Users extends CI_Controller {
 
     }
 
+    public function reCapchaV3()
+    {
+
+        $url = "https://www.google.com/recaptcha/api/siteverify";
+        $data = [
+            'secret' => '6LfwetYUAAAAAIINGieA0vyZH_eQ7ciDNxTeQhvL',
+            'response' => $this->input->post('token'),
+            'remoteip' => $_SERVER['REMOTE_ADDR']
+
+        ];
+
+        $options = array(
+            'http' => array(
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            )
+        );
+
+        $context = stream_context_create($options);
+        $response = file_get_contents($url, false, $context);
+
+        $res = json_decode($response, true);
+        if ($res{'success'} == true) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 
     public function register2()
     {
-        $data['preTITLE']	= "Devenez membre !";
-        $data['TITLE'] 		= "Rejoignez-nous";
-        $data['headerImg']	= "img-register.jpg";
+        $data['preTITLE'] = "Devenez membre !";
+        $data['TITLE'] = "Rejoignez-nous";
+        $data['headerImg'] = "img-register.jpg";
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/register2.tpl', $data);
-        $this->smarty->display('front/content.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
     }
 
 }

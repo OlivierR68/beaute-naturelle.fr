@@ -49,5 +49,6 @@ $( document ).ready(function() {
 	$('.invalid-feedback').prev().css('border','red 1px solid');
 
 
+
 });
 

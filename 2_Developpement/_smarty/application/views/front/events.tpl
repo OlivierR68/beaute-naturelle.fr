@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col-4">
 
-					<img class="img-fluid" src="{base_url("assets/img/")}{$objEvent->getImg()}" alt="flacon d'huile" srcset="">
+					<img class="img-fluid" src="{base_url("uploads/events/")}{$objEvent->getImg()}" alt="flacon d'huile" srcset="">
 
 				</div>
 

@@ -1,6 +1,6 @@
 
 
-{include file="./templates/header.tpl"}
+{include file="./header.tpl"}
 
 <div class="container-fluid">
 
@@ -41,4 +41,4 @@
 
 </div>
 
-{include file="./templates/footer.tpl"}
+{include file="./footer.tpl"}

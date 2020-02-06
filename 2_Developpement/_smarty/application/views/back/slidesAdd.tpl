@@ -10,7 +10,7 @@
 		<div class="form-group">
 			{if (!empty($objSlide->getImg()))}
 				<div>
-					<img src="{base_url('assets/img/')}{$objSlide->getImg()}" alt="" class="w-25 py-4 border-light">
+					<img src="{base_url('uploads/slider/')}{$objSlide->getImg()}" alt="" class="w-25 py-4 border-light">
 				</div>
 
 

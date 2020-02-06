@@ -39,7 +39,7 @@
 						</td>
 
 						<td>{$objEvent->getName()}</td>
-						<td><a target="_blank" href="{base_url("assets/img/events")}{$objEvent->getImg()}">{$objEvent->getImg()}</a></td>
+						<td><a target="_blank" href="{base_url("uploads/events/")}{$objEvent->getImg()}">{$objEvent->getImg()}</a></td>
 						<td>{$objEvent->getShortContent(30)}</td>
                         <td>{$objEvent->getCreate_date_form()}</td>
 						<td>{$objEvent->getStart_date_form()}</td>

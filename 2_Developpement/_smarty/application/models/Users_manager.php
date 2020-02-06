@@ -83,11 +83,10 @@ class Users_manager extends CI_Model {
     }
 
 	public function createAccount($obj) {
-
+        $obj->setProfil_id = 3;
         if (method_exists($obj, 'getArray')) {
             $this->db->insert('user', $obj->getArray());
         }
-        $obj->setProfil_id = 3;
         return $this->db->insert_id();
 
     }

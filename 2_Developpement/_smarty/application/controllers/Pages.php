@@ -25,7 +25,7 @@ class Pages extends CI_Controller
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/contact.tpl', $data);
-        $this->smarty->display('front/content.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
     }
 
     /** Front : Fonction permettant d'afficher la page 'A propos' */
@@ -37,7 +37,7 @@ class Pages extends CI_Controller
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/about.tpl', $data);
-        $this->smarty->display('front/content.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
     }
 
     /** Front : Fonction permettant d'afficher la page des mentions légales */
@@ -49,7 +49,7 @@ class Pages extends CI_Controller
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/mentions.tpl', $data);
-        $this->smarty->display('front/content.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
     }
 
     /** Front : Fonction permettant d'afficher la page de politique de confidentialité */
@@ -61,7 +61,7 @@ class Pages extends CI_Controller
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/politique.tpl', $data);
-        $this->smarty->display('front/content.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
     }
 
     /** Front : Fonction permettant d'afficher la page du plan du site */
@@ -72,6 +72,6 @@ class Pages extends CI_Controller
         $data['headerImg']	= "img-sitemap.jpg";
 
         $data['CONTENT'] = $this->smarty->fetch('front/sitemap.tpl', $data);
-        $this->smarty->display('front/content.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
     }
 }

@@ -36,7 +36,7 @@ class Events extends CI_Controller {
 
 		$data['arrEvents'] 	= $eventsToDisplay;
 		$data['CONTENT']	= $this->smarty->fetch('front/events.tpl', $data);
-		$this->smarty->display('front/content.tpl', $data);
+		$this->smarty->display('front/templates/content.tpl', $data);
 	}
 
 	/** Fonction permettant d'afficher la liste des événements
@@ -57,7 +57,7 @@ class Events extends CI_Controller {
 		$data['arrEvents'] 	= $eventsToDisplay;
 
 		$data['CONTENT']	= $this->smarty->fetch('back/eventsList.tpl', $data);
-		$this->smarty->display('back/content.tpl', $data);
+		$this->smarty->display('back/templates/content.tpl', $data);
 	}
 
 
@@ -97,7 +97,7 @@ class Events extends CI_Controller {
 			if($_FILES['img']['size'] > 0){
 
 				//  on configure l'upload de l'image
-				$config['upload_path']      = './assets/img/';
+				$config['upload_path']      = './uploads/events/';
 				$config['allowed_types']    = 'gif|jpg|jpeg|png';
 				$config['max_size']        	= 2048;
 
@@ -163,7 +163,7 @@ class Events extends CI_Controller {
 		}
 
 		$data['CONTENT']	= $this->smarty->fetch('back/eventsAdd.tpl', $data);
-		$this->smarty->display('back/content.tpl', $data);
+		$this->smarty->display('back/templates/content.tpl', $data);
 	}
 
 	/** Fonction permettant de supprimer un événement et de rediriger sur la page de la liste

@@ -10,9 +10,9 @@
             
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                     
-                    <a src="{base_url("assets/img/album/")}{$objImage->getSrc()}" data-lightbox="roadtrip">
+                    <a src="{base_url("uploads/album/")}{$objImage->getSrc()}" data-lightbox="roadtrip">
                     <div class="bn_galerie-img">
-                        <img src="{base_url("assets/img/album/")}{$objImage->getSrc()}" alt="Belle Photo">
+                        <img src="{base_url("uploads/album/")}{$objImage->getSrc()}" alt="Belle Photo">
                            <p>{$objImage->getAuthor()}</p>
                     </div>
 

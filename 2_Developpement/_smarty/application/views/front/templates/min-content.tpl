@@ -1,4 +1,4 @@
-{include file="./templates/min-header.tpl"}
+{include file="./min-header.tpl"}
 
 {if isset($SUCCESS)}
     <div class="text-center" >
@@ -29,4 +29,4 @@
 {/if}
 
 {$CONTENT}
-{include file="./templates/min-footer.tpl"}
+{include file="./min-footer.tpl"}

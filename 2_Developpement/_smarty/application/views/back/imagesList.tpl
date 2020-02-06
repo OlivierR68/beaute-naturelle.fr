@@ -40,7 +40,7 @@
 					
 						</td>
 						<td>{$objImage->getSlug()}</td>
-						<td><a target="_blank" href="{base_url("assets/img/album/")}{$objImage->getSrc()}">{$objImage->getSrc()}</a></td>
+						<td><a target="_blank" href="{base_url("uploads/album/")}{$objImage->getSrc()}">{$objImage->getSrc()}</a></td>
 						<td>{$objImage->getDescription()}</td>
 						<td>{$objImage->getAuthor()}</td>
 						<td>{$objImage->getPubli_date()}</td>

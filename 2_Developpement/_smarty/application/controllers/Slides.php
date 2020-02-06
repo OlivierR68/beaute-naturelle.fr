@@ -39,7 +39,7 @@ class Slides extends CI_Controller {
 */
 
         $data['CONTENT'] = $this->smarty->fetch('front/home.tpl', $data);
-        $this->smarty->display('front/content.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
 	}
 
 	/** Back : Fonction permettant d'afficher la liste des slides  */
@@ -58,7 +58,7 @@ class Slides extends CI_Controller {
 		$data['arrSlides'] 	= $slidesToDisplay;
 
         $data['CONTENT'] = $this->smarty->fetch('back/slidesList.tpl', $data);
-        $this->smarty->display('back/content.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
 	}
 
 
@@ -141,7 +141,7 @@ class Slides extends CI_Controller {
 		}
 
         $data['CONTENT'] = $this->smarty->fetch('back/slidesAdd.tpl', $data);
-        $this->smarty->display('back/content.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
 	}
 
 

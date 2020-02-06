@@ -14,6 +14,8 @@
         <label for="inputPassword">Mot de Passe</label>
     </div>
 
+    <input type="hidden" id="token" name="token">
+
     <button class="btn btn-lg btn-primary btn-block" type="submit">Se Connecter</button>
 
     <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>

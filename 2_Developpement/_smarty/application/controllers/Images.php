@@ -38,7 +38,7 @@ class Images extends CI_Controller
 		$data['arrImages'] = $imagesToDisplay;
 
 		$data['CONTENT'] = $this->smarty->fetch('front/images.tpl', $data);
-		$this->smarty->display('front/content.tpl', $data);
+		$this->smarty->display('front/templates/content.tpl', $data);
 
 	}
 
@@ -57,7 +57,7 @@ class Images extends CI_Controller
 		$data['arrImages'] 	= $imagesToDisplay;
 
 		$data['CONTENT'] = $this->smarty->fetch('back/imagesList.tpl', $data);
-		$this->smarty->display('back/content.tpl', $data);
+		$this->smarty->display('back/templates/content.tpl', $data);
 
 	}
 
@@ -100,7 +100,7 @@ class Images extends CI_Controller
 			if($_FILES['img']['size'] > 0){
 
 				//  on configure l'upload de l'image
-				$config['upload_path']      = './assets/img/album/';
+				$config['upload_path']      = './uploads/album/';
 				$config['allowed_types']    = 'gif|jpg|jpeg|png';
 				$config['max_size']        	= 2048;
 
@@ -165,7 +165,7 @@ class Images extends CI_Controller
 		}
 
 		$data['CONTENT'] = $this->smarty->fetch('back/imagesAdd.tpl', $data);
-		$this->smarty->display('back/content.tpl', $data);
+		$this->smarty->display('back/templates/content.tpl', $data);
 
 
 	}

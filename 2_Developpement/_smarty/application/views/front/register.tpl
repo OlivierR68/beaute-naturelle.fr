@@ -1,3 +1,4 @@
+
 {form_open('users/register', 'class="form-signin"')}
 <div class="text-center my-4">
 	<img class="mb-4" src="{base_url('./assets/img/logo.svg')}" alt="logo beauté-naturelle" width="140" height="140">
@@ -11,6 +12,7 @@
 </div>
 {/foreach}
 
+<input type="hidden" id="token" name="token">
 
 <div class="form-group small">
 	<div class="form-check">
@@ -21,9 +23,15 @@
 		</label>
 	</div>
 </div>
+
+
 <button class="btn btn-lg btn-primary btn-block" type="submit">S'Inscrire</button>
 
 <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+
 {form_close()}
+
+
+
 
 

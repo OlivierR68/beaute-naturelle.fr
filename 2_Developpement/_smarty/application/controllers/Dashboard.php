@@ -19,7 +19,7 @@ class Dashboard extends CI_Controller {
 		// à remplir ici, partie frontend
 
         $data['CONTENT'] = $this->smarty->fetch('back/dashboard.tpl', $data);
-        $this->smarty->display('back/content.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
 	}
 
 

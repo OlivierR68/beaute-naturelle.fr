@@ -25,7 +25,7 @@
 		<div class="form-group">
 			{if (!empty($objEvent->getImg()))}
 				<div>
-					<img src="{base_url('assets/img')}{$objEvent->getImg()}" alt="" class="w-25 py-4 border-light">
+					<img src="{base_url('uploads/events/')}{$objEvent->getImg()}" alt="" class="w-25 py-4 border-light">
 				</div>
 
 

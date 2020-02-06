@@ -58,7 +58,7 @@
 
 						<td>{$objSlide->getLibelle()}</td>
 						{if $objSlide->getDefault() eq true}
-						<td><a target="_blank" href="{base_url('assets/img')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
+						<td><a target="_blank" href="{base_url('uploads/slider')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
 						{else}
 						<td><a target="_blank" href="{base_url('uploads/slides')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
 						{/if}

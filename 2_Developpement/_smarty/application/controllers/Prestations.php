@@ -36,7 +36,7 @@ class Prestations extends CI_Controller {
         $data['arrCategorie'] = $slidesToDisplay;
     
 		$data['CONTENT'] = $this->load->view('front/prestations', $data, TRUE);
-		$this->load->view('front/content', $data);
+		$this->load->view('front/templates/content', $data);
 	}
 
 	   
