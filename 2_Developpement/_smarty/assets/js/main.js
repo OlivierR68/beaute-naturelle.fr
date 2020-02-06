@@ -46,7 +46,7 @@ $( document ).ready(function() {
 
 	// fonction pour la page register
 
-	$('.invalid-feedback').prev().css('border','red 1px solid');
+	$('.invalid-feedback').prev().css('border-color','red');
 
 
 

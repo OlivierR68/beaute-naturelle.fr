@@ -127,10 +127,83 @@ body {
 
 body {
 	background: #FFFAF5;
-	min-height: 120%;
+	min-height: 100%;
 	font-family: "Lato", sans-serif;
 }
 
 h1 {
 	font-family: "Lora", serif;
 }
+
+.btn-primary {
+	background-color: #1c7430;
+	border-color: #1c7430;
+	border-radius: 0;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.btn-primary:hover {
+	color: #221E20;
+	border-color: #221E20;
+	background-color: #019839;
+
+}
+
+.btn-primary:active {
+	color: #221E20;
+	border-color: #221E20;
+	background-color: #019839;
+
+}
+
+
+a {
+	color: #1e7e34;
+}
+
+a:hover {
+	color: #4CAF50;
+}
+
+
+.btn.btn-primary {
+	color: #fff;
+	background-color: #1c7430;
+	border-color: #1c7430;
+}
+.btn.btn-primary.focus,
+.btn.btn-primary:focus {
+	color: #221E20;
+	background-color: #019839;
+	border-color: #221E20;
+	outline: none;
+	box-shadow: none;
+}
+.btn.btn-primary:hover {
+	color: #221E20;
+	background-color: #019839;
+	border-color: #221E20;
+	outline: none;
+	box-shadow: none;
+}
+.btn.btn-primary.active,
+.btn.btn-primary:active {
+	color: #221E20;
+	background-color: #019839;
+	border-color: #221E20;
+	outline: none;
+}
+.btn.btn-primary.active.focus,
+.btn.btn-primary.active:focus,
+.btn.btn-primary.active:hover,
+.btn.btn-primary:active.focus,
+.btn.btn-primary:active:focus,
+.btn.btn-primary:active:hover {
+	color: #fff;
+	background-color: #019839;
+	border-color: #221E20;
+	outline: none;
+	box-shadow: none;
+}
+
