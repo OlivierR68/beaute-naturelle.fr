@@ -70,7 +70,7 @@
 
 					<!-- Bloc nav GALERIE -->
 					<a class="nav-link {active_page('images','active',1)}" href="{site_url("images/listPage")}" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
-						<div class="sb-nav-link-icon"><i class="far fa-eye"></i></div>
+						<div class="sb-nav-link-icon"><i class="far fa-images"></i></div>
 						Galerie
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
