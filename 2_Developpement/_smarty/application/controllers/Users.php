@@ -44,7 +44,7 @@ class Users extends CI_Controller
     public function connect($id)
     {
 
-        if($this->reCapchaV3()) {
+        if($this->reCapchaV3($this->input->post('token'))) {
 
             $arrUser = $this->Users_manager->getSessionData($id);
             $arrUser['login'] = TRUE;
@@ -165,7 +165,7 @@ class Users extends CI_Controller
         // validation du formulaire
         if ($this->form_validation->run() == true) {
 
-            if ($this->reCapchaV3()) {
+            if ($this->reCapchaV3($this->input->post('token'))) {
 
                 $objUser = new User_class();
                 $objUser->hydrate($this->input->post());
@@ -232,13 +232,13 @@ class Users extends CI_Controller
 
     }
 
-    public function reCapchaV3()
+    public function reCapchaV3($token)
     {
 
         $url = "https://www.google.com/recaptcha/api/siteverify";
         $data = [
             'secret' => '6LfwetYUAAAAAIINGieA0vyZH_eQ7ciDNxTeQhvL',
-            'response' => $this->input->post('token'),
+            'response' => $token,
             'remoteip' => $_SERVER['REMOTE_ADDR']
 
         ];

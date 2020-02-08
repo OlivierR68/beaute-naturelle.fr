@@ -114,7 +114,7 @@
 
 	<div class="bn_gap-25"></div>
 	<div class="container text-center">
-            <span class="bn_copyright ">Tous droits réservés 2010-2019 - Beauté Naturelle - Site réalisé par <a
+            <span class="bn_copyright ">Tous droits réservés 2010-2020 - Beauté Naturelle - Site réalisé par <a
 					href="http://webolive.fr" target="_blank">Studio 241</a></span>
 	</div>
 
