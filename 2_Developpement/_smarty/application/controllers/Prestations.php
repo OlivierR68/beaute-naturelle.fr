@@ -13,8 +13,8 @@ class Prestations extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-        $this->load->model("Categorie_manager");
-        $this->load->model("Categorie_class");
+        $this->load->model("Category_manager");
+        $this->load->model("Category_class");
 	}
 
 	/** Front : Fonction permettant d'afficher la page de prestation  */
@@ -26,18 +26,17 @@ class Prestations extends CI_Controller {
 
 		// à remplir ici, parttie frontend
 
-        $categorie = $this->Categorie_manager->findAll();
+        $categorie = $this->Category_manager->findAll();
         $slidesToDisplay = array();
         foreach($categorie as $categorie){
-        $objcategorie 	= new Categorie_class();
+        $objcategorie 	= new Category_class;
         $objcategorie->hydrate($categorie);
         $slidesToDisplay[] = $objcategorie;
         }
         $data['arrCategorie'] = $slidesToDisplay;
-    
-		$data['CONTENT'] = $this->load->view('front/prestations', $data, TRUE);
-		$this->load->view('front/templates/content', $data);
+
+        $data['CONTENT'] = $this->smarty->fetch('front/prestations.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
 	}
 
-	   
 }

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class  categorie_class extends CI_Model {
+class  Category_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_categorie_id;
 	private $_categorie_img;
@@ -16,8 +16,8 @@ class  categorie_class extends CI_Model {
 	}
 
 	/** HYDRATATION *
-	 * @param $datas
-	 * @return prestation_class
+	 * @param $datas array
+	 * @return prestation_class un objet hydraté
 	 */
 	public function hydrate($datas){
 		foreach($datas as $keyData => $data){

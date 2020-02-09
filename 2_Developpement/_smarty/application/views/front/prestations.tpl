@@ -3,7 +3,7 @@
 
 		<div class="row no-gutters">
 			<div class="col-12 col-lg-6 d-flex align-items-center">
-				<img src="<?php base_url() ?>assets/img/massage-huiles-essentielles.jpg" class="img-fluid w-100"
+				<img src="{base_url('assets/img/massage-huiles-essentielles.jpg')}" class="img-fluid w-100"
 					 alt="massage au huiles essentielles">
 			</div>
 			<div class="col-12 col-lg-6 p-4">
@@ -34,23 +34,21 @@
 
 	<div class="row">
 		<!-- Foreach de catégorie ici -->
-		<?php 
-
-            foreach($arrCategorie as $objCategorie) { ?>
+        {foreach from=$arrCategorie item=objCategorie}
 
         
-            <a href="#" style="background-image : url(<?php echo base_url('assets/img/prestations')."/".$objCategorie->getImg().".jpg" ?>)" class="col-6 col-lg-3 p-0 bn_presta-block  d-flex">
+            <a href="#" style="background-image : url('{base_url('assets/img/prestations/')}{$objCategorie->getImg()}.jpg')" class="col-6 col-lg-3 p-0 bn_presta-block  d-flex">
 
                 <div></div>
                 <span>
-                    <?php echo $objCategorie->getName() ?>
+                    {$objCategorie->getName()}
                 </span>
 
             </a>
 			
 
 		</a>
-		<?php } ?>
+		{/foreach}
 		
 		<!-- fin du foreach -->
 
