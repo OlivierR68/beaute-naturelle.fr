@@ -33,10 +33,6 @@ class Slides extends CI_Controller {
 		}
 		$data['arrSlides'] 	= $slidesToDisplay;
 
-/**
-		$data['CONTENT'] = $this->load->view('content',$data,TRUE);
-        $this->load->view('content',$data);
-*/
 
         $data['CONTENT'] = $this->smarty->fetch('front/home.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
