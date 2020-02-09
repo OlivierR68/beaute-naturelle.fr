@@ -86,7 +86,7 @@ class Slide_class extends CI_Model {
 
 
 	/** GETTER pour la liste des attributs
-	 *@return array Liste des valeurs attributs avec clefs associatives
+	 *@return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
 	 */
 
 	public function getArray(){

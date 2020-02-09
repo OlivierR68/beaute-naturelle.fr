@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Class Dashboard
+ * Controller du tableau de bord du back office
+ */
 class Dashboard extends CI_Controller {
 
 	public function __construct(){
@@ -8,7 +12,7 @@ class Dashboard extends CI_Controller {
 
 	}
 
-	/** Front : Fonction permettant d'afficher la page du tableau de bord */
+	/** Back : Affichage du tableau de bord */
 	public function index()
 	{
 

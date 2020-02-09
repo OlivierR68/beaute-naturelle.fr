@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Controller Slides
  * @author  Olivier Ravinasaga
- * @version version 1
+ * Controller du Slider
  */
 class Slides extends CI_Controller {
 
@@ -18,7 +18,13 @@ class Slides extends CI_Controller {
 
 	}
 
-	/** Front : Fonction permettant d'afficher la page d'accueil  */
+    /*
+     * ------------------------------------------------------
+     *  Méthodes d'affichages des pages
+     * ------------------------------------------------------
+     */
+
+	/** Front : Affichage de la page d'accueil  */
 	public function home()
 	{
 		$data['preTITLE']	= "Magasin & Institut";
@@ -38,13 +44,13 @@ class Slides extends CI_Controller {
         $this->smarty->display('front/templates/content.tpl', $data);
 	}
 
-	/** Back : Fonction permettant d'afficher la liste des slides  */
+	/** Back :  Affichage de la liste des slides  */
 	public function ListPage()
 	{
 		$data['TITLE'] 		= "Liste des slides";
 
 		$slides	= $this->Slides_manager->findAll();
-		$slidesToDisplay = array();
+		$slidesToDisplay = [];
 		foreach($slides as $slide){
 			$objSlide 	= new Slide_class();
 			$objSlide->hydrate($slide);
@@ -60,7 +66,7 @@ class Slides extends CI_Controller {
 
 
 	/**
-	 * Back : fonction permettant d'afficher la page de création/modification des slider
+	 * Back : Affichage de la page de création/modification des slider
 	 * @param int $id identifiant bdd du slide
 	 */
 	public function addEdit($id = -1)
@@ -140,9 +146,15 @@ class Slides extends CI_Controller {
         $this->smarty->display('back/templates/content.tpl', $data);
 	}
 
+    /*
+     * ------------------------------------------------------
+     *  Méthodes d'actions et vérifications
+     * ------------------------------------------------------
+     */
+
 
 	/**
-	 ** Back : fonction permettant permettant de supprimer un slide, et qui redirige par la suite sur la liste
+	 ** Back : Supprression un slide, et qui redirige par la suite sur la liste
 	 * @param int $id identifiant bdd du slide
 	 */
 	public function delete($id)
@@ -156,7 +168,7 @@ class Slides extends CI_Controller {
 
 
 	/**
-	 ** Back : fonction permettant permettant de copier un slide, et qui redirige par la suite sur la liste
+	 ** Back : Copie d'un slide, et qui redirige par la suite sur la liste
 	 * @param int $id identifiant bdd du slide
 	 */
 	public function copy($id)

@@ -3,10 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Controller Users
- * @property  Users_manager
  * @author  Olivier Ravinasaga
- * @version 1
- *
+ * Controller des utilisateurs
  */
 class Users extends CI_Controller
 {
@@ -16,10 +14,20 @@ class Users extends CI_Controller
         parent::__construct();
         $this->load->model("Users_manager");
         $this->load->model("User_class");
+        $this->load->library('form_validation');
 
     }
 
+    /*
+     * ------------------------------------------------------
+     *  Méthodes d'affichages des pages
+     * ------------------------------------------------------
+     */
 
+
+    /**
+     * Front : Affichage de la page login
+     */
     public function login()
     {
         $data['TITLE'] = "Connectez-vous";
@@ -41,28 +49,61 @@ class Users extends CI_Controller
 
     }
 
-    public function connect($id)
+
+    /**
+     *  Front : Affichage de la page d'inscription
+     */
+    public function register()
     {
 
-        if($this->reCapchaV3($this->input->post('token'))) {
+        $this->config->load('register');
 
-            $arrUser = $this->Users_manager->getSessionData($id);
-            $arrUser['login'] = TRUE;
-            $this->session->set_userdata($arrUser);
-            redirect('', 'refresh');
+        // chargement regle form-validation
+        $this->form_validation->set_rules($this->config->item('register_rules'));
 
+        // chargement données du formlaire
+        $arrConfig = $this->config->item('register_form2');
+
+        // création des inputs du formulaire
+        foreach ($arrConfig as $name => $formGroup) {
+            $strType = 'form_' . $formGroup['type'];
+            $inputArray[$name][$formGroup['type']] = $strType($name, $this->input->post($name) ?? '', "id=input" . ucfirst($name) . " class='form-control' placeholder='" . $formGroup['name'] . "'");
+            $inputArray[$name]['label'] = form_label($formGroup['name'], "input" . ucfirst($name));
         }
+
+        // validation du formulaire
+        if ($this->form_validation->run() == true) {
+
+            if ($this->reCapchaV3($this->input->post('token'))) {
+
+                $objUser = new User_class();
+                $objUser->hydrate($this->input->post());
+                $objUser->setProfil_id(1);
+                $lastInsertId = $this->Users_manager->createAccount($objUser);
+                $this->connect($lastInsertId);
+            }
+
+        } else {
+
+            // retour messages d'erreurs
+            foreach ($arrConfig as $name => $formGroup) {
+                $inputArray[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
+            }
+        }
+
+
+        $data['TITLE'] = "Inscrivez-vous";
+        $data['inputArray'] = $inputArray;
+        $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
+        $this->smarty->display('front/templates/min-content.tpl', $data);
+
+
     }
 
-    public function disconnect()
-    {
 
-        $this->session->sess_destroy();
-        redirect('', 'refresh');
-
-    }
-
-
+    /**
+     * Back : Affichage de la liste des utilisateurs
+     */
     public function listPage()
     {
 
@@ -83,6 +124,10 @@ class Users extends CI_Controller
     }
 
 
+    /**
+     * Back : Affichage de la page de création/modification d'un utilisateur
+     * @param int $id identifiant utilisateur
+     */
     public function addEdit($id = -1)
     {
 
@@ -130,6 +175,47 @@ class Users extends CI_Controller
         $this->smarty->display('back/templates/content.tpl', $data);
     }
 
+    /*
+     * ------------------------------------------------------
+     *  Méthodes d'actions et vérifications
+     * ------------------------------------------------------
+     */
+
+
+    /**
+     * Connection d'un utilisateur sur le site, ouverture de session
+     * @param $id identifiant utilisateur
+     */
+    public function connect($id)
+    {
+
+        if ($this->reCapchaV3($this->input->post('token'))) {
+
+            $arrUser = $this->Users_manager->getSessionData($id);
+            $arrUser['login'] = TRUE;
+            $this->session->set_userdata($arrUser);
+            redirect('', 'refresh');
+
+        }
+    }
+
+
+    /**
+     * Déconnection utilisateur, destruction de session
+     */
+    public function disconnect()
+    {
+
+        $this->session->sess_destroy();
+        redirect('', 'refresh');
+
+    }
+
+
+    /**
+     * Suprression d'un utilisateur
+     * @param $id identifiant utilisateur
+     */
     public function delete($id)
     {
 
@@ -141,61 +227,10 @@ class Users extends CI_Controller
 
 
     /**
-     *  Fonction test form_validation
+     * Fonction de vérification de l'email, callback pour le form-validation de la page register
+     * @param $email string email à vérifier
+     * @return bool false si un l'email est déjà présent dans la bdd, true si il n'est pas présent
      */
-    public function register()
-    {
-
-        $this->load->library('form_validation');
-        $this->config->load('register');
-
-        // chargement regle form-validation
-        $this->form_validation->set_rules($this->config->item('register_rules'));
-
-        // chargement données du formlaire
-        $arrConfig = $this->config->item('register_form2');
-
-        // création des inputs du formulaire
-        foreach ($arrConfig as $name => $formGroup) {
-            $strType = 'form_' . $formGroup['type'];
-            $inputArray[$name][$formGroup['type']] = $strType($name, $this->input->post($name) ?? '', "id=input" . ucfirst($name) . " class='form-control' placeholder='" . $formGroup['name'] . "'");
-            $inputArray[$name]['label'] = form_label($formGroup['name'], "input" . ucfirst($name));
-        }
-
-        // validation du formulaire
-        if ($this->form_validation->run() == true) {
-
-            if ($this->reCapchaV3($this->input->post('token'))) {
-
-                $objUser = new User_class();
-                $objUser->hydrate($this->input->post());
-                $objUser->setProfil_id(1);
-                $lastInsertId = $this->Users_manager->createAccount($objUser);
-                $this->connect($lastInsertId);
-            }
-
-        } else {
-
-            // retour messages d'erreurs
-            foreach ($arrConfig as $name => $formGroup) {
-                $inputArray[$name]['error'] = form_error($name, '<div class="invalid-feedback  d-block">', '</div>');
-            }
-        }
-
-        // reCapcha
-
-
-        $data['TITLE'] = "Inscrivez-vous";
-        $data['inputArray'] = $inputArray;
-        $data['CONTENT'] = $this->smarty->fetch('front/register.tpl', $data);
-        $this->smarty->display('front/templates/min-content.tpl', $data);
-
-
-    }
-
-
-    // callbacks du form validation
-
     public function email_check($email)
     {
         $test = $this->Users_manager->checkEmail($email);
@@ -207,6 +242,12 @@ class Users extends CI_Controller
         }
     }
 
+
+    /**
+     * Fonction de vérification du pseudo, callback pour le form-validation de la page register
+     * @param $pseudo string pseudo à vérifier
+     * @return bool false si le pseudo est déjà présent dans la bdd, true si il n'est pas présent
+     */
     public function pseudo_check($pseudo)
     {
         $test = $this->Users_manager->checkPseudo($pseudo);
@@ -219,6 +260,11 @@ class Users extends CI_Controller
     }
 
 
+    /**
+     * Fonction de vérification de la force du mot de passe (regEx), callback pour le form-validation de la page register
+     * @param $pwd string mot de passe à vérifier
+     * @return bool false si le mot de passe n'est pas assez fort true si il est assez fort
+     */
     public function pwd_check($pwd)
     {
 
@@ -232,6 +278,12 @@ class Users extends CI_Controller
 
     }
 
+
+    /**
+     * Fonction reCapchaV3 de google utiliser dans register et login
+     * @param $token string token envoyé par le formulaire
+     * @return bool true si Google determine que l'utilisateur est Ok, sinon false
+     */
     public function reCapchaV3($token)
     {
 
@@ -261,18 +313,6 @@ class Users extends CI_Controller
             return false;
         }
 
-    }
-
-
-    public function register2()
-    {
-        $data['preTITLE'] = "Devenez membre !";
-        $data['TITLE'] = "Rejoignez-nous";
-        $data['headerImg'] = "img-register.jpg";
-
-
-        $data['CONTENT'] = $this->smarty->fetch('front/register2.tpl', $data);
-        $this->smarty->display('front/templates/content.tpl', $data);
     }
 
 }
