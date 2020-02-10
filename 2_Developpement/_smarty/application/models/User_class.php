@@ -40,6 +40,7 @@ class User_class extends CI_Model {
 			$strSetter	= "set".str_replace("user_", "", $keyData);
 			if (method_exists($this, $strSetter)){
 				$this->$strSetter($data);
+
 			}
 		}
 		return $this;
@@ -116,7 +117,8 @@ class User_class extends CI_Model {
         unset($arrInsert['user_profil_libelle']);
 
         if ($filter){
-            array_filter($arrInsert);
+
+            $arrInsert = array_filter($arrInsert);
         }
 
         return $arrInsert;

@@ -82,7 +82,7 @@ class Images_class extends CI_Model {
         }
 
         if ($filter){
-            array_filter($arrInsert);
+            $arrInsert = array_filter($arrInsert);
         }
 
         return $arrInsert;

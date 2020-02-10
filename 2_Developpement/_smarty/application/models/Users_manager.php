@@ -89,17 +89,9 @@ class Users_manager extends CI_Model {
 
     }
 
-	public function createAccount($obj) {
-        $obj->setProfil_id = 3;
-        if (method_exists($obj, 'getArray')) {
-            $this->db->insert('user', $obj->getArray());
-        }
-        return $this->db->insert_id();
-
-    }
 
     /**
-     * Création d'1 slide
+     * Création d'1 utilisateur
      * @param $obj object Slide_class
      * @return string l'id de l'insert
      */
@@ -114,7 +106,7 @@ class Users_manager extends CI_Model {
 
 
     /**
-     * Création d'1 slide
+     * Création d'1 utilisateur
      * @param $obj object Slide_class
      * @return string l'id de l'insert
      */
@@ -128,7 +120,7 @@ class Users_manager extends CI_Model {
 
 
     /**
-     * Suppression d'1 slide
+     * Suppression d'1 utilisateur
      * @param $id integer identifiant du slide
      */
     public function delete($id)

@@ -23,7 +23,7 @@
     {/if}
 
     <div class="text-center mt-3">
-        <p>Vous n'avez pas de compte ? <a href="{site_url('users/login')}">Inscrivez-vous !</a></p>
+        <p>Vous n'avez pas de compte ? <a href="{site_url('users/register')}">Inscrivez-vous !</a></p>
         <p><a href="{site_url()}">Page d'accueil</a>{if isset($smarty.server.HTTP_REFERER)} | <a href="{$smarty.server.HTTP_REFERER}">Page précédente</a>{/if}</p>
     </div>
 

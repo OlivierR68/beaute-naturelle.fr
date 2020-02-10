@@ -13,14 +13,12 @@
 
 			<!-- foreach ici -->
 
-
-
 				{$slideCounter = 0}
 				{foreach $arrSlides as $objSlide}
 
 					<div class="carousel-item {if $slideCounter eq 0}active{/if}">
 
-						<div class="bn_slide-bg" style="background-image: url({base_url("assets/img/")}{$objSlide->getImg()}">
+						<div class="bn_slide-bg" style="background-image: url({base_url("uploads/slider/")}{$objSlide->getImg()}">
 							<div class="bn_slide-banner">
 								<div class="bn_slider-border">
 									<span class="bn_{$objSlide->getType()}">{$objSlide->getTitle()}</span>
@@ -32,8 +30,6 @@
 					</div>
 					{$slideCounter++}
 				{/foreach}
-
-
 
 			</div>
 		</div>

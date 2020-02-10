@@ -15,6 +15,7 @@ class Users extends CI_Controller
         $this->load->model("Users_manager");
         $this->load->model("User_class");
         $this->load->library('form_validation');
+        $this->load->library('upload');
 
     }
 
@@ -80,7 +81,7 @@ class Users extends CI_Controller
                 $objUser->hydrate($this->input->post());
                 $objUser->setProfil_id(1);
                 $objUser->setAvatar('default.jpg');
-                $lastInsertId = $this->Users_manager->createAccount($objUser);
+                $lastInsertId = $this->Users_manager->new($objUser);
                 $this->connect($lastInsertId);
             }
 
@@ -111,6 +112,7 @@ class Users extends CI_Controller
         $data['headerImg'] = "img-profile.jpg";
 
 
+        // hydratation profile
         $objUser = new User_class();
         if (!empty($this->input->post())) {
             $objUser->hydrate($this->input->post());
@@ -119,6 +121,8 @@ class Users extends CI_Controller
             $objUser->hydrate($this->Users_manager->findOne($this->session->id));
         }
 
+
+        // chargement des données du formulaire
         $this->config->load('profile');
         $arrConfig = $this->config->item('user_profile');
 
@@ -135,13 +139,14 @@ class Users extends CI_Controller
 
             if ($name == 'profil_libelle') {
                 $extra .= " disabled";
-                $inputArray[$name]['hidden'] = form_hidden($name,$value);
+                $inputArray[$name]['hidden'] = form_hidden($name, $value);
             }
 
             $inputArray[$name][$formGroup['type']] = $strType($name, $value, $extra);
 
         }
 
+        // Chargement et implémentation des rules du form-validation
         $rules = $this->config->item('profile_rule');
         if (!empty($this->input->post('pwd')) || !empty($this->input->post('pconfg'))) {
 
@@ -152,9 +157,35 @@ class Users extends CI_Controller
         $this->form_validation->set_rules($rules);
 
 
-
         if ($this->form_validation->run() == true) {
 
+            // gestion de l'avatar
+            if ($_FILES['avatar']['size'] > 0) {
+
+                $file_path = "uploads/avatar/".$_FILES['avatar']['name'];
+
+                if(!file_exists($file_path && filesize($file_path) != $_FILES['avatar']['size'])) {
+
+                    $config['upload_path'] = './uploads/avatar/';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
+                    $config['max_size'] = 2048;
+
+                    $this->upload->initialize($config);
+                    $this->upload->do_upload('avatar');
+                    if (!$this->upload->do_upload('avatar')) {
+                        $data['ERROR'] = $this->upload->display_errors();
+
+                    } else {
+
+                        $upload_data = $this->upload->data();
+                        $objUser->setAvatar($upload_data['file_name']);
+
+                    }
+                }
+            }
+
+            $objUser->setId($this->session->id);
+            $this->Users_manager->update($objUser);
 
 
         } else {
@@ -303,6 +334,8 @@ class Users extends CI_Controller
     public function email_check($email)
     {
         if (!empty($this->session->id)) {
+
+            var_dump($this->session->id);
 
             $user = $this->Users_manager->findOne($this->session->id);
 

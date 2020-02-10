@@ -24,13 +24,13 @@ $config['user_profile'] = [
     ],
 
     'pwd' => [
-        'name' => 'Mot de passe',
+        'name' => 'Nouveau mot de passe <span class="d-none d-lg-inline">(laisser vide pour ne pas le changer)</span>',
         'type' => 'password',
 
     ],
 
     'pconf' => [
-        'name' => 'Confirmation mot de passe',
+        'name' => 'Confirmation du nouveau mot de passe',
         'type' => 'password'
     ],
 
