@@ -72,3 +72,5 @@ $config['register_form2'] = [
     ],
 
 ];
+
+

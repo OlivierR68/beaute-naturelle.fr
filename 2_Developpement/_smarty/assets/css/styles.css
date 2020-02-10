@@ -974,3 +974,9 @@ td::first-letter {
 	margin-right: 0.3em;
 }
 
+/* =============== AJUSTEMENT ==================== */
+
+.custom-file-input ~ .custom-file-label::after {
+  content: "Parcourir";
+}
+

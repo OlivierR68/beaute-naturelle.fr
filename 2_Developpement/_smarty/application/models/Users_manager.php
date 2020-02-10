@@ -115,7 +115,7 @@ class Users_manager extends CI_Model {
     {
         if (method_exists($obj, 'getArray')) {
             $this->db->where('user_id', $obj->getId())
-                ->replace('user', $obj->getArray());
+                ->replace('user', $obj->getArray(true));
         }
     }
 

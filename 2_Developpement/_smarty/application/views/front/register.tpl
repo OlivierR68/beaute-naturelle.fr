@@ -31,7 +31,9 @@
 	<p class="text-center">Si vous souhaitez créer un nouveau compte, <a href="{site_url('users/disconnect')}">déconnecter vous d'abords</a>.</p>
 {/if}
 <div class="text-center mt-3">
+	<p>Vous avez déjà un compte ? <a href="{site_url('users/login')}">Connectez-vous !</a></p>
 	<p><a href="{site_url()}">Page d'accueil</a>{if isset($smarty.server.HTTP_REFERER)} | <a href="{$smarty.server.HTTP_REFERER}">Page précédente</a>{/if}</p>
+
 </div>
 <p class="mt-5 mb-3 text-muted text-center small">Tous droits réservés 2010-2020 - Beauté Naturelle<br>Site réalisé par
 	<a href="http://webolive.fr" target="_blank">Studio 241</a></p>

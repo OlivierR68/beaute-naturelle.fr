@@ -37,7 +37,7 @@ class Users extends CI_Controller
             $id = $this->Users_manager->checkLogin($this->input->post('email'), $this->input->post('pwd'));
 
             if (!empty($id)) {
-                $this->connect($id);
+                if ($this->reCapchaV3($this->input->post('token'))) $this->connect($id);
             } else {
                 $data['ERRORS'] = 'Identifiants de connexion incorrectes';
             }
@@ -79,6 +79,7 @@ class Users extends CI_Controller
                 $objUser = new User_class();
                 $objUser->hydrate($this->input->post());
                 $objUser->setProfil_id(1);
+                $objUser->setAvatar('default.jpg');
                 $lastInsertId = $this->Users_manager->createAccount($objUser);
                 $this->connect($lastInsertId);
             }
@@ -98,6 +99,59 @@ class Users extends CI_Controller
         $this->smarty->display('front/templates/min-content.tpl', $data);
 
 
+    }
+
+    /**
+     * Front : Affichage de la page profile de l'utilisateur
+     */
+    public function profile()
+    {
+        $data['preTITLE'] = "Modifier";
+        $data['TITLE'] = "Mon Profil";
+        $data['headerImg'] = "img-profile.jpg";
+
+        $objUser = new User_class();
+        if (!empty($this->input->post())) {
+
+            $objUser->hydrate($this->input->post());
+
+        } else {
+
+            $objUser->hydrate($this->Users_manager->findOne($this->session->id));
+
+        }
+
+        // chargement données du formlaire
+        if (!empty($this->input->post('pwd')) || !empty($this->input->post('pconfg'))) {
+
+            $this->form_validation->set_rules($this->config->item('profile_pwd'));
+
+        } else {
+            $this->form_validation->set_rules($this->config->item('profile_rule'));
+        }
+
+
+
+
+
+
+        $this->config->load('profile');
+        $arrConfig = $this->config->item('user_profile');
+
+        // création des inputs du formulaire
+        foreach ($arrConfig as $name => $formGroup) {
+            $inputArray[$name]['label'] = form_label($formGroup['name'], "input" . ucfirst($name), "class='small text-muted'");
+            $strType = 'form_' . $formGroup['type'];
+            $objMethod = "get".ucfirst($name);
+            $value = (method_exists($objUser, $objMethod)) ? $objUser->$objMethod() : '';
+            $inputArray[$name][$formGroup['type']] = $strType($name, $value, "id=input" . ucfirst($name) . " class='form-control'");
+
+        }
+
+        $data['objUser'] = $objUser;
+        $data['inputArray'] = $inputArray;
+        $data['CONTENT'] = $this->smarty->fetch('front/profile.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
     }
 
 
@@ -175,6 +229,8 @@ class Users extends CI_Controller
         $this->smarty->display('back/templates/content.tpl', $data);
     }
 
+
+
     /*
      * ------------------------------------------------------
      *  Méthodes d'actions et vérifications
@@ -189,14 +245,11 @@ class Users extends CI_Controller
     public function connect($id)
     {
 
-        if ($this->reCapchaV3($this->input->post('token'))) {
+        $arrUser = $this->Users_manager->getSessionData($id);
+        $arrUser['login'] = TRUE;
+        $this->session->set_userdata($arrUser);
+        redirect('', 'refresh');
 
-            $arrUser = $this->Users_manager->getSessionData($id);
-            $arrUser['login'] = TRUE;
-            $this->session->set_userdata($arrUser);
-            redirect('', 'refresh');
-
-        }
     }
 
 

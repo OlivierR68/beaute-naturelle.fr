@@ -23,8 +23,9 @@ class User_class extends CI_Model {
     private $_user_tel;
     private $_user_profil_id;
     private $_user_profil_libelle;
+    private $_user_avatar;
 
-	/** Constructeur **/
+    /** Constructeur **/
 	public function __construct(){
 		parent::__construct();
 	}
@@ -92,10 +93,14 @@ class User_class extends CI_Model {
         return $this->_user_profil_libelle;
     }
 
+    public function getAvatar(){
+        return $this->_user_avatar;
+    }
 
-    public function getArray(){
 
-        $varArray = ['id','pseudo','pwd','inscription_date','last_name','first_name','age','gender','email','tel','profil_id'];
+    public function getArray($empty = false){
+
+        $varArray = ['id','pseudo','pwd','inscription_date','last_name','first_name','age','gender','email','tel','profil_id','avatar'];
         $array = array();
 
         foreach ($varArray as &$var) {
@@ -104,9 +109,14 @@ class User_class extends CI_Model {
             $array[$keyName] =  $this->$varName;
         }
 
+        if ($empty){
+            array_filter($array);
+        }
+
         return $array;
 
     }
+
 
     /** SETTERS (pour chaque attribut) *
      * @param $id
@@ -157,6 +167,10 @@ class User_class extends CI_Model {
 
     public function setProfil_libelle($libelle){
         $this->_user_profil_libelle = $libelle;
+    }
+
+    public function setAvatar($img){
+        $this->_user_avatar = $img;
     }
 
 }
