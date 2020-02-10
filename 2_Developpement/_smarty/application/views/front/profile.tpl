@@ -32,9 +32,9 @@
                 <div class="form-group col-12 col-md-6">
                     <label for="inputEmail" class="small text-muted" >Sexe</label>
                     <select id="inputGender" name="gender" class="form-control">
-                        <option></option>
-                        <option value="1">Homme</option>
-                        <option value="2">Femme</option>
+                        <option>--</option>
+                        <option {if $objUser->getGender() == 1}selected{/if} value="1">Homme</option>
+                        <option {if $objUser->getGender() == 2}selected{/if} value="2">Femme</option>
                     </select>
                 </div>
 

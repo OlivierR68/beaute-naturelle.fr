@@ -57,8 +57,10 @@ class Users_manager extends CI_Model {
 
     public function findOne($id)
     {
+
         $query = $this->db
-            ->select('user_id, user_pseudo, user_avatar, user_inscription_date, user_last_name, user_first_name, user_age, user_gender, user_email, user_tel, user_profil_id')
+            ->select('user_id, user_pseudo, user_avatar, user_inscription_date, user_last_name, user_first_name, user_age, user_gender, user_email, user_tel, user_profil_id, profil_libelle')
+            ->join('profil', 'profil.profil_id = user.user_profil_id')
             ->where('user_id', $id)
             ->get('user');
         return $query->row_array();

@@ -25,7 +25,8 @@ $config['user_profile'] = [
 
     'pwd' => [
         'name' => 'Mot de passe',
-        'type' => 'password'
+        'type' => 'password',
+
     ],
 
     'pconf' => [
@@ -37,6 +38,17 @@ $config['user_profile'] = [
         'name' => 'Age',
         'type' => 'input'
     ],
+
+    'tel' => [
+        'name' => 'Téléphone',
+        'type' => 'input'
+    ],
+
+    'profil_libelle' => [
+        'name' => 'Profil',
+        'type' => 'input',
+    ],
+
 
 ];
 
@@ -62,42 +74,5 @@ $config['profile_rule'] = [
         'label' => 'Email',
         'rules' => 'trim|required|valid_email|callback_email_check'
     ],
-
-];
-
-$config['profile_pwd'] = [
-
-    [
-        'field' => 'pseudo',
-        'label' => 'Pseudo',
-        'rules' => 'trim|required|min_length[5]|max_length[18]|callback_pseudo_check'
-    ],
-    [
-        'field' => 'last_name',
-        'label' => 'Nom',
-        'rules' => 'required|alpha',
-    ],
-    [
-        'field' => 'first_name',
-        'label' => 'Prénom',
-        'rules' => 'required|alpha'
-    ],
-    [
-        'field' => 'email',
-        'label' => 'Email',
-        'rules' => 'trim|required|valid_email|callback_email_check'
-    ],
-
-    [
-        'field' => 'pwd',
-        'label' => 'Nouveau mot de passe',
-        'rules' => 'required|callback_pwd_check'
-    ],
-
-    [
-        'field' => 'pconf',
-        'label' => 'Confirmation nouveau mot de passe',
-        'rules' => 'trim|required|matches[pwd]'
-    ]
 
 ];

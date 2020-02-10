@@ -124,22 +124,37 @@ class Users extends CI_Controller
 
         // création des inputs du formulaire
         foreach ($arrConfig as $name => $formGroup) {
+
             $inputArray[$name]['label'] = form_label($formGroup['name'], "input" . ucfirst($name), "class='small text-muted'");
+
             $strType = 'form_' . $formGroup['type'];
             $objMethod = "get" . ucfirst($name);
+
             $value = (method_exists($objUser, $objMethod)) ? $objUser->$objMethod() : '';
-            $inputArray[$name][$formGroup['type']] = $strType($name, $value, "id=input" . ucfirst($name) . " class='form-control'");
+            $extra = "id=input" . ucfirst($name) . " class='form-control'";
+
+            if ($name == 'profil_libelle') {
+                $extra .= " disabled";
+                $inputArray[$name]['hidden'] = form_hidden($name,$value);
+            }
+
+            $inputArray[$name][$formGroup['type']] = $strType($name, $value, $extra);
 
         }
 
+        $rules = $this->config->item('profile_rule');
         if (!empty($this->input->post('pwd')) || !empty($this->input->post('pconfg'))) {
-            $this->form_validation->set_rules($this->config->item('profile_pwd'));
-        } else {
-            $this->form_validation->set_rules($this->config->item('profile_rule'));
+
+            $rules[] = array('field' => 'pwd', 'label' => 'Nouveau mot de passe', 'rules' => 'trim|required|callback_pwd_check');
+            $rules[] = array('field' => 'pconf', 'label' => 'Confirmation nouveau mot de passe', 'rules' => 'trim|required|matches[pwd]');
+
         }
+        $this->form_validation->set_rules($rules);
+
 
 
         if ($this->form_validation->run() == true) {
+
 
 
         } else {
@@ -200,7 +215,7 @@ class Users extends CI_Controller
             if ($id < 0) {
 
                 $insertId = $this->Users_manager->new($objUser);
-                $this->session->set_flashdata("success", "Le slider <b>{$objUser->getPseudo()}</b> a été ajouté");
+                $this->session->set_flashdata("success", "L'utilisateur <b>{$objUser->getPseudo()}</b> a été ajouté");
 
                 redirect('users/addEdit/' . $insertId, 'refresh');
 
