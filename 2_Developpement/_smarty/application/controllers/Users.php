@@ -110,30 +110,14 @@ class Users extends CI_Controller
         $data['TITLE'] = "Mon Profil";
         $data['headerImg'] = "img-profile.jpg";
 
+
         $objUser = new User_class();
         if (!empty($this->input->post())) {
-
             $objUser->hydrate($this->input->post());
 
         } else {
-
             $objUser->hydrate($this->Users_manager->findOne($this->session->id));
-
         }
-
-        // chargement données du formlaire
-        if (!empty($this->input->post('pwd')) || !empty($this->input->post('pconfg'))) {
-
-            $this->form_validation->set_rules($this->config->item('profile_pwd'));
-
-        } else {
-            $this->form_validation->set_rules($this->config->item('profile_rule'));
-        }
-
-
-
-
-
 
         $this->config->load('profile');
         $arrConfig = $this->config->item('user_profile');
@@ -142,11 +126,28 @@ class Users extends CI_Controller
         foreach ($arrConfig as $name => $formGroup) {
             $inputArray[$name]['label'] = form_label($formGroup['name'], "input" . ucfirst($name), "class='small text-muted'");
             $strType = 'form_' . $formGroup['type'];
-            $objMethod = "get".ucfirst($name);
+            $objMethod = "get" . ucfirst($name);
             $value = (method_exists($objUser, $objMethod)) ? $objUser->$objMethod() : '';
             $inputArray[$name][$formGroup['type']] = $strType($name, $value, "id=input" . ucfirst($name) . " class='form-control'");
 
         }
+
+        if (!empty($this->input->post('pwd')) || !empty($this->input->post('pconfg'))) {
+            $this->form_validation->set_rules($this->config->item('profile_pwd'));
+        } else {
+            $this->form_validation->set_rules($this->config->item('profile_rule'));
+        }
+
+
+        if ($this->form_validation->run() == true) {
+
+
+        } else {
+            foreach ($arrConfig as $name => $formGroup) {
+                $inputArray[$name]['error'] = form_error($name, '<div class="invalid-feedback d-block">', '</div>');
+            }
+        }
+
 
         $data['objUser'] = $objUser;
         $data['inputArray'] = $inputArray;
@@ -286,7 +287,16 @@ class Users extends CI_Controller
      */
     public function email_check($email)
     {
+        if (!empty($this->session->id)) {
+
+            $user = $this->Users_manager->findOne($this->session->id);
+
+            if ($user['user_email'] == $email) return true;
+
+        }
+
         $test = $this->Users_manager->checkEmail($email);
+
         if ($test) {
             $this->form_validation->set_message('email_check', '{field} déjà utilisé.');
             return FALSE;
@@ -303,13 +313,25 @@ class Users extends CI_Controller
      */
     public function pseudo_check($pseudo)
     {
+        if (!empty($this->session->id)) {
+
+            $user = $this->Users_manager->findOne($this->session->id);
+
+            if ($user['user_pseudo'] == $pseudo) return true;
+
+        }
+
         $test = $this->Users_manager->checkPseudo($pseudo);
+
+
         if ($test) {
             $this->form_validation->set_message('pseudo_check', '{field} non disponible.');
             return FALSE;
         } else {
             return TRUE;
         }
+
+
     }
 
 

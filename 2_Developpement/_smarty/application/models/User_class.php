@@ -130,7 +130,9 @@ class User_class extends CI_Model {
 	}
 
 	public function setPwd($pwd){
-		$this->_user_pwd = password_hash($pwd , PASSWORD_DEFAULT);
+	    if ($pwd != null){
+            $this->_user_pwd = password_hash($pwd , PASSWORD_DEFAULT);
+        }
 	}
 
 	public function setInscription_date($date){
