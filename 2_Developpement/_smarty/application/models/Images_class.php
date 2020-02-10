@@ -66,24 +66,27 @@ class Images_class extends CI_Model {
 		return $this->_img_validation;
 	}
 
-	 /** GETTER pour la liste des attributs
-	 *@return array Liste des valeurs attributs avec clefs associatives
-	 */
 
-	public function getArray(){
+    /** GETTER pour la liste des attributs
+     * @param bool $filter si true filter le tableau
+     * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
+     */
 
-		$varArray = ['id','libelle','slug','src','description','author','publi_date','validation'];
-		$array = array();
+    public function getArray($filter = false){
 
-		foreach ($varArray as &$var) {
-			$varName = "_img_".$var;
-			$keyName = substr($varName,1);
-			$array[$keyName] =  $this->$varName;
-		}
+        $varArray = get_object_vars($this);
 
-		return $array;
+        $arrInsert = array();
+        foreach ($varArray as $key => $value) {
+            $arrInsert[substr($key,1)] = $value;
+        }
 
-	}
+        if ($filter){
+            array_filter($arrInsert);
+        }
+
+        return $arrInsert;
+    }
 
 	/** GETTER pour contenu raccourci
 	 * @param $strLimit integer Limite de taille de la chaîne de caractère

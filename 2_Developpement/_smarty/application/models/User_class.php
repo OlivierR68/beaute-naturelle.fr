@@ -28,6 +28,7 @@ class User_class extends CI_Model {
     /** Constructeur **/
 	public function __construct(){
 		parent::__construct();
+
 	}
 
 	/** HYDRATATION *
@@ -98,23 +99,27 @@ class User_class extends CI_Model {
     }
 
 
-    public function getArray($empty = false){
+    /** GETTER pour la liste des attributs
+     * @param bool $filter si true filter le tableau
+     * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
+     */
 
-        $varArray = ['id','pseudo','pwd','inscription_date','last_name','first_name','age','gender','email','tel','profil_id','avatar'];
-        $array = array();
+    public function getArray($filter = false){
 
-        foreach ($varArray as &$var) {
-            $varName = "_user_".$var;
-            $keyName = substr($varName,1);
-            $array[$keyName] =  $this->$varName;
+        $varArray = get_object_vars($this);
+
+        $arrInsert = array();
+        foreach ($varArray as $key => $value) {
+            $arrInsert[substr($key,1)] = $value;
         }
 
-        if ($empty){
-            array_filter($array);
+        unset($arrInsert['user_profil_libelle']);
+
+        if ($filter){
+            array_filter($arrInsert);
         }
 
-        return $array;
-
+        return $arrInsert;
     }
 
 

@@ -85,24 +85,26 @@ class Slide_class extends CI_Model {
 	}
 
 
-	/** GETTER pour la liste des attributs
-	 *@return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
-	 */
+    /** GETTER pour la liste des attributs
+     * @param bool $filter si true filter le tableau
+     * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
+     */
 
-	public function getArray(){
+    public function getArray($filter = false){
 
-		$varArray = ['id','position','default','libelle','img','type','title','text'];
-		$array = array();
+        $varArray = get_object_vars($this);
 
-		foreach ($varArray as &$var) {
-			$varName = "_slide_".$var;
-			$keyName = substr($varName,1);
-			$array[$keyName] =  $this->$varName;
-		}
+        $arrInsert = array();
+        foreach ($varArray as $key => $value) {
+            $arrInsert[substr($key,1)] = $value;
+        }
 
-		return $array;
+        if ($filter){
+            array_filter($arrInsert);
+        }
 
-	}
+        return $arrInsert;
+    }
 
 
 	/** GETTER pour sous-titre raccourci

@@ -49,6 +49,27 @@ class  prestations_class extends CI_Model {
 		return $this->_prestations_tarif;
 	}
 
+    /** GETTER pour la liste des attributs
+     * @param bool $filter si true filter le tableau
+     * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
+     */
+
+    public function getArray($filter = false){
+
+        $varArray = get_object_vars($this);
+
+        $arrInsert = array();
+        foreach ($varArray as $key => $value) {
+            $arrInsert[substr($key,1)] = $value;
+        }
+
+        if ($filter){
+            array_filter($arrInsert);
+        }
+
+        return $arrInsert;
+    }
+
 	/** SETTERS (pour chaque attribut) **/
 
 	public function setId($id){
