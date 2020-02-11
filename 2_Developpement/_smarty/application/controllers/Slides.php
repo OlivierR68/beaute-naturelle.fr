@@ -27,6 +27,7 @@ class Slides extends CI_Controller {
 	/** Front : Affichage de la page d'accueil  */
 	public function home()
 	{
+
 		$data['preTITLE']	= "Magasin & Institut";
 		$data['TITLE'] 		= "A propos de Beauté Naturelle";
 
@@ -120,6 +121,7 @@ class Slides extends CI_Controller {
 			} else {
 
 				$insertId = $this->Slides_manager->update($objSlide);
+
 
 				$data['SUCCESS'] = "Le slider <b>{$objSlide->getLibelle()}</b> a été modifié";
 			}

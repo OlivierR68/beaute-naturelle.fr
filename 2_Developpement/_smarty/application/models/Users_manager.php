@@ -74,17 +74,21 @@ class Users_manager extends CI_Model {
 
 
     public function getSessionData($id){
+
+
 	    $query = $this->db->where('user_id',$id)
             ->select('
-                user_id AS id, 
-                user_pseudo AS pseudo, 
-                user_last_name AS name, 
-                user_first_name AS first_name, 
+                user_id AS id,
+                user_pseudo AS pseudo,
+                user_last_name AS name,
+                user_first_name AS first_name,
                 profil_level AS level,
                 profil_libelle')
             ->from('user')
             ->join('profil', 'profil.profil_id = user.user_profil_id')
             ->get();
+
+
 	    return $query->row_array();
 
     }
@@ -102,21 +106,27 @@ class Users_manager extends CI_Model {
         }
 
         return $this->db->insert_id();
+        /**
+         * test
+         */
     }
 
 
+
     /**
-     * Création d'1 utilisateur
+     * Modification d'1 utilisateur
      * @param $obj object Slide_class
      * @return string l'id de l'insert
      */
     public function update($obj)
     {
-        if (method_exists($obj, 'getArray')) {
-            $this->db->where('user_id', $obj->getId())
-                ->replace('user', $obj->getArray(true));
-        }
+        var_dump($obj);
+        die;
+
+        $this->db->where('user_id', $obj->getId())
+            ->replace('user',  $obj->getArray(true));
     }
+
 
 
     /**

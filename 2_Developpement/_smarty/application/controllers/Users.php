@@ -114,12 +114,8 @@ class Users extends CI_Controller
 
         // hydratation profile
         $objUser = new User_class();
-        if (!empty($this->input->post())) {
-            $objUser->hydrate($this->input->post());
+        $objUser->hydrate($this->Users_manager->findOne($this->session->id));
 
-        } else {
-            $objUser->hydrate($this->Users_manager->findOne($this->session->id));
-        }
 
 
         // chargement des données du formulaire
@@ -159,32 +155,30 @@ class Users extends CI_Controller
 
         if ($this->form_validation->run() == true) {
 
+            var_dump($this->input->post());
+            $objUser->hydrate($this->input->post());
+
             // gestion de l'avatar
             if ($_FILES['avatar']['size'] > 0) {
 
-                $file_path = "uploads/avatar/".$_FILES['avatar']['name'];
+                $config['upload_path'] = './uploads/avatar/';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['max_size'] = 2048;
 
-                if(!file_exists($file_path && filesize($file_path) != $_FILES['avatar']['size'])) {
+                $this->upload->initialize($config);
+                $this->upload->do_upload('avatar');
+                if (!$this->upload->do_upload('avatar')) {
+                    $data['ERROR'] = $this->upload->display_errors();
 
-                    $config['upload_path'] = './uploads/avatar/';
-                    $config['allowed_types'] = 'jpg|jpeg|png';
-                    $config['max_size'] = 2048;
+                } else {
 
-                    $this->upload->initialize($config);
-                    $this->upload->do_upload('avatar');
-                    if (!$this->upload->do_upload('avatar')) {
-                        $data['ERROR'] = $this->upload->display_errors();
+                    $upload_data = $this->upload->data();
+                    $objUser->setAvatar($upload_data['file_name']);
 
-                    } else {
-
-                        $upload_data = $this->upload->data();
-                        $objUser->setAvatar($upload_data['file_name']);
-
-                    }
                 }
+
             }
 
-            $objUser->setId($this->session->id);
             $this->Users_manager->update($objUser);
 
 
@@ -239,6 +233,29 @@ class Users extends CI_Controller
         }
 
         if (!empty($this->input->post())) {
+
+            // gestion de l'avatar
+            if ($_FILES['avatar']['size'] > 0) {
+
+                $config['upload_path'] = './uploads/avatar/';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['max_size'] = 2048;
+
+                $this->upload->initialize($config);
+                $this->upload->do_upload('avatar');
+                if (!$this->upload->do_upload('avatar')) {
+
+                    $data['ERROR'] = $this->upload->display_errors();
+
+                } else {
+
+                    $upload_data = $this->upload->data();
+                    $objUser->setAvatar($upload_data['file_name']);
+
+                }
+
+            }
+
 
             $objUser->hydrate($this->input->post());
 
@@ -295,6 +312,8 @@ class Users extends CI_Controller
         $arrUser = $this->Users_manager->getSessionData($id);
         $arrUser['login'] = TRUE;
         $this->session->set_userdata($arrUser);
+
+
         redirect('', 'refresh');
 
     }
@@ -335,7 +354,6 @@ class Users extends CI_Controller
     {
         if (!empty($this->session->id)) {
 
-            var_dump($this->session->id);
 
             $user = $this->Users_manager->findOne($this->session->id);
 

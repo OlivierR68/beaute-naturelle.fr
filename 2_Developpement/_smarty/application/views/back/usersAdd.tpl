@@ -1,12 +1,24 @@
 
-<form method="post">
+<form  method="post" enctype="multipart/form-data" >
 
 	<div class="row">
-		<div class="col">
+		<div class="col-12 col-md-6">
+			<div class="form-group">
+				<img class="w-100 img-fluid" src="{base_url('uploads/avatar/')}{$objUser->getAvatar()}" alt="">
+				<div class="custom-file">
+					<input type="file" name="avatar" class="form-control-file " accept="image/png, image/jpeg" id="inputAvatar">
+				</div>
+			</div>
+
 			<div class="form-group">
 				<label for="inputPseudo">Pseudo :</label>
 				<input type="text" name="pseudo" class="form-control" id="inputPseudo" value="{$objUser->getPseudo()}">
 			</div>
+
+
+
+		</div>
+		<div class="col-12 col-md-6">
 
 			<div class="form-group">
 				<label for="inputLast_name">Nom :</label>
@@ -18,21 +30,6 @@
 				<input type="text" name="first_name" class="form-control" id="inputFirst_name" value="{$objUser->getFirst_name()}">
 			</div>
 
-			<div class="form-group">
-				<label for="inputPseudo">Age  :</label>
-				<input type="number" name="age" max="100" min="18" class="form-control" id="inputAge" value="{$objUser->getAge()}">
-			</div>
-
-			<div class="form-group">
-				<label for="inputGender">Sexe : </label>
-				<select class="form-control" id="inputGender" name="gender">
-					<option value="1" {if $objUser->getGender() eq 1}selected{/if}>Homme</option>
-					<option value="2" {if $objUser->getGender() eq 2}selected{/if}>Femme</option>
-					<option value="3" {if $objUser->getGender() eq 3}selected{/if}>Autre</option>
-				</select>
-			</div>
-		</div>
-		<div class="col">
 			<div class="form-group">
 				<label for="inputTel">Téléphone  :</label>
 				<input type="tel" name="tel" class="form-control" id="inputTel" value="{$objUser->getTel()}">
@@ -59,6 +56,20 @@
 					<option value="1" {if $objUser->getGender() eq 1}selected{/if}>Membre</option>
 					<option value="2" {if $objUser->getGender() eq 2}selected{/if}>Modérateur</option>
 					<option value="3" {if $objUser->getGender() eq 3}selected{/if}>Administrateur</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="inputPseudo">Age  :</label>
+				<input type="number" name="age" max="100" min="18" class="form-control" id="inputAge" value="{$objUser->getAge()}">
+			</div>
+
+			<div class="form-group">
+				<label for="inputGender">Sexe : </label>
+				<select class="form-control" id="inputGender" name="gender">
+					<option value="1" {if $objUser->getGender() eq 1}selected{/if}>Homme</option>
+					<option value="2" {if $objUser->getGender() eq 2}selected{/if}>Femme</option>
+					<option value="3" {if $objUser->getGender() eq 3}selected{/if}>Autre</option>
 				</select>
 			</div>
 		</div>

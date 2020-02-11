@@ -1,6 +1,8 @@
 <div>
     <div class="container">
         {form_open_multipart('','class="form-signin" autocomplete="something-new"')}
+        {form_hidden('id',$objUser->getId())}
+        {form_hidden('profil_id',$objUser->getProfil_id())}
         <div class="row">
             <div class="col-12 col-md-3 d-flex justify-content-center">
                 <div>
