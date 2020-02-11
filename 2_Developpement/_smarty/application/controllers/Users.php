@@ -151,6 +151,8 @@ class Users extends CI_Controller
 
         }
 
+        
+
         $this->form_validation->set_rules($rules);
 
 
