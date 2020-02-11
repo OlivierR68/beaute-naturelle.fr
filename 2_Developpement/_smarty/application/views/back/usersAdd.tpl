@@ -57,9 +57,9 @@
             <div class="form-group">
                 <label for="inputProfil">Profil id :</label>
                 <select class="form-control" id="inputProfil" name="profil_id">
-                    <option value="1" {if $objUser->getProfil_id() eq 1}selected{/if}>Membre</option>
-                    <option value="2" {if $objUser->getProfil_id() eq 2}selected{/if}>Modérateur</option>
-                    <option value="3" {if $objUser->getProfil_id() eq 3}selected{/if}>Administrateur</option>
+                    <option value="1" {if $objUser->getGender() eq 1}selected{/if}>Membre</option>
+                    <option value="2" {if $objUser->getGender() eq 2}selected{/if}>Modérateur</option>
+                    <option value="3" {if $objUser->getGender() eq 3}selected{/if}>Administrateur</option>
                 </select>
             </div>
 
