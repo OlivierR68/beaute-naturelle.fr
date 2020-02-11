@@ -102,10 +102,11 @@ class User_class extends CI_Model {
 
     /** GETTER pour la liste des attributs
      * @param bool $filter si true filter le tableau
+     * @param bool $noId unset le id du tableau return si true
      * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
      */
 
-    public function getArray($filter = false){
+    public function getArray($filter = false, $noId = false){
 
         $varArray = get_object_vars($this);
 
@@ -116,10 +117,9 @@ class User_class extends CI_Model {
 
         unset($arrInsert['user_profil_libelle']);
 
-        if ($filter){
+        if ($filter) $arrInsert = array_filter($arrInsert);
 
-            $arrInsert = array_filter($arrInsert);
-        }
+        if ($noId) unset($arrInsert['user_id']);
 
         return $arrInsert;
     }

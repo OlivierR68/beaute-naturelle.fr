@@ -121,12 +121,9 @@ class Users_manager extends CI_Model {
     {
 
         $id = $objUser->getId();
-        $data = $objUser->getArray(true);
-
-        unset($data['user_id']);
+        $data = $objUser->getArray(true, true);
 
         $this->db->where('user_id', $id)->update('user', $data);
-        var_dump($this->db->last_query());
 
     }
 

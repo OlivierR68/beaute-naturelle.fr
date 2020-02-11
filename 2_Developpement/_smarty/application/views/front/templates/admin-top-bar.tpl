@@ -1,7 +1,7 @@
 <!-- TOP BAR ADMIN -->
 <div class="bg-dark">
 	<nav class="navbar navbar-expand-lg navbar-dark container">
-		<a class="navbar-brand" href="{base_url('dashboard')}"><i class="fas fa-user-cog"></i> Administrateur</a>
+		<a class="navbar-brand" href="{base_url('dashboard')}"><i class="fas fa-user-cog"></i> {$smarty.session.profil_libelle}</a>
 		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>

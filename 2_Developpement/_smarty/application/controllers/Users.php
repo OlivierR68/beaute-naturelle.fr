@@ -174,7 +174,7 @@ class Users extends CI_Controller
                 $this->upload->initialize($config);
                 $this->upload->do_upload('avatar');
                 if (!$this->upload->do_upload('avatar')) {
-                    $data['ERROR'] = $this->upload->display_errors();
+                    $data['ERRORS'] = $this->upload->display_errors();
 
                 } else {
 
@@ -251,7 +251,7 @@ class Users extends CI_Controller
                 $this->upload->do_upload('avatar');
                 if (!$this->upload->do_upload('avatar')) {
 
-                    $data['ERROR'] = $this->upload->display_errors();
+                    $data['ERRORS'] = $this->upload->display_errors();
 
                 } else {
 

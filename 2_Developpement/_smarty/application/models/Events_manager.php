@@ -48,10 +48,13 @@ class Events_manager extends CI_Model {
 	 */
 	public function update($obj)
 	{
-		if (method_exists($obj, 'getArray')) {
-			$this->db->where('event_id', $obj->getId())
-				->replace('event', $obj->getArray());
-		}
+
+		$id = $obj->getId();
+        $data = $obj->getArray(true);
+
+        unset($data['event_id']);
+
+        $this->db->where('event_id', $id)->update('event', $data);
 	}
 
 		/**
