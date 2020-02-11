@@ -216,8 +216,8 @@ class Users extends CI_Controller
                 $configManip['image_library']  = 'gd2';
                 $configManip['source_image']   = $upload_data['full_path'];
                 $configManip['maintain_ratio'] = FALSE;
-                $configManip['width']          = 400;
-                $configManip['height']         = 400;
+                $configManip['width']          = 300;
+                $configManip['height']         = 300;
 
 
                 $this->load->library('image_lib',$configManip);
