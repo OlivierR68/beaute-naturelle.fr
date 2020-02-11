@@ -1,3 +1,0 @@
-INSERT INTO ravoli_db.profil (profil_id, profil_libelle, profil_level, profil_description) VALUES (1, 'Membre', 1, 'Membre');
-INSERT INTO ravoli_db.profil (profil_id, profil_libelle, profil_level, profil_description) VALUES (2, 'Modérateur', 3, 'Modérateur');
-INSERT INTO ravoli_db.profil (profil_id, profil_libelle, profil_level, profil_description) VALUES (3, 'Administrateur', 4, 'Administrateur');
