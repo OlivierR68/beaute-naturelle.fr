@@ -44,12 +44,6 @@ $config['user_profile'] = [
         'type' => 'input'
     ],
 
-    'profil_libelle' => [
-        'name' => 'Profil',
-        'type' => 'input',
-    ],
-
-
 ];
 
 $config['profile_rule'] = [

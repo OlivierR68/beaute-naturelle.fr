@@ -136,10 +136,6 @@ class Users extends CI_Controller
             $value = (method_exists($objUser, $objMethod)) ? $objUser->$objMethod() : '';
             $extra = "id=input" . ucfirst($name) . " class='form-control'";
 
-            if ($name == 'profil_libelle') {
-                $extra .= " disabled";
-                $inputArray[$name]['hidden'] = form_hidden($name, $value);
-            }
 
             $inputArray[$name][$formGroup['type']] = $strType($name, $value, $extra);
 

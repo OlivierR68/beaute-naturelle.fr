@@ -4,15 +4,18 @@
         <div class="row">
             <div class="col-12 col-md-3 d-flex justify-content-center">
                 <div>
-                    <div>
-                        <span class="small text-muted">Avatar : 300x300 pixels</span>
-                    </div>
 
-                    <img class="w-100 img-fluid" src="{base_url('uploads/avatar/')}{$objUser->getAvatar()}" alt="">
-                    <div class="custom-file">
+                    <img class="w-100 img-fluid border" src="{base_url('uploads/avatar/')}{$objUser->getAvatar()}" alt="">
+                    <div class="custom-file my-2">
                         <input type="file" name="avatar" class="form-control-file " accept="image/png, image/jpeg" id="inputAvatar">
                     </div>
-
+                    <div>
+                        <span class="small text-muted">Taille : 300x300 pixels, max 2 Mo</span>
+                    </div>
+                    <div class="mt-3">
+                        <p class="small text-muted"><b>Profil :</b> {$objUser->getProfil_libelle()}<br>
+                            <b>Inscrit depuis le :</b> {$objUser->getInscription_date()|date_format:"%d/%m/%Y"}</p>
+                    </div>
                 </div>
 
             </div>
