@@ -104,6 +104,7 @@ class Users extends CI_Controller
 
     /**
      * Front : Affichage de la page profile de l'utilisateur
+     * test
      */
     public function profile()
     {
@@ -121,6 +122,8 @@ class Users extends CI_Controller
         // chargement des données du formulaire
         $this->config->load('profile');
         $arrConfig = $this->config->item('user_profile');
+
+
 
         // création des inputs du formulaire
         foreach ($arrConfig as $name => $formGroup) {
@@ -144,18 +147,21 @@ class Users extends CI_Controller
 
         // Chargement et implémentation des rules du form-validation
         $rules = $this->config->item('profile_rule');
+
         if (!empty($this->input->post('pwd')) || !empty($this->input->post('pconfg'))) {
 
             $rules[] = array('field' => 'pwd', 'label' => 'Nouveau mot de passe', 'rules' => 'trim|required|callback_pwd_check');
             $rules[] = array('field' => 'pconf', 'label' => 'Confirmation nouveau mot de passe', 'rules' => 'trim|required|matches[pwd]');
 
         }
-        // $this->form_validation->set_rules($rules);
+
+        $this->form_validation->set_rules($rules);
+
 
 
         if ($this->form_validation->run() == true) {
 
-            var_dump($this->input->post());
+
             $objUser->hydrate($this->input->post());
 
             // gestion de l'avatar
