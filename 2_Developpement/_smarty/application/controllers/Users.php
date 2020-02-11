@@ -150,7 +150,7 @@ class Users extends CI_Controller
             $rules[] = array('field' => 'pconf', 'label' => 'Confirmation nouveau mot de passe', 'rules' => 'trim|required|matches[pwd]');
 
         }
-        $this->form_validation->set_rules($rules);
+        // $this->form_validation->set_rules($rules);
 
 
         if ($this->form_validation->run() == true) {

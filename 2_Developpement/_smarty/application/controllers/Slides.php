@@ -8,8 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Slides extends CI_Controller {
 
-
-
 	public function __construct(){
 		parent::__construct();
 		$this->load->model("Slides_manager");
@@ -28,6 +26,8 @@ class Slides extends CI_Controller {
 	public function home()
 	{
 
+
+
 		$data['preTITLE']	= "Magasin & Institut";
 		$data['TITLE'] 		= "A propos de Beauté Naturelle";
 
@@ -43,6 +43,8 @@ class Slides extends CI_Controller {
 
         $data['CONTENT'] = $this->smarty->fetch('front/home.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
+
+        var_dump($data);
 	}
 
 	/** Back :  Affichage de la liste des slides  */
