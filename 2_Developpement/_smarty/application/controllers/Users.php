@@ -15,7 +15,8 @@ class Users extends CI_Controller
         $this->load->model("Users_manager");
         $this->load->model("User_class");
         $this->load->library('form_validation');
-        $this->load->library('upload');
+
+
 
     }
 
@@ -108,8 +109,7 @@ class Users extends CI_Controller
      */
     public function profile()
     {
-        $data['preTITLE'] = "Modifier";
-        $data['TITLE'] = "Mon Profil";
+        $data['preTITLE'] = "Modifier mon Profil";
         $data['headerImg'] = "img-profile.jpg";
 
 
@@ -164,28 +164,10 @@ class Users extends CI_Controller
 
             $objUser->hydrate($this->input->post());
 
-            // gestion de l'avatar
-            if ($_FILES['avatar']['size'] > 0) {
-
-                $config['upload_path'] = './uploads/avatar/';
-                $config['allowed_types'] = 'jpg|jpeg|png';
-                $config['max_size'] = 2048;
-
-                $this->upload->initialize($config);
-                $this->upload->do_upload('avatar');
-                if (!$this->upload->do_upload('avatar')) {
-                    $data['ERRORS'] = $this->upload->display_errors();
-
-                } else {
-
-                    $upload_data = $this->upload->data();
-                    $objUser->setAvatar($upload_data['file_name']);
-
-                }
-
-            }
+            $objUser = $this->uploadAvatar($objUser);
 
             $this->Users_manager->update($objUser);
+            $data['SUCCESS'] = 'Votre profil a bien été modifié';
 
 
         } else {
@@ -195,10 +177,59 @@ class Users extends CI_Controller
         }
 
 
+
         $data['objUser'] = $objUser;
+        $data['TITLE'] = $objUser->getPseudo();
         $data['inputArray'] = $inputArray;
-        $data['CONTENT'] = $this->smarty->fetch('front/profile.tpl', $data);
+        $data['CONTENT'] = $this->smarty->fetch('front/edit_profile.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
+    }
+
+
+    public function uploadAvatar($objUser){
+
+        if ($_FILES['avatar']['size'] > 0) {
+
+            $configUpload['upload_path']   = './uploads/avatar/';
+            $configUpload['allowed_types'] = 'jpg|jpeg|png';
+            $configUpload['file_name']     = $objUser->getPseudo()."_".time();
+            $configUpload['max_size']      = 2048;
+
+            $this->load->library('upload',$configUpload);
+
+            if (!$this->upload->do_upload('avatar')) {
+
+                $data['ERRORS'] = $this->upload->display_errors();
+
+            } else {
+
+                if ($objUser->getAvatar() != 'default.jpg') {
+
+                    $previous_img = "./uploads/avatar/".$objUser->getAvatar();
+                    unlink($previous_img);
+
+                }
+
+                $upload_data = $this->upload->data();
+
+                $configManip['image_library']  = 'gd2';
+                $configManip['source_image']   = $upload_data['full_path'];
+                $configManip['maintain_ratio'] = FALSE;
+                $configManip['width']          = 300;
+                $configManip['height']         = 300;
+
+
+                $this->load->library('image_lib',$configManip);
+                $this->image_lib->resize();
+
+
+                $objUser->setAvatar($upload_data['file_name']);
+
+            }
+        }
+
+        return $objUser;
+
     }
 
 
@@ -246,16 +277,36 @@ class Users extends CI_Controller
                 $config['upload_path'] = './uploads/avatar/';
                 $config['allowed_types'] = 'jpg|jpeg|png';
                 $config['max_size'] = 2048;
-
                 $this->upload->initialize($config);
-                $this->upload->do_upload('avatar');
+
                 if (!$this->upload->do_upload('avatar')) {
 
                     $data['ERRORS'] = $this->upload->display_errors();
 
                 } else {
 
+                    $previous_img = './uploads/avatar/'.$objUser->getAvatar();
+                    delete_files($previous_img);
+
                     $upload_data = $this->upload->data();
+
+                    $configer =  array(
+                        'image_library'   => 'gd2',
+                        'source_image'    =>  $upload_data['full_path'],
+                        'maintain_ratio'  =>  TRUE,
+                        'width'           =>  300,
+                        'height'          =>  300,
+                    );
+
+                    $this->image_lib->clear();
+                    $this->image_lib->initialize($configer);
+
+                    if ( ! $this->image_lib->resize())
+                    {
+                        $data['ERRORS'] = $this->image_lib->display_errors();
+                    }
+
+
                     $objUser->setAvatar($upload_data['file_name']);
 
                 }

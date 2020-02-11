@@ -6,7 +6,7 @@ $config['register_rules'] = [
     [
         'field' => 'pseudo',
         'label' => 'Pseudo',
-        'rules' => 'trim|required|min_length[5]|max_length[18]|callback_pseudo_check'
+        'rules' => 'trim|valid_base64|required|min_length[5]|max_length[18]|callback_pseudo_check'
     ],
     [
         'field' => 'last_name',

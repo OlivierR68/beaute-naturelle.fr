@@ -1,13 +1,11 @@
 <div>
     <div class="container">
         {form_open_multipart('','class="form-signin" autocomplete="something-new"')}
-        {form_hidden('id',$objUser->getId())}
-        {form_hidden('profil_id',$objUser->getProfil_id())}
         <div class="row">
             <div class="col-12 col-md-3 d-flex justify-content-center">
                 <div>
                     <div>
-                        <span class="small text-muted">Inscrit depuis le 10/02/2020</span>
+                        <span class="small text-muted">Avatar : 300x300 pixels</span>
                     </div>
 
                     <img class="w-100 img-fluid" src="{base_url('uploads/avatar/')}{$objUser->getAvatar()}" alt="">

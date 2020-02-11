@@ -34,6 +34,7 @@
 
     <header>
         {if isset($smarty.session.login)}
+
             {if $smarty.session.level > 1}
 
                 {include file='./admin-top-bar.tpl'}
