@@ -112,19 +112,22 @@ class Users_manager extends CI_Model {
     }
 
 
-
     /**
      * Modification d'1 utilisateur
-     * @param $obj object Slide_class
+     * @param $objUser
      * @return string l'id de l'insert
      */
-    public function update($obj)
+    public function update($objUser)
     {
-        var_dump($obj);
-        die;
 
-        $this->db->where('user_id', $obj->getId())
-            ->replace('user',  $obj->getArray(true));
+        $id = $objUser->getId();
+        $data = $objUser->getArray(true);
+
+        unset($data['user_id']);
+
+        $this->db->where('user_id', $id)->update('user', $data);
+        var_dump($this->db->last_query());
+
     }
 
 

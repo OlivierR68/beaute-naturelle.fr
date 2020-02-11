@@ -142,10 +142,6 @@ class User_class extends CI_Model {
         }
 	}
 
-	public function setInscription_date($date){
-		$this->_user_inscription_date = $date;
-	}
-
 	public function setLast_name($name){
 		$this->_user_last_name = trim($name);
 	}
