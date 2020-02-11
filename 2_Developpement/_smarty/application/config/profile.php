@@ -57,7 +57,7 @@ $config['profile_rule'] = [
     [
         'field' => 'pseudo',
         'label' => 'Pseudo',
-        'rules' => 'valid_base64|trim|required|min_length[5]|max_length[18]|callback_pseudo_check'
+        'rules' => 'trim|required|min_length[5]|max_length[18]|callback_pseudo_check|regex_match[/^([a-zA-Z0-9-_]{2,36})$/]'
     ],
     [
         'field' => 'last_name',

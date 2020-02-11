@@ -164,6 +164,7 @@ class Users extends CI_Controller
 
             $objUser->hydrate($this->input->post());
 
+            // gestion de l'image
             $objUser = $this->uploadAvatar($objUser);
 
             $this->Users_manager->update($objUser);
@@ -215,8 +216,8 @@ class Users extends CI_Controller
                 $configManip['image_library']  = 'gd2';
                 $configManip['source_image']   = $upload_data['full_path'];
                 $configManip['maintain_ratio'] = FALSE;
-                $configManip['width']          = 300;
-                $configManip['height']         = 300;
+                $configManip['width']          = 400;
+                $configManip['height']         = 400;
 
 
                 $this->load->library('image_lib',$configManip);
@@ -272,47 +273,7 @@ class Users extends CI_Controller
         if (!empty($this->input->post())) {
 
             // gestion de l'avatar
-            if ($_FILES['avatar']['size'] > 0) {
-
-                $config['upload_path'] = './uploads/avatar/';
-                $config['allowed_types'] = 'jpg|jpeg|png';
-                $config['max_size'] = 2048;
-                $this->upload->initialize($config);
-
-                if (!$this->upload->do_upload('avatar')) {
-
-                    $data['ERRORS'] = $this->upload->display_errors();
-
-                } else {
-
-                    $previous_img = './uploads/avatar/'.$objUser->getAvatar();
-                    delete_files($previous_img);
-
-                    $upload_data = $this->upload->data();
-
-                    $configer =  array(
-                        'image_library'   => 'gd2',
-                        'source_image'    =>  $upload_data['full_path'],
-                        'maintain_ratio'  =>  TRUE,
-                        'width'           =>  300,
-                        'height'          =>  300,
-                    );
-
-                    $this->image_lib->clear();
-                    $this->image_lib->initialize($configer);
-
-                    if ( ! $this->image_lib->resize())
-                    {
-                        $data['ERRORS'] = $this->image_lib->display_errors();
-                    }
-
-
-                    $objUser->setAvatar($upload_data['file_name']);
-
-                }
-
-            }
-
+            $objUser = $this->uploadAvatar($objUser);
 
             $objUser->hydrate($this->input->post());
 
