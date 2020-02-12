@@ -23,10 +23,10 @@
             <div class="col-12 col-md-9">
 
                 <div class="form-row">
-
                     {foreach from=$inputArray item=arrGroup}
                         <div class="form-group col-12 col-md-6">
                             {foreach from=$arrGroup item=input}
+
                                 {$input}
                             {/foreach}
                         </div>

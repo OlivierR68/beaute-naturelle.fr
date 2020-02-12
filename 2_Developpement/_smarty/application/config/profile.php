@@ -44,6 +44,11 @@ $config['user_profile'] = [
         'type' => 'input'
     ],
 
+    'localisation' => [
+        'name' => 'Localisation',
+        'type' => 'input'
+    ],
+
 ];
 
 $config['profile_rule'] = [
@@ -51,7 +56,7 @@ $config['profile_rule'] = [
     [
         'field' => 'pseudo',
         'label' => 'Pseudo',
-        'rules' => 'trim|required|min_length[5]|max_length[18]|callback_pseudo_check|regex_match[/^([a-zA-Z0-9-_]{2,36})$/]'
+        'rules' => 'trim|required|min_length[5]|max_length[18]|callback_pseudo_check|alpha_numeric'
     ],
     [
         'field' => 'last_name',
@@ -67,6 +72,21 @@ $config['profile_rule'] = [
         'field' => 'email',
         'label' => 'Email',
         'rules' => 'trim|required|valid_email|callback_email_check'
+    ],
+    [
+        'field' => 'age',
+        'label' => 'Age',
+        'rules' => 'trim|integer'
+    ],
+    [
+        'field' => 'tel',
+        'label' => 'Téléphone',
+        'rules' => 'trim|numeric'
+    ],
+    [
+        'field' => 'localisation',
+        'label' => 'Localisation',
+        'rules' => 'trim'
     ],
 
 ];

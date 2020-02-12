@@ -24,6 +24,7 @@ class User_class extends CI_Model {
     private $_user_profil_id;
     private $_user_profil_libelle;
     private $_user_avatar;
+    private $_user_localisation;
 
     /** Constructeur **/
 	public function __construct(){
@@ -97,6 +98,10 @@ class User_class extends CI_Model {
 
     public function getAvatar(){
         return $this->_user_avatar;
+    }
+
+    public function getLocalisation(){
+        return $this->_user_localisation;
     }
 
 
@@ -180,6 +185,10 @@ class User_class extends CI_Model {
 
     public function setAvatar($img){
         $this->_user_avatar = $img;
+    }
+
+    public function setLocalisation($text){
+	    $this->_user_localisation = $text;
     }
 
 }
