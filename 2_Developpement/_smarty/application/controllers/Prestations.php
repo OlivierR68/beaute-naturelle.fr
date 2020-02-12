@@ -13,8 +13,12 @@ class Prestations extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+
         $this->load->model("Categories_manager");
         $this->load->model("Category_class");
+
+        $this->load->model("Prestations_manager");
+        $this->load->model("Prestation_class");
 	}
 
 	/** Front : Fonction permettant d'afficher la page de prestation  */
@@ -42,11 +46,27 @@ class Prestations extends CI_Controller {
 
 	public function cat($slug)
     {
-
-        $dataCat = $this->Categories_manager->findOne(strstr($slug, '-', true));
+        $cat_id = strstr($slug, '-', true);
+        $cat_data = $this->Categories_manager->findOne($cat_id);
 
         $objCat = new Category_class;
-        $objCat->hydrate($dataCat);
+        $objCat->hydrate($cat_data);
+
+
+        $subcat_array = $this->Prestations_manager->getSubCat($cat_id);
+
+
+
+        foreach ($subcat_array as $subcat){
+
+            $presta_array = $this->Prestations_manager->getPresta($subcat['sub_cat_id']);
+
+            foreach ($presta_array as $presta){
+                $objPresta = new Prestation_class();
+                $objPresta->hydrate($presta);
+                $data['presta_table'][$subcat['sub_cat_title']][] = $objPresta;
+            }
+        }
 
 
         $data['preTITLE']	= "Préstations & Tarifs";
