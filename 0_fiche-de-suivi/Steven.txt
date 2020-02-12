@@ -73,3 +73,6 @@ Debug galerie
 
 Galerie en smarty
 
+05/02/2020
+
+Galerie bugfix - finitions

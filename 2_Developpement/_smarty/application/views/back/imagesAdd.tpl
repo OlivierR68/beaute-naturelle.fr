@@ -1,7 +1,28 @@
 <form method="post" enctype="multipart/form-data">
 	<div class="form-group">
 		<label for="inputName">Nom de l'image :</label>
-		<input type="text" name="name" class="form-control" id="inputName" value="{$objImage->getLibelle()}">
+		<input type="text" name="libelle" class="form-control" id="inputName" value="{$objImage->getLibelle()}">
+	</div>
+	<div class="form-group">
+		<label for="inputName">Slug</label>
+		<input type="text" name="slug" class="form-control" id="inputName" value="{$objImage->getSlug()}">
+	</div>
+	<div class="form-group">
+		<label for="inputName">desc</label>
+		<input type="text" name="description" class="form-control" id="inputName" value="{$objImage->getDescription()}">
+	</div>
+
+	 <div class="form-group">
+		<label for="inputName">auteur</label>
+		<input type="number" name="author" class="form-control" id="inputName" value="{$objImage->getAuthor()}">
+	</div>
+
+	<div class="form-group">
+		<label for="inputName">Publier</label>
+		<select name="validation">
+		<option value="0">Non</option>
+		<option value="1">Oui</option>
+		</select>
 	</div>
 
 	<div class="form-group">

@@ -77,12 +77,9 @@ class Images extends CI_Controller
 		 	-1 = page de création | 1+ = page de modification
 		 */
 
-		$data['SUCCESS'] = $this->session->flashdata('success') ?? ''; // récupération du message de succes si il a été envoyé
-
+	
 		 // Création d'un objet event qu'on utilisera tout au long de la fonction
 		$objImage = new Images_class();
-
-		
 			
 		// On vérifie si la page a un id, on l'hydrate en récupérant les infos dans la bdd
 		if($id >= 0) {
@@ -138,7 +135,7 @@ class Images extends CI_Controller
 				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
-				redirect('images/AddPage', 'refresh'); // redirection sur la page modification
+				redirect('images/AddEdit/'.$insertId, 'refresh'); // redirection sur la page modification
 
 			} else {
 
@@ -152,7 +149,7 @@ class Images extends CI_Controller
 
 		if ($id > 0) { // modification de l'affichage selon on se trouve
 
-			$data['TITLE'] 		= "Modifier l'image :".$objImage->getSrc();
+			$data['TITLE'] 		= "Modifier l'image :".$objImage->getLibelle();
 			$data['buttonSubmit']  = "Modifier";
 			$data['buttonCancel']  = "Revenir à la liste";
 
