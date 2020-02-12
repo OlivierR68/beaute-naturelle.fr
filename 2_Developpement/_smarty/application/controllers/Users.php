@@ -143,17 +143,14 @@ class Users extends CI_Controller
 
         // Chargement et implémentation des rules du form-validation
         $rules = $this->config->item('profile_rule');
+        $this->form_validation->set_rules($rules);
 
         if (!empty($this->input->post('pwd')) || !empty($this->input->post('pconfg'))) {
 
-            $rules[] = array('field' => 'pwd', 'label' => 'Nouveau mot de passe', 'rules' => 'trim|required|callback_pwd_check');
-            $rules[] = array('field' => 'pconf', 'label' => 'Confirmation nouveau mot de passe', 'rules' => 'trim|required|matches[pwd]');
+            $this->form_validation->set_rules('pwd','Mot de passe','required|callback_pwd_check');
+            $this->form_validation->set_rules('pconf','Confirmation mot de passe','trim|required|matches[pwd]');
 
         }
-
-        $this->form_validation->set_rules($rules);
-
-
 
         if ($this->form_validation->run() == true) {
 
@@ -200,12 +197,9 @@ class Users extends CI_Controller
 
             } else {
 
-                if ($objUser->getAvatar() != 'default.jpg') {
+                $previous_img = "./uploads/avatar/".$objUser->getAvatar();
 
-                    $previous_img = "./uploads/avatar/".$objUser->getAvatar();
-                    unlink($previous_img);
-
-                }
+                if ($objUser->getAvatar() != 'default.jpg' && file_exists($previous_img)) unlink($previous_img);
 
                 $upload_data = $this->upload->data();
 

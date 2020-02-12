@@ -34,20 +34,16 @@
 
 	<div class="row">
 		<!-- Foreach de catégorie ici -->
-        {foreach from=$arrCategorie item=objCategorie}
+        {foreach from=$arrCategories item=objCategory}
+            <a href="{$objCategory->getUrl()}" style="background-image : url('{$objCategory->getImgUrl()}')" class="col-6 col-lg-3 p-0 bn_presta-block d-flex ">
 
-        
-            <a href="#" style="background-image : url('{base_url('assets/img/prestations/')}{$objCategorie->getImg()}.jpg')" class="col-6 col-lg-3 p-0 bn_presta-block  d-flex">
-
-                <div></div>
+                <div class="{if $smarty.foreach.objCategory.index % 2}bn_bg-color-2{/if}"></div>
                 <span>
-                    {$objCategorie->getName()}
+                    {$objCategory->getTitle()}
                 </span>
 
             </a>
-			
 
-		</a>
 		{/foreach}
 		
 		<!-- fin du foreach -->

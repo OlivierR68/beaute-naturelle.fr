@@ -415,17 +415,6 @@ td::first-letter {
   padding-top: 6rem;
 }
 
-.bn_side-bg-1 {
-  background-image: url(../img/slide-1.jpg);
-}
-
-.bn_side-bg-2 {
-  background-image: url(../img/slide-2.jpg);
-}
-
-.bn_side-bg-3 {
-  background-image: url(../img/slide-3.jpg);
-}
 
 .bn_slide-banner {
   height: 65%;
@@ -471,61 +460,7 @@ td::first-letter {
   background-position: 50% 50%;
 }
 
-.bn_img-contact {
-  background-image: url(../img/img-contact.jpg);
-}
 
-.bn_img-institut {
-  background-image: url(../img/img-institut.jpg);
-}
-
-.bn_img-magasin {
-  background-image: url(../img/img-magasin.jpg);
-}
-
-.bn_img-gallerie {
-  background-image: url(../img/img-gallerie.jpg);
-}
-
-.bn_img-mentions {
-  background-image: url(../img/img-mentions.jpg);
-}
-
-.bn_img-sitemap {
-  background-image: url(../img/img-sitemap.jpg);
-}
-
-.bn_img-presta-1 {
-  background-image: url(../img/prestations/presta-top-1.jpg);
-}
-
-.bn_img-presta-2 {
-  background-image: url(../img/prestations/presta-top-2.jpg);
-}
-
-.bn_img-presta-3 {
-  background-image: url(../img/prestations/presta-top-3.jpg);
-}
-
-.bn_img-presta-4 {
-  background-image: url(../img/prestations/presta-top-4.jpg);
-}
-
-.bn_img-presta-5 {
-  background-image: url(../img/prestations/presta-top-5.jpg);
-}
-
-.bn_img-presta-6 {
-  background-image: url(../img/prestations/presta-top-6.jpg);
-}
-
-.bn_img-presta-7 {
-  background-image: url(../img/prestations/presta-top-7.jpg);
-}
-
-.bn_img-presta-8 {
-  background-image: url(../img/prestations/presta-top-8.jpg);
-}
 
 /* ================================================
   CONTENU 
@@ -700,7 +635,7 @@ td::first-letter {
   left: 0;
 }
 
-.bn_presta-block div.bn_bg-color-2 {
+.bn_presta-block:nth-child(even) div {
   background-color: #98C23A;
 }
 
@@ -726,38 +661,6 @@ td::first-letter {
   }
 }
 
-
-.bn_presta-bg-1 {
-  background-image: url(../img/prestations/presta-bg-1.jpg);
-}
-
-.bn_presta-bg-2 {
-  background-image: url(../img/prestations/presta-bg-2.jpg);
-}
-
-.bn_presta-bg-3 {
-  background-image: url(../img/prestations/presta-bg-3.jpg);
-}
-
-.bn_presta-bg-4 {
-  background-image: url(../img/prestations/presta-bg-4.jpg);
-}
-
-.bn_presta-bg-5 {
-  background-image: url(../img/prestations/presta-bg-5.jpg);
-}
-
-.bn_presta-bg-6 {
-  background-image: url(../img/prestations/presta-bg-6.jpg);
-}
-
-.bn_presta-bg-7 {
-  background-image: url(../img/prestations/presta-bg-7.jpg);
-}
-
-.bn_presta-bg-8 {
-  background-image: url(../img/prestations/presta-bg-8.jpg);
-}
 
 .bn_site-map-ul {
   list-style: square;

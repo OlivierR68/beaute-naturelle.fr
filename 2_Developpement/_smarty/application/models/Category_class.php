@@ -1,102 +1,155 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class  Category_class extends CI_Model {
-	/** Les attributs de la classe - en privé **/
-	private $_categorie_id;
-	private $_categorie_img;
-	private $_categorie_alt;
-	private $_categorie_slug;
-	private $_categorie_name;
-    private $_categorie_description;
+class  Category_class extends CI_Model
+{
+    /** Les attributs de la classe - en privé **/
+    private $_cat_id;
+    private $_cat_title;
+    private $_cat_slug;
+    private $_cat_img;
+    private $_cat_header;
+    private $_cat_description;
 
     /** Constructeur **/
-	public function __construct(){
-		parent::__construct();
-	}
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
-	/** HYDRATATION *
-	 * @param $datas array
-	 * @return prestation_class un objet hydraté
-	 */
-	public function hydrate($datas){
-		foreach($datas as $keyData => $data){
-			$strSetter	= "set".str_replace("categorie_", "", $keyData);
-			if (method_exists($this, $strSetter)){
-				$this->$strSetter($data);
-			}
-		}
-		return $this;
-	}
+    /** HYDRATATION *
+     * @param $datas array
+     * @return prestation_class un objet hydraté
+     */
+    public function hydrate($datas)
+    {
+        foreach ($datas as $keyData => $data) {
+            $strSetter = "set" . str_replace("cat_", "", $keyData);
+            if (method_exists($this, $strSetter)) {
+                $this->$strSetter($data);
+            }
+        }
+        return $this;
+    }
 
-	/** GETTERS (pour chaque attribut) **/
-	public function getId(){
-		return $this->_categorie_id;
-	}
+    /** GETTERS (pour chaque attribut) **/
+    public function getId()
+    {
+        return $this->_cat_id;
+    }
 
-	public function getImg(){
-		return $this->_categorie_img;
-	}
+    public function getTitle()
+    {
+        return $this->_cat_title;
+    }
 
-	public function getAlt(){
-		return $this->_categorie_alt;
-	}
+    public function getSlug()
+    {
 
-	public function getSlug(){
-		return $this->_categorie_slug;
-	}
+        return $this->_cat_slug;
+    }
 
-	public function getName(){
-		return $this->_categorie_name;
-	}
-    public function getDescription(){
-		return $this->_categorie_description;
-	}
+    public function getUrl()
+    {
+        return site_url('prestations/cat/'.$this->_cat_slug);
+    }
+
+    public function getImg()
+    {
+        return $this->_cat_img;
+    }
+
+    public function getImgUrl()
+    {
+        return base_url('uploads/prestations/'.$this->_cat_img);
+    }
+
+    public function getHeader()
+    {
+        return $this->_cat_header;
+    }
+
+    public function getDescription()
+    {
+        return $this->_cat_description;
+    }
+
 
     /** GETTER pour la liste des attributs
      * @param bool $filter si true filter le tableau
-     * @return array Liste des valeurs attributs avec clefs associatives correspondentes similaire à la bdd
+     * @param bool $noId unset le id du tableau return si true
+     * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
      */
 
-    public function getArray($filter = false){
+    public function getArray($filter = false, $noId = false)
+    {
 
         $varArray = get_object_vars($this);
 
         $arrInsert = array();
         foreach ($varArray as $key => $value) {
-            $arrInsert[substr($key,1)] = $value;
+            $arrInsert[substr($key, 1)] = $value;
         }
 
-        if ($filter){
-            $arrInsert = array_filter($arrInsert);
-        }
+        unset($arrInsert['user_profil_libelle']);
+
+        if ($filter) $arrInsert = array_filter($arrInsert);
+
+        if ($noId) unset($arrInsert['user_id']);
 
         return $arrInsert;
     }
 
-	/** SETTERS (pour chaque attribut) **/
+    /** SETTERS (pour chaque attribut) **/
+    public function setId($id)
+    {
+        $this->_cat_id = $id;
+    }
 
-	public function setId($id){
-		$this->_categorie_id = $id;
-	}
+    public function setTitle($title)
+    {
+        $this->_cat_title = $title;
+        $this->setSlug();
+    }
 
-	public function setImg($img){
-		$this->_categorie_img = $img;
-	}
+    public function setSlug()
+    {
+        $name = $this->getTitle();
+        $arrAcc = array(
+            'e' => array('é', 'ë', 'ê', 'è', 'É', 'È', 'Ê', 'Ë'),
+            'a' => array('à', 'â', 'ä', 'ã', 'À', 'Â', 'Ä', 'Ã'),
+            'i' => array('ï', 'î', 'ì', 'Ì', 'Ï', 'Î'),
+            'o' => array('ö', 'ô', 'ò', 'õ', 'Ö', 'Ô', 'Ò', 'Õ'),
+            'u' => array('ù', 'û', 'ü', 'Ù', 'Û', 'Ü')
+        );
 
-	public function setAlt($alt){
-		$this->_categorie_alt = $alt;
-	}
+        foreach($arrAcc as $key => $array){
+            foreach($array as $value){
 
-	public function setSlug($slug){
-		$this->_categorie_slug = $slug;
-	}
+                $name = str_replace($value, $key, $name);
 
-	public function setName($name){
-		$this->_categorie_name = $name;
-	}
-    public function setDescription($description){
-		$this->_categorie_description = $description;
-	}
 
+            }
+        }
+
+        $name = trim(strtolower($name));
+        $name = str_replace(' ', '-',$name);
+
+        $this->_cat_slug = $this->getId()."-".$name;
+    }
+
+    public function setImg($img)
+    {
+        $this->_cat_img = $img;
+    }
+
+    public function setHeader($img)
+    {
+        $this->_cat_header = $img;
+    }
+
+    public function setDescription($text)
+    {
+        $this->_cat_description = $text;
+    }
 }

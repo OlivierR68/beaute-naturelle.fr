@@ -43,8 +43,7 @@ class Slides extends CI_Controller {
 
         $data['CONTENT'] = $this->smarty->fetch('front/home.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
-
-        var_dump($data);
+        
 	}
 
 	/** Back :  Affichage de la liste des slides  */

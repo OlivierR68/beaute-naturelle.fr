@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
  
-class Category_manager extends CI_Model{
+class Categories_manager extends CI_Model{
 
 	public function findAll(){
 		$this->db->select("*");

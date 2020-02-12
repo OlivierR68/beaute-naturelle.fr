@@ -13,7 +13,7 @@ class Prestations extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-        $this->load->model("Category_manager");
+        $this->load->model("Categories_manager");
         $this->load->model("Category_class");
 	}
 
@@ -26,14 +26,15 @@ class Prestations extends CI_Controller {
 
 		// à remplir ici, parttie frontend
 
-        $categorie = $this->Category_manager->findAll();
+        $categories = $this->Categories_manager->findAll();
+
         $slidesToDisplay = array();
-        foreach($categorie as $categorie){
-        $objcategorie 	= new Category_class;
-        $objcategorie->hydrate($categorie);
-        $slidesToDisplay[] = $objcategorie;
+        foreach($categories as $category){
+        $objCategory 	= new Category_class;
+        $objCategory->hydrate($category);
+        $slidesToDisplay[] = $objCategory;
         }
-        $data['arrCategorie'] = $slidesToDisplay;
+        $data['arrCategories'] = $slidesToDisplay;
 
         $data['CONTENT'] = $this->smarty->fetch('front/prestations.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
