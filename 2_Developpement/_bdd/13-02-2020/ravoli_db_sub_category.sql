@@ -1,0 +1,2 @@
+INSERT INTO ravoli_db.sub_category (sub_cat_id, cat_id, sub_cat_title) VALUES (1, 1, 'Épilation visage');
+INSERT INTO ravoli_db.sub_category (sub_cat_id, cat_id, sub_cat_title) VALUES (2, 1, 'Épilation corp');

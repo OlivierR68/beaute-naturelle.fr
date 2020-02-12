@@ -1,0 +1,3 @@
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description) VALUES (1, 'Épilations', 'presta-bg-1.jpg', 'presta-top-1.jpg', 'catégorie épilation');
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description) VALUES (2, 'Mains et Pieds', 'presta-bg-2.jpg', 'presta-top-2.jpg', 'Catégorie Mains & Pieds');
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description) VALUES (3, 'Regard', 'presta-bg-3.jpg', 'presta-top-3.jpg', 'Catégorie Regard');
