@@ -40,4 +40,20 @@ class Prestations extends CI_Controller {
         $this->smarty->display('front/templates/content.tpl', $data);
 	}
 
+	public function cat($slug)
+    {
+
+        $dataCat = $this->Categories_manager->findOne(strstr($slug, '-', true));
+
+        $objCat = new Category_class;
+        $objCat->hydrate($dataCat);
+
+
+        $data['preTITLE']	= "Préstations & Tarifs";
+        $data['TITLE'] 		= $objCat->getTitle();
+        $data['headerImg']	= "img-institut.jpg";
+        $data['CONTENT'] = $this->smarty->fetch('front/category.tpl', $data);
+        $this->smarty->display('front/templates/content.tpl', $data);
+    }
+
 }

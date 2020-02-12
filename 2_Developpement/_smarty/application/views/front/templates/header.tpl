@@ -140,7 +140,7 @@
 
 	{else}
 
-	<div class="bn_img-top bn_decal-slider" style="background-image: url({base_url("assets/img/")}{$headerImg})"></div>
+	<div class="bn_img-top bn_decal-slider" style="background-image: url({$headerImg})"></div>
 
 	{/if}
 
