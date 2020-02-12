@@ -110,7 +110,7 @@ class Users extends CI_Controller
     public function profile()
     {
         $data['preTITLE'] = "Modifier mon Profil";
-        $data['headerImg'] = "img-profile.jpg";
+        $data['headerImg']	= base_url("assets/img/img-profile.jpg");
 
 
         // hydratation profile

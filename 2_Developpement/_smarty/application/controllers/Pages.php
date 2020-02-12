@@ -21,7 +21,9 @@ class Pages extends CI_Controller
     {
         $data['preTITLE']	= "Vous avez des questions ?";
         $data['TITLE'] 		= "Contactez-nous";
-        $data['headerImg']	= "img-contact.jpg";
+        $data['headerImg']	= base_url("assets/img/img-contact.jpg");
+
+
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/contact.tpl', $data);
@@ -33,7 +35,8 @@ class Pages extends CI_Controller
     {
         $data['preTITLE']	= "Découvrez";
         $data['TITLE'] 		= "Notre Établissement";
-        $data['headerImg']	= "img-magasin.jpg";
+        $data['headerImg']	= base_url("assets/img/img-magasin.jpg");
+
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/about.tpl', $data);
@@ -45,7 +48,8 @@ class Pages extends CI_Controller
     {
         $data['preTITLE']	= "Obligations Légales";
         $data['TITLE'] 		= "Mentions Légales";
-        $data['headerImg']	= "img-mentions.jpg";
+        $data['headerImg']	= base_url("assets/img/img-mentions.jpg");
+
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/mentions.tpl', $data);
@@ -57,7 +61,8 @@ class Pages extends CI_Controller
     {
         $data['preTITLE']	= "Protection des Données";
         $data['TITLE'] 		= "Politique de Confidentialité";
-        $data['headerImg']	= "img-mentions.jpg";
+        $data['headerImg']	= base_url("assets/img/img-mentions.jpg");
+
 
 
         $data['CONTENT'] = $this->smarty->fetch('front/politique.tpl', $data);
@@ -69,7 +74,8 @@ class Pages extends CI_Controller
     {
         $data['preTITLE']	= "Arborescence";
         $data['TITLE'] 		= "Plan du Site";
-        $data['headerImg']	= "img-sitemap.jpg";
+        $data['headerImg']	= base_url("assets/img/img-sitemap.jpg");
+
 
         $data['CONTENT'] = $this->smarty->fetch('front/sitemap.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);

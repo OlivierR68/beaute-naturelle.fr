@@ -22,7 +22,7 @@ class Prestations extends CI_Controller {
 	{
 		$data['preTITLE']	= "Préstations & Tarifs";
 		$data['TITLE'] 		= "L'Institut";
-		$data['headerImg']	= "img-institut.jpg";
+        $data['headerImg']	= base_url("assets/img/img-institut.jpg");
 
 		// à remplir ici, parttie frontend
 
@@ -51,7 +51,7 @@ class Prestations extends CI_Controller {
 
         $data['preTITLE']	= "Préstations & Tarifs";
         $data['TITLE'] 		= $objCat->getTitle();
-        $data['headerImg']	= "img-institut.jpg";
+        $data['headerImg']	= base_url('uploads/prestations/'.$objCat->getHeader());
         $data['CONTENT'] = $this->smarty->fetch('front/category.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
     }

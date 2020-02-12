@@ -23,7 +23,7 @@ class Events extends CI_Controller {
 
 		$data['preTITLE']	= "Participer à nos";
 		$data['TITLE'] 		= "Événements";
-		$data['headerImg']	= "img-events.jpg";
+		$data['headerImg']	= base_url("assets/img/img-events.jpg");
 
 
 		$events	= $this->Events_manager->findAll();
