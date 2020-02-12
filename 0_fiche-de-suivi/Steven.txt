@@ -75,4 +75,9 @@ Galerie en smarty
 
 05/02/2020
 
-Galerie bugfix - finitions
+Galerie bugfix 
+
+12/02/2020
+
+Galerie back bugfix 
+Formulaire front add images

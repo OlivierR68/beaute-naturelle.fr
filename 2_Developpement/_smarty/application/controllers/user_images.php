@@ -1,71 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * Controller Users
- * @author  Steven Robert
- * @author  Olivier Ravinasaga
- * @version 1
- *
- */
-
-class Images extends CI_Controller
-{
-
-	public function __construct()
-	{
-		parent::__construct();
-		$this->load->model("Images_manager");
-		$this->load->model("Images_class");
-		$this->load->library('upload');
-	}
-
-	/** Front : Fonction permettant d'afficher la galerie photos  */
-	public function index()
-	{
-		$data['preTITLE'] = "Consultez notre";
-		$data['TITLE'] = "Galerie Photos";
-		$data['headerImg'] = "img-gallerie.jpg";
-
-		$images = $this->Images_manager->findAll();
-		$imagesToDisplay = array();
-		foreach ($images as $image) {
-			$objImage = new Images_class();
-			$objImage->hydrate($image);
-			$imagesToDisplay[] = $objImage;
-		}
-
-		$data['arrImages'] = $imagesToDisplay;
-
-		$data['CONTENT'] = $this->smarty->fetch('front/images.tpl', $data);
-		$this->smarty->display('front/templates/content.tpl', $data);
-
-	}
-
-	/** Back : Fonction permettant d'afficher la liste des images  */
-	public function ListPage()
-	{
-		$data['TITLE'] 		= "Liste des images";
-		$images	= $this->Images_manager->findAll();
-		$imagesToDisplay = array();
-		foreach($images as $image){
-			$objImage 	= new Images_class();
-			$objImage->hydrate($image);
-			$imagesToDisplay[] = $objImage; 
-		}
-
-		$data['arrImages'] 	= $imagesToDisplay;
-
-		$data['CONTENT'] = $this->smarty->fetch('back/imagesList.tpl', $data);
-		$this->smarty->display('back/templates/content.tpl', $data);
-
-	}
-
-	/** Fonction permettant de créer ou de modifier un événement
+	/** Fonction permettant d'ajouter une image dans le front
 	* @param int $id identifiant bdd de l'événement
 	*/
-	
-	public function addEdit($id = -1)
+
+	public function user_addEdit()
 	{
 
 		 /*
@@ -117,22 +56,22 @@ class Images extends CI_Controller
 
 			}	
 
-			if($_FILES['img']['size'] <= 0 && $id < 0) {
+	/*		if($_FILES['img']['size'] <= 0 && $id < 0) {
 				/*
 				si on dans la page de création et qu'il n'y pas d'image uploadé on assigne une image par défault,
 				attention ce n'est pas valable partout, pour la galerie par exemple il faudra refuser la création si il n'y pas d'image
-				*/
-				$objImage->setId('album/photos-1.jpg');
+				
+				$objImage->setId('album/photos-1.jpg');        
 
 			}
 
-
+ 	*/
 			// crée ou on modifie une image selon si on est dans la page de création ou modification
 			if($id < 0){
 				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
-				redirect('images/AddEdit/'.$insertId, 'refresh'); // redirection sur la page modification
+				redirect('images/user_AddEdit/'.$insertId, 'refresh'); // redirection sur la page modification
 
 			} else {
 
@@ -158,36 +97,8 @@ class Images extends CI_Controller
 
 		}
 
-		$data['CONTENT'] = $this->smarty->fetch('back/imagesAdd.tpl', $data);
-		$this->smarty->display('back/templates/content.tpl', $data);
+		$data['CONTENT'] = $this->smarty->fetch('front/user_AddImg.tpl', $data);
+		$this->smarty->display('front/templates/content.tpl', $data);
 
 
 	}
-
-	/** Fonction permettant de supprimer un événement et de rediriger sur la page de la liste
-	* @param int $id identifiant bdd de l'événement
-	*/
-	public function delete($id)
-	{ 
-
-		$this->Images_manager->delete($id);
-		$this->session->set_flashdata('error', "L'image' #$id a été supprimé");
-		redirect('images/ListPage', 'refresh');
-
-	}
-
-
-	
-	/** Fonction permettant de copier un événement et de rediriger sur la page de la liste
-	* @param int $id identifiant bdd de l'événement
-	*/
-	public function copy($id)
-	{
-		
-		$this->Images_manager->copy($id);
-		$this->session->set_flashdata('success', "L'image' #$id a été copié");
-		redirect('images/ListPage', 'refresh');
-
-
-	}
-}
