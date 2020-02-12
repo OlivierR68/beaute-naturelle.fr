@@ -86,10 +86,10 @@
 
 					<div class="bn_nav-bottom">
 						<a class="bn_{active_page('slides/home')}"	href="{site_url()}">Accueil</a> |
-						<a class="bn_{active_page('events')}" href="{site_url("events")}">Événements</a> |
-						<a class="bn_{active_page('prestations')}" href="{site_url("prestations")}">Prestations</a> |
+						<a class="bn_{active_page('events','active',1)}" href="{site_url("events")}">Événements</a> |
+						<a class="bn_{active_page('prestations','active',1)}" href="{site_url("prestations")}">Prestations</a> |
 						<a class="bn_{active_page('pages/about')}" href="{site_url("pages/about")}">L'Établissement</a> |
-						<a class="bn_{active_page('images')}" href="{site_url("images")}">Galerie</a> |
+						<a class="bn_{active_page('images','active',1)}" href="{site_url("images")}">Galerie</a> |
 						<a class="bn_{active_page('pages/contact')}" href="{site_url("pages/contact")}">Contact</a>
 					</div>
 				</div>
