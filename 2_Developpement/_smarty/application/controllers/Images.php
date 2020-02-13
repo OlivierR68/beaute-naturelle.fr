@@ -161,7 +161,6 @@ class Images extends CI_Controller
 		$data['CONTENT'] = $this->smarty->fetch('back/imagesAdd.tpl', $data);
 		$this->smarty->display('back/templates/content.tpl', $data);
 
-
 	}
 
 	/** Fonction permettant de supprimer un événement et de rediriger sur la page de la liste
