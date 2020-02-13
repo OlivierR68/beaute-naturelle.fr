@@ -64,6 +64,33 @@ class  Prestation_class extends CI_Model {
         return $this->_cat_title;
     }
 
+    /** GETTER pour la liste des attributs
+     * @param bool $filter si true filter le tableau
+     * @param bool $noId unset le id du tableau return si true
+     * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
+     */
+    public function getArray($filter = false, $noId = false){
+
+        $varArray = get_object_vars($this);
+
+        $arrInsert = array();
+        foreach ($varArray as $key => $value) {
+            $arrInsert[substr($key,1)] = $value;
+        }
+
+        if ($filter) $arrInsert = array_filter($arrInsert);
+        if ($noId) unset($arrInsert['prestation_id']);
+
+        foreach($arrInsert as $key => $value){
+            $exp_key = explode('_', $key);
+
+            if($exp_key[0] != 'prestation'){
+                unset($arrInsert[$key]);
+            }
+        }
+
+        return $arrInsert;
+    }
 
 	/** SETTERS (pour chaque attribut) **/
     public function setId($id){

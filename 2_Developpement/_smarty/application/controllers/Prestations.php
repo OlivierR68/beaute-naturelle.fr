@@ -19,6 +19,8 @@ class Prestations extends CI_Controller {
 
         $this->load->model("Prestations_manager");
         $this->load->model("Prestation_class");
+
+        $this->load->model("SubCategory_class");
 	}
 
 	/** Front : Fonction permettant d'afficher la page de prestation  */
@@ -30,15 +32,15 @@ class Prestations extends CI_Controller {
 
 		// à remplir ici, parttie frontend
 
-        $categories = $this->Categories_manager->findAll();
+        $categories = $this->Categories_manager->findAllCat();
 
-        $slidesToDisplay = array();
+        $cat_to_display = array();
         foreach($categories as $category){
         $objCategory 	= new Category_class;
         $objCategory->hydrate($category);
-        $slidesToDisplay[] = $objCategory;
+        $cat_to_display[] = $objCategory;
         }
-        $data['arrCategories'] = $slidesToDisplay;
+        $data['arrCategories'] = $cat_to_display;
 
         $data['CONTENT'] = $this->smarty->fetch('front/prestations.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
@@ -124,10 +126,12 @@ class Prestations extends CI_Controller {
 
             if ($id < 0) {
 
+                $presta_obj->hydrate($this->input->post());
+
                 $insertId = $this->Prestations_manager->new($presta_obj);
                 $this->session->set_flashdata("success", "La prestation <b>{$presta_obj->getId()}</b> a été ajouté");
 
-                redirect('users/addEdit/' . $insertId, 'refresh');
+                redirect('prestations/addEdit/' . $insertId, 'refresh');
 
             } else {
 
@@ -150,10 +154,61 @@ class Prestations extends CI_Controller {
 
         }
 
+        $data['sub_cat_list']  = $this->Categories_manager->findAllSubCat();
+
         $data['presta_obj'] = $presta_obj;
         $data['CONTENT'] = $this->smarty->fetch('back/prestationsEdit.tpl', $data);
         $this->smarty->display('back/templates/content.tpl', $data);
     }
 
+    /**
+     * Suprression d'un utilisateur
+     * @param $id identifiant utilisateur
+     */
+    public function delete($id)
+    {
 
+        $this->Prestations_manager->delete($id);
+        $this->session->set_flashdata('error', "La prestation #$id a été supprimé");
+        redirect('prestations/ListPage', 'refresh');
+
+    }
+
+    /** Back :  Affichage de la liste des prestations  */
+    public function ListPage_cat()
+    {
+        $data['TITLE'] 		= "Liste des catégories";
+
+        // Affichage des prestations
+
+        $cat_list	= $this->Categories_manager->findAllCat();
+        $cat_to_display = [];
+        foreach($cat_list as $cat_data){
+
+            $cat_obj = new Category_class();
+            $cat_obj->hydrate($cat_data);
+            $cat_to_display[] = $cat_obj;
+        }
+        $data['display_list_1'] = $cat_to_display;
+
+
+
+        $sub_cat_list	= $this->Categories_manager->findAllSubCat();
+        $sub_cat_to_display = [];
+        foreach($sub_cat_list as $sub_cat_data){
+
+            $sub_cat_obj = new SubCategory_class();
+            $sub_cat_obj->hydrate($sub_cat_data);
+            $sub_cat_to_display[] = $sub_cat_obj;
+        }
+        $data['display_list_2'] = $sub_cat_to_display;
+
+
+        $data['CONTENT'] = $this->smarty->fetch('back/categoriesList.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
+
+
+
+
+    }
 }

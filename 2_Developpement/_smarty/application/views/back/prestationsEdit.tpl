@@ -8,7 +8,7 @@
 
 <div class="form-group">
     {form_label('Sous-Titre :', 'inputSubtext')}
-    {form_input('subtext', $presta_obj->getSubtext(), 'class="form-control" required id="inputSubtext"')}
+    {form_textarea('subtext', $presta_obj->getSubtext(), 'class="form-control" required id="inputSubtext"')}
 </div>
 
 <div class="form-group">
@@ -23,10 +23,16 @@
 
 <div class="form-group">
     {form_label('Sous-catégorie :', 'inputSubcat')}
-    {form_input('sub_cat', $presta_obj->getSub_cat(), 'class="form-control" required id="inputTitle"')}
+    <select  class="form-control"  name="sub_cat" id="inputSubcat">
+        <option
+        {foreach from=$sub_cat_list item=sub_cat }
+            <option {if $presta_obj->getSub_cat() eq $sub_cat['sub_cat_id']}selected{/if} value="{$sub_cat['sub_cat_id']}">{$sub_cat['sub_cat_title']}</option>
+        {/foreach}
+    </select>
 </div>
 
 <button type="submit" class="btn btn-primary">{$buttonSubmit}</button>
 <a href="{base_url('prestations/listPage')}" class="btn btn-dark">{$buttonCancel}</a>
 
 {form_close()}
+

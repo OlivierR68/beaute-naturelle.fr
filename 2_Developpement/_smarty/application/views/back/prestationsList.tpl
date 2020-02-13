@@ -95,7 +95,7 @@
                 Confirmer la suppression
             </div>
             <div class="modal-body">
-                Vous voulez vraiment supprimer l'utilisateur <b class="bn_user"></b>?
+                Vous voulez vraiment supprimer la prestation <b class="bn_user"></b>?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

@@ -12,7 +12,7 @@ class Prestations_manager extends CI_Model{
 
     public function getSubCat($cat_id){
 
-        $queryGroup	= $this->db->where('cat_id', $cat_id)->get('sub_category');
+        $queryGroup	= $this->db->where('sub_cat_parent', $cat_id)->get('sub_category');
         return $queryGroup->result_array();
 
     }
@@ -26,7 +26,7 @@ class Prestations_manager extends CI_Model{
 
         return $this->db
             ->join('sub_category', 'sub_category.sub_cat_id = prestation.prestation_sub_cat')
-            ->join('category', 'category.cat_id = sub_category.cat_id')
+            ->join('category', 'category.cat_id = sub_category.sub_cat_parent')
             ->get('prestation')
             ->result_array();
     }
@@ -34,6 +34,24 @@ class Prestations_manager extends CI_Model{
     public function findOne($id)
     {
         return $this->db->where('prestation_id', $id)->get('prestation')->row();
+    }
+
+    public function new($obj)
+    {
+
+        $this->db->insert('prestation', $obj->getArray());
+
+        return $this->db->insert_id();
+    }
+
+    /**
+     * Suppression d'1 slide
+     * @param $id integer identifiant du slide
+     */
+    public function delete($id)
+    {
+        $this->db->where('prestation_id', $id)
+            ->delete('prestation');
     }
 
 }
