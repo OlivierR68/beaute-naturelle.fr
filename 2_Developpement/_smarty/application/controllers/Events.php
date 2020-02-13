@@ -178,6 +178,19 @@ class Events extends CI_Controller {
 
 	}
 
+	// créer une function inscription utilisateur
+	// 
+
+	public function inscription ($event_id, $user_id) {
+
+
+		// session_id 
+
+		// tpl = url events/$objEvent->getId()."/".$this->session->id
+
+
+	}
+
 
 	
 	/** Fonction permettant de copier un événement et de rediriger sur la page de la liste
