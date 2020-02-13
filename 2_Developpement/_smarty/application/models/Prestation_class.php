@@ -9,6 +9,8 @@ class  Prestation_class extends CI_Model {
     private $_prestation_price;
     private $_prestation_duration;
     private $_prestation_sub_cat;
+    private $_sub_cat_title;
+    private $_cat_title;
 
 	/** Constructeur **/
 	public function __construct(){
@@ -54,6 +56,14 @@ class  Prestation_class extends CI_Model {
         return $this->_prestation_sub_cat;
     }
 
+    public function getSub_cat_title(){
+        return $this->_sub_cat_title;
+    }
+
+    public function getCat_title(){
+        return $this->_cat_title;
+    }
+
 
 	/** SETTERS (pour chaque attribut) **/
     public function setId($id){
@@ -79,5 +89,14 @@ class  Prestation_class extends CI_Model {
     public function setSub_cat($id){
         $this->_prestation_sub_cat = $id;
     }
+
+    public function setSub_cat_title($string){
+        $this->_sub_cat_title = $string;
+    }
+
+    public function setCat_title($string){
+        $this->_cat_title = $string;
+    }
+
 
 }

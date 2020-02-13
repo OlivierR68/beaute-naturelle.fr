@@ -37,6 +37,19 @@
     {/if}
 
 
+    {if !empty($INFOS)}
+        <div class="alert alert-secondary" role="alert">
+            {$INFOS}
+        </div>
+    {/if}
+
+    {if !empty(flash_data('infos'))}
+        <div class="alert alert-secondary" role="alert">
+            {flash_data('infos')}
+        </div>
+    {/if}
+
+
 {$CONTENT}
 
 </div>

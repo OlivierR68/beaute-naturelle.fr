@@ -3,12 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 class Categories_manager extends CI_Model{
 
-	public function findAll(){
+	public function findAllCat(){
 
-        $queryGroup	= $this->db->order_by("cat_id", "asc")->get('category');
-		return $queryGroup->result_array();
+        return $this->db->get('category')->result_array();
 
 	}
+
+    public function findAllSubCat(){
+
+        return $this->db->get('sub_category')->result_array();
+
+    }
 
     public function findOne($id)
     {

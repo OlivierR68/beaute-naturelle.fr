@@ -76,4 +76,84 @@ class Prestations extends CI_Controller {
         $this->smarty->display('front/templates/content.tpl', $data);
     }
 
+    /** Back :  Affichage de la liste des prestations  */
+    public function ListPage()
+    {
+        $data['TITLE'] 		= "Liste des prestations";
+
+        // Filtre des prestations
+        $data['cat_list']       = $this->Categories_manager->findAllCat();
+        $data['sub_cat_list']   = $this->Categories_manager->findAllSubCat();
+
+
+        // Affichage des prestations
+        $presta_list	= $this->Prestations_manager->findAll();
+        $presta_to_display = [];
+        foreach($presta_list as $presta_data){
+
+            $presta_obj = new Prestation_class();
+            $presta_obj->hydrate($presta_data);
+            $presta_to_display[] = $presta_obj;
+        }
+
+        $data['display_list'] 	= $presta_to_display;
+
+        $data['CONTENT'] = $this->smarty->fetch('back/prestationsList.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
+
+
+
+
+    }
+
+
+    /**
+     * Back : Affichage de la page de création/modification d'un utilisateur
+     * @param int $id identifiant utilisateur
+     */
+    public function addEdit($id = -1)
+    {
+
+        $presta_obj = new User_class();
+
+        if ($id >= 0) {
+            $presta_obj->hydrate($this->Prestations_manager->findOne($id));
+        }
+
+        if (!empty($this->input->post())) {
+
+            if ($id < 0) {
+
+                $insertId = $this->Prestations_manager->new($presta_obj);
+                $this->session->set_flashdata("success", "La prestation <b>{$presta_obj->getId()}</b> a été ajouté");
+
+                redirect('users/addEdit/' . $insertId, 'refresh');
+
+            } else {
+
+                $insertId = $this->Prestations_manager->update($presta_obj);
+                $data['SUCCESS'] = "La prestation <b>{$presta_obj->getId()}</b> a été modifié";
+            }
+        }
+
+        if ($id > 0) {
+
+            $data['TITLE'] = "Modifier la prestation : " . $presta_obj->getId();
+            $data['buttonSubmit'] = "Modifier";
+            $data['buttonCancel'] = "Revenir à la liste";
+
+        } else {
+
+            $data['TITLE'] = "Ajouter une nouvelle prestation";
+            $data['buttonSubmit'] = "Ajouter la prestation";
+            $data['buttonCancel'] = "Annuler";
+
+        }
+
+        $data['presta_obj'] = $presta_obj;
+        $data['CONTENT'] = $this->smarty->fetch('back/prestationsEdit.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
+    }
+
+
 }
