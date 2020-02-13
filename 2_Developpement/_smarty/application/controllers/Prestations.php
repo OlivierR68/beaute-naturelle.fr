@@ -114,7 +114,7 @@ class Prestations extends CI_Controller {
     public function addEdit($id = -1)
     {
 
-        $presta_obj = new User_class();
+        $presta_obj = new Prestation_class();
 
         if ($id >= 0) {
             $presta_obj->hydrate($this->Prestations_manager->findOne($id));
