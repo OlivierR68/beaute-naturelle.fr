@@ -81,4 +81,8 @@ class Events_manager extends CI_Model {
 
 		$this->db->insert('event', $array);
 	}
+
+	public function inscription(){
+		
+	}
 }

@@ -13,3 +13,21 @@
 
 12-01-2020
 - Création de la base de données
+
+05-02-2020
+-Mise en fonction de création de slug automatique et bon fonctionnement des dates d'événement
+
+04-02-2020
+-Mise à jour fonction gestion des événements en rajoutant la liste des événements créés
+
+03-02-2020
+-Passage de la partie événements en smarty
+-Changements dans le formulaire pour afficher les bonnes valeurs quand on modifie un événement
+
+31-01-2020
+-Création du formulaire pour ajouter/modifier les événements et en permettant de gérer les événements depuis le dash board
+
+23-01-2020
+-Création de la classe et du manager des événements pour commencer la gestion des événements de manière dynamique
+
+
