@@ -14,6 +14,7 @@ class Events extends CI_Controller {
 		$this->load->model("Events_manager");
 		$this->load->model("Event_class");
 		$this->load->model("Users_manager");
+		//Ici load class et manager event_user
 		$this->load->library('upload');
 	}
 
@@ -181,8 +182,14 @@ class Events extends CI_Controller {
 	// créer une function inscription utilisateur
 	// 
 
-	public function inscription ($event_id, $user_id) {
+	public function inscription ($event_id) {
 
+		if(isset($_SESSION['id'])){
+			//redirect
+		}
+		else{
+			
+		}
 
 		// session_id 
 
