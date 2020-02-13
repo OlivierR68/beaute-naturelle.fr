@@ -11,7 +11,7 @@ class Categories_manager extends CI_Model{
 
     public function findAllSubCat(){
 
-        return $this->db->get('sub_category')->result_array();
+        return $this->db->join('category', 'category.cat_id = sub_category.sub_cat_parent')->get('sub_category')->result_array();
 
     }
 

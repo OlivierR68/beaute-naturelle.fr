@@ -69,6 +69,11 @@ class  Category_class extends CI_Model
         return $this->_cat_header;
     }
 
+    public function getHeaderUrl()
+    {
+        return base_url('uploads/prestations/'.$this->_cat_header);
+    }
+
     public function getDescription()
     {
         return $this->_cat_description;
