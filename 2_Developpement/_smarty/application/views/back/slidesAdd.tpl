@@ -17,11 +17,11 @@
 			</div>
 
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="visible" id="inputVisible1" value="true" {if $objSlide->getVisible() eq true}checked{/if} required >
+				<input class="form-check-input" type="radio" name="visible" id="inputVisible1" value="1" {if $objSlide->getVisible() eq 1}checked{/if} required >
 				<label class="form-check-label" for="inputVisible1">Oui</label>
 			</div>
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="visible" id="inputVisible2" value="false" {if $objSlide->getVisible() eq false}checked{/if} required >
+				<input class="form-check-input" type="radio" name="visible" id="inputVisible2" value="0" {if $objSlide->getVisible() eq 0}checked{/if} required >
 				<label class="form-check-label" for="inputVisible2">Non</label>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 			{/if}
 
 			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif">
-			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo</small>
+			<small id="fileHelp" class="form-text text-muted">Poids maximum : 2 mo <br>Dimensions conseillées : 1920x800 px</small>
 		</div>
 
 		
