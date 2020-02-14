@@ -77,7 +77,7 @@ class Slides extends CI_Controller {
 
 		if($id >= 0) {
 			$objSlide->hydrate($this->Slides_manager->findOne($id));
-			var_dump($objSlide);
+
 		}
 
 

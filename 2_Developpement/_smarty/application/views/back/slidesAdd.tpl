@@ -41,7 +41,7 @@
 			{/if}
 
 			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif">
-			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo</small>
+			<small id="fileHelp" class="form-text text-muted">Poids maximum : 2 mo <br>Dimensions conseillées : 1920x800 px</small>
 		</div>
 
 		
