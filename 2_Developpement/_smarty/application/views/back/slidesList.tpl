@@ -34,12 +34,12 @@
                         <i class="far fa-eye {if $objSlide->getVisible() eq false}text-muted{else}text-success{/if}"></i>
                     </a>
 
-                    <a href="{base_url('slides/orderUp/')}{$objSlide->getId()}" title="Ordre +1">
-                        <i class="fas fa-arrow-up"></i>
+                    <a href="{base_url('slides/orderDown/')}{$objSlide->getId()}" title="Ordre +1">
+                        <i class="far fa-plus-square"></i>
                     </a>
 
-                    <a href="{base_url('slides/orderDown/')}{$objSlide->getId()}" title="Ordre -1">
-                        <i class="fas fa-arrow-down"></i>
+                    <a href="{base_url('slides/orderUp/')}{$objSlide->getId()}" title="Ordre -1">
+                        <i class="far fa-minus-square"></i>
                     </a> |
 
                     <a href="{base_url('slides/copy/')}{$objSlide->getId()}" title="Copier">

@@ -77,7 +77,9 @@ class Slides extends CI_Controller {
 
 		if($id >= 0) {
 			$objSlide->hydrate($this->Slides_manager->findOne($id));
+			var_dump($objSlide);
 		}
+
 
 		if(!empty($this->input->post())){
 
@@ -193,9 +195,18 @@ class Slides extends CI_Controller {
     {
 
         $return = $this->Slides_manager->orderDown($id);
-        if(!$return) $this->session->set_flashdata('error', "L'ordre ne peut être supérieur à 100");
+        if(!$return) $this->session->set_flashdata('error', "L'ordre ne peut être supérieur à 0");
         redirect('slides/ListPage', 'refresh');
 
     }
 
+
+	public function visible($id)
+	{
+
+        $return = $this->Slides_manager->toggleVisible($id);
+        $this->session->set_flashdata('infos', "Le slide est maintenant <b>".$return."</b>");
+        redirect('slides/ListPage', 'refresh');
+
+	}
 }

@@ -136,9 +136,9 @@ class Slide_class extends CI_Model {
 		$this->_slide_position = $position;
 	}
 
-	public function setVisible($bool = false){
-		$this->_slide_visible = $bool;
-	}
+	public function setVisible($tinyInt = 0){
+		$this->_slide_visible = $tinyInt;
+    }
 
 	public function setLibelle($id){
 		$this->_slide_libelle = $id;

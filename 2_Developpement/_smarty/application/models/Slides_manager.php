@@ -59,7 +59,7 @@ class Slides_manager extends CI_Model
 	{
 
         $id = $obj->getId();
-        $data = $obj->getArray(true, true);
+        $data = $obj->getArray(false, true);
 
         $this->db->where('slide_id', $id)->update('slide', $data);
 	}
@@ -86,7 +86,6 @@ class Slides_manager extends CI_Model
 		$array = $query->row_array();
 
 		$array['slide_id'] = null;
-		$array['slide_position'] = null;
 		$array['slide_visible'] = false;
 
 		$this->db->insert('slide', $array);
