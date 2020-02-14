@@ -134,7 +134,7 @@
 
     </header>
 
-	{if page_name() eq 'home'}
+	{if page_name() eq 'home' and !empty($arrSlides)}
 
         {include file="./slider.tpl"}
 

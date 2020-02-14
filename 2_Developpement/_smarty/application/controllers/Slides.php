@@ -26,12 +26,11 @@ class Slides extends CI_Controller {
 	public function home()
 	{
 
-
-
 		$data['preTITLE']	= "Magasin & Institut";
-		$data['TITLE'] 		= "A propos de Beauté Naturelle";
+        $data['TITLE'] 		= "A propos de Beauté Naturelle";
+        $data['headerImg']	= base_url("assets/img/img-home.jpg");
 
-		$slides	= $this->Slides_manager->findAll();
+		$slides	= $this->Slides_manager->findAll(true);
 		$slidesToDisplay = array();
 		foreach($slides as $slide){
 			$objSlide 	= new Slide_class();
@@ -123,7 +122,6 @@ class Slides extends CI_Controller {
 
 				$insertId = $this->Slides_manager->update($objSlide);
 
-
 				$data['SUCCESS'] = "Le slider <b>{$objSlide->getLibelle()}</b> a été modifié";
 			}
 		}
@@ -169,17 +167,35 @@ class Slides extends CI_Controller {
 
 	}
 
+    /**
+     ** Back : Supprression un slide, et qui redirige par la suite sur la liste
+     * @param int $id identifiant bdd du slide
+     */
+    public function copy($id)
+    {
 
-	/**
-	 ** Back : Copie d'un slide, et qui redirige par la suite sur la liste
-	 * @param int $id identifiant bdd du slide
-	 */
-	public function copy($id)
-	{
+        $this->Slides_manager->copy($id);
+        $this->session->set_flashdata('success', "Le slide #$id a été copié");
+        redirect('slides/ListPage', 'refresh');
 
-		$this->Slides_manager->copy($id);
-		$this->session->set_flashdata('success', "Le slide #$id a été copié");
-		redirect('slides/ListPage', 'refresh');
+    }
 
-	}
+    public function orderUp($id)
+    {
+
+        $return = $this->Slides_manager->orderUp($id);
+        if(!$return) $this->session->set_flashdata('error', "L'ordre ne peut être inférieur à 0");
+        redirect('slides/ListPage', 'refresh');
+
+    }
+
+    public function orderDown($id)
+    {
+
+        $return = $this->Slides_manager->orderDown($id);
+        if(!$return) $this->session->set_flashdata('error', "L'ordre ne peut être supérieur à 100");
+        redirect('slides/ListPage', 'refresh');
+
+    }
+
 }

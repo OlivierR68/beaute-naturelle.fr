@@ -44,7 +44,7 @@
     {/if}
 
     {if !empty(flash_data('infos'))}
-        <div class="alert alert-secondary" role="alert">
+        <div class="alert alert-primary" role="alert">
             {flash_data('infos')}
         </div>
     {/if}

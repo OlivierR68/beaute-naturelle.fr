@@ -6,6 +6,25 @@
 	</div>
 
 	<div class="form-group">
+		<label for="inputOrder">Ordre :</label>
+		<input type="number" min="0" max="100" name="order" class="form-control" id="inputOrder" value="{$objSlide->getOrder()}">
+	</div>
+
+	<div class="form-group">
+		<div class="form-group">
+			<div>
+				<label for="inputVisible">Visible au public :</label>
+			</div>
+
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="visible" id="inputVisible1" value="true" {if $objSlide->getVisible() eq true}checked{/if} required >
+				<label class="form-check-label" for="inputVisible1">Oui</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="visible" id="inputVisible2" value="false" {if $objSlide->getVisible() eq false}checked{/if} required >
+				<label class="form-check-label" for="inputVisible2">Non</label>
+			</div>
+		</div>
 
 		<div class="form-group">
 			{if (!empty($objSlide->getImg()))}
@@ -52,7 +71,6 @@
 		<label for="inputText">Texte :</label>
 		<input type="text" name="text" class="form-control" id="inputText" value="{$objSlide->getText()}">
 	</div>
-
 
 	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('slides/listPage')}" class="btn btn-dark">{$buttonCancel}</a>
 </form>

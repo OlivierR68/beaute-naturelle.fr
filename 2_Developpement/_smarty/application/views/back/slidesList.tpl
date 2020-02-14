@@ -4,7 +4,7 @@
     <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
         <thead>
         <tr>
-            <th>id</th>
+            <th>Ordre</th>
             <th>Actions</th>
             <th>Libelle</th>
             <th>Image</th>
@@ -15,7 +15,7 @@
         </thead>
         <tfoot>
         <tr>
-            <th>id</th>
+            <th>Ordre</th>
             <th>Actions</th>
             <th>Libelle</th>
             <th>Image</th>
@@ -27,34 +27,40 @@
         <tbody>
         {foreach from=$arrSlides item=$objSlide}
             <tr>
-                <td>{$objSlide->getId()}</td>
+                <td>{$objSlide->getOrder()}</td>
                 <td class="bn_action nowrap">
 
-                    <a href="{base_url('slides/copy/')}{$objSlide->getId()}" title="Copier"><i class="far fa-copy"></i></a>
-                    {if $objSlide->getDefault() eq true}
-                        <i title="slide" class="fas fa-edit text-muted"></i>
-                        <i title="slide" class="fas fa-trash-alt text-muted"></i>
-                    {else}
-                        <a href="{base_url('slides/addEdit/')}{$objSlide->getId()}" title="Modifier"><i
-                                    class="far fa-edit"></i></a>
-                        <a href="{base_url('slides/delete/')}{$objSlide->getId()}"
-                           data-href="{base_url('slides/delete/')}{$objSlide->getId()}"
-                           data-toggle="modal" data-target="#confirm-delete"title="Supprimer"><i
-                                    class="fas fa-trash-alt text-danger"></i></a>
-                    {/if}
-                </td>
+                    <a href="{base_url('slides/visible/')}{$objSlide->getId()}" title="Visibilité">
+                        <i class="far fa-eye {if $objSlide->getVisible() eq false}text-muted{else}text-success{/if}"></i>
+                    </a>
 
+                    <a href="{base_url('slides/orderUp/')}{$objSlide->getId()}" title="Ordre +1">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+
+                    <a href="{base_url('slides/orderDown/')}{$objSlide->getId()}" title="Ordre -1">
+                        <i class="fas fa-arrow-down"></i>
+                    </a> |
+
+                    <a href="{base_url('slides/copy/')}{$objSlide->getId()}" title="Copier">
+                        <i class="far fa-copy"></i>
+                    </a>
+                    <a href="{base_url('slides/addEdit/')}{$objSlide->getId()}" title="Modifier">
+                        <i class="far fa-edit"></i>
+                    </a>
+                    <a href="{base_url('slides/delete/')}{$objSlide->getId()}"
+                       data-href="{base_url('slides/delete/')}{$objSlide->getId()}"
+                       data-toggle="modal" data-id="#{$objSlide->getId()}" data-target="#confirm-delete" title="Supprimer">
+                        <i class="fas fa-trash-alt text-danger"></i>
+                    </a>
+
+                </td>
                 <td>{$objSlide->getLibelle()}</td>
-                {if $objSlide->getDefault() eq true}
-                    <td><a target="_blank"
-                           href="{base_url('uploads/slider/')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
-                {else}
-                    <td><a target="_blank"
-                           href="{base_url('uploads/slider/')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
-                {/if}
+                <td><a target="_blank" href="{base_url('uploads/slider/')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
                 <td>{$objSlide->getTaille()}</td>
                 <td>{$objSlide->getShortTitle(60)}</td>
                 <td>{$objSlide->getText()}</td>
+
             </tr>
         {/foreach}
         </tbody>

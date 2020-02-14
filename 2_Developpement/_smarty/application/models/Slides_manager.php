@@ -16,10 +16,10 @@ class Slides_manager extends CI_Model
 	 * Récupération liste des slides
 	 * @return array  tous les slides
 	 */
-	public function findAll()
+	public function findAll($visible_only = false)
 	{
-		$queryGroup = $this->db->get('slide');
-		return $queryGroup->result_array();
+	    if ($visible_only) $this->db->where('slide_visible',true);
+		return $this->db->order_by('slide_order')->get('slide')->result_array();
 	}
 
 
@@ -59,9 +59,7 @@ class Slides_manager extends CI_Model
 	{
 
         $id = $obj->getId();
-        $data = $obj->getArray(true);
-
-        unset($data['slide_id']);
+        $data = $obj->getArray(true, true);
 
         $this->db->where('slide_id', $id)->update('slide', $data);
 	}
@@ -89,10 +87,60 @@ class Slides_manager extends CI_Model
 
 		$array['slide_id'] = null;
 		$array['slide_position'] = null;
-		$array['slide_default'] = false;
+		$array['slide_visible'] = false;
 
 		$this->db->insert('slide', $array);
 	}
+
+
+    public function toggleVisible($id)
+    {
+        $data = $this->db->select('slide_visible')->where('slide_id', $id)->get('slide')->row_array();
+
+        if ($data['slide_visible'] == false){
+
+            $data['slide_visible'] = true;
+            $this->db->where('slide_id', $id)->update('slide', $data);;
+            $reponse = "visible au public";
+
+        } elseif ($data['slide_visible'] == true) {
+
+            $data['slide_visible'] = false;
+            $this->db->where('slide_id', $id)->update('slide', $data);;
+            $reponse = "non visible au public";
+
+        }
+
+        return $reponse;
+    }
+
+    public function orderUp($id)
+    {
+        $data = $this->db->select('slide_order')->where('slide_id', $id)->get('slide')->row_array();
+        if($data['slide_order'] > 0){
+
+            $data['slide_order']--;
+            $this->db->where('slide_id', $id)->update('slide', $data);;
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function orderDown($id)
+    {
+        $data = $this->db->select('slide_order')->where('slide_id', $id)->get('slide')->row_array();
+        if($data['slide_order'] < 100){
+
+            $data['slide_order']++;
+            $this->db->where('slide_id', $id)->update('slide', $data);;
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 }
 
 

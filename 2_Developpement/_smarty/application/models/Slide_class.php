@@ -12,12 +12,13 @@ class Slide_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_slide_id;
 	private $_slide_position;
-	private $_slide_default; // Boolean si true, le slide ne peut pas être supprimer
+	private $_slide_visible; // Boolean si true, le slide est visible
 	private $_slide_libelle;
 	private $_slide_img;
 	private $_slide_type;
 	private $_slide_title;
-	private $_slide_text;
+    private $_slide_text;
+    private $_slide_order;
 
 	/** Constructeur **/
 	public function __construct(){
@@ -49,8 +50,8 @@ class Slide_class extends CI_Model {
 
 	}
 
-	public function getDefault(){
-		return $this->_slide_default;
+	public function getVisible(){
+		return $this->_slide_visible;
 
 	}
 
@@ -70,10 +71,13 @@ class Slide_class extends CI_Model {
 		return $this->_slide_title;
 	}
 
-
 	public function getText(){
 		return $this->_slide_text;
 	}
+
+    public function getOrder(){
+        return $this->_slide_order;
+    }
 
 
 	/** GETTER savoir si le texte est grand ou moyen selon le type
@@ -87,10 +91,10 @@ class Slide_class extends CI_Model {
 
     /** GETTER pour la liste des attributs
      * @param bool $filter si true filter le tableau
+     * @param bool $noId unset le id du tableau return si true
      * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
      */
-
-    public function getArray($filter = false){
+    public function getArray($filter = false, $noId = false){
 
         $varArray = get_object_vars($this);
 
@@ -99,9 +103,9 @@ class Slide_class extends CI_Model {
             $arrInsert[substr($key,1)] = $value;
         }
 
-        if ($filter){
-            $arrInsert = array_filter($arrInsert);
-        }
+        if ($filter) $arrInsert = array_filter($arrInsert);
+        if ($noId) unset($arrInsert['slide_id']);
+
 
         return $arrInsert;
     }
@@ -132,8 +136,8 @@ class Slide_class extends CI_Model {
 		$this->_slide_position = $position;
 	}
 
-	public function setDefault($default = 0){
-		$this->_slide_default = $default;
+	public function setVisible($bool = false){
+		$this->_slide_visible = $bool;
 	}
 
 	public function setLibelle($id){
@@ -155,5 +159,9 @@ class Slide_class extends CI_Model {
 	public function setText($text){
 		$this->_slide_text = $text;
 	}
+
+    public function setOrder($int = 0){
+        $this->_slide_order = $int;
+    }
 
 }
