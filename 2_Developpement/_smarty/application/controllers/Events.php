@@ -14,7 +14,8 @@ class Events extends CI_Controller {
 		$this->load->model("Events_manager");
 		$this->load->model("Event_class");
 		$this->load->model("Users_manager");
-		//Ici load class et manager event_user
+		$this->load->model("EventUser_manager");
+		$this->load->model("EventUser_class");
 		$this->load->library('upload');
 	}
 
@@ -179,27 +180,7 @@ class Events extends CI_Controller {
 
 	}
 
-	// créer une function inscription utilisateur
-	// 
 
-	public function inscription ($event_id) {
-
-		if(isset($_SESSION['id'])){
-			//redirect
-		}
-		else{
-			
-		}
-
-		// session_id 
-
-		// tpl = url events/$objEvent->getId()."/".$this->session->id
-
-
-	}
-
-
-	
 	/** Fonction permettant de copier un événement et de rediriger sur la page de la liste
 	* @param int $id identifiant bdd de l'événement
 	*/
@@ -210,6 +191,25 @@ class Events extends CI_Controller {
 		$this->session->set_flashdata('success', "L'événement' #$id a été copié");
 		redirect('events/ListPage', 'refresh');
 
+	}
+
+	//Fonction permettant de gérer l'inscription de l'utilisateur à un événement
+	public function inscription ($event_id) {
+
+		//On vérifie que l'utilisateur est connecté, sinon on le renvoie à la page de connexion
+		if(!isset($_SESSION['user'])){
+			redirect('front/templates/login.tpl');
+		}
+		else{
+			//Création d'un objet provenant de EventUser_class
+			$objEventUser = new EventUser_class;
+		}
+	
+		// session_id 
+	
+		// tpl = url events/$objEvent->getId()."/".$this->session->id
+	
+	
 	}
 
 }
