@@ -1,4 +1,6 @@
 <main class="container bn_content">
+    {if isset($presta_table) and !empty($presta_table)}
+
 
     <table class="table">
         <!-- Début 1er Foreach -->
@@ -26,7 +28,10 @@
         {/foreach}
     </table>
     <div class="bn_gap-25"></div>
+    {else}
+        <p class="text-center">Catégorie Vide</p>
 
+    {/if}
     <a href="{site_url('prestations')}" class="btn bn_btn-green">RETOUR</a>
 
 
