@@ -30,21 +30,6 @@
                 <td>{$objSlide->getId()}</td>
                 <td class="bn_action nowrap">
 
-                    {* à implémenter si j'ai le temps...
-
-                    <?php if($objSlide->getPosition() == 1) { ?>
-                        <i class="fas fa-arrow-up text-muted"></i> |
-                    <?php } else { ?>
-                        <a href="#" title="+ Position"><i class="fas fa-arrow-up"></i></a> |
-                    <?php } ?>
-
-                    <?php if($objSlide->getPosition() == count($arrSlides)) { ?>
-                        <i class="fas fa-arrow-down text-muted"></i> |slidesList.tpl
-                    <?php } else { ?>
-                        <a href="#" title="- Position"><i class="fas fa-arrow-down"></i></a> |
-                    <?php } ?>
-
-                    *}
                     <a href="{base_url('slides/copy/')}{$objSlide->getId()}" title="Copier"><i class="far fa-copy"></i></a>
                     {if $objSlide->getDefault() eq true}
                         <i title="slide" class="fas fa-edit text-muted"></i>
@@ -62,10 +47,10 @@
                 <td>{$objSlide->getLibelle()}</td>
                 {if $objSlide->getDefault() eq true}
                     <td><a target="_blank"
-                           href="{base_url('uploads/slider')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
+                           href="{base_url('uploads/slider/')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
                 {else}
                     <td><a target="_blank"
-                           href="{base_url('uploads/slides')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
+                           href="{base_url('uploads/slider/')}{$objSlide->getImg()}">{$objSlide->getImg()}</a></td>
                 {/if}
                 <td>{$objSlide->getTaille()}</td>
                 <td>{$objSlide->getShortTitle(60)}</td>

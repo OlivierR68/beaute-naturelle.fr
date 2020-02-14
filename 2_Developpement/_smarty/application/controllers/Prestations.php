@@ -142,7 +142,8 @@ class Prestations extends CI_Controller {
 
         if ($id > 0) {
 
-            $data['TITLE'] = "Modifier la prestation : " . $presta_obj->getId();
+            $data['next'] = true;
+            $data['TITLE'] = "Modifier la prestation : #" . $presta_obj->getId();
             $data['buttonSubmit'] = "Modifier";
             $data['buttonCancel'] = "Revenir à la liste";
 
