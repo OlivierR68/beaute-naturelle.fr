@@ -11,7 +11,7 @@ class DropdownMenu
         $ci = get_instance();
 
         $ci->load->model('Category_class');
-        $ci->load->model('Categories_Manager');
+        $ci->load->model('Categories_manager');
 
         $data_manager = new Categories_manager();
         $cat_data_list = $data_manager->findAllCat(true);
