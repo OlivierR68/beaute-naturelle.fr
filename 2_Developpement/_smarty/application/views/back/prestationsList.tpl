@@ -14,7 +14,7 @@
                 <select class="custom-select mr-sm-2"  name="cat" id="inputCat">
                     <option class="text-muted" value="">Catégorie</option>
                     {foreach from=$cat_list item=cat }
-                        <option {if isset($smarty.post.cat) and $smarty.post.cat eq $cat['cat_id']}selected{/if} value="{$cat['cat_id']}">{$cat['cat_title']}</option>
+                        <option {if isset($smarty.get.cat) and $smarty.get.cat eq $cat['cat_id']}selected{/if} value="{$cat['cat_id']}">{$cat['cat_title']}</option>
                     {/foreach}
                 </select>
             </div>
@@ -24,7 +24,7 @@
                 <select class="custom-select mr-sm-2"  name="subcat" id="inputSubCat">
                     <option  class="text-muted" value="">Sous-catégorie</option>
                     {foreach from=$sub_cat_list item=sub_cat }
-                        <option {if isset($smarty.post.subcat) and $smarty.post.subcat eq $sub_cat['sub_cat_id']}selected{/if} value="{$sub_cat['sub_cat_id']}">{$sub_cat['sub_cat_title']}</option>
+                        <option {if isset($smarty.get.subcat) and $smarty.get.subcat eq $sub_cat['sub_cat_id']}selected{/if} value="{$sub_cat['sub_cat_id']}">{$sub_cat['sub_cat_title']}</option>
                     {/foreach}
                 </select>
             </div>
