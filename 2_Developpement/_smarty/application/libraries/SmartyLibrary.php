@@ -2,6 +2,10 @@
 
 require_once(APPPATH . 'third_party/smarty/libs/Smarty.class.php');
 
+/**
+ * Class SmartyLibrary
+ * Librarie Smarty autoloadé permettant l'utilisation smarty dans tous le site
+ */
 class SmartyLibrary extends Smarty {
 
     function __construct() {

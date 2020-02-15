@@ -25,14 +25,13 @@ class Prestations extends CI_Controller {
 
 	}
 
-	/** Front : Fonction permettant d'afficher la page de prestation  */
+	/** Front : Affichage de la page de présentation des prestations  */
 	public function index()
 	{
 		$data['preTITLE']	= "Préstations & Tarifs";
 		$data['TITLE'] 		= "L'Institut";
         $data['headerImg']	= base_url("assets/img/img-institut.jpg");
 
-		// à remplir ici, parttie frontend
 
         $categories = $this->Categories_manager->findAllCat(true);
 
@@ -48,6 +47,10 @@ class Prestations extends CI_Controller {
         $this->smarty->display('front/templates/content.tpl', $data);
 	}
 
+    /**
+     * Front : Affichage d'une page catégorie
+     * @param string $slug URI de la page composé du nom d'ID de la catégorie ainsi que de son nom formaté
+     */
 	public function cat($slug)
     {
         $cat_id = strstr($slug, '-', true);
@@ -123,8 +126,8 @@ class Prestations extends CI_Controller {
 
 
     /**
-     * Back : Affichage de la page de création/modification d'un utilisateur
-     * @param int $id identifiant utilisateur
+     * Back : Affichage de la page de création/modification d'une prestation
+     * @param int $id identifiant de la prestation
      */
     public function addEdit($id = -1)
     {
@@ -192,20 +195,9 @@ class Prestations extends CI_Controller {
 
     }
 
-    /**
-     * Suprression d'un utilisateur
-     * @param $id identifiant utilisateur
-     */
-    public function delete($id)
-    {
 
-        $this->Prestations_manager->delete($id);
-        $this->session->set_flashdata('error', "La <b>prestation #$id</b> a été supprimé");
-        redirect('prestations/ListPage', 'refresh');
 
-    }
-
-    /** Back :  Affichage de la liste des prestations  */
+    /** Back :  Affichage de la liste des catégories de prestation  */
     public function ListPage_cat()
     {
         $data['TITLE'] 		= "Liste des catégories";
@@ -243,6 +235,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Affichage de la page de création/modification d'une catégorie de prestattion
+     * @param int $id identifiant de la catégorie
+     */
     public function addEdit_cat($id = -1)
     {
 
@@ -325,6 +321,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Affichage de la page de création/modification d'une sous-catégorie de prestattion
+     * @param int $id identifiant de la sous-catégorie
+     */
     public function addEdit_subcat($id = -1)
     {
 
@@ -379,6 +379,23 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Suprression d'une prestation
+     * @param int $id prestation
+     */
+    public function delete($id)
+    {
+
+        $this->Prestations_manager->delete($id);
+        $this->session->set_flashdata('error', "La <b>prestation #$id</b> a été supprimé");
+        redirect('prestations/ListPage', 'refresh');
+
+    }
+
+    /**
+     * Back : Rend visible/invisible au public une prestation
+     * @param int $id prestation
+     */
     public function visible_cat($id)
     {
 
@@ -388,6 +405,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Supprime d'une prestation
+     * @param int $id prestation
+     */
     public function delete_cat($id)
     {
 
@@ -400,6 +421,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Rend visible/invisible au public une catégorie
+     * @param int $id catégorie
+     */
     public function visible_subcat($id)
     {
 
@@ -409,6 +434,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Supprime une sous-catégorie
+     * @param int $id sous-catégorie
+     */
     public function delete_subcat($id)
     {
 
@@ -420,6 +449,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Rend visible/invisible au public une prestation
+     * @param int $id prestation
+     */
     public function visible_presta($id)
     {
 
@@ -429,6 +462,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Copie une prestation
+     * @param int $id prestation
+     */
     public function copy_presta($id)
     {
 
@@ -439,6 +476,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Décremente l'ordre d'une prestation
+     * @param int $id prestation
+     */
     public function orderUp($id)
     {
 
@@ -448,6 +489,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Incrémente l'ordre d'une prestation
+     * @param int $id prestation
+     */
     public function orderDown($id)
     {
 
@@ -456,8 +501,6 @@ class Prestations extends CI_Controller {
         redirect('prestations/ListPage', 'refresh');
 
     }
-
-
 
 
 }

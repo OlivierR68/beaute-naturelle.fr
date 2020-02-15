@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 class Categories_manager extends CI_Model{
 
+    /**
+     * Méthode permettant la liste des éléments dans la bdd
+     * @param bool $visible_only permet de retourner que les élements visible au public
+     * @return array retourne la liste des éléments
+     */
 	public function findAllCat($visible_only = false){
 
 	    if($visible_only) $this->db->where('cat_visible', true);
@@ -10,6 +15,12 @@ class Categories_manager extends CI_Model{
 
 	}
 
+    /**
+     * Méthode permettant récupérer la liste des éléments dans la bdd
+     * @param bool $visible_only permet de retourner que les élements visible au public
+     * @param string $order_by permet de choisir l'odre des élements
+     * @return array retourne la liste des éléments
+     */
     public function findAllSubCat($visible_only = false, $order_by = 'id'){
 
 
@@ -22,6 +33,11 @@ class Categories_manager extends CI_Model{
 
     }
 
+    /**
+     * Méthode permettant de récupérer 1 élément dans la bdd
+     * @param int $id identifiant de l'élément
+     * @return array la liste des champs de l'élément
+     */
     public function findOne($id)
     {
         return $this->db->where('cat_id', $id)->get('category')->row();

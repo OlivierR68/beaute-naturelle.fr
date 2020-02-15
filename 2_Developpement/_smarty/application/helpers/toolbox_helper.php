@@ -3,9 +3,9 @@
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
- * Collection de fonction pratique
+ * Collection de fonction plus ou moins pratique
  * @author Olivier Ravinasaga
- * @version  beta 0.1
+ * @version  version 1
  *
  */
 
@@ -61,12 +61,22 @@ function ctrl_name()
 
 }
 
+/**
+ * Fonction permettant de récupérer les données de session temporaire
+ * @param string $name nom de la donnée de session
+ * @return mixed retourne la donnée de session
+ */
 
 function flash_data($name)
 {
     $ci = get_instance();
     return $ci->session->flashdata($name);
 }
+
+/**
+ * Fonction permettant l'affichage du controller actuelle, avec son nom "humain"
+ * @return string
+ */
 
 function ctrl_slug()
 {

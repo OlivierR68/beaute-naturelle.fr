@@ -2,6 +2,11 @@
 
 require_once(APPPATH . 'third_party/smarty/libs/Smarty.class.php');
 
+/**
+ * Class DropdownMenu
+ * Librairie Perso permettant l'affichage du Menu déroulant dans tout le site grâce à l'autoload
+ * @author Olivier Ravinasaga
+ */
 class DropdownMenu
 {
 

@@ -16,12 +16,6 @@ class Slides extends CI_Controller {
 
 	}
 
-    /*
-     * ------------------------------------------------------
-     *  Méthodes d'affichages des pages
-     * ------------------------------------------------------
-     */
-
 	/** Front : Affichage de la page d'accueil  */
 	public function home()
 	{
@@ -149,12 +143,6 @@ class Slides extends CI_Controller {
         $this->smarty->display('back/templates/content.tpl', $data);
 	}
 
-    /*
-     * ------------------------------------------------------
-     *  Méthodes d'actions et vérifications
-     * ------------------------------------------------------
-     */
-
 
 	/**
 	 ** Back : Supprression un slide, et qui redirige par la suite sur la liste
@@ -182,6 +170,10 @@ class Slides extends CI_Controller {
 
     }
 
+    /**
+     * Back : Incrémente l'ordre d'un slide
+     * @param int $id slide
+     */
     public function orderUp($id)
     {
 
@@ -191,6 +183,10 @@ class Slides extends CI_Controller {
 
     }
 
+    /**
+     * Back : Décrémente l'ordre d'un slide
+     * @param int $id slide
+     */
     public function orderDown($id)
     {
 
@@ -201,6 +197,10 @@ class Slides extends CI_Controller {
     }
 
 
+    /**
+     * Back : Rend visible/invisible au public un slide
+     * @param int $id slide
+     */
 	public function visible($id)
 	{
 
