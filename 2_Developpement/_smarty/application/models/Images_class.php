@@ -1,6 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Model image
+ * @author  Steven Robert
+ * @author  Olivier Ravinasaga
+ * @version 1
+ *
+ */
+
 class Images_class extends CI_Model {
 	/** Les attributs de la classe - en privé **/
 	private $_img_id;

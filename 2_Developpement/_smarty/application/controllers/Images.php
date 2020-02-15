@@ -61,8 +61,8 @@ class Images extends CI_Controller
 
 	}
 
-	/** Fonction permettant de créer ou de modifier un événement
-	* @param int $id identifiant bdd de l'événement
+	/** Fonction permettant de créer ou de modifier une image
+	* @param int $id identifiant bdd de l'image
 	*/
 	
 	public function addEdit($id = -1)
@@ -74,7 +74,7 @@ class Images extends CI_Controller
 		 	-1 = page de création | 1+ = page de modification
 		 */
 
-		 // Création d'un objet event qu'on utilisera tout au long de la fonction
+		 // Création d'un objet image qu'on utilisera tout au long de la fonction
 		$objImage = new Images_class();
 			
 		// On vérifie si la page a un id, on l'hydrate en récupérant les infos dans la bdd
@@ -128,7 +128,7 @@ class Images extends CI_Controller
 
 			// crée ou on modifie une image selon si on est dans la page de création ou modification
 			if($id < 0){
-				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
+				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur l'image
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
 				redirect('images/AddEdit/'.$insertId, 'refresh'); // redirection sur la page modification
@@ -161,8 +161,8 @@ class Images extends CI_Controller
 
 	}
 
-	/** Fonction permettant de supprimer un événement et de rediriger sur la page de la liste
-	* @param int $id identifiant bdd de l'événement
+	/** Fonction permettant de supprimer une image et de rediriger sur la page de la liste
+	* @param int $id identifiant bdd de l'image
 	*/
 	public function delete($id)
 	{ 
@@ -173,8 +173,8 @@ class Images extends CI_Controller
 
 	}
 	
-	/** Fonction permettant de copier un événement et de rediriger sur la page de la liste
-	* @param int $id identifiant bdd de l'événement
+	/** Fonction permettant de copier une image et de rediriger sur la page de la liste
+	* @param int $id identifiant bdd de l'image
 	*/
 	public function copy($id)
 	{
@@ -199,7 +199,7 @@ class Images extends CI_Controller
 		 	-1 = page de création | 1+ = page de modification
 		 */
 
-		 // Création d'un objet event qu'on utilisera tout au long de la fonction
+		 // Création d'un objet image qu'on utilisera tout au long de la fonction
 		$objImage = new Images_class();
 			
 		// On vérifie si la page a un id, on l'hydrate en récupérant les infos dans la bdd
@@ -253,7 +253,7 @@ class Images extends CI_Controller
 
 			// crée ou on modifie une image selon si on est dans la page de création ou modification
 			if($id < 0){
-				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur event
+				$insertId = $this->Images_manager->new($objImage); // on crée et récupère l'id sur l'image
 				$this->session->set_flashdata("success", "L'image' <b>{$objImage->getId()}</b> a été ajouté"); // on crée et envoi un message de succes sur la prochaine page
 
 				redirect('images/AddEdit/'.$insertId, 'refresh'); // redirection sur la page modification
