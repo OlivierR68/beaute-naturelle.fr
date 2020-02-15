@@ -22,6 +22,7 @@ class Prestations extends CI_Controller {
 
         $this->load->model("SubCategory_class");
         $this->load->model("SubCategories_manager");
+
 	}
 
 	/** Front : Fonction permettant d'afficher la page de prestation  */

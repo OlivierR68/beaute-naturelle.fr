@@ -85,9 +85,31 @@ class CI_Controller {
 		$this->load =& load_class('Loader', 'core');
 		$this->load->initialize();
 		log_message('info', 'Controller Class Initialized');
+
+		$this->dropdownMenu();
 	}
 
 	// --------------------------------------------------------------------
+
+    public function dropdownMenu(){
+
+        $this->load->model('Category_class');
+        $this->load->model('Categories_Manager');
+
+        $data_manager = new Categories_manager();
+        $cat_data_list = $data_manager->findAllCat(true);
+        $dropdown_menu = array();
+
+        foreach ($cat_data_list as $cat_data) {
+            $cat_obj = new Category_class();
+            $cat_obj->hydrate($cat_data);
+
+            $dropdown_menu[] = $cat_obj;
+
+        }
+
+        $this->smarty->assign('dropdown_menu', $dropdown_menu);
+    }
 
 	/**
 	 * Get the CI singleton

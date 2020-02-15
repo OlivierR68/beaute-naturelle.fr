@@ -1,5 +1,6 @@
 {include file="./header.tpl"}
 
+
 {if !empty($ERRORS)}
     <div class="text-center mb-5">
         <div class="alert alert-danger w-25 m-auto" role="alert">
