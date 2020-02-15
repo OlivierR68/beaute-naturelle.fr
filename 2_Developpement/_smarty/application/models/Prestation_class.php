@@ -42,7 +42,7 @@ class  Prestation_class extends CI_Model {
         return $this->_prestation_title;
     }
 
-    public function getShortTitle($strLimit = 50){
+    public function getShortTitle($strLimit = 30){
 
         if(strlen($this->_prestation_title) > $strLimit) {
             return mb_substr($this->_prestation_title, 0, $strLimit)."..."; ;
@@ -55,7 +55,7 @@ class  Prestation_class extends CI_Model {
         return $this->_prestation_subtext;
     }
 
-    public function getShortSubtext($strLimit = 50){
+    public function getShortSubtext($strLimit = 30){
 
         if(strlen($this->_prestation_subtext) > $strLimit) {
             return mb_substr($this->_prestation_subtext, 0, $strLimit)."..."; ;

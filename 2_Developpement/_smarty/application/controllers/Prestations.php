@@ -154,7 +154,7 @@ class Prestations extends CI_Controller {
             if ($id < 0) {
 
                 $insertId = $this->Prestations_manager->new($presta_obj);
-                $this->session->set_flashdata("success", "La <b>prestation #".$presta_obj->getId()."</b> a été ajouté");
+                $this->session->set_flashdata("success", "La <b>prestation #".$insertId."</b> a été ajouté");
 
                 redirect('prestations/addEdit/' . $insertId, 'refresh');
 

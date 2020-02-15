@@ -2,7 +2,7 @@
 
 <div>
 
-    <form class="mb-3" method="post">
+    <form class="mb-3" method="get">
         <div class="form-row align-items-center">
 
             <div class="col-auto my-1">
@@ -22,7 +22,7 @@
             <div class="col-auto my-1">
                 <label class="mr-sm-2 sr-only" for="inputSubCat">Sub-Catégorie</label>
                 <select class="custom-select mr-sm-2"  name="subcat" id="inputSubCat">
-                    <option  class="text-muted" value="">Sub-Catégorie</option>
+                    <option  class="text-muted" value="">Sous-catégorie</option>
                     {foreach from=$sub_cat_list item=sub_cat }
                         <option {if isset($smarty.post.subcat) and $smarty.post.subcat eq $sub_cat['sub_cat_id']}selected{/if} value="{$sub_cat['sub_cat_id']}">{$sub_cat['sub_cat_title']}</option>
                     {/foreach}
@@ -71,7 +71,7 @@
             <tr>
                 <td>{$presta_obj->getId()}</td>
                 <td>{$presta_obj->getOrder()}</td>
-                <td class="bn_action nowrap">
+                <td class="bn_action nowrap" style="width: 175px">
                     <a href="{base_url('prestations/visible_presta/')}{$presta_obj->getId()}" title="Visibilité">
                         <i class="far fa-eye {if $presta_obj->getVisible() eq false}text-muted{else}text-success{/if}"></i>
                     </a>

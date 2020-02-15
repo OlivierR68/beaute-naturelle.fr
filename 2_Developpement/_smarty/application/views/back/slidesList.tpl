@@ -31,7 +31,7 @@
             <tr>
                 <td>{$objSlide->getId()}</td>
                 <td>{$objSlide->getOrder()}</td>
-                <td class="bn_action nowrap">
+                <td class="bn_action nowrap" style="width: 175px">
 
                     <a href="{base_url('slides/visible/')}{$objSlide->getId()}" title="Visibilité">
                         <i class="far fa-eye {if $objSlide->getVisible() eq false}text-muted{else}text-success{/if}"></i>

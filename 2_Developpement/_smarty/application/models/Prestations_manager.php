@@ -23,8 +23,8 @@ class Prestations_manager extends CI_Model{
 
 	    if ($limit != null) $this->db->limit($limit);
 
-        if (!empty($this->input->post('cat')) && $this->input->post('cat') != '') $this->db->where('category.cat_id', $this->input->post('cat'));
-        if (!empty($this->input->post('subcat'))  && $this->input->post('subcat') != '') $this->db->where('prestation_sub_cat', $this->input->post('subcat'));
+        if (!empty($this->input->get('cat')) && $this->input->get('cat') != '') $this->db->where('category.cat_id', $this->input->get('cat'));
+        if (!empty($this->input->get('subcat'))  && $this->input->get('subcat') != '') $this->db->where('prestation_sub_cat', $this->input->get('subcat'));
 
         return $this->db
             ->join('sub_category', 'sub_category.sub_cat_id = prestation.prestation_sub_cat')
