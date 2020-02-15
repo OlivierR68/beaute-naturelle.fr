@@ -144,6 +144,26 @@
 
 	{/if}
 
+    {if isset($menu_cat_list)}
+        <div class="bn_bg-color-1">
+            <div class="container bn_arianne bn_color-white bn_small-text text-center text-uppercase">
+                <nav class="row no-gutters">
+
+                    {foreach from=$menu_cat_list item=cat_obj}
+                        <a href="{$cat_obj->getUrl()}" class="col-4 col-sm-3 col-lg py-2 bn_a-white {if $current_uri == $cat_obj->getSlug()}bn_active-presta{/if} text-nowrap">
+                            {$cat_obj->getTitle()}
+                        </a>
+                    {/foreach}
+
+                </nav>
+
+
+            </div>
+        </div>
+    {/if}
+    <!--------- Menu Rapide Prestations  -------->
+
+
 	<div class="bn_block-title">
 		<span>{$preTITLE}</span>
 		<h1>{$TITLE}</h1>

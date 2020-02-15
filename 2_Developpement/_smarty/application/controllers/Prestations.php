@@ -71,11 +71,21 @@ class Prestations extends CI_Controller {
             }
         }
 
+        $cat_list_data =$this->Categories_manager->findAllCat();
 
+        foreach ($cat_list_data as $cat_data) {
+
+            $obj_cat_menu =  new Category_class();
+            $obj_cat_menu->hydrate($cat_data);
+            $data['menu_cat_list'][] = $obj_cat_menu;
+
+        }
+
+        $data['current_uri']= $this->uri->segments[3];
         $data['preTITLE']	= "Préstations & Tarifs";
         $data['TITLE'] 		= $objCat->getTitle();
         $data['headerImg']	= base_url('uploads/prestations/'.$objCat->getHeader());
-        $data['CONTENT'] = $this->smarty->fetch('front/category.tpl', $data);
+        $data['CONTENT']    = $this->smarty->fetch('front/category.tpl', $data);
         $this->smarty->display('front/templates/content.tpl', $data);
     }
 
