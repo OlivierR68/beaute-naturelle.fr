@@ -95,7 +95,8 @@
 							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/listPage")}">Liste des Prestations</a>
 							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit")}">Ajouter une prestation</a>
 							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/listPage_cat")}">Liste des Catégories</a>
-							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit_cat")}">Ajouter une catégorie</a>
+							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit_cat")}">Ajouter une Catégorie</a>
+							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit_subcat")}"><i class="fa fa-plus mr-2"></i>Sous-Catégorie</a>
 						</nav>
 					</div>
 

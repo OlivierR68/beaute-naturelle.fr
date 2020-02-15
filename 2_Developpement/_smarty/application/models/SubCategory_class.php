@@ -6,6 +6,7 @@ class SubCategory_class extends CI_Model {
     private $_sub_cat_id;
     private $_sub_cat_title;
     private $_sub_cat_parent;
+    private $_sub_cat_visible;
     private $_cat_title;
 
 
@@ -39,6 +40,10 @@ class SubCategory_class extends CI_Model {
 
     public function getParent(){
         return $this->_sub_cat_parent;
+    }
+
+    public function getVisible(){
+        return $this->_sub_cat_visible;
     }
 
     public function getCat_title(){
@@ -89,5 +94,9 @@ class SubCategory_class extends CI_Model {
 
     public function setCat_title($string){
         $this->_cat_title = $string;
+    }
+
+    public function setVisible($bool = 0){
+        $this->_sub_cat_visible = $bool;
     }
 }

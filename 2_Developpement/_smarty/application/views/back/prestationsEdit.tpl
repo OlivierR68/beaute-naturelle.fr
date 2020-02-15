@@ -1,9 +1,11 @@
+
 {if isset($next)}
     <div class="d-flex flex-wrap mb-3">
         <a href="{base_url('prestations/addEdit/-1')}" class="btn btn-primary d-block mr-1 mb-1">Ajouter une nouvelle prestation</a>
-        <a href="{base_url('prestations/newCopy')}" class="btn btn-primary d-block mr-1 mb-1">Copier vers une nouvelle prestation</a>
+        {* <a href="{base_url('prestations/newCopy')}" class="btn btn-primary d-block mr-1 mb-1">Copier vers une nouvelle prestation</a> *}
     </div>
 {/if}
+
 
 {form_open()}
 

@@ -21,6 +21,7 @@ class Prestations extends CI_Controller {
         $this->load->model("Prestation_class");
 
         $this->load->model("SubCategory_class");
+        $this->load->model("SubCategories_manager");
 	}
 
 	/** Front : Fonction permettant d'afficher la page de prestation  */
@@ -210,6 +211,143 @@ class Prestations extends CI_Controller {
 
 
 
+
+    }
+
+    public function addEdit_cat($id = -1)
+    {
+
+        $cat_obj = new Category_class();
+
+        if ($id >= 0) {
+            $cat_obj->hydrate($this->Categories_manager->findOne($id));
+        }
+
+        if (!empty($this->input->post())) {
+
+            if($_FILES['img']['size'] > 0){
+
+
+                $config['upload_path']      = './uploads/prestations/';
+                $config['allowed_types']    = 'gif|jpg|jpeg|png';
+                $config['max_size']        	= 2048;
+
+
+                $this->load->library('upload', $config);
+                if (!$this->upload->do_upload('img'))
+                {
+                    $data['ERRORS'] = $this->upload->display_errors();
+
+                } else {
+
+                    $upload_data = $this->upload->data();
+                    $cat_obj->setImg($upload_data['file_name']);
+
+                }
+
+                $this->upload->initialize($config);
+                if (!$this->upload->do_upload('header'))
+                {
+                    $data['ERRORS'] = $this->upload->display_errors();
+
+                } else {
+
+                    $upload_data = $this->upload->data();
+                    $cat_obj->setHeader($upload_data['file_name']);
+
+                }
+
+            }
+
+
+            if ($id < 0) {
+
+                $cat_obj->hydrate($this->input->post());
+
+                $insertId = $this->Categories_manager->new($cat_obj);
+                $this->session->set_flashdata("success", "La catégorie <b>{$cat_obj->getTitle()}</b> a été ajoutée");
+
+                redirect('prestations/addEdit/' . $insertId, 'refresh');
+
+            } else {
+
+                $insertId = $this->Categories_manager->update($cat_obj);
+                $data['SUCCESS'] = "La catégorie <b>{$cat_obj->getTitle()}</b> a été modifiée";
+            }
+        }
+
+        if ($id > 0) {
+
+            $data['next'] = true;
+            $data['TITLE'] = "Modifier la catégorie : #" . $cat_obj->getTitle();
+            $data['buttonSubmit'] = "Modifier";
+            $data['buttonCancel'] = "Revenir à la liste";
+
+        } else {
+
+            $data['TITLE'] = "Ajouter une nouvelle catégorie";
+            $data['buttonSubmit'] = "Ajouter la catégorie";
+            $data['buttonCancel'] = "Annuler";
+
+        }
+
+        $data['cat_obj'] = $cat_obj;
+        $data['CONTENT'] = $this->smarty->fetch('back/categoriesAdd.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
+
+    }
+
+    public function addEdit_subcat($id = -1)
+    {
+
+        $subcat_obj = new SubCategory_class();
+
+        if ($id >= 0) {
+            $subcat_obj->hydrate($this->SubCategories_manager->findOne($id));
+        }
+
+        if (!empty($this->input->post())) {
+
+
+            if ($id < 0) {
+
+                $subcat_obj->hydrate($this->input->post());
+
+                $insertId = $this->SubCategories_manager->new($subcat_obj);
+                $this->session->set_flashdata("success", "La sous-catégorie <b>{$subcat_obj->getTitle()}</b> a été ajoutée");
+
+                redirect('prestations/addEdit_subcat/' . $insertId, 'refresh');
+
+            } else {
+
+                $insertId = $this->SubCategories_manager->update($subcat_obj);
+                $data['SUCCESS'] = "La sous-catégorie <b>{$subcat_obj->getTitle()}</b> a été modifiée";
+            }
+        }
+
+
+
+
+        if ($id > 0) {
+
+            $data['next'] = true;
+            $data['TITLE'] = "Modifier la sous-catégorie : #" . $subcat_obj->getTitle();
+            $data['buttonSubmit'] = "Modifier";
+            $data['buttonCancel'] = "Revenir à la liste";
+
+        } else {
+
+            $data['TITLE'] = "Ajouter une nouvelle sous-catégorie";
+            $data['buttonSubmit'] = "Ajouter la catégorie";
+            $data['buttonCancel'] = "Annuler";
+
+        }
+
+
+        $data['cat_list'] = $this->Categories_manager->findAllCat();
+        $data['subcat_obj'] = $subcat_obj;
+        $data['CONTENT'] = $this->smarty->fetch('back/subCategoriesAdd.tpl', $data);
+        $this->smarty->display('back/templates/content.tpl', $data);
 
     }
 }

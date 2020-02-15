@@ -10,6 +10,7 @@ class  Category_class extends CI_Model
     private $_cat_img;
     private $_cat_header;
     private $_cat_description;
+    private $_cat_visible;
 
     /** Constructeur **/
     public function __construct()
@@ -79,16 +80,20 @@ class  Category_class extends CI_Model
         return $this->_cat_description;
     }
 
+    public function getVisible()
+    {
+        return $this->_cat_visible;
+    }
+
 
     /** GETTER pour la liste des attributs
      * @param bool $filter si true filter le tableau
-     * @param bool $noId unset le id du tableau return si true
+     * @param bool $noId unset le id du tableau retourné si true
      * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
      */
 
     public function getArray($filter = false, $noId = false)
     {
-
         $varArray = get_object_vars($this);
 
         $arrInsert = array();
@@ -96,11 +101,10 @@ class  Category_class extends CI_Model
             $arrInsert[substr($key, 1)] = $value;
         }
 
-        unset($arrInsert['user_profil_libelle']);
-
         if ($filter) $arrInsert = array_filter($arrInsert);
+        if ($noId) unset($arrInsert['cat_id']);
 
-        if ($noId) unset($arrInsert['user_id']);
+        unset($arrInsert['cat_slug']);
 
         return $arrInsert;
     }
@@ -156,5 +160,10 @@ class  Category_class extends CI_Model
     public function setDescription($text)
     {
         $this->_cat_description = $text;
+    }
+
+    public function setVisible($bool = 0)
+    {
+        $this->_cat_visible = $bool;
     }
 }

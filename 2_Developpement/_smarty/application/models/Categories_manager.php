@@ -11,15 +11,32 @@ class Categories_manager extends CI_Model{
 
     public function findAllSubCat(){
 
-        return $this->db->join('category', 'category.cat_id = sub_category.sub_cat_parent')->get('sub_category')->result_array();
+        return $this->db->join('category', 'category.cat_id = sub_category.sub_cat_parent')
+            ->get('sub_category')->result_array();
 
     }
 
     public function findOne($id)
     {
+        return $this->db->where('cat_id', $id)->get('category')->row();
+    }
 
-        $query = $this->db->where('cat_id', $id)->get('category');
-        return $query->row();
 
+
+    public function new($obj)
+    {
+
+        $this->db->insert('category', $obj->getArray());
+        return $this->db->insert_id();
+    }
+
+    public function delete($id)
+    {
+        $this->db->where('cat_id', $id)->delete('category');
+    }
+
+    public function update($obj)
+    {
+        $this->db->where('cat_id', $obj->getId())->update('category', $obj->getArray(false, true));
     }
 }

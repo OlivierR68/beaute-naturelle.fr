@@ -57,11 +57,7 @@ class Slides_manager extends CI_Model
 	 */
 	public function update($obj)
 	{
-
-        $id = $obj->getId();
-        $data = $obj->getArray(false, true);
-
-        $this->db->where('slide_id', $id)->update('slide', $data);
+        $this->db->where('slide_id', $obj->getId())->update('slide', $obj->getArray(false, true));
 	}
 
 
