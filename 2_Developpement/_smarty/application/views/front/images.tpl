@@ -27,7 +27,7 @@
 
 				<label for="inputImg">Uploader une image :</label>
 
-			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif" required>
+			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif" value="{$objImage_user->getSrc()}" required>
 			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo</small>
 
 		    </div>
@@ -45,6 +45,8 @@
     {/if}
 
         <div class="row no-gutters bn_galerie">
+
+            <!-- Affiche les images de la bdd -->
 
             {foreach from=$arrImages item=$objImage}                   
 

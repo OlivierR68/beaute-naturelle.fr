@@ -183,7 +183,6 @@ class Images extends CI_Controller
 		$this->session->set_flashdata('success', "L'image' #$id a été copié");
 		redirect('images/ListPage', 'refresh');
 
-
 	}
 }
 
