@@ -18,7 +18,7 @@
             
             <div class="modal-body">
                 <label for="exampleFormControlInput1">Nom de l'image :</label>
-                <input type="text" class="form-control" name="libelle" <!-- value="$objImage->getLibelle()}" --> required>
+                <input type="text" class="form-control" name="libelle" value="{$objImage_user->getLibelle()}" required>
             </div>
 
             <div class="modal-body mt-n3">
@@ -35,7 +35,7 @@
             </div>
             <div class="modal-footer mt-n2">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                <button type="submit" class="btn btn-success">Envoyer</button>
+                <button type="submit" class="btn btn-success">Envoyer</button><a href="{base_url('images/user_addEdit')}" class="btn btn-dark">{$buttonCancel}</a>
                 <p>Cette image sera en attente de validation par les moderateurs</p>
             </div>
             </div>
