@@ -1,0 +1,8 @@
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (1, 'Épilations', 'presta-bg-1.jpg', 'presta-top-1.jpg', 'catégorie épilation', 1);
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (2, 'Mains et Pieds', 'presta-bg-2.jpg', 'presta-top-2.jpg', 'Catégorie Mains & Pieds', 1);
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (3, 'Visage', 'presta-bg-4.jpg', 'presta-top-3.jpg', 'Catégorie visage', 1);
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (4, 'Regard', 'presta-bg-3.jpg', 'presta-top-4.jpg', 'Catégorie regard', 1);
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (5, 'Minceur', 'presta-bg-5.jpg', 'presta-top-5.jpg', 'Catégorie micneur', 1);
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (6, 'Carita', 'presta-bg-6.jpg', 'presta-top-6.jpg', 'Catégorie Carita', 1);
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (7, 'SPA', 'presta-bg-7.jpg', 'presta-top-7.jpg', 'Catégorie SPA', 1);
+INSERT INTO ravoli_db.category (cat_id, cat_title, cat_img, cat_header, cat_description, cat_visible) VALUES (8, 'Hommes', 'presta-bg-8.jpg', 'presta-top-8.jpg', 'Catégorie Homme', 1);
