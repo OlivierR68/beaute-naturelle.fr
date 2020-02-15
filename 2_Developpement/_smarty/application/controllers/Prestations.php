@@ -129,10 +129,14 @@ class Prestations extends CI_Controller {
 
         $presta_obj = new Prestation_class();
 
-        if (!empty($this->input->post('subcat'))) $presta_obj->setSub_cat($this->input->post('subcat'));
+        if (!empty($this->input->get('subcat'))) $presta_obj->setSub_cat($this->input->get('subcat'));
+        else {
+            $presta_obj->setOrder();
+            $presta_obj->setVisible();
+        }
 
-        if (!empty($this->input->post('copy'))) {
-            $presta_obj->hydrate($this->Prestations_manager->findOne($this->input->post('copy')));
+        if (!empty($this->input->get('copy'))) {
+            $presta_obj->hydrate($this->Prestations_manager->findOne($this->input->get('copy')));
             $presta_obj->setId(null);
 
         }

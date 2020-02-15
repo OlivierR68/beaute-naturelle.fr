@@ -44,14 +44,15 @@
 </div>
 
 <div class="form-group">
+    {form_label('Durée :', 'inputDuration')}
+    {form_input('duration', $presta_obj->getDuration(), 'class="form-control" required id="inputDuration"')}
+</div>
+
+<div class="form-group">
     {form_label('Prix :', 'inputPrice')}
     {form_input('price', $presta_obj->getPrice(), 'class="form-control" required id="inputPrice"')}
 </div>
 
-<div class="form-group">
-    {form_label('Durée :', 'inputDuration')}
-    {form_input('duration', $presta_obj->getDuration(), 'class="form-control" required id="inputDuration"')}
-</div>
 
 <div class="d-flex flex-wrap">
     <button type="submit" class="btn btn-primary d-block mr-1 mb-1">{$buttonSubmit}</button>
