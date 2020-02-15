@@ -1,2 +1,0 @@
-https://openclassrooms.com/forum/sujet/horaires-d-ouvertures-en-php
-function php pour dire quand c 'est ouvert
