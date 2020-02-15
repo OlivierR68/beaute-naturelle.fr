@@ -4,15 +4,45 @@
 	<div class="container bn_block-newsletter text-center">
 		<div class="bn_gap-25"></div>
 		<label for="inputNewsletter" class="bn_h1" style="font-size: 1.4rem;">Abonnez-vous à notre Newsletter</label>
-		<form class="form-inline justify-content-center align-items-center mt-2">
+		<div class="form-inline justify-content-center align-items-center mt-2">
 			<div class="form-group mt-3 mt-sm-0">
-				<input type="email" class="form-control bn_newsletter-input" id="inputNewsletter"
+				<input type="email" class="form-control bn_newsletter-input" id="input-subscriber"
 					   placeholder="Entrez votre adresse mail">
 			</div>
-			<button type="submit" class="btn bn_btn-green ml-2">VALIDER</button>
-		</form>
+			<button type="submit" type="button" class="bn_btn-green ml-2" id="subscribe-btn" data-toggle="modal" data-target="#newsletter-subscribe" class="btn bn_btn-green ml-2">VALIDER</button>
+			<input type="hidden" id="hidden-is-in-base" value="{site_url('newsletter/isInBase')}">
+			<input type="hidden" id="hidden-subscribe" value="{site_url('newsletter/subscribe')}">
+		</div>
 		<div class="bn_gap-30"></div>
 
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="newsletter-subscribe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Inscription / Désinscription Newsletter</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>Adresse mail : <span class="font-weight-bold" id="mail-modal"></span></p>
+				<p>Status actuel : <span class="font-weight-bold" id="status-modal">-</span></p>
+				<p id="ask-modal"></p>
+				<p id="#infos-subscribre-modal"></p>
+				<p class="small">Pour vous inscrire/désinscrire de la newsletter, entrez votre adresse mail dans la section "Abonnez-vous à notre Newsletter" du pied de page et cliquez sur "VALIDER". Ou contacter nous par mail à
+					<a href="mailto:contact@beaute-naturelle.fr">contact@beaute-naturelle.fr</a>.</p>
+				<p class="small">En validant cette fenêtre, vous acceptez de recevoir quotidiennement des mails d'information de notre part via courrier électronique,
+				et vous prenez connaissance de notre <a href="{site_url('pages/politique')}">Politique de confidentialité</a>.</p>
+			</div>
+			<div class="modal-footer d-flex justify-content-center">
+				<button type="button" class="bn_btn-green" data-dismiss="modal">ANNULER</button>
+				<button type="button" id="confirm-modal" class="bn_btn-green d-none" data-dismiss="modal"></button>
+			</div>
+		</div>
 	</div>
 </div>
 

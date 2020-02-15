@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{base_url("assets/css/styles.css")}">
 
     <link rel="shortcut icon" href="{base_url("assets/favicon.ico")}" type="image/x-icon">
-    <link rel="icon" href="{base_url('assets/favicon.png')} type="image/png">
+    <link rel="icon" href="{base_url('assets/favicon.png')}" type="image/png">
     <link rel="icon" sizes="32x32" href="{base_url("assets/favicon-32.png")}" type="image/png">
     <link rel="icon" sizes="64x64" href="{base_url("assets/favicon-64.png")}" type="image/png">
     <link rel="icon" sizes="96x96" href="{base_url("assets/favicon-96.png")}" type="image/png">
