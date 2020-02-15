@@ -10,9 +10,13 @@ class Categories_manager extends CI_Model{
 
 	}
 
-    public function findAllSubCat($visible_only = false){
+    public function findAllSubCat($visible_only = false, $order_by = 'id'){
+
 
         if($visible_only) $this->db->where('sub_cat_visible', true);
+
+        $this->db->order_by('sub_cat_'.$order_by);
+
         return $this->db->join('category', 'category.cat_id = sub_category.sub_cat_parent')
             ->get('sub_category')->result_array();
 

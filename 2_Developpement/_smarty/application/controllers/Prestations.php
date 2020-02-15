@@ -84,6 +84,7 @@ class Prestations extends CI_Controller {
 
         }
 
+
         $data['current_uri']= $this->uri->segments[3];
         $data['preTITLE']	= "Préstations & Tarifs";
         $data['TITLE'] 		= $objCat->getTitle();
@@ -129,15 +130,16 @@ class Prestations extends CI_Controller {
 
         $presta_obj = new Prestation_class();
 
+        $presta_obj->setOrder();
+        $presta_obj->setVisible();
+
         if (!empty($this->input->get('subcat'))) $presta_obj->setSub_cat($this->input->get('subcat'));
-        else {
-            $presta_obj->setOrder();
-            $presta_obj->setVisible();
-        }
+
 
         if (!empty($this->input->get('copy'))) {
             $presta_obj->hydrate($this->Prestations_manager->findOne($this->input->get('copy')));
             $presta_obj->setId(null);
+            $data['SUCCESS'] = "Copie de la <b>prestation #".$this->input->get('copy')."</b>";
 
         }
 
@@ -147,19 +149,19 @@ class Prestations extends CI_Controller {
 
         if (!empty($this->input->post())) {
 
+            $presta_obj->hydrate($this->input->post());
+
             if ($id < 0) {
 
-                $presta_obj->hydrate($this->input->post());
-
                 $insertId = $this->Prestations_manager->new($presta_obj);
-                $this->session->set_flashdata("success", "La prestation <b>{$presta_obj->getId()}</b> a été ajouté");
+                $this->session->set_flashdata("success", "La <b>prestation #".$presta_obj->getId()."</b> a été ajouté");
 
                 redirect('prestations/addEdit/' . $insertId, 'refresh');
 
             } else {
 
-                $insertId = $this->Prestations_manager->update($presta_obj);
-                $data['SUCCESS'] = "La prestation <b>{$presta_obj->getId()}</b> a été modifié";
+                $this->Prestations_manager->update($presta_obj);
+                $data['SUCCESS'] = "La <b>prestation #".$presta_obj->getId()."</b> a été modifié";
             }
         }
 
@@ -180,7 +182,7 @@ class Prestations extends CI_Controller {
 
 
 
-        $data['sub_cat_list']  = $this->Categories_manager->findAllSubCat();
+        $data['sub_cat_list']  = $this->Categories_manager->findAllSubCat(false, 'parent');
 
         $data['presta_obj'] = $presta_obj;
         $data['CONTENT'] = $this->smarty->fetch('back/prestationsEdit.tpl', $data);
@@ -285,10 +287,9 @@ class Prestations extends CI_Controller {
 
             }
 
+            $cat_obj->hydrate($this->input->post());
 
             if ($id < 0) {
-
-                $cat_obj->hydrate($this->input->post());
 
                 $insertId = $this->Categories_manager->new($cat_obj);
                 $this->session->set_flashdata("success", "La catégorie <b>{$cat_obj->getTitle()}</b> a été ajoutée");
@@ -335,10 +336,9 @@ class Prestations extends CI_Controller {
 
         if (!empty($this->input->post())) {
 
+            $subcat_obj->hydrate($this->input->post());
 
             if ($id < 0) {
-
-                $subcat_obj->hydrate($this->input->post());
 
                 $insertId = $this->SubCategories_manager->new($subcat_obj);
                 $this->session->set_flashdata("success", "La sous-catégorie <b>{$subcat_obj->getTitle()}</b> a été ajoutée");

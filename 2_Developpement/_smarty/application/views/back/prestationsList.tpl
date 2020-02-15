@@ -46,10 +46,10 @@
             <th>Ordre</th>
             <th>Actions</th>
             <th>Titre</th>
-            <th>Sous-titre</th>
-            <th>Prix</th>
+            <th>Description</th>
             <th>Durée</th>
-            <th>Sub-Catégorie </th>
+            <th>Prix</th>
+            <th>Sous-Catégorie </th>
             <th>Catégorie </th>
         </tr>
         </thead>
@@ -59,10 +59,10 @@
             <th>Ordre</th>
             <th>Actions</th>
             <th>Titre</th>
-            <th>Sous-titre</th>
-            <th>Prix</th>
+            <th>Description</th>
             <th>Durée</th>
-            <th>Sub-Catégorie </th>
+            <th>Prix</th>
+            <th>Sous-Catégorie </th>
             <th>Catégorie </th>
         </tr>
         </tfoot>
@@ -98,8 +98,8 @@
                 </td>
                 <td>{$presta_obj->getShortTitle()}</td>
                 <td>{$presta_obj->getShortSubtext()}</td>
-                <td>{$presta_obj->getPrice()}</td>
                 <td>{$presta_obj->getDuration()}</td>
+                <td>{$presta_obj->getPrice()}</td>
                 <td>{$presta_obj->getSub_cat_title()}</td>
                 <td>{$presta_obj->getCat_title()}</td>
             </tr>
