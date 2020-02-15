@@ -70,4 +70,24 @@
 	</div>
 
 	<button type="submit" class="btn btn-primary">{$buttonSubmit}</button> <a href="{base_url('slides/listPage')}" class="btn btn-dark">{$buttonCancel}</a>
+	<a href="{base_url('slides/delete/')}{$objSlide->getId()}" data-href="{base_url('slides/delete/')}{$objSlide->getId()}"
+	   data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Supprimer</a>
 </form>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	 aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				Confirmer la suppression
+			</div>
+			<div class="modal-body">
+				Vous voulez vraiment supprimer le slide <b class="bn_user"></b>?
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-dark" data-dismiss="modal">Annuler</button>
+				<a class="btn btn-danger btn-ok">Supprimer</a>
+			</div>
+		</div>
+	</div>
+</div>

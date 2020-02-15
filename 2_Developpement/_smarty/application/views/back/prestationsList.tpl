@@ -42,7 +42,8 @@
     <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
         <thead>
         <tr>
-            <th>id</th>
+            <th>Id</th>
+            <th>Ordre</th>
             <th>Actions</th>
             <th>Titre</th>
             <th>Sous-titre</th>
@@ -54,7 +55,8 @@
         </thead>
         <tfoot>
         <tr>
-            <th>id</th>
+            <th>Id</th>
+            <th>Ordre</th>
             <th>Actions</th>
             <th>Titre</th>
             <th>Sous-titre</th>
@@ -65,21 +67,41 @@
         </tr>
         </tfoot>
         <tbody>
-        {foreach from=$display_list item=$presa_obj}
+        {foreach from=$display_list item=$presta_obj}
             <tr>
-                <td>{$presa_obj->getId()}</td>
+                <td>{$presta_obj->getId()}</td>
+                <td>{$presta_obj->getOrder()}</td>
                 <td class="bn_action nowrap">
-                    <a href="{base_url('prestations/addEdit/')}{$presa_obj->getId()}" title="Modifier"><i
+                    <a href="{base_url('prestations/visible_presta/')}{$presta_obj->getId()}" title="Visibilité">
+                        <i class="far fa-eye {if $presta_obj->getVisible() eq false}text-muted{else}text-success{/if}"></i>
+                    </a>
+
+                    <a href="{base_url('prestations/orderDown/')}{$presta_obj->getId()}" title="Ordre +1">
+                        <i class="far fa-plus-square"></i>
+                    </a>
+
+                    <a href="{base_url('prestations/orderUp/')}{$presta_obj->getId()}" title="Ordre -1">
+                        <i class="far fa-minus-square"></i>
+                    </a> |
+
+                    <a href="{base_url('prestations/copy_presta/')}{$presta_obj->getId()}" title="Copier">
+                        <i class="far fa-copy"></i>
+                    </a>
+                    <a href="{base_url('prestations/addEdit/')}{$presta_obj->getId()}" title="Modifier"><i
                                 class="far fa-edit"></i></a>
-                    <a href="{base_url('prestations/delete/')}{$presa_obj->getId()}"  data-href="{base_url('prestations/delete/')}{$presa_obj->getId()}" data-toggle="modal" data-target="#confirm-delete" title="Supprimer"><i
+                    <a href="{base_url('prestations/delete/')}{$presta_obj->getId()}"
+                       data-href="{base_url('prestations/delete/')}{$presta_obj->getId()}"
+                       data-toggle="modal" data-target="#confirm-delete" title="Supprimer"><i
                                 class="fas fa-trash-alt text-danger"></i></a>
+
+
                 </td>
-                <td>{$presa_obj->getTitle()}</td>
-                <td>{$presa_obj->getSubtext()}</td>
-                <td>{$presa_obj->getPrice()}</td>
-                <td>{$presa_obj->getDuration()}</td>
-                <td>{$presa_obj->getSub_cat_title()}</td>
-                <td>{$presa_obj->getCat_title()}</td>
+                <td>{$presta_obj->getShortTitle()}</td>
+                <td>{$presta_obj->getShortSubtext()}</td>
+                <td>{$presta_obj->getPrice()}</td>
+                <td>{$presta_obj->getDuration()}</td>
+                <td>{$presta_obj->getSub_cat_title()}</td>
+                <td>{$presta_obj->getCat_title()}</td>
             </tr>
         {/foreach}
         </tbody>
@@ -98,8 +120,8 @@
                 Vous voulez vraiment supprimer la prestation <b class="bn_user"></b>?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Annuler</button>
+                <a class="btn btn-danger btn-ok">Supprimer</a>
             </div>
         </div>
     </div>

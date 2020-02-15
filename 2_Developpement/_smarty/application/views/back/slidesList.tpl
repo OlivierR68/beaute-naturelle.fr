@@ -4,6 +4,7 @@
     <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
         <thead>
         <tr>
+            <th>Id</th>
             <th>Ordre</th>
             <th>Actions</th>
             <th>Libelle</th>
@@ -15,6 +16,7 @@
         </thead>
         <tfoot>
         <tr>
+            <th>Id</th>
             <th>Ordre</th>
             <th>Actions</th>
             <th>Libelle</th>
@@ -27,6 +29,7 @@
         <tbody>
         {foreach from=$arrSlides item=$objSlide}
             <tr>
+                <td>{$objSlide->getId()}</td>
                 <td>{$objSlide->getOrder()}</td>
                 <td class="bn_action nowrap">
 
@@ -50,7 +53,7 @@
                     </a>
                     <a href="{base_url('slides/delete/')}{$objSlide->getId()}"
                        data-href="{base_url('slides/delete/')}{$objSlide->getId()}"
-                       data-toggle="modal" data-id="#{$objSlide->getId()}" data-target="#confirm-delete" title="Supprimer">
+                       data-toggle="modal" data-target="#confirm-delete" title="Supprimer">
                         <i class="fas fa-trash-alt text-danger"></i>
                     </a>
 
@@ -79,8 +82,8 @@
                 Vous voulez vraiment supprimer le slide <b class="bn_user"></b>?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Annuler</button>
+                <a class="btn btn-danger btn-ok">Supprimer</a>
             </div>
         </div>
     </div>

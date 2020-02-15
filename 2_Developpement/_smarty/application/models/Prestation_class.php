@@ -9,6 +9,8 @@ class  Prestation_class extends CI_Model {
     private $_prestation_price;
     private $_prestation_duration;
     private $_prestation_sub_cat;
+    private $_prestation_visible;
+    private $_prestation_order;
     private $_sub_cat_title;
     private $_cat_title;
 
@@ -40,8 +42,26 @@ class  Prestation_class extends CI_Model {
         return $this->_prestation_title;
     }
 
+    public function getShortTitle($strLimit = 50){
+
+        if(strlen($this->_prestation_title) > $strLimit) {
+            return substr($this->_prestation_title, 0, $strLimit)."..."; ;
+        } else {
+            return $this->_prestation_title;
+        }
+    }
+
     public function getSubtext(){
         return $this->_prestation_subtext;
+    }
+
+    public function getShortSubtext($strLimit = 50){
+
+        if(strlen($this->_prestation_title) > $strLimit) {
+            return substr($this->_prestation_subtext, 0, $strLimit)."..."; ;
+        } else {
+            return $this->_prestation_subtext;
+        }
     }
 
     public function getPrice(){
@@ -63,6 +83,15 @@ class  Prestation_class extends CI_Model {
     public function getCat_title(){
         return $this->_cat_title;
     }
+
+    public function getVisible(){
+        return $this->_prestation_visible;
+    }
+
+    public function getOrder(){
+        return $this->_prestation_order;
+    }
+
 
     /** GETTER pour la liste des attributs
      * @param bool $filter si true filter le tableau
@@ -124,6 +153,15 @@ class  Prestation_class extends CI_Model {
     public function setCat_title($string){
         $this->_cat_title = $string;
     }
+
+    public function setVisible($bool = 1){
+        $this->_prestation_visible = $bool;
+    }
+
+    public function setOrder($int = 0){
+        $this->_prestation_order = $int;
+    }
+
 
 
 }
