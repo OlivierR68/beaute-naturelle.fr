@@ -1,6 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-require_once(APPPATH . 'third_party/smarty/libs/Smarty.class.php');
 
 /**
  * Class DropdownMenu

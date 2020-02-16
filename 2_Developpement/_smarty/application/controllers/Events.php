@@ -149,6 +149,8 @@ class Events extends CI_Controller
     }
 
 
+
+
     /** Fonction permettant de créer ou de modifier un événement
      * @param int $id identifiant bdd de l'événement
      */

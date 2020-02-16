@@ -58,6 +58,11 @@ class Events_manager extends CI_Model {
 
     }
 
+    public function need_moderate()
+    {
+        return $this->db->where('event_user_valid', NULL)->get('event_user')->num_rows();
+    }
+
     public function unregister($event_id, $user_id)
     {
         $this->db->where('user_id', $user_id)->where('event_id',$event_id)->delete('event_user');
