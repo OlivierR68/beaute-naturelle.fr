@@ -8,3 +8,7 @@ Administrateur 1 : admin1@cci-test.fr
 Administrateur 2 : admin2@cci-test.fr
 
 Mdp pour tous les comptes : pf68*CCI
+
+//
+
+https://github.com/OlivierR68/beaute-naturelle.fr
