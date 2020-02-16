@@ -100,8 +100,33 @@ class User_class extends CI_Model {
         return $this->_user_avatar;
     }
 
+    public function getAvatarUrl(){
+        return base_url('uploads/avatar')."/".$this->_user_avatar;
+    }
+
     public function getLocalisation(){
         return $this->_user_localisation;
+    }
+
+    public function getShortInfos() {
+
+	    if ($this->getGender() != null || $this->getAge() != null) {
+
+	        $infos = "(";
+            $gender = "";
+           if ($this->getGender() == 1)  $gender = "M";
+	       if ($this->getGender() == 2)  $gender = "F";
+
+            $infos .= $gender;
+            $infos .= $this->getAge();
+
+            return $infos.")";
+
+        } else {
+	        return "";
+        }
+
+
     }
 
 

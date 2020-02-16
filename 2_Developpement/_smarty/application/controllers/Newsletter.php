@@ -16,6 +16,12 @@ class Newsletter extends CI_Controller
         $this->load->model('Subscribers_manager');
     }
 
+
+
+
+    /**
+     * Fonction AJAX permettant de vérfier si l'adresse mail envoyé est dans la bdd
+     */
     public function isInBase()
     {
         $email = $this->input->get('email');
@@ -50,6 +56,10 @@ class Newsletter extends CI_Controller
 
     }
 
+
+    /**
+     * Fonction AJAX permettant de insérer un mail dans la bdd si il n'y est pas, et de le supprimer si il y est.
+     */
     public function subscribe()
     {
         $email = $this->input->get('email');

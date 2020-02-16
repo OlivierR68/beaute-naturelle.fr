@@ -1,6 +1,6 @@
 <a class="btn btn-primary mb-3" href="{site_url('events/addEdit')}" role="button">Ajouter un événement</a>
 
-		<div class="table-responsive">
+		<div class="table-responsive table-sm">
 			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 				<thead>
 					<tr>
@@ -9,10 +9,10 @@
 						<th>Nom</th>
                         <th>Image</th>
 						<th>Contenu</th>
-                        <th>Date de création</th>
-						<th>Date de début</th>
-						<th>Date de fin</th>
+						<th>Date d'événement</th>
+						<th>Participants</th>
 						<th>Capacité</th>
+						<th>Expiration</th>
 					</tr>
 				</thead>
 				<tfoot>
@@ -22,10 +22,10 @@
 						<th>Nom</th>
                         <th>Image</th>
 						<th>Contenu</th>
-                        <th>Date de création</th>
-						<th>Date de début</th>
-						<th>Date de fin</th>
+						<th>Date d'événement</th>
+						<th>Participants</th>
 						<th>Capacité</th>
+						<th>Expiration</th>
 					</tr>
 				</tfoot>
 				<tbody>
@@ -41,10 +41,10 @@
 						<td>{$objEvent->getName()}</td>
 						<td><a target="_blank" href="{base_url("uploads/events/")}{$objEvent->getImg()}">{$objEvent->getImg()}</a></td>
 						<td>{$objEvent->getShortContent(30)}</td>
-                        <td>{$objEvent->getCreate_date_form()}</td>
 						<td>{$objEvent->getStart_date_form()}</td>
-						<td>{$objEvent->getEnd_date_form()}</td>
-                        <td>{$objEvent->getCapacity()}</td>
+						<td>{$objEvent->getFilling()}</td>
+						<td>{$objEvent->getCapacity()}</td>
+						<td class="{if $objEvent->expired()}text-danger{/if}">{if $objEvent->expired()}Expiré{else}{$objEvent->daysBeforeExpired()} Jours{/if}</td>
 					</tr>
 				{/foreach} 
 				</tbody>

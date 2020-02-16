@@ -1,5 +1,4 @@
-
-
+{please_reconnect()}
 {include file="./header.tpl"}
 
 <div class="container-fluid">

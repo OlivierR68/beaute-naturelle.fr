@@ -6,13 +6,8 @@
 	
 
 	<div class="form-group">
-		<label for="inputStartDate">Date de début :</label>
+		<label for="inputStartDate">Date :</label>
 		<input type="date" name="start_date" class="form-control" id="inputStartDate" value="{$objEvent->getStart_date()}" required>
-	</div>
-
-    <div class="form-group">
-		<label for="inputEndDate">Date de fin :</label>
-		<input type="date" name="end_date" class="form-control" id="inputEndDate" value="{$objEvent->getEnd_date()}" required>
 	</div>
 
     <div class="form-group">
@@ -30,14 +25,14 @@
 
 
 				<label for="inputImg">Changer l'image :</label>
-			{ else }
+			{else}
 
 				<label for="inputImg">Uploader une image :</label>
 
 			{/if }
 
 			<input type="file" class="form-control-file" id="inputImg" name="img" accept=".jpg, .jpeg, .png, .gif">
-			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo</small>
+			<small id="fileHelp" class="form-text text-muted">Taille maximum : 2 mo<br>Taille conseillée : 1920x500 px</small>
 		</div>
 
 		

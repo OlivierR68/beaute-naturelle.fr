@@ -188,7 +188,6 @@ class Users extends CI_Controller
             $configUpload['max_size']      = 2048;
 
             $this->load->library('upload',$configUpload);
-
             if (!$this->upload->do_upload('avatar')) {
 
                 $data['ERRORS'] = $this->upload->display_errors();

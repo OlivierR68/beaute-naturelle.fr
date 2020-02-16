@@ -95,3 +95,17 @@ function ctrl_slug()
     return $slug;
 }
 
+/**
+ * Fonction permettant la redirrection  vers la page de connection si l'utilisateur cherche a acceder au backoffice sans être connecter.
+ */
+function please_reconnect()
+{
+    $ci = get_instance();
+
+    if (isset($ci->session->login) && $ci->session->login < 2) {
+
+        redirect('users/login', 'refresh');
+
+    }
+}
+

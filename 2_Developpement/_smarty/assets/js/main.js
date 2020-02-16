@@ -58,8 +58,6 @@ $( document ).ready(function() {
 		let $mail = $('#input-subscriber').val();
 		let $url = "http://ravoli.formation-web-cci.aradev.fr/newsletter/isInBase";
 
-		console.log($url);
-
 		if (validateEmail($mail)) {
 
 			$('#mail-modal').html($mail);
