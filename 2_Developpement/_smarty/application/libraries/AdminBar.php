@@ -17,6 +17,10 @@ class AdminBar
         $event_manager_obj = new Events_manager();
 
 
+        $ci->load->model('Images_manager');
+        $img_manager_obj = new Images_manager();
+
+        $ci->smarty->assign('image_add_counter', $img_manager_obj->need_moderate());
         $ci->smarty->assign('event_register_counter', $event_manager_obj->need_moderate());
 
 

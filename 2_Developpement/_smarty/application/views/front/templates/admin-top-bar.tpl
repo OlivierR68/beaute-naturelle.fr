@@ -16,7 +16,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="{base_url('dashboard')}"><span class="bn_cube">524</span> Images</a>
+					<a class="nav-link" href="{base_url('dashboard')}"><span class="bn_cube">{$image_add_counter}</span> Images</a>
 				</li>
 			</ul>
 		</div>

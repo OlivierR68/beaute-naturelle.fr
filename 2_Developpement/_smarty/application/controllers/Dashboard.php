@@ -15,6 +15,9 @@ class Dashboard extends CI_Controller {
 
         $this->load->model('Users_manager');
         $this->load->model('User_class');
+
+        $this->load->model('Images_manager');
+        $this->load->model('Images_class');
 	}
 
 	/** Back : Affichage du tableau de bord */
@@ -36,8 +39,10 @@ class Dashboard extends CI_Controller {
         }
 
 
+        $tableau_des_enfers_le_retour = $this->Images_manager->getModerate();
 
 
+        $data['requests_img'] = $tableau_des_enfers_le_retour;
         $data['requests_data'] = $tableau_des_enfers;
 
         $data['CONTENT'] = $this->smarty->fetch('back/dashboard.tpl', $data);

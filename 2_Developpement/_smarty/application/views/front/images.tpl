@@ -16,7 +16,7 @@
                     
                     <a href="{base_url("uploads/album/")}{$objImage->getSrc()}" data-lightbox="roadtrip">
                     <div class="bn_galerie-img">
-                        <img src="{base_url("uploads/album/")}{$objImage->getSrc()}" alt="Belle Photo">
+                        <img src="{base_url("uploads/album/")}{$objImage->getSrc()}" alt="{$objImage->getDescription()}">
                     </div>
 
                 </a>
@@ -33,7 +33,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form enctype="multipart/form-data">
+            <form enctype="multipart/form-data" method="post">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ajouter une image</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">

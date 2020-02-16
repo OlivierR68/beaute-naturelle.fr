@@ -20,10 +20,10 @@ class Images_manager extends CI_Model {
 	 * Récupération liste des images
 	 * @return array  tous les images
 	 */
-	 public function findAll()
+	 public function findAll($visible_only = false)
 	 {
-		 $queryGroup = $this->db->get('image');
-		 return $queryGroup->result_array();
+	     if ($visible_only) $this->db->where('img_validation', 1);
+		 return $this->db->get('image')->result_array();
 	 }
 
 	/**
@@ -77,6 +77,23 @@ class Images_manager extends CI_Model {
     public function update($obj)
     {
         $this->db->where('img_id', $obj->getId())->update('image', $obj->getArray(false, true));
+    }
+
+    public function getModerate()
+    {
+        return $this->db->where('img_validation', NULL)->join('user','user_id = img_author')->get('image')->result_array();
+    }
+
+
+    public function need_moderate()
+    {
+        return $this->db->where('img_validation', NULL)->get('image')->num_rows();
+    }
+
+    public function accept($id)
+    {
+        $data['img_validation'] = true;
+        $this->db->where('img_id', $id)->update('image', $data);
     }
 
 }

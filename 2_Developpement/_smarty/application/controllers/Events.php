@@ -71,7 +71,7 @@ class Events extends CI_Controller
 
             if ($reponse_infos != false) {
 
-                $smart_block = "<span class='bg-primary text-light $class_param'><i class='fas fa-info-circle mr-2'></i>$reponse_infos</span>";
+                $smart_block = "<span class='bg-dark text-light $class_param'><i class='fas fa-info-circle mr-2'></i>$reponse_infos</span>";
 
                 $href = site_url() . "/events/unregister/" . $obj_event->getId() . "/" . $this->session->id;
                 $smart_block .= "<a class='bg-danger text-light $class_param' href='$href'><span class='text-light'>ANNULER</span></a>";

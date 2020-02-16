@@ -27,12 +27,46 @@ class Images extends CI_Controller
         $data['TITLE'] = "Galerie Photos";
         $data['headerImg'] = base_url("assets/img/img-gallerie.jpg");
 
-        $images = $this->Images_manager->findAll();
+        $images = $this->Images_manager->findAll(true);
         $imagesToDisplay = array();
         foreach ($images as $image) {
             $objImage = new Images_class();
             $objImage->hydrate($image);
             $imagesToDisplay[] = $objImage;
+        }
+
+        if (!empty($this->input->post())) {
+
+
+            $obj_image = new Images_class();
+            $obj_image->hydrate($this->input->post());
+
+            if ($_FILES['img']['size'] > 0) {
+
+                $config['upload_path'] = './uploads/album/';
+                $config['allowed_types'] = 'gif|jpg|jpeg|png';
+                $config['max_size'] = 2048;
+
+                $this->upload->initialize($config);
+                if (!$this->upload->do_upload('img')) {
+                    $data['ERROR'] = $this->upload->display_errors();
+
+                } else {
+
+                    $upload_data = $this->upload->data();
+                    $obj_image->setSrc($upload_data['file_name']);
+                    $obj_image->setAuthor($this->session->id);
+
+                }
+
+            }
+
+
+                $insertId = $this->Images_manager->new($obj_image);
+                $this->session->set_flashdata("success", "Votre image a bien été envoyé,<br> elle sera mis en ligne après modération.");
+
+                redirect('images/', 'refresh');
+
         }
 
         $data['arrImages'] = $imagesToDisplay;
@@ -109,6 +143,7 @@ class Images extends CI_Controller
                     // si tout c'est bien passé on indique le nom de l'image dans l'objet
                     $upload_data = $this->upload->data();
                     $objImage->setSrc($upload_data['file_name']);
+                    $objImage->setAuthor($this->session->id);
 
                 }
 
@@ -164,10 +199,15 @@ class Images extends CI_Controller
      */
     public function delete($id)
     {
+        $obj_img = new Images_class();
+        $obj_img->hydrate($this->Images_manager->findOne($id));
+
+        $previous_img = "./uploads/album/".$obj_img->getSrc();
+        if (file_exists($previous_img)) unlink($previous_img);
 
         $this->Images_manager->delete($id);
-        $this->session->set_flashdata('error', "L'image' #$id a été supprimé");
-        redirect('images/ListPage', 'refresh');
+        $this->session->set_flashdata('error', "L'image #$id a été supprimé");
+        redirect($this->agent->referrer(), 'refresh');
 
     }
 
@@ -178,8 +218,18 @@ class Images extends CI_Controller
     {
 
         $this->Images_manager->copy($id);
-        $this->session->set_flashdata('success', "L'image' #$id a été copié");
+        $this->session->set_flashdata('success', "L'image #$id a été copié");
         redirect('images/ListPage', 'refresh');
+
+    }
+
+
+    public function accept($id)
+    {
+
+        $this->Images_manager->accept($id);
+        $this->session->set_flashdata('success', "L'image #$id est maintenant visible au public");
+        redirect('dashboard', 'refresh');
 
     }
 
