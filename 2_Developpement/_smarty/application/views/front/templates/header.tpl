@@ -49,6 +49,14 @@
             <div
                 class="container bn_top-bar d-flex align-items-center justify-content-center justify-content-md-between">
                 <div class="bn_infos">
+                    <a class="bn_infos-items" href="{site_url('pages/contact')}"><i
+                                class="fas fa-phone"></i>01.23.45.67.89</a>
+
+                    <a class="bn_infos-items" title="" href="{site_url('pages/contact')}"><i
+                                class="fas fa-clock"></i>Actuellement : {the_morand_function()}</a>
+                </div>
+
+                <div class="bn_infos">
 
                     {if isset($smarty.session.login)}
                         <a class="bn_infos-items" href="{site_url('users/profile')}"><i class="far fa-caret-square-down"></i>Bonjour {$smarty.session.first_name}</a>
@@ -60,12 +68,6 @@
 
 
                 </div>
-
-                <div class="bn_infos">
-                    <a class="bn_infos-items d-none d-lg-inline" href="{site_url('pages/contact')}"><i
-                            class="fas fa-map-marker-alt"></i>Actuellement : </a>
-                </div>
-
 
             </div>
         </div>

@@ -40,7 +40,7 @@
 			</div>
 			<div class="modal-footer d-flex justify-content-center">
 				<button type="button" class="bn_btn-green" data-dismiss="modal">ANNULER</button>
-				<button type="button" id="confirm-modal" class="bn_btn-green d-none" data-dismiss="modal"></button>
+				<button type="button" id="confirm-modal" class="bn_btn-green" data-dismiss="modal"></button>
 			</div>
 		</div>
 	</div>

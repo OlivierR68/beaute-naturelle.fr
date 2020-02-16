@@ -30,7 +30,7 @@ function active_page($controller, $return = 'active', $settings = 0)
             $uri = $ci->uri->rsegments['2'];
             break;
         default:
-            $uri =  $ci->uri->rsegments['1']."/".$ci->uri->rsegments['2'];
+            $uri = $ci->uri->rsegments['1'] . "/" . $ci->uri->rsegments['2'];
     }
 
     if ($uri == $controller) return $return;
@@ -46,7 +46,7 @@ function active_page($controller, $return = 'active', $settings = 0)
 function page_name()
 {
     $ci = get_instance();
-   return $ci->uri->rsegments['2'];
+    return $ci->uri->rsegments['2'];
 
 }
 
@@ -83,14 +83,30 @@ function ctrl_slug()
     $ctrl = ctrl_name();
 
     switch ($ctrl) {
-        case "dashboard"    : $slug = "Tableau de bord";        break;
-        case "events"       : $slug = "Événements";             break;
-        case "images"       : $slug = "Galerie d'image";        break;
-        case "pages"        : $slug = "Pages";                  break;
-        case "prestations"  : $slug = "Prestations";            break;
-        case "slides"       : $slug = "Slider page d'accueil";  break;
-        case "users"        : $slug = "Utilisateurs";           break;
-        case "newsletter"   : $slug = "Newsletter";             break;
+        case "dashboard"    :
+            $slug = "Tableau de bord";
+            break;
+        case "events"       :
+            $slug = "Événements";
+            break;
+        case "images"       :
+            $slug = "Galerie d'image";
+            break;
+        case "pages"        :
+            $slug = "Pages";
+            break;
+        case "prestations"  :
+            $slug = "Prestations";
+            break;
+        case "slides"       :
+            $slug = "Slider page d'accueil";
+            break;
+        case "users"        :
+            $slug = "Utilisateurs";
+            break;
+        case "newsletter"   :
+            $slug = "Newsletter";
+            break;
     }
 
     return $slug;
@@ -112,7 +128,36 @@ function please_reconnect()
 
 /**
  * La fonction de Morand !
+ * HEURE D'OUVERTURE ET FEMETURE
  */
+function the_morand_function()
+{
+    function isWebsiteOpen()
+    {
+        date_default_timezone_set('Europe/Paris'); //evite le decalage horraire
+
+        //date ('Gi') --> heure --> ex : 900 = 9h00min
+        //date('N') --> jour --> ex : 6 = samedi
+
+        // de 9h00 à 18h00
+        if (date('Gi') >= 900 && date('Gi') < 1800 || date('N') > 6 && date('Gi') >= 000 && date('Gi') < 001) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    if (isWebsiteOpen() === true) {
+        return "<span class='text-success'>Ouvert</span>";
+    } else {
+        return "<span class='text-danger'>Fermé</span>";
+    }
+
+
+
+}
+
 
 
 
