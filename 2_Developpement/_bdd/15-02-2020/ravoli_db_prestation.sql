@@ -1,0 +1,2 @@
+INSERT INTO ravoli_db.prestation (prestation_id, prestation_title, prestation_subtext, prestation_price, prestation_duration, prestation_sub_cat, prestation_order, prestation_visible) VALUES (1, 'Épilation nez cire', null, '4', '5', 1, 0, 1);
+INSERT INTO ravoli_db.prestation (prestation_id, prestation_title, prestation_subtext, prestation_price, prestation_duration, prestation_sub_cat, prestation_order, prestation_visible) VALUES (2, 'Epilation lèvre cire tiède', null, '4', '10', 1, 0, 1);

@@ -16,12 +16,6 @@ class Slides extends CI_Controller {
 
 	}
 
-    /*
-     * ------------------------------------------------------
-     *  Méthodes d'affichages des pages
-     * ------------------------------------------------------
-     */
-
 	/** Front : Affichage de la page d'accueil  */
 	public function home()
 	{
@@ -149,12 +143,6 @@ class Slides extends CI_Controller {
         $this->smarty->display('back/templates/content.tpl', $data);
 	}
 
-    /*
-     * ------------------------------------------------------
-     *  Méthodes d'actions et vérifications
-     * ------------------------------------------------------
-     */
-
 
 	/**
 	 ** Back : Supprression un slide, et qui redirige par la suite sur la liste
@@ -164,7 +152,7 @@ class Slides extends CI_Controller {
 	{
 
 		$this->Slides_manager->delete($id);
-		$this->session->set_flashdata('error', "Le slide #$id a été supprimé");
+		$this->session->set_flashdata('error', "Le <b>slide #$id</b> a été supprimé");
 		redirect('slides/ListPage', 'refresh');
 
 	}
@@ -177,11 +165,15 @@ class Slides extends CI_Controller {
     {
 
         $this->Slides_manager->copy($id);
-        $this->session->set_flashdata('success', "Le slide #$id a été copié");
+        $this->session->set_flashdata('success', "Le <b>slide #$id</b> a été copié");
         redirect('slides/ListPage', 'refresh');
 
     }
 
+    /**
+     * Back : Incrémente l'ordre d'un slide
+     * @param int $id slide
+     */
     public function orderUp($id)
     {
 
@@ -191,6 +183,10 @@ class Slides extends CI_Controller {
 
     }
 
+    /**
+     * Back : Décrémente l'ordre d'un slide
+     * @param int $id slide
+     */
     public function orderDown($id)
     {
 
@@ -201,11 +197,15 @@ class Slides extends CI_Controller {
     }
 
 
+    /**
+     * Back : Rend visible/invisible au public un slide
+     * @param int $id slide
+     */
 	public function visible($id)
 	{
 
         $return = $this->Slides_manager->toggleVisible($id);
-        $this->session->set_flashdata('infos', "Le slide est maintenant <b>".$return."</b>");
+        $this->session->set_flashdata('infos', "Le <b>slide #$id</b> est maintenant <b>".$return."</b>");
         redirect('slides/ListPage', 'refresh');
 
 	}

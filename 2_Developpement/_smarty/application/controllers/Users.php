@@ -20,12 +20,6 @@ class Users extends CI_Controller
 
     }
 
-    /*
-     * ------------------------------------------------------
-     *  Méthodes d'affichages des pages
-     * ------------------------------------------------------
-     */
-
 
     /**
      * Front : Affichage de la page login
@@ -105,7 +99,6 @@ class Users extends CI_Controller
 
     /**
      * Front : Affichage de la page profile de l'utilisateur
-     * test
      */
     public function profile()
     {
@@ -180,6 +173,11 @@ class Users extends CI_Controller
     }
 
 
+    /**
+     * Front & Back : Fonction d'upload de l'avatar
+     * @param object $objUser à besoin d'un objet de classe User_class
+     * @return object avec l'attribut avatar ajouter/mis à jour
+     */
     public function uploadAvatar($objUser){
 
         if ($_FILES['avatar']['size'] > 0) {
@@ -190,7 +188,6 @@ class Users extends CI_Controller
             $configUpload['max_size']      = 2048;
 
             $this->load->library('upload',$configUpload);
-
             if (!$this->upload->do_upload('avatar')) {
 
                 $data['ERRORS'] = $this->upload->display_errors();
@@ -301,13 +298,6 @@ class Users extends CI_Controller
         $this->smarty->display('back/templates/content.tpl', $data);
     }
 
-
-
-    /*
-     * ------------------------------------------------------
-     *  Méthodes d'actions et vérifications
-     * ------------------------------------------------------
-     */
 
 
     /**

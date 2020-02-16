@@ -1,10 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Manager Users
+ * @author  Steven Robert
+ * @author  Olivier Ravinasaga
+ * @version 1
+ *
+ */
+
 class Images_manager extends CI_Model {
 
 	/**
-	* Fonction permettant de récupérer la liste des articles
+	* Fonction permettant de récupérer la liste des images
 	* @return array Tableau des images
 	*/
 

@@ -9,9 +9,9 @@ class Event_class extends CI_Model {
 	private $_event_slug;
     private $_event_create_date;
     private $_event_start_date;
-	private $_event_end_date;
 	private $_event_content;
     private $_event_capacity;
+    private $_event_filling;
 
 	/** Constructeur **/
 	public function __construct(){
@@ -50,6 +50,8 @@ class Event_class extends CI_Model {
             $arrInsert = array_filter($arrInsert);
         }
 
+        unset($arrInsert['event_filling']);
+
         return $arrInsert;
     }
 
@@ -78,10 +80,6 @@ class Event_class extends CI_Model {
 		return $this->_event_start_date;
 	}
 
-	public function getEnd_date(){
-		return $this->_event_end_date;
-	}
-
 	public function getContent(){
 		return $this->_event_content;
 	}
@@ -90,7 +88,21 @@ class Event_class extends CI_Model {
 		return $this->_event_capacity;
 	}
 
-/** GETTER pour contenu raccourci
+	public function getFilling() {
+        return $this->_event_filling;
+    }
+
+    public function getImgUrl()
+    {
+        return site_url('uploads/events/'.$this->_event_img);
+    }
+
+    public function getUrl()
+    {
+        return site_url('events/ev/'.$this->_event_id);
+    }
+
+    /** GETTER pour contenu raccourci
 	 * @param $strLimit integer Limite de taille de la chaîne de caractère
 	 * @return string contenu
 	 */
@@ -112,10 +124,6 @@ class Event_class extends CI_Model {
 		return date('d-m-Y', strtotime($this->_event_start_date));
 	}
 
-
-	public function getEnd_date_form(){
-		return date('d-m-Y', strtotime($this->_event_end_date));
-	}
 
 	/** SETTERS (pour chaque attribut) **/
 
@@ -163,16 +171,34 @@ class Event_class extends CI_Model {
 		$this->_event_start_date = $start_date;
 	}
 
-	public function setEnd_date($end_date){
-		$this->_event_end_date = $end_date;
-	}
 
 	public function setContent($content){
 		$this->_event_content = $content;
 	}
 
+	public function setFilling($int){
+        $this->_event_filling = $int;
+    }
+
 	public function setCapacity($capacity){
 		$this->_event_capacity = $capacity;
 	}
+
+	public function daysBeforeExpired(){
+
+        $event_date = date_create($this->getStart_date());
+        $now_date = new DateTime('Europe/Paris');
+
+        $interval = date_diff($event_date, $now_date);
+
+        return $interval->d;
+
+    }
+
+    public function expired(){
+
+	    return $this->daysBeforeExpired() < 1 ? true : false;
+
+    }
 
 }

@@ -10,6 +10,11 @@ class Dashboard extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 
+        $this->load->model('Events_manager');
+        $this->load->model('Event_class');
+
+        $this->load->model('Users_manager');
+        $this->load->model('User_class');
 	}
 
 	/** Back : Affichage du tableau de bord */
@@ -20,11 +25,25 @@ class Dashboard extends CI_Controller {
 
 
 
-		// à remplir ici, partie frontend
+        $register_request_list = array();
+        $requests_data = $this->Events_manager->getRequest();
+        $tableau_des_enfers = [];
+        foreach ($requests_data as $index) {
+
+            $index['event_filling'] = $this->Events_manager->getFilling($index['event_id']);
+            $tableau_des_enfers[] =  $index;
+
+        }
+
+
+
+
+        $data['requests_data'] = $tableau_des_enfers;
 
         $data['CONTENT'] = $this->smarty->fetch('back/dashboard.tpl', $data);
         $this->smarty->display('back/templates/content.tpl', $data);
 	}
+
 
 
 }

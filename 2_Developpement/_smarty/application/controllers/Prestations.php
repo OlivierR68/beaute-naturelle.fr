@@ -22,18 +22,18 @@ class Prestations extends CI_Controller {
 
         $this->load->model("SubCategory_class");
         $this->load->model("SubCategories_manager");
+
 	}
 
-	/** Front : Fonction permettant d'afficher la page de prestation  */
+	/** Front : Affichage de la page de présentation des prestations  */
 	public function index()
 	{
 		$data['preTITLE']	= "Préstations & Tarifs";
 		$data['TITLE'] 		= "L'Institut";
         $data['headerImg']	= base_url("assets/img/img-institut.jpg");
 
-		// à remplir ici, parttie frontend
 
-        $categories = $this->Categories_manager->findAllCat();
+        $categories = $this->Categories_manager->findAllCat(true);
 
         $cat_to_display = array();
         foreach($categories as $category){
@@ -47,6 +47,10 @@ class Prestations extends CI_Controller {
         $this->smarty->display('front/templates/content.tpl', $data);
 	}
 
+    /**
+     * Front : Affichage d'une page catégorie
+     * @param string $slug URI de la page composé du nom d'ID de la catégorie ainsi que de son nom formaté
+     */
 	public function cat($slug)
     {
         $cat_id = strstr($slug, '-', true);
@@ -56,13 +60,16 @@ class Prestations extends CI_Controller {
         $objCat->hydrate($cat_data);
 
 
-        $subcat_array = $this->Prestations_manager->getSubCat($cat_id);
+        if ($objCat->getVisible() == false){
+            redirect('prestations', 'refresh');
+        }
 
+        $subcat_array = $this->Prestations_manager->getSubCat($cat_id, true);
 
 
         foreach ($subcat_array as $subcat){
 
-            $presta_array = $this->Prestations_manager->getPresta($subcat['sub_cat_id']);
+            $presta_array = $this->Prestations_manager->getPresta($subcat['sub_cat_id'],true,true);
 
             foreach ($presta_array as $presta){
                 $objPresta = new Prestation_class();
@@ -71,7 +78,7 @@ class Prestations extends CI_Controller {
             }
         }
 
-        $cat_list_data =$this->Categories_manager->findAllCat();
+        $cat_list_data =$this->Categories_manager->findAllCat(true);
 
         foreach ($cat_list_data as $cat_data) {
 
@@ -80,6 +87,7 @@ class Prestations extends CI_Controller {
             $data['menu_cat_list'][] = $obj_cat_menu;
 
         }
+
 
         $data['current_uri']= $this->uri->segments[3];
         $data['preTITLE']	= "Préstations & Tarifs";
@@ -114,20 +122,30 @@ class Prestations extends CI_Controller {
         $data['CONTENT'] = $this->smarty->fetch('back/prestationsList.tpl', $data);
         $this->smarty->display('back/templates/content.tpl', $data);
 
-
-
-
     }
 
 
     /**
-     * Back : Affichage de la page de création/modification d'un utilisateur
-     * @param int $id identifiant utilisateur
+     * Back : Affichage de la page de création/modification d'une prestation
+     * @param int $id identifiant de la prestation
      */
     public function addEdit($id = -1)
     {
 
         $presta_obj = new Prestation_class();
+
+        $presta_obj->setOrder();
+        $presta_obj->setVisible();
+
+        if (!empty($this->input->get('subcat'))) $presta_obj->setSub_cat($this->input->get('subcat'));
+
+
+        if (!empty($this->input->get('copy'))) {
+            $presta_obj->hydrate($this->Prestations_manager->findOne($this->input->get('copy')));
+            $presta_obj->setId(null);
+            $data['SUCCESS'] = "Copie de la <b>prestation #".$this->input->get('copy')."</b>";
+
+        }
 
         if ($id >= 0) {
             $presta_obj->hydrate($this->Prestations_manager->findOne($id));
@@ -135,19 +153,19 @@ class Prestations extends CI_Controller {
 
         if (!empty($this->input->post())) {
 
+            $presta_obj->hydrate($this->input->post());
+
             if ($id < 0) {
 
-                $presta_obj->hydrate($this->input->post());
-
                 $insertId = $this->Prestations_manager->new($presta_obj);
-                $this->session->set_flashdata("success", "La prestation <b>{$presta_obj->getId()}</b> a été ajouté");
+                $this->session->set_flashdata("success", "La <b>prestation #".$insertId."</b> a été ajouté");
 
                 redirect('prestations/addEdit/' . $insertId, 'refresh');
 
             } else {
 
-                $insertId = $this->Prestations_manager->update($presta_obj);
-                $data['SUCCESS'] = "La prestation <b>{$presta_obj->getId()}</b> a été modifié";
+                $this->Prestations_manager->update($presta_obj);
+                $data['SUCCESS'] = "La <b>prestation #".$presta_obj->getId()."</b> a été modifié";
             }
         }
 
@@ -166,27 +184,20 @@ class Prestations extends CI_Controller {
 
         }
 
-        $data['sub_cat_list']  = $this->Categories_manager->findAllSubCat();
+
+
+        $data['sub_cat_list']  = $this->Categories_manager->findAllSubCat(false, 'parent');
 
         $data['presta_obj'] = $presta_obj;
         $data['CONTENT'] = $this->smarty->fetch('back/prestationsEdit.tpl', $data);
         $this->smarty->display('back/templates/content.tpl', $data);
-    }
 
-    /**
-     * Suprression d'un utilisateur
-     * @param $id identifiant utilisateur
-     */
-    public function delete($id)
-    {
-
-        $this->Prestations_manager->delete($id);
-        $this->session->set_flashdata('error', "La prestation #$id a été supprimé");
-        redirect('prestations/ListPage', 'refresh');
 
     }
 
-    /** Back :  Affichage de la liste des prestations  */
+
+
+    /** Back :  Affichage de la liste des catégories de prestation  */
     public function ListPage_cat()
     {
         $data['TITLE'] 		= "Liste des catégories";
@@ -208,14 +219,14 @@ class Prestations extends CI_Controller {
         $sub_cat_list	= $this->Categories_manager->findAllSubCat();
         $sub_cat_to_display = [];
         foreach($sub_cat_list as $sub_cat_data){
-
             $sub_cat_obj = new SubCategory_class();
             $sub_cat_obj->hydrate($sub_cat_data);
-            $sub_cat_to_display[] = $sub_cat_obj;
+
+            $sub_cat_to_display[$sub_cat_obj->getParent()][] = $sub_cat_obj;
+
         }
+
         $data['display_list_2'] = $sub_cat_to_display;
-
-
         $data['CONTENT'] = $this->smarty->fetch('back/categoriesList.tpl', $data);
         $this->smarty->display('back/templates/content.tpl', $data);
 
@@ -224,6 +235,10 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Affichage de la page de création/modification d'une catégorie de prestattion
+     * @param int $id identifiant de la catégorie
+     */
     public function addEdit_cat($id = -1)
     {
 
@@ -269,15 +284,14 @@ class Prestations extends CI_Controller {
 
             }
 
+            $cat_obj->hydrate($this->input->post());
 
             if ($id < 0) {
-
-                $cat_obj->hydrate($this->input->post());
 
                 $insertId = $this->Categories_manager->new($cat_obj);
                 $this->session->set_flashdata("success", "La catégorie <b>{$cat_obj->getTitle()}</b> a été ajoutée");
 
-                redirect('prestations/addEdit/' . $insertId, 'refresh');
+                redirect('prestations/addEdit_cat/' . $insertId, 'refresh');
 
             } else {
 
@@ -307,21 +321,25 @@ class Prestations extends CI_Controller {
 
     }
 
+    /**
+     * Back : Affichage de la page de création/modification d'une sous-catégorie de prestattion
+     * @param int $id identifiant de la sous-catégorie
+     */
     public function addEdit_subcat($id = -1)
     {
 
         $subcat_obj = new SubCategory_class();
 
-        if ($id >= 0) {
-            $subcat_obj->hydrate($this->SubCategories_manager->findOne($id));
-        }
+        if (!empty($this->input->get('cat'))) $subcat_obj->setParent($this->input->get('cat'));
+
+        if ($id >= 0) $subcat_obj->hydrate($this->SubCategories_manager->findOne($id));
+
 
         if (!empty($this->input->post())) {
 
+            $subcat_obj->hydrate($this->input->post());
 
             if ($id < 0) {
-
-                $subcat_obj->hydrate($this->input->post());
 
                 $insertId = $this->SubCategories_manager->new($subcat_obj);
                 $this->session->set_flashdata("success", "La sous-catégorie <b>{$subcat_obj->getTitle()}</b> a été ajoutée");
@@ -360,4 +378,129 @@ class Prestations extends CI_Controller {
         $this->smarty->display('back/templates/content.tpl', $data);
 
     }
+
+    /**
+     * Back : Suprression d'une prestation
+     * @param int $id prestation
+     */
+    public function delete($id)
+    {
+
+        $this->Prestations_manager->delete($id);
+        $this->session->set_flashdata('error', "La <b>prestation #$id</b> a été supprimé");
+        redirect('prestations/ListPage', 'refresh');
+
+    }
+
+    /**
+     * Back : Rend visible/invisible au public une prestation
+     * @param int $id prestation
+     */
+    public function visible_cat($id)
+    {
+
+        $return = $this->Categories_manager->toggleVisible($id);
+        $this->session->set_flashdata('infos', "La <b>catégorie #id</b> est maintenant <b>".$return."</b>");
+        redirect('prestations/ListPage_cat', 'refresh');
+
+    }
+
+    /**
+     * Back : Supprime d'une prestation
+     * @param int $id prestation
+     */
+    public function delete_cat($id)
+    {
+
+        $this->Categories_manager->delete($id);
+        $this->SubCategories_manager->deleteAll($id);
+        $this->Prestations_manager->deleteAll($id);
+
+        $this->session->set_flashdata('error', "La <b>catégorie #$id</b> a été supprimé");
+        redirect('prestations/ListPage_cat', 'refresh');
+
+    }
+
+    /**
+     * Back : Rend visible/invisible au public une catégorie
+     * @param int $id catégorie
+     */
+    public function visible_subcat($id)
+    {
+
+        $return = $this->SubCategories_manager->toggleVisible($id);
+        $this->session->set_flashdata('infos', "La <b>sous-catégorie #$id</b>  est maintenant <b>".$return."</b>");
+        redirect('prestations/ListPage_cat', 'refresh');
+
+    }
+
+    /**
+     * Back : Supprime une sous-catégorie
+     * @param int $id sous-catégorie
+     */
+    public function delete_subcat($id)
+    {
+
+        $this->SubCategories_manager->delete($id);
+        $this->Prestations_manager->deleteAll($id);
+
+        $this->session->set_flashdata('error', "La <b>sous-catégorie #$id</b>  a été supprimé");
+        redirect('prestations/ListPage_cat', 'refresh');
+
+    }
+
+    /**
+     * Back : Rend visible/invisible au public une prestation
+     * @param int $id prestation
+     */
+    public function visible_presta($id)
+    {
+
+        $return = $this->Prestations_manager->toggleVisible($id);
+        $this->session->set_flashdata('infos', "La <b>prestation #$id</b>  est maintenant <b>".$return."</b>");
+        redirect('prestations/listPage', 'refresh');
+
+    }
+
+    /**
+     * Back : Copie une prestation
+     * @param int $id prestation
+     */
+    public function copy_presta($id)
+    {
+
+        $this->Prestations_manager->copy($id);
+        $this->session->set_flashdata('success', "La <b>prestation #$id</b> a été copiée");
+        redirect('prestations/listPage', 'refresh');
+
+
+    }
+
+    /**
+     * Back : Décremente l'ordre d'une prestation
+     * @param int $id prestation
+     */
+    public function orderUp($id)
+    {
+
+        $return = $this->Prestations_manager->orderUp($id);
+        if(!$return) $this->session->set_flashdata('error', "L'ordre ne peut être inférieur à 0");
+        redirect('prestations/ListPage', 'refresh');
+
+    }
+
+    /**
+     * Back : Incrémente l'ordre d'une prestation
+     * @param int $id prestation
+     */
+    public function orderDown($id)
+    {
+
+        $return = $this->Prestations_manager->orderDown($id);
+        if(!$return) $this->session->set_flashdata('error', "L'ordre ne peut être supérieur à 0");
+        redirect('prestations/ListPage', 'refresh');
+
+    }
+
+
 }

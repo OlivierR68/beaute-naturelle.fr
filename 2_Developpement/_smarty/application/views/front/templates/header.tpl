@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{base_url("assets/css/styles.css")}">
 
     <link rel="shortcut icon" href="{base_url("assets/favicon.ico")}" type="image/x-icon">
-    <link rel="icon" href="{base_url('assets/favicon.png')} type="image/png">
+    <link rel="icon" href="{base_url('assets/favicon.png')}" type="image/png">
     <link rel="icon" sizes="32x32" href="{base_url("assets/favicon-32.png")}" type="image/png">
     <link rel="icon" sizes="64x64" href="{base_url("assets/favicon-64.png")}" type="image/png">
     <link rel="icon" sizes="96x96" href="{base_url("assets/favicon-96.png")}" type="image/png">
@@ -112,9 +112,18 @@
                                 <a class="nav-link bn_nav-link" href="{site_url("events")}">Évènements</a>
                             </li>
 
-							<li class="nav-item mx-1 bn_nav-item {active_page('prestations','bn_active',1)}">
-								<a class="nav-link bn_nav-link" href="{site_url("prestations")}">Prestations</a>
-							</li>
+                            <li class="nav-item mx-1 bn_nav-item dropdown {active_page('prestations','bn_active',1)}">
+                                <a class="nav-link bn_nav-link dropdown-toggle" href="{site_url("prestations")}" id="navbarDropdown"
+                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Prestations
+                                </a>
+                                <div class="dropdown-menu bn_bg-main" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item {active_page('prestations/index','bn_active')}" href="{site_url('prestations')}">Présentation</a>
+                                    {foreach from=$dropdown_menu item=dropdown_item}
+                                        <a class="dropdown-item {if isset($current_uri) && $current_uri == $dropdown_item->getSlug()}bn_active{/if} " href="{$dropdown_item->getUrl()}">{$dropdown_item->getTitle()}</a>
+                                    {/foreach}
+                                </div>
+                            </li>
 
                             <li class="nav-item mx-1 bn_nav-item mx-1 bn_{active_page('pages/about')}">
                                 <a class="nav-link bn_nav-link" href="{site_url('pages/about')}">L'Établissement </a>
@@ -169,4 +178,5 @@
 		<h1>{$TITLE}</h1>
 		<div></div>
 	</div>
+
 

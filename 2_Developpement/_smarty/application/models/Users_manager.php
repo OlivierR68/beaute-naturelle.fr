@@ -34,6 +34,11 @@ class Users_manager extends CI_Model {
 
     }
 
+    public function getParticipants($event_id)
+    {
+        return $this->db->join('event_user','event_user.user_id = user.user_id')
+            ->where('event_id', $event_id)->where('event_user_valid', 1)->get('user')->result_array();
+    }
 
     public function checkLogin($email, $pwd)
     {

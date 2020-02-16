@@ -15,7 +15,9 @@
             <!-- début 2eme Foreach -->
             {foreach from=$sub_cat_presta item=objPresta}
             <tr>
-                <td>{$objPresta->getTitle()}</td>
+                <td>
+                    {$objPresta->getTitle()}{if !empty($objPresta->getSubtext())} :<br><span class="bn_small-text">{$objPresta->getSubtext()}</span>{/if}
+                </td>
                 <td class="text-nowrap">{$objPresta->getDuration()} min</td>
                 <td class="text-nowrap">{$objPresta->getPrice()} €</td>
             </tr>

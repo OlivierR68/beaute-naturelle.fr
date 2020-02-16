@@ -92,11 +92,10 @@
 
 					<div class="collapse {active_page('prestations','show',1)}" id="collapseLayouts4" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/listPage")}">Liste des Prestations</a>
-							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit")}">Ajouter une prestation</a>
 							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/listPage_cat")}">Liste des Catégories</a>
 							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit_cat")}">Ajouter une Catégorie</a>
-							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit_subcat")}"><i class="fa fa-plus mr-2"></i>Sous-Catégorie</a>
+							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/listPage")}">Liste des Prestations</a>
+							<a class="nav-link {active_page('prestations/listPage','show',1)}" href="{site_url("prestations/addEdit")}">Ajouter une prestation</a>
 						</nav>
 					</div>
 
@@ -128,9 +127,6 @@
 					<div class="collapse {active_page('newsletters','show',1)}" id="collapseLayouts6" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link {active_page('newsletters/listPage_sub')}" href="{site_url("newsletters/listPage_sub")}">Liste des abonnées</a>
-							<a class="nav-link {active_page('newsletters/addEdit_sub')}" href="{site_url("newsletters/addEdit_sub")}">Liste des newsletter</a>
-							<a class="nav-link {active_page('newsletters/listPage')}" href="{site_url("newsletters/listPage")}">Ajouter une newsletter</a>
-							<a class="nav-link {active_page('newsletters/addEdit')}" href="{site_url("newsletters/addEdit")}">Envoyer newsletters</a>
 						</nav>
 					</div>
 

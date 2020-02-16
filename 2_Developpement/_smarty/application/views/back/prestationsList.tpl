@@ -2,7 +2,7 @@
 
 <div>
 
-    <form class="mb-3" method="post">
+    <form class="mb-3" method="get">
         <div class="form-row align-items-center">
 
             <div class="col-auto my-1">
@@ -14,7 +14,7 @@
                 <select class="custom-select mr-sm-2"  name="cat" id="inputCat">
                     <option class="text-muted" value="">Catégorie</option>
                     {foreach from=$cat_list item=cat }
-                        <option {if isset($smarty.post.cat) and $smarty.post.cat eq $cat['cat_id']}selected{/if} value="{$cat['cat_id']}">{$cat['cat_title']}</option>
+                        <option {if isset($smarty.get.cat) and $smarty.get.cat eq $cat['cat_id']}selected{/if} value="{$cat['cat_id']}">{$cat['cat_title']}</option>
                     {/foreach}
                 </select>
             </div>
@@ -22,9 +22,9 @@
             <div class="col-auto my-1">
                 <label class="mr-sm-2 sr-only" for="inputSubCat">Sub-Catégorie</label>
                 <select class="custom-select mr-sm-2"  name="subcat" id="inputSubCat">
-                    <option  class="text-muted" value="">Sub-Catégorie</option>
+                    <option  class="text-muted" value="">Sous-catégorie</option>
                     {foreach from=$sub_cat_list item=sub_cat }
-                        <option {if isset($smarty.post.subcat) and $smarty.post.subcat eq $sub_cat['sub_cat_id']}selected{/if} value="{$sub_cat['sub_cat_id']}">{$sub_cat['sub_cat_title']}</option>
+                        <option {if isset($smarty.get.subcat) and $smarty.get.subcat eq $sub_cat['sub_cat_id']}selected{/if} value="{$sub_cat['sub_cat_id']}">{$sub_cat['sub_cat_title']}</option>
                     {/foreach}
                 </select>
             </div>
@@ -42,44 +42,66 @@
     <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
         <thead>
         <tr>
-            <th>id</th>
+            <th>Id</th>
+            <th>Ordre</th>
             <th>Actions</th>
             <th>Titre</th>
-            <th>Sous-titre</th>
-            <th>Prix</th>
+            <th>Description</th>
             <th>Durée</th>
-            <th>Sub-Catégorie </th>
+            <th>Prix</th>
+            <th>Sous-Catégorie </th>
             <th>Catégorie </th>
         </tr>
         </thead>
         <tfoot>
         <tr>
-            <th>id</th>
+            <th>Id</th>
+            <th>Ordre</th>
             <th>Actions</th>
             <th>Titre</th>
-            <th>Sous-titre</th>
-            <th>Prix</th>
+            <th>Description</th>
             <th>Durée</th>
-            <th>Sub-Catégorie </th>
+            <th>Prix</th>
+            <th>Sous-Catégorie </th>
             <th>Catégorie </th>
         </tr>
         </tfoot>
         <tbody>
-        {foreach from=$display_list item=$presa_obj}
+        {foreach from=$display_list item=$presta_obj}
             <tr>
-                <td>{$presa_obj->getId()}</td>
-                <td class="bn_action nowrap">
-                    <a href="{base_url('prestations/addEdit/')}{$presa_obj->getId()}" title="Modifier"><i
+                <td>{$presta_obj->getId()}</td>
+                <td>{$presta_obj->getOrder()}</td>
+                <td class="bn_action nowrap" style="width: 175px">
+                    <a href="{base_url('prestations/visible_presta/')}{$presta_obj->getId()}" title="Visibilité">
+                        <i class="far fa-eye {if $presta_obj->getVisible() eq false}text-muted{else}text-success{/if}"></i>
+                    </a>
+
+                    <a href="{base_url('prestations/orderDown/')}{$presta_obj->getId()}" title="Ordre +1">
+                        <i class="far fa-plus-square"></i>
+                    </a>
+
+                    <a href="{base_url('prestations/orderUp/')}{$presta_obj->getId()}" title="Ordre -1">
+                        <i class="far fa-minus-square"></i>
+                    </a> |
+
+                    <a href="{base_url('prestations/copy_presta/')}{$presta_obj->getId()}" title="Copier">
+                        <i class="far fa-copy"></i>
+                    </a>
+                    <a href="{base_url('prestations/addEdit/')}{$presta_obj->getId()}" title="Modifier"><i
                                 class="far fa-edit"></i></a>
-                    <a href="{base_url('prestations/delete/')}{$presa_obj->getId()}"  data-href="{base_url('prestations/delete/')}{$presa_obj->getId()}" data-toggle="modal" data-target="#confirm-delete" title="Supprimer"><i
+                    <a href="{base_url('prestations/delete/')}{$presta_obj->getId()}"
+                       data-href="{base_url('prestations/delete/')}{$presta_obj->getId()}"
+                       data-toggle="modal" data-target="#confirm-delete" title="Supprimer"><i
                                 class="fas fa-trash-alt text-danger"></i></a>
+
+
                 </td>
-                <td>{$presa_obj->getTitle()}</td>
-                <td>{$presa_obj->getSubtext()}</td>
-                <td>{$presa_obj->getPrice()}</td>
-                <td>{$presa_obj->getDuration()}</td>
-                <td>{$presa_obj->getSub_cat_title()}</td>
-                <td>{$presa_obj->getCat_title()}</td>
+                <td>{$presta_obj->getShortTitle()}</td>
+                <td>{$presta_obj->getShortSubtext()}</td>
+                <td>{$presta_obj->getDuration()}</td>
+                <td>{$presta_obj->getPrice()}</td>
+                <td>{$presta_obj->getSub_cat_title()}</td>
+                <td>{$presta_obj->getCat_title()}</td>
             </tr>
         {/foreach}
         </tbody>
@@ -98,8 +120,8 @@
                 Vous voulez vraiment supprimer la prestation <b class="bn_user"></b>?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Annuler</button>
+                <a class="btn btn-danger btn-ok">Supprimer</a>
             </div>
         </div>
     </div>

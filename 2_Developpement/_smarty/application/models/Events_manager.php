@@ -3,19 +3,82 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Events_manager extends CI_Model {
 
+    /**
+     * Retourne la liste de tous les événements
+     */
+	public function findAll()
+    {
 
-	public function findAll(){
 		$this->db->select("*");
         $this->db->from("event");
-		$this->db->order_by("event_id", "asc");
-
+		$this->db->order_by("event_start_date", "ASC");
 		$queryGroup	= $this->db->get();
-
 
 		return $queryGroup->result_array();
 	}
 
-	/**
+	public function inscription($event_id, $user_id)
+    {
+        $data = array(
+            'user_id' => $user_id,
+            'event_id' => $event_id,
+            'event_user_valid' => null,
+            'event_user_valid_date' => null
+        );
+
+        $this->db->insert('event_user', $data);
+    }
+
+    public function getFilling($event_id)
+    {
+        return $this->db->where('event_id', $event_id)->where('event_user_valid',1)->get('event_user')->num_rows();
+    }
+
+    public function is_registered($event_id, $user_id)
+    {
+        $user_data = $this->db->where('user_id', $user_id)->where('event_id',$event_id)->get('event_user')->row_array();
+
+        if (!empty($user_data)) {
+
+            if ($user_data['event_user_valid'] === null) {
+
+                return "Demande d'inscription en cours de validation";
+
+            } elseif ($user_data['event_user_valid'] == 1) {
+
+                return "Demande d'inscription validé le ".$user_data['event_user_valid_date'];
+
+            } elseif ($user_data['event_user_valid'] == 0) {
+
+                return "Demande d'inscription refusé le ".$user_data['event_user_valid_date'];
+
+            }
+
+        } else return false;
+
+    }
+
+    public function need_moderate()
+    {
+        return $this->db->where('event_user_valid', NULL)->get('event_user')->num_rows();
+    }
+
+    public function unregister($event_id, $user_id)
+    {
+        $this->db->where('user_id', $user_id)->where('event_id',$event_id)->delete('event_user');
+    }
+
+    public function getRequest(){
+
+        return $this->db
+            ->where('event_user_valid', NULL)
+            ->join('user','user.user_id = event_user.user_id')
+            ->join('event','event_user.event_id = event.event_id')
+            ->get('event_user')->result_array();
+
+    }
+
+        /**
 	 * Création d'1 événement
 	 * @param $obj object Event_class
 	 * @return string l'id de l'insert
@@ -82,7 +145,28 @@ class Events_manager extends CI_Model {
 		$this->db->insert('event', $array);
 	}
 
-	public function inscription(){
-		
-	}
+    public function accept_user($event_id, $user_id)
+    {
+        $now_date = new DateTime('Europe/Paris');
+
+        $data = [
+            "event_user_valid" => 1,
+            "event_user_valid_date" => $now_date->format('Y-m-d')
+        ];
+
+        $this->db->where('event_id', $event_id)->where('user_id', $user_id)->update('event_user', $data);
+    }
+
+    public function refuse_user($event_id, $user_id)
+    {
+        $now_date = new DateTime('Europe/Paris');
+
+        $data = [
+            "event_user_valid" => 0,
+            "event_user_valid_date" => $now_date->format('Y-m-d')
+        ];
+
+        $this->db->where('event_id', $event_id)->where('user_id', $user_id)->update('event_user', $data);
+    }
+
 }
