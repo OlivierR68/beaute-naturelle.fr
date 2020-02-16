@@ -1,0 +1,10 @@
+Membre 1 : member1@cci-test.fr
+Membre 2 : member2@cci-test.fr
+
+Modérateur 1 : modo1@cci-test.fr
+Modérateur 2 : modo2@cci-test.fr
+
+Administrateur 1 : admin1@cci-test.fr
+Administrateur 2 : admin2@cci-test.fr
+
+Mdp pour tous les comptes : pf68*CCI

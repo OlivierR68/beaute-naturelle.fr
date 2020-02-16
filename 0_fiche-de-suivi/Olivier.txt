@@ -54,4 +54,94 @@
 - Finalisation cahier des charges
 - <> Rendu du cahier des charges + export SQL
 
+19-01-20
+- Début prototpe codeIgniter
+
+20-01-20
+- Mis a jour proto codeIgniter
+- Maquette partie Events
+- Début Slider et Index 
+
+21-01-20
+- Finalisation du slider
+- Ajout du dashboard et du backoffice
+
+22-01-20
+- Ajout top bar admin
+
+24-01-20
+- Ajout de la bdd en ligne
+
+27-01-20
+- Mis a jour dashboard
+
+28-01-20
+- Mis a jour Slider
+- Création du Controller, Manager de User
+
+29-01-20
+- Finalisation de la partie slide
+
+31-01-20
+- Implémentation de smarty
+- Ajout des pages login/register
+
+01-02-20
+- Fusion Smarty et codeIgniter
+- MaJ Dashboard
+
+03-02-20
+- MaJ ctrl, manager et class des users
+
+04-02-20
+- Finalisation partie login/register
+
+05-02-20
+- Implémentation et expérimentation avec le form-validation
+
+06-02-20
+- Commencement de la partie Prestation
+
+07-02-20 
+- Amélioration UX de la partie User
+
+08-02-20
+- MaJ partie prestation
+
+10-02-20
+- Optimisation des classes et de l'UX
+- Optimisation de l'upload des utilisateurs
+- Optimisation UX profile
+
+12-02-20
+- Optimisation UX du dashboard
+
+13-02-20
+- Finalisation partie Front des prestations
+
+14-02-20
+- Finalisation partie Back des prestations
+
+15-02-20
+- Début de la partie catégorie
+- Finalisation de la partie catégorie
+
+16-02-20
+- Reprise du de la partie Events
+- Finalisation de la partie Events
+- Reprise de la partie Images
+- Finalisation de la partie
+- Création et finalisation de la partie Newsletter
+- Implémentation de la fonction de morand!
+- Mis en place de l'AJAX pour l'inscription à la Newsletter
+- Implémentation du formulaire du contact
+- Création de la docs
+- DEBUG
+- Test et re-test
+
+
+
+
+
+
 
