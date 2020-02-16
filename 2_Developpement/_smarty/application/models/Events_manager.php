@@ -68,6 +68,15 @@ class Events_manager extends CI_Model {
         $this->db->where('user_id', $user_id)->where('event_id',$event_id)->delete('event_user');
     }
 
+    public function getRequest(){
+
+        return $this->db
+            ->where('event_user_valid', NULL)
+            ->join('user','user.user_id = event_user.user_id')
+            ->join('event','event_user.event_id = event.event_id')
+            ->get('event_user')->result_array();
+    }
+
         /**
 	 * Création d'1 événement
 	 * @param $obj object Event_class

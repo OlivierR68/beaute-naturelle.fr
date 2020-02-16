@@ -1,9 +1,7 @@
 {please_reconnect()}
 {include file="./header.tpl"}
-
 <div class="container-fluid">
-
-	<h1 class="mt-4">{$TITLE}</h1>
+    <h1 class="mt-4">{$TITLE}</h1>
     {if ctrl_name() != 'dashboard'}
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item active"></li>
@@ -11,28 +9,28 @@
         </ol>
     {/if}
 
-	{if !empty($ERROR)}
-		<div class="alert alert-danger" role="alert">
-			{$ERROR}
-		</div>
+    {if !empty($ERROR)}
+        <div class="alert alert-danger" role="alert">
+            {$ERROR}
+        </div>
     {/if}
 
     {if !empty(flash_data('error'))}
-    <div class="alert alert-danger" role="alert">
-        {flash_data('error')}
-    </div>
+        <div class="alert alert-danger" role="alert">
+            {flash_data('error')}
+        </div>
     {/if}
 
     {if !empty($SUCCESS)}
-    <div class="alert alert-success" role="alert">
-        {$SUCCESS}
-    </div>
+        <div class="alert alert-success" role="alert">
+            {$SUCCESS}
+        </div>
     {/if}
 
     {if !empty(flash_data('success'))}
-		<div class="alert alert-success" role="alert">
+        <div class="alert alert-success" role="alert">
             {flash_data('success')}
-		</div>
+        </div>
     {/if}
 
 
@@ -47,7 +45,8 @@
             {flash_data('infos')}
         </div>
     {/if}
-
+</div>
+<div class="container-fluid">
 
 {$CONTENT}
 
