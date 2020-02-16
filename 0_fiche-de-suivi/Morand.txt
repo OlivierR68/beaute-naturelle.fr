@@ -1,0 +1,58 @@
+03-01-2020
+Creation Merise
+
+04-01-2020
+modification du Merise
+
+05-01-2020
+modification du Merise
+
+07-01-2020
+modification du Merise
+
+08-01-2020
+modification du Merise
+
+09-01-2020
+modification du Merise
+modification du Cahier des charges
+ajout des technologies utilisées
+
+10-01-2020
+modification du Cahier des charges
+ajout de la Présentation
+modification des technologies utilisées
+ajout de la partie Hébergeur
+
+21-01-2020
+modification de la prestations
+
+23-01-2020
+modification de la prestations
+
+27-01-2020
+modification de la prestations
+
+28-01-2020
+modification de la prestations
+
+31-01-2020
+modification de la prestations
+modification de la newsletter
+
+02-02-2020
+modification de la newsletter
+
+03-02-2020
+modification de la newsletter
+
+04-02-2020
+modification de la newsletter
+
+14-02-2020
+ajout de la fonction isWebsiteOpen :
+pour dire en temps réel quand c'est ouvert ou fermé.
+
+15-02-2020
+modification de la fonction isWebsiteOpen :
+pour dire en temps réel quand c'est ouvert ou fermé.
