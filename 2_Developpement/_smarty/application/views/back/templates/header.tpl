@@ -39,6 +39,9 @@
 					<a class="nav-link" href="{base_url()}"><div class="sb-nav-link-icon"><i class="fas fa-store"></i></div> Aller sur le site</a>
 					<a class="nav-link" href="{site_url("dashboard")}"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div> Tableau de bord</a>
 
+					{if $smarty.session.level > 3}
+
+
 					<!-- Bloc nav SLIDER -->
 
 					<a class="nav-link  {active_page('slides','active',1)}" href="{site_url("slides/listPage")}" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
@@ -111,8 +114,6 @@
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link {active_page('users/listPage')}" href="{site_url("users/listPage")}">Liste des utilisateurs</a>
 							<a class="nav-link {active_page('users/addEdit')}" href="{site_url("users/addEdit")}">Ajouter un utilisateur</a>
-							<a class="nav-link {active_page('profiles/listPage')}" href="{site_url("profiles/listPage")}">Liste des profiles</a>
-							<a class="nav-link {active_page('profiles/addEdit')}" href="{site_url("profiles/addEdit")}">Ajouter un profile</a>
 						</nav>
 					</div>
 
@@ -130,10 +131,7 @@
 						</nav>
 					</div>
 
-
-
-					<a class="nav-link disabled" href="#"><div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div> Réglages</a>
-
+					{/if}
 				</div>
 			</div>
 			<div class="sb-sidenav-footer">

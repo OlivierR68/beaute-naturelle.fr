@@ -163,6 +163,7 @@
 </script>
 <!-- SCRIPTS -->
 <script src="{base_url("assets/js/main.js")}"></script>
+<script src="{base_url('assets/vendor/lightbox/js/lightbox.min.js')}"></script>
 <script src="https://kit.fontawesome.com/defbc714c8.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
 

@@ -99,7 +99,6 @@ class Images extends CI_Controller
 
                 // l'upload de l'image est lancé  ici
                 $this->upload->initialize($config);
-                $this->upload->do_upload('img'); // <- c'est qu'on indique où on récupére l'image, img correspond à $_FILES['img'], le <input> dans le views avec le name='img'
 
                 // si il y a un problème sur l'image on envoi une erreur
                 if (!$this->upload->do_upload('img')) {

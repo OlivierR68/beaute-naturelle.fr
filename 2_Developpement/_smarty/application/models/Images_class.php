@@ -79,8 +79,7 @@ class Images_class extends CI_Model {
      * @param bool $filter si true filter le tableau
      * @return array Liste des valeurs attributs avec clefs associatives correspondente à la bdd
      */
-
-    public function getArray($filter = false){
+    public function getArray($filter = false, $noId = false){
 
         $varArray = get_object_vars($this);
 
@@ -89,12 +88,14 @@ class Images_class extends CI_Model {
             $arrInsert[substr($key,1)] = $value;
         }
 
-        if ($filter){
-            $arrInsert = array_filter($arrInsert);
-        }
+        if ($filter) $arrInsert = array_filter($arrInsert);
+        if ($noId) unset($arrInsert['img_id']);
+
 
         return $arrInsert;
     }
+
+
 
 	/** GETTER pour contenu raccourci
 	 * @param $strLimit integer Limite de taille de la chaîne de caractère

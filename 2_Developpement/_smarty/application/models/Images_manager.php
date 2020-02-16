@@ -74,4 +74,9 @@ class Images_manager extends CI_Model {
 		$this->db->insert('image', $array);
 	}
 
+    public function update($obj)
+    {
+        $this->db->where('img_id', $obj->getId())->update('image', $obj->getArray(false, true));
+    }
+
 }
