@@ -63,6 +63,7 @@ class Events extends CI_Controller
         $event_data = $this->Events_manager->findOne($id);
         $obj_event->hydrate($event_data);
 
+        $class_param = "d-block py-2 px-4 mr-1 mb-1";
 
         if (isset($this->session->login)) {
 
@@ -70,19 +71,19 @@ class Events extends CI_Controller
 
             if ($reponse_infos != false) {
 
-                $smart_block = "<span class='d-block bg-primary py-2 px-4 mr-1 text-light mb-1'><i class='fas fa-info-circle mr-2'></i>$reponse_infos</span>";
+                $smart_block = "<span class='bg-primary text-light $class_param'><i class='fas fa-info-circle mr-2'></i>$reponse_infos</span>";
 
                 $href = site_url() . "/events/unregister/" . $obj_event->getId() . "/" . $this->session->id;
-                $smart_block .= "<a class='d-block bg-danger py-2 px-4 mb-1' href='$href'><span class='text-light'>ANNULER</span></a>";
+                $smart_block .= "<a class='bg-danger text-light $class_param' href='$href'><span class='text-light'>ANNULER</span></a>";
 
             } else {
                 $href = site_url() . "/events/register/" . $obj_event->getId() . "/" . $this->session->id;
-                $smart_block = "<a class='d-block bn_bg-color-1 py-2 px-4 mb-1' href='$href'><span class='text-light'>S'INSCRIRE</span></a>";
+                $smart_block = "<a class='bn_bg-color-1 $class_param' href='$href'><span class='text-light'>S'INSCRIRE</span></a>";
             }
         } else {
 
             $reponse_infos = "Vous devez être connecté pour vous inscrire.";
-            $smart_block = "<span class='d-block bg-warning py-2 px-4'><i class=\"fas fa-exclamation-triangle mr-2 \"></i>$reponse_infos</span>";
+            $smart_block = "<span class='bg-warning $class_param'><i class='fas fa-exclamation-triangle mr-2 '></i>$reponse_infos</span>";
 
         }
 

@@ -31,7 +31,7 @@ class Events_manager extends CI_Model {
 
     public function getFilling($event_id)
     {
-        return $this->db->where('event_id', $event_id)->get('event_user')->num_rows();
+        return $this->db->where('event_id', $event_id)->where('event_user_valid',1)->get('event_user')->num_rows();
     }
 
     public function is_registered($event_id, $user_id)
