@@ -78,12 +78,15 @@ class Pages extends CI_Controller
 
             */
 
+            // sa marche mais l'email est envoyé dans les SPAM !
+
             $from = $from_mail;
             $to = $to_mail;
             $subject = "Email de contact : beauté-naturelle";
             $message = $msg;
             $headers = "From:" . $from;
             mail($to,$subject,$message, $headers);
+            $data['SUCCESS'] = "Mail envoyé !";
 
 
         }
