@@ -1,0 +1,202 @@
+\hypertarget{class_smarty___cache_resource___mysql}{}\doxysection{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Mysql Class Reference}
+\label{class_smarty___cache_resource___mysql}\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+Inheritance diagram for Smarty\+\_\+\+Cache\+Resource\+\_\+\+Mysql\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_smarty___cache_resource___mysql}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a23232ceb44c78253f61c7f4d3e8211c6}{fetch}} (\$id, \$name, \$cache\+\_\+id, \$compile\+\_\+id, \&\$content, \&\$mtime)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a5ee5edca4ba27d1aa87199b9a24437ca}{fetch\+Timestamp}} (\$id, \$name, \$cache\+\_\+id, \$compile\+\_\+id)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a543ecf4bcb513bb9ee673c6d437512c5}{save}} (\$id, \$name, \$cache\+\_\+id, \$compile\+\_\+id, \$exp\+\_\+time, \$content)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a402110d477c09d82f3e8a069141e5d9c}{delete}} (\$name, \$cache\+\_\+id, \$compile\+\_\+id, \$exp\+\_\+time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a1fa3127fc82f96b1436d871ef02be319}{\$db}}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a94ed3b2f8cc7709070362b3362af35ac}{\$fetch}}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a1be8a42334c4b5bec4fe3cda0add2e29}{\$fetch\+Timestamp}}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___mysql_a00e6dff44e00c36820da5508c6d9aba3}{\$save}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a095c5d389db211932136b53f25f39685}\label{class_smarty___cache_resource___mysql_a095c5d389db211932136b53f25f39685}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_smarty___cache_resource___mysql}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Mysql}} constructor.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a402110d477c09d82f3e8a069141e5d9c}\label{class_smarty___cache_resource___mysql_a402110d477c09d82f3e8a069141e5d9c}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!delete@{delete}}
+\index{delete@{delete}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$cache\+\_\+id,  }\item[{}]{\$compile\+\_\+id,  }\item[{}]{\$exp\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Delete content from cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & template name \\
+\hline
+string & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string & {\em \$compile\+\_\+id} & compile id \\
+\hline
+integer | null & {\em \$exp\+\_\+time} & seconds till expiration or null\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer number of deleted caches 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___custom_a402110d477c09d82f3e8a069141e5d9c}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Custom}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a23232ceb44c78253f61c7f4d3e8211c6}\label{class_smarty___cache_resource___mysql_a23232ceb44c78253f61c7f4d3e8211c6}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!fetch@{fetch}}
+\index{fetch@{fetch}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily fetch (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$name,  }\item[{}]{\$cache\+\_\+id,  }\item[{}]{\$compile\+\_\+id,  }\item[{\&}]{\$content,  }\item[{\&}]{\$mtime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+fetch cached content and its modification time from data source
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & unique cache content identifier \\
+\hline
+string & {\em \$name} & template name \\
+\hline
+string & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string & {\em \$compile\+\_\+id} & compile id \\
+\hline
+string & {\em \$content} & cached content \\
+\hline
+integer & {\em \$mtime} & cache modification timestamp (epoch)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___custom_a23232ceb44c78253f61c7f4d3e8211c6}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Custom}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a5ee5edca4ba27d1aa87199b9a24437ca}\label{class_smarty___cache_resource___mysql_a5ee5edca4ba27d1aa87199b9a24437ca}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!fetchTimestamp@{fetchTimestamp}}
+\index{fetchTimestamp@{fetchTimestamp}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{fetchTimestamp()}{fetchTimestamp()}}
+{\footnotesize\ttfamily fetch\+Timestamp (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$name,  }\item[{}]{\$cache\+\_\+id,  }\item[{}]{\$compile\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fetch cached content\textquotesingle{}s modification timestamp from data source
+
+\begin{DoxyNote}{Note}
+implementing this method is optional. Only implement it if modification times can be accessed faster than loading the complete cached content.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & unique cache content identifier \\
+\hline
+string & {\em \$name} & template name \\
+\hline
+string & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string & {\em \$compile\+\_\+id} & compile id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer$\vert$boolean timestamp (epoch) the template was modified, or false if not found 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___custom_a5ee5edca4ba27d1aa87199b9a24437ca}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Custom}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a543ecf4bcb513bb9ee673c6d437512c5}\label{class_smarty___cache_resource___mysql_a543ecf4bcb513bb9ee673c6d437512c5}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!save@{save}}
+\index{save@{save}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$name,  }\item[{}]{\$cache\+\_\+id,  }\item[{}]{\$compile\+\_\+id,  }\item[{}]{\$exp\+\_\+time,  }\item[{}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Save content to cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & unique cache content identifier \\
+\hline
+string & {\em \$name} & template name \\
+\hline
+string & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string & {\em \$compile\+\_\+id} & compile id \\
+\hline
+integer | null & {\em \$exp\+\_\+time} & seconds till expiration time in seconds or null \\
+\hline
+string & {\em \$content} & content to cache\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean success 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___custom_a543ecf4bcb513bb9ee673c6d437512c5}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Custom}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a1fa3127fc82f96b1436d871ef02be319}\label{class_smarty___cache_resource___mysql_a1fa3127fc82f96b1436d871ef02be319}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!\$db@{\$db}}
+\index{\$db@{\$db}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\$db}{$db}}
+{\footnotesize\ttfamily \$db\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a94ed3b2f8cc7709070362b3362af35ac}\label{class_smarty___cache_resource___mysql_a94ed3b2f8cc7709070362b3362af35ac}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!\$fetch@{\$fetch}}
+\index{\$fetch@{\$fetch}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\$fetch}{$fetch}}
+{\footnotesize\ttfamily \$\mbox{\hyperlink{class_smarty___cache_resource___mysql_a23232ceb44c78253f61c7f4d3e8211c6}{fetch}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a1be8a42334c4b5bec4fe3cda0add2e29}\label{class_smarty___cache_resource___mysql_a1be8a42334c4b5bec4fe3cda0add2e29}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!\$fetchTimestamp@{\$fetchTimestamp}}
+\index{\$fetchTimestamp@{\$fetchTimestamp}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\$fetchTimestamp}{$fetchTimestamp}}
+{\footnotesize\ttfamily \$\mbox{\hyperlink{class_smarty___cache_resource___mysql_a5ee5edca4ba27d1aa87199b9a24437ca}{fetch\+Timestamp}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___mysql_a00e6dff44e00c36820da5508c6d9aba3}\label{class_smarty___cache_resource___mysql_a00e6dff44e00c36820da5508c6d9aba3}} 
+\index{Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}!\$save@{\$save}}
+\index{\$save@{\$save}!Smarty\_CacheResource\_Mysql@{Smarty\_CacheResource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\$save}{$save}}
+{\footnotesize\ttfamily \$\mbox{\hyperlink{class_smarty___cache_resource___mysql_a543ecf4bcb513bb9ee673c6d437512c5}{save}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/demo/plugins/\mbox{\hyperlink{cacheresource_8mysql_8php}{cacheresource.\+mysql.\+php}}\end{DoxyCompactItemize}

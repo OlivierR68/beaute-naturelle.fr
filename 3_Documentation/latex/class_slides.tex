@@ -1,4 +1,4 @@
-\doxysection{Slides Class Reference}
+\hypertarget{class_slides}{}\doxysection{Slides Class Reference}
 \label{class_slides}\index{Slides@{Slides}}
 Inheritance diagram for Slides\+:\begin{figure}[H]
 \begin{center}
@@ -9,54 +9,124 @@ Inheritance diagram for Slides\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ home} ()
+\mbox{\hyperlink{class_slides_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
 \item 
-\textbf{ list} ()
+\mbox{\hyperlink{class_slides_a174b8e4c7d4d7363c6f773671defdeff}{home}} ()
 \item 
-\textbf{ add} ()
+\mbox{\hyperlink{class_slides_ad194e803e2214134564c336e093f9a8a}{List\+Page}} ()
 \item 
-\textbf{ edit} ()
+\mbox{\hyperlink{class_slides_a62bfa4327c16425edb469078780f32e0}{add\+Edit}} (\$id=-\/1)
+\item 
+\mbox{\hyperlink{class_slides_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides_a07b5e6baa2b5706d945ed0c1d28b2302}{copy}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides_abc9f2822b3e799b899c3e137245d82dc}{order\+Up}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides_ad6c776228db714a33ab1711fc99273c4}{order\+Down}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides_aefeb14340954f858c056054010fe5f4c}{visible}} (\$id)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Controller \doxyref{Slides}{p.}{class_slides} \begin{DoxyAuthor}{Author}
-Olivier Ravinasaga 
+Controller \mbox{\hyperlink{class_slides}{Slides}} \begin{DoxyAuthor}{Author}
+Olivier Ravinasaga Controller du Slider 
 \end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
-1 
-\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_slides_a095c5d389db211932136b53f25f39685}\label{class_slides_a095c5d389db211932136b53f25f39685}} 
+\index{Slides@{Slides}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\label{class_slides_a837ba24a1c3095ae67613238d866f79a}} 
-\index{Slides@{Slides}!add@{add}}
-\index{add@{add}!Slides@{Slides}}
-\doxysubsubsection{add()}
-{\footnotesize\ttfamily add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_slides_a62bfa4327c16425edb469078780f32e0}\label{class_slides_a62bfa4327c16425edb469078780f32e0}} 
+\index{Slides@{Slides}!addEdit@{addEdit}}
+\index{addEdit@{addEdit}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{addEdit()}{addEdit()}}
+{\footnotesize\ttfamily add\+Edit (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
 
-Back \+: Fonction d\textquotesingle{}ajouter un slide \mbox{\label{class_slides_a5cb75cbb16467eb1768837d126dc535b}} 
-\index{Slides@{Slides}!edit@{edit}}
-\index{edit@{edit}!Slides@{Slides}}
-\doxysubsubsection{edit()}
-{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Back \+: Affichage de la page de création/modification des slider 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant bdd du slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_slides_a07b5e6baa2b5706d945ed0c1d28b2302}\label{class_slides_a07b5e6baa2b5706d945ed0c1d28b2302}} 
+\index{Slides@{Slides}!copy@{copy}}
+\index{copy@{copy}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily copy (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
 
-Back \+: Fonction d\textquotesingle{}éditer un slide \mbox{\label{class_slides_a174b8e4c7d4d7363c6f773671defdeff}} 
+Back \+: Supprression un slide, et qui redirige par la suite sur la liste 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant bdd du slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_slides_a2f8258add505482d7f00ea26493a5723}\label{class_slides_a2f8258add505482d7f00ea26493a5723}} 
+\index{Slides@{Slides}!delete@{delete}}
+\index{delete@{delete}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Back \+: Supprression un slide, et qui redirige par la suite sur la liste 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant bdd du slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_slides_a174b8e4c7d4d7363c6f773671defdeff}\label{class_slides_a174b8e4c7d4d7363c6f773671defdeff}} 
 \index{Slides@{Slides}!home@{home}}
 \index{home@{home}!Slides@{Slides}}
-\doxysubsubsection{home()}
+\doxysubsubsection{\texorpdfstring{home()}{home()}}
 {\footnotesize\ttfamily home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Front \+: Fonction permettant d\textquotesingle{}afficher la page d\textquotesingle{}accueil ~\newline
- \mbox{\label{class_slides_a635cee6ce0ca514b13a5e5a9030e5ca8}} 
-\index{Slides@{Slides}!list@{list}}
-\index{list@{list}!Slides@{Slides}}
-\doxysubsubsection{list()}
-{\footnotesize\ttfamily list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Front \+: Affichage de la page d\textquotesingle{}accueil ~\newline
+ \mbox{\Hypertarget{class_slides_ad194e803e2214134564c336e093f9a8a}\label{class_slides_ad194e803e2214134564c336e093f9a8a}} 
+\index{Slides@{Slides}!ListPage@{ListPage}}
+\index{ListPage@{ListPage}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{ListPage()}{ListPage()}}
+{\footnotesize\ttfamily List\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Back \+: Fonction permettant d\textquotesingle{}afficher la liste des slides ~\newline
- 
+Back \+: Affichage de la liste des slides ~\newline
+ \mbox{\Hypertarget{class_slides_ad6c776228db714a33ab1711fc99273c4}\label{class_slides_ad6c776228db714a33ab1711fc99273c4}} 
+\index{Slides@{Slides}!orderDown@{orderDown}}
+\index{orderDown@{orderDown}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{orderDown()}{orderDown()}}
+{\footnotesize\ttfamily order\+Down (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Back \+: Décrémente l\textquotesingle{}ordre d\textquotesingle{}un slide 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_slides_abc9f2822b3e799b899c3e137245d82dc}\label{class_slides_abc9f2822b3e799b899c3e137245d82dc}} 
+\index{Slides@{Slides}!orderUp@{orderUp}}
+\index{orderUp@{orderUp}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{orderUp()}{orderUp()}}
+{\footnotesize\ttfamily order\+Up (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Back \+: Incrémente l\textquotesingle{}ordre d\textquotesingle{}un slide 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_slides_aefeb14340954f858c056054010fe5f4c}\label{class_slides_aefeb14340954f858c056054010fe5f4c}} 
+\index{Slides@{Slides}!visible@{visible}}
+\index{visible@{visible}!Slides@{Slides}}
+\doxysubsubsection{\texorpdfstring{visible()}{visible()}}
+{\footnotesize\ttfamily visible (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Back \+: Rend visible/invisible au public un slide 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & slide \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/application/controllers/Slides.\+php\end{DoxyCompactItemize}
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/controllers/\mbox{\hyperlink{_slides_8php}{Slides.\+php}}\end{DoxyCompactItemize}

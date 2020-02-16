@@ -1,0 +1,79 @@
+\href{https://www.smarty.net/}{\texttt{ smarty.\+net}}\hypertarget{md__c_1__users__p_c-_olivier__documents__git_hub_beaute-naturelle_8fr_2__developpement__smarty_acde51f1a9c286a9c8179c8b01a3ce8d0_autotoc_md1}{}\doxysection{Documentation}\label{md__c_1__users__p_c-_olivier__documents__git_hub_beaute-naturelle_8fr_2__developpement__smarty_acde51f1a9c286a9c8179c8b01a3ce8d0_autotoc_md1}
+For documentation see \href{https://www.smarty.net/docs/en/}{\texttt{ www.\+smarty.\+net/docs/en/}}\hypertarget{md__c_1__users__p_c-_olivier__documents__git_hub_beaute-naturelle_8fr_2__developpement__smarty_acde51f1a9c286a9c8179c8b01a3ce8d0_autotoc_md2}{}\doxysection{Distribution repository}\label{md__c_1__users__p_c-_olivier__documents__git_hub_beaute-naturelle_8fr_2__developpement__smarty_acde51f1a9c286a9c8179c8b01a3ce8d0_autotoc_md2}
+\begin{quote}
+\mbox{\hyperlink{class_smarty}{Smarty}} 3.\+1.\+28 introduces run time template inheritance \end{quote}
+
+
+\begin{quote}
+Read the N\+E\+W\+\_\+\+F\+E\+A\+T\+U\+R\+ES and I\+N\+H\+E\+R\+I\+T\+A\+N\+C\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+N\+O\+T\+ES file for recent extensions to \mbox{\hyperlink{class_smarty}{Smarty}} 3.\+1 functionality \end{quote}
+
+
+\mbox{\hyperlink{class_smarty}{Smarty}} versions 3.\+1.\+11 or later are now on github and can be installed with Composer.
+
+The \char`\"{}smarty/smarty\char`\"{} package will start at libs/.... subfolder.
+
+To get the latest stable version of \mbox{\hyperlink{class_smarty}{Smarty}} 3.\+1 use\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"require": \{}
+\DoxyCodeLine{    "smarty/smarty": "\string~3.1"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+in your composer.\+json file.
+
+To get the trunk version use\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"require": \{}
+\DoxyCodeLine{    "smarty/smarty": "\string~3.1@dev"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+For a specific version use something like\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"require": \{}
+\DoxyCodeLine{    "smarty/smarty": "3.1.19"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+P\+H\+P\+Unit test can be installed by corresponding composer entries like\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"require": \{}
+\DoxyCodeLine{    "smarty/smarty-\/phpunit": "3.1.19"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Similar applies for the lexer/parser generator.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"require": \{}
+\DoxyCodeLine{    "smarty/smarty-\/lexer": "3.1.19"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Or you could use\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"require": \{}
+\DoxyCodeLine{    "smarty/smarty-\/dev": "3.1.19"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Which is a wrapper to install all 3 packages.
+
+Composer can also be used for Smarty2 versions 2.\+6.\+24 to 2.\+6.\+30. 

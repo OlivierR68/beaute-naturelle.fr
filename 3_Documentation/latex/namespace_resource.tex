@@ -1,0 +1,40 @@
+\hypertarget{namespace_resource}{}\doxysection{Resource Namespace Reference}
+\label{namespace_resource}\index{Resource@{Resource}}
+
+
+\doxysubsection{Detailed Description}
+Extends All \mbox{\hyperlink{namespace_resource}{Resource}} \mbox{\hyperlink{namespace_resource}{Resource}} Implementation modifying the extends-\/\+Resource to walk through the template\+\_\+dirs and inherit all templates of the same name
+
+-\/examples \begin{DoxyAuthor}{Author}
+Rodney Rehm
+\end{DoxyAuthor}
+My\+S\+QL \mbox{\hyperlink{namespace_resource}{Resource}} \mbox{\hyperlink{namespace_resource}{Resource}} Implementation based on the Custom A\+PI to use My\+S\+QL as the storage resource for \mbox{\hyperlink{class_smarty}{Smarty}}\textquotesingle{}s templates and configs. Table definition\+: 
+\begin{DoxyPre}CREATE TABLE IF NOT EXISTS `templates` (
+  `name` varchar(100) NOT NULL,
+  `modified` timestamp NOT NULL DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP,
+  `source` text,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\end{DoxyPre}
+ Demo data\+: 
+\begin{DoxyPre}INSERT INTO `templates` (`name`, `modified`, `source`) VALUES ('test.tpl', "2010-\/12-\/25 22:00:00", '\{\$x="hello
+world"\}\{\$x\}');\end{DoxyPre}
+
+
+-\/examples \begin{DoxyAuthor}{Author}
+Rodney Rehm
+\end{DoxyAuthor}
+My\+S\+QL \mbox{\hyperlink{namespace_resource}{Resource}} \mbox{\hyperlink{namespace_resource}{Resource}} Implementation based on the Custom A\+PI to use My\+S\+QL as the storage resource for \mbox{\hyperlink{class_smarty}{Smarty}}\textquotesingle{}s templates and configs. Note that this My\+S\+QL implementation fetches the source and timestamps in a single database query, instead of two separate like \mbox{\hyperlink{resource_8mysql_8php}{resource.\+mysql.\+php}} does. Table definition\+: 
+\begin{DoxyPre}CREATE TABLE IF NOT EXISTS `templates` (
+  `name` varchar(100) NOT NULL,
+  `modified` timestamp NOT NULL DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP,
+  `source` text,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\end{DoxyPre}
+ Demo data\+: 
+\begin{DoxyPre}INSERT INTO `templates` (`name`, `modified`, `source`) VALUES ('test.tpl', "2010-\/12-\/25 22:00:00", '\{\$x="hello
+world"\}\{\$x\}');\end{DoxyPre}
+
+
+-\/examples \begin{DoxyAuthor}{Author}
+Rodney Rehm 
+\end{DoxyAuthor}

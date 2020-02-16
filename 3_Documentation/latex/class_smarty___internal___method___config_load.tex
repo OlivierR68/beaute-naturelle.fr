@@ -1,0 +1,122 @@
+\hypertarget{class_smarty___internal___method___config_load}{}\doxysection{Smarty\+\_\+\+Internal\+\_\+\+Method\+\_\+\+Config\+Load Class Reference}
+\label{class_smarty___internal___method___config_load}\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___method___config_load_a8b38f4559e1fe38dcb83d33adcc54191}{config\+Load}} (\mbox{\hyperlink{class_smarty___internal___data}{Smarty\+\_\+\+Internal\+\_\+\+Data}} \$data, \$config\+\_\+file, \$sections=null)
+\item 
+\mbox{\hyperlink{class_smarty___internal___method___config_load_a3c7a41d0557c34502337d927d5e0bac6}{\+\_\+load\+Config\+File}} (\mbox{\hyperlink{class_smarty___internal___data}{Smarty\+\_\+\+Internal\+\_\+\+Data}} \$data, \$config\+\_\+file, \$sections=null, \$scope=0)
+\item 
+\mbox{\hyperlink{class_smarty___internal___method___config_load_ac8e4dea599694757890647eb3cf3eabf}{\+\_\+load\+Config\+Vars}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$new\+\_\+config\+\_\+vars)
+\item 
+\mbox{\hyperlink{class_smarty___internal___method___config_load_ab60a90de9d1d95540376b2195f7ef2be}{\+\_\+assign\+Config\+Vars}} (\&\$config\+\_\+vars, \mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$new\+\_\+config\+\_\+vars)
+\item 
+\mbox{\hyperlink{class_smarty___internal___method___config_load_a1c982f0416f50d1351a70f67ec82a77d}{\+\_\+update\+Var\+Stack}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$config\+\_\+vars)
+\item 
+\mbox{\hyperlink{class_smarty___internal___method___config_load_a4304abd5537bbc4a06c7bb929c7017c0}{\+\_\+get\+Config\+Variable}} (\mbox{\hyperlink{class_smarty___internal___data}{Smarty\+\_\+\+Internal\+\_\+\+Data}} \$data, \$var\+Name, \$error\+Enable=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___method___config_load_a2f9398fcdf56084f384c57481687f788}{\$obj\+Map}} = 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___internal___method___config_load_ab60a90de9d1d95540376b2195f7ef2be}\label{class_smarty___internal___method___config_load_ab60a90de9d1d95540376b2195f7ef2be}} 
+\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}!\_assignConfigVars@{\_assignConfigVars}}
+\index{\_assignConfigVars@{\_assignConfigVars}!Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsubsection{\texorpdfstring{\_assignConfigVars()}{\_assignConfigVars()}}
+{\footnotesize\ttfamily \+\_\+assign\+Config\+Vars (\begin{DoxyParamCaption}\item[{\&}]{\$config\+\_\+vars,  }\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$new\+\_\+config\+\_\+vars }\end{DoxyParamCaption})}
+
+Assign all config variables in given scope
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config\+\_\+vars} & config variables in scope \\
+\hline
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+array & {\em \$new\+\_\+config\+\_\+vars} & loaded config variables \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___internal___method___config_load_a4304abd5537bbc4a06c7bb929c7017c0}\label{class_smarty___internal___method___config_load_a4304abd5537bbc4a06c7bb929c7017c0}} 
+\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}!\_getConfigVariable@{\_getConfigVariable}}
+\index{\_getConfigVariable@{\_getConfigVariable}!Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsubsection{\texorpdfstring{\_getConfigVariable()}{\_getConfigVariable()}}
+{\footnotesize\ttfamily \+\_\+get\+Config\+Variable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___data}{Smarty\+\_\+\+Internal\+\_\+\+Data}}}]{\$data,  }\item[{}]{\$var\+Name,  }\item[{}]{\$error\+Enable = {\ttfamily true} }\end{DoxyParamCaption})}
+
+gets a config variable value
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty | \textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Data | \textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$data} & \\
+\hline
+string & {\em \$var\+Name} & the name of the config variable \\
+\hline
+bool & {\em \$error\+Enable} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null$\vert$string the value of the config variable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___method___config_load_a3c7a41d0557c34502337d927d5e0bac6}\label{class_smarty___internal___method___config_load_a3c7a41d0557c34502337d927d5e0bac6}} 
+\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}!\_loadConfigFile@{\_loadConfigFile}}
+\index{\_loadConfigFile@{\_loadConfigFile}!Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsubsection{\texorpdfstring{\_loadConfigFile()}{\_loadConfigFile()}}
+{\footnotesize\ttfamily \+\_\+load\+Config\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___data}{Smarty\+\_\+\+Internal\+\_\+\+Data}}}]{\$data,  }\item[{}]{\$config\+\_\+file,  }\item[{}]{\$sections = {\ttfamily null},  }\item[{}]{\$scope = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+load a config file, optionally load just selected sections
+
+@api Smarty\+::config\+Load() \mbox{\hyperlink{}{$\vert$$\vert$ \$data  string \$config\+\_\+file filename  mixed \$sections array of section names, single section or null  int \$scope scope into which config variables shall be loaded   }}\mbox{\Hypertarget{class_smarty___internal___method___config_load_ac8e4dea599694757890647eb3cf3eabf}\label{class_smarty___internal___method___config_load_ac8e4dea599694757890647eb3cf3eabf}} 
+\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}!\_loadConfigVars@{\_loadConfigVars}}
+\index{\_loadConfigVars@{\_loadConfigVars}!Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsubsection{\texorpdfstring{\_loadConfigVars()}{\_loadConfigVars()}}
+{\footnotesize\ttfamily \+\_\+load\+Config\+Vars (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$new\+\_\+config\+\_\+vars }\end{DoxyParamCaption})}
+
+load config variables into template object
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+array & {\em \$new\+\_\+config\+\_\+vars} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___internal___method___config_load_a1c982f0416f50d1351a70f67ec82a77d}\label{class_smarty___internal___method___config_load_a1c982f0416f50d1351a70f67ec82a77d}} 
+\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}!\_updateVarStack@{\_updateVarStack}}
+\index{\_updateVarStack@{\_updateVarStack}!Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsubsection{\texorpdfstring{\_updateVarStack()}{\_updateVarStack()}}
+{\footnotesize\ttfamily \+\_\+update\+Var\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$config\+\_\+vars }\end{DoxyParamCaption})}
+
+Update config variables in template local variable stack
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+array & {\em \$config\+\_\+vars} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___internal___method___config_load_a8b38f4559e1fe38dcb83d33adcc54191}\label{class_smarty___internal___method___config_load_a8b38f4559e1fe38dcb83d33adcc54191}} 
+\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}!configLoad@{configLoad}}
+\index{configLoad@{configLoad}!Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsubsection{\texorpdfstring{configLoad()}{configLoad()}}
+{\footnotesize\ttfamily config\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___data}{Smarty\+\_\+\+Internal\+\_\+\+Data}}}]{\$data,  }\item[{}]{\$config\+\_\+file,  }\item[{}]{\$sections = {\ttfamily null} }\end{DoxyParamCaption})}
+
+load a config file, optionally load just selected sections
+
+@api Smarty\+::config\+Load() \mbox{\hyperlink{}{$\vert$$\vert$ \$data  string \$config\+\_\+file filename  mixed \$sections array of section names, single section or null  $\vert$$\vert$   }}
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___internal___method___config_load_a2f9398fcdf56084f384c57481687f788}\label{class_smarty___internal___method___config_load_a2f9398fcdf56084f384c57481687f788}} 
+\index{Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}!\$objMap@{\$objMap}}
+\index{\$objMap@{\$objMap}!Smarty\_Internal\_Method\_ConfigLoad@{Smarty\_Internal\_Method\_ConfigLoad}}
+\doxysubsubsection{\texorpdfstring{\$objMap}{$objMap}}
+{\footnotesize\ttfamily \$obj\+Map = 7}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/sysplugins/\mbox{\hyperlink{smarty__internal__method__configload_8php}{smarty\+\_\+internal\+\_\+method\+\_\+configload.\+php}}\end{DoxyCompactItemize}

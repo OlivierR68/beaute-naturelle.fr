@@ -1,4 +1,4 @@
-\doxysection{Images\+\_\+manager Class Reference}
+\hypertarget{class_images__manager}{}\doxysection{Images\+\_\+manager Class Reference}
 \label{class_images__manager}\index{Images\_manager@{Images\_manager}}
 Inheritance diagram for Images\+\_\+manager\+:\begin{figure}[H]
 \begin{center}
@@ -9,11 +9,125 @@ Inheritance diagram for Images\+\_\+manager\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{class_images__manager_a73a1b0348919b6755e4f69dcc70eba64}} 
-{\bfseries find\+All} ()
+\mbox{\hyperlink{class_images__manager_a0f743f75b8f69be9a0ad3e6f4b5d3eb0}{find\+All}} (\$visible\+\_\+only=false)
+\item 
+\mbox{\hyperlink{class_images__manager_aba16c31123508b087d457165c732abff}{find\+One}} (\$id)
+\item 
+\mbox{\hyperlink{class_images__manager_a3323ccf6ae1a31274a65d92c6457e745}{new}} (\$obj)
+\item 
+\mbox{\hyperlink{class_images__manager_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_images__manager_a07b5e6baa2b5706d945ed0c1d28b2302}{copy}} (\$id)
+\item 
+\mbox{\hyperlink{class_images__manager_abe62d28c10800e8e62701357e5e1e84a}{update}} (\$obj)
+\item 
+\mbox{\hyperlink{class_images__manager_a6d3a6a148bf0c8752548e7e7ab149abb}{get\+Moderate}} ()
+\item 
+\mbox{\hyperlink{class_images__manager_aa85567bab816d0c34390dc49d41fc237}{need\+\_\+moderate}} ()
+\item 
+\mbox{\hyperlink{class_images__manager_abcbe84aec4b95e9a04f83565467bf409}{accept}} (\$id)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manager \mbox{\hyperlink{class_users}{Users}} \begin{DoxyAuthor}{Author}
+Steven Robert 
+
+Olivier Ravinasaga 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_images__manager_abcbe84aec4b95e9a04f83565467bf409}\label{class_images__manager_abcbe84aec4b95e9a04f83565467bf409}} 
+\index{Images\_manager@{Images\_manager}!accept@{accept}}
+\index{accept@{accept}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily accept (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_images__manager_a07b5e6baa2b5706d945ed0c1d28b2302}\label{class_images__manager_a07b5e6baa2b5706d945ed0c1d28b2302}} 
+\index{Images\_manager@{Images\_manager}!copy@{copy}}
+\index{copy@{copy}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily copy (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Duplication d\textquotesingle{}1 image 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant du image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_images__manager_a2f8258add505482d7f00ea26493a5723}\label{class_images__manager_a2f8258add505482d7f00ea26493a5723}} 
+\index{Images\_manager@{Images\_manager}!delete@{delete}}
+\index{delete@{delete}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Suppression d\textquotesingle{}1 image 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant du image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_images__manager_a0f743f75b8f69be9a0ad3e6f4b5d3eb0}\label{class_images__manager_a0f743f75b8f69be9a0ad3e6f4b5d3eb0}} 
+\index{Images\_manager@{Images\_manager}!findAll@{findAll}}
+\index{findAll@{findAll}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{findAll()}{findAll()}}
+{\footnotesize\ttfamily find\+All (\begin{DoxyParamCaption}\item[{}]{\$visible\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Fonction permettant de récupérer la liste des images \begin{DoxyReturn}{Returns}
+array Tableau des images Récupération liste des images 
+
+array tous les images 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_images__manager_aba16c31123508b087d457165c732abff}\label{class_images__manager_aba16c31123508b087d457165c732abff}} 
+\index{Images\_manager@{Images\_manager}!findOne@{findOne}}
+\index{findOne@{findOne}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{findOne()}{findOne()}}
+{\footnotesize\ttfamily find\+One (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Récupération d\textquotesingle{}1 image 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant des images dans la bdd \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array les valeurs du image avec clefs d\textquotesingle{}association 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_images__manager_a6d3a6a148bf0c8752548e7e7ab149abb}\label{class_images__manager_a6d3a6a148bf0c8752548e7e7ab149abb}} 
+\index{Images\_manager@{Images\_manager}!getModerate@{getModerate}}
+\index{getModerate@{getModerate}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{getModerate()}{getModerate()}}
+{\footnotesize\ttfamily get\+Moderate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_images__manager_aa85567bab816d0c34390dc49d41fc237}\label{class_images__manager_aa85567bab816d0c34390dc49d41fc237}} 
+\index{Images\_manager@{Images\_manager}!need\_moderate@{need\_moderate}}
+\index{need\_moderate@{need\_moderate}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{need\_moderate()}{need\_moderate()}}
+{\footnotesize\ttfamily need\+\_\+moderate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_images__manager_a3323ccf6ae1a31274a65d92c6457e745}\label{class_images__manager_a3323ccf6ae1a31274a65d92c6457e745}} 
+\index{Images\_manager@{Images\_manager}!new@{new}}
+\index{new@{new}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{new()}{new()}}
+{\footnotesize\ttfamily new (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+Création d\textquotesingle{}1 image 
+\begin{DoxyParams}{Parameters}
+{\em \$obj} & object image\+\_\+class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string l\textquotesingle{}id de l\textquotesingle{}insert 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_images__manager_abe62d28c10800e8e62701357e5e1e84a}\label{class_images__manager_abe62d28c10800e8e62701357e5e1e84a}} 
+\index{Images\_manager@{Images\_manager}!update@{update}}
+\index{update@{update}!Images\_manager@{Images\_manager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/application/models/Images\+\_\+manager.\+php\end{DoxyCompactItemize}
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/models/\mbox{\hyperlink{_images__manager_8php}{Images\+\_\+manager.\+php}}\end{DoxyCompactItemize}

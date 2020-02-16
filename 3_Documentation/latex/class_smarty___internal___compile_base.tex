@@ -1,0 +1,132 @@
+\hypertarget{class_smarty___internal___compile_base}{}\doxysection{Smarty\+\_\+\+Internal\+\_\+\+Compile\+Base Class Reference}
+\label{class_smarty___internal___compile_base}\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+Inheritance diagram for Smarty\+\_\+\+Internal\+\_\+\+Compile\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.803859cm]{class_smarty___internal___compile_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_aaea144b9b60bfa0d6deead527008caeb}{get\+Attributes}} (\$compiler, \$attributes)
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_a9a3cc771a461da388c246778175e4c08}{open\+Tag}} (\$compiler, \$open\+Tag, \$data=null)
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_a9dd834d41afb9de693cb502ee3c55db6}{close\+Tag}} (\$compiler, \$expected\+Tag)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_ae799507d5461de485f3a618abeecea95}{\$required\+\_\+attributes}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_a899d1eb4a6fecbd6ce696adb171c80a4}{\$optional\+\_\+attributes}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_a2ccb25269c3a92e8c4796c7ef23725e6}{\$shorttag\+\_\+order}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_a54756b34496938296f08038f7cf7c46a}{\$option\+\_\+flags}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(\textquotesingle{}nocache\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_a3a73335b49bd9910da16e44976fe8d4e}{\$option\+Map}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(1 =$>$ true, 0 =$>$ false, \textquotesingle{}true\textquotesingle{} =$>$ true, \textquotesingle{}false\textquotesingle{} =$>$ false)
+\item 
+\mbox{\hyperlink{class_smarty___internal___compile_base_aa585ee5442ac9d8c11c8f2b921dfe558}{\$map\+Cache}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___internal___compile_base_a9dd834d41afb9de693cb502ee3c55db6}\label{class_smarty___internal___compile_base_a9dd834d41afb9de693cb502ee3c55db6}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!closeTag@{closeTag}}
+\index{closeTag@{closeTag}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{closeTag()}{closeTag()}}
+{\footnotesize\ttfamily close\+Tag (\begin{DoxyParamCaption}\item[{}]{\$compiler,  }\item[{}]{\$expected\+Tag }\end{DoxyParamCaption})}
+
+Pop closing tag Raise an error if this stack-\/top doesn\textquotesingle{}t match with expected opening tags
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$compiler} & compiler object \\
+\hline
+array | string & {\em \$expected\+Tag} & the expected opening tag names\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed any type the opening tag\textquotesingle{}s name or saved data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___compile_base_aaea144b9b60bfa0d6deead527008caeb}\label{class_smarty___internal___compile_base_aaea144b9b60bfa0d6deead527008caeb}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!getAttributes@{getAttributes}}
+\index{getAttributes@{getAttributes}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{getAttributes()}{getAttributes()}}
+{\footnotesize\ttfamily get\+Attributes (\begin{DoxyParamCaption}\item[{}]{\$compiler,  }\item[{}]{\$attributes }\end{DoxyParamCaption})}
+
+This function checks if the attributes passed are valid The attributes passed for the tag to compile are checked against the list of required and optional attributes. Required attributes must be present. Optional attributes are check against the corresponding list. The keyword \textquotesingle{}\+\_\+any\textquotesingle{} specifies that any attribute will be accepted as valid
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$compiler} & compiler object \\
+\hline
+array & {\em \$attributes} & attributes applied to the tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of mapped attributes for further processing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___compile_base_a9a3cc771a461da388c246778175e4c08}\label{class_smarty___internal___compile_base_a9a3cc771a461da388c246778175e4c08}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!openTag@{openTag}}
+\index{openTag@{openTag}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{openTag()}{openTag()}}
+{\footnotesize\ttfamily open\+Tag (\begin{DoxyParamCaption}\item[{}]{\$compiler,  }\item[{}]{\$open\+Tag,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Push opening tag name on stack Optionally additional data can be saved on stack
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$compiler} & compiler object \\
+\hline
+string & {\em \$open\+Tag} & the opening tag\textquotesingle{}s name \\
+\hline
+mixed & {\em \$data} & optional data saved \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___internal___compile_base_aa585ee5442ac9d8c11c8f2b921dfe558}\label{class_smarty___internal___compile_base_aa585ee5442ac9d8c11c8f2b921dfe558}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!\$mapCache@{\$mapCache}}
+\index{\$mapCache@{\$mapCache}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{\$mapCache}{$mapCache}}
+{\footnotesize\ttfamily \$map\+Cache = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()}
+
+\mbox{\Hypertarget{class_smarty___internal___compile_base_a54756b34496938296f08038f7cf7c46a}\label{class_smarty___internal___compile_base_a54756b34496938296f08038f7cf7c46a}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!\$option\_flags@{\$option\_flags}}
+\index{\$option\_flags@{\$option\_flags}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{\$option\_flags}{$option\_flags}}
+{\footnotesize\ttfamily \$option\+\_\+flags = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(\textquotesingle{}nocache\textquotesingle{})}
+
+\mbox{\Hypertarget{class_smarty___internal___compile_base_a899d1eb4a6fecbd6ce696adb171c80a4}\label{class_smarty___internal___compile_base_a899d1eb4a6fecbd6ce696adb171c80a4}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!\$optional\_attributes@{\$optional\_attributes}}
+\index{\$optional\_attributes@{\$optional\_attributes}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{\$optional\_attributes}{$optional\_attributes}}
+{\footnotesize\ttfamily \$optional\+\_\+attributes = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()}
+
+\mbox{\Hypertarget{class_smarty___internal___compile_base_a3a73335b49bd9910da16e44976fe8d4e}\label{class_smarty___internal___compile_base_a3a73335b49bd9910da16e44976fe8d4e}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!\$optionMap@{\$optionMap}}
+\index{\$optionMap@{\$optionMap}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{\$optionMap}{$optionMap}}
+{\footnotesize\ttfamily \$option\+Map = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(1 =$>$ true, 0 =$>$ false, \textquotesingle{}true\textquotesingle{} =$>$ true, \textquotesingle{}false\textquotesingle{} =$>$ false)}
+
+\mbox{\Hypertarget{class_smarty___internal___compile_base_ae799507d5461de485f3a618abeecea95}\label{class_smarty___internal___compile_base_ae799507d5461de485f3a618abeecea95}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!\$required\_attributes@{\$required\_attributes}}
+\index{\$required\_attributes@{\$required\_attributes}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{\$required\_attributes}{$required\_attributes}}
+{\footnotesize\ttfamily \$required\+\_\+attributes = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()}
+
+\mbox{\Hypertarget{class_smarty___internal___compile_base_a2ccb25269c3a92e8c4796c7ef23725e6}\label{class_smarty___internal___compile_base_a2ccb25269c3a92e8c4796c7ef23725e6}} 
+\index{Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}!\$shorttag\_order@{\$shorttag\_order}}
+\index{\$shorttag\_order@{\$shorttag\_order}!Smarty\_Internal\_CompileBase@{Smarty\_Internal\_CompileBase}}
+\doxysubsubsection{\texorpdfstring{\$shorttag\_order}{$shorttag\_order}}
+{\footnotesize\ttfamily \$shorttag\+\_\+order = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/sysplugins/\mbox{\hyperlink{smarty__internal__compilebase_8php}{smarty\+\_\+internal\+\_\+compilebase.\+php}}\end{DoxyCompactItemize}

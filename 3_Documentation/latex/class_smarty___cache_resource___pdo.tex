@@ -1,0 +1,371 @@
+\hypertarget{class_smarty___cache_resource___pdo}{}\doxysection{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo Class Reference}
+\label{class_smarty___cache_resource___pdo}\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+Inheritance diagram for Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_smarty___cache_resource___pdo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_ab8ce75f4bae8f7f235469c84d724613b}{\+\_\+\+\_\+construct}} (P\+DO \$pdo, \$table, \$database=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_ae2036bd2668929ca133c44ef9d95c79c}{fill\+Statements\+With\+Table\+Name}} ()
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a2564751a3101bb134f17466a05d00d99}{get\+Fetch\+Statement}} (\$columns, \$id, \$cache\+\_\+id=null, \$compile\+\_\+id=null)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_ad5b585d25cf0a482ccca6198e60c6332}{fetch}} (\$id, \$name, \$cache\+\_\+id=null, \$compile\+\_\+id=null, \&\$content, \&\$mtime)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a9e24269a198dd21025b5a6a371549f22}{save}} (\$id, \$name, \$cache\+\_\+id=null, \$compile\+\_\+id=null, \$exp\+\_\+time, \$content)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_ae618cac1d9381cf10304392946135708}{input\+Content}} (\$content)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_aef255ead9fd294e87d7637d5bbcae322}{output\+Content}} (\$content)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a74da3059b771751b4633495ea98620bb}{delete}} (\$name=null, \$cache\+\_\+id=null, \$compile\+\_\+id=null, \$exp\+\_\+time=null)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a93566f2c8d709d410ae8ec46b813999b}{get\+Table\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_aea98ce7a14033b3dce6216da33201e0d}{\$fetch\+Statements}}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a693768ee5ab61f3a98339da4b3aff119}{\$insert\+Statement}}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a8f4bbdcfdbf71d21c84b30d7d7be7e39}{\$delete\+Statement}} = \textquotesingle{}D\+E\+L\+E\+TE F\+R\+OM \%1\$s W\+H\+E\+RE \%2\$s\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_adac1d360dd98c86ed8117757961c61bc}{\$truncate\+Statement}} = \textquotesingle{}T\+R\+U\+N\+C\+A\+TE T\+A\+B\+LE \%s\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_af07651a5febd20463d16d9a68466117a}{\$fetch\+Columns}} = \textquotesingle{}modified, content\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a58229e2f9598ad3140a95f0051d84eb4}{\$fetch\+Timestamp\+Columns}} = \textquotesingle{}modified\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a5766efd703cef0e00bfc06b3f3acbe0e}{\$pdo}}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_ae8876a14058f368335baccf35af4a22b}{\$table}}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo_a7691c0162d89de0b6ba47edcd8ba8878}{\$database}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+P\+DO Cache Handler Allows you to store \mbox{\hyperlink{class_smarty}{Smarty}} Cache files into your db. \mbox{\hyperlink{namespace_example}{Example}} table \+: C\+R\+E\+A\+TE T\+A\+B\+LE {\ttfamily smarty\+\_\+cache} ( {\ttfamily id} char(40) N\+OT N\+U\+LL C\+O\+M\+M\+E\+NT \textquotesingle{}sha1 hash\textquotesingle{}, {\ttfamily name} varchar(250) N\+OT N\+U\+LL, {\ttfamily cache\+\_\+id} varchar(250) D\+E\+F\+A\+U\+LT N\+U\+LL, {\ttfamily compile\+\_\+id} varchar(250) D\+E\+F\+A\+U\+LT N\+U\+LL, {\ttfamily modified} timestamp N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP, {\ttfamily expire} timestamp N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT \textquotesingle{}0000-\/00-\/00 00\+:00\+:00\textquotesingle{}, {\ttfamily content} mediumblob N\+OT N\+U\+LL, P\+R\+I\+M\+A\+RY K\+EY ({\ttfamily id}), K\+EY {\ttfamily name} ({\ttfamily name}), K\+EY {\ttfamily cache\+\_\+id} ({\ttfamily cache\+\_\+id}), K\+EY {\ttfamily compile\+\_\+id} ({\ttfamily compile\+\_\+id}), K\+EY {\ttfamily modified} ({\ttfamily modified}), K\+EY {\ttfamily expire} ({\ttfamily expire}) ) E\+N\+G\+I\+NE=Inno\+DB \mbox{\hyperlink{namespace_example}{Example}} usage \+: \$cnx = new P\+DO(\char`\"{}mysql\+:host=localhost;dbname=mydb\char`\"{}, \char`\"{}username\char`\"{}, \char`\"{}password\char`\"{}); \$smarty-\/$>$set\+Caching\+Type(\textquotesingle{}pdo\textquotesingle{}); \$smarty-\/$>$load\+Plugin(\textquotesingle{}\mbox{\hyperlink{class_smarty___cache_resource___pdo}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo}}\textquotesingle{}); \$smarty-\/$>$register\+Cache\+Resource(\textquotesingle{}pdo\textquotesingle{}, new \mbox{\hyperlink{class_smarty___cache_resource___pdo}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo}}(\$cnx, \textquotesingle{}smarty\+\_\+cache\textquotesingle{}));
+
+\begin{DoxyAuthor}{Author}
+Beno!t P\+O\+L\+A\+S\+Z\+EK -\/ 2014 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_ab8ce75f4bae8f7f235469c84d724613b}\label{class_smarty___cache_resource___pdo_ab8ce75f4bae8f7f235469c84d724613b}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{P\+DO}]{\$pdo,  }\item[{}]{\$table,  }\item[{}]{\$database = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+P\+DO & {\em \$pdo} & P\+DO \+: active connection \\
+\hline
+string & {\em \$table} & \+: table (or view) name \\
+\hline
+string & {\em \$database} & \+: optional -\/ if table is located in another db\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a74da3059b771751b4633495ea98620bb}\label{class_smarty___cache_resource___pdo_a74da3059b771751b4633495ea98620bb}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!delete@{delete}}
+\index{delete@{delete}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null},  }\item[{}]{\$cache\+\_\+id = {\ttfamily null},  }\item[{}]{\$compile\+\_\+id = {\ttfamily null},  }\item[{}]{\$exp\+\_\+time = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Delete content from cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$name} & template name \\
+\hline
+string | null & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string | null & {\em \$compile\+\_\+id} & compile id \\
+\hline
+integer | null | -\/1 & {\em \$exp\+\_\+time} & seconds till expiration or null\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer number of deleted caches @access protected 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___custom_a402110d477c09d82f3e8a069141e5d9c}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Custom}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_ad5b585d25cf0a482ccca6198e60c6332}\label{class_smarty___cache_resource___pdo_ad5b585d25cf0a482ccca6198e60c6332}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!fetch@{fetch}}
+\index{fetch@{fetch}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily fetch (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$name,  }\item[{}]{\$cache\+\_\+id = {\ttfamily null},  }\item[{}]{\$compile\+\_\+id = {\ttfamily null},  }\item[{\&}]{\$content,  }\item[{\&}]{\$mtime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+fetch cached content and its modification time from data source
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & unique cache content identifier \\
+\hline
+string & {\em \$name} & template name \\
+\hline
+string | null & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string | null & {\em \$compile\+\_\+id} & compile id \\
+\hline
+string & {\em \$content} & cached content \\
+\hline
+integer & {\em \$mtime} & cache modification timestamp (epoch)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void @access protected 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___custom_a23232ceb44c78253f61c7f4d3e8211c6}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Custom}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_ae2036bd2668929ca133c44ef9d95c79c}\label{class_smarty___cache_resource___pdo_ae2036bd2668929ca133c44ef9d95c79c}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!fillStatementsWithTableName@{fillStatementsWithTableName}}
+\index{fillStatementsWithTableName@{fillStatementsWithTableName}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{fillStatementsWithTableName()}{fillStatementsWithTableName()}}
+{\footnotesize\ttfamily fill\+Statements\+With\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fills the table name into the statements.
+
+\begin{DoxyReturn}{Returns}
+\$this Current Instance @access protected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a2564751a3101bb134f17466a05d00d99}\label{class_smarty___cache_resource___pdo_a2564751a3101bb134f17466a05d00d99}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!getFetchStatement@{getFetchStatement}}
+\index{getFetchStatement@{getFetchStatement}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{getFetchStatement()}{getFetchStatement()}}
+{\footnotesize\ttfamily get\+Fetch\+Statement (\begin{DoxyParamCaption}\item[{}]{\$columns,  }\item[{}]{\$id,  }\item[{}]{\$cache\+\_\+id = {\ttfamily null},  }\item[{}]{\$compile\+\_\+id = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the fetch statement, depending on what you specify
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$columns} & \+: the column(s) name(s) you want to retrieve from the database \\
+\hline
+string & {\em \$id} & unique cache content identifier \\
+\hline
+string | null & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string | null & {\em \$compile\+\_\+id} & compile id\\
+\hline
+\end{DoxyParams}
+@access protected \begin{DoxyReturn}{Returns}
+\textbackslash{}\+P\+D\+O\+Statement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a93566f2c8d709d410ae8ec46b813999b}\label{class_smarty___cache_resource___pdo_a93566f2c8d709d410ae8ec46b813999b}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!getTableName@{getTableName}}
+\index{getTableName@{getTableName}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{getTableName()}{getTableName()}}
+{\footnotesize\ttfamily get\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the formatted table name
+
+\begin{DoxyReturn}{Returns}
+string @access protected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_ae618cac1d9381cf10304392946135708}\label{class_smarty___cache_resource___pdo_ae618cac1d9381cf10304392946135708}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!inputContent@{inputContent}}
+\index{inputContent@{inputContent}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{inputContent()}{inputContent()}}
+{\footnotesize\ttfamily input\+Content (\begin{DoxyParamCaption}\item[{}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Encodes the content before saving to database
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string \$content @access protected 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_smarty___cache_resource___pdo___gzip_ae618cac1d9381cf10304392946135708}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo\+\_\+\+Gzip}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_aef255ead9fd294e87d7637d5bbcae322}\label{class_smarty___cache_resource___pdo_aef255ead9fd294e87d7637d5bbcae322}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!outputContent@{outputContent}}
+\index{outputContent@{outputContent}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{outputContent()}{outputContent()}}
+{\footnotesize\ttfamily output\+Content (\begin{DoxyParamCaption}\item[{}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Decodes the content before saving to database
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string \$content @access protected 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_smarty___cache_resource___pdo___gzip_aef255ead9fd294e87d7637d5bbcae322}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo\+\_\+\+Gzip}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a9e24269a198dd21025b5a6a371549f22}\label{class_smarty___cache_resource___pdo_a9e24269a198dd21025b5a6a371549f22}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!save@{save}}
+\index{save@{save}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$name,  }\item[{}]{\$cache\+\_\+id = {\ttfamily null},  }\item[{}]{\$compile\+\_\+id = {\ttfamily null},  }\item[{}]{\$exp\+\_\+time,  }\item[{}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fetch cached content\textquotesingle{}s modification timestamp from data source \{ Save content to cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & unique cache content identifier \\
+\hline
+string & {\em \$name} & template name \\
+\hline
+string | null & {\em \$cache\+\_\+id} & cache id \\
+\hline
+string | null & {\em \$compile\+\_\+id} & compile id \\
+\hline
+integer | null & {\em \$exp\+\_\+time} & seconds till expiration time in seconds or null \\
+\hline
+string & {\em \$content} & content to cache\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean success @access protected 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___custom_a543ecf4bcb513bb9ee673c6d437512c5}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Custom}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a7691c0162d89de0b6ba47edcd8ba8878}\label{class_smarty___cache_resource___pdo_a7691c0162d89de0b6ba47edcd8ba8878}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$database@{\$database}}
+\index{\$database@{\$database}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$database}{$database}}
+{\footnotesize\ttfamily \$database\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a8f4bbdcfdbf71d21c84b30d7d7be7e39}\label{class_smarty___cache_resource___pdo_a8f4bbdcfdbf71d21c84b30d7d7be7e39}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$deleteStatement@{\$deleteStatement}}
+\index{\$deleteStatement@{\$deleteStatement}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$deleteStatement}{$deleteStatement}}
+{\footnotesize\ttfamily \$delete\+Statement = \textquotesingle{}D\+E\+L\+E\+TE F\+R\+OM \%1\$s W\+H\+E\+RE \%2\$s\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_af07651a5febd20463d16d9a68466117a}\label{class_smarty___cache_resource___pdo_af07651a5febd20463d16d9a68466117a}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$fetchColumns@{\$fetchColumns}}
+\index{\$fetchColumns@{\$fetchColumns}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$fetchColumns}{$fetchColumns}}
+{\footnotesize\ttfamily \$fetch\+Columns = \textquotesingle{}modified, content\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_aea98ce7a14033b3dce6216da33201e0d}\label{class_smarty___cache_resource___pdo_aea98ce7a14033b3dce6216da33201e0d}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$fetchStatements@{\$fetchStatements}}
+\index{\$fetchStatements@{\$fetchStatements}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$fetchStatements}{$fetchStatements}}
+{\footnotesize\ttfamily \$fetch\+Statements\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(\textcolor{stringliteral}{'default'} => \textcolor{stringliteral}{'SELECT \%2\$s}}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                    FROM \%1\$s }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                    WHERE 1 }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                    AND id          = :id }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                    AND cache\_id    IS NULL }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                    AND compile\_id  IS NULL'},}
+\DoxyCodeLine{                                       \textcolor{stringliteral}{'withCacheId'} => \textcolor{stringliteral}{'SELECT \%2\$s}}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                FROM \%1\$s }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                WHERE 1 }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND id          = :id }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND cache\_id    = :cache\_id }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND compile\_id  IS NULL'},}
+\DoxyCodeLine{                                       \textcolor{stringliteral}{'withCompileId'} => \textcolor{stringliteral}{'SELECT \%2\$s}}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                FROM \%1\$s }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                WHERE 1 }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND id          = :id }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND compile\_id  = :compile\_id }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND cache\_id    IS NULL'},}
+\DoxyCodeLine{                                       \textcolor{stringliteral}{'withCacheIdAndCompileId'} => \textcolor{stringliteral}{'SELECT \%2\$s}}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                FROM \%1\$s }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                WHERE 1 }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND id          = :id }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND cache\_id    = :cache\_id }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                                                AND compile\_id  = :compile\_id'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a58229e2f9598ad3140a95f0051d84eb4}\label{class_smarty___cache_resource___pdo_a58229e2f9598ad3140a95f0051d84eb4}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$fetchTimestampColumns@{\$fetchTimestampColumns}}
+\index{\$fetchTimestampColumns@{\$fetchTimestampColumns}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$fetchTimestampColumns}{$fetchTimestampColumns}}
+{\footnotesize\ttfamily \$fetch\+Timestamp\+Columns = \textquotesingle{}modified\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a693768ee5ab61f3a98339da4b3aff119}\label{class_smarty___cache_resource___pdo_a693768ee5ab61f3a98339da4b3aff119}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$insertStatement@{\$insertStatement}}
+\index{\$insertStatement@{\$insertStatement}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$insertStatement}{$insertStatement}}
+{\footnotesize\ttfamily \$insert\+Statement\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{'INSERT INTO \%s}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                SET id          =   :id, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    name        =   :name, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    cache\_id    =   :cache\_id, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    compile\_id  =   :compile\_id, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    modified    =   CURRENT\_TIMESTAMP, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    expire      =   DATE\_ADD(CURRENT\_TIMESTAMP, INTERVAL :expire SECOND), }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    content     =   :content }}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                ON DUPLICATE KEY UPDATE }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    name        =   :name, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    cache\_id    =   :cache\_id, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    compile\_id  =   :compile\_id, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    modified    =   CURRENT\_TIMESTAMP, }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    expire      =   DATE\_ADD(CURRENT\_TIMESTAMP, INTERVAL :expire SECOND), }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                                    content     =   :content'}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_a5766efd703cef0e00bfc06b3f3acbe0e}\label{class_smarty___cache_resource___pdo_a5766efd703cef0e00bfc06b3f3acbe0e}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$pdo@{\$pdo}}
+\index{\$pdo@{\$pdo}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$pdo}{$pdo}}
+{\footnotesize\ttfamily \$pdo\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_ae8876a14058f368335baccf35af4a22b}\label{class_smarty___cache_resource___pdo_ae8876a14058f368335baccf35af4a22b}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$table@{\$table}}
+\index{\$table@{\$table}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$table}{$table}}
+{\footnotesize\ttfamily \$table\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo_adac1d360dd98c86ed8117757961c61bc}\label{class_smarty___cache_resource___pdo_adac1d360dd98c86ed8117757961c61bc}} 
+\index{Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}!\$truncateStatement@{\$truncateStatement}}
+\index{\$truncateStatement@{\$truncateStatement}!Smarty\_CacheResource\_Pdo@{Smarty\_CacheResource\_Pdo}}
+\doxysubsubsection{\texorpdfstring{\$truncateStatement}{$truncateStatement}}
+{\footnotesize\ttfamily \$truncate\+Statement = \textquotesingle{}T\+R\+U\+N\+C\+A\+TE T\+A\+B\+LE \%s\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/demo/plugins/\mbox{\hyperlink{cacheresource_8pdo_8php}{cacheresource.\+pdo.\+php}}\end{DoxyCompactItemize}

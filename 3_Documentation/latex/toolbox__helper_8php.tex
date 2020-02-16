@@ -1,0 +1,100 @@
+\hypertarget{toolbox__helper_8php}{}\doxysection{C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.fr/2\+\_\+\+Developpement/\+\_\+smarty/application/helpers/toolbox\+\_\+helper.php File Reference}
+\label{toolbox__helper_8php}\index{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/helpers/toolbox\_helper.php@{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/helpers/toolbox\_helper.php}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{toolbox__helper_8php_a8363b843427bd4fb7a06c48f056de4e5}{active\+\_\+page}} (\$controller, \$return=\textquotesingle{}active\textquotesingle{}, \$settings=0)
+\item 
+\mbox{\hyperlink{toolbox__helper_8php_adcc0a2648359eb1a57dced1c0d763efb}{page\+\_\+name}} ()
+\item 
+\mbox{\hyperlink{toolbox__helper_8php_a04103a6fad67cf6f03c6a6495655eed8}{ctrl\+\_\+name}} ()
+\item 
+\mbox{\hyperlink{toolbox__helper_8php_aba64a864d82b291021d09fea997bdbf7}{flash\+\_\+data}} (\$name)
+\item 
+\mbox{\hyperlink{toolbox__helper_8php_ae65df045938674146bc782fa5b2c0ab7}{ctrl\+\_\+slug}} ()
+\item 
+\mbox{\hyperlink{toolbox__helper_8php_aa7be8fa75d7100eb01adbe44316845b7}{please\+\_\+reconnect}} ()
+\item 
+\mbox{\hyperlink{toolbox__helper_8php_a9fd8bbe74c91f255edca0c0abe25db46}{the\+\_\+morand\+\_\+function}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{toolbox__helper_8php_a8363b843427bd4fb7a06c48f056de4e5}\label{toolbox__helper_8php_a8363b843427bd4fb7a06c48f056de4e5}} 
+\index{toolbox\_helper.php@{toolbox\_helper.php}!active\_page@{active\_page}}
+\index{active\_page@{active\_page}!toolbox\_helper.php@{toolbox\_helper.php}}
+\doxysubsubsection{\texorpdfstring{active\_page()}{active\_page()}}
+{\footnotesize\ttfamily active\+\_\+page (\begin{DoxyParamCaption}\item[{}]{\$controller,  }\item[{}]{\$return = {\ttfamily \textquotesingle{}active\textquotesingle{}},  }\item[{}]{\$settings = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Collection de fonction plus ou moins pratique \begin{DoxyAuthor}{Author}
+Olivier Ravinasaga 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+version 1 Fonction permettant qui renvoi \textquotesingle{}bn\+\_\+active\textquotesingle{} quand la condition est validée, est utilisée dans les navs 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em \$controller} & string chaine de charactère a valider \\
+\hline
+{\em \$return} & string chaine de charactère retoruner si validée \\
+\hline
+{\em \$settings} & int 1 determine le controller de la page, 2 la méthode de la page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string chaine de charactère \$return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{toolbox__helper_8php_a04103a6fad67cf6f03c6a6495655eed8}\label{toolbox__helper_8php_a04103a6fad67cf6f03c6a6495655eed8}} 
+\index{toolbox\_helper.php@{toolbox\_helper.php}!ctrl\_name@{ctrl\_name}}
+\index{ctrl\_name@{ctrl\_name}!toolbox\_helper.php@{toolbox\_helper.php}}
+\doxysubsubsection{\texorpdfstring{ctrl\_name()}{ctrl\_name()}}
+{\footnotesize\ttfamily ctrl\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fonction qui retourne de le nom du controller de la page actuelle \begin{DoxyReturn}{Returns}
+string le nom du Controller de la page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{toolbox__helper_8php_ae65df045938674146bc782fa5b2c0ab7}\label{toolbox__helper_8php_ae65df045938674146bc782fa5b2c0ab7}} 
+\index{toolbox\_helper.php@{toolbox\_helper.php}!ctrl\_slug@{ctrl\_slug}}
+\index{ctrl\_slug@{ctrl\_slug}!toolbox\_helper.php@{toolbox\_helper.php}}
+\doxysubsubsection{\texorpdfstring{ctrl\_slug()}{ctrl\_slug()}}
+{\footnotesize\ttfamily ctrl\+\_\+slug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fonction permettant l\textquotesingle{}affichage du controller actuelle, avec son nom \char`\"{}humain\char`\"{} \begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{toolbox__helper_8php_aba64a864d82b291021d09fea997bdbf7}\label{toolbox__helper_8php_aba64a864d82b291021d09fea997bdbf7}} 
+\index{toolbox\_helper.php@{toolbox\_helper.php}!flash\_data@{flash\_data}}
+\index{flash\_data@{flash\_data}!toolbox\_helper.php@{toolbox\_helper.php}}
+\doxysubsubsection{\texorpdfstring{flash\_data()}{flash\_data()}}
+{\footnotesize\ttfamily flash\+\_\+data (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Fonction permettant de récupérer les données de session temporaire 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & nom de la donnée de session \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed retourne la donnée de session 
+\end{DoxyReturn}
+\mbox{\Hypertarget{toolbox__helper_8php_adcc0a2648359eb1a57dced1c0d763efb}\label{toolbox__helper_8php_adcc0a2648359eb1a57dced1c0d763efb}} 
+\index{toolbox\_helper.php@{toolbox\_helper.php}!page\_name@{page\_name}}
+\index{page\_name@{page\_name}!toolbox\_helper.php@{toolbox\_helper.php}}
+\doxysubsubsection{\texorpdfstring{page\_name()}{page\_name()}}
+{\footnotesize\ttfamily page\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fonction qui retourne de le nom de la méthode de la page actuelle \begin{DoxyReturn}{Returns}
+string le nom de la méthode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{toolbox__helper_8php_aa7be8fa75d7100eb01adbe44316845b7}\label{toolbox__helper_8php_aa7be8fa75d7100eb01adbe44316845b7}} 
+\index{toolbox\_helper.php@{toolbox\_helper.php}!please\_reconnect@{please\_reconnect}}
+\index{please\_reconnect@{please\_reconnect}!toolbox\_helper.php@{toolbox\_helper.php}}
+\doxysubsubsection{\texorpdfstring{please\_reconnect()}{please\_reconnect()}}
+{\footnotesize\ttfamily please\+\_\+reconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fonction permettant la redirrection vers la page de connection si l\textquotesingle{}utilisateur cherche a acceder au backoffice sans être connecter. \mbox{\Hypertarget{toolbox__helper_8php_a9fd8bbe74c91f255edca0c0abe25db46}\label{toolbox__helper_8php_a9fd8bbe74c91f255edca0c0abe25db46}} 
+\index{toolbox\_helper.php@{toolbox\_helper.php}!the\_morand\_function@{the\_morand\_function}}
+\index{the\_morand\_function@{the\_morand\_function}!toolbox\_helper.php@{toolbox\_helper.php}}
+\doxysubsubsection{\texorpdfstring{the\_morand\_function()}{the\_morand\_function()}}
+{\footnotesize\ttfamily the\+\_\+morand\+\_\+function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+La fonction de Morand ! H\+E\+U\+RE D\textquotesingle{}O\+U\+V\+E\+R\+T\+U\+RE ET F\+E\+M\+E\+T\+U\+RE 

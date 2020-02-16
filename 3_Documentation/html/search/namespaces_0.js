@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['codeigniter_1103',['CodeIgniter',['../namespace_code_igniter.html',1,'']]]
+  ['cacheresource_1837',['CacheResource',['../namespace_cache_resource.html',1,'']]]
 ];

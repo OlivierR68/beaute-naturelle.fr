@@ -1,0 +1,695 @@
+\hypertarget{class_smarty_b_c}{}\doxysection{Smarty\+BC Class Reference}
+\label{class_smarty_b_c}\index{SmartyBC@{SmartyBC}}
+Inheritance diagram for Smarty\+BC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_smarty_b_c}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_smarty_b_c_aebc96e36370712d0c9e5896db76bd487}{assign\+\_\+by\+\_\+ref}} (\$tpl\+\_\+var, \&\$value)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a1a744cb1e3d6473ddcd531412c54f07e}{append\+\_\+by\+\_\+ref}} (\$tpl\+\_\+var, \&\$value, \$merge=false)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_ad0188dcb261ac235ac70c141f2e6657e}{clear\+\_\+assign}} (\$tpl\+\_\+var)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_aa933e1e9fb0b13f22101de4acbaf699c}{register\+\_\+function}} (\$function, \$function\+\_\+impl, \$cacheable=true, \$cache\+\_\+attrs=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_ae73d72302d6bcf8a0b284654b2ecef15}{unregister\+\_\+function}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a62090758f5784925bf2ddb5da9884011}{register\+\_\+object}} ( \$object, \$object\+\_\+impl, \$allowed=\mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(), \$smarty\+\_\+args=true, \$block\+\_\+methods=\mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}())
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a49288d1943e174bcb8e924a4b449d050}{unregister\+\_\+object}} (\$object)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a2a6564c20eaeecdddd192885f9d5a794}{register\+\_\+block}} (\$block, \$block\+\_\+impl, \$cacheable=true, \$cache\+\_\+attrs=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_aa27d55eff4bc63b71da604fb1af362c9}{unregister\+\_\+block}} (\$block)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a4b141e0b9a699098e8986aca16e871ca}{register\+\_\+compiler\+\_\+function}} (\$function, \$function\+\_\+impl, \$cacheable=true)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a85920043d6bf2ee895a1dc3fa2c464ca}{unregister\+\_\+compiler\+\_\+function}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_ac1483efc4d74e159c9ddb29b33fbfcc0}{register\+\_\+modifier}} (\$modifier, \$modifier\+\_\+impl)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_aa0efdcad7fc5a36846e5e8bd8a455dd9}{unregister\+\_\+modifier}} (\$modifier)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a27683a72840c9401cde24eec57d493df}{register\+\_\+resource}} (\$type, \$functions)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a509d4408ce20f6def85118984b81a32e}{unregister\+\_\+resource}} (\$type)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_afdd4dead058273890d629d207f236239}{register\+\_\+prefilter}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a8208fd226842f48de08ce37305295d64}{unregister\+\_\+prefilter}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a1eb31d2b852e5862a3d04284614d145b}{register\+\_\+postfilter}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a36d917f9b975efc48682198c705eb244}{unregister\+\_\+postfilter}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a54426aae9228293c47e05f4ceaacd516}{register\+\_\+outputfilter}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a8d7427d8dc5f3d71aeb3385b9aad3700}{unregister\+\_\+outputfilter}} (\$function)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_ad642cca94486c492c56071fb32a3421c}{load\+\_\+filter}} (\$type, \$name)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a6b5412f074996dea92d89b32a13880d8}{clear\+\_\+cache}} (\$tpl\+\_\+file=null, \$cache\+\_\+id=null, \$compile\+\_\+id=null, \$exp\+\_\+time=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_aaf1eab6e680746ae852abfc3814382fb}{clear\+\_\+all\+\_\+cache}} (\$exp\+\_\+time=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a70d12433755791c1383f394b6a41271d}{is\+\_\+cached}} (\$tpl\+\_\+file, \$cache\+\_\+id=null, \$compile\+\_\+id=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a47a576000a48c74fea66a209d7f0ac21}{clear\+\_\+all\+\_\+assign}} ()
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a71153cdee03c4dcb864488b59442b162}{clear\+\_\+compiled\+\_\+tpl}} (\$tpl\+\_\+file=null, \$compile\+\_\+id=null, \$exp\+\_\+time=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_abfade212562dbeff89ccf453c02f5a1b}{template\+\_\+exists}} (\$tpl\+\_\+file)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a11cdf1965341e01ab5790d3cc13763c7}{get\+\_\+template\+\_\+vars}} (\$name=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a573f7d68ceb03cb1f0e80da57d9a8cfc}{get\+\_\+config\+\_\+vars}} (\$name=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_af8b4afb25666f433974aedae9dbd5d1e}{config\+\_\+load}} (\$file, \$section=null, \$scope=\textquotesingle{}global\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_smarty_b_c_ad51a528e86a161a0709544620fe11e4f}{get\+\_\+registered\+\_\+object}} (\$name)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a889e401c09b8d2612e43a50cb2a7dc04}{clear\+\_\+config}} (\$var=null)
+\item 
+\mbox{\hyperlink{class_smarty_b_c_aa4f8246510406271300bee84f9e1bce3}{trigger\+\_\+error}} (\$error\+\_\+msg, \$error\+\_\+type=E\+\_\+\+U\+S\+E\+R\+\_\+\+W\+A\+R\+N\+I\+NG)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a01caaf3772469caf98e39064bf5d7d8f}{\$\+\_\+version}} = self\+::\+S\+M\+A\+R\+T\+Y\+\_\+\+V\+E\+R\+S\+I\+ON
+\item 
+\mbox{\hyperlink{class_smarty_b_c_a4541edfa0e2dd6b0e4b1da10c14fa52c}{\$trusted\+\_\+dir}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_smarty_b_c_a095c5d389db211932136b53f25f39685}\label{class_smarty_b_c_a095c5d389db211932136b53f25f39685}} 
+\index{SmartyBC@{SmartyBC}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize new \mbox{\hyperlink{class_smarty_b_c}{Smarty\+BC}} object 
+
+Reimplemented from \mbox{\hyperlink{class_smarty_a095c5d389db211932136b53f25f39685}{Smarty}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty_b_c_a1a744cb1e3d6473ddcd531412c54f07e}\label{class_smarty_b_c_a1a744cb1e3d6473ddcd531412c54f07e}} 
+\index{SmartyBC@{SmartyBC}!append\_by\_ref@{append\_by\_ref}}
+\index{append\_by\_ref@{append\_by\_ref}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{append\_by\_ref()}{append\_by\_ref()}}
+{\footnotesize\ttfamily append\+\_\+by\+\_\+ref (\begin{DoxyParamCaption}\item[{}]{\$tpl\+\_\+var,  }\item[{\&}]{\$value,  }\item[{}]{\$merge = {\ttfamily false} }\end{DoxyParamCaption})}
+
+wrapper for append\+\_\+by\+\_\+ref
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tpl\+\_\+var} & the template variable name \\
+\hline
+mixed & {\em \&\$value} & the referenced value to append \\
+\hline
+boolean & {\em \$merge} & flag if array elements shall be merged \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_aebc96e36370712d0c9e5896db76bd487}\label{class_smarty_b_c_aebc96e36370712d0c9e5896db76bd487}} 
+\index{SmartyBC@{SmartyBC}!assign\_by\_ref@{assign\_by\_ref}}
+\index{assign\_by\_ref@{assign\_by\_ref}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{assign\_by\_ref()}{assign\_by\_ref()}}
+{\footnotesize\ttfamily assign\+\_\+by\+\_\+ref (\begin{DoxyParamCaption}\item[{}]{\$tpl\+\_\+var,  }\item[{\&}]{\$value }\end{DoxyParamCaption})}
+
+wrapper for assign\+\_\+by\+\_\+ref
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tpl\+\_\+var} & the template variable name \\
+\hline
+mixed & {\em \&\$value} & the referenced value to assign \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a47a576000a48c74fea66a209d7f0ac21}\label{class_smarty_b_c_a47a576000a48c74fea66a209d7f0ac21}} 
+\index{SmartyBC@{SmartyBC}!clear\_all\_assign@{clear\_all\_assign}}
+\index{clear\_all\_assign@{clear\_all\_assign}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{clear\_all\_assign()}{clear\_all\_assign()}}
+{\footnotesize\ttfamily clear\+\_\+all\+\_\+assign (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+clear all the assigned template variables. \mbox{\Hypertarget{class_smarty_b_c_aaf1eab6e680746ae852abfc3814382fb}\label{class_smarty_b_c_aaf1eab6e680746ae852abfc3814382fb}} 
+\index{SmartyBC@{SmartyBC}!clear\_all\_cache@{clear\_all\_cache}}
+\index{clear\_all\_cache@{clear\_all\_cache}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{clear\_all\_cache()}{clear\_all\_cache()}}
+{\footnotesize\ttfamily clear\+\_\+all\+\_\+cache (\begin{DoxyParamCaption}\item[{}]{\$exp\+\_\+time = {\ttfamily null} }\end{DoxyParamCaption})}
+
+clear the entire contents of cache (all templates)
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$exp\+\_\+time} & expire time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty_b_c_ad0188dcb261ac235ac70c141f2e6657e}\label{class_smarty_b_c_ad0188dcb261ac235ac70c141f2e6657e}} 
+\index{SmartyBC@{SmartyBC}!clear\_assign@{clear\_assign}}
+\index{clear\_assign@{clear\_assign}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{clear\_assign()}{clear\_assign()}}
+{\footnotesize\ttfamily clear\+\_\+assign (\begin{DoxyParamCaption}\item[{}]{\$tpl\+\_\+var }\end{DoxyParamCaption})}
+
+clear the given assigned template variable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tpl\+\_\+var} & the template variable to clear \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a6b5412f074996dea92d89b32a13880d8}\label{class_smarty_b_c_a6b5412f074996dea92d89b32a13880d8}} 
+\index{SmartyBC@{SmartyBC}!clear\_cache@{clear\_cache}}
+\index{clear\_cache@{clear\_cache}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{clear\_cache()}{clear\_cache()}}
+{\footnotesize\ttfamily clear\+\_\+cache (\begin{DoxyParamCaption}\item[{}]{\$tpl\+\_\+file = {\ttfamily null},  }\item[{}]{\$cache\+\_\+id = {\ttfamily null},  }\item[{}]{\$compile\+\_\+id = {\ttfamily null},  }\item[{}]{\$exp\+\_\+time = {\ttfamily null} }\end{DoxyParamCaption})}
+
+clear cached content for the given template and cache id
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tpl\+\_\+file} & name of template file \\
+\hline
+string & {\em \$cache\+\_\+id} & name of cache\+\_\+id \\
+\hline
+string & {\em \$compile\+\_\+id} & name of compile\+\_\+id \\
+\hline
+string & {\em \$exp\+\_\+time} & expiration time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty_b_c_a71153cdee03c4dcb864488b59442b162}\label{class_smarty_b_c_a71153cdee03c4dcb864488b59442b162}} 
+\index{SmartyBC@{SmartyBC}!clear\_compiled\_tpl@{clear\_compiled\_tpl}}
+\index{clear\_compiled\_tpl@{clear\_compiled\_tpl}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{clear\_compiled\_tpl()}{clear\_compiled\_tpl()}}
+{\footnotesize\ttfamily clear\+\_\+compiled\+\_\+tpl (\begin{DoxyParamCaption}\item[{}]{\$tpl\+\_\+file = {\ttfamily null},  }\item[{}]{\$compile\+\_\+id = {\ttfamily null},  }\item[{}]{\$exp\+\_\+time = {\ttfamily null} }\end{DoxyParamCaption})}
+
+clears compiled version of specified template resource, or all compiled template files if one is not specified. This function is for advanced use only, not normally needed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tpl\+\_\+file} & \\
+\hline
+string & {\em \$compile\+\_\+id} & \\
+\hline
+string & {\em \$exp\+\_\+time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean results of \mbox{\hyperlink{}{smarty\+\_\+core\+\_\+rm\+\_\+auto()}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty_b_c_a889e401c09b8d2612e43a50cb2a7dc04}\label{class_smarty_b_c_a889e401c09b8d2612e43a50cb2a7dc04}} 
+\index{SmartyBC@{SmartyBC}!clear\_config@{clear\_config}}
+\index{clear\_config@{clear\_config}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{clear\_config()}{clear\_config()}}
+{\footnotesize\ttfamily clear\+\_\+config (\begin{DoxyParamCaption}\item[{}]{\$var = {\ttfamily null} }\end{DoxyParamCaption})}
+
+clear configuration values
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$var} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_af8b4afb25666f433974aedae9dbd5d1e}\label{class_smarty_b_c_af8b4afb25666f433974aedae9dbd5d1e}} 
+\index{SmartyBC@{SmartyBC}!config\_load@{config\_load}}
+\index{config\_load@{config\_load}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{config\_load()}{config\_load()}}
+{\footnotesize\ttfamily config\+\_\+load (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$section = {\ttfamily null},  }\item[{}]{\$scope = {\ttfamily \textquotesingle{}global\textquotesingle{}} }\end{DoxyParamCaption})}
+
+load configuration values
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & \\
+\hline
+string & {\em \$section} & \\
+\hline
+string & {\em \$scope} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a573f7d68ceb03cb1f0e80da57d9a8cfc}\label{class_smarty_b_c_a573f7d68ceb03cb1f0e80da57d9a8cfc}} 
+\index{SmartyBC@{SmartyBC}!get\_config\_vars@{get\_config\_vars}}
+\index{get\_config\_vars@{get\_config\_vars}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{get\_config\_vars()}{get\_config\_vars()}}
+{\footnotesize\ttfamily get\+\_\+config\+\_\+vars (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Returns an array containing config variables
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty_b_c_ad51a528e86a161a0709544620fe11e4f}\label{class_smarty_b_c_ad51a528e86a161a0709544620fe11e4f}} 
+\index{SmartyBC@{SmartyBC}!get\_registered\_object@{get\_registered\_object}}
+\index{get\_registered\_object@{get\_registered\_object}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{get\_registered\_object()}{get\_registered\_object()}}
+{\footnotesize\ttfamily get\+\_\+registered\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+return a reference to a registered object
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty_b_c_a11cdf1965341e01ab5790d3cc13763c7}\label{class_smarty_b_c_a11cdf1965341e01ab5790d3cc13763c7}} 
+\index{SmartyBC@{SmartyBC}!get\_template\_vars@{get\_template\_vars}}
+\index{get\_template\_vars@{get\_template\_vars}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{get\_template\_vars()}{get\_template\_vars()}}
+{\footnotesize\ttfamily get\+\_\+template\+\_\+vars (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Returns an array containing template variables
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty_b_c_a70d12433755791c1383f394b6a41271d}\label{class_smarty_b_c_a70d12433755791c1383f394b6a41271d}} 
+\index{SmartyBC@{SmartyBC}!is\_cached@{is\_cached}}
+\index{is\_cached@{is\_cached}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{is\_cached()}{is\_cached()}}
+{\footnotesize\ttfamily is\+\_\+cached (\begin{DoxyParamCaption}\item[{}]{\$tpl\+\_\+file,  }\item[{}]{\$cache\+\_\+id = {\ttfamily null},  }\item[{}]{\$compile\+\_\+id = {\ttfamily null} }\end{DoxyParamCaption})}
+
+test to see if valid cache exists for this template
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tpl\+\_\+file} & name of template file \\
+\hline
+string & {\em \$cache\+\_\+id} & \\
+\hline
+string & {\em \$compile\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_ad642cca94486c492c56071fb32a3421c}\label{class_smarty_b_c_ad642cca94486c492c56071fb32a3421c}} 
+\index{SmartyBC@{SmartyBC}!load\_filter@{load\_filter}}
+\index{load\_filter@{load\_filter}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{load\_filter()}{load\_filter()}}
+{\footnotesize\ttfamily load\+\_\+filter (\begin{DoxyParamCaption}\item[{}]{\$type,  }\item[{}]{\$name }\end{DoxyParamCaption})}
+
+load a filter of specified type and name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & filter type \\
+\hline
+string & {\em \$name} & filter name\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_a2a6564c20eaeecdddd192885f9d5a794}\label{class_smarty_b_c_a2a6564c20eaeecdddd192885f9d5a794}} 
+\index{SmartyBC@{SmartyBC}!register\_block@{register\_block}}
+\index{register\_block@{register\_block}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_block()}{register\_block()}}
+{\footnotesize\ttfamily register\+\_\+block (\begin{DoxyParamCaption}\item[{}]{\$block,  }\item[{}]{\$block\+\_\+impl,  }\item[{}]{\$cacheable = {\ttfamily true},  }\item[{}]{\$cache\+\_\+attrs = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Registers block function to be used in templates
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$block} & name of template block \\
+\hline
+string & {\em \$block\+\_\+impl} & P\+HP function to register \\
+\hline
+bool & {\em \$cacheable} & \\
+\hline
+mixed & {\em \$cache\+\_\+attrs} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_a4b141e0b9a699098e8986aca16e871ca}\label{class_smarty_b_c_a4b141e0b9a699098e8986aca16e871ca}} 
+\index{SmartyBC@{SmartyBC}!register\_compiler\_function@{register\_compiler\_function}}
+\index{register\_compiler\_function@{register\_compiler\_function}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_compiler\_function()}{register\_compiler\_function()}}
+{\footnotesize\ttfamily register\+\_\+compiler\+\_\+function (\begin{DoxyParamCaption}\item[{}]{\$function,  }\item[{}]{\$function\+\_\+impl,  }\item[{}]{\$cacheable = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Registers compiler function
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$function} & name of template function \\
+\hline
+string & {\em \$function\+\_\+impl} & name of P\+HP function to register \\
+\hline
+bool & {\em \$cacheable} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_aa933e1e9fb0b13f22101de4acbaf699c}\label{class_smarty_b_c_aa933e1e9fb0b13f22101de4acbaf699c}} 
+\index{SmartyBC@{SmartyBC}!register\_function@{register\_function}}
+\index{register\_function@{register\_function}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_function()}{register\_function()}}
+{\footnotesize\ttfamily register\+\_\+function (\begin{DoxyParamCaption}\item[{}]{\$function,  }\item[{}]{\$function\+\_\+impl,  }\item[{}]{\$cacheable = {\ttfamily true},  }\item[{}]{\$cache\+\_\+attrs = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Registers custom function to be used in templates
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$function} & the name of the template function \\
+\hline
+string & {\em \$function\+\_\+impl} & the name of the P\+HP function to register \\
+\hline
+bool & {\em \$cacheable} & \\
+\hline
+mixed & {\em \$cache\+\_\+attrs} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_ac1483efc4d74e159c9ddb29b33fbfcc0}\label{class_smarty_b_c_ac1483efc4d74e159c9ddb29b33fbfcc0}} 
+\index{SmartyBC@{SmartyBC}!register\_modifier@{register\_modifier}}
+\index{register\_modifier@{register\_modifier}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_modifier()}{register\_modifier()}}
+{\footnotesize\ttfamily register\+\_\+modifier (\begin{DoxyParamCaption}\item[{}]{\$modifier,  }\item[{}]{\$modifier\+\_\+impl }\end{DoxyParamCaption})}
+
+Registers modifier to be used in templates
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$modifier} & name of template modifier \\
+\hline
+string & {\em \$modifier\+\_\+impl} & name of P\+HP function to register\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_a62090758f5784925bf2ddb5da9884011}\label{class_smarty_b_c_a62090758f5784925bf2ddb5da9884011}} 
+\index{SmartyBC@{SmartyBC}!register\_object@{register\_object}}
+\index{register\_object@{register\_object}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_object()}{register\_object()}}
+{\footnotesize\ttfamily register\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$object,  }\item[{}]{\$object\+\_\+impl,  }\item[{}]{\$allowed = {\ttfamily \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()},  }\item[{}]{\$smarty\+\_\+args = {\ttfamily true},  }\item[{}]{\$block\+\_\+methods = {\ttfamily \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()} }\end{DoxyParamCaption})}
+
+Registers object to be used in templates
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$object} & name of template object \\
+\hline
+object & {\em \$object\+\_\+impl} & the referenced P\+HP object to register \\
+\hline
+array & {\em \$allowed} & list of allowed methods (empty = all) \\
+\hline
+boolean & {\em \$smarty\+\_\+args} & smarty argument format, else traditional \\
+\hline
+array & {\em \$block\+\_\+methods} & list of methods that are block format\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_smarty_exception}{Smarty\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_a54426aae9228293c47e05f4ceaacd516}\label{class_smarty_b_c_a54426aae9228293c47e05f4ceaacd516}} 
+\index{SmartyBC@{SmartyBC}!register\_outputfilter@{register\_outputfilter}}
+\index{register\_outputfilter@{register\_outputfilter}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_outputfilter()}{register\_outputfilter()}}
+{\footnotesize\ttfamily register\+\_\+outputfilter (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Registers an output filter function to apply to a template output
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_a1eb31d2b852e5862a3d04284614d145b}\label{class_smarty_b_c_a1eb31d2b852e5862a3d04284614d145b}} 
+\index{SmartyBC@{SmartyBC}!register\_postfilter@{register\_postfilter}}
+\index{register\_postfilter@{register\_postfilter}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_postfilter()}{register\_postfilter()}}
+{\footnotesize\ttfamily register\+\_\+postfilter (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Registers a postfilter function to apply to a compiled template after compilation
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_afdd4dead058273890d629d207f236239}\label{class_smarty_b_c_afdd4dead058273890d629d207f236239}} 
+\index{SmartyBC@{SmartyBC}!register\_prefilter@{register\_prefilter}}
+\index{register\_prefilter@{register\_prefilter}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_prefilter()}{register\_prefilter()}}
+{\footnotesize\ttfamily register\+\_\+prefilter (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Registers a prefilter function to apply to a template before compiling
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_a27683a72840c9401cde24eec57d493df}\label{class_smarty_b_c_a27683a72840c9401cde24eec57d493df}} 
+\index{SmartyBC@{SmartyBC}!register\_resource@{register\_resource}}
+\index{register\_resource@{register\_resource}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{register\_resource()}{register\_resource()}}
+{\footnotesize\ttfamily register\+\_\+resource (\begin{DoxyParamCaption}\item[{}]{\$type,  }\item[{}]{\$functions }\end{DoxyParamCaption})}
+
+Registers a resource to fetch a template
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & name of resource \\
+\hline
+array & {\em \$functions} & array of functions to handle resource \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_abfade212562dbeff89ccf453c02f5a1b}\label{class_smarty_b_c_abfade212562dbeff89ccf453c02f5a1b}} 
+\index{SmartyBC@{SmartyBC}!template\_exists@{template\_exists}}
+\index{template\_exists@{template\_exists}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{template\_exists()}{template\_exists()}}
+{\footnotesize\ttfamily template\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{\$tpl\+\_\+file }\end{DoxyParamCaption})}
+
+Checks whether requested template exists.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tpl\+\_\+file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty_b_c_aa4f8246510406271300bee84f9e1bce3}\label{class_smarty_b_c_aa4f8246510406271300bee84f9e1bce3}} 
+\index{SmartyBC@{SmartyBC}!trigger\_error@{trigger\_error}}
+\index{trigger\_error@{trigger\_error}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{trigger\_error()}{trigger\_error()}}
+{\footnotesize\ttfamily trigger\+\_\+error (\begin{DoxyParamCaption}\item[{}]{\$error\+\_\+msg,  }\item[{}]{\$error\+\_\+type = {\ttfamily E\+\_\+USER\+\_\+WARNING} }\end{DoxyParamCaption})}
+
+trigger \mbox{\hyperlink{class_smarty}{Smarty}} error
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$error\+\_\+msg} & \\
+\hline
+integer & {\em \$error\+\_\+type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_aa27d55eff4bc63b71da604fb1af362c9}\label{class_smarty_b_c_aa27d55eff4bc63b71da604fb1af362c9}} 
+\index{SmartyBC@{SmartyBC}!unregister\_block@{unregister\_block}}
+\index{unregister\_block@{unregister\_block}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_block()}{unregister\_block()}}
+{\footnotesize\ttfamily unregister\+\_\+block (\begin{DoxyParamCaption}\item[{}]{\$block }\end{DoxyParamCaption})}
+
+Unregister block function
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$block} & name of template function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a85920043d6bf2ee895a1dc3fa2c464ca}\label{class_smarty_b_c_a85920043d6bf2ee895a1dc3fa2c464ca}} 
+\index{SmartyBC@{SmartyBC}!unregister\_compiler\_function@{unregister\_compiler\_function}}
+\index{unregister\_compiler\_function@{unregister\_compiler\_function}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_compiler\_function()}{unregister\_compiler\_function()}}
+{\footnotesize\ttfamily unregister\+\_\+compiler\+\_\+function (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Unregister compiler function
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$function} & name of template function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_ae73d72302d6bcf8a0b284654b2ecef15}\label{class_smarty_b_c_ae73d72302d6bcf8a0b284654b2ecef15}} 
+\index{SmartyBC@{SmartyBC}!unregister\_function@{unregister\_function}}
+\index{unregister\_function@{unregister\_function}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_function()}{unregister\_function()}}
+{\footnotesize\ttfamily unregister\+\_\+function (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Unregister custom function
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$function} & name of template function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_aa0efdcad7fc5a36846e5e8bd8a455dd9}\label{class_smarty_b_c_aa0efdcad7fc5a36846e5e8bd8a455dd9}} 
+\index{SmartyBC@{SmartyBC}!unregister\_modifier@{unregister\_modifier}}
+\index{unregister\_modifier@{unregister\_modifier}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_modifier()}{unregister\_modifier()}}
+{\footnotesize\ttfamily unregister\+\_\+modifier (\begin{DoxyParamCaption}\item[{}]{\$modifier }\end{DoxyParamCaption})}
+
+Unregister modifier
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$modifier} & name of template modifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a49288d1943e174bcb8e924a4b449d050}\label{class_smarty_b_c_a49288d1943e174bcb8e924a4b449d050}} 
+\index{SmartyBC@{SmartyBC}!unregister\_object@{unregister\_object}}
+\index{unregister\_object@{unregister\_object}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_object()}{unregister\_object()}}
+{\footnotesize\ttfamily unregister\+\_\+object (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Unregister object
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$object} & name of template object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a8d7427d8dc5f3d71aeb3385b9aad3700}\label{class_smarty_b_c_a8d7427d8dc5f3d71aeb3385b9aad3700}} 
+\index{SmartyBC@{SmartyBC}!unregister\_outputfilter@{unregister\_outputfilter}}
+\index{unregister\_outputfilter@{unregister\_outputfilter}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_outputfilter()}{unregister\_outputfilter()}}
+{\footnotesize\ttfamily unregister\+\_\+outputfilter (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Unregister an outputfilter function
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a36d917f9b975efc48682198c705eb244}\label{class_smarty_b_c_a36d917f9b975efc48682198c705eb244}} 
+\index{SmartyBC@{SmartyBC}!unregister\_postfilter@{unregister\_postfilter}}
+\index{unregister\_postfilter@{unregister\_postfilter}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_postfilter()}{unregister\_postfilter()}}
+{\footnotesize\ttfamily unregister\+\_\+postfilter (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Unregister a postfilter function
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a8208fd226842f48de08ce37305295d64}\label{class_smarty_b_c_a8208fd226842f48de08ce37305295d64}} 
+\index{SmartyBC@{SmartyBC}!unregister\_prefilter@{unregister\_prefilter}}
+\index{unregister\_prefilter@{unregister\_prefilter}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_prefilter()}{unregister\_prefilter()}}
+{\footnotesize\ttfamily unregister\+\_\+prefilter (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+Unregister a prefilter function
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty_b_c_a509d4408ce20f6def85118984b81a32e}\label{class_smarty_b_c_a509d4408ce20f6def85118984b81a32e}} 
+\index{SmartyBC@{SmartyBC}!unregister\_resource@{unregister\_resource}}
+\index{unregister\_resource@{unregister\_resource}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{unregister\_resource()}{unregister\_resource()}}
+{\footnotesize\ttfamily unregister\+\_\+resource (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Unregister a resource
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & name of resource \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty_b_c_a01caaf3772469caf98e39064bf5d7d8f}\label{class_smarty_b_c_a01caaf3772469caf98e39064bf5d7d8f}} 
+\index{SmartyBC@{SmartyBC}!\$\_version@{\$\_version}}
+\index{\$\_version@{\$\_version}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{\$\_version}{$\_version}}
+{\footnotesize\ttfamily \$\+\_\+version = self\+::\+S\+M\+A\+R\+T\+Y\+\_\+\+V\+E\+R\+S\+I\+ON}
+
+\mbox{\Hypertarget{class_smarty_b_c_a4541edfa0e2dd6b0e4b1da10c14fa52c}\label{class_smarty_b_c_a4541edfa0e2dd6b0e4b1da10c14fa52c}} 
+\index{SmartyBC@{SmartyBC}!\$trusted\_dir@{\$trusted\_dir}}
+\index{\$trusted\_dir@{\$trusted\_dir}!SmartyBC@{SmartyBC}}
+\doxysubsubsection{\texorpdfstring{\$trusted\_dir}{$trusted\_dir}}
+{\footnotesize\ttfamily \$trusted\+\_\+dir = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/\mbox{\hyperlink{_smarty_b_c_8class_8php}{Smarty\+B\+C.\+class.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\hypertarget{class_smarty___cache_resource___pdo___gzip}{}\doxysection{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo\+\_\+\+Gzip Class Reference}
+\label{class_smarty___cache_resource___pdo___gzip}\index{Smarty\_CacheResource\_Pdo\_Gzip@{Smarty\_CacheResource\_Pdo\_Gzip}}
+Inheritance diagram for Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo\+\_\+\+Gzip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_smarty___cache_resource___pdo___gzip}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo___gzip_ae618cac1d9381cf10304392946135708}{input\+Content}} (\$content)
+\item 
+\mbox{\hyperlink{class_smarty___cache_resource___pdo___gzip_aef255ead9fd294e87d7637d5bbcae322}{output\+Content}} (\$content)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+P\+DO Cache Handler with G\+Z\+IP support \mbox{\hyperlink{namespace_example}{Example}} usage \+: \$cnx = new P\+DO(\char`\"{}mysql\+:host=localhost;dbname=mydb\char`\"{}, \char`\"{}username\char`\"{}, \char`\"{}password\char`\"{}); \$smarty-\/$>$set\+Caching\+Type(\textquotesingle{}pdo\+\_\+gzip\textquotesingle{}); \$smarty-\/$>$load\+Plugin(\textquotesingle{}\mbox{\hyperlink{class_smarty___cache_resource___pdo___gzip}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo\+\_\+\+Gzip}}\textquotesingle{}); \$smarty-\/$>$register\+Cache\+Resource(\textquotesingle{}pdo\+\_\+gzip\textquotesingle{}, new \mbox{\hyperlink{class_smarty___cache_resource___pdo___gzip}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo\+\_\+\+Gzip}}(\$cnx, \textquotesingle{}smarty\+\_\+cache\textquotesingle{}));
+
+@require \mbox{\hyperlink{class_smarty___cache_resource___pdo}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo}} class \begin{DoxyAuthor}{Author}
+Beno!t P\+O\+L\+A\+S\+Z\+EK -\/ 2014 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo___gzip_ae618cac1d9381cf10304392946135708}\label{class_smarty___cache_resource___pdo___gzip_ae618cac1d9381cf10304392946135708}} 
+\index{Smarty\_CacheResource\_Pdo\_Gzip@{Smarty\_CacheResource\_Pdo\_Gzip}!inputContent@{inputContent}}
+\index{inputContent@{inputContent}!Smarty\_CacheResource\_Pdo\_Gzip@{Smarty\_CacheResource\_Pdo\_Gzip}}
+\doxysubsubsection{\texorpdfstring{inputContent()}{inputContent()}}
+{\footnotesize\ttfamily input\+Content (\begin{DoxyParamCaption}\item[{}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Encodes the content before saving to database
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string \$content @access protected 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___pdo_ae618cac1d9381cf10304392946135708}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo}}.
+
+\mbox{\Hypertarget{class_smarty___cache_resource___pdo___gzip_aef255ead9fd294e87d7637d5bbcae322}\label{class_smarty___cache_resource___pdo___gzip_aef255ead9fd294e87d7637d5bbcae322}} 
+\index{Smarty\_CacheResource\_Pdo\_Gzip@{Smarty\_CacheResource\_Pdo\_Gzip}!outputContent@{outputContent}}
+\index{outputContent@{outputContent}!Smarty\_CacheResource\_Pdo\_Gzip@{Smarty\_CacheResource\_Pdo\_Gzip}}
+\doxysubsubsection{\texorpdfstring{outputContent()}{outputContent()}}
+{\footnotesize\ttfamily output\+Content (\begin{DoxyParamCaption}\item[{}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Decodes the content before saving to database
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string \$content @access protected 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___cache_resource___pdo_aef255ead9fd294e87d7637d5bbcae322}{Smarty\+\_\+\+Cache\+Resource\+\_\+\+Pdo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/demo/plugins/\mbox{\hyperlink{cacheresource_8pdo__gzip_8php}{cacheresource.\+pdo\+\_\+gzip.\+php}}\end{DoxyCompactItemize}

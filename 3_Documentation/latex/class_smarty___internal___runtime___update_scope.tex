@@ -1,0 +1,88 @@
+\hypertarget{class_smarty___internal___runtime___update_scope}{}\doxysection{Smarty\+\_\+\+Internal\+\_\+\+Runtime\+\_\+\+Update\+Scope Class Reference}
+\label{class_smarty___internal___runtime___update_scope}\index{Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___update_scope_aa8220f8c89cf6af36e894db1eb7b74ff}{\+\_\+update\+Scope}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$var\+Name, \$tag\+Scope=0)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___update_scope_a7503dca1581132f78ee95e25461e728f}{\+\_\+get\+Affected\+Scopes}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$merged\+Scope)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___update_scope_a2d6929862f959dcd11fafe9c1f3946f2}{\+\_\+update\+Variable\+In\+Other\+Scope}} (\&\$tpl\+\_\+vars, \mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$from, \$var\+Name)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___update_scope_a3126af8c965e2718871e59a490ba9ae3}{\+\_\+update\+Var\+Stack}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$var\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___internal___runtime___update_scope_a7503dca1581132f78ee95e25461e728f}\label{class_smarty___internal___runtime___update_scope_a7503dca1581132f78ee95e25461e728f}} 
+\index{Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}!\_getAffectedScopes@{\_getAffectedScopes}}
+\index{\_getAffectedScopes@{\_getAffectedScopes}!Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}}
+\doxysubsubsection{\texorpdfstring{\_getAffectedScopes()}{\_getAffectedScopes()}}
+{\footnotesize\ttfamily \+\_\+get\+Affected\+Scopes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$merged\+Scope }\end{DoxyParamCaption})}
+
+Get array of objects which needs to be updated by given scope value
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} & {\em \$tpl} & \\
+\hline
+int & {\em \$merged\+Scope} & merged tag and template scope to which bubble up variable value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___runtime___update_scope_aa8220f8c89cf6af36e894db1eb7b74ff}\label{class_smarty___internal___runtime___update_scope_aa8220f8c89cf6af36e894db1eb7b74ff}} 
+\index{Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}!\_updateScope@{\_updateScope}}
+\index{\_updateScope@{\_updateScope}!Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}}
+\doxysubsubsection{\texorpdfstring{\_updateScope()}{\_updateScope()}}
+{\footnotesize\ttfamily \+\_\+update\+Scope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$var\+Name,  }\item[{}]{\$tag\+Scope = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Update new assigned template or config variable in other effected scopes
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} & {\em \$tpl} & data object \\
+\hline
+string | null & {\em \$var\+Name} & variable name \\
+\hline
+int & {\em \$tag\+Scope} & tag scope to which bubble up variable value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___internal___runtime___update_scope_a2d6929862f959dcd11fafe9c1f3946f2}\label{class_smarty___internal___runtime___update_scope_a2d6929862f959dcd11fafe9c1f3946f2}} 
+\index{Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}!\_updateVariableInOtherScope@{\_updateVariableInOtherScope}}
+\index{\_updateVariableInOtherScope@{\_updateVariableInOtherScope}!Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}}
+\doxysubsubsection{\texorpdfstring{\_updateVariableInOtherScope()}{\_updateVariableInOtherScope()}}
+{\footnotesize\ttfamily \+\_\+update\+Variable\+In\+Other\+Scope (\begin{DoxyParamCaption}\item[{\&}]{\$tpl\+\_\+vars,  }\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$from,  }\item[{}]{\$var\+Name }\end{DoxyParamCaption})}
+
+Update variable in other scope
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$tpl\+\_\+vars} & template variable array \\
+\hline
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$from} & \\
+\hline
+string & {\em \$var\+Name} & variable name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___internal___runtime___update_scope_a3126af8c965e2718871e59a490ba9ae3}\label{class_smarty___internal___runtime___update_scope_a3126af8c965e2718871e59a490ba9ae3}} 
+\index{Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}!\_updateVarStack@{\_updateVarStack}}
+\index{\_updateVarStack@{\_updateVarStack}!Smarty\_Internal\_Runtime\_UpdateScope@{Smarty\_Internal\_Runtime\_UpdateScope}}
+\doxysubsubsection{\texorpdfstring{\_updateVarStack()}{\_updateVarStack()}}
+{\footnotesize\ttfamily \+\_\+update\+Var\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$var\+Name }\end{DoxyParamCaption})}
+
+Update variable in template local variable stack
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+string | null & {\em \$var\+Name} & variable name or null for config variables \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/sysplugins/\mbox{\hyperlink{smarty__internal__runtime__updatescope_8php}{smarty\+\_\+internal\+\_\+runtime\+\_\+updatescope.\+php}}\end{DoxyCompactItemize}

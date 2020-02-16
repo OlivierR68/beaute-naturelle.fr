@@ -1,0 +1,85 @@
+\hypertarget{class_smarty___internal___runtime___foreach}{}\doxysection{Smarty\+\_\+\+Internal\+\_\+\+Runtime\+\_\+\+Foreach Class Reference}
+\label{class_smarty___internal___runtime___foreach}\index{Smarty\_Internal\_Runtime\_Foreach@{Smarty\_Internal\_Runtime\_Foreach}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___foreach_ac4e90fc78831e12a6e23cbcf1be40d5c}{init}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$from, \$item, \$need\+Total=false, \$key=null, \$name=null, \$\mbox{\hyperlink{classproperties}{properties}}=\mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}())
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___foreach_a0ded2e7621981be308561a4d7519d1e7}{count}} (\$value)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___foreach_a10cb611561c32ea3fae70e8be465f460}{restore}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$levels=1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___internal___runtime___foreach_a0ded2e7621981be308561a4d7519d1e7}\label{class_smarty___internal___runtime___foreach_a0ded2e7621981be308561a4d7519d1e7}} 
+\index{Smarty\_Internal\_Runtime\_Foreach@{Smarty\_Internal\_Runtime\_Foreach}!count@{count}}
+\index{count@{count}!Smarty\_Internal\_Runtime\_Foreach@{Smarty\_Internal\_Runtime\_Foreach}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+\mbox{[}util function\mbox{]} counts an array, array\+Access/traversable or P\+D\+O\+Statement object
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the count for arrays and objects that implement countable, 1 for other objects that don\textquotesingle{}t, and 0 for empty elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___runtime___foreach_ac4e90fc78831e12a6e23cbcf1be40d5c}\label{class_smarty___internal___runtime___foreach_ac4e90fc78831e12a6e23cbcf1be40d5c}} 
+\index{Smarty\_Internal\_Runtime\_Foreach@{Smarty\_Internal\_Runtime\_Foreach}!init@{init}}
+\index{init@{init}!Smarty\_Internal\_Runtime\_Foreach@{Smarty\_Internal\_Runtime\_Foreach}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$from,  }\item[{}]{\$item,  }\item[{}]{\$need\+Total = {\ttfamily false},  }\item[{}]{\$key = {\ttfamily null},  }\item[{}]{\$name = {\ttfamily null},  }\item[{}]{\$properties = {\ttfamily \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()} }\end{DoxyParamCaption})}
+
+Init foreach loop
+\begin{DoxyItemize}
+\item save item and key variables, named foreach property data if defined
+\item init item and key variables, named foreach property data if required
+\item count total if required
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+mixed & {\em \$from} & values to loop over \\
+\hline
+string & {\em \$item} & variable name \\
+\hline
+bool & {\em \$need\+Total} & flag if we need to count values \\
+\hline
+null | string & {\em \$key} & variable name \\
+\hline
+null | string & {\em \$name} & of named foreach \\
+\hline
+array & {\em \$properties} & of named foreach\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed \$from 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___runtime___foreach_a10cb611561c32ea3fae70e8be465f460}\label{class_smarty___internal___runtime___foreach_a10cb611561c32ea3fae70e8be465f460}} 
+\index{Smarty\_Internal\_Runtime\_Foreach@{Smarty\_Internal\_Runtime\_Foreach}!restore@{restore}}
+\index{restore@{restore}!Smarty\_Internal\_Runtime\_Foreach@{Smarty\_Internal\_Runtime\_Foreach}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily restore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$levels = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Restore saved variables
+
+will be called by \{break n\} or \{continue n\} for the required number of levels
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+int & {\em \$levels} & number of levels \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/sysplugins/\mbox{\hyperlink{smarty__internal__runtime__foreach_8php}{smarty\+\_\+internal\+\_\+runtime\+\_\+foreach.\+php}}\end{DoxyCompactItemize}

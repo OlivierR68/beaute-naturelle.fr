@@ -1,4 +1,4 @@
-\doxysection{Events\+\_\+manager Class Reference}
+\hypertarget{class_events__manager}{}\doxysection{Events\+\_\+manager Class Reference}
 \label{class_events__manager}\index{Events\_manager@{Events\_manager}}
 Inheritance diagram for Events\+\_\+manager\+:\begin{figure}[H]
 \begin{center}
@@ -9,11 +9,157 @@ Inheritance diagram for Events\+\_\+manager\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{class_events__manager_a73a1b0348919b6755e4f69dcc70eba64}} 
-{\bfseries find\+All} ()
+\mbox{\hyperlink{class_events__manager_a73a1b0348919b6755e4f69dcc70eba64}{find\+All}} ()
+\item 
+\mbox{\hyperlink{class_events__manager_aa9c5c98caad5631dfe929f1cb2e8ce9b}{inscription}} (\$event\+\_\+id, \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events__manager_aadbcbd53cc68b1e3cca2e7a05b8a8a6a}{get\+Filling}} (\$event\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events__manager_a9a947b01ac9884944047e41e158a851a}{is\+\_\+registered}} (\$event\+\_\+id, \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events__manager_aa85567bab816d0c34390dc49d41fc237}{need\+\_\+moderate}} ()
+\item 
+\mbox{\hyperlink{class_events__manager_a28032439720eaffe48a52a07dc0dee2f}{unregister}} (\$event\+\_\+id, \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events__manager_adf1a35ad20e475c59cc0967d5764aa22}{get\+Request}} ()
+\item 
+\mbox{\hyperlink{class_events__manager_a3323ccf6ae1a31274a65d92c6457e745}{new}} (\$obj)
+\item 
+\mbox{\hyperlink{class_events__manager_aba16c31123508b087d457165c732abff}{find\+One}} (\$id)
+\item 
+\mbox{\hyperlink{class_events__manager_abe62d28c10800e8e62701357e5e1e84a}{update}} (\$obj)
+\item 
+\mbox{\hyperlink{class_events__manager_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_events__manager_a07b5e6baa2b5706d945ed0c1d28b2302}{copy}} (\$id)
+\item 
+\mbox{\hyperlink{class_events__manager_af0f24e29a9d70ed2dfdf9921154814df}{accept\+\_\+user}} (\$event\+\_\+id, \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events__manager_aa96200d9ffeb698bd0e359d70909278d}{refuse\+\_\+user}} (\$event\+\_\+id, \$user\+\_\+id)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_events__manager_af0f24e29a9d70ed2dfdf9921154814df}\label{class_events__manager_af0f24e29a9d70ed2dfdf9921154814df}} 
+\index{Events\_manager@{Events\_manager}!accept\_user@{accept\_user}}
+\index{accept\_user@{accept\_user}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{accept\_user()}{accept\_user()}}
+{\footnotesize\ttfamily accept\+\_\+user (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_a07b5e6baa2b5706d945ed0c1d28b2302}\label{class_events__manager_a07b5e6baa2b5706d945ed0c1d28b2302}} 
+\index{Events\_manager@{Events\_manager}!copy@{copy}}
+\index{copy@{copy}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily copy (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Duplication d\textquotesingle{}1 événement 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant de l\textquotesingle{}événement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_events__manager_a2f8258add505482d7f00ea26493a5723}\label{class_events__manager_a2f8258add505482d7f00ea26493a5723}} 
+\index{Events\_manager@{Events\_manager}!delete@{delete}}
+\index{delete@{delete}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Suppression d\textquotesingle{}1 événement 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant de l\textquotesingle{}événement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_events__manager_a73a1b0348919b6755e4f69dcc70eba64}\label{class_events__manager_a73a1b0348919b6755e4f69dcc70eba64}} 
+\index{Events\_manager@{Events\_manager}!findAll@{findAll}}
+\index{findAll@{findAll}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{findAll()}{findAll()}}
+{\footnotesize\ttfamily find\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retourne la liste de tous les événements \mbox{\Hypertarget{class_events__manager_aba16c31123508b087d457165c732abff}\label{class_events__manager_aba16c31123508b087d457165c732abff}} 
+\index{Events\_manager@{Events\_manager}!findOne@{findOne}}
+\index{findOne@{findOne}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{findOne()}{findOne()}}
+{\footnotesize\ttfamily find\+One (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Récupération d\textquotesingle{}1 événement 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant de l\textquotesingle{}événement dans la bdd \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array les valeurs de l\textquotesingle{}événement avec clefs d\textquotesingle{}association 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_events__manager_aadbcbd53cc68b1e3cca2e7a05b8a8a6a}\label{class_events__manager_aadbcbd53cc68b1e3cca2e7a05b8a8a6a}} 
+\index{Events\_manager@{Events\_manager}!getFilling@{getFilling}}
+\index{getFilling@{getFilling}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{getFilling()}{getFilling()}}
+{\footnotesize\ttfamily get\+Filling (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_adf1a35ad20e475c59cc0967d5764aa22}\label{class_events__manager_adf1a35ad20e475c59cc0967d5764aa22}} 
+\index{Events\_manager@{Events\_manager}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_aa9c5c98caad5631dfe929f1cb2e8ce9b}\label{class_events__manager_aa9c5c98caad5631dfe929f1cb2e8ce9b}} 
+\index{Events\_manager@{Events\_manager}!inscription@{inscription}}
+\index{inscription@{inscription}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{inscription()}{inscription()}}
+{\footnotesize\ttfamily inscription (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_a9a947b01ac9884944047e41e158a851a}\label{class_events__manager_a9a947b01ac9884944047e41e158a851a}} 
+\index{Events\_manager@{Events\_manager}!is\_registered@{is\_registered}}
+\index{is\_registered@{is\_registered}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{is\_registered()}{is\_registered()}}
+{\footnotesize\ttfamily is\+\_\+registered (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_aa85567bab816d0c34390dc49d41fc237}\label{class_events__manager_aa85567bab816d0c34390dc49d41fc237}} 
+\index{Events\_manager@{Events\_manager}!need\_moderate@{need\_moderate}}
+\index{need\_moderate@{need\_moderate}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{need\_moderate()}{need\_moderate()}}
+{\footnotesize\ttfamily need\+\_\+moderate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_a3323ccf6ae1a31274a65d92c6457e745}\label{class_events__manager_a3323ccf6ae1a31274a65d92c6457e745}} 
+\index{Events\_manager@{Events\_manager}!new@{new}}
+\index{new@{new}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{new()}{new()}}
+{\footnotesize\ttfamily new (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+Création d\textquotesingle{}1 événement 
+\begin{DoxyParams}{Parameters}
+{\em \$obj} & object \mbox{\hyperlink{class_event__class}{Event\+\_\+class}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string l\textquotesingle{}id de l\textquotesingle{}insert 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_events__manager_aa96200d9ffeb698bd0e359d70909278d}\label{class_events__manager_aa96200d9ffeb698bd0e359d70909278d}} 
+\index{Events\_manager@{Events\_manager}!refuse\_user@{refuse\_user}}
+\index{refuse\_user@{refuse\_user}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{refuse\_user()}{refuse\_user()}}
+{\footnotesize\ttfamily refuse\+\_\+user (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_a28032439720eaffe48a52a07dc0dee2f}\label{class_events__manager_a28032439720eaffe48a52a07dc0dee2f}} 
+\index{Events\_manager@{Events\_manager}!unregister@{unregister}}
+\index{unregister@{unregister}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{unregister()}{unregister()}}
+{\footnotesize\ttfamily unregister (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events__manager_abe62d28c10800e8e62701357e5e1e84a}\label{class_events__manager_abe62d28c10800e8e62701357e5e1e84a}} 
+\index{Events\_manager@{Events\_manager}!update@{update}}
+\index{update@{update}!Events\_manager@{Events\_manager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+Création d\textquotesingle{}1 événement 
+\begin{DoxyParams}{Parameters}
+{\em \$obj} & object \mbox{\hyperlink{class_event__class}{Event\+\_\+class}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string l\textquotesingle{}id de l\textquotesingle{}insert 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/application/models/Events\+\_\+manager.\+php\end{DoxyCompactItemize}
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/models/\mbox{\hyperlink{_events__manager_8php}{Events\+\_\+manager.\+php}}\end{DoxyCompactItemize}

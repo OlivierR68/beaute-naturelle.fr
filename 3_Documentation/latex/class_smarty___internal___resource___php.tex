@@ -1,0 +1,108 @@
+\hypertarget{class_smarty___internal___resource___php}{}\doxysection{Smarty\+\_\+\+Internal\+\_\+\+Resource\+\_\+\+Php Class Reference}
+\label{class_smarty___internal___resource___php}\index{Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}}
+Inheritance diagram for Smarty\+\_\+\+Internal\+\_\+\+Resource\+\_\+\+Php\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_smarty___internal___resource___php}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___resource___php_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_smarty___internal___resource___php_a0e40116a3d4f59cf7ea39f83441169b8}{get\+Content}} (\mbox{\hyperlink{class_smarty___template___source}{Smarty\+\_\+\+Template\+\_\+\+Source}} \$\mbox{\hyperlink{class_smarty___resource_ab6ac6b66dac2da6c41a178102f7d53e4}{source}})
+\item 
+\mbox{\hyperlink{class_smarty___internal___resource___php_a86942e3e87336b2ffea8a520eeae8428}{populate\+Compiled\+Filepath}} (\mbox{\hyperlink{class_smarty___template___compiled}{Smarty\+\_\+\+Template\+\_\+\+Compiled}} \$compiled, \mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$\+\_\+template)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___resource___php_ab058dde32f958583924531d198c63225}{\$uncompiled}} = true
+\item 
+\mbox{\hyperlink{class_smarty___internal___resource___php_a2096d1b76c972c4d6675f62cbcb5d589}{\$has\+Compiled\+Handler}} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___resource___php_a28ea89bb1378d44fc14ac8d284bc73b6}{\$short\+\_\+open\+\_\+tag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_smarty___internal___resource___php_a095c5d389db211932136b53f25f39685}\label{class_smarty___internal___resource___php_a095c5d389db211932136b53f25f39685}} 
+\index{Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a new P\+HP \mbox{\hyperlink{namespace_resource}{Resource}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___internal___resource___php_a0e40116a3d4f59cf7ea39f83441169b8}\label{class_smarty___internal___resource___php_a0e40116a3d4f59cf7ea39f83441169b8}} 
+\index{Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}!getContent@{getContent}}
+\index{getContent@{getContent}!Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}}
+\doxysubsubsection{\texorpdfstring{getContent()}{getContent()}}
+{\footnotesize\ttfamily get\+Content (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___template___source}{Smarty\+\_\+\+Template\+\_\+\+Source}}}]{\$source }\end{DoxyParamCaption})}
+
+Load template\textquotesingle{}s source from file into current template object
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_smarty___template___source}{Smarty\+\_\+\+Template\+\_\+\+Source}} & {\em \$source} & source object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string template source 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_smarty_exception}{Smarty\+Exception}}} & if source cannot be loaded \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___internal___resource___file_a0e40116a3d4f59cf7ea39f83441169b8}{Smarty\+\_\+\+Internal\+\_\+\+Resource\+\_\+\+File}}.
+
+\mbox{\Hypertarget{class_smarty___internal___resource___php_a86942e3e87336b2ffea8a520eeae8428}\label{class_smarty___internal___resource___php_a86942e3e87336b2ffea8a520eeae8428}} 
+\index{Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}!populateCompiledFilepath@{populateCompiledFilepath}}
+\index{populateCompiledFilepath@{populateCompiledFilepath}!Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}}
+\doxysubsubsection{\texorpdfstring{populateCompiledFilepath()}{populateCompiledFilepath()}}
+{\footnotesize\ttfamily populate\+Compiled\+Filepath (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___template___compiled}{Smarty\+\_\+\+Template\+\_\+\+Compiled}}}]{\$compiled,  }\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$\+\_\+template }\end{DoxyParamCaption})}
+
+populate compiled object with compiled filepath
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_smarty___template___compiled}{Smarty\+\_\+\+Template\+\_\+\+Compiled}} & {\em \$compiled} & compiled object \\
+\hline
+\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} & {\em \$\+\_\+template} & template object (is ignored) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___internal___resource___php_a2096d1b76c972c4d6675f62cbcb5d589}\label{class_smarty___internal___resource___php_a2096d1b76c972c4d6675f62cbcb5d589}} 
+\index{Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}!\$hasCompiledHandler@{\$hasCompiledHandler}}
+\index{\$hasCompiledHandler@{\$hasCompiledHandler}!Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}}
+\doxysubsubsection{\texorpdfstring{\$hasCompiledHandler}{$hasCompiledHandler}}
+{\footnotesize\ttfamily \$has\+Compiled\+Handler = true}
+
+\mbox{\Hypertarget{class_smarty___internal___resource___php_a28ea89bb1378d44fc14ac8d284bc73b6}\label{class_smarty___internal___resource___php_a28ea89bb1378d44fc14ac8d284bc73b6}} 
+\index{Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}!\$short\_open\_tag@{\$short\_open\_tag}}
+\index{\$short\_open\_tag@{\$short\_open\_tag}!Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}}
+\doxysubsubsection{\texorpdfstring{\$short\_open\_tag}{$short\_open\_tag}}
+{\footnotesize\ttfamily \$short\+\_\+open\+\_\+tag\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___internal___resource___php_ab058dde32f958583924531d198c63225}\label{class_smarty___internal___resource___php_ab058dde32f958583924531d198c63225}} 
+\index{Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}!\$uncompiled@{\$uncompiled}}
+\index{\$uncompiled@{\$uncompiled}!Smarty\_Internal\_Resource\_Php@{Smarty\_Internal\_Resource\_Php}}
+\doxysubsubsection{\texorpdfstring{\$uncompiled}{$uncompiled}}
+{\footnotesize\ttfamily \$uncompiled = true}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/sysplugins/\mbox{\hyperlink{smarty__internal__resource__php_8php}{smarty\+\_\+internal\+\_\+resource\+\_\+php.\+php}}\end{DoxyCompactItemize}

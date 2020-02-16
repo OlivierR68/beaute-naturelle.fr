@@ -1,0 +1,47 @@
+\hypertarget{function_8mailto_8php}{}\doxysection{C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/plugins/function.mailto.\+php File Reference}
+\label{function_8mailto_8php}\index{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/function.mailto.php@{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/function.mailto.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_smarty}{Smarty}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{function_8mailto_8php_af28a142b02451fe3c2b7cf650bbd84f5}{smarty\+\_\+function\+\_\+mailto}} (\$params)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{function_8mailto_8php_af28a142b02451fe3c2b7cf650bbd84f5}\label{function_8mailto_8php_af28a142b02451fe3c2b7cf650bbd84f5}} 
+\index{function.mailto.php@{function.mailto.php}!smarty\_function\_mailto@{smarty\_function\_mailto}}
+\index{smarty\_function\_mailto@{smarty\_function\_mailto}!function.mailto.php@{function.mailto.php}}
+\doxysubsubsection{\texorpdfstring{smarty\_function\_mailto()}{smarty\_function\_mailto()}}
+{\footnotesize\ttfamily smarty\+\_\+function\+\_\+mailto (\begin{DoxyParamCaption}\item[{}]{\$params }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_smarty}{Smarty}} \{mailto\} function plugin Type\+: function Name\+: mailto Date\+: May 21, 2002 Purpose\+: automate mailto address link creation, and optionally encode them. Params\+:
+
+
+\begin{DoxyItemize}
+\item address -\/ (required) -\/ e-\/mail address
+\item text -\/ (optional) -\/ text to display, default is address
+\item encode -\/ (optional) -\/ can be one of\+:
+\begin{DoxyItemize}
+\item none \+: no encoding (default)
+\item javascript \+: encode with javascript
+\item javascript\+\_\+charcode \+: encode with javascript charcode
+\item hex \+: encode with hexadecimal (no javascript)
+\end{DoxyItemize}
+\item cc -\/ (optional) -\/ address(es) to carbon copy
+\item bcc -\/ (optional) -\/ address(es) to blind carbon copy
+\item subject -\/ (optional) -\/ e-\/mail subject
+\item newsgroups -\/ (optional) -\/ newsgroup(s) to post to
+\item followupto -\/ (optional) -\/ address(es) to follow up to
+\item extra -\/ (optional) -\/ extra tags for the href link
+\end{DoxyItemize}
+
+Examples\+:
+
+\{mailto address=\char`\"{}me@domain.\+com\char`\"{}\} \{mailto address=\char`\"{}me@domain.\+com\char`\"{} encode=\char`\"{}javascript\char`\"{}\} \{mailto address=\char`\"{}me@domain.\+com\char`\"{} encode=\char`\"{}hex\char`\"{}\} \{mailto address=\char`\"{}me@domain.\+com\char`\"{} subject=\char`\"{}\+Hello to you!\char`\"{}\} \{mailto address=\char`\"{}me@domain.\+com\char`\"{} cc=\char`\"{}you@domain.\+com,they@domain.\+com\char`\"{}\} \{mailto address=\char`\"{}me@domain.\+com\char`\"{} extra=\textquotesingle{}class=\char`\"{}mailto\char`\"{}\textquotesingle{}\}
+
+\mbox{\hyperlink{}{\{mailto\} (Smarty online manual)  1.\+2  Monte Ohrt $<$monte at ohrt dot com$>$  credits to Jason Sweat (added cc, bcc and subject functionality)  array \$params parameters  string }}

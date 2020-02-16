@@ -1,4 +1,4 @@
-\doxysection{Events Class Reference}
+\hypertarget{class_events}{}\doxysection{Events Class Reference}
 \label{class_events}\index{Events@{Events}}
 Inheritance diagram for Events\+:\begin{figure}[H]
 \begin{center}
@@ -9,14 +9,136 @@ Inheritance diagram for Events\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{class_events_a149eb92716c1084a935e04a8d95f7347}} 
-{\bfseries index} ()
+\mbox{\hyperlink{class_events_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
 \item 
-\mbox{\label{class_events_a57368f5de3725377bc91899ab1a2b02a}} 
-{\bfseries back} ()
+\mbox{\hyperlink{class_events_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_events_a5feef34fe27d68b9c3fecb5a141e73a0}{ev}} (\$id)
+\item 
+\mbox{\hyperlink{class_events_aaa492649fac3a0cbcb634b5024c1325d}{register}} (\$event\+\_\+id, \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events_a28032439720eaffe48a52a07dc0dee2f}{unregister}} (\$event\+\_\+id, \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events_ad194e803e2214134564c336e093f9a8a}{List\+Page}} ()
+\item 
+\mbox{\hyperlink{class_events_a62bfa4327c16425edb469078780f32e0}{add\+Edit}} (\$id=-\/1)
+\item 
+\mbox{\hyperlink{class_events_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_events_a07b5e6baa2b5706d945ed0c1d28b2302}{copy}} (\$id)
+\item 
+\mbox{\hyperlink{class_events_af0f24e29a9d70ed2dfdf9921154814df}{accept\+\_\+user}} (\$event\+\_\+id, \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_events_aa96200d9ffeb698bd0e359d70909278d}{refuse\+\_\+user}} (\$event\+\_\+id, \$user\+\_\+id)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller \mbox{\hyperlink{class_slides}{Slides}} \begin{DoxyAuthor}{Author}
+Marc Chanteranne 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+version 1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_events_a095c5d389db211932136b53f25f39685}\label{class_events_a095c5d389db211932136b53f25f39685}} 
+\index{Events@{Events}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_events_af0f24e29a9d70ed2dfdf9921154814df}\label{class_events_af0f24e29a9d70ed2dfdf9921154814df}} 
+\index{Events@{Events}!accept\_user@{accept\_user}}
+\index{accept\_user@{accept\_user}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{accept\_user()}{accept\_user()}}
+{\footnotesize\ttfamily accept\+\_\+user (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events_a62bfa4327c16425edb469078780f32e0}\label{class_events_a62bfa4327c16425edb469078780f32e0}} 
+\index{Events@{Events}!addEdit@{addEdit}}
+\index{addEdit@{addEdit}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{addEdit()}{addEdit()}}
+{\footnotesize\ttfamily add\+Edit (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Fonction permettant de créer ou de modifier un événement 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant bdd de l\textquotesingle{}événement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_events_a07b5e6baa2b5706d945ed0c1d28b2302}\label{class_events_a07b5e6baa2b5706d945ed0c1d28b2302}} 
+\index{Events@{Events}!copy@{copy}}
+\index{copy@{copy}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily copy (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Fonction permettant de copier un événement et de rediriger sur la page de la liste 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant bdd de l\textquotesingle{}événement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_events_a2f8258add505482d7f00ea26493a5723}\label{class_events_a2f8258add505482d7f00ea26493a5723}} 
+\index{Events@{Events}!delete@{delete}}
+\index{delete@{delete}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Fonction permettant de supprimer un événement et de rediriger sur la page de la liste 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant bdd de l\textquotesingle{}événement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_events_a5feef34fe27d68b9c3fecb5a141e73a0}\label{class_events_a5feef34fe27d68b9c3fecb5a141e73a0}} 
+\index{Events@{Events}!ev@{ev}}
+\index{ev@{ev}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{ev()}{ev()}}
+{\footnotesize\ttfamily ev (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Fonction permettant d\textquotesingle{}afficher un évenement en particulier dans le front 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & de l\textquotesingle{}even \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_events_a149eb92716c1084a935e04a8d95f7347}\label{class_events_a149eb92716c1084a935e04a8d95f7347}} 
+\index{Events@{Events}!index@{index}}
+\index{index@{index}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fonction permettant d\textquotesingle{}afficher la liste des événements dans le front \mbox{\Hypertarget{class_events_ad194e803e2214134564c336e093f9a8a}\label{class_events_ad194e803e2214134564c336e093f9a8a}} 
+\index{Events@{Events}!ListPage@{ListPage}}
+\index{ListPage@{ListPage}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{ListPage()}{ListPage()}}
+{\footnotesize\ttfamily List\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fonction permettant d\textquotesingle{}afficher la liste des événements dans le back 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant bdd du slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_events_aa96200d9ffeb698bd0e359d70909278d}\label{class_events_aa96200d9ffeb698bd0e359d70909278d}} 
+\index{Events@{Events}!refuse\_user@{refuse\_user}}
+\index{refuse\_user@{refuse\_user}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{refuse\_user()}{refuse\_user()}}
+{\footnotesize\ttfamily refuse\+\_\+user (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events_aaa492649fac3a0cbcb634b5024c1325d}\label{class_events_aaa492649fac3a0cbcb634b5024c1325d}} 
+\index{Events@{Events}!register@{register}}
+\index{register@{register}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_events_a28032439720eaffe48a52a07dc0dee2f}\label{class_events_a28032439720eaffe48a52a07dc0dee2f}} 
+\index{Events@{Events}!unregister@{unregister}}
+\index{unregister@{unregister}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{unregister()}{unregister()}}
+{\footnotesize\ttfamily unregister (\begin{DoxyParamCaption}\item[{}]{\$event\+\_\+id,  }\item[{}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/application/controllers/Events.\+php\end{DoxyCompactItemize}
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/controllers/\mbox{\hyperlink{_events_8php}{Events.\+php}}\end{DoxyCompactItemize}

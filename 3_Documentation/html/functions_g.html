@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Beauté Naturelle: Data Fields</title>
+<title>Beauté-naturelle: Data Fields</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -20,8 +24,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="favicon-64.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Beauté Naturelle
+   <div id="projectname">Beauté-naturelle
    </div>
   </td>
  </tr>
@@ -46,6 +51,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions_g.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,158 +82,230 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented struct and union fields with links to the struct/union documentation for each field:</div>
+<div class="textblock">Here is a list of all struct and union fields with links to the structures/unions they belong to:</div>
 
 <h3><a id="index_g"></a>- g -</h3><ul>
-<li>gc()
-: <a class="el" href="class_c_i___session__database__driver.html#a57aff7ee0656d8aa75d545fb8b3ae35d">CI_Session_database_driver</a>
-, <a class="el" href="class_c_i___session__files__driver.html#a57aff7ee0656d8aa75d545fb8b3ae35d">CI_Session_files_driver</a>
-, <a class="el" href="class_c_i___session__memcached__driver.html#a57aff7ee0656d8aa75d545fb8b3ae35d">CI_Session_memcached_driver</a>
-, <a class="el" href="class_c_i___session__redis__driver.html#a57aff7ee0656d8aa75d545fb8b3ae35d">CI_Session_redis_driver</a>
+<li>getAge()
+: <a class="el" href="class_user__class.html#aa45b65846565bea3073f766710582a3f">User_class</a>
 </li>
-<li>gd_loaded()
-: <a class="el" href="class_c_i___image__lib.html#a04376d5530f38a1a61f59c2d769284ba">CI_Image_lib</a>
+<li>getArray()
+: <a class="el" href="class_category__class.html#a1ccf58e5634271a15f24d95d191868b6">Category_class</a>
+, <a class="el" href="class_event__class.html#a881001d2dcdb8384aa41b92220746857">Event_class</a>
+, <a class="el" href="class_images__class.html#a1ccf58e5634271a15f24d95d191868b6">Images_class</a>
+, <a class="el" href="class_prestation__class.html#a1ccf58e5634271a15f24d95d191868b6">Prestation_class</a>
+, <a class="el" href="class_slide__class.html#a1ccf58e5634271a15f24d95d191868b6">Slide_class</a>
+, <a class="el" href="class_sub_category__class.html#a1ccf58e5634271a15f24d95d191868b6">SubCategory_class</a>
+, <a class="el" href="class_user__class.html#a1ccf58e5634271a15f24d95d191868b6">User_class</a>
 </li>
-<li>gd_version()
-: <a class="el" href="class_c_i___image__lib.html#a7d141f85d677d5e6db12020009569fde">CI_Image_lib</a>
+<li>getAuthor()
+: <a class="el" href="class_images__class.html#a5286e30390ae3e1b274940286493dd24">Images_class</a>
 </li>
-<li>generate()
-: <a class="el" href="class_c_i___calendar.html#aabfc9d516a481b11230cd6562f6809f2">CI_Calendar</a>
-, <a class="el" href="class_c_i___table.html#ad46f79939e16f261c19157809d56aab8">CI_Table</a>
+<li>getAvatar()
+: <a class="el" href="class_user__class.html#a1187cffccd2c30f1d108bd8388e19925">User_class</a>
 </li>
-<li>generate_json()
-: <a class="el" href="class_c_i___javascript.html#ae60bb50a1e4cbbce1f6c29a73fad5e07">CI_Javascript</a>
+<li>getAvatarUrl()
+: <a class="el" href="class_user__class.html#a1fc440a13f900f4e9bc33d1c1a430c28">User_class</a>
 </li>
-<li>get()
-: <a class="el" href="class_c_i___cache.html#a50e3bfb586b2f42932a6a93f3fbb0828">CI_Cache</a>
-, <a class="el" href="class_c_i___cache__apc.html#a50e3bfb586b2f42932a6a93f3fbb0828">CI_Cache_apc</a>
-, <a class="el" href="class_c_i___cache__dummy.html#a50e3bfb586b2f42932a6a93f3fbb0828">CI_Cache_dummy</a>
-, <a class="el" href="class_c_i___cache__file.html#a50e3bfb586b2f42932a6a93f3fbb0828">CI_Cache_file</a>
-, <a class="el" href="class_c_i___cache__memcached.html#a50e3bfb586b2f42932a6a93f3fbb0828">CI_Cache_memcached</a>
-, <a class="el" href="class_c_i___cache__redis.html#a24a9bf83a1002d46ece83a93d14bd921">CI_Cache_redis</a>
-, <a class="el" href="class_c_i___cache__wincache.html#a50e3bfb586b2f42932a6a93f3fbb0828">CI_Cache_wincache</a>
-, <a class="el" href="class_c_i___d_b__query__builder.html#a02c629b7cdb54c95ccc23c21d910320d">CI_DB_query_builder</a>
-, <a class="el" href="class_c_i___input.html#a970536cd64a3d4457502140cce03fb05">CI_Input</a>
+<li>getCapacity()
+: <a class="el" href="class_event__class.html#a3af0750b12d40d56fd31b1263f6910bf">Event_class</a>
 </li>
-<li>get_compiled_delete()
-: <a class="el" href="class_c_i___d_b__query__builder.html#a3e2f8775363646e099009ff62b25a21a">CI_DB_query_builder</a>
+<li>getCat_title()
+: <a class="el" href="class_prestation__class.html#a7bc3380b7617e39e46e1f324b6611847">Prestation_class</a>
+, <a class="el" href="class_sub_category__class.html#a7bc3380b7617e39e46e1f324b6611847">SubCategory_class</a>
 </li>
-<li>get_compiled_insert()
-: <a class="el" href="class_c_i___d_b__query__builder.html#a09abce3658cfaba8d8a148c91a9be0ea">CI_DB_query_builder</a>
+<li>getContent()
+: <a class="el" href="class_event__class.html#a58e43f09a06ce4e29b192c4e17ce7915">Event_class</a>
 </li>
-<li>get_compiled_select()
-: <a class="el" href="class_c_i___d_b__query__builder.html#a23325dd8908b76e716e430b4968e3987">CI_DB_query_builder</a>
+<li>getCreate_date()
+: <a class="el" href="class_event__class.html#af7669d82a17179d52a2acb1fc144fe3b">Event_class</a>
 </li>
-<li>get_compiled_update()
-: <a class="el" href="class_c_i___d_b__query__builder.html#a77fb150224714405067df7c300c317b0">CI_DB_query_builder</a>
+<li>getCreate_date_form()
+: <a class="el" href="class_event__class.html#a9d08daf17a12ad9912c430f2e423da53">Event_class</a>
 </li>
-<li>get_content_type()
-: <a class="el" href="class_c_i___output.html#a4d8c59d65c47c9146dbc1c7d0c4eccf2">CI_Output</a>
+<li>getDescription()
+: <a class="el" href="class_category__class.html#a2e7bb35c71bf1824456ceb944cb7a845">Category_class</a>
+, <a class="el" href="class_images__class.html#a2e7bb35c71bf1824456ceb944cb7a845">Images_class</a>
 </li>
-<li>get_csrf_hash()
-: <a class="el" href="class_c_i___security.html#a1644fd8967db3a1b94988d730ca34991">CI_Security</a>
+<li>getDuration()
+: <a class="el" href="class_prestation__class.html#ab46fe3d2750728c84bd71ae1bfd08ee8">Prestation_class</a>
 </li>
-<li>get_csrf_token_name()
-: <a class="el" href="class_c_i___security.html#a00640f51b90b7d946e9d3a4f0c9f628e">CI_Security</a>
+<li>getEmail()
+: <a class="el" href="class_user__class.html#a02a01849f28e2535e888ae4ec87b20f2">User_class</a>
 </li>
-<li>get_cursor()
-: <a class="el" href="class_c_i___d_b__oci8__driver.html#aaf8b241dc9ed2d812e965dc882ed9ea3">CI_DB_oci8_driver</a>
+<li>getFilling()
+: <a class="el" href="class_event__class.html#a961f80096cbd89d4ab85b5ee3040aa77">Event_class</a>
+, <a class="el" href="class_events__manager.html#aadbcbd53cc68b1e3cca2e7a05b8a8a6a">Events_manager</a>
 </li>
-<li>get_day_names()
-: <a class="el" href="class_c_i___calendar.html#a31e09ae5dac8a808676ebddab1e735cc">CI_Calendar</a>
+<li>getFirst_name()
+: <a class="el" href="class_user__class.html#ad856ae2b642419f3417c085998001639">User_class</a>
 </li>
-<li>get_extension()
-: <a class="el" href="class_c_i___upload.html#a6c656eedccb1131accc8e350bc50632f">CI_Upload</a>
+<li>getGender()
+: <a class="el" href="class_user__class.html#af7313369f22d5c761e16462abe0c6ae1">User_class</a>
 </li>
-<li>get_flash_keys()
-: <a class="el" href="class_c_i___session.html#a996e70387750cdc480712c1585743d8d">CI_Session</a>
+<li>getHeader()
+: <a class="el" href="class_category__class.html#a614834f1605e407376028e8c82298c82">Category_class</a>
 </li>
-<li>get_header()
-: <a class="el" href="class_c_i___output.html#afc84ca7f4f93817160ea738f2f899a74">CI_Output</a>
-</li>
-<li>get_id()
-: <a class="el" href="class_c_i___trackback.html#a404e345e61e00d5685117a101b5bc71a">CI_Trackback</a>
-</li>
-<li>get_image_properties()
-: <a class="el" href="class_c_i___image__lib.html#a91627ce4406f63c429ab13aab8f0e53c">CI_Image_lib</a>
-</li>
-<li>get_instance()
-: <a class="el" href="class_c_i___controller.html#a8d3cc57e7b6ec94e704712b0f277f5bb">CI_Controller</a>
-</li>
-<li>get_item()
-: <a class="el" href="class_c_i___cart.html#a73841dfae18a2719c7eb6d31978067a9">CI_Cart</a>
-</li>
-<li>get_key()
-: <a class="el" href="class_c_i___encrypt.html#a5ee53ce94c80d9259dee76cefdd2e948">CI_Encrypt</a>
-</li>
-<li>get_metadata()
-: <a class="el" href="class_c_i___cache.html#a59635cf18e997c5141bffa05ff7622e0">CI_Cache</a>
-, <a class="el" href="class_c_i___cache__apc.html#a59635cf18e997c5141bffa05ff7622e0">CI_Cache_apc</a>
-, <a class="el" href="class_c_i___cache__dummy.html#a59635cf18e997c5141bffa05ff7622e0">CI_Cache_dummy</a>
-, <a class="el" href="class_c_i___cache__file.html#a59635cf18e997c5141bffa05ff7622e0">CI_Cache_file</a>
-, <a class="el" href="class_c_i___cache__memcached.html#a59635cf18e997c5141bffa05ff7622e0">CI_Cache_memcached</a>
-, <a class="el" href="class_c_i___cache__redis.html#ae0041475d947465622dfcef1fc53e43d">CI_Cache_redis</a>
-, <a class="el" href="class_c_i___cache__wincache.html#a59635cf18e997c5141bffa05ff7622e0">CI_Cache_wincache</a>
-</li>
-<li>get_month_name()
-: <a class="el" href="class_c_i___calendar.html#a056208e620b0ffc2525a07d8646eb194">CI_Calendar</a>
-</li>
-<li>get_output()
-: <a class="el" href="class_c_i___output.html#aa6c3f8688f804de4f1af8a462fffb922">CI_Output</a>
-</li>
-<li>get_post()
-: <a class="el" href="class_c_i___input.html#aaf7eba2dc5fda4e14ae063f66236821f">CI_Input</a>
-</li>
-<li>get_random_bytes()
-: <a class="el" href="class_c_i___security.html#a7d1d64e6798b98cb46fcdb304a4e1de2">CI_Security</a>
-</li>
-<li>get_request_header()
-: <a class="el" href="class_c_i___input.html#a099af71b54f9edbfb20576a4e8a3df41">CI_Input</a>
-</li>
-<li>get_temp_keys()
-: <a class="el" href="class_c_i___session.html#a4fd9f48ff9bcf093778529cb7389eddb">CI_Session</a>
-</li>
-<li>get_total_days()
-: <a class="el" href="class_c_i___calendar.html#a3c863f62907e445af2711df11fb90ff9">CI_Calendar</a>
-</li>
-<li>get_userdata()
-: <a class="el" href="class_c_i___session.html#a85456fcd9f556e20767051fc33762607">CI_Session</a>
-</li>
-<li>get_where()
-: <a class="el" href="class_c_i___d_b__query__builder.html#a8cae750fdc32b3c91544c091673fd17b">CI_DB_query_builder</a>
-</li>
-<li>get_zip()
-: <a class="el" href="class_c_i___zip.html#a263fd906f99ccca15a12fe34a79656e4">CI_Zip</a>
+<li>getHeaderUrl()
+: <a class="el" href="class_category__class.html#ad5841043bb731dd3dbfe0b98365e67d7">Category_class</a>
 </li>
 <li>getId()
-: <a class="el" href="classcategorie__class.html#a12251d0c022e9e21c137a105ff683f13">categorie_class</a>
+: <a class="el" href="class_category__class.html#a12251d0c022e9e21c137a105ff683f13">Category_class</a>
 , <a class="el" href="class_event__class.html#a12251d0c022e9e21c137a105ff683f13">Event_class</a>
 , <a class="el" href="class_images__class.html#a12251d0c022e9e21c137a105ff683f13">Images_class</a>
-, <a class="el" href="classprestations__class.html#a12251d0c022e9e21c137a105ff683f13">prestations_class</a>
+, <a class="el" href="class_prestation__class.html#a12251d0c022e9e21c137a105ff683f13">Prestation_class</a>
 , <a class="el" href="class_slide__class.html#a12251d0c022e9e21c137a105ff683f13">Slide_class</a>
+, <a class="el" href="class_sub_category__class.html#a12251d0c022e9e21c137a105ff683f13">SubCategory_class</a>
+, <a class="el" href="class_user__class.html#a12251d0c022e9e21c137a105ff683f13">User_class</a>
 </li>
-<li>greater_than()
-: <a class="el" href="class_c_i___form__validation.html#a8dd73c5e1d6880a650bb41e1ec6ee2f4">CI_Form_validation</a>
+<li>getImg()
+: <a class="el" href="class_category__class.html#a2bfa9d0fe5b14b3d25ee0323edb57b7c">Category_class</a>
+, <a class="el" href="class_event__class.html#a2bfa9d0fe5b14b3d25ee0323edb57b7c">Event_class</a>
+, <a class="el" href="class_slide__class.html#a2bfa9d0fe5b14b3d25ee0323edb57b7c">Slide_class</a>
 </li>
-<li>greater_than_equal_to()
-: <a class="el" href="class_c_i___form__validation.html#a003319a504eca3e9d1b608f8e48f2daf">CI_Form_validation</a>
+<li>getImgUrl()
+: <a class="el" href="class_category__class.html#ac9ecc6de4906c5fb10358a2cf7617583">Category_class</a>
+, <a class="el" href="class_event__class.html#ac9ecc6de4906c5fb10358a2cf7617583">Event_class</a>
 </li>
-<li>group_by()
-: <a class="el" href="class_c_i___d_b__query__builder.html#a111cc822f85357c4cfe37886e6315dce">CI_DB_query_builder</a>
+<li>getInscription_date()
+: <a class="el" href="class_user__class.html#a7216c0f4de15fbb9a110da51e53a6319">User_class</a>
 </li>
-<li>group_end()
-: <a class="el" href="class_c_i___d_b__query__builder.html#ad97adc35e18afc9d4f26e0f568cdc6ed">CI_DB_query_builder</a>
+<li>getLast_name()
+: <a class="el" href="class_user__class.html#a3bbc92d09d8aa06d72de300258c48044">User_class</a>
 </li>
-<li>group_start()
-: <a class="el" href="class_c_i___d_b__query__builder.html#a0ad001f7f7d1a41fdee4a85b4f7db9b4">CI_DB_query_builder</a>
+<li>getLibelle()
+: <a class="el" href="class_images__class.html#a72694073dfa7e02d433daa7eeb194fcc">Images_class</a>
+, <a class="el" href="class_slide__class.html#a72694073dfa7e02d433daa7eeb194fcc">Slide_class</a>
+</li>
+<li>getLocalisation()
+: <a class="el" href="class_user__class.html#af4c6e63ec88911de9b83741286710f71">User_class</a>
+</li>
+<li>getModerate()
+: <a class="el" href="class_images__manager.html#a6d3a6a148bf0c8752548e7e7ab149abb">Images_manager</a>
+</li>
+<li>getName()
+: <a class="el" href="class_event__class.html#a3d0963e68bb313b163a73f2803c64600">Event_class</a>
+</li>
+<li>getOrder()
+: <a class="el" href="class_prestation__class.html#a52f1787c1a4941f65bf728ff3289b626">Prestation_class</a>
+, <a class="el" href="class_slide__class.html#a52f1787c1a4941f65bf728ff3289b626">Slide_class</a>
+</li>
+<li>getParent()
+: <a class="el" href="class_sub_category__class.html#a95ecaee3537b1ad29b04ef383a57bbae">SubCategory_class</a>
+</li>
+<li>getParticipants()
+: <a class="el" href="class_users__manager.html#acf7c19d2a4153df3b34256689d543ce0">Users_manager</a>
+</li>
+<li>getPosition()
+: <a class="el" href="class_slide__class.html#a107d1509bfad2c1b7507aac4e81be889">Slide_class</a>
+</li>
+<li>getPresta()
+: <a class="el" href="class_prestations__manager.html#a97f3e74ece3c7a5930666037baa2f72b">Prestations_manager</a>
+</li>
+<li>getPrice()
+: <a class="el" href="class_prestation__class.html#a38146d2beb1dd6dfd0f2a5886e18a538">Prestation_class</a>
+</li>
+<li>getProfil_id()
+: <a class="el" href="class_user__class.html#a9a1d4993ff98d5c7d712e8d63fb21716">User_class</a>
+</li>
+<li>getProfil_libelle()
+: <a class="el" href="class_user__class.html#a8a89096017b66a3a56a9258962239110">User_class</a>
+</li>
+<li>getPseudo()
+: <a class="el" href="class_user__class.html#a7151e41f7b522d26d02102d970e9a309">User_class</a>
+</li>
+<li>getPubli_Date()
+: <a class="el" href="class_images__class.html#ad6f63cfa80645622e65bec2b2330daec">Images_class</a>
+</li>
+<li>getPwd()
+: <a class="el" href="class_user__class.html#a0160ba4e6743352e15383ca3a47c1234">User_class</a>
+</li>
+<li>getRequest()
+: <a class="el" href="class_events__manager.html#adf1a35ad20e475c59cc0967d5764aa22">Events_manager</a>
+</li>
+<li>getSessionData()
+: <a class="el" href="class_users__manager.html#ae850696ec597ae1f7f66996245bd52e1">Users_manager</a>
+</li>
+<li>getShortContent()
+: <a class="el" href="class_event__class.html#ae65724884e2ad3dbe6eb1ab2cbb58684">Event_class</a>
+, <a class="el" href="class_images__class.html#ae65724884e2ad3dbe6eb1ab2cbb58684">Images_class</a>
+</li>
+<li>getShortInfos()
+: <a class="el" href="class_user__class.html#a6e206e439d69429aee52e27dbbcaba3d">User_class</a>
+</li>
+<li>getShortSubtext()
+: <a class="el" href="class_prestation__class.html#a73413cdbce9979cb5d2a0c5a748ba4d1">Prestation_class</a>
+</li>
+<li>getShortTitle()
+: <a class="el" href="class_prestation__class.html#ac296e370084ae30fcf816e6459698d5e">Prestation_class</a>
+, <a class="el" href="class_slide__class.html#a25607715d36d35f4dfd2c2eceeb60345">Slide_class</a>
+</li>
+<li>getSlug()
+: <a class="el" href="class_category__class.html#aba91cb698fc762d9fc0975c9f73ae9c4">Category_class</a>
+, <a class="el" href="class_event__class.html#aba91cb698fc762d9fc0975c9f73ae9c4">Event_class</a>
+, <a class="el" href="class_images__class.html#aba91cb698fc762d9fc0975c9f73ae9c4">Images_class</a>
+</li>
+<li>getSrc()
+: <a class="el" href="class_images__class.html#ae9fe68293ed9520f25e60f43a3c6cd9c">Images_class</a>
+</li>
+<li>getStart_date()
+: <a class="el" href="class_event__class.html#a8adb6edf7bd4e1c90afa59994a691a45">Event_class</a>
+</li>
+<li>getStart_date_form()
+: <a class="el" href="class_event__class.html#a653c6e820dda5d359942b49ac2da44ac">Event_class</a>
+</li>
+<li>getSub_cat()
+: <a class="el" href="class_prestation__class.html#a85a7eabd610afe3e5ca7e0db3532eff5">Prestation_class</a>
+</li>
+<li>getSub_cat_title()
+: <a class="el" href="class_prestation__class.html#a5670db9b2e5e9179ea3ce313568cd0e0">Prestation_class</a>
+</li>
+<li>getSubCat()
+: <a class="el" href="class_prestations__manager.html#a8e2970b835abed2e0bc6efb0eb16da3b">Prestations_manager</a>
+</li>
+<li>getSubtext()
+: <a class="el" href="class_prestation__class.html#a51b3b5f4d1a9501cc7c850defdad71fb">Prestation_class</a>
+</li>
+<li>getTaille()
+: <a class="el" href="class_slide__class.html#a1c5b53626ad0a104882ed2c9dcbaaffd">Slide_class</a>
+</li>
+<li>getTel()
+: <a class="el" href="class_user__class.html#ad70eaa897b2b8632fe613ba4e92ca20b">User_class</a>
+</li>
+<li>getText()
+: <a class="el" href="class_slide__class.html#a8a2999b1d846c0a7bc77187e28facd99">Slide_class</a>
+</li>
+<li>getTitle()
+: <a class="el" href="class_category__class.html#a95e859a4588a39a1824b717378a84c29">Category_class</a>
+, <a class="el" href="class_prestation__class.html#a95e859a4588a39a1824b717378a84c29">Prestation_class</a>
+, <a class="el" href="class_slide__class.html#a95e859a4588a39a1824b717378a84c29">Slide_class</a>
+, <a class="el" href="class_sub_category__class.html#a95e859a4588a39a1824b717378a84c29">SubCategory_class</a>
+</li>
+<li>getType()
+: <a class="el" href="class_slide__class.html#a830b5c75df72b32396701bc563fbe3c7">Slide_class</a>
+</li>
+<li>getUrl()
+: <a class="el" href="class_category__class.html#accd14bda49a1044b4d8dd93f020f11ee">Category_class</a>
+, <a class="el" href="class_event__class.html#accd14bda49a1044b4d8dd93f020f11ee">Event_class</a>
+</li>
+<li>getValidation()
+: <a class="el" href="class_images__class.html#a84c2d98e0ac5da48883e2a239acde469">Images_class</a>
+</li>
+<li>getVisible()
+: <a class="el" href="class_category__class.html#afd9abdc6ad9261029511c06c651571a3">Category_class</a>
+, <a class="el" href="class_prestation__class.html#afd9abdc6ad9261029511c06c651571a3">Prestation_class</a>
+, <a class="el" href="class_slide__class.html#afd9abdc6ad9261029511c06c651571a3">Slide_class</a>
+, <a class="el" href="class_sub_category__class.html#afd9abdc6ad9261029511c06c651571a3">SubCategory_class</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

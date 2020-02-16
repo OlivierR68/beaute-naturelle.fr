@@ -1,0 +1,73 @@
+\hypertarget{function_8html__table_8php}{}\doxysection{C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/plugins/function.html\+\_\+table.\+php File Reference}
+\label{function_8html__table_8php}\index{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/function.html\_table.php@{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/function.html\_table.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_smarty}{Smarty}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{function_8html__table_8php_aaba37d6ab7f0ae0015b004e63cd431a4}{smarty\+\_\+function\+\_\+html\+\_\+table}} (\$params)
+\item 
+\mbox{\hyperlink{function_8html__table_8php_a70c55afc0771e08cb17afa924fe64f44}{smarty\+\_\+function\+\_\+html\+\_\+table\+\_\+cycle}} (\$name, \$var, \$no)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{function_8html__table_8php_aaba37d6ab7f0ae0015b004e63cd431a4}\label{function_8html__table_8php_aaba37d6ab7f0ae0015b004e63cd431a4}} 
+\index{function.html\_table.php@{function.html\_table.php}!smarty\_function\_html\_table@{smarty\_function\_html\_table}}
+\index{smarty\_function\_html\_table@{smarty\_function\_html\_table}!function.html\_table.php@{function.html\_table.php}}
+\doxysubsubsection{\texorpdfstring{smarty\_function\_html\_table()}{smarty\_function\_html\_table()}}
+{\footnotesize\ttfamily smarty\+\_\+function\+\_\+html\+\_\+table (\begin{DoxyParamCaption}\item[{}]{\$params }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_smarty}{Smarty}} \{html\+\_\+table\} function plugin Type\+: function Name\+: html\+\_\+table Date\+: Feb 17, 2003 Purpose\+: make an html table from an array of data Params\+:
+
+
+\begin{DoxyItemize}
+\item loop -\/ array to loop through
+\item cols -\/ number of columns, comma separated list of column names or array of column names
+\item rows -\/ number of rows
+\item table\+\_\+attr -\/ table attributes
+\item th\+\_\+attr -\/ table heading attributes (arrays are cycled)
+\item tr\+\_\+attr -\/ table row attributes (arrays are cycled)
+\item td\+\_\+attr -\/ table cell attributes (arrays are cycled)
+\item trailpad -\/ value to pad trailing cells with
+\item caption -\/ text for caption element
+\item vdir -\/ vertical direction (default\+: \char`\"{}down\char`\"{}, means top-\/to-\/bottom)
+\item hdir -\/ horizontal direction (default\+: \char`\"{}right\char`\"{}, means left-\/to-\/right)
+\item inner -\/ inner loop (default \char`\"{}cols\char`\"{}\+: print \$loop line by line, \$loop will be printed column by column otherwise)
+\end{DoxyItemize}
+
+Examples\+:
+
+\{table loop=\$data\} \{table loop=\$data cols=4 tr\+\_\+attr=\textquotesingle{}\char`\"{}bgcolor=red\char`\"{}\textquotesingle{}\} \{table loop=\$data cols=\char`\"{}first,second,third\char`\"{} tr\+\_\+attr=\$colors\}
+
+\begin{DoxyAuthor}{Author}
+Monte Ohrt $<$monte at ohrt dot com$>$ 
+
+credit to Messju Mohr $<$messju at lammfellpuschen dot de$>$ 
+
+credit to boots $<$boots dot smarty at yahoo dot com$>$ 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 \mbox{\hyperlink{}{\{html\+\_\+table\} (Smarty online manual)  array \$params parameters  string }}
+\end{DoxyVersion}
+\mbox{\Hypertarget{function_8html__table_8php_a70c55afc0771e08cb17afa924fe64f44}\label{function_8html__table_8php_a70c55afc0771e08cb17afa924fe64f44}} 
+\index{function.html\_table.php@{function.html\_table.php}!smarty\_function\_html\_table\_cycle@{smarty\_function\_html\_table\_cycle}}
+\index{smarty\_function\_html\_table\_cycle@{smarty\_function\_html\_table\_cycle}!function.html\_table.php@{function.html\_table.php}}
+\doxysubsubsection{\texorpdfstring{smarty\_function\_html\_table\_cycle()}{smarty\_function\_html\_table\_cycle()}}
+{\footnotesize\ttfamily smarty\+\_\+function\+\_\+html\+\_\+table\+\_\+cycle (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$var,  }\item[{}]{\$no }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$name} & \\
+\hline
+{\em \$var} & \\
+\hline
+{\em \$no} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}

@@ -1,0 +1,88 @@
+\hypertarget{class_smarty___autoloader}{}\doxysection{Smarty\+\_\+\+Autoloader Class Reference}
+\label{class_smarty___autoloader}\index{Smarty\_Autoloader@{Smarty\_Autoloader}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_smarty___autoloader_af99b2955632d43b82b1df480ff63b072}{register\+BC}} (\$prepend=false)
+\item 
+static \mbox{\hyperlink{class_smarty___autoloader_aef39c6066201dbaff9270b675a4b5360}{register}} (\$prepend=false)
+\item 
+static \mbox{\hyperlink{class_smarty___autoloader_ab4c022bf9d3474583030f31894865182}{autoload}} (\$class)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_smarty___autoloader_a011f25502f1fd7847c51201964ab367e}{\$\+S\+M\+A\+R\+T\+Y\+\_\+\+D\+IR}} = null
+\item 
+static \mbox{\hyperlink{class_smarty___autoloader_a32999ea1944e877dd09264ff77b340e5}{\$\+S\+M\+A\+R\+T\+Y\+\_\+\+S\+Y\+S\+P\+L\+U\+G\+I\+N\+S\+\_\+\+D\+IR}} = null
+\item 
+static \mbox{\hyperlink{class_smarty___autoloader_ad87d52b8ea8fbb2c96fdcf3f2c5fa567}{\$root\+Classes}} = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(\textquotesingle{}\mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_af8fbfe9ef62bc62e89e867efb7952f72}{smarty}}\textquotesingle{} =$>$ \textquotesingle{}Smarty.\+class.\+php\textquotesingle{}, \textquotesingle{}smartybc\textquotesingle{} =$>$ \textquotesingle{}Smarty\+B\+C.\+class.\+php\textquotesingle{},)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___autoloader_ab4c022bf9d3474583030f31894865182}\label{class_smarty___autoloader_ab4c022bf9d3474583030f31894865182}} 
+\index{Smarty\_Autoloader@{Smarty\_Autoloader}!autoload@{autoload}}
+\index{autoload@{autoload}!Smarty\_Autoloader@{Smarty\_Autoloader}}
+\doxysubsubsection{\texorpdfstring{autoload()}{autoload()}}
+{\footnotesize\ttfamily static autoload (\begin{DoxyParamCaption}\item[{}]{\$class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Handles auto loading of classes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & A class name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___autoloader_aef39c6066201dbaff9270b675a4b5360}\label{class_smarty___autoloader_aef39c6066201dbaff9270b675a4b5360}} 
+\index{Smarty\_Autoloader@{Smarty\_Autoloader}!register@{register}}
+\index{register@{register}!Smarty\_Autoloader@{Smarty\_Autoloader}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily static register (\begin{DoxyParamCaption}\item[{}]{\$prepend = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers \mbox{\hyperlink{class_smarty___autoloader}{Smarty\+\_\+\+Autoloader}} as an S\+PL autoloader.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$prepend} & Whether to prepend the autoloader or not. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___autoloader_af99b2955632d43b82b1df480ff63b072}\label{class_smarty___autoloader_af99b2955632d43b82b1df480ff63b072}} 
+\index{Smarty\_Autoloader@{Smarty\_Autoloader}!registerBC@{registerBC}}
+\index{registerBC@{registerBC}!Smarty\_Autoloader@{Smarty\_Autoloader}}
+\doxysubsubsection{\texorpdfstring{registerBC()}{registerBC()}}
+{\footnotesize\ttfamily static register\+BC (\begin{DoxyParamCaption}\item[{}]{\$prepend = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers \mbox{\hyperlink{class_smarty___autoloader}{Smarty\+\_\+\+Autoloader}} backward compatible to older installations.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$prepend} & Whether to prepend the autoloader or not. \\
+\hline
+\end{DoxyParams}
+register the class autoloader
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___autoloader_ad87d52b8ea8fbb2c96fdcf3f2c5fa567}\label{class_smarty___autoloader_ad87d52b8ea8fbb2c96fdcf3f2c5fa567}} 
+\index{Smarty\_Autoloader@{Smarty\_Autoloader}!\$rootClasses@{\$rootClasses}}
+\index{\$rootClasses@{\$rootClasses}!Smarty\_Autoloader@{Smarty\_Autoloader}}
+\doxysubsubsection{\texorpdfstring{\$rootClasses}{$rootClasses}}
+{\footnotesize\ttfamily \$root\+Classes = \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}(\textquotesingle{}\mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_af8fbfe9ef62bc62e89e867efb7952f72}{smarty}}\textquotesingle{} =$>$ \textquotesingle{}Smarty.\+class.\+php\textquotesingle{}, \textquotesingle{}smartybc\textquotesingle{} =$>$ \textquotesingle{}Smarty\+B\+C.\+class.\+php\textquotesingle{},)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_smarty___autoloader_a011f25502f1fd7847c51201964ab367e}\label{class_smarty___autoloader_a011f25502f1fd7847c51201964ab367e}} 
+\index{Smarty\_Autoloader@{Smarty\_Autoloader}!\$SMARTY\_DIR@{\$SMARTY\_DIR}}
+\index{\$SMARTY\_DIR@{\$SMARTY\_DIR}!Smarty\_Autoloader@{Smarty\_Autoloader}}
+\doxysubsubsection{\texorpdfstring{\$SMARTY\_DIR}{$SMARTY\_DIR}}
+{\footnotesize\ttfamily \$S\+M\+A\+R\+T\+Y\+\_\+\+D\+IR = null\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_smarty___autoloader_a32999ea1944e877dd09264ff77b340e5}\label{class_smarty___autoloader_a32999ea1944e877dd09264ff77b340e5}} 
+\index{Smarty\_Autoloader@{Smarty\_Autoloader}!\$SMARTY\_SYSPLUGINS\_DIR@{\$SMARTY\_SYSPLUGINS\_DIR}}
+\index{\$SMARTY\_SYSPLUGINS\_DIR@{\$SMARTY\_SYSPLUGINS\_DIR}!Smarty\_Autoloader@{Smarty\_Autoloader}}
+\doxysubsubsection{\texorpdfstring{\$SMARTY\_SYSPLUGINS\_DIR}{$SMARTY\_SYSPLUGINS\_DIR}}
+{\footnotesize\ttfamily \$S\+M\+A\+R\+T\+Y\+\_\+\+S\+Y\+S\+P\+L\+U\+G\+I\+N\+S\+\_\+\+D\+IR = null\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/\mbox{\hyperlink{_autoloader_8php}{Autoloader.\+php}}\end{DoxyCompactItemize}

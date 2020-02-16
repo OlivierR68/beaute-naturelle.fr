@@ -1,0 +1,43 @@
+\hypertarget{shared_8literal__compiler__param_8php}{}\doxysection{C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/plugins/shared.literal\+\_\+compiler\+\_\+param.\+php File Reference}
+\label{shared_8literal__compiler__param_8php}\index{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/shared.literal\_compiler\_param.php@{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/shared.literal\_compiler\_param.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_smarty}{Smarty}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shared_8literal__compiler__param_8php_a1bf286ee79fd6c19b9296aba4acbb9a5}{smarty\+\_\+literal\+\_\+compiler\+\_\+param}} (\$params, \$\mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_ae60deef8e270abc442a2778fbdfe7e05}{index}}, \$default=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{shared_8literal__compiler__param_8php_a1bf286ee79fd6c19b9296aba4acbb9a5}\label{shared_8literal__compiler__param_8php_a1bf286ee79fd6c19b9296aba4acbb9a5}} 
+\index{shared.literal\_compiler\_param.php@{shared.literal\_compiler\_param.php}!smarty\_literal\_compiler\_param@{smarty\_literal\_compiler\_param}}
+\index{smarty\_literal\_compiler\_param@{smarty\_literal\_compiler\_param}!shared.literal\_compiler\_param.php@{shared.literal\_compiler\_param.php}}
+\doxysubsubsection{\texorpdfstring{smarty\_literal\_compiler\_param()}{smarty\_literal\_compiler\_param()}}
+{\footnotesize\ttfamily smarty\+\_\+literal\+\_\+compiler\+\_\+param (\begin{DoxyParamCaption}\item[{}]{\$params,  }\item[{}]{\$index,  }\item[{}]{\$default = {\ttfamily null} }\end{DoxyParamCaption})}
+
+evaluate compiler parameter
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$params} & parameter array as given to the compiler function \\
+\hline
+integer & {\em \$index} & array index of the parameter to convert \\
+\hline
+mixed & {\em \$default} & value to be returned if the parameter is not present\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed evaluated value of parameter or \$default 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_smarty_exception}{Smarty\+Exception}}} & if parameter is not a literal (but an expression, variable, …) \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Rodney Rehm 
+\end{DoxyAuthor}

@@ -22,14 +22,21 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Documentation : beaute-naturelle.fr", "index.html", [
+  [ "Beauté-naturelle", "index.html", [
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -37,7 +44,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_admin_bar_8php.html",
+"class_slide__class.html#abf23c53dd5e53d3c72d8759d6eb36f4c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

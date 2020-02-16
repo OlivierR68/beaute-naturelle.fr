@@ -1,4 +1,4 @@
-\doxysection{Users Class Reference}
+\hypertarget{class_users}{}\doxysection{Users Class Reference}
 \label{class_users}\index{Users@{Users}}
 Inheritance diagram for Users\+:\begin{figure}[H]
 \begin{center}
@@ -9,20 +9,187 @@ Inheritance diagram for Users\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{class_users_a149eb92716c1084a935e04a8d95f7347}} 
-{\bfseries index} ()
+\mbox{\hyperlink{class_users_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_users_aa311da27ba5706f5710cea7706c8eae1}{login}} ()
+\item 
+\mbox{\hyperlink{class_users_acc294a6cc8e69743746820e3d15e3f78}{register}} ()
+\item 
+\mbox{\hyperlink{class_users_a7bd7264f00dc27e7316ac4382a1f0f4c}{profile}} ()
+\item 
+\mbox{\hyperlink{class_users_aaab44a6ad61b8e989d7e10418e5ada46}{upload\+Avatar}} (\$obj\+User)
+\item 
+\mbox{\hyperlink{class_users_a4137d7d674b935d9f753777d5bc759e3}{list\+Page}} ()
+\item 
+\mbox{\hyperlink{class_users_a62bfa4327c16425edb469078780f32e0}{add\+Edit}} (\$id=-\/1)
+\item 
+\mbox{\hyperlink{class_users_a85fae43a984826a3b4446fb5ed6b06f1}{connect}} (\$id)
+\item 
+\mbox{\hyperlink{class_users_abe175fcf658475bc56e9d6fa02bc88ec}{disconnect}} ()
+\item 
+\mbox{\hyperlink{class_users_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_users_abeeafa74a2fd04b765c0af149107e22b}{email\+\_\+check}} (\$email)
+\item 
+\mbox{\hyperlink{class_users_ad9890154daca91fec3c56f23681fc665}{pseudo\+\_\+check}} (\$pseudo)
+\item 
+\mbox{\hyperlink{class_users_a923502e3d7d70214cb0d0bf339ae1099}{pwd\+\_\+check}} (\$pwd)
+\item 
+\mbox{\hyperlink{class_users_add31edc3ff1afd236725c475debff034}{re\+Capcha\+V3}} (\$token)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Controller \doxyref{Users}{p.}{class_users} \begin{DoxyAuthor}{Author}
-Olivier Ravinasaga 
+Controller \mbox{\hyperlink{class_users}{Users}} \begin{DoxyAuthor}{Author}
+Olivier Ravinasaga Controller des utilisateurs 
 \end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
-1 
-\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_users_a095c5d389db211932136b53f25f39685}\label{class_users_a095c5d389db211932136b53f25f39685}} 
+\index{Users@{Users}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_users_a62bfa4327c16425edb469078780f32e0}\label{class_users_a62bfa4327c16425edb469078780f32e0}} 
+\index{Users@{Users}!addEdit@{addEdit}}
+\index{addEdit@{addEdit}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{addEdit()}{addEdit()}}
+{\footnotesize\ttfamily add\+Edit (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Back \+: Affichage de la page de création/modification d\textquotesingle{}un utilisateur 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_users_a85fae43a984826a3b4446fb5ed6b06f1}\label{class_users_a85fae43a984826a3b4446fb5ed6b06f1}} 
+\index{Users@{Users}!connect@{connect}}
+\index{connect@{connect}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily connect (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Connection d\textquotesingle{}un utilisateur sur le site, ouverture de session 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & identifiant utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_users_a2f8258add505482d7f00ea26493a5723}\label{class_users_a2f8258add505482d7f00ea26493a5723}} 
+\index{Users@{Users}!delete@{delete}}
+\index{delete@{delete}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Suprression d\textquotesingle{}un utilisateur 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & identifiant utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_users_abe175fcf658475bc56e9d6fa02bc88ec}\label{class_users_abe175fcf658475bc56e9d6fa02bc88ec}} 
+\index{Users@{Users}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Déconnection utilisateur, destruction de session \mbox{\Hypertarget{class_users_abeeafa74a2fd04b765c0af149107e22b}\label{class_users_abeeafa74a2fd04b765c0af149107e22b}} 
+\index{Users@{Users}!email\_check@{email\_check}}
+\index{email\_check@{email\_check}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{email\_check()}{email\_check()}}
+{\footnotesize\ttfamily email\+\_\+check (\begin{DoxyParamCaption}\item[{}]{\$email }\end{DoxyParamCaption})}
+
+Fonction de vérification de l\textquotesingle{}email, callback pour le form-\/validation de la page register 
+\begin{DoxyParams}{Parameters}
+{\em \$email} & string email à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool false si un l\textquotesingle{}email est déjà présent dans la bdd, true si il n\textquotesingle{}est pas présent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_users_a4137d7d674b935d9f753777d5bc759e3}\label{class_users_a4137d7d674b935d9f753777d5bc759e3}} 
+\index{Users@{Users}!listPage@{listPage}}
+\index{listPage@{listPage}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{listPage()}{listPage()}}
+{\footnotesize\ttfamily list\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Back \+: Affichage de la liste des utilisateurs \mbox{\Hypertarget{class_users_aa311da27ba5706f5710cea7706c8eae1}\label{class_users_aa311da27ba5706f5710cea7706c8eae1}} 
+\index{Users@{Users}!login@{login}}
+\index{login@{login}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Front \+: Affichage de la page login \mbox{\Hypertarget{class_users_a7bd7264f00dc27e7316ac4382a1f0f4c}\label{class_users_a7bd7264f00dc27e7316ac4382a1f0f4c}} 
+\index{Users@{Users}!profile@{profile}}
+\index{profile@{profile}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{profile()}{profile()}}
+{\footnotesize\ttfamily profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Front \+: Affichage de la page profile de l\textquotesingle{}utilisateur \mbox{\Hypertarget{class_users_ad9890154daca91fec3c56f23681fc665}\label{class_users_ad9890154daca91fec3c56f23681fc665}} 
+\index{Users@{Users}!pseudo\_check@{pseudo\_check}}
+\index{pseudo\_check@{pseudo\_check}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{pseudo\_check()}{pseudo\_check()}}
+{\footnotesize\ttfamily pseudo\+\_\+check (\begin{DoxyParamCaption}\item[{}]{\$pseudo }\end{DoxyParamCaption})}
+
+Fonction de vérification du pseudo, callback pour le form-\/validation de la page register 
+\begin{DoxyParams}{Parameters}
+{\em \$pseudo} & string pseudo à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool false si le pseudo est déjà présent dans la bdd, true si il n\textquotesingle{}est pas présent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_users_a923502e3d7d70214cb0d0bf339ae1099}\label{class_users_a923502e3d7d70214cb0d0bf339ae1099}} 
+\index{Users@{Users}!pwd\_check@{pwd\_check}}
+\index{pwd\_check@{pwd\_check}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{pwd\_check()}{pwd\_check()}}
+{\footnotesize\ttfamily pwd\+\_\+check (\begin{DoxyParamCaption}\item[{}]{\$pwd }\end{DoxyParamCaption})}
+
+Fonction de vérification de la force du mot de passe (reg\+Ex), callback pour le form-\/validation de la page register 
+\begin{DoxyParams}{Parameters}
+{\em \$pwd} & string mot de passe à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool false si le mot de passe n\textquotesingle{}est pas assez fort true si il est assez fort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_users_add31edc3ff1afd236725c475debff034}\label{class_users_add31edc3ff1afd236725c475debff034}} 
+\index{Users@{Users}!reCapchaV3@{reCapchaV3}}
+\index{reCapchaV3@{reCapchaV3}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{reCapchaV3()}{reCapchaV3()}}
+{\footnotesize\ttfamily re\+Capcha\+V3 (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+Fonction re\+Capcha\+V3 de google utiliser dans register et login 
+\begin{DoxyParams}{Parameters}
+{\em \$token} & string token envoyé par le formulaire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true si Google determine que l\textquotesingle{}utilisateur est Ok, sinon false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_users_acc294a6cc8e69743746820e3d15e3f78}\label{class_users_acc294a6cc8e69743746820e3d15e3f78}} 
+\index{Users@{Users}!register@{register}}
+\index{register@{register}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Front \+: Affichage de la page d\textquotesingle{}inscription \mbox{\Hypertarget{class_users_aaab44a6ad61b8e989d7e10418e5ada46}\label{class_users_aaab44a6ad61b8e989d7e10418e5ada46}} 
+\index{Users@{Users}!uploadAvatar@{uploadAvatar}}
+\index{uploadAvatar@{uploadAvatar}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{uploadAvatar()}{uploadAvatar()}}
+{\footnotesize\ttfamily upload\+Avatar (\begin{DoxyParamCaption}\item[{}]{\$obj\+User }\end{DoxyParamCaption})}
+
+Front \& Back \+: Fonction d\textquotesingle{}upload de l\textquotesingle{}avatar 
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$obj\+User} & à besoin d\textquotesingle{}un objet de classe \mbox{\hyperlink{class_user__class}{User\+\_\+class}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object avec l\textquotesingle{}attribut avatar ajouter/mis à jour 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/application/controllers/Users.\+php\end{DoxyCompactItemize}
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/controllers/\mbox{\hyperlink{_users_8php}{Users.\+php}}\end{DoxyCompactItemize}

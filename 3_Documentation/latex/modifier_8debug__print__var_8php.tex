@@ -1,0 +1,42 @@
+\hypertarget{modifier_8debug__print__var_8php}{}\doxysection{C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/plugins/modifier.debug\+\_\+print\+\_\+var.\+php File Reference}
+\label{modifier_8debug__print__var_8php}\index{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/modifier.debug\_print\_var.php@{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/modifier.debug\_print\_var.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_smarty}{Smarty}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{modifier_8debug__print__var_8php_a33cb197aa5103546107c8a189c9cb359}{smarty\+\_\+modifier\+\_\+debug\+\_\+print\+\_\+var}} (\$var, \$max=10, \$length=40, \$depth=0, \$objects=\mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{modifier_8debug__print__var_8php_a33cb197aa5103546107c8a189c9cb359}\label{modifier_8debug__print__var_8php_a33cb197aa5103546107c8a189c9cb359}} 
+\index{modifier.debug\_print\_var.php@{modifier.debug\_print\_var.php}!smarty\_modifier\_debug\_print\_var@{smarty\_modifier\_debug\_print\_var}}
+\index{smarty\_modifier\_debug\_print\_var@{smarty\_modifier\_debug\_print\_var}!modifier.debug\_print\_var.php@{modifier.debug\_print\_var.php}}
+\doxysubsubsection{\texorpdfstring{smarty\_modifier\_debug\_print\_var()}{smarty\_modifier\_debug\_print\_var()}}
+{\footnotesize\ttfamily smarty\+\_\+modifier\+\_\+debug\+\_\+print\+\_\+var (\begin{DoxyParamCaption}\item[{}]{\$var,  }\item[{}]{\$max = {\ttfamily 10},  }\item[{}]{\$length = {\ttfamily 40},  }\item[{}]{\$depth = {\ttfamily 0},  }\item[{}]{\$objects = {\ttfamily \mbox{\hyperlink{_n_e_w___f_e_a_t_u_r_e_s_8txt_acce1a433709b1502412e540f358ecfc5}{array}}()} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_smarty}{Smarty}} debug\+\_\+print\+\_\+var modifier plugin Type\+: modifier Name\+: debug\+\_\+print\+\_\+var Purpose\+: formats variable contents for display in the console
+
+\begin{DoxyAuthor}{Author}
+Monte Ohrt $<$monte at ohrt dot com$>$
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+array | object & {\em \$var} & variable to be formatted \\
+\hline
+int & {\em \$max} & maximum recursion depth if \$var is an array or object \\
+\hline
+int & {\em \$length} & maximum string length if \$var is a string \\
+\hline
+int & {\em \$depth} & actual recursion depth \\
+\hline
+array & {\em \$objects} & processed objects in actual depth to prevent recursive object processing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}

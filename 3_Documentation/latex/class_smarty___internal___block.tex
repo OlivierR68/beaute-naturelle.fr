@@ -1,0 +1,122 @@
+\hypertarget{class_smarty___internal___block}{}\doxysection{Smarty\+\_\+\+Internal\+\_\+\+Block Class Reference}
+\label{class_smarty___internal___block}\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a27ad6ed1df8c30e277f2bf182f9095b5}{\+\_\+\+\_\+construct}} (\$name, \$tpl\+Index)
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a9d967c04d6ada9a1070a0fa32eda425a}{call\+Block}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a8f919799c8ec093ef7436076165a19ae}{\$hide}} = false
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a0363de7e77115bb52718abdab127e971}{\$append}} = false
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a829d62e7dd18027c1fc2c9b3fe321ae2}{\$prepend}} = false
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a3a899efac03d02550ae873a7f2eb7f52}{\$calls\+Child}} = false
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a40410074f5960b0491d35e137147571c}{\$child}} = null
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a4e2313a4b35b72a06ac45fd38960f677}{\$parent}} = null
+\item 
+\mbox{\hyperlink{class_smarty___internal___block_a6c8bd063c87f8e127547bbb375f0d557}{\$tpl\+Index}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_smarty___internal___block_a27ad6ed1df8c30e277f2bf182f9095b5}\label{class_smarty___internal___block_a27ad6ed1df8c30e277f2bf182f9095b5}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$tpl\+Index }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_smarty___internal___block}{Smarty\+\_\+\+Internal\+\_\+\+Block}} constructor.
+\begin{DoxyItemize}
+\item if outer level \{block\} of child template (\$state === 1) save it as child root block
+\item otherwise process inheritance and render
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & block name \\
+\hline
+int | null & {\em \$tpl\+Index} & index of outer level \{block\} if nested \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___internal___block_a9d967c04d6ada9a1070a0fa32eda425a}\label{class_smarty___internal___block_a9d967c04d6ada9a1070a0fa32eda425a}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!callBlock@{callBlock}}
+\index{callBlock@{callBlock}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{callBlock()}{callBlock()}}
+{\footnotesize\ttfamily call\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl }\end{DoxyParamCaption})}
+
+Compiled block code overloaded by \{block\} class
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___internal___block_a0363de7e77115bb52718abdab127e971}\label{class_smarty___internal___block_a0363de7e77115bb52718abdab127e971}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$append@{\$append}}
+\index{\$append@{\$append}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$append}{$append}}
+{\footnotesize\ttfamily \$append = false}
+
+\mbox{\Hypertarget{class_smarty___internal___block_a3a899efac03d02550ae873a7f2eb7f52}\label{class_smarty___internal___block_a3a899efac03d02550ae873a7f2eb7f52}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$callsChild@{\$callsChild}}
+\index{\$callsChild@{\$callsChild}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$callsChild}{$callsChild}}
+{\footnotesize\ttfamily \$calls\+Child = false}
+
+\mbox{\Hypertarget{class_smarty___internal___block_a40410074f5960b0491d35e137147571c}\label{class_smarty___internal___block_a40410074f5960b0491d35e137147571c}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$child@{\$child}}
+\index{\$child@{\$child}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$child}{$child}}
+{\footnotesize\ttfamily \$child = null}
+
+\mbox{\Hypertarget{class_smarty___internal___block_a8f919799c8ec093ef7436076165a19ae}\label{class_smarty___internal___block_a8f919799c8ec093ef7436076165a19ae}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$hide@{\$hide}}
+\index{\$hide@{\$hide}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$hide}{$hide}}
+{\footnotesize\ttfamily \$hide = false}
+
+\mbox{\Hypertarget{class_smarty___internal___block_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{class_smarty___internal___block_ab2fc40d43824ea3e1ce5d86dee0d763b}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$name@{\$name}}
+\index{\$name@{\$name}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$name}{$name}}
+{\footnotesize\ttfamily \$name = \textquotesingle{}\textquotesingle{}}
+
+\mbox{\Hypertarget{class_smarty___internal___block_a4e2313a4b35b72a06ac45fd38960f677}\label{class_smarty___internal___block_a4e2313a4b35b72a06ac45fd38960f677}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$parent@{\$parent}}
+\index{\$parent@{\$parent}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$parent}{$parent}}
+{\footnotesize\ttfamily \$parent = null}
+
+\mbox{\Hypertarget{class_smarty___internal___block_a829d62e7dd18027c1fc2c9b3fe321ae2}\label{class_smarty___internal___block_a829d62e7dd18027c1fc2c9b3fe321ae2}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$prepend@{\$prepend}}
+\index{\$prepend@{\$prepend}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$prepend}{$prepend}}
+{\footnotesize\ttfamily \$prepend = false}
+
+\mbox{\Hypertarget{class_smarty___internal___block_a6c8bd063c87f8e127547bbb375f0d557}\label{class_smarty___internal___block_a6c8bd063c87f8e127547bbb375f0d557}} 
+\index{Smarty\_Internal\_Block@{Smarty\_Internal\_Block}!\$tplIndex@{\$tplIndex}}
+\index{\$tplIndex@{\$tplIndex}!Smarty\_Internal\_Block@{Smarty\_Internal\_Block}}
+\doxysubsubsection{\texorpdfstring{\$tplIndex}{$tplIndex}}
+{\footnotesize\ttfamily \$tpl\+Index = 0}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/sysplugins/\mbox{\hyperlink{smarty__internal__block_8php}{smarty\+\_\+internal\+\_\+block.\+php}}\end{DoxyCompactItemize}

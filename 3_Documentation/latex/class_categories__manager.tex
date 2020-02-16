@@ -1,0 +1,101 @@
+\hypertarget{class_categories__manager}{}\doxysection{Categories\+\_\+manager Class Reference}
+\label{class_categories__manager}\index{Categories\_manager@{Categories\_manager}}
+Inheritance diagram for Categories\+\_\+manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_categories__manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_categories__manager_a84d0597742ea8ad0b4cdbc1bd0828cf6}{find\+All\+Cat}} (\$visible\+\_\+only=false)
+\item 
+\mbox{\hyperlink{class_categories__manager_a1fbb58b8161bdc315e708ef7c7ae47bb}{find\+All\+Sub\+Cat}} (\$visible\+\_\+only=false, \$order\+\_\+by=\textquotesingle{}id\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_categories__manager_aba16c31123508b087d457165c732abff}{find\+One}} (\$id)
+\item 
+\mbox{\hyperlink{class_categories__manager_ad77a546e0eca0e8926aedfcded15ebfe}{toggle\+Visible}} (\$id)
+\item 
+\mbox{\hyperlink{class_categories__manager_a3323ccf6ae1a31274a65d92c6457e745}{new}} (\$obj)
+\item 
+\mbox{\hyperlink{class_categories__manager_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_categories__manager_abe62d28c10800e8e62701357e5e1e84a}{update}} (\$obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_categories__manager_a2f8258add505482d7f00ea26493a5723}\label{class_categories__manager_a2f8258add505482d7f00ea26493a5723}} 
+\index{Categories\_manager@{Categories\_manager}!delete@{delete}}
+\index{delete@{delete}!Categories\_manager@{Categories\_manager}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_categories__manager_a84d0597742ea8ad0b4cdbc1bd0828cf6}\label{class_categories__manager_a84d0597742ea8ad0b4cdbc1bd0828cf6}} 
+\index{Categories\_manager@{Categories\_manager}!findAllCat@{findAllCat}}
+\index{findAllCat@{findAllCat}!Categories\_manager@{Categories\_manager}}
+\doxysubsubsection{\texorpdfstring{findAllCat()}{findAllCat()}}
+{\footnotesize\ttfamily find\+All\+Cat (\begin{DoxyParamCaption}\item[{}]{\$visible\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Méthode permettant la liste des éléments dans la bdd 
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$visible\+\_\+only} & permet de retourner que les élements visible au public \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array retourne la liste des éléments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_categories__manager_a1fbb58b8161bdc315e708ef7c7ae47bb}\label{class_categories__manager_a1fbb58b8161bdc315e708ef7c7ae47bb}} 
+\index{Categories\_manager@{Categories\_manager}!findAllSubCat@{findAllSubCat}}
+\index{findAllSubCat@{findAllSubCat}!Categories\_manager@{Categories\_manager}}
+\doxysubsubsection{\texorpdfstring{findAllSubCat()}{findAllSubCat()}}
+{\footnotesize\ttfamily find\+All\+Sub\+Cat (\begin{DoxyParamCaption}\item[{}]{\$visible\+\_\+only = {\ttfamily false},  }\item[{}]{\$order\+\_\+by = {\ttfamily \textquotesingle{}id\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Méthode permettant récupérer la liste des éléments dans la bdd 
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$visible\+\_\+only} & permet de retourner que les élements visible au public \\
+\hline
+string & {\em \$order\+\_\+by} & permet de choisir l\textquotesingle{}odre des élements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array retourne la liste des éléments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_categories__manager_aba16c31123508b087d457165c732abff}\label{class_categories__manager_aba16c31123508b087d457165c732abff}} 
+\index{Categories\_manager@{Categories\_manager}!findOne@{findOne}}
+\index{findOne@{findOne}!Categories\_manager@{Categories\_manager}}
+\doxysubsubsection{\texorpdfstring{findOne()}{findOne()}}
+{\footnotesize\ttfamily find\+One (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Méthode permettant de récupérer 1 élément dans la bdd 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & identifiant de l\textquotesingle{}élément \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array la liste des champs de l\textquotesingle{}élément 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_categories__manager_a3323ccf6ae1a31274a65d92c6457e745}\label{class_categories__manager_a3323ccf6ae1a31274a65d92c6457e745}} 
+\index{Categories\_manager@{Categories\_manager}!new@{new}}
+\index{new@{new}!Categories\_manager@{Categories\_manager}}
+\doxysubsubsection{\texorpdfstring{new()}{new()}}
+{\footnotesize\ttfamily new (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_categories__manager_ad77a546e0eca0e8926aedfcded15ebfe}\label{class_categories__manager_ad77a546e0eca0e8926aedfcded15ebfe}} 
+\index{Categories\_manager@{Categories\_manager}!toggleVisible@{toggleVisible}}
+\index{toggleVisible@{toggleVisible}!Categories\_manager@{Categories\_manager}}
+\doxysubsubsection{\texorpdfstring{toggleVisible()}{toggleVisible()}}
+{\footnotesize\ttfamily toggle\+Visible (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_categories__manager_abe62d28c10800e8e62701357e5e1e84a}\label{class_categories__manager_abe62d28c10800e8e62701357e5e1e84a}} 
+\index{Categories\_manager@{Categories\_manager}!update@{update}}
+\index{update@{update}!Categories\_manager@{Categories\_manager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/models/\mbox{\hyperlink{_categories__manager_8php}{Categories\+\_\+manager.\+php}}\end{DoxyCompactItemize}

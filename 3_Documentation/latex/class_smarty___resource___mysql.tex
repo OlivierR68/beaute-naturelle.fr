@@ -1,0 +1,122 @@
+\hypertarget{class_smarty___resource___mysql}{}\doxysection{Smarty\+\_\+\+Resource\+\_\+\+Mysql Class Reference}
+\label{class_smarty___resource___mysql}\index{Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}}
+Inheritance diagram for Smarty\+\_\+\+Resource\+\_\+\+Mysql\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_smarty___resource___mysql}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___resource___mysql_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___resource___mysql_a8e81cbbd901d56aeadbf8a86b94294e0}{fetch}} (\$name, \&\$\mbox{\hyperlink{class_smarty___resource_ab6ac6b66dac2da6c41a178102f7d53e4}{source}}, \&\$mtime)
+\item 
+\mbox{\hyperlink{class_smarty___resource___mysql_a18318497e579c8c629c4916aa8fc6417}{fetch\+Timestamp}} (\$name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___resource___mysql_a1fa3127fc82f96b1436d871ef02be319}{\$db}}
+\item 
+\mbox{\hyperlink{class_smarty___resource___mysql_a94ed3b2f8cc7709070362b3362af35ac}{\$fetch}}
+\item 
+\mbox{\hyperlink{class_smarty___resource___mysql_a468bd87de22d779bfae6b7c3c0581985}{\$mtime}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_smarty___resource___mysql_a095c5d389db211932136b53f25f39685}\label{class_smarty___resource___mysql_a095c5d389db211932136b53f25f39685}} 
+\index{Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_smarty___resource___mysql}{Smarty\+\_\+\+Resource\+\_\+\+Mysql}} constructor.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___resource___mysql_a8e81cbbd901d56aeadbf8a86b94294e0}\label{class_smarty___resource___mysql_a8e81cbbd901d56aeadbf8a86b94294e0}} 
+\index{Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}!fetch@{fetch}}
+\index{fetch@{fetch}!Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily fetch (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{\&}]{\$source,  }\item[{\&}]{\$mtime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fetch a template and its modification time from database
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & template name \\
+\hline
+string & {\em \$source} & template source \\
+\hline
+integer & {\em \$mtime} & template modification timestamp (epoch)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___resource___custom_a8e81cbbd901d56aeadbf8a86b94294e0}{Smarty\+\_\+\+Resource\+\_\+\+Custom}}.
+
+\mbox{\Hypertarget{class_smarty___resource___mysql_a18318497e579c8c629c4916aa8fc6417}\label{class_smarty___resource___mysql_a18318497e579c8c629c4916aa8fc6417}} 
+\index{Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}!fetchTimestamp@{fetchTimestamp}}
+\index{fetchTimestamp@{fetchTimestamp}!Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{fetchTimestamp()}{fetchTimestamp()}}
+{\footnotesize\ttfamily fetch\+Timestamp (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fetch a template\textquotesingle{}s modification time from database
+
+\begin{DoxyNote}{Note}
+implementing this method is optional. Only implement it if modification times can be accessed faster than loading the comple template source.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & template name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer timestamp (epoch) the template was modified 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_smarty___resource___custom_a18318497e579c8c629c4916aa8fc6417}{Smarty\+\_\+\+Resource\+\_\+\+Custom}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_smarty___resource___mysql_a1fa3127fc82f96b1436d871ef02be319}\label{class_smarty___resource___mysql_a1fa3127fc82f96b1436d871ef02be319}} 
+\index{Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}!\$db@{\$db}}
+\index{\$db@{\$db}!Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\$db}{$db}}
+{\footnotesize\ttfamily \$db\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___resource___mysql_a94ed3b2f8cc7709070362b3362af35ac}\label{class_smarty___resource___mysql_a94ed3b2f8cc7709070362b3362af35ac}} 
+\index{Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}!\$fetch@{\$fetch}}
+\index{\$fetch@{\$fetch}!Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\$fetch}{$fetch}}
+{\footnotesize\ttfamily \$\mbox{\hyperlink{class_smarty___resource___mysql_a8e81cbbd901d56aeadbf8a86b94294e0}{fetch}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_smarty___resource___mysql_a468bd87de22d779bfae6b7c3c0581985}\label{class_smarty___resource___mysql_a468bd87de22d779bfae6b7c3c0581985}} 
+\index{Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}!\$mtime@{\$mtime}}
+\index{\$mtime@{\$mtime}!Smarty\_Resource\_Mysql@{Smarty\_Resource\_Mysql}}
+\doxysubsubsection{\texorpdfstring{\$mtime}{$mtime}}
+{\footnotesize\ttfamily \$mtime\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/demo/plugins/\mbox{\hyperlink{resource_8mysql_8php}{resource.\+mysql.\+php}}\end{DoxyCompactItemize}

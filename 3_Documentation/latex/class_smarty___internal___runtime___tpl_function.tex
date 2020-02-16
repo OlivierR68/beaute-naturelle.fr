@@ -1,0 +1,134 @@
+\hypertarget{class_smarty___internal___runtime___tpl_function}{}\doxysection{Smarty\+\_\+\+Internal\+\_\+\+Runtime\+\_\+\+Tpl\+Function Class Reference}
+\label{class_smarty___internal___runtime___tpl_function}\index{Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___tpl_function_a8e7e2b384559c525996959e792753b8b}{call\+Template\+Function}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$name, \$params, \$nocache)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___tpl_function_a9224996f7a2e474b95c43028aec0ac6f}{register\+Tpl\+Functions}} (\mbox{\hyperlink{class_smarty___internal___template_base}{Smarty\+\_\+\+Internal\+\_\+\+Template\+Base}} \$obj, \$tpl\+Functions, \$override=true)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___tpl_function_a93d4a0bbd5c3b1f206bf8e9c98151805}{get\+Tpl\+Function}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$name=null)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___tpl_function_a3dc3ccf1825740bcdcbaf40ec58a214e}{add\+Tpl\+Func\+To\+Cache}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$\+\_\+name, \$\+\_\+function)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___tpl_function_a2303470a1353d25668c18ac2bc2995ac}{save\+Template\+Variables}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$name)
+\item 
+\mbox{\hyperlink{class_smarty___internal___runtime___tpl_function_a4737ac98ef1bbe311de353e6ddb9489b}{restore\+Template\+Variables}} (\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} \$tpl, \$name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smarty___internal___runtime___tpl_function_a3dc3ccf1825740bcdcbaf40ec58a214e}\label{class_smarty___internal___runtime___tpl_function_a3dc3ccf1825740bcdcbaf40ec58a214e}} 
+\index{Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}!addTplFuncToCache@{addTplFuncToCache}}
+\index{addTplFuncToCache@{addTplFuncToCache}!Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}}
+\doxysubsubsection{\texorpdfstring{addTplFuncToCache()}{addTplFuncToCache()}}
+{\footnotesize\ttfamily add\+Tpl\+Func\+To\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$\+\_\+name,  }\item[{}]{\$\+\_\+function }\end{DoxyParamCaption})}
+
+Add template function to cache file for nocache calls
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}} & {\em \$tpl} & \\
+\hline
+string & {\em \$\+\_\+name} & template function name \\
+\hline
+string & {\em \$\+\_\+function} & P\+HP function name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___runtime___tpl_function_a8e7e2b384559c525996959e792753b8b}\label{class_smarty___internal___runtime___tpl_function_a8e7e2b384559c525996959e792753b8b}} 
+\index{Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}!callTemplateFunction@{callTemplateFunction}}
+\index{callTemplateFunction@{callTemplateFunction}!Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}}
+\doxysubsubsection{\texorpdfstring{callTemplateFunction()}{callTemplateFunction()}}
+{\footnotesize\ttfamily call\+Template\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$name,  }\item[{}]{\$params,  }\item[{}]{\$nocache }\end{DoxyParamCaption})}
+
+Call template function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & template object \\
+\hline
+string & {\em \$name} & template function name \\
+\hline
+array & {\em \$params} & parameter array \\
+\hline
+bool & {\em \$nocache} & true if called nocache\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_smarty___internal___runtime___tpl_function_a93d4a0bbd5c3b1f206bf8e9c98151805}\label{class_smarty___internal___runtime___tpl_function_a93d4a0bbd5c3b1f206bf8e9c98151805}} 
+\index{Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}!getTplFunction@{getTplFunction}}
+\index{getTplFunction@{getTplFunction}!Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}}
+\doxysubsubsection{\texorpdfstring{getTplFunction()}{getTplFunction()}}
+{\footnotesize\ttfamily get\+Tpl\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Return source parameter array for single or all template functions
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & template object \\
+\hline
+null | string & {\em \$name} & template function name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$bool$\vert$mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smarty___internal___runtime___tpl_function_a9224996f7a2e474b95c43028aec0ac6f}\label{class_smarty___internal___runtime___tpl_function_a9224996f7a2e474b95c43028aec0ac6f}} 
+\index{Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}!registerTplFunctions@{registerTplFunctions}}
+\index{registerTplFunctions@{registerTplFunctions}!Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}}
+\doxysubsubsection{\texorpdfstring{registerTplFunctions()}{registerTplFunctions()}}
+{\footnotesize\ttfamily register\+Tpl\+Functions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template_base}{Smarty\+\_\+\+Internal\+\_\+\+Template\+Base}}}]{\$obj,  }\item[{}]{\$tpl\+Functions,  }\item[{}]{\$override = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Register template functions defined by template
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty | \textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template | \textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template\+Base & {\em \$obj} & \\
+\hline
+array & {\em \$tpl\+Functions} & source information array of template functions defined in template \\
+\hline
+bool & {\em \$override} & if true replace existing functions with same name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___internal___runtime___tpl_function_a4737ac98ef1bbe311de353e6ddb9489b}\label{class_smarty___internal___runtime___tpl_function_a4737ac98ef1bbe311de353e6ddb9489b}} 
+\index{Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}!restoreTemplateVariables@{restoreTemplateVariables}}
+\index{restoreTemplateVariables@{restoreTemplateVariables}!Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}}
+\doxysubsubsection{\texorpdfstring{restoreTemplateVariables()}{restoreTemplateVariables()}}
+{\footnotesize\ttfamily restore\+Template\+Variables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Restore saved variables into template objects
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+string & {\em \$name} & stack name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_smarty___internal___runtime___tpl_function_a2303470a1353d25668c18ac2bc2995ac}\label{class_smarty___internal___runtime___tpl_function_a2303470a1353d25668c18ac2bc2995ac}} 
+\index{Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}!saveTemplateVariables@{saveTemplateVariables}}
+\index{saveTemplateVariables@{saveTemplateVariables}!Smarty\_Internal\_Runtime\_TplFunction@{Smarty\_Internal\_Runtime\_TplFunction}}
+\doxysubsubsection{\texorpdfstring{saveTemplateVariables()}{saveTemplateVariables()}}
+{\footnotesize\ttfamily save\+Template\+Variables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smarty___internal___template}{Smarty\+\_\+\+Internal\+\_\+\+Template}}}]{\$tpl,  }\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Save current template variables on stack
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Smarty\+\_\+\+Internal\+\_\+\+Template & {\em \$tpl} & \\
+\hline
+string & {\em \$name} & stack name \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/sysplugins/\mbox{\hyperlink{smarty__internal__runtime__tplfunction_8php}{smarty\+\_\+internal\+\_\+runtime\+\_\+tplfunction.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\hypertarget{function_8cycle_8php}{}\doxysection{C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.fr/2\+\_\+\+Developpement/\+\_\+smarty/application/third\+\_\+party/smarty/libs/plugins/function.cycle.\+php File Reference}
+\label{function_8cycle_8php}\index{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/function.cycle.php@{C:/Users/PC-\/Olivier/Documents/GitHub/beaute-\/naturelle.fr/2\_Developpement/\_smarty/application/third\_party/smarty/libs/plugins/function.cycle.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_smarty}{Smarty}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{function_8cycle_8php_a4d5f27028c214f082316cbaad24d31b4}{smarty\+\_\+function\+\_\+cycle}} (\$params, \$\mbox{\hyperlink{_s_m_a_r_t_y__3_81___n_o_t_e_s_8txt_af7f83c9bc9cc0e54ce4df33072246b32}{template}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{function_8cycle_8php_a4d5f27028c214f082316cbaad24d31b4}\label{function_8cycle_8php_a4d5f27028c214f082316cbaad24d31b4}} 
+\index{function.cycle.php@{function.cycle.php}!smarty\_function\_cycle@{smarty\_function\_cycle}}
+\index{smarty\_function\_cycle@{smarty\_function\_cycle}!function.cycle.php@{function.cycle.php}}
+\doxysubsubsection{\texorpdfstring{smarty\_function\_cycle()}{smarty\_function\_cycle()}}
+{\footnotesize\ttfamily smarty\+\_\+function\+\_\+cycle (\begin{DoxyParamCaption}\item[{}]{\$params,  }\item[{}]{\$template }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_smarty}{Smarty}} \{cycle\} function plugin Type\+: function Name\+: cycle Date\+: May 3, 2002 Purpose\+: cycle through given values Params\+:
+
+
+\begin{DoxyItemize}
+\item name -\/ name of cycle (optional)
+\item values -\/ comma separated list of values to cycle, or an array of values to cycle (this can be left out for subsequent calls)
+\item reset -\/ boolean -\/ resets given var to true
+\item print -\/ boolean -\/ print var or not. default is true
+\item advance -\/ boolean -\/ whether or not to advance the cycle
+\item delimiter -\/ the value delimiter, default is \char`\"{},\char`\"{}
+\item assign -\/ boolean, assigns to template var instead of printed.
+\end{DoxyItemize}
+
+Examples\+:
+
+\{cycle values=\char`\"{}\#eeeeee,\#d0d0d0d\char`\"{}\} \{cycle name=row values=\char`\"{}one,two,three\char`\"{} reset=true\} \{cycle name=row\}
+
+\mbox{\hyperlink{}{\{cycle\} (Smarty online manual)  Monte Ohrt $<$monte at ohrt dot com$>$  credit to Mark Priatel \href{mailto:mpriatel@rogers.com}{\texttt{ mpriatel@rogers.\+com}}  credit to Gerard \href{mailto:gerard@interfold.com}{\texttt{ gerard@interfold.\+com}}  credit to Jason Sweat \href{mailto:jsweat_php@yahoo.com}{\texttt{ jsweat\+\_\+php@yahoo.\+com}}  1.\+3  array \$params parameters  Smarty\+\_\+\+Internal\+\_\+\+Template \$template template object  string$\vert$null }}

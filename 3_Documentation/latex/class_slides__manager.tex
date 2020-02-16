@@ -1,4 +1,4 @@
-\doxysection{Slides\+\_\+manager Class Reference}
+\hypertarget{class_slides__manager}{}\doxysection{Slides\+\_\+manager Class Reference}
 \label{class_slides__manager}\index{Slides\_manager@{Slides\_manager}}
 Inheritance diagram for Slides\+\_\+manager\+:\begin{figure}[H]
 \begin{center}
@@ -9,22 +9,120 @@ Inheritance diagram for Slides\+\_\+manager\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ find\+All} ()
+\mbox{\hyperlink{class_slides__manager_a0f743f75b8f69be9a0ad3e6f4b5d3eb0}{find\+All}} (\$visible\+\_\+only=false)
+\item 
+\mbox{\hyperlink{class_slides__manager_aba16c31123508b087d457165c732abff}{find\+One}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides__manager_a3323ccf6ae1a31274a65d92c6457e745}{new}} (\$obj)
+\item 
+\mbox{\hyperlink{class_slides__manager_abe62d28c10800e8e62701357e5e1e84a}{update}} (\$obj)
+\item 
+\mbox{\hyperlink{class_slides__manager_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides__manager_a07b5e6baa2b5706d945ed0c1d28b2302}{copy}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides__manager_ad77a546e0eca0e8926aedfcded15ebfe}{toggle\+Visible}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides__manager_abc9f2822b3e799b899c3e137245d82dc}{order\+Up}} (\$id)
+\item 
+\mbox{\hyperlink{class_slides__manager_ad6c776228db714a33ab1711fc99273c4}{order\+Down}} (\$id)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\label{class_slides__manager_a73a1b0348919b6755e4f69dcc70eba64}} 
+\mbox{\Hypertarget{class_slides__manager_a07b5e6baa2b5706d945ed0c1d28b2302}\label{class_slides__manager_a07b5e6baa2b5706d945ed0c1d28b2302}} 
+\index{Slides\_manager@{Slides\_manager}!copy@{copy}}
+\index{copy@{copy}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily copy (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Duplication d\textquotesingle{}1 slide 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant du slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_slides__manager_a2f8258add505482d7f00ea26493a5723}\label{class_slides__manager_a2f8258add505482d7f00ea26493a5723}} 
+\index{Slides\_manager@{Slides\_manager}!delete@{delete}}
+\index{delete@{delete}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Suppression d\textquotesingle{}1 slide 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant du slide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_slides__manager_a0f743f75b8f69be9a0ad3e6f4b5d3eb0}\label{class_slides__manager_a0f743f75b8f69be9a0ad3e6f4b5d3eb0}} 
 \index{Slides\_manager@{Slides\_manager}!findAll@{findAll}}
 \index{findAll@{findAll}!Slides\_manager@{Slides\_manager}}
-\doxysubsubsection{findAll()}
-{\footnotesize\ttfamily find\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{findAll()}{findAll()}}
+{\footnotesize\ttfamily find\+All (\begin{DoxyParamCaption}\item[{}]{\$visible\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
 
-Fonction permettant de récupérer la liste des articles \begin{DoxyReturn}{Returns}
-array Tableau des slides 
+Récupération liste des slides \begin{DoxyReturn}{Returns}
+array tous les slides 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_slides__manager_aba16c31123508b087d457165c732abff}\label{class_slides__manager_aba16c31123508b087d457165c732abff}} 
+\index{Slides\_manager@{Slides\_manager}!findOne@{findOne}}
+\index{findOne@{findOne}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{findOne()}{findOne()}}
+{\footnotesize\ttfamily find\+One (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Récupération d\textquotesingle{}1 slide 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & integer identifiant du slide dans la bdd \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array les valeurs du slide avec clefs d\textquotesingle{}association 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_slides__manager_a3323ccf6ae1a31274a65d92c6457e745}\label{class_slides__manager_a3323ccf6ae1a31274a65d92c6457e745}} 
+\index{Slides\_manager@{Slides\_manager}!new@{new}}
+\index{new@{new}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{new()}{new()}}
+{\footnotesize\ttfamily new (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+Création d\textquotesingle{}1 slide 
+\begin{DoxyParams}{Parameters}
+{\em \$obj} & object \mbox{\hyperlink{class_slide__class}{Slide\+\_\+class}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string l\textquotesingle{}id de l\textquotesingle{}insert 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_slides__manager_ad6c776228db714a33ab1711fc99273c4}\label{class_slides__manager_ad6c776228db714a33ab1711fc99273c4}} 
+\index{Slides\_manager@{Slides\_manager}!orderDown@{orderDown}}
+\index{orderDown@{orderDown}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{orderDown()}{orderDown()}}
+{\footnotesize\ttfamily order\+Down (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_slides__manager_abc9f2822b3e799b899c3e137245d82dc}\label{class_slides__manager_abc9f2822b3e799b899c3e137245d82dc}} 
+\index{Slides\_manager@{Slides\_manager}!orderUp@{orderUp}}
+\index{orderUp@{orderUp}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{orderUp()}{orderUp()}}
+{\footnotesize\ttfamily order\+Up (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_slides__manager_ad77a546e0eca0e8926aedfcded15ebfe}\label{class_slides__manager_ad77a546e0eca0e8926aedfcded15ebfe}} 
+\index{Slides\_manager@{Slides\_manager}!toggleVisible@{toggleVisible}}
+\index{toggleVisible@{toggleVisible}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{toggleVisible()}{toggleVisible()}}
+{\footnotesize\ttfamily toggle\+Visible (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_slides__manager_abe62d28c10800e8e62701357e5e1e84a}\label{class_slides__manager_abe62d28c10800e8e62701357e5e1e84a}} 
+\index{Slides\_manager@{Slides\_manager}!update@{update}}
+\index{update@{update}!Slides\_manager@{Slides\_manager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+Création d\textquotesingle{}1 slide 
+\begin{DoxyParams}{Parameters}
+{\em \$obj} & object \mbox{\hyperlink{class_slide__class}{Slide\+\_\+class}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string l\textquotesingle{}id de l\textquotesingle{}insert 
 \end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/disiitp10/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+www/application/models/Slides\+\_\+manager.\+php\end{DoxyCompactItemize}
+C\+:/\+Users/\+P\+C-\/\+Olivier/\+Documents/\+Git\+Hub/beaute-\/naturelle.\+fr/2\+\_\+\+Developpement/\+\_\+smarty/application/models/\mbox{\hyperlink{_slides__manager_8php}{Slides\+\_\+manager.\+php}}\end{DoxyCompactItemize}
