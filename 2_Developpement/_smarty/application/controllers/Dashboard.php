@@ -24,30 +24,26 @@ class Dashboard extends CI_Controller {
 		$data['TITLE'] 		= "Tableau de bord";
 
 
+
         $register_request_list = array();
         $requests_data = $this->Events_manager->getRequest();
+        $tableau_des_enfers = [];
+        foreach ($requests_data as $index) {
 
-        $events = $this->Events_manager->findAll();
-        $eventsToDisplay = array();
-        foreach ($events as $event) {
-            $objEvent = new Event_class();
-            $objEvent->hydrate($event);
+            $index['event_filling'] = $this->Events_manager->getFilling($index['event_id']);
+            $tableau_des_enfers[] =  $index;
 
-            $filling = $this->Events_manager->getFilling($objEvent->getId());
-            $objEvent->setFilling($filling);
-
-            $eventsToDisplay[] = $objEvent;
         }
 
-        $data['arrEvents'] = $eventsToDisplay;
 
 
 
-        $data['requests_data'] = $requests_data;
+        $data['requests_data'] = $tableau_des_enfers;
 
         $data['CONTENT'] = $this->smarty->fetch('back/dashboard.tpl', $data);
         $this->smarty->display('back/templates/content.tpl', $data);
 	}
+
 
 
 }

@@ -253,4 +253,22 @@ class Events extends CI_Controller
     }
 
 
+    public function accept_user($event_id, $user_id)
+    {
+
+        $this->Events_manager->accept_user($event_id, $user_id);
+        redirect('dashboard', 'refresh');
+
+    }
+
+
+    public function refuse_user($event_id, $user_id)
+    {
+
+        $this->Events_manager->refuse_user($event_id, $user_id);
+        redirect('dashboard', 'refresh');
+
+    }
+
+
 }

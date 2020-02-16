@@ -12,14 +12,12 @@
 					<a  class="nav-link" href="{base_url('dashboard')}"><i class="fas fa-tachometer-alt mr-2"></i>Tableau de bord</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{base_url('images/back')}"><span class="bn_cube">{$event_register_counter}</span> Événements</a>
+					<a class="nav-link" href="{base_url('dashboard')}"><span class="bn_cube">{$event_register_counter}</span> Événements</a>
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="{base_url('events/back')}"><span class="bn_cube">524</span> Images</a>
+					<a class="nav-link" href="{base_url('dashboard')}"><span class="bn_cube">524</span> Images</a>
 				</li>
-
-
 			</ul>
 		</div>
 	</nav>

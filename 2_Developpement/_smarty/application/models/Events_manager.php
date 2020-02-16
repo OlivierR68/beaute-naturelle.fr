@@ -75,6 +75,7 @@ class Events_manager extends CI_Model {
             ->join('user','user.user_id = event_user.user_id')
             ->join('event','event_user.event_id = event.event_id')
             ->get('event_user')->result_array();
+
     }
 
         /**
@@ -143,5 +144,29 @@ class Events_manager extends CI_Model {
 
 		$this->db->insert('event', $array);
 	}
+
+    public function accept_user($event_id, $user_id)
+    {
+        $now_date = new DateTime('Europe/Paris');
+
+        $data = [
+            "event_user_valid" => 1,
+            "event_user_valid_date" => $now_date->format('Y-m-d')
+        ];
+
+        $this->db->where('event_id', $event_id)->where('user_id', $user_id)->update('event_user', $data);
+    }
+
+    public function refuse_user($event_id, $user_id)
+    {
+        $now_date = new DateTime('Europe/Paris');
+
+        $data = [
+            "event_user_valid" => 0,
+            "event_user_valid_date" => $now_date->format('Y-m-d')
+        ];
+
+        $this->db->where('event_id', $event_id)->where('user_id', $user_id)->update('event_user', $data);
+    }
 
 }

@@ -1,0 +1,4 @@
+INSERT INTO ravoli_db.event_user (event_user_id, user_id, event_id, event_user_valid, event_user_date, event_user_valid_date) VALUES (8, 60, 76, null, '2020-02-16 15:27:49', null);
+INSERT INTO ravoli_db.event_user (event_user_id, user_id, event_id, event_user_valid, event_user_date, event_user_valid_date) VALUES (2, 62, 75, 1, '2020-02-16 14:32:07', '2020-02-16');
+INSERT INTO ravoli_db.event_user (event_user_id, user_id, event_id, event_user_valid, event_user_date, event_user_valid_date) VALUES (7, 60, 75, null, '2020-02-16 15:09:58', null);
+INSERT INTO ravoli_db.event_user (event_user_id, user_id, event_id, event_user_valid, event_user_date, event_user_valid_date) VALUES (9, 60, 77, null, '2020-02-16 15:27:56', null);
