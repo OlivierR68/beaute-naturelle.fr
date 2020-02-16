@@ -119,15 +119,15 @@
 
 					<!-- Bloc nav -->
 
-					<a class="nav-link collapsed {active_page('newsletters','active',1)}" href="{site_url("newsletters/listPage_sub")}" data-toggle="collapse" data-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts">
+					<a class="nav-link collapsed {active_page('newsletter','active',1)}" href="{site_url("newsletter")}" data-toggle="collapse" data-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts">
 						<div class="sb-nav-link-icon"><i class="fas fa-envelope-open-text"></i></div>
 						Newsletter
 						<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 					</a>
 
-					<div class="collapse {active_page('newsletters','show',1)}" id="collapseLayouts6" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+					<div class="collapse {active_page('newsletter','show',1)}" id="collapseLayouts6" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link {active_page('newsletters/listPage_sub')}" href="{site_url("newsletters/listPage_sub")}">Liste des abonnées</a>
+							<a class="nav-link {active_page('newsletter')}" href="{site_url("newsletter")}">Liste des abonnées</a>
 						</nav>
 					</div>
 

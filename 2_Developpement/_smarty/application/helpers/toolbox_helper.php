@@ -90,6 +90,7 @@ function ctrl_slug()
         case "prestations"  : $slug = "Prestations";            break;
         case "slides"       : $slug = "Slider page d'accueil";  break;
         case "users"        : $slug = "Utilisateurs";           break;
+        case "newsletter"   : $slug = "Newsletter";             break;
     }
 
     return $slug;
@@ -108,4 +109,10 @@ function please_reconnect()
 
     }
 }
+
+/**
+ * La fonction de Morand !
+ */
+
+
 

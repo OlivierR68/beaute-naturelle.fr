@@ -49,18 +49,6 @@
             <div
                 class="container bn_top-bar d-flex align-items-center justify-content-center justify-content-md-between">
                 <div class="bn_infos">
-                    <a class="bn_infos-items d-none d-lg-inline" href="{site_url('pages/contact')}"><i
-                            class="fas fa-map-marker-alt"></i>328 rue des clefs, 68 000 Colmar</a>
-                    <a class="bn_infos-items" href="tel:+33389545646"><i class="fas fa-phone-alt"></i>03
-                        89 54 56 46</a>
-                    <a class="bn_infos-items d-none d-lg-inline" href="mailto:contact@beaute-naturelle.fr"><i
-                            class="far fa-envelope"></i>contact@beaute-naturelle.fr</a>
-                    <a class="bn_infos-items" href="{site_url('pages/contact')}"><i class="far fa-clock"></i><span
-                            class="d-none d-sm-inline">Ouvert tous les
-                            jours, (sauf le Dimanche) de</span> 9H00 à 18H00</a>
-                </div>
-
-				<div class="d-none d-md-block bn_infos">
 
                     {if isset($smarty.session.login)}
                         <a class="bn_infos-items" href="{site_url('users/profile')}"><i class="far fa-caret-square-down"></i>Bonjour {$smarty.session.first_name}</a>
@@ -71,7 +59,14 @@
                     {/if}
 
 
-				</div>
+                </div>
+
+                <div class="bn_infos">
+                    <a class="bn_infos-items d-none d-lg-inline" href="{site_url('pages/contact')}"><i
+                            class="fas fa-map-marker-alt"></i>Actuellement : </a>
+                </div>
+
+
             </div>
         </div>
 

@@ -19,9 +19,14 @@ class Subscribers_manager extends CI_Model
 
     }
 
-    public function delete($email){
+    public function findAll()
+    {
+        return $this->db->get('subscriber')->result_array();
+    }
 
-        $this->db->where('subscriber_email', $email)->delete('subscriber');
+    public function delete($email_or_id){
+
+        $this->db->where('subscriber_email', $email_or_id)->or_where('subscriber_id', $email_or_id)->delete('subscriber');
     }
 
     public function insert($email){
